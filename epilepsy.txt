@@ -1,0 +1,827 @@
+Other forms of epilepsy	PREF=Other forms of epilepsy	CUI=C0477371	STY=Disease or Syndrome
+Other forms of epilepsy NOS	PREF=Other forms of epilepsy NOS	CUI=C0477371	STY=Disease or Syndrome
+Other epilepsy	PREF=Other epilepsy	CUI=C0477371	STY=Disease or Syndrome
+[X]Other epilepsy	PREF=[X]Other epilepsy	CUI=C0477371	STY=Disease or Syndrome
+Other epilepsy NOS	PREF=Other epilepsy NOS	CUI=C0477371	STY=Disease or Syndrome
+Other epilepsy	PREF=Other epilepsy	CUI=C0477371	STY=Disease or Syndrome
+Other forms of epilepsy NOS (disorder)	PREF=Other forms of epilepsy NOS (disorder)	CUI=C0477371	STY=Disease or Syndrome
+Other forms of epilepsy (disorder)	PREF=Other forms of epilepsy (disorder)	CUI=C0477371	STY=Disease or Syndrome
+Other forms of epilepsy NOS	PREF=Other forms of epilepsy NOS	CUI=C0477371	STY=Disease or Syndrome
+[X]Other epilepsy	PREF=[X]Other epilepsy	CUI=C0477371	STY=Disease or Syndrome
+Other forms of epilepsy	PREF=Other forms of epilepsy	CUI=C0477371	STY=Disease or Syndrome
+[X]Other epilepsy (disorder)	PREF=[X]Other epilepsy (disorder)	CUI=C0477371	STY=Disease or Syndrome
+Epilepsy	PREF=Epilepsy	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy	PREF=Epilepsy	CUI=C0014544	STY=Disease or Syndrome
+Epileptic seizure	PREF=Epileptic seizure	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy NOS	PREF=Epilepsy NOS	CUI=C0014544	STY=Disease or Syndrome
+Epileptic fit	PREF=Epileptic fit	CUI=C0014544	STY=Disease or Syndrome
+Seizure disorder	PREF=Seizure disorder	CUI=C0014544	STY=Disease or Syndrome
+EF - Epileptic fit	PREF=EF - Epileptic fit	CUI=C0014544	STY=Disease or Syndrome
+EP - Epilepsy	PREF=EP - Epilepsy	CUI=C0014544	STY=Disease or Syndrome
+Epileptic	PREF=Epileptic	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy	PREF=Epilepsy	CUI=C0014544	STY=Disease or Syndrome
+Epileptic convulsions NOS	PREF=Epileptic convulsions NOS	CUI=C0014544	STY=Disease or Syndrome
+"Epilepsy, unspecified"	"PREF=Epilepsy, unspecified"	CUI=C0014544	STY=Disease or Syndrome
+Epileptic fits NOS	PREF=Epileptic fits NOS	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy NOS	PREF=Epilepsy NOS	CUI=C0014544	STY=Disease or Syndrome
+Epileptic seizures NOS	PREF=Epileptic seizures NOS	CUI=C0014544	STY=Disease or Syndrome
+Seizure disorder NOS	PREF=Seizure disorder NOS	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy NOS	PREF=Epilepsy NOS	CUI=C0014544	STY=Disease or Syndrome
+Epileptic attack	PREF=Epileptic attack	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy NOS (disorder)	PREF=Epilepsy NOS (disorder)	CUI=C0014544	STY=Disease or Syndrome
+(Epilepsy) or (epileptic attack) (disorder)	PREF=(Epilepsy) or (epileptic attack) (disorder)	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy NOS (disorder)	PREF=Epilepsy NOS (disorder)	CUI=C0014544	STY=Disease or Syndrome
+(Epilepsy) or (epileptic attack) (disorder)	PREF=(Epilepsy) or (epileptic attack) (disorder)	CUI=C0014544	STY=Disease or Syndrome
+Epileptic seizure	PREF=Epileptic seizure	CUI=C0014544	STY=Disease or Syndrome
+Epileptic attack	PREF=Epileptic attack	CUI=C0014544	STY=Disease or Syndrome
+(Epilepsy) or (epileptic attack)	PREF=(Epilepsy) or (epileptic attack)	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy NOS	PREF=Epilepsy NOS	CUI=C0014544	STY=Disease or Syndrome
+(Epilepsy) or (epileptic attack)	PREF=(Epilepsy) or (epileptic attack)	CUI=C0014544	STY=Disease or Syndrome
+Attack - epileptic	PREF=Attack - epileptic	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy NOS	PREF=Epilepsy NOS	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy	PREF=Epilepsy	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy	PREF=Epilepsy	CUI=C0014544	STY=Disease or Syndrome
+Seizure disorder	PREF=Seizure disorder	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy	PREF=Epilepsy	CUI=C0014544	STY=Disease or Syndrome
+Epileptic attack	PREF=Epileptic attack	CUI=C0014544	STY=Disease or Syndrome
+Epileptic fits	PREF=Epileptic fits	CUI=C0014544	STY=Disease or Syndrome
+Epileptic fit	PREF=Epileptic fit	CUI=C0014544	STY=Disease or Syndrome
+Epileptic convulsions	PREF=Epileptic convulsions	CUI=C0014544	STY=Disease or Syndrome
+Epileptic seizures	PREF=Epileptic seizures	CUI=C0014544	STY=Disease or Syndrome
+EF - Epileptic fit	PREF=EF - Epileptic fit	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy	PREF=Epilepsy	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy	PREF=Epilepsy	CUI=C0014544	STY=Disease or Syndrome
+EP - Epilepsy	PREF=EP - Epilepsy	CUI=C0014544	STY=Disease or Syndrome
+Epileptic	PREF=Epileptic	CUI=C0014544	STY=Disease or Syndrome
+Epilepsy (disorder)	PREF=Epilepsy (disorder)	CUI=C0014544	STY=Disease or Syndrome
+Epileptic disorder	PREF=Epileptic disorder	CUI=C0014544	STY=Disease or Syndrome
+Seizure disorder (disorder)	PREF=Seizure disorder (disorder)	CUI=C0014544	STY=Disease or Syndrome
+Seizure disorder	PREF=Seizure disorder	CUI=C0014544	STY=Disease or Syndrome
+"Epilectic attack, NOS"	"PREF=Epilectic attack, NOS"	CUI=C0014544	STY=Disease or Syndrome
+"Epilepsy, NOS"	"PREF=Epilepsy, NOS"	CUI=C0014544	STY=Disease or Syndrome
+"Epileptic convulsions, NOS"	"PREF=Epileptic convulsions, NOS"	CUI=C0014544	STY=Disease or Syndrome
+"Epileptic disorder, NOS"	"PREF=Epileptic disorder, NOS"	CUI=C0014544	STY=Disease or Syndrome
+"Epileptic fits, NOS"	"PREF=Epileptic fits, NOS"	CUI=C0014544	STY=Disease or Syndrome
+"Epileptic seizures, NOS"	"PREF=Epileptic seizures, NOS"	CUI=C0014544	STY=Disease or Syndrome
+"Epileptic attack, NOS"	"PREF=Epileptic attack, NOS"	CUI=C0014544	STY=Disease or Syndrome
+Status epilepticus	PREF=Status epilepticus	CUI=C0038220	STY=Disease or Syndrome
+"Status epilepticus, unspec"	"PREF=Status epilepticus, unspec"	CUI=C0038220	STY=Disease or Syndrome
+"Status epilepticus, unspecified"	"PREF=Status epilepticus, unspecified"	CUI=C0038220	STY=Disease or Syndrome
+"[X]Status epilepticus, unspec"	"PREF=[X]Status epilepticus, unspec"	CUI=C0038220	STY=Disease or Syndrome
+"[X]Status epilepticus, unspecified"	"PREF=[X]Status epilepticus, unspecified"	CUI=C0038220	STY=Disease or Syndrome
+Status epilepticus	PREF=Status epilepticus	CUI=C0038220	STY=Disease or Syndrome
+"[X]Status epilepticus, unspecified (disorder)"	"PREF=[X]Status epilepticus, unspecified (disorder)"	CUI=C0038220	STY=Disease or Syndrome
+"[X]Status epilepticus, unspecified (disorder)"	"PREF=[X]Status epilepticus, unspecified (disorder)"	CUI=C0038220	STY=Disease or Syndrome
+Status epilepticus	PREF=Status epilepticus	CUI=C0038220	STY=Disease or Syndrome
+"[X]Status epilepticus, unspecified"	"PREF=[X]Status epilepticus, unspecified"	CUI=C0038220	STY=Disease or Syndrome
+"[X]Status epilepticus, unspecified"	"PREF=[X]Status epilepticus, unspecified"	CUI=C0038220	STY=Disease or Syndrome
+Status epilepticus (disorder)	PREF=Status epilepticus (disorder)	CUI=C0038220	STY=Disease or Syndrome
+Status epilepticus	PREF=Status epilepticus	CUI=C0038220	STY=Disease or Syndrome
+Status epilepticus	PREF=Status epilepticus	CUI=C0038220	STY=Disease or Syndrome
+Status epilepticus	PREF=Status epilepticus	CUI=C0038220	STY=Disease or Syndrome
+Status epilepticus (disorder)	PREF=Status epilepticus (disorder)	CUI=C0038220	STY=Disease or Syndrome
+Status Epilepticus	PREF=Status Epilepticus	CUI=C0038220	STY=Disease or Syndrome
+Reflex epilepsy	PREF=Reflex epilepsy	CUI=C0270857	STY=Disease or Syndrome
+Epilepsy ass with spec stimuli	PREF=Epilepsy ass with spec stimuli	CUI=C0270857	STY=Disease or Syndrome
+Epilepsy associated with specific stimuli	PREF=Epilepsy associated with specific stimuli	CUI=C0270857	STY=Disease or Syndrome
+Sensory-induced epilepsy	PREF=Sensory-induced epilepsy	CUI=C0270857	STY=Disease or Syndrome
+Reflex epilepsy	PREF=Reflex epilepsy	CUI=C0270857	STY=Disease or Syndrome
+Epilepsy associated with specific stimuli	PREF=Epilepsy associated with specific stimuli	CUI=C0270857	STY=Disease or Syndrome
+Sensory-induced epilepsy	PREF=Sensory-induced epilepsy	CUI=C0270857	STY=Disease or Syndrome
+Reflex epilepsy (disorder)	PREF=Reflex epilepsy (disorder)	CUI=C0270857	STY=Disease or Syndrome
+Generalised epilepsy	PREF=Generalised epilepsy	CUI=C0014548	STY=Disease or Syndrome
+Generalized epilepsy	PREF=Generalized epilepsy	CUI=C0014548	STY=Disease or Syndrome
+"Epilepsy, Generalized"	"PREF=Epilepsy, Generalized"	CUI=C0014548	STY=Disease or Syndrome
+Generalised epilepsy (disorder)	PREF=Generalised epilepsy (disorder)	CUI=C0014548	STY=Disease or Syndrome
+Generalised epilepsy	PREF=Generalised epilepsy	CUI=C0014548	STY=Disease or Syndrome
+Generalised epilepsy (disorder)	PREF=Generalised epilepsy (disorder)	CUI=C0014548	STY=Disease or Syndrome
+Generalized epilepsy	PREF=Generalized epilepsy	CUI=C0014548	STY=Disease or Syndrome
+Generalized epilepsy	PREF=Generalized epilepsy	CUI=C0014548	STY=Disease or Syndrome
+Generalized epilepsy	PREF=Generalized epilepsy	CUI=C0014548	STY=Disease or Syndrome
+Generalised epilepsy (disorder)	PREF=Generalised epilepsy (disorder)	CUI=C0014548	STY=Disease or Syndrome
+Generalised epilepsy	PREF=Generalised epilepsy	CUI=C0014548	STY=Disease or Syndrome
+Generalised epilepsy (disorder)	PREF=Generalised epilepsy (disorder)	CUI=C0014548	STY=Disease or Syndrome
+Generalised epilepsy	PREF=Generalised epilepsy	CUI=C0014548	STY=Disease or Syndrome
+Generalised epilepsy	PREF=Generalised epilepsy	CUI=C0014548	STY=Disease or Syndrome
+Generalized epilepsy	PREF=Generalized epilepsy	CUI=C0014548	STY=Disease or Syndrome
+Generalised epilepsy	PREF=Generalised epilepsy	CUI=C0014548	STY=Disease or Syndrome
+Generalized epilepsy	PREF=Generalized epilepsy	CUI=C0014548	STY=Disease or Syndrome
+Generalized epilepsy (disorder)	PREF=Generalized epilepsy (disorder)	CUI=C0014548	STY=Disease or Syndrome
+"Generalized epilepsy, NOS"	"PREF=Generalized epilepsy, NOS"	CUI=C0014548	STY=Disease or Syndrome
+Generalised epilepsy [Ambiguous]	PREF=Generalised epilepsy [Ambiguous]	CUI=C0014548	STY=Disease or Syndrome
+Psychosensory epilepsy	PREF=Psychosensory epilepsy	CUI=C0347873	STY=Disease or Syndrome
+Psychosensory epilepsy	PREF=Psychosensory epilepsy	CUI=C0347873	STY=Disease or Syndrome
+Psychosensory epilepsy (disorder)	PREF=Psychosensory epilepsy (disorder)	CUI=C0347873	STY=Disease or Syndrome
+Somatosensory epilepsy	PREF=Somatosensory epilepsy	CUI=C0347874	STY=Disease or Syndrome
+Somatosensory epilepsy	PREF=Somatosensory epilepsy	CUI=C0347874	STY=Disease or Syndrome
+Somatosensory epilepsy (disorder)	PREF=Somatosensory epilepsy (disorder)	CUI=C0347874	STY=Disease or Syndrome
+Epilepsy undeterm focal/gener	PREF=Epilepsy undeterm focal/gener	CUI=C0472355	STY=Disease or Syndrome
+Epilepsy undetermined whether focal or generalised	PREF=Epilepsy undetermined whether focal or generalised	CUI=C0472355	STY=Disease or Syndrome
+Epilepsy undetermined whether focal or generalized	PREF=Epilepsy undetermined whether focal or generalized	CUI=C0472355	STY=Disease or Syndrome
+Epilepsy undetermined whether focal or generalised	PREF=Epilepsy undetermined whether focal or generalised	CUI=C0472355	STY=Disease or Syndrome
+Epilepsy undetermined whether focal or generalized	PREF=Epilepsy undetermined whether focal or generalized	CUI=C0472355	STY=Disease or Syndrome
+Epilepsy undetermined whether focal or generalized (disorder)	PREF=Epilepsy undetermined whether focal or generalized (disorder)	CUI=C0472355	STY=Disease or Syndrome
+Unilateral epilepsy	PREF=Unilateral epilepsy	CUI=C0438419	STY=Disease or Syndrome
+Unilateral epilepsy (situation)	PREF=Unilateral epilepsy (situation)	CUI=C0438419	STY=Disease or Syndrome
+Unilateral epilepsy (disorder)	PREF=Unilateral epilepsy (disorder)	CUI=C0438419	STY=Disease or Syndrome
+Unilateral epilepsy	PREF=Unilateral epilepsy	CUI=C0438419	STY=Disease or Syndrome
+Fit (in known epileptic) NOS	PREF=Fit (in known epileptic) NOS	CUI=C0553754	STY=Disease or Syndrome
+Fit (in known epileptic) NOS	PREF=Fit (in known epileptic) NOS	CUI=C0553754	STY=Disease or Syndrome
+Fit (in known epileptic) NOS (disorder)	PREF=Fit (in known epileptic) NOS (disorder)	CUI=C0553754	STY=Disease or Syndrome
+Fit (in known epileptic) NOS	PREF=Fit (in known epileptic) NOS	CUI=C0553754	STY=Disease or Syndrome
+Other generalized epilepsy and epileptic syndromes	PREF=Other generalized epilepsy and epileptic syndromes	CUI=C0477370	STY=Disease or Syndrome
+[X]Other generalized epilepsy and epileptic syndromes	PREF=[X]Other generalized epilepsy and epileptic syndromes	CUI=C0477370	STY=Disease or Syndrome
+Oth gen epilep + epilep syn	PREF=Oth gen epilep + epilep syn	CUI=C0477370	STY=Disease or Syndrome
+[X]Oth gen epilep + epilep syn	PREF=[X]Oth gen epilep + epilep syn	CUI=C0477370	STY=Disease or Syndrome
+Other generalised epilepsy and epileptic syndromes	PREF=Other generalised epilepsy and epileptic syndromes	CUI=C0477370	STY=Disease or Syndrome
+[X]Other generalised epilepsy and epileptic syndromes	PREF=[X]Other generalised epilepsy and epileptic syndromes	CUI=C0477370	STY=Disease or Syndrome
+Other generalized epilepsy and epileptic syndromes	PREF=Other generalized epilepsy and epileptic syndromes	CUI=C0477370	STY=Disease or Syndrome
+Other generalized epilepsy and epileptic syndromes NOS	PREF=Other generalized epilepsy and epileptic syndromes NOS	CUI=C0477370	STY=Disease or Syndrome
+[X]Other generalized epilepsy and epileptic syndromes (disorder)	PREF=[X]Other generalized epilepsy and epileptic syndromes (disorder)	CUI=C0477370	STY=Disease or Syndrome
+[X]Other generalized epilepsy and epileptic syndromes	PREF=[X]Other generalized epilepsy and epileptic syndromes	CUI=C0477370	STY=Disease or Syndrome
+[X]Other generalised epilepsy and epileptic syndromes	PREF=[X]Other generalised epilepsy and epileptic syndromes	CUI=C0477370	STY=Disease or Syndrome
+Focal epilepsy	PREF=Focal epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Local epilepsy	PREF=Local epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Partial epilepsy	PREF=Partial epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Localization-related epilepsy -RETIRED-	PREF=Localization-related epilepsy -RETIRED-	CUI=C0014547	STY=Disease or Syndrome
+Localisation-related epilepsy -RETIRED-	PREF=Localisation-related epilepsy -RETIRED-	CUI=C0014547	STY=Disease or Syndrome
+Localisation-related epilepsy	PREF=Localisation-related epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Localization-related epilepsy	PREF=Localization-related epilepsy	CUI=C0014547	STY=Disease or Syndrome
+"Epilepsies, Partial"	"PREF=Epilepsies, Partial"	CUI=C0014547	STY=Disease or Syndrome
+Partial epilepsy	PREF=Partial epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Focal epilepsy	PREF=Focal epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Localisation-related epilepsy	PREF=Localisation-related epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Localisation-related epilepsy (disorder)	PREF=Localisation-related epilepsy (disorder)	CUI=C0014547	STY=Disease or Syndrome
+Focal epilepsy	PREF=Focal epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Localisation-related epilepsy	PREF=Localisation-related epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Localization-related epilepsy	PREF=Localization-related epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Localization-related epilepsy (disorder)	PREF=Localization-related epilepsy (disorder)	CUI=C0014547	STY=Disease or Syndrome
+Localization-related epilepsy	PREF=Localization-related epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Focal epilepsy	PREF=Focal epilepsy	CUI=C0014547	STY=Disease or Syndrome
+"Epilepsy, focal"	"PREF=Epilepsy, focal"	CUI=C0014547	STY=Disease or Syndrome
+Focal epilepsy	PREF=Focal epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Local epilepsy	PREF=Local epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Partial epilepsy	PREF=Partial epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Localisation-related epilepsy	PREF=Localisation-related epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Localization-related epilepsy	PREF=Localization-related epilepsy	CUI=C0014547	STY=Disease or Syndrome
+Localization-related epilepsy (disorder)	PREF=Localization-related epilepsy (disorder)	CUI=C0014547	STY=Disease or Syndrome
+"Focal epilepsy, NOS"	"PREF=Focal epilepsy, NOS"	CUI=C0014547	STY=Disease or Syndrome
+"Localization-related epilepsy, NOS"	"PREF=Localization-related epilepsy, NOS"	CUI=C0014547	STY=Disease or Syndrome
+Epileptic seizures - akinetic	PREF=Epileptic seizures - akinetic	CUI=C0347869	STY=Disease or Syndrome
+Epileptic seizures - akinetic	PREF=Epileptic seizures - akinetic	CUI=C0347869	STY=Disease or Syndrome
+Epileptic seizures - akinetic (finding)	PREF=Epileptic seizures - akinetic (finding)	CUI=C0347869	STY=Disease or Syndrome
+Epileptic seizures - clonic	PREF=Epileptic seizures - clonic	CUI=C0347870	STY=Disease or Syndrome
+Epileptic seizures - clonic	PREF=Epileptic seizures - clonic	CUI=C0347870	STY=Disease or Syndrome
+Epileptic seizures - clonic (finding)	PREF=Epileptic seizures - clonic (finding)	CUI=C0347870	STY=Disease or Syndrome
+Epileptic seizures - tonic	PREF=Epileptic seizures - tonic	CUI=C0086241	STY=Disease or Syndrome
+Epileptic seizures - tonic	PREF=Epileptic seizures - tonic	CUI=C0086241	STY=Disease or Syndrome
+Epileptic seizures - tonic (finding)	PREF=Epileptic seizures - tonic (finding)	CUI=C0086241	STY=Disease or Syndrome
+Epileptic seizures - atonic	PREF=Epileptic seizures - atonic	CUI=C0086236	STY=Disease or Syndrome
+Atonic epilepsy	PREF=Atonic epilepsy	CUI=C0086236	STY=Disease or Syndrome
+Atonic epilepsy (disorder)	PREF=Atonic epilepsy (disorder)	CUI=C0086236	STY=Disease or Syndrome
+Epileptic seizures - atonic	PREF=Epileptic seizures - atonic	CUI=C0086236	STY=Disease or Syndrome
+Epileptic seizures - atonic (finding)	PREF=Epileptic seizures - atonic (finding)	CUI=C0086236	STY=Disease or Syndrome
+"Epilepsy, unspecified, not intractable"	"PREF=Epilepsy, unspecified, not intractable"	CUI=C2875138	STY=Disease or Syndrome
+"Epilepsy, unspecified, intractable"	"PREF=Epilepsy, unspecified, intractable"	CUI=C2875141	STY=Disease or Syndrome
+Intractable epilepsy	PREF=Intractable epilepsy	CUI=C1096063	STY=Disease or Syndrome
+Refractory epilepsy (disorder)	PREF=Refractory epilepsy (disorder)	CUI=C1096063	STY=Disease or Syndrome
+Refractory epilepsy	PREF=Refractory epilepsy	CUI=C1096063	STY=Disease or Syndrome
+Refractory epilepsy	PREF=Refractory epilepsy	CUI=C1096063	STY=Disease or Syndrome
+Petit mal status	PREF=Petit mal status	CUI=C0270823	STY=Disease or Syndrome
+Epilepsia minoris continua	PREF=Epilepsia minoris continua	CUI=C0270823	STY=Disease or Syndrome
+Non-conv stat epil wth imp con	PREF=Non-conv stat epil wth imp con	CUI=C0270823	STY=Disease or Syndrome
+Non-convulsive status epilepticus wth impaired consciousness	PREF=Non-convulsive status epilepticus wth impaired consciousness	CUI=C0270823	STY=Disease or Syndrome
+Petit-mal status	PREF=Petit-mal status	CUI=C0270823	STY=Disease or Syndrome
+Prolongd epilep twilight state	PREF=Prolongd epilep twilight state	CUI=C0270823	STY=Disease or Syndrome
+Prolonged epileptic twilight state	PREF=Prolonged epileptic twilight state	CUI=C0270823	STY=Disease or Syndrome
+Status pyknolepticus	PREF=Status pyknolepticus	CUI=C0270823	STY=Disease or Syndrome
+Non-convulsive status epilepticus with impaired consciousness	PREF=Non-convulsive status epilepticus with impaired consciousness	CUI=C0270823	STY=Disease or Syndrome
+Spike wave stupor	PREF=Spike wave stupor	CUI=C0270823	STY=Disease or Syndrome
+Epileptic absence status	PREF=Epileptic absence status	CUI=C0270823	STY=Disease or Syndrome
+Petit mal status	PREF=Petit mal status	CUI=C0270823	STY=Disease or Syndrome
+Epilepsia minoris continua	PREF=Epilepsia minoris continua	CUI=C0270823	STY=Disease or Syndrome
+Petit-mal status	PREF=Petit-mal status	CUI=C0270823	STY=Disease or Syndrome
+Prolonged epileptic twilight state	PREF=Prolonged epileptic twilight state	CUI=C0270823	STY=Disease or Syndrome
+Status pyknolepticus	PREF=Status pyknolepticus	CUI=C0270823	STY=Disease or Syndrome
+Non-convulsive status epilepticus with impaired consciousness	PREF=Non-convulsive status epilepticus with impaired consciousness	CUI=C0270823	STY=Disease or Syndrome
+Spike wave stupor	PREF=Spike wave stupor	CUI=C0270823	STY=Disease or Syndrome
+Petit mal status (disorder)	PREF=Petit mal status (disorder)	CUI=C0270823	STY=Disease or Syndrome
+Seizure disorder as sequela of stroke	PREF=Seizure disorder as sequela of stroke	CUI=C3662042	STY=Disease or Syndrome
+Seizure disorder as sequela of stroke (disorder)	PREF=Seizure disorder as sequela of stroke (disorder)	CUI=C3662042	STY=Disease or Syndrome
+Atypical absence epilepsy	PREF=Atypical absence epilepsy	CUI=C0751124	STY=Disease or Syndrome
+Atypical absence epilepsy (disorder)	PREF=Atypical absence epilepsy (disorder)	CUI=C0751124	STY=Disease or Syndrome
+Post-cerebrovascular accident epilepsy (disorder)	PREF=Post-cerebrovascular accident epilepsy (disorder)	CUI=C3697594	STY=Disease or Syndrome
+Post-cerebrovascular accident epilepsy	PREF=Post-cerebrovascular accident epilepsy	CUI=C3697594	STY=Disease or Syndrome
+Epilepsy in mother complicating pregnancy (disorder)	PREF=Epilepsy in mother complicating pregnancy (disorder)	CUI=C3826393	STY=Disease or Syndrome
+Epilepsy in mother complicating pregnancy	PREF=Epilepsy in mother complicating pregnancy	CUI=C3826393	STY=Disease or Syndrome
+Epilepsy in pregnancy	PREF=Epilepsy in pregnancy	CUI=C3826393	STY=Disease or Syndrome
+Epilepsy in childbirth	PREF=Epilepsy in childbirth	CUI=C3840267	STY=Disease or Syndrome
+Epilepsy in mother complicating childbirth	PREF=Epilepsy in mother complicating childbirth	CUI=C3840267	STY=Disease or Syndrome
+Epilepsy in mother complicating childbirth (disorder)	PREF=Epilepsy in mother complicating childbirth (disorder)	CUI=C3840267	STY=Disease or Syndrome
+X-linked epilepsy with learning disability and behavior disorder syndrome	PREF=X-linked epilepsy with learning disability and behavior disorder syndrome	CUI=C4273990	STY=Disease or Syndrome
+X-linked epilepsy with learning disability and behavior disorder syndrome (disorder)	PREF=X-linked epilepsy with learning disability and behavior disorder syndrome (disorder)	CUI=C4273990	STY=Disease or Syndrome
+X-linked epilepsy with learning disability and behaviour disorder syndrome	PREF=X-linked epilepsy with learning disability and behaviour disorder syndrome	CUI=C4273990	STY=Disease or Syndrome
+Female restricted epilepsy with intellectual disability syndrome	PREF=Female restricted epilepsy with intellectual disability syndrome	CUI=C4274335	STY=Disease or Syndrome
+Female restricted epilepsy with intellectual disability syndrome (disorder)	PREF=Female restricted epilepsy with intellectual disability syndrome (disorder)	CUI=C4274335	STY=Disease or Syndrome
+X-linked intellectual disability with seizure and psoriasis syndrome (disorder)	PREF=X-linked intellectual disability with seizure and psoriasis syndrome (disorder)	CUI=C2931381	STY=Disease or Syndrome
+X-linked intellectual disability with seizure and psoriasis syndrome	PREF=X-linked intellectual disability with seizure and psoriasis syndrome	CUI=C2931381	STY=Disease or Syndrome
+Tranebjaerg Svejgaard syndrome	PREF=Tranebjaerg Svejgaard syndrome	CUI=C2931381	STY=Disease or Syndrome
+Aphasia co-occurrent with epilepsy	PREF=Aphasia co-occurrent with epilepsy	CUI=C4302729	STY=Disease or Syndrome
+Aphasia co-occurrent with epilepsy (disorder)	PREF=Aphasia co-occurrent with epilepsy (disorder)	CUI=C4302729	STY=Disease or Syndrome
+"SEIZURES, SENSORINEURAL DEAFNESS, ATAXIA, MENTAL RETARDATION, AND ELECTROLYTE IMBALANCE"	"PREF=SEIZURES, SENSORINEURAL DEAFNESS, ATAXIA, MENTAL RETARDATION, AND ELECTROLYTE IMBALANCE"	CUI=C2748572	STY=Disease or Syndrome
+SESAMES	PREF=SESAMES	CUI=C2748572	STY=Disease or Syndrome
+SeSAME syndrome	PREF=SeSAME syndrome	CUI=C2748572	STY=Disease or Syndrome
+SESAME SYNDROME	PREF=SESAME SYNDROME	CUI=C2748572	STY=Disease or Syndrome
+"EPILEPSY, ATAXIA, SENSORINEURAL DEAFNESS, AND TUBULOPATHY"	"PREF=EPILEPSY, ATAXIA, SENSORINEURAL DEAFNESS, AND TUBULOPATHY"	CUI=C2748572	STY=Disease or Syndrome
+EAST SYNDROME	PREF=EAST SYNDROME	CUI=C2748572	STY=Disease or Syndrome
+"SEIZURES, SENSORINEURAL DEAFNESS, ATAXIA, MENTAL RETARDATION, AND ELECTROLYTE IMBALANCE"	"PREF=SEIZURES, SENSORINEURAL DEAFNESS, ATAXIA, MENTAL RETARDATION, AND ELECTROLYTE IMBALANCE"	CUI=C2748572	STY=Disease or Syndrome
+"Seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome (disorder)"	"PREF=Seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome (disorder)"	CUI=C2748572	STY=Disease or Syndrome
+"Seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome"	"PREF=Seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome"	CUI=C2748572	STY=Disease or Syndrome
+"SESAME (seizures, sensorineural deafness, ataxia, mental retardation, electrolyte imbalance) syndrome"	"PREF=SESAME (seizures, sensorineural deafness, ataxia, mental retardation, electrolyte imbalance) syndrome"	CUI=C2748572	STY=Disease or Syndrome
+SESAME syndrome	PREF=SESAME syndrome	CUI=C2748572	STY=Disease or Syndrome
+Celiac disease with epilepsy and cerebral calcification syndrome (disorder)	PREF=Celiac disease with epilepsy and cerebral calcification syndrome (disorder)	CUI=C4302597	STY=Disease or Syndrome
+Celiac disease with epilepsy and cerebral calcification syndrome	PREF=Celiac disease with epilepsy and cerebral calcification syndrome	CUI=C4302597	STY=Disease or Syndrome
+Coeliac disease with epilepsy and cerebral calcification syndrome	PREF=Coeliac disease with epilepsy and cerebral calcification syndrome	CUI=C4302597	STY=Disease or Syndrome
+Al Gazali Nair syndrome	PREF=Al Gazali Nair syndrome	CUI=C4302824	STY=Disease or Syndrome
+"Osteogenesis imperfecta, retinopathy, seizures, intellectual disability syndrome"	"PREF=Osteogenesis imperfecta, retinopathy, seizures, intellectual disability syndrome"	CUI=C4302824	STY=Disease or Syndrome
+"Osteogenesis imperfecta, retinopathy, seizures, intellectual disability syndrome (disorder)"	"PREF=Osteogenesis imperfecta, retinopathy, seizures, intellectual disability syndrome (disorder)"	CUI=C4302824	STY=Disease or Syndrome
+"EPILEPSY SYNDROME, INFANTILE-ONSET SYMPTOMATIC"	"PREF=EPILEPSY SYNDROME, INFANTILE-ONSET SYMPTOMATIC"	CUI=C1836824	STY=Disease or Syndrome
+SALT AND PEPPER MENTAL RETARDATION SYNDROME	PREF=SALT AND PEPPER MENTAL RETARDATION SYNDROME	CUI=C1836824	STY=Disease or Syndrome
+GM3 SYNTHASE DEFICIENCY	PREF=GM3 SYNTHASE DEFICIENCY	CUI=C1836824	STY=Disease or Syndrome
+Ganglioside GM3 synthase deficiency (disorder)	PREF=Ganglioside GM3 synthase deficiency (disorder)	CUI=C1836824	STY=Disease or Syndrome
+GM3 synthase deficiency	PREF=GM3 synthase deficiency	CUI=C1836824	STY=Disease or Syndrome
+Ganglioside GM3 synthase deficiency	PREF=Ganglioside GM3 synthase deficiency	CUI=C1836824	STY=Disease or Syndrome
+SALT AND PEPPER DEVELOPMENTAL REGRESSION SYNDROME	PREF=SALT AND PEPPER DEVELOPMENTAL REGRESSION SYNDROME	CUI=C1836824	STY=Disease or Syndrome
+SALT AND PEPPER DEVELOPMENTAL REGRESSION SYNDROME	PREF=SALT AND PEPPER DEVELOPMENTAL REGRESSION SYNDROME	CUI=C1836824	STY=Disease or Syndrome
+AMISH INFANTILE EPILEPSY SYNDROME	PREF=AMISH INFANTILE EPILEPSY SYNDROME	CUI=C1836824	STY=Disease or Syndrome
+SPDRS	PREF=SPDRS	CUI=C1836824	STY=Disease or Syndrome
+Infantile-onset symptomatic epilepsy syndrome	PREF=Infantile-onset symptomatic epilepsy syndrome	CUI=C1836824	STY=Disease or Syndrome
+Amish infantile epilepsy syndrome	PREF=Amish infantile epilepsy syndrome	CUI=C1836824	STY=Disease or Syndrome
+"Atherosclerosis, deafness, diabetes, epilepsy, nephropathy syndrome (disorder)"	"PREF=Atherosclerosis, deafness, diabetes, epilepsy, nephropathy syndrome (disorder)"	CUI=C2931125	STY=Disease or Syndrome
+"Atherosclerosis, deafness, diabetes, epilepsy, nephropathy syndrome"	"PREF=Atherosclerosis, deafness, diabetes, epilepsy, nephropathy syndrome"	CUI=C2931125	STY=Disease or Syndrome
+Feigenbaum Bergeron Richardson syndrome	PREF=Feigenbaum Bergeron Richardson syndrome	CUI=C2931125	STY=Disease or Syndrome
+"DEND (developmental delay, epilepsy, neonatal diabetes) syndrome"	"PREF=DEND (developmental delay, epilepsy, neonatal diabetes) syndrome"	CUI=C4303593	STY=Disease or Syndrome
+DEND syndrome	PREF=DEND syndrome	CUI=C4303593	STY=Disease or Syndrome
+"Developmental delay, epilepsy, neonatal diabetes syndrome (disorder)"	"PREF=Developmental delay, epilepsy, neonatal diabetes syndrome (disorder)"	CUI=C4303593	STY=Disease or Syndrome
+"Developmental delay, epilepsy, neonatal diabetes syndrome"	"PREF=Developmental delay, epilepsy, neonatal diabetes syndrome"	CUI=C4303593	STY=Disease or Syndrome
+Epilepsy co-occurrent and due to mesial temporal sclerosis (disorder)	PREF=Epilepsy co-occurrent and due to mesial temporal sclerosis (disorder)	CUI=C4511904	STY=Disease or Syndrome
+Epilepsy with mesial temporal sclerosis	PREF=Epilepsy with mesial temporal sclerosis	CUI=C4511904	STY=Disease or Syndrome
+Epilepsy co-occurrent and due to mesial temporal sclerosis	PREF=Epilepsy co-occurrent and due to mesial temporal sclerosis	CUI=C4511904	STY=Disease or Syndrome
+Epilepsy due to immune disorder (disorder)	PREF=Epilepsy due to immune disorder (disorder)	CUI=C4510729	STY=Disease or Syndrome
+Epilepsy due to immune disorder	PREF=Epilepsy due to immune disorder	CUI=C4510729	STY=Disease or Syndrome
+Epilepsy co-occurrent and due to degenerative brain disorder (disorder)	PREF=Epilepsy co-occurrent and due to degenerative brain disorder (disorder)	CUI=C4511049	STY=Disease or Syndrome
+Epilepsy co-occurrent and due to degenerative brain disorder	PREF=Epilepsy co-occurrent and due to degenerative brain disorder	CUI=C4511049	STY=Disease or Syndrome
+Epilepsy with degenerative brain disorder	PREF=Epilepsy with degenerative brain disorder	CUI=C4511049	STY=Disease or Syndrome
+Epilepsy due to perinatal hypoxic ischaemic encephalopathy	PREF=Epilepsy due to perinatal hypoxic ischaemic encephalopathy	CUI=C4511577	STY=Disease or Syndrome
+Epilepsy due to perinatal anoxic-ischemic brain injury	PREF=Epilepsy due to perinatal anoxic-ischemic brain injury	CUI=C4511577	STY=Disease or Syndrome
+Epilepsy due to perinatal anoxic-ischaemic brain injury	PREF=Epilepsy due to perinatal anoxic-ischaemic brain injury	CUI=C4511577	STY=Disease or Syndrome
+Epilepsy due to perinatal anoxic-ischemic brain injury (disorder)	PREF=Epilepsy due to perinatal anoxic-ischemic brain injury (disorder)	CUI=C4511577	STY=Disease or Syndrome
+Epilepsy due to perinatal hypoxic ischemic encephalopathy	PREF=Epilepsy due to perinatal hypoxic ischemic encephalopathy	CUI=C4511577	STY=Disease or Syndrome
+Epileptic dementia	PREF=Epileptic dementia	CUI=C0338464	STY=Disease or Syndrome
+Epilepsy with dementia	PREF=Epilepsy with dementia	CUI=C0338464	STY=Disease or Syndrome
+Epileptic dementia	PREF=Epileptic dementia	CUI=C0338464	STY=Disease or Syndrome
+Epilepsy co-occurrent and due to dementia	PREF=Epilepsy co-occurrent and due to dementia	CUI=C0338464	STY=Disease or Syndrome
+Epileptic dementia	PREF=Epileptic dementia	CUI=C0338464	STY=Disease or Syndrome
+Epileptic dementia (disorder)	PREF=Epileptic dementia (disorder)	CUI=C0338464	STY=Disease or Syndrome
+Epilepsy co-occurrent and due to dementia (disorder)	PREF=Epilepsy co-occurrent and due to dementia (disorder)	CUI=C0338464	STY=Disease or Syndrome
+Epilepsy telangiectasia syndrome	PREF=Epilepsy telangiectasia syndrome	CUI=C4518554	STY=Disease or Syndrome
+Epilepsy telangiectasia syndrome (disorder)	PREF=Epilepsy telangiectasia syndrome (disorder)	CUI=C4518554	STY=Disease or Syndrome
+Epileptic dementia with behavioural disturbance	PREF=Epileptic dementia with behavioural disturbance	CUI=C4075972	STY=Disease or Syndrome
+Epileptic dementia with behavioral disturbance (disorder)	PREF=Epileptic dementia with behavioral disturbance (disorder)	CUI=C4075972	STY=Disease or Syndrome
+Epileptic dementia with behavioral disturbance	PREF=Epileptic dementia with behavioral disturbance	CUI=C4075972	STY=Disease or Syndrome
+SLC35A3-CDG - solute carrier family 35 member A3 congenital disorder of glycosylation	PREF=SLC35A3-CDG - solute carrier family 35 member A3 congenital disorder of glycosylation	CUI=C4518080	STY=Disease or Syndrome
+"Autism spectrum disorder, epilepsy, arthrogryposis syndrome (disorder)"	"PREF=Autism spectrum disorder, epilepsy, arthrogryposis syndrome (disorder)"	CUI=C4518080	STY=Disease or Syndrome
+"Autism spectrum disorder, epilepsy, arthrogryposis syndrome"	"PREF=Autism spectrum disorder, epilepsy, arthrogryposis syndrome"	CUI=C4518080	STY=Disease or Syndrome
+Epilepsy of infancy with migrating focal seizures	PREF=Epilepsy of infancy with migrating focal seizures	CUI=C4518639	STY=Disease or Syndrome
+Epilepsy of infancy with migrating focal seizures (disorder)	PREF=Epilepsy of infancy with migrating focal seizures (disorder)	CUI=C4518639	STY=Disease or Syndrome
+Epilepsy due to stroke	PREF=Epilepsy due to stroke	CUI=C4518323	STY=Disease or Syndrome
+Epilepsy due to cerebrovascular accident	PREF=Epilepsy due to cerebrovascular accident	CUI=C4518323	STY=Disease or Syndrome
+Epilepsy due to cerebrovascular accident (disorder)	PREF=Epilepsy due to cerebrovascular accident (disorder)	CUI=C4518323	STY=Disease or Syndrome
+"Microcephaly, seizure, intellectual disability, heart disease syndrome"	"PREF=Microcephaly, seizure, intellectual disability, heart disease syndrome"	CUI=C4509817	STY=Disease or Syndrome
+"Microcephaly, seizure, intellectual disability, heart disease syndrome (disorder)"	"PREF=Microcephaly, seizure, intellectual disability, heart disease syndrome (disorder)"	CUI=C4509817	STY=Disease or Syndrome
+Battaglia Neri syndrome	PREF=Battaglia Neri syndrome	CUI=C2931579	STY=Disease or Syndrome
+"Epilepsy, microcephaly, skeletal dysplasia syndrome (disorder)"	"PREF=Epilepsy, microcephaly, skeletal dysplasia syndrome (disorder)"	CUI=C2931579	STY=Disease or Syndrome
+"Epilepsy, microcephaly, skeletal dysplasia syndrome"	"PREF=Epilepsy, microcephaly, skeletal dysplasia syndrome"	CUI=C2931579	STY=Disease or Syndrome
+Epilepsy due to intracranial tumor (disorder)	PREF=Epilepsy due to intracranial tumor (disorder)	CUI=C4511576	STY=Disease or Syndrome
+Epilepsy due to intracranial tumor	PREF=Epilepsy due to intracranial tumor	CUI=C4511576	STY=Disease or Syndrome
+Epilepsy due to intracranial tumour	PREF=Epilepsy due to intracranial tumour	CUI=C4511576	STY=Disease or Syndrome
+Epilepsy due to intracranial neoplasm	PREF=Epilepsy due to intracranial neoplasm	CUI=C4511576	STY=Disease or Syndrome
+"Severe intellectual disability, epilepsy, anal anomaly, distal phalangeal hypoplasia syndrome"	"PREF=Severe intellectual disability, epilepsy, anal anomaly, distal phalangeal hypoplasia syndrome"	CUI=C4510007	STY=Disease or Syndrome
+"Severe intellectual disability, epilepsy, anal anomaly, distal phalangeal hypoplasia syndrome (disorder)"	"PREF=Severe intellectual disability, epilepsy, anal anomaly, distal phalangeal hypoplasia syndrome (disorder)"	CUI=C4510007	STY=Disease or Syndrome
+PYRIDOXAMINE 5-PRIME-PHOSPHATE OXIDASE DEFICIENCY	PREF=PYRIDOXAMINE 5-PRIME-PHOSPHATE OXIDASE DEFICIENCY	CUI=C1864723	STY=Disease or Syndrome
+PYRIDOXAMINE 5-PRIME-PHOSPHATE OXIDASE DEFICIENCY	PREF=PYRIDOXAMINE 5-PRIME-PHOSPHATE OXIDASE DEFICIENCY	CUI=C1864723	STY=Disease or Syndrome
+PNPO DEFICIENCY	PREF=PNPO DEFICIENCY	CUI=C1864723	STY=Disease or Syndrome
+"EPILEPTIC ENCEPHALOPATHY, NEONATAL, PNPO-RELATED"	"PREF=EPILEPTIC ENCEPHALOPATHY, NEONATAL, PNPO-RELATED"	CUI=C1864723	STY=Disease or Syndrome
+"SEIZURES, PYRIDOXINE-RESISTANT, PLP-SENSITIVE"	"PREF=SEIZURES, PYRIDOXINE-RESISTANT, PLP-SENSITIVE"	CUI=C1864723	STY=Disease or Syndrome
+PNPOD	PREF=PNPOD	CUI=C1864723	STY=Disease or Syndrome
+Pyridoxal 5-phosphate dependent epilepsy	PREF=Pyridoxal 5-phosphate dependent epilepsy	CUI=C1864723	STY=Disease or Syndrome
+Pyridoxal phosphate-responsive seizures	PREF=Pyridoxal phosphate-responsive seizures	CUI=C1864723	STY=Disease or Syndrome
+Pyridoxal 5-phosphate dependent epilepsy (disorder)	PREF=Pyridoxal 5-phosphate dependent epilepsy (disorder)	CUI=C1864723	STY=Disease or Syndrome
+Epilepsy co-occurrent and due to demyelinating disorder (disorder)	PREF=Epilepsy co-occurrent and due to demyelinating disorder (disorder)	CUI=C4511050	STY=Disease or Syndrome
+Epilepsy with demyelinating disorder	PREF=Epilepsy with demyelinating disorder	CUI=C4511050	STY=Disease or Syndrome
+Epilepsy co-occurrent and due to demyelinating disorder	PREF=Epilepsy co-occurrent and due to demyelinating disorder	CUI=C4511050	STY=Disease or Syndrome
+Epilepsy due to infectious disease of central nervous system (disorder)	PREF=Epilepsy due to infectious disease of central nervous system (disorder)	CUI=C4510970	STY=Disease or Syndrome
+Epilepsy due to infectious disease of central nervous system	PREF=Epilepsy due to infectious disease of central nervous system	CUI=C4510970	STY=Disease or Syndrome
+Infant epilepsy with migrant focal crisis (disorder)	PREF=Infant epilepsy with migrant focal crisis (disorder)	CUI=C4510564	STY=Disease or Syndrome
+Infant epilepsy with migrant focal crisis	PREF=Infant epilepsy with migrant focal crisis	CUI=C4510564	STY=Disease or Syndrome
+"EPILEPSY, PYRIDOXINE-DEPENDENT"	"PREF=EPILEPSY, PYRIDOXINE-DEPENDENT"	CUI=C1849508	STY=Disease or Syndrome
+PDE	PREF=PDE	CUI=C1849508	STY=Disease or Syndrome
+EPD	PREF=EPD	CUI=C1849508	STY=Disease or Syndrome
+"EPILEPSY, PYRIDOXINE-DEPENDENT"	"PREF=EPILEPSY, PYRIDOXINE-DEPENDENT"	CUI=C1849508	STY=Disease or Syndrome
+PYRIDOXINE DEPENDENCY WITH SEIZURES	PREF=PYRIDOXINE DEPENDENCY WITH SEIZURES	CUI=C1849508	STY=Disease or Syndrome
+AASA DEHYDROGENASE DEFICIENCY	PREF=AASA DEHYDROGENASE DEFICIENCY	CUI=C1849508	STY=Disease or Syndrome
+"EPILEPSY, PYRIDOXINE-DEPENDENT"	"PREF=EPILEPSY, PYRIDOXINE-DEPENDENT"	CUI=C1849508	STY=Disease or Syndrome
+PYRIDOXINE-DEPENDENT EPILEPSY	PREF=PYRIDOXINE-DEPENDENT EPILEPSY	CUI=C1849508	STY=Disease or Syndrome
+Pyridoxine-dependent epilepsy	PREF=Pyridoxine-dependent epilepsy	CUI=C1849508	STY=Disease or Syndrome
+Pyridoxine-dependent epilepsy (disorder)	PREF=Pyridoxine-dependent epilepsy (disorder)	CUI=C1849508	STY=Disease or Syndrome
+Vitamin B6-dependent seizures	PREF=Vitamin B6-dependent seizures	CUI=C1849508	STY=Disease or Syndrome
+Antiquitin deficiency	PREF=Antiquitin deficiency	CUI=C1849508	STY=Disease or Syndrome
+Visceral epilepsy	PREF=Visceral epilepsy	CUI=C0270825	STY=Disease or Syndrome
+Visceral epilepsy (disorder)	PREF=Visceral epilepsy (disorder)	CUI=C0270825	STY=Disease or Syndrome
+Visual seizure	PREF=Visual seizure	CUI=C0270824	STY=Disease or Syndrome
+Visual epilepsy	PREF=Visual epilepsy	CUI=C0270824	STY=Disease or Syndrome
+Visual epilepsy (disorder)	PREF=Visual epilepsy (disorder)	CUI=C0270824	STY=Disease or Syndrome
+Visual seizure	PREF=Visual seizure	CUI=C0270824	STY=Disease or Syndrome
+Tonic-Clonic Epilepsy	PREF=Tonic-Clonic Epilepsy	CUI=C0014549	STY=Disease or Syndrome
+Tonic-clonic epilepsy	PREF=Tonic-clonic epilepsy	CUI=C0014549	STY=Disease or Syndrome
+Tonic-clonic convulsion	PREF=Tonic-clonic convulsion	CUI=C0014549	STY=Disease or Syndrome
+Grand mal epilepsy	PREF=Grand mal epilepsy	CUI=C0014549	STY=Disease or Syndrome
+Tonic-clonic epilepsy	PREF=Tonic-clonic epilepsy	CUI=C0014549	STY=Disease or Syndrome
+Grand mal epilepsy	PREF=Grand mal epilepsy	CUI=C0014549	STY=Disease or Syndrome
+Tonic-clonic epilepsy (disorder)	PREF=Tonic-clonic epilepsy (disorder)	CUI=C0014549	STY=Disease or Syndrome
+Cursive (running) epilepsy	PREF=Cursive (running) epilepsy	CUI=C0270819	STY=Disease or Syndrome
+Cursive seizure	PREF=Cursive seizure	CUI=C0270819	STY=Disease or Syndrome
+Cursive epilepsy	PREF=Cursive epilepsy	CUI=C0270819	STY=Disease or Syndrome
+Cursive seizure (disorder)	PREF=Cursive seizure (disorder)	CUI=C0270819	STY=Disease or Syndrome
+Cursive seizure	PREF=Cursive seizure	CUI=C0270819	STY=Disease or Syndrome
+Cursive epilepsy	PREF=Cursive epilepsy	CUI=C0270819	STY=Disease or Syndrome
+Running epilepsy	PREF=Running epilepsy	CUI=C0270819	STY=Disease or Syndrome
+Running epilepsy	PREF=Running epilepsy	CUI=C0270819	STY=Disease or Syndrome
+Cursive (running) epilepsy	PREF=Cursive (running) epilepsy	CUI=C0270819	STY=Disease or Syndrome
+Cursive (running) epilepsy (disorder)	PREF=Cursive (running) epilepsy (disorder)	CUI=C0270819	STY=Disease or Syndrome
+Other status epilepticus	PREF=Other status epilepticus	CUI=C0477372	STY=Disease or Syndrome
+[X]Other status epilepticus	PREF=[X]Other status epilepticus	CUI=C0477372	STY=Disease or Syndrome
+[X]Other status epilepticus	PREF=[X]Other status epilepticus	CUI=C0477372	STY=Disease or Syndrome
+[X]Other status epilepticus (disorder)	PREF=[X]Other status epilepticus (disorder)	CUI=C0477372	STY=Disease or Syndrome
+Drug-induced epilepsy	PREF=Drug-induced epilepsy	CUI=C0393715	STY=Disease or Syndrome
+Drug-induced epilepsy	PREF=Drug-induced epilepsy	CUI=C0393715	STY=Disease or Syndrome
+Drug-induced epilepsy (disorder)	PREF=Drug-induced epilepsy (disorder)	CUI=C0393715	STY=Disease or Syndrome
+Centerncephalic epilepsy	PREF=Centerncephalic epilepsy	CUI=C0270822	STY=Disease or Syndrome
+Centrencephalic epilepsy (disorder)	PREF=Centrencephalic epilepsy (disorder)	CUI=C0270822	STY=Disease or Syndrome
+Centrencephalic epilepsy	PREF=Centrencephalic epilepsy	CUI=C0270822	STY=Disease or Syndrome
+Centrencephalic absence	PREF=Centrencephalic absence	CUI=C0270822	STY=Disease or Syndrome
+Centerncephalic absence	PREF=Centerncephalic absence	CUI=C0270822	STY=Disease or Syndrome
+Kohlschutter syndrome	PREF=Kohlschutter syndrome	CUI=C0406740	STY=Disease or Syndrome
+KOHLSCHUTTER-TONZ SYNDROME	PREF=KOHLSCHUTTER-TONZ SYNDROME	CUI=C0406740	STY=Disease or Syndrome
+Amelocerebrohypohidrotic syn	PREF=Amelocerebrohypohidrotic syn	CUI=C0406740	STY=Disease or Syndrome
+Amelocerebrohypohidrotic syndrome	PREF=Amelocerebrohypohidrotic syndrome	CUI=C0406740	STY=Disease or Syndrome
+KTZS	PREF=KTZS	CUI=C0406740	STY=Disease or Syndrome
+KOHLSCHUTTER SYNDROME	PREF=KOHLSCHUTTER SYNDROME	CUI=C0406740	STY=Disease or Syndrome
+EPILEPSY AND YELLOW TEETH	PREF=EPILEPSY AND YELLOW TEETH	CUI=C0406740	STY=Disease or Syndrome
+"EPILEPSY, DEMENTIA, AND AMELOGENESIS IMPERFECTA"	"PREF=EPILEPSY, DEMENTIA, AND AMELOGENESIS IMPERFECTA"	CUI=C0406740	STY=Disease or Syndrome
+KOHLSCHUTTER-TONZ SYNDROME	PREF=KOHLSCHUTTER-TONZ SYNDROME	CUI=C0406740	STY=Disease or Syndrome
+Kohlschutter syndrome	PREF=Kohlschutter syndrome	CUI=C0406740	STY=Disease or Syndrome
+Amelocerebrohypohidrotic syndrome	PREF=Amelocerebrohypohidrotic syndrome	CUI=C0406740	STY=Disease or Syndrome
+"Epilepsy, dementia and amelogenesis imperfecta"	"PREF=Epilepsy, dementia and amelogenesis imperfecta"	CUI=C0406740	STY=Disease or Syndrome
+"Epilepsy, mental deterioration and yellow teeth"	"PREF=Epilepsy, mental deterioration and yellow teeth"	CUI=C0406740	STY=Disease or Syndrome
+Kohlschutter's syndrome (disorder)	PREF=Kohlschutter's syndrome (disorder)	CUI=C0406740	STY=Disease or Syndrome
+Kohlschutter's syndrome	PREF=Kohlschutter's syndrome	CUI=C0406740	STY=Disease or Syndrome
+Vertiginous epilepsy	PREF=Vertiginous epilepsy	CUI=C0422855	STY=Disease or Syndrome
+Vertiginous seizure	PREF=Vertiginous seizure	CUI=C0422855	STY=Disease or Syndrome
+Vertiginous seizure	PREF=Vertiginous seizure	CUI=C0422855	STY=Disease or Syndrome
+Vertiginous seizure (disorder)	PREF=Vertiginous seizure (disorder)	CUI=C0422855	STY=Disease or Syndrome
+Vertiginous seizure	PREF=Vertiginous seizure	CUI=C0422855	STY=Disease or Syndrome
+Vertiginous seizure (disorder)	PREF=Vertiginous seizure (disorder)	CUI=C0422855	STY=Disease or Syndrome
+Epileptic vertigo	PREF=Epileptic vertigo	CUI=C0422855	STY=Disease or Syndrome
+Vertiginous epilepsy	PREF=Vertiginous epilepsy	CUI=C0422855	STY=Disease or Syndrome
+Epileptic vertigo (disorder)	PREF=Epileptic vertigo (disorder)	CUI=C0422855	STY=Disease or Syndrome
+Vertiginous seizure (finding)	PREF=Vertiginous seizure (finding)	CUI=C0422855	STY=Disease or Syndrome
+Vertiginous seizure	PREF=Vertiginous seizure	CUI=C0422855	STY=Disease or Syndrome
+Convulsions in newborn	PREF=Convulsions in newborn	CUI=C0159020	STY=Disease or Syndrome
+Fits in newborn	PREF=Fits in newborn	CUI=C0159020	STY=Disease or Syndrome
+Neonatal convulsions	PREF=Neonatal convulsions	CUI=C0159020	STY=Disease or Syndrome
+Neonatal seizures	PREF=Neonatal seizures	CUI=C0159020	STY=Disease or Syndrome
+Seizures in newborn	PREF=Seizures in newborn	CUI=C0159020	STY=Disease or Syndrome
+Convulsions of newborn	PREF=Convulsions of newborn	CUI=C0159020	STY=Disease or Syndrome
+Convulsions in newborn (disorder)	PREF=Convulsions in newborn (disorder)	CUI=C0159020	STY=Disease or Syndrome
+Convulsions in newborn (disorder)	PREF=Convulsions in newborn (disorder)	CUI=C0159020	STY=Disease or Syndrome
+Convulsions in newborn	PREF=Convulsions in newborn	CUI=C0159020	STY=Disease or Syndrome
+Convulsions in newborn	PREF=Convulsions in newborn	CUI=C0159020	STY=Disease or Syndrome
+Convulsions in the newborn	PREF=Convulsions in the newborn	CUI=C0159020	STY=Disease or Syndrome
+Fits in the newborn	PREF=Fits in the newborn	CUI=C0159020	STY=Disease or Syndrome
+Seizures in the newborn	PREF=Seizures in the newborn	CUI=C0159020	STY=Disease or Syndrome
+Fits in newborn	PREF=Fits in newborn	CUI=C0159020	STY=Disease or Syndrome
+Neonatal convulsions	PREF=Neonatal convulsions	CUI=C0159020	STY=Disease or Syndrome
+Neonatal seizures	PREF=Neonatal seizures	CUI=C0159020	STY=Disease or Syndrome
+Seizures in newborn	PREF=Seizures in newborn	CUI=C0159020	STY=Disease or Syndrome
+Convulsions in the newborn (disorder)	PREF=Convulsions in the newborn (disorder)	CUI=C0159020	STY=Disease or Syndrome
+Partial seizure	PREF=Partial seizure	CUI=C0751495	STY=Disease or Syndrome
+Focal seizure	PREF=Focal seizure	CUI=C0751495	STY=Disease or Syndrome
+Local seizure	PREF=Local seizure	CUI=C0751495	STY=Disease or Syndrome
+"Seizures, partial, afebrile"	"PREF=Seizures, partial, afebrile"	CUI=C0751495	STY=Disease or Syndrome
+"Partial seizures, NOS"	"PREF=Partial seizures, NOS"	CUI=C0751495	STY=Disease or Syndrome
+"Seizures, partial"	"PREF=Seizures, partial"	CUI=C0751495	STY=Disease or Syndrome
+Partial seizures	PREF=Partial seizures	CUI=C0751495	STY=Disease or Syndrome
+Focal seizures	PREF=Focal seizures	CUI=C0751495	STY=Disease or Syndrome
+Partial seizure	PREF=Partial seizure	CUI=C0751495	STY=Disease or Syndrome
+Local convulsion	PREF=Local convulsion	CUI=C0751495	STY=Disease or Syndrome
+Partial seizure (finding)	PREF=Partial seizure (finding)	CUI=C0751495	STY=Disease or Syndrome
+Local convulsion (disorder)	PREF=Local convulsion (disorder)	CUI=C0751495	STY=Disease or Syndrome
+"Seizures, focal"	"PREF=Seizures, focal"	CUI=C0751495	STY=Disease or Syndrome
+"Seizures, Focal"	"PREF=Seizures, Focal"	CUI=C0751495	STY=Disease or Syndrome
+Local convulsion	PREF=Local convulsion	CUI=C0751495	STY=Disease or Syndrome
+Partial seizure	PREF=Partial seizure	CUI=C0751495	STY=Disease or Syndrome
+Focal seizure	PREF=Focal seizure	CUI=C0751495	STY=Disease or Syndrome
+Local seizure	PREF=Local seizure	CUI=C0751495	STY=Disease or Syndrome
+Partial seizures	PREF=Partial seizures	CUI=C0751495	STY=Disease or Syndrome
+Partial seizure (disorder)	PREF=Partial seizure (disorder)	CUI=C0751495	STY=Disease or Syndrome
+"Focal seizure, NOS"	"PREF=Focal seizure, NOS"	CUI=C0751495	STY=Disease or Syndrome
+Unclassified epileptic seizures	PREF=Unclassified epileptic seizures	CUI=C0270826	STY=Disease or Syndrome
+Unclassified epileptic seizures (disorder)	PREF=Unclassified epileptic seizures (disorder)	CUI=C0270826	STY=Disease or Syndrome
+Situation-related seizures	PREF=Situation-related seizures	CUI=C0393707	STY=Disease or Syndrome
+Situation-related seizures	PREF=Situation-related seizures	CUI=C0393707	STY=Disease or Syndrome
+Situation-related seizures (disorder)	PREF=Situation-related seizures (disorder)	CUI=C0393707	STY=Disease or Syndrome
+Generalized convulsive epilepsy	PREF=Generalized convulsive epilepsy	CUI=C0311334	STY=Disease or Syndrome
+General.convuls.epilepsy NOS	PREF=General.convuls.epilepsy NOS	CUI=C0311334	STY=Disease or Syndrome
+Generalised convulsive epilep.	PREF=Generalised convulsive epilep.	CUI=C0311334	STY=Disease or Syndrome
+Generalised convulsive epilepsy	PREF=Generalised convulsive epilepsy	CUI=C0311334	STY=Disease or Syndrome
+Generalised convulsive epilepsy NOS	PREF=Generalised convulsive epilepsy NOS	CUI=C0311334	STY=Disease or Syndrome
+Generalized convulsive epilep.	PREF=Generalized convulsive epilep.	CUI=C0311334	STY=Disease or Syndrome
+Generalized convulsive epilepsy NOS	PREF=Generalized convulsive epilepsy NOS	CUI=C0311334	STY=Disease or Syndrome
+Generalized convulsive epilepsy (disorder)	PREF=Generalized convulsive epilepsy (disorder)	CUI=C0311334	STY=Disease or Syndrome
+Generalized convulsive epilepsy NOS	PREF=Generalized convulsive epilepsy NOS	CUI=C0311334	STY=Disease or Syndrome
+Generalised convulsive epilepsy	PREF=Generalised convulsive epilepsy	CUI=C0311334	STY=Disease or Syndrome
+Generalised convulsive epilepsy NOS	PREF=Generalised convulsive epilepsy NOS	CUI=C0311334	STY=Disease or Syndrome
+Generalized convulsive epilepsy	PREF=Generalized convulsive epilepsy	CUI=C0311334	STY=Disease or Syndrome
+Generalized convulsive epilepsy NOS (disorder)	PREF=Generalized convulsive epilepsy NOS (disorder)	CUI=C0311334	STY=Disease or Syndrome
+Generalized convulsive epilepsy	PREF=Generalized convulsive epilepsy	CUI=C0311334	STY=Disease or Syndrome
+Generalised convulsive epilepsy	PREF=Generalised convulsive epilepsy	CUI=C0311334	STY=Disease or Syndrome
+Generalised-onset seizures	PREF=Generalised-onset seizures	CUI=C0311334	STY=Disease or Syndrome
+Generalized convulsive epilepsy (disorder)	PREF=Generalized convulsive epilepsy (disorder)	CUI=C0311334	STY=Disease or Syndrome
+Generalized-onset seizures (disorder)	PREF=Generalized-onset seizures (disorder)	CUI=C0311334	STY=Disease or Syndrome
+Generalized-onset seizures	PREF=Generalized-onset seizures	CUI=C0311334	STY=Disease or Syndrome
+Generalized convulsive epilepsy	PREF=Generalized convulsive epilepsy	CUI=C0311334	STY=Disease or Syndrome
+"Generalized convulsive epilepsy, NOS"	"PREF=Generalized convulsive epilepsy, NOS"	CUI=C0311334	STY=Disease or Syndrome
+"Generalized-onset seizures, NOS"	"PREF=Generalized-onset seizures, NOS"	CUI=C0311334	STY=Disease or Syndrome
+Generalized convulsive epilepsy [dup] (disorder)	PREF=Generalized convulsive epilepsy [dup] (disorder)	CUI=C0311334	STY=Disease or Syndrome
+Seizures due to metabolic disorder (disorder)	PREF=Seizures due to metabolic disorder (disorder)	CUI=C1299598	STY=Disease or Syndrome
+Seizures due to metabolic disorder	PREF=Seizures due to metabolic disorder	CUI=C1299598	STY=Disease or Syndrome
+Rum fits	PREF=Rum fits	CUI=C0586323	STY=Disease or Syndrome
+Alcoh withdraw-induc convulsn	PREF=Alcoh withdraw-induc convulsn	CUI=C0586323	STY=Disease or Syndrome
+Alcoh withdrawal-induc seizure	PREF=Alcoh withdrawal-induc seizure	CUI=C0586323	STY=Disease or Syndrome
+Alcohol withdrawal-induced convulsion	PREF=Alcohol withdrawal-induced convulsion	CUI=C0586323	STY=Disease or Syndrome
+Alcohol-induced epilepsy	PREF=Alcohol-induced epilepsy	CUI=C0586323	STY=Disease or Syndrome
+Alcohol-related fit	PREF=Alcohol-related fit	CUI=C0586323	STY=Disease or Syndrome
+Alcohol withdrawal-induced seizure	PREF=Alcohol withdrawal-induced seizure	CUI=C0586323	STY=Disease or Syndrome
+Alcohol-induced epilepsy	PREF=Alcohol-induced epilepsy	CUI=C0586323	STY=Disease or Syndrome
+Alcohol-induced epilepsy (disorder)	PREF=Alcohol-induced epilepsy (disorder)	CUI=C0586323	STY=Disease or Syndrome
+Rum fits	PREF=Rum fits	CUI=C0586323	STY=Disease or Syndrome
+Alcohol withdrawal-induced convulsion	PREF=Alcohol withdrawal-induced convulsion	CUI=C0586323	STY=Disease or Syndrome
+Alcohol-induced epilepsy	PREF=Alcohol-induced epilepsy	CUI=C0586323	STY=Disease or Syndrome
+Alcohol-related fit	PREF=Alcohol-related fit	CUI=C0586323	STY=Disease or Syndrome
+Alcohol withdrawal-induced seizure	PREF=Alcohol withdrawal-induced seizure	CUI=C0586323	STY=Disease or Syndrome
+Alcohol withdrawal-induced convulsion (disorder)	PREF=Alcohol withdrawal-induced convulsion (disorder)	CUI=C0586323	STY=Disease or Syndrome
+Alcohol-induced epilepsy (disorder)	PREF=Alcohol-induced epilepsy (disorder)	CUI=C0586323	STY=Disease or Syndrome
+Alcohol-related fit (finding)	PREF=Alcohol-related fit (finding)	CUI=C0586323	STY=Disease or Syndrome
+Alcohol-induced epilepsy [Ambiguous]	PREF=Alcohol-induced epilepsy [Ambiguous]	CUI=C0586323	STY=Disease or Syndrome
+Post-traumatic epilepsy	PREF=Post-traumatic epilepsy	CUI=C0014557	STY=Disease or Syndrome
+Traumatic epilepsy	PREF=Traumatic epilepsy	CUI=C0014557	STY=Disease or Syndrome
+PTE - Post-traumatic epilepsy	PREF=PTE - Post-traumatic epilepsy	CUI=C0014557	STY=Disease or Syndrome
+Traumatic epilepsy (disorder)	PREF=Traumatic epilepsy (disorder)	CUI=C0014557	STY=Disease or Syndrome
+Traumatic epilepsy	PREF=Traumatic epilepsy	CUI=C0014557	STY=Disease or Syndrome
+Post-traumatic epilepsy	PREF=Post-traumatic epilepsy	CUI=C0014557	STY=Disease or Syndrome
+PTE - Post-traumatic epilepsy	PREF=PTE - Post-traumatic epilepsy	CUI=C0014557	STY=Disease or Syndrome
+Post-traumatic epilepsy (disorder)	PREF=Post-traumatic epilepsy (disorder)	CUI=C0014557	STY=Disease or Syndrome
+Traumatic epilepsy	PREF=Traumatic epilepsy	CUI=C0014557	STY=Disease or Syndrome
+Benign neonatal epilepsy	PREF=Benign neonatal epilepsy	CUI=C0270851	STY=Disease or Syndrome
+Benign neonatal seizures	PREF=Benign neonatal seizures	CUI=C0270851	STY=Disease or Syndrome
+Benign neonatal seizures	PREF=Benign neonatal seizures	CUI=C0270851	STY=Disease or Syndrome
+Benign neonatal seizures (disorder)	PREF=Benign neonatal seizures (disorder)	CUI=C0270851	STY=Disease or Syndrome
+Benign neonatal convulsions	PREF=Benign neonatal convulsions	CUI=C0270851	STY=Disease or Syndrome
+Benign neonatal seizures	PREF=Benign neonatal seizures	CUI=C0270851	STY=Disease or Syndrome
+Benign neonatal convulsions (disorder)	PREF=Benign neonatal convulsions (disorder)	CUI=C0270851	STY=Disease or Syndrome
+Benign neonatal epilepsy	PREF=Benign neonatal epilepsy	CUI=C0270851	STY=Disease or Syndrome
+Benign neonatal seizures [Ambiguous]	PREF=Benign neonatal seizures [Ambiguous]	CUI=C0270851	STY=Disease or Syndrome
+"Epilepsy, not refractory (disorder)"	"PREF=Epilepsy, not refractory (disorder)"	CUI=C1827389	STY=Disease or Syndrome
+"Epilepsy, not refractory"	"PREF=Epilepsy, not refractory"	CUI=C1827389	STY=Disease or Syndrome
+"Epilepsy, not intractable"	"PREF=Epilepsy, not intractable"	CUI=C1827389	STY=Disease or Syndrome
+Psychomotor epilepsy	PREF=Psychomotor epilepsy	CUI=C0085417	STY=Disease or Syndrome
+Psychomotor epilepsy	PREF=Psychomotor epilepsy	CUI=C0085417	STY=Disease or Syndrome
+Psychomotor epilepsy	PREF=Psychomotor epilepsy	CUI=C0085417	STY=Disease or Syndrome
+Psychomotor epilepsy (disorder)	PREF=Psychomotor epilepsy (disorder)	CUI=C0085417	STY=Disease or Syndrome
+Psychomotor epilepsy (disorder)	PREF=Psychomotor epilepsy (disorder)	CUI=C0085417	STY=Disease or Syndrome
+Psychomotor epilepsy	PREF=Psychomotor epilepsy	CUI=C0085417	STY=Disease or Syndrome
+Psychomotor epilepsy (disorder)	PREF=Psychomotor epilepsy (disorder)	CUI=C0085417	STY=Disease or Syndrome
+Complex partial epileptic seizure (disorder)	PREF=Complex partial epileptic seizure (disorder)	CUI=C0085417	STY=Disease or Syndrome
+Complex partial epileptic seizure	PREF=Complex partial epileptic seizure	CUI=C0085417	STY=Disease or Syndrome
+Psychomotor epilepsy	PREF=Psychomotor epilepsy	CUI=C0085417	STY=Disease or Syndrome
+Partial epil.-consc.impair.NOS	PREF=Partial epil.-consc.impair.NOS	CUI=C0553587	STY=Disease or Syndrome
+Partial epilep.-consc.impaired	PREF=Partial epilep.-consc.impaired	CUI=C0553587	STY=Disease or Syndrome
+Partial epilepsy with impairment of consciousness	PREF=Partial epilepsy with impairment of consciousness	CUI=C0553587	STY=Disease or Syndrome
+Partial epilepsy with impairment of consciousness NOS	PREF=Partial epilepsy with impairment of consciousness NOS	CUI=C0553587	STY=Disease or Syndrome
+Partial epilepsy with impairment of consciousness NOS	PREF=Partial epilepsy with impairment of consciousness NOS	CUI=C0553587	STY=Disease or Syndrome
+Partial epilepsy with impairment of consciousness NOS (disorder)	PREF=Partial epilepsy with impairment of consciousness NOS (disorder)	CUI=C0553587	STY=Disease or Syndrome
+Partial epilepsy with impairment of consciousness	PREF=Partial epilepsy with impairment of consciousness	CUI=C0553587	STY=Disease or Syndrome
+Partial epilepsy with impairment of consciousness (disorder)	PREF=Partial epilepsy with impairment of consciousness (disorder)	CUI=C0553587	STY=Disease or Syndrome
+Partial epilep.-consc.OK NOS	PREF=Partial epilep.-consc.OK NOS	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without impairment of consciousness	PREF=Partial epilepsy without impairment of consciousness	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without impairment of consciousness NOS	PREF=Partial epilepsy without impairment of consciousness NOS	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without mention of impairment of consciousness	PREF=Partial epilepsy without mention of impairment of consciousness	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without mention of impairment of consciousness NOS	PREF=Partial epilepsy without mention of impairment of consciousness NOS	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy-conscious OK	PREF=Partial epilepsy-conscious OK	CUI=C0234974	STY=Disease or Syndrome
+Simple part seiz consc not imp	PREF=Simple part seiz consc not imp	CUI=C0234974	STY=Disease or Syndrome
+"Simple partial seizure, consciousness not impaired"	"PREF=Simple partial seizure, consciousness not impaired"	CUI=C0234974	STY=Disease or Syndrome
+Simple partial seizures	PREF=Simple partial seizures	CUI=C0234974	STY=Disease or Syndrome
+Simple partial seizures with consciousness preserved	PREF=Simple partial seizures with consciousness preserved	CUI=C0234974	STY=Disease or Syndrome
+Simple Partial Seizures	PREF=Simple Partial Seizures	CUI=C0234974	STY=Disease or Syndrome
+"Seizures, simple partial"	"PREF=Seizures, simple partial"	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without mention of impairment of consciousness	PREF=Partial epilepsy without mention of impairment of consciousness	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without mention of impairment of consciousness (disorder)	PREF=Partial epilepsy without mention of impairment of consciousness (disorder)	CUI=C0234974	STY=Disease or Syndrome
+Simple partial seizure (disorder)	PREF=Simple partial seizure (disorder)	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without mention of impairment of consciousness NOS (disorder)	PREF=Partial epilepsy without mention of impairment of consciousness NOS (disorder)	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without mention of impairment of consciousness NOS	PREF=Partial epilepsy without mention of impairment of consciousness NOS	CUI=C0234974	STY=Disease or Syndrome
+Simple partial seizure	PREF=Simple partial seizure	CUI=C0234974	STY=Disease or Syndrome
+"Simple partial seizure, consciousness not impaired"	"PREF=Simple partial seizure, consciousness not impaired"	CUI=C0234974	STY=Disease or Syndrome
+"Simple partial seizure, consciousness not impaired (disorder)"	"PREF=Simple partial seizure, consciousness not impaired (disorder)"	CUI=C0234974	STY=Disease or Syndrome
+"Simple partial seizure, consciousness not impaired (finding)"	"PREF=Simple partial seizure, consciousness not impaired (finding)"	CUI=C0234974	STY=Disease or Syndrome
+L-r(f)(p)idio ep&ep s+seiz l o	PREF=L-r(f)(p)idio ep&ep s+seiz l o	CUI=C0475521	STY=Disease or Syndrome
+Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localised onset	PREF=Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localised onset	CUI=C0475521	STY=Disease or Syndrome
+Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset	PREF=Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset	CUI=C0475521	STY=Disease or Syndrome
+Locl-rlt(foc)(part)idiop epilep&epilptic syn seiz locl onset	PREF=Locl-rlt(foc)(part)idiop epilep&epilptic syn seiz locl onset	CUI=C0475521	STY=Disease or Syndrome
+Localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset	PREF=Localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset	CUI=C0475521	STY=Disease or Syndrome
+Localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset NOS	PREF=Localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset NOS	CUI=C0475521	STY=Disease or Syndrome
+Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localised onset	PREF=Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localised onset	CUI=C0475521	STY=Disease or Syndrome
+Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset	PREF=Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset	CUI=C0475521	STY=Disease or Syndrome
+Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset (disorder)	PREF=Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset (disorder)	CUI=C0475521	STY=Disease or Syndrome
+Jacksonian/focal/motor epilep.	PREF=Jacksonian/focal/motor epilep.	CUI=C2035047	STY=Disease or Syndrome
+"Jacksonian, focal or motor epilepsy"	"PREF=Jacksonian, focal or motor epilepsy"	CUI=C2035047	STY=Disease or Syndrome
+partial simple motor epilepsy	PREF=partial simple motor epilepsy	CUI=C2035047	STY=Disease or Syndrome
+Epilepsy: [Jacksonian] or [focal] or [motor]	PREF=Epilepsy: [Jacksonian] or [focal] or [motor]	CUI=C2035047	STY=Disease or Syndrome
+Jacksonian/focal/motor epilep.	PREF=Jacksonian/focal/motor epilep.	CUI=C2035047	STY=Disease or Syndrome
+Epilepsy: [Jacksonian] or [focal] or [motor] (disorder)	PREF=Epilepsy: [Jacksonian] or [focal] or [motor] (disorder)	CUI=C2035047	STY=Disease or Syndrome
+Epilepsy: [Jacksonian] or [focal] or [motor] (disorder)	PREF=Epilepsy: [Jacksonian] or [focal] or [motor] (disorder)	CUI=C2035047	STY=Disease or Syndrome
+"Jacksonian, focal or motor epilepsy"	"PREF=Jacksonian, focal or motor epilepsy"	CUI=C2035047	STY=Disease or Syndrome
+"Jacksonian, focal or motor epilepsy"	"PREF=Jacksonian, focal or motor epilepsy"	CUI=C2035047	STY=Disease or Syndrome
+Jacksonian/focal/motor epilep.	PREF=Jacksonian/focal/motor epilep.	CUI=C2035047	STY=Disease or Syndrome
+Epilepsy: [Jacksonian] or [focal] or [motor]	PREF=Epilepsy: [Jacksonian] or [focal] or [motor]	CUI=C2035047	STY=Disease or Syndrome
+"Jacksonian, focal or motor epilepsy"	"PREF=Jacksonian, focal or motor epilepsy"	CUI=C2035047	STY=Disease or Syndrome
+"Jacksonian, focal or motor epilepsy (disorder)"	"PREF=Jacksonian, focal or motor epilepsy (disorder)"	CUI=C2035047	STY=Disease or Syndrome
+Motor epilepsy	PREF=Motor epilepsy	CUI=C0553755	STY=Disease or Syndrome
+Motor epilepsy	PREF=Motor epilepsy	CUI=C0553755	STY=Disease or Syndrome
+Motor epilepsy	PREF=Motor epilepsy	CUI=C0553755	STY=Disease or Syndrome
+Motor epilepsy	PREF=Motor epilepsy	CUI=C0553755	STY=Disease or Syndrome
+Motor epilepsy (disorder)	PREF=Motor epilepsy (disorder)	CUI=C0553755	STY=Disease or Syndrome
+Localisat-relat cryptogen epil	PREF=Localisat-relat cryptogen epil	CUI=C0472351	STY=Disease or Syndrome
+Localisation-related cryptogenic epilepsy	PREF=Localisation-related cryptogenic epilepsy	CUI=C0472351	STY=Disease or Syndrome
+Localization-related cryptogenic epilepsy	PREF=Localization-related cryptogenic epilepsy	CUI=C0472351	STY=Disease or Syndrome
+Localisation-related cryptogenic epilepsy	PREF=Localisation-related cryptogenic epilepsy	CUI=C0472351	STY=Disease or Syndrome
+Localization-related cryptogenic epilepsy	PREF=Localization-related cryptogenic epilepsy	CUI=C0472351	STY=Disease or Syndrome
+Localization-related cryptogenic epilepsy (disorder)	PREF=Localization-related cryptogenic epilepsy (disorder)	CUI=C0472351	STY=Disease or Syndrome
+Hemiplegia-hemiconvul-epi synd	PREF=Hemiplegia-hemiconvul-epi synd	CUI=C0549118	STY=Disease or Syndrome
+Hemiplegia-hemiconvulsion-epilepsy syndrome	PREF=Hemiplegia-hemiconvulsion-epilepsy syndrome	CUI=C0549118	STY=Disease or Syndrome
+H-H-E syndrome	PREF=H-H-E syndrome	CUI=C0549118	STY=Disease or Syndrome
+Hemiconvulsion-hemiplegia-epilepsy syndrome	PREF=Hemiconvulsion-hemiplegia-epilepsy syndrome	CUI=C0549118	STY=Disease or Syndrome
+Hemiplegia-hemiconvulsion-epilepsy syndrome	PREF=Hemiplegia-hemiconvulsion-epilepsy syndrome	CUI=C0549118	STY=Disease or Syndrome
+Hemiplegia-hemiconvulsion-epilepsy syndrome (disorder)	PREF=Hemiplegia-hemiconvulsion-epilepsy syndrome (disorder)	CUI=C0549118	STY=Disease or Syndrome
+H-H-E syndrome	PREF=H-H-E syndrome	CUI=C0549118	STY=Disease or Syndrome
+Hemiconvulsion-hemiplegia-epilepsy syndrome	PREF=Hemiconvulsion-hemiplegia-epilepsy syndrome	CUI=C0549118	STY=Disease or Syndrome
+Localis-relatd idiopath epilep	PREF=Localis-relatd idiopath epilep	CUI=C0472348	STY=Disease or Syndrome
+Localisation-related idiopathic epilepsy	PREF=Localisation-related idiopathic epilepsy	CUI=C0472348	STY=Disease or Syndrome
+Localization-related idiopathic epilepsy	PREF=Localization-related idiopathic epilepsy	CUI=C0472348	STY=Disease or Syndrome
+Localisation-related idiopathic epilepsy	PREF=Localisation-related idiopathic epilepsy	CUI=C0472348	STY=Disease or Syndrome
+Localization-related idiopathic epilepsy	PREF=Localization-related idiopathic epilepsy	CUI=C0472348	STY=Disease or Syndrome
+Localization-related idiopathic epilepsy (disorder)	PREF=Localization-related idiopathic epilepsy (disorder)	CUI=C0472348	STY=Disease or Syndrome
+Loc-relat symp epi & spec prec	PREF=Loc-relat symp epi & spec prec	CUI=C0472350	STY=Disease or Syndrome
+Localisation-related symptomatic epil with spec precipitant	PREF=Localisation-related symptomatic epil with spec precipitant	CUI=C0472350	STY=Disease or Syndrome
+Localization-related symptomatic epil with spec precipitant	PREF=Localization-related symptomatic epil with spec precipitant	CUI=C0472350	STY=Disease or Syndrome
+Localisation-related symptomatic epilepsy with specific precipitant	PREF=Localisation-related symptomatic epilepsy with specific precipitant	CUI=C0472350	STY=Disease or Syndrome
+Localization-related symptomatic epilepsy with specific precipitant	PREF=Localization-related symptomatic epilepsy with specific precipitant	CUI=C0472350	STY=Disease or Syndrome
+Localisation-related symptomatic epilepsy with specific precipitant	PREF=Localisation-related symptomatic epilepsy with specific precipitant	CUI=C0472350	STY=Disease or Syndrome
+Localization-related symptomatic epilepsy with specific precipitant	PREF=Localization-related symptomatic epilepsy with specific precipitant	CUI=C0472350	STY=Disease or Syndrome
+Localization-related symptomatic epilepsy with specific precipitant (disorder)	PREF=Localization-related symptomatic epilepsy with specific precipitant (disorder)	CUI=C0472350	STY=Disease or Syndrome
+Localis-relat symptom epilepsy	PREF=Localis-relat symptom epilepsy	CUI=C0472349	STY=Disease or Syndrome
+Localisation-related symptomatic epilepsy	PREF=Localisation-related symptomatic epilepsy	CUI=C0472349	STY=Disease or Syndrome
+Localization-related symptomatic epilepsy	PREF=Localization-related symptomatic epilepsy	CUI=C0472349	STY=Disease or Syndrome
+Localisation-related symptomatic epilepsy	PREF=Localisation-related symptomatic epilepsy	CUI=C0472349	STY=Disease or Syndrome
+Localization-related symptomatic epilepsy	PREF=Localization-related symptomatic epilepsy	CUI=C0472349	STY=Disease or Syndrome
+Localization-related symptomatic epilepsy (disorder)	PREF=Localization-related symptomatic epilepsy (disorder)	CUI=C0472349	STY=Disease or Syndrome
+Part.epilepsy+autonomic sympt.	PREF=Part.epilepsy+autonomic sympt.	CUI=C0393669	STY=Disease or Syndrome
+Partial epilepsy with autonomic symptoms	PREF=Partial epilepsy with autonomic symptoms	CUI=C0393669	STY=Disease or Syndrome
+Visceral reflex epilepsy	PREF=Visceral reflex epilepsy	CUI=C0393669	STY=Disease or Syndrome
+Partial epilepsy with autonomic symptoms	PREF=Partial epilepsy with autonomic symptoms	CUI=C0393669	STY=Disease or Syndrome
+Visceral reflex epilepsy	PREF=Visceral reflex epilepsy	CUI=C0393669	STY=Disease or Syndrome
+Partial epilepsy with autonomic symptoms (disorder)	PREF=Partial epilepsy with autonomic symptoms (disorder)	CUI=C0393669	STY=Disease or Syndrome
+Refractory localization-related epilepsy (disorder)	PREF=Refractory localization-related epilepsy (disorder)	CUI=C1827878	STY=Disease or Syndrome
+Refractory localization-related epilepsy	PREF=Refractory localization-related epilepsy	CUI=C1827878	STY=Disease or Syndrome
+Intractable localization-related epilepsy	PREF=Intractable localization-related epilepsy	CUI=C1827878	STY=Disease or Syndrome
+Refractory localisation-related epilepsy	PREF=Refractory localisation-related epilepsy	CUI=C1827878	STY=Disease or Syndrome
+Intractable localisation-related epilepsy	PREF=Intractable localisation-related epilepsy	CUI=C1827878	STY=Disease or Syndrome
+Psychomotor epilepsy	PREF=Psychomotor epilepsy	CUI=C0085417	STY=Disease or Syndrome
+Psychomotor epilepsy	PREF=Psychomotor epilepsy	CUI=C0085417	STY=Disease or Syndrome
+Psychomotor epilepsy	PREF=Psychomotor epilepsy	CUI=C0085417	STY=Disease or Syndrome
+Psychomotor epilepsy (disorder)	PREF=Psychomotor epilepsy (disorder)	CUI=C0085417	STY=Disease or Syndrome
+Psychomotor epilepsy (disorder)	PREF=Psychomotor epilepsy (disorder)	CUI=C0085417	STY=Disease or Syndrome
+Psychomotor epilepsy	PREF=Psychomotor epilepsy	CUI=C0085417	STY=Disease or Syndrome
+Psychomotor epilepsy (disorder)	PREF=Psychomotor epilepsy (disorder)	CUI=C0085417	STY=Disease or Syndrome
+Complex partial epileptic seizure (disorder)	PREF=Complex partial epileptic seizure (disorder)	CUI=C0085417	STY=Disease or Syndrome
+Complex partial epileptic seizure	PREF=Complex partial epileptic seizure	CUI=C0085417	STY=Disease or Syndrome
+Psychomotor epilepsy	PREF=Psychomotor epilepsy	CUI=C0085417	STY=Disease or Syndrome
+Partial epil.-consc.impair.NOS	PREF=Partial epil.-consc.impair.NOS	CUI=C0553587	STY=Disease or Syndrome
+Partial epilep.-consc.impaired	PREF=Partial epilep.-consc.impaired	CUI=C0553587	STY=Disease or Syndrome
+Partial epilepsy with impairment of consciousness	PREF=Partial epilepsy with impairment of consciousness	CUI=C0553587	STY=Disease or Syndrome
+Partial epilepsy with impairment of consciousness NOS	PREF=Partial epilepsy with impairment of consciousness NOS	CUI=C0553587	STY=Disease or Syndrome
+Partial epilepsy with impairment of consciousness NOS	PREF=Partial epilepsy with impairment of consciousness NOS	CUI=C0553587	STY=Disease or Syndrome
+Partial epilepsy with impairment of consciousness NOS (disorder)	PREF=Partial epilepsy with impairment of consciousness NOS (disorder)	CUI=C0553587	STY=Disease or Syndrome
+Partial epilepsy with impairment of consciousness	PREF=Partial epilepsy with impairment of consciousness	CUI=C0553587	STY=Disease or Syndrome
+Partial epilepsy with impairment of consciousness (disorder)	PREF=Partial epilepsy with impairment of consciousness (disorder)	CUI=C0553587	STY=Disease or Syndrome
+Partial epilep.-consc.OK NOS	PREF=Partial epilep.-consc.OK NOS	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without impairment of consciousness	PREF=Partial epilepsy without impairment of consciousness	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without impairment of consciousness NOS	PREF=Partial epilepsy without impairment of consciousness NOS	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without mention of impairment of consciousness	PREF=Partial epilepsy without mention of impairment of consciousness	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without mention of impairment of consciousness NOS	PREF=Partial epilepsy without mention of impairment of consciousness NOS	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy-conscious OK	PREF=Partial epilepsy-conscious OK	CUI=C0234974	STY=Disease or Syndrome
+Simple part seiz consc not imp	PREF=Simple part seiz consc not imp	CUI=C0234974	STY=Disease or Syndrome
+"Simple partial seizure, consciousness not impaired"	"PREF=Simple partial seizure, consciousness not impaired"	CUI=C0234974	STY=Disease or Syndrome
+Simple partial seizures	PREF=Simple partial seizures	CUI=C0234974	STY=Disease or Syndrome
+Simple partial seizures with consciousness preserved	PREF=Simple partial seizures with consciousness preserved	CUI=C0234974	STY=Disease or Syndrome
+Simple Partial Seizures	PREF=Simple Partial Seizures	CUI=C0234974	STY=Disease or Syndrome
+"Seizures, simple partial"	"PREF=Seizures, simple partial"	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without mention of impairment of consciousness	PREF=Partial epilepsy without mention of impairment of consciousness	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without mention of impairment of consciousness (disorder)	PREF=Partial epilepsy without mention of impairment of consciousness (disorder)	CUI=C0234974	STY=Disease or Syndrome
+Simple partial seizure (disorder)	PREF=Simple partial seizure (disorder)	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without mention of impairment of consciousness NOS (disorder)	PREF=Partial epilepsy without mention of impairment of consciousness NOS (disorder)	CUI=C0234974	STY=Disease or Syndrome
+Partial epilepsy without mention of impairment of consciousness NOS	PREF=Partial epilepsy without mention of impairment of consciousness NOS	CUI=C0234974	STY=Disease or Syndrome
+Simple partial seizure	PREF=Simple partial seizure	CUI=C0234974	STY=Disease or Syndrome
+"Simple partial seizure, consciousness not impaired"	"PREF=Simple partial seizure, consciousness not impaired"	CUI=C0234974	STY=Disease or Syndrome
+"Simple partial seizure, consciousness not impaired (disorder)"	"PREF=Simple partial seizure, consciousness not impaired (disorder)"	CUI=C0234974	STY=Disease or Syndrome
+"Simple partial seizure, consciousness not impaired (finding)"	"PREF=Simple partial seizure, consciousness not impaired (finding)"	CUI=C0234974	STY=Disease or Syndrome
+L-r(f)(p)idio ep&ep s+seiz l o	PREF=L-r(f)(p)idio ep&ep s+seiz l o	CUI=C0475521	STY=Disease or Syndrome
+Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localised onset	PREF=Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localised onset	CUI=C0475521	STY=Disease or Syndrome
+Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset	PREF=Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset	CUI=C0475521	STY=Disease or Syndrome
+Locl-rlt(foc)(part)idiop epilep&epilptic syn seiz locl onset	PREF=Locl-rlt(foc)(part)idiop epilep&epilptic syn seiz locl onset	CUI=C0475521	STY=Disease or Syndrome
+Localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset	PREF=Localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset	CUI=C0475521	STY=Disease or Syndrome
+Localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset NOS	PREF=Localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset NOS	CUI=C0475521	STY=Disease or Syndrome
+Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localised onset	PREF=Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localised onset	CUI=C0475521	STY=Disease or Syndrome
+Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset	PREF=Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset	CUI=C0475521	STY=Disease or Syndrome
+Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset (disorder)	PREF=Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset (disorder)	CUI=C0475521	STY=Disease or Syndrome
+Jacksonian/focal/motor epilep.	PREF=Jacksonian/focal/motor epilep.	CUI=C2035047	STY=Disease or Syndrome
+"Jacksonian, focal or motor epilepsy"	"PREF=Jacksonian, focal or motor epilepsy"	CUI=C2035047	STY=Disease or Syndrome
+partial simple motor epilepsy	PREF=partial simple motor epilepsy	CUI=C2035047	STY=Disease or Syndrome
+Epilepsy: [Jacksonian] or [focal] or [motor]	PREF=Epilepsy: [Jacksonian] or [focal] or [motor]	CUI=C2035047	STY=Disease or Syndrome
+Jacksonian/focal/motor epilep.	PREF=Jacksonian/focal/motor epilep.	CUI=C2035047	STY=Disease or Syndrome
+Epilepsy: [Jacksonian] or [focal] or [motor] (disorder)	PREF=Epilepsy: [Jacksonian] or [focal] or [motor] (disorder)	CUI=C2035047	STY=Disease or Syndrome
+Epilepsy: [Jacksonian] or [focal] or [motor] (disorder)	PREF=Epilepsy: [Jacksonian] or [focal] or [motor] (disorder)	CUI=C2035047	STY=Disease or Syndrome
+"Jacksonian, focal or motor epilepsy"	"PREF=Jacksonian, focal or motor epilepsy"	CUI=C2035047	STY=Disease or Syndrome
+"Jacksonian, focal or motor epilepsy"	"PREF=Jacksonian, focal or motor epilepsy"	CUI=C2035047	STY=Disease or Syndrome
+Jacksonian/focal/motor epilep.	PREF=Jacksonian/focal/motor epilep.	CUI=C2035047	STY=Disease or Syndrome
+Epilepsy: [Jacksonian] or [focal] or [motor]	PREF=Epilepsy: [Jacksonian] or [focal] or [motor]	CUI=C2035047	STY=Disease or Syndrome
+"Jacksonian, focal or motor epilepsy"	"PREF=Jacksonian, focal or motor epilepsy"	CUI=C2035047	STY=Disease or Syndrome
+"Jacksonian, focal or motor epilepsy (disorder)"	"PREF=Jacksonian, focal or motor epilepsy (disorder)"	CUI=C2035047	STY=Disease or Syndrome
+Motor epilepsy	PREF=Motor epilepsy	CUI=C0553755	STY=Disease or Syndrome
+Motor epilepsy	PREF=Motor epilepsy	CUI=C0553755	STY=Disease or Syndrome
+Motor epilepsy	PREF=Motor epilepsy	CUI=C0553755	STY=Disease or Syndrome
+Motor epilepsy	PREF=Motor epilepsy	CUI=C0553755	STY=Disease or Syndrome
+Motor epilepsy (disorder)	PREF=Motor epilepsy (disorder)	CUI=C0553755	STY=Disease or Syndrome
+Localisat-relat cryptogen epil	PREF=Localisat-relat cryptogen epil	CUI=C0472351	STY=Disease or Syndrome
+Localisation-related cryptogenic epilepsy	PREF=Localisation-related cryptogenic epilepsy	CUI=C0472351	STY=Disease or Syndrome
+Localization-related cryptogenic epilepsy	PREF=Localization-related cryptogenic epilepsy	CUI=C0472351	STY=Disease or Syndrome
+Localisation-related cryptogenic epilepsy	PREF=Localisation-related cryptogenic epilepsy	CUI=C0472351	STY=Disease or Syndrome
+Localization-related cryptogenic epilepsy	PREF=Localization-related cryptogenic epilepsy	CUI=C0472351	STY=Disease or Syndrome
+Localization-related cryptogenic epilepsy (disorder)	PREF=Localization-related cryptogenic epilepsy (disorder)	CUI=C0472351	STY=Disease or Syndrome
+Hemiplegia-hemiconvul-epi synd	PREF=Hemiplegia-hemiconvul-epi synd	CUI=C0549118	STY=Disease or Syndrome
+Hemiplegia-hemiconvulsion-epilepsy syndrome	PREF=Hemiplegia-hemiconvulsion-epilepsy syndrome	CUI=C0549118	STY=Disease or Syndrome
+H-H-E syndrome	PREF=H-H-E syndrome	CUI=C0549118	STY=Disease or Syndrome
+Hemiconvulsion-hemiplegia-epilepsy syndrome	PREF=Hemiconvulsion-hemiplegia-epilepsy syndrome	CUI=C0549118	STY=Disease or Syndrome
+Hemiplegia-hemiconvulsion-epilepsy syndrome	PREF=Hemiplegia-hemiconvulsion-epilepsy syndrome	CUI=C0549118	STY=Disease or Syndrome
+Hemiplegia-hemiconvulsion-epilepsy syndrome (disorder)	PREF=Hemiplegia-hemiconvulsion-epilepsy syndrome (disorder)	CUI=C0549118	STY=Disease or Syndrome
+H-H-E syndrome	PREF=H-H-E syndrome	CUI=C0549118	STY=Disease or Syndrome
+Hemiconvulsion-hemiplegia-epilepsy syndrome	PREF=Hemiconvulsion-hemiplegia-epilepsy syndrome	CUI=C0549118	STY=Disease or Syndrome
+Localis-relatd idiopath epilep	PREF=Localis-relatd idiopath epilep	CUI=C0472348	STY=Disease or Syndrome
+Localisation-related idiopathic epilepsy	PREF=Localisation-related idiopathic epilepsy	CUI=C0472348	STY=Disease or Syndrome
+Localization-related idiopathic epilepsy	PREF=Localization-related idiopathic epilepsy	CUI=C0472348	STY=Disease or Syndrome
+Localisation-related idiopathic epilepsy	PREF=Localisation-related idiopathic epilepsy	CUI=C0472348	STY=Disease or Syndrome
+Localization-related idiopathic epilepsy	PREF=Localization-related idiopathic epilepsy	CUI=C0472348	STY=Disease or Syndrome
+Localization-related idiopathic epilepsy (disorder)	PREF=Localization-related idiopathic epilepsy (disorder)	CUI=C0472348	STY=Disease or Syndrome
+Loc-relat symp epi & spec prec	PREF=Loc-relat symp epi & spec prec	CUI=C0472350	STY=Disease or Syndrome
+Localisation-related symptomatic epil with spec precipitant	PREF=Localisation-related symptomatic epil with spec precipitant	CUI=C0472350	STY=Disease or Syndrome
+Localization-related symptomatic epil with spec precipitant	PREF=Localization-related symptomatic epil with spec precipitant	CUI=C0472350	STY=Disease or Syndrome
+Localisation-related symptomatic epilepsy with specific precipitant	PREF=Localisation-related symptomatic epilepsy with specific precipitant	CUI=C0472350	STY=Disease or Syndrome
+Localization-related symptomatic epilepsy with specific precipitant	PREF=Localization-related symptomatic epilepsy with specific precipitant	CUI=C0472350	STY=Disease or Syndrome
+Localisation-related symptomatic epilepsy with specific precipitant	PREF=Localisation-related symptomatic epilepsy with specific precipitant	CUI=C0472350	STY=Disease or Syndrome
+Localization-related symptomatic epilepsy with specific precipitant	PREF=Localization-related symptomatic epilepsy with specific precipitant	CUI=C0472350	STY=Disease or Syndrome
+Localization-related symptomatic epilepsy with specific precipitant (disorder)	PREF=Localization-related symptomatic epilepsy with specific precipitant (disorder)	CUI=C0472350	STY=Disease or Syndrome
+Localis-relat symptom epilepsy	PREF=Localis-relat symptom epilepsy	CUI=C0472349	STY=Disease or Syndrome
+Localisation-related symptomatic epilepsy	PREF=Localisation-related symptomatic epilepsy	CUI=C0472349	STY=Disease or Syndrome
+Localization-related symptomatic epilepsy	PREF=Localization-related symptomatic epilepsy	CUI=C0472349	STY=Disease or Syndrome
+Localisation-related symptomatic epilepsy	PREF=Localisation-related symptomatic epilepsy	CUI=C0472349	STY=Disease or Syndrome
+Localization-related symptomatic epilepsy	PREF=Localization-related symptomatic epilepsy	CUI=C0472349	STY=Disease or Syndrome
+Localization-related symptomatic epilepsy (disorder)	PREF=Localization-related symptomatic epilepsy (disorder)	CUI=C0472349	STY=Disease or Syndrome
+Part.epilepsy+autonomic sympt.	PREF=Part.epilepsy+autonomic sympt.	CUI=C0393669	STY=Disease or Syndrome
+Partial epilepsy with autonomic symptoms	PREF=Partial epilepsy with autonomic symptoms	CUI=C0393669	STY=Disease or Syndrome
+Visceral reflex epilepsy	PREF=Visceral reflex epilepsy	CUI=C0393669	STY=Disease or Syndrome
+Partial epilepsy with autonomic symptoms	PREF=Partial epilepsy with autonomic symptoms	CUI=C0393669	STY=Disease or Syndrome
+Visceral reflex epilepsy	PREF=Visceral reflex epilepsy	CUI=C0393669	STY=Disease or Syndrome
+Partial epilepsy with autonomic symptoms (disorder)	PREF=Partial epilepsy with autonomic symptoms (disorder)	CUI=C0393669	STY=Disease or Syndrome
+Refractory localization-related epilepsy (disorder)	PREF=Refractory localization-related epilepsy (disorder)	CUI=C1827878	STY=Disease or Syndrome
+Refractory localization-related epilepsy	PREF=Refractory localization-related epilepsy	CUI=C1827878	STY=Disease or Syndrome
+Intractable localization-related epilepsy	PREF=Intractable localization-related epilepsy	CUI=C1827878	STY=Disease or Syndrome
+Refractory localisation-related epilepsy	PREF=Refractory localisation-related epilepsy	CUI=C1827878	STY=Disease or Syndrome
+Intractable localisation-related epilepsy	PREF=Intractable localisation-related epilepsy	CUI=C1827878	STY=Disease or Syndrome
+Absence seizure	PREF=Absence seizure	CUI=C0014553	STY=Disease or Syndrome
+Petit-mal seizure	PREF=Petit-mal seizure	CUI=C0014553	STY=Disease or Syndrome
+Absence seizures	PREF=Absence seizures	CUI=C0014553	STY=Disease or Syndrome
+Typical absence seizure	PREF=Typical absence seizure	CUI=C0014553	STY=Disease or Syndrome
+Typical absence seizure (disorder)	PREF=Typical absence seizure (disorder)	CUI=C0014553	STY=Disease or Syndrome
+Absence seizure	PREF=Absence seizure	CUI=C0014553	STY=Disease or Syndrome
+Absence seizure (finding)	PREF=Absence seizure (finding)	CUI=C0014553	STY=Disease or Syndrome
+Petit mal	PREF=Petit mal	CUI=C0014553	STY=Disease or Syndrome
+Absence seizure	PREF=Absence seizure	CUI=C0014553	STY=Disease or Syndrome
+Petit mal (disorder)	PREF=Petit mal (disorder)	CUI=C0014553	STY=Disease or Syndrome
+Absence seizure (finding)	PREF=Absence seizure (finding)	CUI=C0014553	STY=Disease or Syndrome
+Absence seizure	PREF=Absence seizure	CUI=C0014553	STY=Disease or Syndrome
+Petit mal	PREF=Petit mal	CUI=C0014553	STY=Disease or Syndrome
+Petit-mal seizure	PREF=Petit-mal seizure	CUI=C0014553	STY=Disease or Syndrome
+Absence seizure (disorder)	PREF=Absence seizure (disorder)	CUI=C0014553	STY=Disease or Syndrome
+Absence Epilepsy	PREF=Absence Epilepsy	CUI=C0014553	STY=Disease or Syndrome
+Nodding spasm	PREF=Nodding spasm	CUI=C0546878	STY=Disease or Syndrome
+Salaam spasm	PREF=Salaam spasm	CUI=C0546878	STY=Disease or Syndrome
+Salaam spasm (finding)	PREF=Salaam spasm (finding)	CUI=C0546878	STY=Disease or Syndrome
+Salaam spasm	PREF=Salaam spasm	CUI=C0546878	STY=Disease or Syndrome
+Nodding spasm	PREF=Nodding spasm	CUI=C0546878	STY=Disease or Syndrome
+Salaam spasm	PREF=Salaam spasm	CUI=C0546878	STY=Disease or Syndrome
+Salaam spasm (finding)	PREF=Salaam spasm (finding)	CUI=C0546878	STY=Disease or Syndrome
+Atonic seizure	PREF=Atonic seizure	CUI=C0270846	STY=Disease or Syndrome
+Epileptic drop attack	PREF=Epileptic drop attack	CUI=C0270846	STY=Disease or Syndrome
+Atonic seizures	PREF=Atonic seizures	CUI=C0270846	STY=Disease or Syndrome
+"Seizures, atonic"	"PREF=Seizures, atonic"	CUI=C0270846	STY=Disease or Syndrome
+Atonic seizure	PREF=Atonic seizure	CUI=C0270846	STY=Disease or Syndrome
+Finding of atonic seizure (finding)	PREF=Finding of atonic seizure (finding)	CUI=C0270846	STY=Disease or Syndrome
+Atonic seizure - finding	PREF=Atonic seizure - finding	CUI=C0270846	STY=Disease or Syndrome
+Atonic seizure (finding)	PREF=Atonic seizure (finding)	CUI=C0270846	STY=Disease or Syndrome
+Atonic seizure	PREF=Atonic seizure	CUI=C0270846	STY=Disease or Syndrome
+Epileptic drop attack	PREF=Epileptic drop attack	CUI=C0270846	STY=Disease or Syndrome
+Atonic seizures	PREF=Atonic seizures	CUI=C0270846	STY=Disease or Syndrome
+Atonic seizure	PREF=Atonic seizure	CUI=C0270846	STY=Disease or Syndrome
+Epileptic drop attack	PREF=Epileptic drop attack	CUI=C0270846	STY=Disease or Syndrome
+Epileptic drop attack (disorder)	PREF=Epileptic drop attack (disorder)	CUI=C0270846	STY=Disease or Syndrome
+Atonic seizure (disorder)	PREF=Atonic seizure (disorder)	CUI=C0270846	STY=Disease or Syndrome
+Atonic seizure [Ambiguous]	PREF=Atonic seizure [Ambiguous]	CUI=C0270846	STY=Disease or Syndrome
+Atypical absence seizure	PREF=Atypical absence seizure	CUI=C0595948	STY=Disease or Syndrome
+Atypical absence seizures	PREF=Atypical absence seizures	CUI=C0595948	STY=Disease or Syndrome
+"Seizures, atypical absence"	"PREF=Seizures, atypical absence"	CUI=C0595948	STY=Disease or Syndrome
+Atypical absence seizures	PREF=Atypical absence seizures	CUI=C0595948	STY=Disease or Syndrome
+Atypical absence seizure	PREF=Atypical absence seizure	CUI=C0595948	STY=Disease or Syndrome
+Atypical absence seizure (disorder)	PREF=Atypical absence seizure (disorder)	CUI=C0595948	STY=Disease or Syndrome
+Epileptic seizures - myoclonic	PREF=Epileptic seizures - myoclonic	CUI=C4317123	STY=Disease or Syndrome
+Myoclonic seizure	PREF=Myoclonic seizure	CUI=C4317123	STY=Disease or Syndrome
+"Seizures, myoclonic"	"PREF=Seizures, myoclonic"	CUI=C4317123	STY=Disease or Syndrome
+Myoclonic seizures	PREF=Myoclonic seizures	CUI=C4317123	STY=Disease or Syndrome
+Myoclonic seizure disorder	PREF=Myoclonic seizure disorder	CUI=C4317123	STY=Disease or Syndrome
+Myoclonic seizure	PREF=Myoclonic seizure	CUI=C4317123	STY=Disease or Syndrome
+Myoclonic seizure	PREF=Myoclonic seizure	CUI=C4317123	STY=Disease or Syndrome
+Myoclonic Seizures	PREF=Myoclonic Seizures	CUI=C4317123	STY=Disease or Syndrome
+Myoclonic seizures	PREF=Myoclonic seizures	CUI=C4317123	STY=Disease or Syndrome
+Epileptic seizures - myoclonic	PREF=Epileptic seizures - myoclonic	CUI=C4317123	STY=Disease or Syndrome
+Myoclonic seizure	PREF=Myoclonic seizure	CUI=C4317123	STY=Disease or Syndrome
+Epileptic seizures - myoclonic (disorder)	PREF=Epileptic seizures - myoclonic (disorder)	CUI=C4317123	STY=Disease or Syndrome
+Myoclonic seizure (disorder)	PREF=Myoclonic seizure (disorder)	CUI=C4317123	STY=Disease or Syndrome
+Tonic seizure	PREF=Tonic seizure	CUI=C0270844	STY=Disease or Syndrome
+Tonic seizures	PREF=Tonic seizures	CUI=C0270844	STY=Disease or Syndrome
+"Seizures, tonic"	"PREF=Seizures, tonic"	CUI=C0270844	STY=Disease or Syndrome
+Tonic seizures	PREF=Tonic seizures	CUI=C0270844	STY=Disease or Syndrome
+Tonic Seizures	PREF=Tonic Seizures	CUI=C0270844	STY=Disease or Syndrome
+Tonic seizure	PREF=Tonic seizure	CUI=C0270844	STY=Disease or Syndrome
+Tonic seizure (disorder)	PREF=Tonic seizure (disorder)	CUI=C0270844	STY=Disease or Syndrome
+Tonic-clonic seizure	PREF=Tonic-clonic seizure	CUI=C0494475	STY=Disease or Syndrome
+Generalized tonic clonic seizures	PREF=Generalized tonic clonic seizures	CUI=C0494475	STY=Disease or Syndrome
+Generalized tonic-clonic seizures	PREF=Generalized tonic-clonic seizures	CUI=C0494475	STY=Disease or Syndrome
+"Seizures, generalized tonic-clonic"	"PREF=Seizures, generalized tonic-clonic"	CUI=C0494475	STY=Disease or Syndrome
+Generalized clonic-tonic seizures	PREF=Generalized clonic-tonic seizures	CUI=C0494475	STY=Disease or Syndrome
+"Seizures, tonic-clonic"	"PREF=Seizures, tonic-clonic"	CUI=C0494475	STY=Disease or Syndrome
+Generalized tonic-clonic seizures (GTCS)	PREF=Generalized tonic-clonic seizures (GTCS)	CUI=C0494475	STY=Disease or Syndrome
+Grand mal seizure	PREF=Grand mal seizure	CUI=C0494475	STY=Disease or Syndrome
+"Seizures, clonic-tonic"	"PREF=Seizures, clonic-tonic"	CUI=C0494475	STY=Disease or Syndrome
+Tonic-clonic seizures	PREF=Tonic-clonic seizures	CUI=C0494475	STY=Disease or Syndrome
+Grand mal seizures	PREF=Grand mal seizures	CUI=C0494475	STY=Disease or Syndrome
+Grand mal seizure NOS	PREF=Grand mal seizure NOS	CUI=C0494475	STY=Disease or Syndrome
+Generalized tonic-clonic seizure	PREF=Generalized tonic-clonic seizure	CUI=C0494475	STY=Disease or Syndrome
+"Seizures, generalized tonic-clonic (GTCS)"	"PREF=Seizures, generalized tonic-clonic (GTCS)"	CUI=C0494475	STY=Disease or Syndrome
+Grand mal seizure	PREF=Grand mal seizure	CUI=C0494475	STY=Disease or Syndrome
+Grand mal seizure (disorder)	PREF=Grand mal seizure (disorder)	CUI=C0494475	STY=Disease or Syndrome
+Grand mal convulsion	PREF=Grand mal convulsion	CUI=C0494475	STY=Disease or Syndrome
+Grand mal seizure	PREF=Grand mal seizure	CUI=C0494475	STY=Disease or Syndrome
+Grand mal seizure	PREF=Grand mal seizure	CUI=C0494475	STY=Disease or Syndrome
+Grand mal	PREF=Grand mal	CUI=C0494475	STY=Disease or Syndrome
+Grand mal seizure (finding)	PREF=Grand mal seizure (finding)	CUI=C0494475	STY=Disease or Syndrome
+Tonic-clonic seizures	PREF=Tonic-clonic seizures	CUI=C0494475	STY=Disease or Syndrome
+Tonic-clonic seizure	PREF=Tonic-clonic seizure	CUI=C0494475	STY=Disease or Syndrome
+Tonic-clonic convulsion	PREF=Tonic-clonic convulsion	CUI=C0494475	STY=Disease or Syndrome
+Tonic-clonic seizure (finding)	PREF=Tonic-clonic seizure (finding)	CUI=C0494475	STY=Disease or Syndrome
+Tonic - clonic seizures	PREF=Tonic - clonic seizures	CUI=C0494475	STY=Disease or Syndrome
+Clonic seizure	PREF=Clonic seizure	CUI=C0234535	STY=Disease or Syndrome
+Clonic convulsion	PREF=Clonic convulsion	CUI=C0234535	STY=Disease or Syndrome
+Clonic seizures	PREF=Clonic seizures	CUI=C0234535	STY=Disease or Syndrome
+"Seizures, clonic"	"PREF=Seizures, clonic"	CUI=C0234535	STY=Disease or Syndrome
+Clonic convulsions	PREF=Clonic convulsions	CUI=C0234535	STY=Disease or Syndrome
+Clonic seizure	PREF=Clonic seizure	CUI=C0234535	STY=Disease or Syndrome
+Clonic seizure (finding)	PREF=Clonic seizure (finding)	CUI=C0234535	STY=Disease or Syndrome
