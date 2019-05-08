@@ -1,0 +1,20 @@
+MultiPhase: Olanz
+Phases:
+
+copy-lookups
+drug_modifier
+doses
+prescription
+KeepPrescription
+KeepPrescriptionInText
+prescription-implicit
+prescription-indicator
+LazyPrescription
+dates
+routes
+status
+prescription-coref
+exclude
+tense
+dose-change
+noMeds

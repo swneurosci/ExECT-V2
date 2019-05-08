@@ -1,0 +1,23 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: ModifyLookup
+Input:Lookup Lookup2 Lookup3 Sentence
+Options: control=appelt
+
+/*
+ * assigns a certainty level  (1-5, 5 most certain)to Lookups 
+ * using words such as "probably", "unlikely" etc
+*/
+
+
+Rule: prob1
+(
+	({Lookup2.minorType == probability}):prob
+	({Lookup.majorType == umls}):umls
+):match
+-->
+:umls {
+  getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
+    getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
+}
+

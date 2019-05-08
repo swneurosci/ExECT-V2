@@ -1,0 +1,23 @@
+Phase: PrescriptionIndicators
+Input:Drug Keyword Token Prescription
+Options: control=appelt
+
+/*
+ * SLaM JAPE file
+*/
+
+Rule: Skip
+Priority: 1000
+(
+	{Prescription}
+)
+-->
+{}
+
+Rule: Indicator
+(
+	{Drug}
+	{Keyword.kind == "indicator"}
+):match
+-->
+:match.Prescription = { rule = "indicator", drug = :match.Drug.name, dose = "unknown",  drug-type = :match.Drug.type }

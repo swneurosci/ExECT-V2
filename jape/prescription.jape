@@ -1,0 +1,21 @@
+Phase: DrugStatus
+Input: Measurement Drug DoseFrequency Numeric ContextPrescription NewLine
+Options: control=appelt
+
+/* 
+ * Modified SLaM JAPE file
+*/
+
+Rule: doseMatch0
+(   
+    ({ContextPrescription})?
+    ({Drug})
+    ({ContextPrescription})?
+    {Measurement}
+    ({ContextPrescription})?
+    {DoseFrequency}
+    ({ContextPrescription})?
+):match
+-->
+:match.Prescription0 = { rule = doseMatch0,  drug = :match.Drug@string,  CUI = :match.Drug.CUI, dose-val = :match.Measurement.quantity, dose-unit =:match.Measurement.units, dose-frequency = :match.DoseFrequency.frequency, time-unit = :match.DoseFrequency.time-unit dose-interval = :match.DoseFrequency.interval, Context = :match.ContextPrescription.context}
+

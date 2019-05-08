@@ -1,0 +1,74 @@
+Phase: SeizureFrequency
+Input: NumberRange timePeriods Lookup3 Sentence startList Split
+Options: control=all
+
+/*
+ * Various rules for different ways of expressing a seizure frequency
+ * i.e. "she has 4-5 seizures per day" or "he has 10 focal seizures weekly"
+*/
+
+Rule: seizureFrequency0a
+(
+    ({NumberRange}):X1
+    {Lookup3.Negation == Affirmed}
+    ({NumberRange}):X2
+    {timePeriods.period==yes}
+):match
+-->
+:match.SeizureFrequency = { SeizureType=:match.Lookup3.PREF, rule = seizureFrequency0a, PREF = "Fit Frequency" ,CUI = "C0149775", 
+seizureNum = :X1.NumberRange.value, seizureLower = :X1.NumberRange.N1, seizureUpper = :X1.NumberRange.N2,
+timeNum = :X2.NumberRange.value, timeLower = :X2.NumberRange.N1, timeUpper = :X2.NumberRange.N2,
+period = :match.timePeriods.time-unit
+}
+
+Rule: seizureFrequency0b
+(
+    ({NumberRange}):X1
+    {Lookup3.Negation == Affirmed}
+    {timePeriods.period==yes}
+
+):match
+-->
+:match.SeizureFrequency = { SeizureType=:match.Lookup3.PREF, rule = seizureFrequency0b, PREF = "Fit Frequency" ,CUI = "C0149775", 
+seizureNum = :X1.NumberRange.value, seizureLower = :X1.NumberRange.N1, seizureUpper = :X1.NumberRange.N2
+period = :match.timePeriods.time-unit
+}
+
+
+
+
+
+Rule: seizureFrequency0c
+(
+    ({Lookup3.PREF == "Fit frequency" , Lookup3.Negation == "Affirmed"} | {Lookup3.minorType == "seizure" , Lookup3.Negation == "Affirmed"})
+    ({NumberRange}):X1
+    ({timePeriods.period==yes})
+):match
+-->
+:match.SeizureFrequency = { SeizureType=:match.Lookup3.PREF, rule = seizureFrequency0c, PREF = "Fit Frequency" ,CUI = "C0149775", 
+seizureNum = :X1.NumberRange.value, seizureLower = :X1.NumberRange.N1, seizureUpper = :X1.NumberRange.N2
+period = :match.timePeriods.time-unit
+}
+
+
+Rule: seizureFrequency1a
+
+(
+    ({NumberRange}):X2
+    {timePeriods.period==yes}
+    ({NumberRange}):X1
+    {Lookup3.Negation == Affirmed}
+):match
+-->
+:match.SeizureFrequency = { SeizureType=:match.Lookup3.PREF, rule = seizureFrequency1a, PREF = "Fit Frequency" ,CUI = "C0149775", 
+seizureNum = :X1.NumberRange.value, seizureLower = :X1.NumberRange.N1, seizureUpper = :X1.NumberRange.N2,
+timeNum = :X2.NumberRange.value, timeLower = :X2.NumberRange.N1, timeUpper = :X2.NumberRange.N2,
+period = :match.timePeriods.time-unit
+}
+
+
+
+
+
+
+
