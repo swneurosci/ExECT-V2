@@ -21,7 +21,7 @@ seizureSlang.lst:epilepsy:seizure::Lookup3
 pronoun.lst:person:pronoun::Person
 CalenderUnit.lst:frequency:time::Calendar
 NegConj.lst:negation:allow::NegConj
-months.lst:time:date::Month
+months.lst:time:date::Lookup2
 person_id.lst:person:health_terms::Lookup2
 date.lst:time:date::Lookup2
 patient.lst:person:noun::Person
@@ -39,3 +39,4 @@ EEG_results.lst:EEG:results:English:InvestigationFinding
 ct_mri_results.lst:CT_MRI:results::InvestigationFinding
 InvestigationTypes.lst:examination:neuro::Investigation
 units.lst:quantity:unit::Unit
+Ordinals1.lst:Numerals:Ordinals::Lookup2

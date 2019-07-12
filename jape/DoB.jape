@@ -1,6 +1,6 @@
 Phase: Dates
-Input:TIMEX3 Lookup2 DateBio
-Options: control=appelt
+Input: Lookup2 Token SpaceToken DateBio
+Options: control=once
 
 
 /* 
@@ -8,20 +8,15 @@ Options: control=appelt
 */
 
 Rule: DoB_2
+Priority: 100
 (
-	{Lookup2.majorType == "person", Lookup2.minorType == "health_terms"}
-	{DateBio}	
+	({Lookup2.majorType == "person", Lookup2.minorType == "health_terms"}
+	({Token.kind == "punctuation"})?
+	({SpaceToken.kind == "space"})? 
+	({SpaceToken.kind == "space"} | {SpaceToken.kind == "control"})?
+	{DateBio}):a	
 ):match
 -->
-:match.Date_of_Birth = { rule = DoB_2, value = :match.DateBio.value}
+:match.Date_of_Birth = { rule = DoB_2, value = :match.DateBio.value, string = :a@string, DayDate = :match.DateBio@DayDate, MonthDate = :match.DateBio@MonthDate, YearDate = :match.DateBio@YearDate}
 
 
-/* Rule: DoB_1
-*(
-*	{Lookup2.majorType == "person", Lookup2.minorType == "health_terms"}
-*	{TIMEX3.foundByRule == "date_r0c-explicit"}|{TIMEX3.foundByRule == "date_r0h-explicit"}
-	
-*):match
-*-->
-*:match.Date_of_Birth = { rule = DoB_1, value = :match.TIMEX3.timexValue} 
-*/

@@ -1,27 +1,69 @@
 Phase: Dates
-Input:TIMEX3 Lookup2 DateBio
-Options: control=appelt
+Input: Lookup2 Token SpaceToken DateBio
+Options: control=once
 
-Rule: ClinicDate
+/*
+ * Get Clinic Date
+ */
 
+ Rule: ClinicDate
+ Priority: 100
 (
-	({Lookup2.majorType == "organization", Lookup2.minorType == "health_term"}|{Lookup2.majorType == "time", Lookup2.minorType == "date"})
-	({TIMEX3.foundByRule == "date_r1b-explicit"}|{TIMEX3.foundByRule == "date_r0h-explicit"})
-
+	({Lookup2.majorType == "organization", Lookup2.minorType == "health_term"}
+	({SpaceToken.kind == "space"})
+	({Lookup2.majorType == "time", Lookup2.minorType == "date"})
+	({Token.kind == "punctuation"})?
+	({SpaceToken.kind == "space"})?
+	({SpaceToken.kind == "space"} | {SpaceToken.kind == "control"})?
+	{DateBio}):a
 ):match
 -->
-:match.ClinicDate = {rule = ClinicDate1, value = :match.TIMEX3.timexValue}
+:match.ClinicDate = { rule = ClinicDate, value = :match.DateBio@string, string = :a@string, DayDate = :match.DateBio@DayDate, MonthDate = :match.DateBio@MonthDate, YearDate = :match.DateBio@YearDate}
 
 
 
-
-Rule: ClinicDate2
-
+Rule:ClinicDate2
+Priority: 99
 (
-	({Lookup2.majorType == "organization", Lookup2.minorType == "health_term"}|{Lookup2.majorType == "time", Lookup2.minorType == "date"})
-	{DateBio}
-)
-:match
+	({Lookup2.majorType == "time", Lookup2.minorType == "date"}
+	({Token.kind == "punctuation"})?
+	({SpaceToken.kind == "space"})?
+	({SpaceToken.kind == "space"} | {SpaceToken.kind == "control"})?
+	{DateBio}):a
+):match
 -->
-:match.ClinicDate = {rule = ClinicDate2,  value = :match.DateBio.value} 
+:match.ClinicDate = { rule = ClinicDate2, value = :match.DateBio@string, string = :a@string, DayDate = :match.DateBio@DayDate, MonthDate = :match.DateBio@MonthDate, YearDate = :match.DateBio@YearDate}
 
+
+
+
+/*
+* No longer need to use 'Date' as input, changed DateBio to collect more date types
+*
+*
+*Rule:ClinicDate3
+*Priority: 98
+*(
+*	({Lookup2.majorType == "organization", Lookup2.minorType == "health_terms"})|({Lookup2.majorType == "time", Lookup2.minorType == "date"}
+*	({Token.kind == "punctuation"})?
+*	({SpaceToken.kind == "space"})?
+*	({SpaceToken.kind == "space"} | {SpaceToken.kind == "control"})?
+*	{Date}):a
+*):match
+*-->
+*:match.ClinicDate = {rule = ClinicDate3, value = :match.Date.value, string = :a@string}
+*
+*
+*Rule:ClinicDate4
+*Priority: 98
+*(
+*	({Lookup2.majorType == "time", Lookup2.minorType == "date"}
+*	({Token.kind == "punctuation"})?
+*	({SpaceToken.kind == "space"})?
+*	({SpaceToken.kind == "space"} | {SpaceToken.kind == "control"})?
+*	{Date}):a
+*):match
+*-->
+*:match.ClinicDate = {rule = ClinicDate4, value = :match.Date.value, string = :a@string}
+*
+*/
