@@ -11,6 +11,6 @@ Rule: medFind
 	{Lookup.STY == "Diagnostic Procedure"}
 ):item
 -->
-:item.MedFinding = { rule = "medFinding", PREF = :item.Lookup.PREF  ,CUI = :item.Lookup.inst, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+:item.MedFinding = { rule = "medFinding", PREF = :item.Lookup.PREF  ,CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
 Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
 

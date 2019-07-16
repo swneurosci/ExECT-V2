@@ -28,13 +28,13 @@ p.r.n.:time-unit=as required
 in the evening:frequency=1:time-unit=day:when=night
 b.d.:frequency=2:time-unit=day:interval=1
 per week:frequency=1:time-unit=week:interval=1
-per year:frequency=1:time-unit=year:interval=1
+per year:frequency=1:time-unit=year:interval=1:=
 in a week:frequency=1:time-unit=week:interval=1
 in a day:frequency=1:time-unit=day:interval=1
 years:frequency=1:time-unit=year
 months:frequency=1:time-unit=month
 weeks:frequency=1:time-unit=week
-a year:frequency=1:time-unit=year:interval=1:=
+a year:frequency=1:time-unit=year:interval=1
 a year:frequency=1:time-unit=year:interval=1
 in the night:frequency=1:time-unit=day:when=night
 b.d:frequency=2:time-unit=day:interval=1
@@ -46,9 +46,13 @@ night:frequency=1:time-unit=day:when=night
 per month:time-unit=month:interval=1
 per day:time-unit=day:interval=1
 a day:time-unit=day
-a month:time-unit=month:=:interval=1
+a month:time-unit=month:interval=1
 once a day:frequency=1:time-unit=day:interval=1:when=day
-in a single week:frequency=1:time-unit=week:interval=1:=
-a week:time-unit=week:=:interval=1
-a single day:time-unit=day:=:interval =1
-a single month:time-unit=month:=:interval =1
+in a single week:frequency=1:time-unit=week:interval=1
+a week:time-unit=week:interval=1
+a single day:time-unit=day:interval=1
+a single month:time-unit=month:interval=1
+PM:frequency=1:time-unit=day:interval=1:when=night
+AM:frequency=1:time-unit=day:when=morning
+Pm:frequency=1:time-unit=day:interval=1:when=night
+Am:frequency=1:time-unit=day:when=morning:=
