@@ -1,0 +1,33 @@
+Phase: PrescriptionImplicitPrescription0
+Input: Measurement DoseFrequency Medmod Split NP Prescription0 ContexPrescription Sentence
+Options: control=appelt
+
+/*
+ * SLaM JAPE file
+*/
+
+
+Rule: ThirdDose
+(
+	({ContexPrescription})?
+	({Prescription0.rule == "secondDose"}):p1
+	({ContexPrescription})?
+	({Measurement.dimension!=time}
+	({ContexPrescription})?
+	{DoseFrequency}):p2
+):match
+-->
+:match.Prescription0 = { rule = "ThirdDose",
+string = :p1.Prescription0.drug,
+ drug = :p1.Prescription0.drug,
+ CUI = :p1.Prescription0.CUI, 
+ route = :p1.Prescription0.route,
+ status = :p1.Prescription.status,
+ dose-val = :p2.Measurement.quantity,
+ dose-unit = :p2.Measurement.units,
+ dose-frequency = :p2.DoseFrequency.frequency,
+ time-unit = :p2.DoseFrequency.time-unit,
+ dose-interval = :p2.DoseFrequency.interval,
+ when = :p2.DoseFrequency.when,
+ drug-type = :p1.Prescription0.drug-type,
+ Contex = :match.Prescription0.Contex}

@@ -1,0 +1,19 @@
+Phase: DrugStatus2
+Input: Prescription0 ContextPrescription Sentence
+Options: control=all
+
+Rule: doseMatch2
+(
+    ({ContextPrescription})
+    ({Prescription0})+:pres2
+):match
+-->
+:match.Prescription2 = { rule = doseMatch2,
+drug = :match.Prescription0.drug 
+CUI = :match.Prescription0.CUI,
+dose-val = :match.Prescription0.dose-val,
+dose-unit =:match.Prescription0.dose-unit, 
+dose-frequency = :match.Prescription0.dose-frequency,
+time-unit = :match.Prescription0.time-unit, 
+dose-interval = :match.Prescription0.dose-interval, 
+Context = :match.ContextPrescription.context}

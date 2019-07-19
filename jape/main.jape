@@ -5,9 +5,12 @@ copy-lookups
 drug_modifier
 doses
 prescription
+prescription2
+prescription3
+prescription-implicit
+ThirdDose
 KeepPrescription
 KeepPrescriptionInText
-prescription-implicit
 prescription-indicator
 LazyPrescription
 dates

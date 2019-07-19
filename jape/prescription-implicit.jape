@@ -1,5 +1,5 @@
-Phase: PrescriptionImplicit
-Input:Drug Measurement Lookup DoseFrequency Prescription Medmod Split NP
+Phase: PrescriptionImplicitPrescription0
+Input: Measurement DoseFrequency Medmod Split NP Prescription0 ContexPrescription Sentence
 Options: control=appelt
 
 /*
@@ -8,12 +8,31 @@ Options: control=appelt
 
 Rule: SecondDose
 (
-	({Prescription}):p1
-	({Measurement.dimension!=time, !Prescription}
+	({ContexPrescription})?
+	({Prescription0}):p1
+	({ContexPrescription})?
+	({Measurement.dimension!=time}
+	({ContexPrescription})?
 	{DoseFrequency}):p2
-)
+):match
 -->
-:p2.Prescription = { rule = "secondDose", drug = :p1.Prescription.drug, CUI = :p1.Prescription.CUI, route = :p1.Prescription.route, status = :p1.Prescription.status, dose = :p2.Measurement@string, dose-val = :p2.Measurement.quantity, dose-unit = :p2.Measurement.units, dose-frequency = :p2.DoseFrequency.frequency, time-unit = :p2.DoseFrequency.time-unit, dose-interval = :p2.DoseFrequency.interval, when = :p2.DoseFrequency.when, drug-type = :p1.Prescription.drug-type }
+:match.Prescription0 = { rule = "secondDose",
+string = :p1.Prescription0.drug,
+ drug = :p1.Prescription0.drug,
+ CUI = :p1.Prescription0.CUI, 
+ route = :p1.Prescription0.route,
+ status = :p1.Prescription.status,
+ dose-val = :p2.Measurement.quantity,
+ dose-unit = :p2.Measurement.units,
+ dose-frequency = :p2.DoseFrequency.frequency,
+ time-unit = :p2.DoseFrequency.time-unit,
+ dose-interval = :p2.DoseFrequency.interval,
+ when = :p2.DoseFrequency.when,
+ drug-type = :p1.Prescription0.drug-type,
+ Contex = :p1.Prescription0.Contex}
+
+
+
 
 
 
@@ -24,7 +43,7 @@ Rule: SecondDose
 *	({Medmod}|{Measurement})*
 *):match
 *-->
-*:match.Prescription = { rule = "weanOff", drug = :p.Prescription.drug, route = :p.Prescription.route, status = "stop", dose = :p.Prescription.dose, dose-value = :p.Prescription.dose-value, dose-unit = :p.Prescription.dose-unit, dose-frequency = :p.Prescription.frequency, time-unit = :p.Prescription.time-unit, dose-interval = :p.Prescription.interval, when = :p.Prescription.when, drug-type = :p.Prescription.drug-type },
+*:match.Prescription0 = { rule = "weanOff", drug = :p.Prescription.drug, route = :p.Prescription.route, status = "stop", dose = :p.Prescription.dose, dose-value = :p.Prescription.dose-value, dose-unit = :p.Prescription.dose-unit, dose-frequency = :p.Prescription.frequency, time-unit = :p.Prescription.time-unit, dose-interval = :p.Prescription.interval, when = :p.Prescription.when, drug-type = :p.Prescription.drug-type },
 *{
 *	Annotation prescription = bindings.get("p").iterator().next();
 *	inputAS.remove(prescription);

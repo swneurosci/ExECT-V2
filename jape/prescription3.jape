@@ -1,0 +1,19 @@
+Phase: Prescription0and2
+Input: Prescription0 Prescription2 Sentence
+Options: control=all
+
+Rule: Prescription0and2
+(
+    ({Prescription2 contains Prescription0, Prescription0})+:match2
+    ({Prescription0}):match1
+):match
+-->
+:match.Prescription3 = { rule = Prescription0and2,
+drug = :match.Prescription0.drug,
+CUI = :match.Prescription0.CUI,
+dose-val = :match.Prescription0.dose-val, 
+dose-unit =:match.Prescription0.dose-unit, 
+dose-frequency = :match.Prescription0.dose-frequency,
+time-unit = :match.Prescription0.time-unit,
+dose-interval = :match.Prescription0.dose-interval, 
+Context = :match2.Prescription2.Context}
