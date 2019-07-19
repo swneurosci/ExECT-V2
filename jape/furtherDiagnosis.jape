@@ -12,7 +12,7 @@ Rule: furtherDiagnosis
 )*:item
 -->
 :item.Diagnosis = {rule = "listDiagnosis", PREF = :item.MedFinding.PREF, CUI = :item.MedFinding.CUI, STY = :item.MedFinding.STY, Negation = :item.MedFinding.Negation,
-Experiencer = :item.MedFinding.Experiencer, Temporality = :item.MedFinding.Temporality, Certainty = :item.Lookup.certainty,}
+Experiencer = :item.MedFinding.Experiencer, Temporality = :item.MedFinding.Temporality, Certainty = :item.MedFinding.Certainty}
 
 
 

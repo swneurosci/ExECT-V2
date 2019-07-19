@@ -512,7 +512,7 @@ Psychomotor epilepsy (disorder)	PREF=Psychomotor epilepsy (disorder)	CUI=C008541
 Psychomotor epilepsy (disorder)	PREF=Psychomotor epilepsy (disorder)	CUI=C0085417	STY=Disease or Syndrome
 Psychomotor epilepsy	PREF=Psychomotor epilepsy	CUI=C0085417	STY=Disease or Syndrome
 Psychomotor epilepsy (disorder)	PREF=Psychomotor epilepsy (disorder)	CUI=C0085417	STY=Disease or Syndrome
-Complex partial epileptic seizure (disorder)	PREF=Complex partial epileptic seizure (disorder)	CUI=C0085417	STY=Disease or Syndrome
+Complex partial seizures	PREF=Complex partial epileptic seizure (disorder)	CUI=C0085417	STY=Disease or Syndrome
 Complex partial epileptic seizure	PREF=Complex partial epileptic seizure	CUI=C0085417	STY=Disease or Syndrome
 Psychomotor epilepsy	PREF=Psychomotor epilepsy	CUI=C0085417	STY=Disease or Syndrome
 Partial epil.-consc.impair.NOS	PREF=Partial epil.-consc.impair.NOS	CUI=C0553587	STY=Disease or Syndrome
@@ -623,7 +623,7 @@ Psychomotor epilepsy (disorder)	PREF=Psychomotor epilepsy (disorder)	CUI=C008541
 Psychomotor epilepsy (disorder)	PREF=Psychomotor epilepsy (disorder)	CUI=C0085417	STY=Disease or Syndrome
 Psychomotor epilepsy	PREF=Psychomotor epilepsy	CUI=C0085417	STY=Disease or Syndrome
 Psychomotor epilepsy (disorder)	PREF=Psychomotor epilepsy (disorder)	CUI=C0085417	STY=Disease or Syndrome
-Complex partial epileptic seizure (disorder)	PREF=Complex partial epileptic seizure (disorder)	CUI=C0085417	STY=Disease or Syndrome
+Complex partial seizure	PREF=Complex partial epileptic seizure (disorder)	CUI=C0085417	STY=Disease or Syndrome
 Complex partial epileptic seizure	PREF=Complex partial epileptic seizure	CUI=C0085417	STY=Disease or Syndrome
 Psychomotor epilepsy	PREF=Psychomotor epilepsy	CUI=C0085417	STY=Disease or Syndrome
 Partial epil.-consc.impair.NOS	PREF=Partial epil.-consc.impair.NOS	CUI=C0553587	STY=Disease or Syndrome
@@ -793,20 +793,20 @@ Tonic Seizures	PREF=Tonic Seizures	CUI=C0270844	STY=Disease or Syndrome
 Tonic seizure	PREF=Tonic seizure	CUI=C0270844	STY=Disease or Syndrome
 Tonic seizure (disorder)	PREF=Tonic seizure (disorder)	CUI=C0270844	STY=Disease or Syndrome
 Tonic-clonic seizure	PREF=Tonic-clonic seizure	CUI=C0494475	STY=Disease or Syndrome
-Generalized tonic clonic seizures	PREF=Generalized tonic clonic seizures	CUI=C0494475	STY=Disease or Syndrome
+Generalized tonic clonic seizures	PREF=Generalize tonc clonic seizures	CUI=C0494475	STY=Disease or Syndrome
 Generalized tonic-clonic seizures	PREF=Generalized tonic-clonic seizures	CUI=C0494475	STY=Disease or Syndrome
 Seizures, generalized tonic-clonic	PREF=Seizures, generalized tonic-clonic	CUI=C0494475	STY=Disease or Syndrome
 Generalized clonic-tonic seizures	PREF=Generalized clonic-tonic seizures	CUI=C0494475	STY=Disease or Syndrome
 Seizures, tonic-clonic	PREF=Seizures, tonic-clonic	CUI=C0494475	STY=Disease or Syndrome
 Generalized tonic-clonic seizures (GTCS)	PREF=Generalized tonic-clonic seizures (GTCS)	CUI=C0494475	STY=Disease or Syndrome
-Grand mal seizure	PREF=Grand mal seizure	CUI=C0494475	STY=Disease or Syndrome
+Generalised tonic clonic seizure	PREF=Generalised tonic clonic seizure	CUI=C0494475	STY=Disease or Syndrome
 Seizures, clonic-tonic	PREF=Seizures, clonic-tonic	CUI=C0494475	STY=Disease or Syndrome
 Tonic-clonic seizures	PREF=Tonic-clonic seizures	CUI=C0494475	STY=Disease or Syndrome
-Grand mal seizures	PREF=Grand mal seizures	CUI=C0494475	STY=Disease or Syndrome
+Generalised tonic clonic seizures	PREF=Generalised tonic clonic seizures	CUI=C0494475	STY=Disease or Syndrome
 Grand mal seizure NOS	PREF=Grand mal seizure NOS	CUI=C0494475	STY=Disease or Syndrome
 Generalized tonic-clonic seizure	PREF=Generalized tonic-clonic seizure	CUI=C0494475	STY=Disease or Syndrome
 Seizures, generalized tonic-clonic (GTCS)	PREF=Seizures, generalized tonic-clonic (GTCS)	CUI=C0494475	STY=Disease or Syndrome
-Grand mal seizure	PREF=Grand mal seizure	CUI=C0494475	STY=Disease or Syndrome
+Generalised tonic clonic seizure	PREF=Generalized tonc clonic seizure	CUI=C0494475	STY=Disease or Syndrome
 Grand mal seizure (disorder)	PREF=Grand mal seizure (disorder)	CUI=C0494475	STY=Disease or Syndrome
 Grand mal convulsion	PREF=Grand mal convulsion	CUI=C0494475	STY=Disease or Syndrome
 Grand mal seizure	PREF=Grand mal seizure	CUI=C0494475	STY=Disease or Syndrome
@@ -825,4 +825,6 @@ Seizures, clonic	PREF=Seizures, clonic	CUI=C0234535	STY=Disease or Syndrome
 Clonic convulsions	PREF=Clonic convulsions	CUI=C0234535	STY=Disease or Syndrome
 Clonic seizure	PREF=Clonic seizure	CUI=C0234535	STY=Disease or Syndrome
 Clonic seizure (finding)	PREF=Clonic seizure (finding)	CUI=C0234535	STY=Disease or Syndrome
-Diagnosis	PREF=Diagnosis	=
+Diagnosis	PREF=Diagnosis
+Reflex Epilepsy, Photosensitive	PREF=Photosensitive epilepsy	CUI=C0393720	STY=Disease or Syndrome
+Photosensitive epilepsy	PREF=Photosensitive epilepsy	CUI=C0393720	STY=Disease or Syndrome

@@ -10,4 +10,14 @@ Rule: DiagnosisFromSeizure
 
 ):match
 -->
-:match.Diagnosis = {rule = DiagFromSeziure, PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, Negation = :match.Lookup3.Negation, Certainty = :match.Lookup3.Certainty}
+:match.Diagnosis = {rule = DiagFromSeizure, PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, Negation = :match.Lookup3.Negation, Certainty = :match.Lookup3.Certainty}
+
+Rule: DiagnosisFromSeizure2
+(
+
+	({Person}
+	{Lookup.Experiencer == Patient, Lookup.majorType == umls})
+
+):match
+-->
+:match.Diagnosis = {rule = DiagFromSeizure2, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
