@@ -119,7 +119,7 @@ sinceperiod = :match.timePeriods.time-unit, sinceInteraction = :match.Interactio
 
 
 Rule: seizureFree1d
-Priority: 100
+Priority: 99
 (
     ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"}
     {timeElapsed.time == since}

@@ -16,19 +16,21 @@ morning:frequency=1:time-unit=day:when=morning
 afternoon:frequency=1:time-unit=day:when=day:period=yes
 evening:frequency=1:time-unit=day:when=night:period=yes
 night:frequency=1:time-unit=day:when=night
-per month:time-unit=month:interval=1:period=yes
-per day:time-unit=day:interval=1:period=yes
-a day:time-unit=day:period=yes
-a month:time-unit=month:interval=1:period=yes
+per month:time-unit=month:interval=1:period=yes:frequency=1
+per day:time-unit=day:interval=1:period=yes:frequency=1
+a day:time-unit=day:period=yes:frequency=1
+a month:time-unit=month:interval=1:period=yes:frequency=1
 once a day:frequency=1:time-unit=day:period=yes:when=day
 in a single week:frequency=1:time-unit=week:interval=1:period=yes
-a week:time-unit=week:interval=1
-a single day:time-unit=day:interval=1:period=yes
-a single month:time-unit=month:interval=1:period=yes
+a week:time-unit=week:interval=1:frequency=1
+a single day:time-unit=day:interval=1:period=yes:frequency=1
+a single month:time-unit=month:interval=1:period=yes:frequency=1
 year:frequency=1:time-unit=year
 month:frequency=1:time-unit=month
 week:frequency=1:time-unit=week
 more than a year:frequency=>2:time-unit=year:type=greater
 number of years:frequency=>1:time-unit=year:type=greater
 number of months:frequency=>1:time-unit=month:type=greater
-a night:time-unit=day:interval=1:period=yes:=
+a night:time-unit=day:interval=1:period=yes:frequency=1
+monthly:frequency=1:time-unit=month
+days:time-unit=day:frequency=>1:=

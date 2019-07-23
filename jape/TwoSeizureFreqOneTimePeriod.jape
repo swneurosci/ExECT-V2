@@ -1,0 +1,13 @@
+Phase: SeizureFrequency
+Input: NumberRange timePeriods Lookup3 Sentence Split SeizureFrequency
+Options: control=appelt
+
+Rule: SFreqLetter41Fix
+(
+    ({NumberRange})
+    ({Lookup3.majorType == "Lookup", Lookup3.minorType == "Disease"})
+    ({SeizureFrequency})
+):match
+-->
+:match.SeizureFrequency = { rule = "SFreqLetter41Fix", CUI = :match.Lookup3.CUI,
+NoOfTimePeriods = :match.SeizureFrequency.NoOfTimePeriods, TimePeriod = :match.SeizureFrequency.TimePeriod, QuantityTotal = :match.NumberRange.value}

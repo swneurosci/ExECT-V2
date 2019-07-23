@@ -1,13 +1,34 @@
 Phase: numberRange
-Input: Number Token
+Input: Numeric Token
 Options: control=appelt
 
 
 Rule: numberRange
 (
-    ({Number}):n1
+    ({Numeric}):n1
     ({Token.string == "to"} | {Token.string == "-"} | {Token.string == "or"} | {Token.string == "–"})
-    ({Number}):n2
+    ({Numeric}):n2
 ):match
 -->
 :match.Range = { rule = numberRange, N1 = :n1.Numeric.value, N2 = :n2.Numeric.value}
+
+
+
+Rule: numberRange1
+(
+    ({Token.string == "up"})
+    ({Token.string == "to"})
+    ({Numeric})
+):match
+-->
+:match.Range = { rule = numberRange1, N1 = 0, N2 = :match.Numeric.value}
+
+Rule: numberRange2
+(
+    ({Token.string == "between"})
+    ({Numeric}):n1
+    ({Token.string == "and"})
+    ({Numeric}):n2
+):match
+-->
+:match.Range = { rule = numberRange2, N1 = :n1.Numeric.value, N2 = :n2.Numeric.value}

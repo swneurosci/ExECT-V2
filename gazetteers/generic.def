@@ -40,3 +40,5 @@ ct_mri_results.lst:CT_MRI:results::InvestigationFinding
 InvestigationTypes.lst:examination:neuro::Investigation
 units.lst:quantity:unit::Unit
 Ordinals1.lst:Numerals:Ordinals::Lookup2
+SeizureFrequency.lst::::SeizFreq
+SeizureOnset.lst::::SeizOnset

@@ -3,10 +3,12 @@ Multiphase:Epilepsy
 Phases:
 
 diagnosis
+SeizureFree
+SeizureFree2
 seizure-frequency
+TwoSeizureFreqOneTimePeriod
 EpilepsyMentions
 SeizureSince
-SeizureFree
 Investigations
 InvestConj
 medFinding

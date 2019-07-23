@@ -200,4 +200,7 @@ Clonic seizure	CUI=C0234535	STY=Disease or Syndrome
 Clonic seizure (finding)	CUI=C0234535	STY=Disease or Syndrome
 Seizure	CUI=C0036572	STY=Disease or Syndrome
 Seizures	CUI=C0036572	STY=Dsease or Syndrome
+Complex partial	CUI=C0085417	STY=Disease or Syndrome
+Complex partial seizure	CUI=C0085417	STY=Disease or Syndrome
+Complex partial seizures	CUI=C0085417	STY=Disease or Syndrome
 Seizure free	CUI=C1299590	STY=Finding	PREF=Seizure free

@@ -1,0 +1,11 @@
+Phase: SeizureFree
+Input: Token
+Options: control=appelt
+
+Rule: SeizureFree2
+(
+    ({Token.string==~"[Ss]eizure"})
+    ({Token.string==~"[Ff]ree"})
+):match
+-->
+:match.SeizureFree = { rule = SeizureFree2, CUI = "C1299590"}
