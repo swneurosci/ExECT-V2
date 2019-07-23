@@ -1,7 +1,7 @@
 Imports: {import static gate.Utils.*; }
 
 Phase: ModifyLookup
-Input:Lookup Lookup2
+Input:Lookup Lookup2 Lookup3
 Options: control=appelt
 
 /*
@@ -18,6 +18,17 @@ Rule: default1
   umlsAnnots.iterator().next().getFeatures().put("Certainty",5);
 }
 
+Rule: default1a
+(
+	({Lookup3.majorType == Lookup, Lookup3.Certainty==~"(?i)", Lookup3.Negation=="Affirmed"}):umls
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Certainty",5);
+}
+
+
+
 
 
 
@@ -31,7 +42,14 @@ Rule: default2
   umlsAnnots.iterator().next().getFeatures().put("Certainty",1);
 }
 
-
+Rule: default2
+(
+	({Lookup3.majorType == Lookup, Lookup.Certainty ==~"(?i)", Lookup.Negation=="Negated"}):umls
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Certainty",1);
+}
 
 
 

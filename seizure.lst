@@ -1,4 +1,4 @@
-Epileptic seizure	CUI=C0014544	STY=Disease or Syndrome
+Epileptic seizure	CUI=C0014544	STY=Disease or Syndrome	=
 Seizure disorder	CUI=C0014544	STY=Disease or Syndrome
 Epileptic seizures NOS	CUI=C0014544	STY=Disease or Syndrome
 Seizure disorder NOS	CUI=C0014544	STY=Disease or Syndrome
@@ -200,3 +200,4 @@ Clonic seizure	CUI=C0234535	STY=Disease or Syndrome
 Clonic seizure (finding)	CUI=C0234535	STY=Disease or Syndrome
 Seizure	CUI=C0036572	STY=Disease or Syndrome
 Seizures	CUI=C0036572	STY=Dsease or Syndrome
+Seizure free	CUI=C1299590	STY=Finding	PREF=Seizure free

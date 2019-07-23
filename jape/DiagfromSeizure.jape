@@ -1,5 +1,5 @@
 Phase: DiagnosisfromSeziure
-Input:  Person Lookup3 Sentence
+Input:  Person Lookup3 Sentence Lookup
 Options: control=appelt
 
 Rule: DiagnosisFromSeizure

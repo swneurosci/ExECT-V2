@@ -21,3 +21,14 @@ Rule: prob1
     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
 }
 
+Rule: prob2
+(
+	({Lookup2.minorType == probability}):prob
+	({Lookup3.majorType == Lookup}):umls
+):match
+-->
+:umls {
+  getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
+    getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
+}
+
