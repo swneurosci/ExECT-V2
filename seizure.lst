@@ -33,26 +33,19 @@ Pyridoxal phosphate-responsive seizures	CUI=C1864723	STY=Disease or Syndrome
 PYRIDOXINE DEPENDENCY WITH SEIZURES	CUI=C1849508	STY=Disease or Syndrome
 Vitamin B6-dependent seizures	CUI=C1849508	STY=Disease or Syndrome
 Visual seizure	CUI=C0270824	STY=Disease or Syndrome
-Visual seizure	CUI=C0270824	STY=Disease or Syndrome
-Cursive seizure	CUI=C0270819	STY=Disease or Syndrome
 Cursive seizure (disorder)	CUI=C0270819	STY=Disease or Syndrome
 Cursive seizure	CUI=C0270819	STY=Disease or Syndrome
-Vertiginous seizure	CUI=C0422855	STY=Disease or Syndrome
 Vertiginous seizure (disorder)	CUI=C0422855	STY=Disease or Syndrome
 Vertiginous seizure	CUI=C0422855	STY=Disease or Syndrome
 Vertiginous seizure (finding)	CUI=C0422855	STY=Disease or Syndrome
-Neonatal seizures	CUI=C0159020	STY=Disease or Syndrome
-Seizures in newborn	CUI=C0159020	STY=Disease or Syndrome
 Seizures in the newborn	CUI=C0159020	STY=Disease or Syndrome
 Neonatal seizures	CUI=C0159020	STY=Disease or Syndrome
 Seizures in newborn	CUI=C0159020	STY=Disease or Syndrome
-Partial seizure	CUI=C0751495	STY=Disease or Syndrome
 Focal seizure	CUI=C0751495	STY=Disease or Syndrome
 Local seizure	CUI=C0751495	STY=Disease or Syndrome
 Seizures, partial, afebrile	CUI=C0751495	STY=Disease or Syndrome
 Partial seizures, NOS	CUI=C0751495	STY=Disease or Syndrome
 Seizures, partial	CUI=C0751495	STY=Disease or Syndrome
-Partial seizures	CUI=C0751495	STY=Disease or Syndrome
 Focal seizures	CUI=C0751495	STY=Disease or Syndrome
 Partial seizure	CUI=C0751495	STY=Disease or Syndrome
 Partial seizure (finding)	CUI=C0751495	STY=Disease or Syndrome
@@ -74,7 +67,6 @@ Generalized-onset seizures, NOS	CUI=C0311334	STY=Disease or Syndrome
 Seizures due to metabolic disorder (disorder)	CUI=C1299598	STY=Disease or Syndrome
 Seizures due to metabolic disorder	CUI=C1299598	STY=Disease or Syndrome
 Alcoh withdrawal-induc seizure	CUI=C0586323	STY=Disease or Syndrome
-Alcohol withdrawal-induced seizure	CUI=C0586323	STY=Disease or Syndrome
 Alcohol withdrawal-induced seizure	CUI=C0586323	STY=Disease or Syndrome
 Benign neonatal seizures	CUI=C0270851	STY=Disease or Syndrome
 Benign neonatal seizures	CUI=C0270851	STY=Disease or Syndrome
@@ -112,33 +104,19 @@ Simple partial seizure	CUI=C0234974	STY=Disease or Syndrome
 Simple partial seizure, consciousness not impaired	CUI=C0234974	STY=Disease or Syndrome
 Simple partial seizure, consciousness not impaired (disorder)	CUI=C0234974	STY=Disease or Syndrome
 Simple partial seizure, consciousness not impaired (finding)	CUI=C0234974	STY=Disease or Syndrome
-Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localised onset	CUI=C0475521	STY=Disease or Syndrome
-Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset	CUI=C0475521	STY=Disease or Syndrome
 Localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset	CUI=C0475521	STY=Disease or Syndrome
 Localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset NOS	CUI=C0475521	STY=Disease or Syndrome
 Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localised onset	CUI=C0475521	STY=Disease or Syndrome
-Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset	CUI=C0475521	STY=Disease or Syndrome
 Localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset (disorder)	CUI=C0475521	STY=Disease or Syndrome
-Absence seizure	CUI=C0014553	STY=Disease or Syndrome
-Petit-mal seizure	CUI=C0014553	STY=Disease or Syndrome
 Absence seizures	CUI=C0014553	STY=Disease or Syndrome
 Typical absence seizure	CUI=C0014553	STY=Disease or Syndrome
 Typical absence seizure (disorder)	CUI=C0014553	STY=Disease or Syndrome
 Absence seizure	CUI=C0014553	STY=Disease or Syndrome
 Absence seizure (finding)	CUI=C0014553	STY=Disease or Syndrome
-Absence seizure	CUI=C0014553	STY=Disease or Syndrome
-Absence seizure (finding)	CUI=C0014553	STY=Disease or Syndrome
-Absence seizure	CUI=C0014553	STY=Disease or Syndrome
 Petit-mal seizure	CUI=C0014553	STY=Disease or Syndrome
 Absence seizure (disorder)	CUI=C0014553	STY=Disease or Syndrome
-Atonic seizure	CUI=C0270846	STY=Disease or Syndrome
-Atonic seizures	CUI=C0270846	STY=Disease or Syndrome
 Seizures, atonic	CUI=C0270846	STY=Disease or Syndrome
-Atonic seizure	CUI=C0270846	STY=Disease or Syndrome
-Finding of atonic seizure (finding)	CUI=C0270846	STY=Disease or Syndrome
-Atonic seizure - finding	CUI=C0270846	STY=Disease or Syndrome
 Atonic seizure (finding)	CUI=C0270846	STY=Disease or Syndrome
-Atonic seizure	CUI=C0270846	STY=Disease or Syndrome
 Atonic seizures	CUI=C0270846	STY=Disease or Syndrome
 Atonic seizure	CUI=C0270846	STY=Disease or Syndrome
 Atonic seizure (disorder)	CUI=C0270846	STY=Disease or Syndrome
@@ -149,12 +127,8 @@ Seizures, atypical absence	CUI=C0595948	STY=Disease or Syndrome
 Atypical absence seizures	CUI=C0595948	STY=Disease or Syndrome
 Atypical absence seizure	CUI=C0595948	STY=Disease or Syndrome
 Atypical absence seizure (disorder)	CUI=C0595948	STY=Disease or Syndrome
-Epileptic seizures - myoclonic	CUI=C4317123	STY=Disease or Syndrome
-Myoclonic seizure	CUI=C4317123	STY=Disease or Syndrome
 Seizures, myoclonic	CUI=C4317123	STY=Disease or Syndrome
-Myoclonic seizures	CUI=C4317123	STY=Disease or Syndrome
 Myoclonic seizure disorder	CUI=C4317123	STY=Disease or Syndrome
-Myoclonic seizure	CUI=C4317123	STY=Disease or Syndrome
 Myoclonic seizure	CUI=C4317123	STY=Disease or Syndrome
 Myoclonic Seizures	CUI=C4317123	STY=Disease or Syndrome
 Myoclonic seizures	CUI=C4317123	STY=Disease or Syndrome
@@ -162,44 +136,33 @@ Epileptic seizures - myoclonic	CUI=C4317123	STY=Disease or Syndrome
 Myoclonic seizure	CUI=C4317123	STY=Disease or Syndrome
 Epileptic seizures - myoclonic (disorder)	CUI=C4317123	STY=Disease or Syndrome
 Myoclonic seizure (disorder)	CUI=C4317123	STY=Disease or Syndrome
-Tonic seizure	CUI=C0270844	STY=Disease or Syndrome
 Tonic seizures	CUI=C0270844	STY=Disease or Syndrome
 Seizures, tonic	CUI=C0270844	STY=Disease or Syndrome
 Tonic seizures	CUI=C0270844	STY=Disease or Syndrome
-Tonic Seizures	CUI=C0270844	STY=Disease or Syndrome
 Tonic seizure	CUI=C0270844	STY=Disease or Syndrome
 Tonic seizure (disorder)	CUI=C0270844	STY=Disease or Syndrome
 Tonic-clonic seizure	CUI=C0494475	STY=Disease or Syndrome
 Generalized tonic clonic seizures	CUI=C0494475	STY=Disease or Syndrome
-Generalized tonic-clonic seizures	CUI=C0494475	STY=Disease or Syndrome
 Seizures, generalized tonic-clonic	CUI=C0494475	STY=Disease or Syndrome
 Generalized clonic-tonic seizures	CUI=C0494475	STY=Disease or Syndrome
 Seizures, tonic-clonic	CUI=C0494475	STY=Disease or Syndrome
 Generalized tonic-clonic seizures (GTCS)	CUI=C0494475	STY=Disease or Syndrome
 Generalised tonic clonic seizure	CUI=C0494475	STY=Disease or Syndrome
 Seizures, clonic-tonic	CUI=C0494475	STY=Disease or Syndrome
-Tonic-clonic seizures	CUI=C0494475	STY=Disease or Syndrome
 Grand mal seizures	CUI=C0494475	STY=Disease or Syndrome
-Grand mal seizure NOS	CUI=C0494475	STY=Disease or Syndrome
 Generalized tonic-clonic seizure	CUI=C0494475	STY=Disease or Syndrome
 Generalised tonic clonic seizures  	CUI=C0311334	STY=Disease or Syndrome
 Seizures, generalized tonic-clonic (GTCS)	CUI=C0494475	STY=Disease or Syndrome
 Grand mal seizure	CUI=C0494475	STY=Disease or Syndrome
-Grand mal seizure (disorder)	CUI=C0494475	STY=Disease or Syndrome
-Grand mal seizure	CUI=C0494475	STY=Disease or Syndrome
-Grand mal seizure	CUI=C0494475	STY=Disease or Syndrome
 Grand mal seizure (finding)	CUI=C0494475	STY=Disease or Syndrome
 Tonic-clonic seizures	CUI=C0494475	STY=Disease or Syndrome
 Tonic-clonic seizure	CUI=C0494475	STY=Disease or Syndrome
-Tonic-clonic seizure (finding)	CUI=C0494475	STY=Disease or Syndrome
 Tonic - clonic seizures	CUI=C0494475	STY=Disease or Syndrome
 Clonic seizure	CUI=C0234535	STY=Disease or Syndrome
 Clonic seizures	CUI=C0234535	STY=Disease or Syndrome
 Seizures, clonic	CUI=C0234535	STY=Disease or Syndrome
-Clonic seizure	CUI=C0234535	STY=Disease or Syndrome
-Clonic seizure (finding)	CUI=C0234535	STY=Disease or Syndrome
-Seizure	CUI=C0036572	STY=Disease or Syndrome
-Seizures	CUI=C0036572	STY=Dsease or Syndrome
+Seizure	CUI=C0036572	STY=Sign or Symptom	PREF=Seizures
+Seizures	CUI=C0036572	STY=Sign or Symptom	PREF=Seizures
 Complex partial	CUI=C0085417	STY=Disease or Syndrome
 Complex partial seizure	CUI=C0085417	STY=Disease or Syndrome
 Complex partial seizures	CUI=C0085417	STY=Disease or Syndrome
