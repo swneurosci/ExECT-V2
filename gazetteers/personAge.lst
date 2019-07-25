@@ -1,0 +1,26 @@
+twenties:lowerAge=20:upperAge=29:timeUnit=year
+thirties:lowerAge=30:upperAge=39:timeUnit=year
+forities:lowerAge=40:upperAge=49:timeUnit=year
+fifties:lowerAge=50:upperAge=59:timeUnit=year
+sixties:lowerAge=60:upperAge=69:timeUnit=year
+senventies:lowerAge=70:upperAge=79:timeUnit=year
+eighties:lowerAge=80:upperAge=89:timeUnit=year
+nineties:lowerAge=90:upperAge=99:timeUnit=year
+child:lowerAge=1:upperAge=16:timeUnit=year
+teenager:lowerAge=13:upperAge=19:timeUnit=year
+teenage:lowerAge=13:upperAge=19:timeUnit=year
+teens:lowerAge=13:upperAge=19:timeUnit=year
+baby:lowerAge=0:upperAge=1:timeUnit=year
+toddler:loweAge=2: upperAge=3:timeUnit=year
+primary school:lowerAge=5: upperAge=11:timeUnit=year
+secondary school:lowerAge=12:upperAge=16:timeUnit=year
+infant:lowerAge=0:upperAge=1:timeUnit=year
+adolescence:lowerAge=10:upperAge=19:timeUnit=year
+adolescent:lowerAge=10:upperAge=19:timeUnit=year
+neonate:lowerAge=0:upperAge=1:timeUnit=month
+neonatal period:lowerAge=0:upperAge=28:timeUnit=day
+young child:lowerAge=1:upperAge=6:timeUnit=year
+childhood:lowerAge=2:upperAge=12:timeUnit=year
+young:lowerAge=13:upperAge=19:timeUnit=year
+early years:lowerAge=1:upperAge=6:timeUnit=year
+middle age:lowerAge=45:upperAge=65:timeUnit=year

@@ -44,3 +44,4 @@ SeizureFrequency.lst::::SeizFreq
 SeizureOnset.lst::::SeizOnset
 onset.lst:historic:symptoms:onset:Lookup2
 age.lst:person:time:age:Lookup2
+personAge.lst:person:time::Person
