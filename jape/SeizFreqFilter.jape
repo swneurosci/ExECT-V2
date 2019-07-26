@@ -1,0 +1,14 @@
+Phase: SeizureFrequency
+Input: SeizureFrequency11 ContextPrescription Sentence
+Options: control=appelt
+
+Rule: SeizureFrequencyFilter1
+(
+    ({SeizureFrequency11 notContains ContextPrescription, SeizureFrequency11.SeizureType != "Seizure free"})
+):match
+-->
+:match.SeizureFrequency = { rule = Filter1, CUI = :match.SeizureFrequency11.CUI, TimePeriod = :match.SeizureFrequency11.TimePeriod,
+NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, QuantityTotal = :match.SeizureFrequency11.QuantityTotal,
+QuantityLowerRange = :match.SeizureFrequency11.QuantityLowerRange, QuantityUpperRange = :match.SeizureFrequency11.QuantityUpperRange}
+
+

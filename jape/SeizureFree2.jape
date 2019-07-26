@@ -1,11 +1,12 @@
 Phase: SeizureFree
-Input: Token
+Input: Token PastTense
 Options: control=appelt
 
 Rule: SeizureFree2
 (
-    ({Token.string==~"[Ss]eizure"})
-    ({Token.string==~"[Ff]ree"})
+    ({!PastTense})
+    (({Token.string==~"[Ss]eizure"})
+    ({Token.string==~"[Ff]ree"})):SF
 ):match
 -->
-:match.SeizureFree = { rule = SeizureFree2, CUI = "C1299590"}
+:SF.SeizureFrequency11 = { rule = SeizureFree2, CUI = "C1299590"}

@@ -27,3 +27,4 @@ Reduced:context=current
 increasing:context=future
 Increasing:context=future
 aiming:context=future
+started:context=current

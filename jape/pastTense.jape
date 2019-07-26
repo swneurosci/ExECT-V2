@@ -1,0 +1,19 @@
+Phase: PastTense
+Input: Token
+Options: control=appelt
+
+Rule: PastTenseVBD
+(
+    ({Token.category == "VBD"})
+    
+):match
+-->
+:match.PastTense = { rule = PastTenseVBD, kind = VerbPastTense}
+
+Rule: PastTenseVBN
+(
+    ({Token.category == "VBN"})
+    
+):match
+-->
+:match.PastTense = { rule = PastTenseVBN, kind = PastParticiple}

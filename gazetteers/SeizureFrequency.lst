@@ -1,6 +1,6 @@
-daily:NoOfTimePeriods=1:TimePeriod=Day:QuantityTotal=1
-weekly:NoOfTimePeriods=1:TimePeriod=Week:QuantityTotal=1
-monthly:NoOfTimePeriods=1:TimePeriod=Month:QuantityTotal=1
-per day:NoOfTimePeriods=1:TimePeriod=Day
-per week:NoOfTimePeriods=1:TimePeriod=Week
-per month:NoOfTimePeriods=1:TimePeriod=Month
+daily:NumberOfTimePeriods=1:TimePeriod=Day:QuantityTotal=1
+weekly:NumberOfTimePeriods=1:TimePeriod=Week:QuantityTotal=1
+monthly:NumberOfTimePeriods=1:TimePeriod=Month:QuantityTotal=1
+per day:NumberOfTimePeriods=1:TimePeriod=Day:=
+per week:NumberOfTimePeriods=1:TimePeriod=Week:=
+per month:NumberOfTimePeriods=1:TimePeriod=Month:=
