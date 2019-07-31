@@ -44,12 +44,28 @@ Rule: keepCurrentPrescription1
     ({Prescription0 notContains ContextPrescription}):match
 ):matches
 -->
-:match.Prescription = { rule = keepCurrentPrescription1,  drug = :match.Prescription0.drug,  CUI = :match.Prescription0.CUI, dose-val = :match.Prescription0.dose-val, dose-unit =:match.Prescription0.dose-unit, dose-frequency = :match.Prescription0.dose-frequency, time-unit = :match.Prescription0.time-unit, dose-interval = :match.Prescription0.dose-interval, Context = :match.Prescription0.Context}
+:match.Prescription = { rule = keepCurrentPrescription1,
+DrugName = :match.Prescription0.DrugName,  
+CUI = :match.Prescription0.CUI,
+DrugDose = :match.Prescription0.DrugDose, 
+DoseUnit =:match.Prescription0.DoseUnit, 
+Frequency = :match.Prescription0.Frequency, 
+time-unit = :match.Prescription0.time-unit, 
+dose-interval = :match.Prescription0.dose-interval, 
+Context = :match.Prescription0.Context}
 
 Rule: PrescriptionContainsContext
 (
     ({Prescription0 contains ContextPrescription}):match
 ):matches
 -->
-:match.Prescription4 = { rule = PrescriptionContainsContext,  drug = :match.Prescription0.drug,  CUI = :match.Prescription0.CUI, dose-val = :match.Prescription0.dose-val, dose-unit =:match.Prescription0.dose-unit, dose-frequency = :match.Prescription0.dose-frequency, time-unit = :match.Prescription0.time-unit, dose-interval = :match.Prescription0.dose-interval, Context = :match.Prescription0.Context}
+:match.Prescription4 = { rule = PrescriptionContainsContext,
+DrugName = :match.Prescription0.DrugName,  
+CUI = :match.Prescription0.CUI,
+DrugDose = :match.Prescription0.DrugDose, 
+DoseUnit =:match.Prescription0.DoseUnit, 
+Frequency = :match.Prescription0.Frequency, 
+time-unit = :match.Prescription0.time-unit, 
+dose-interval = :match.Prescription0.dose-interval, 
+Context = :match.Prescription0.Context}
 

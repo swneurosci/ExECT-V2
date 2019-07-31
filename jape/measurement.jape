@@ -8,4 +8,4 @@ Rule: measurement1
 	({Unit}):unit
 ):match
 -->
-:match.Measurement = { rule = measurement1, quantity = :match.Numeric.value, units =:unit@string}
+:match.Measurement = { rule = measurement1, quantity = :match.Numeric.value, units =:match.unit.Value}

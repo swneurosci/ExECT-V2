@@ -1,8 +1,9 @@
 Phase: SeizFrequency
-Input: NumberRange timePeriods Token
+Input: NumberRange timePeriods Token Unit
 Options: control=appelt
 
 Rule: SeizFrequency1
+Priority: 99
 (
     ({NumberRange})
     ({timePeriods})
@@ -12,9 +13,10 @@ Rule: SeizFrequency1
 NumberOfTimePeriods = :match.NumberRange.value}
 
 Rule: SeizFrequency2
+Priority: 100
 (
     ({NumberRange})
-    ({Token})
+    ({Token, !Unit})
     ({timePeriods})
 ):match
 -->

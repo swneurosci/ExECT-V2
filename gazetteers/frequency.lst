@@ -28,7 +28,7 @@ p.r.n.:time-unit=as required
 in the evening:frequency=1:time-unit=day:when=night
 b.d.:frequency=2:time-unit=day:interval=1
 per week:frequency=1:time-unit=week:interval=1
-per year:frequency=1:time-unit=year:interval=1:=
+per year:frequency=1:time-unit=year:interval=1
 in a week:frequency=1:time-unit=week:interval=1
 in a day:frequency=1:time-unit=day:interval=1
 years:frequency=1:time-unit=year
@@ -55,4 +55,6 @@ a single month:time-unit=month:interval=1
 PM:frequency=1:time-unit=day:interval=1:when=night
 AM:frequency=1:time-unit=day:when=morning
 Pm:frequency=1:time-unit=day:interval=1:when=night
-Am:frequency=1:time-unit=day:when=morning:=
+Am:frequency=1:time-unit=day:when=morning
+BD:frequency=2:time-unit=day:interval=1
+day:frequency=1:time-unit=day:interval=1:=

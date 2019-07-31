@@ -9,4 +9,5 @@ Rule: SeizureFree2
     ({Token.string==~"[Ff]ree"})):SF
 ):match
 -->
-:SF.SeizureFrequency11 = { rule = SeizureFree2, CUI = "C1299590"}
+:SF.SeizureFree = { rule = SeizureFree2, CUI = "C1299590"}
+

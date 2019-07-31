@@ -1,5 +1,5 @@
 Phase: SeizureFrequency
-Input: SeizFrequency1 SeizFrequency2 NumberRange timePeriods Lookup3 Split SeizFreq SeizOnset Prescription0 SeizureFree ContextPrescription Age
+Input: SeizFrequency1 SeizFrequency2 NumberRange timePeriods Lookup3 Split SeizFreq Prescription0 SeizureFree ContextPrescription Age PointInTime
 Options: control=appelt
 
 /*
@@ -85,7 +85,8 @@ Priority: 100
 -->
 :match.SeizureFrequency11 = { rule = "hSeizure1a", CUI = :match.Lookup3.CUI,
 NumberOfTimePeriods = :match.timePeriods.frequency, TimePeriod = :match.timePeriods.time-unit,
-QuantityTotal = :match.NumberRange.value}
+QuantityTotal = :match.NumberRange.value, QuantityLowerRange = :match.NumberRange.N1, QuantityUpperRange = :match.NumberRange.N2}
+
 
 /*
 * 3 'episodes' in the last month
@@ -153,7 +154,7 @@ NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods, TimePeriod = :m
 QuantityTotal = "1", QuantityLowerRange = :match.SeizFrequency1.QuantityLowerRange, QuantityUpperRange = :match.SeizFrequency1.QuantityUpperRange}
 
 Rule: hSeizureFreq1f
-Priority: 98
+Priority: 97
 (
     ({ContextPrescription})?
     ({Lookup3.majorType == "Lookup", Lookup3.minorType == "Disease", !Lookup3.PREF=="Seizure free", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
@@ -280,6 +281,35 @@ Priority: 95
     ({Lookup3.majorType == "epilepsy", Lookup3.minorType == "seizure", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
 ):match
 -->
-:match.SeizureFrequency11 = { rule = "hSeizure5a", CUI = :match.Lookup3.CUI, NumberOfTimePeriods = :n2.NumberRange.value, TimePeriod = :match.timePeriods.time-unit, QuantityTotal = :n1.NumberRange.value, QuantityLowerRange = :n1.NumberRange.N1, QuantityUpperRange = :match.NumberRange.N2}
+:match.SeizureFrequency11 = { rule = "hSeizure5a", CUI = :match.Lookup3.CUI, NumberOfTimePeriods = :n2.NumberRange.value, TimePeriod = :match.timePeriods.time-unit, QuantityTotal = :n1.NumberRange.value,
+QuantityLowerRange = :n1.NumberRange.N1, QuantityUpperRange = :match.NumberRange.N2}
 
 
+/*
+* Start of stuff using last clinic, this year, last year ect
+* Since last clinic she has had four secondary gen seizures
+*/
+
+Rule: hSeizureFreq6a
+Priority: 95
+(
+    ({PointInTime})
+    ({NumberRange})
+    ({Lookup3.majorType == "Lookup", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+):match
+-->
+:match.SeizureFrequency11 = { rule = hSeizureFreq6a, CUI = :match.Lookup3.CUI, QuantityTotal = :match.NumberRange.value, YearDate = :match.PointInTime.Since, SinceOrDuration = "Date"}
+
+/*
+* 8 seizures since last clinic appointment
+*/
+
+Rule: hSeizureFreq6a
+Priority: 95
+(
+    ({NumberRange})
+    ({Lookup3.majorType == "Lookup", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({PointInTime})
+):match
+-->
+:match.SeizureFrequency11 = { rule = hSeizureFreq6a, CUI = :match.Lookup3.CUI, QuantityTotal = :match.NumberRange.value, YearDate = :match.PointInTime.Since, SinceOrDuration = "Date"}
