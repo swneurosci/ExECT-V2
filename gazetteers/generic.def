@@ -42,6 +42,9 @@ units.lst:quantity:unit::Unit
 Ordinals1.lst:Numerals:Ordinals::Lookup2
 SeizureFrequency.lst::::SeizFreq
 SeizureOnset.lst::::SeizOnset
+age.lst::::Age
+PointInTime.lst:time:since::PointInTime
+driving.lst:driving:driving::driving
 onset.lst:historic:symptoms:onset:Lookup2
 age.lst:person:time:age:Lookup2
 personAge.lst:person:time::Person
