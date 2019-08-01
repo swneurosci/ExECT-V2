@@ -1,0 +1,18 @@
+Phase: Investigations
+Input: Investigation p startList Mentions InvestigationFindingMRI Sentence
+Options: control=appelt
+
+/* 
+  * get EEG, CT and MRI scans and their outcomes 
+*/
+
+
+Rule: getInvestigationsOutcomeMRI
+(
+  ({Investigation.Investigation == MRI}):invest
+   ({InvestigationFindingMRI})*
+    (({InvestigationFindingMRI}):outcome)+
+):match
+-->
+:match.Investigations = { rule = getInvestigationsOutcome1MRI, MRI_Performed = "Yes", MRI_Results = :outcome.InvestigationFindingMRI.Results, 
+CUI = :outcome.InvestigationFindingMRI.CUI, Negation = :outcome.InvestigationFindingMRI.Negation}

@@ -3,7 +3,7 @@ stop.lst:status:stop::Medmod
 current.lst:prescription:present::Temporal
 historic.lst:historic:::Lookup2
 family-members.lst:family:::OtherPerson
-frequency.lst:frequency:::Lookup2
+frequency.lst:frequency:::DoseFrequency
 routes-oral.lst:route:oral::Lookup2
 routes-im.lst:route:im::Lookup2
 routes-iv.lst:route:iv::Lookup2
@@ -35,8 +35,9 @@ MedFinding.lst:context:modifier::MedCause
 timeElapsed.lst:context:timeElapsed::timeElapsed
 timePeriods.lst:time:period::timePeriods
 daydate.lst:time:date::DayDate
-EEG_results.lst:EEG:results:English:InvestigationFinding
-ct_mri_results.lst:CT_MRI:results::InvestigationFinding
+EEG_results.lst:EEG:results:English:InvestigationFindingEEG
+mri_results.lst:MRI:results::InvestigationFindingMRI
+ct_results.lst:CT:results::InvestigationFindingCT
 InvestigationTypes.lst:examination:neuro::Investigation
 units.lst:quantity:unit::Unit
 Ordinals1.lst:Numerals:Ordinals::Lookup2

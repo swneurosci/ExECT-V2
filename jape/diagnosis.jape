@@ -1,6 +1,6 @@
 Phase: Diagnosis
 Input:  Lookup Sentence 
-Options: control=all
+Options: control=appelt
 
 /* 
   * Use certain Lookup.STY with diagnosis annotations 

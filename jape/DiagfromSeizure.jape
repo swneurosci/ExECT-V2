@@ -2,22 +2,47 @@ Phase: DiagnosisfromSeziure
 Input:  Person Lookup3 Sentence Lookup
 Options: control=appelt
 
-Rule: DiagnosisFromSeizure
+Rule: DiagnosisFromSeizure1a
+Priority: 100
 (
 
 	({Person}
-	{Lookup3.singleSeizure!=true, Lookup3.PREF != "Fit NOS", Lookup3.PREF != "Seizure free", Lookup3.generic != "yes"})
+	{Lookup3.singleSeizure!=true, Lookup3.PREF != "Fit NOS", Lookup3.PREF != "Seizure free", Lookup3.generic != "yes", Lookup3.Negation == Affirmed})
 
 ):match
 -->
-:match.Diagnosis = {rule = DiagFromSeizure, PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, Negation = :match.Lookup3.Negation, Certainty = :match.Lookup3.Certainty}
+:match.Diagnosis = {rule = DiagFromSeizure1a, PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, Negation = :match.Lookup3.Negation, Certainty = :match.Lookup3.Certainty}
 
-Rule: DiagnosisFromSeizure2
+Rule: DiagnosisFromSeizure1b
+Priority: 99
 (
 
 	({Person}
-	{Lookup.Experiencer == Patient, Lookup.majorType == umls})
+	{Lookup3.singleSeizure!=true, Lookup3.PREF != "Fit NOS", Lookup3.PREF != "Seizure free", Lookup3.generic != "yes", Lookup3.Negation == Affirmed})
 
 ):match
 -->
-:match.Diagnosis = {rule = DiagFromSeizure2, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
+:match.Diagnosis = {rule = DiagFromSeizure1b, PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, Negation = :match.Lookup3.Negation, Certainty = :match.Lookup3.Certainty}
+
+Rule: DiagnosisFromSeizure2a
+Priority: 100
+(
+
+	({Person}
+	{Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed})
+
+):match
+-->
+:match.Diagnosis = {rule = DiagFromSeizure2a, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
+
+
+
+Rule: DiagnosisFromSeizure2b
+Priority: 99
+(
+
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed, Lookup3.PREF != Diagnosis})
+
+):match
+-->
+:match.Diagnosis = {rule = DiagFromSeizure2b, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}

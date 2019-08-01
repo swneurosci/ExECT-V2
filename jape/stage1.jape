@@ -3,7 +3,6 @@ Phases:
 
 numbers
 times
-frequency
 measurement
 numberRange
 rangeOrNumber
@@ -15,3 +14,4 @@ Token2Verbs
 partialDate
 longestTimePeriod
 pastTense
+LookupAppelt

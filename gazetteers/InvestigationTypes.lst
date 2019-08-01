@@ -1,25 +1,28 @@
-EEG
-MRI
-CT
-abnormal EEG:Outcome=abnormal
-normal EEG:Outcome=normal
-EEG normal:Outcome=normal
-EEG abnormal:Outcome=abnormal
-abnormal MRI:Outcome=abnormal
-normal MRI:Outcome=normal
-MRI normal:Outcome=normal
-MRI abnormal:Outcome=abnormal
-abnormal CT:Outcome=abnormal
-normal CT:Outcome=normal
-CT normal:Outcome=normal
-CT abnormal:Outcome=abnormal
-EEGs~
-MRIs~
-CTs~
-EEG's~
-MRI's~
-CT's~
-MRI scan
-sleep EEG
-videotelemetry
-video-telemetry
+EEG:Investigation=EEG
+MRI:Investigation=MRI
+CT:Investigation=CT
+abnormal EEG:Outcome=abnormal:Investigation=EEG
+normal EEG:Outcome=normal:Investigation=EEG
+EEG normal:Outcome=normal:Investigation=EEG
+EEG abnormal:Outcome=abnormal:Investigation=EEG
+abnormal MRI:Outcome=abnormal:Investigation=MRI
+normal MRI:Outcome=normal:Investigation=MRI
+MRI normal:Outcome=normal:Investigation=MRI
+MRI abnormal:Outcome=abnormal:Investigation=MRI
+abnormal CT:Outcome=abnormal:Investigation=CT
+normal CT:Outcome=normal:Investigation=CT
+CT normal:Outcome=normal:Investigation=CT
+CT abnormal:Outcome=abnormal:Investigation=CT
+EEGs~:Investigation=EEG
+MRIs~:Investigation=MRI
+CTs~:Investigation=CT
+EEG's~:Investigation=EEG
+MRI's~:Investigation=MRI
+CT's~:Investigation=CT
+MRI scan:Investigation=MRI
+sleep EEG:Investigation=EEG:Type=SleepDeprived
+videotelemetry:Investigation=EEG:Type=VideoTelemetry
+video-telemetry:Investigation=EEG:Type=VideoTelemetry
+prolonged EEG:Investigation=EEG:Type=Prolonged
+24hr EEG:Investigation=EEG:Type=Prolonged
+Ambulatory EEG:Investigation=EEG:Type=Ambulatory

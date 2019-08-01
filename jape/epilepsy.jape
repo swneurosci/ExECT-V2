@@ -17,8 +17,12 @@ InvestConj
 medFinding
 furtherDiagnosis
 SingleSeizure
+SingleSeizureLookup
 DiagfromSeizure
 RemoveSeizure
 DiseaseCause
 Lookup2Annotation
+InvestigationsEEG
+InvestigationsCT
+InvestigationsMRI
 
