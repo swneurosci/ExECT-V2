@@ -418,9 +418,9 @@ juvenile myoclonic epilepsy	CUI=C0270853	PREF=JME	TUI=T047	STY=disease or syndro
 epilepsies, kojevnikov's	CUI=C0085543	PREF=epilepsies, kojevnikov's	TUI=T047	STY=disease or syndrome
 epilepsies, localization-related	CUI=C0014547	PREF=epilepsies, localization-related	TUI=T047	STY=disease or syndrome
 epilepsies, medication resistant	CUI=C1096063	PREF=epilepsies, medication resistant	TUI=T047	STY=disease or syndrome
-epilepsies, myoclonic astatic	CUI=C0393702	PREF=epilepsies, myoclonic astatic	TUI=T047	STY=disease or syndrome
+epilepsies, myoclonic astatic   CUI=C0393702	PREF=epilepsies, myoclonic astatic	TUI=T047	STY=disease or syndrome
 epilepsies, myoclonic juvenile	CUI=C0270853	PREF=epilepsies, myoclonic juvenile	TUI=T047	STY=disease or syndrome
-epilepsies, partial	CUI=C0014547	PREF=epilepsies, partial	TUI=T047	STY=disease or syndrome
+epilepsies, partial CUI=C0014547	PREF=epilepsies, partial	TUI=T047	STY=disease or syndrome
 photosensitive epilepsy CUI=C0393720	PREF=epilepsies, photosensitive	TUI=T047	STY=disease or syndrome
 epilepsies, photosensitive reflex	CUI=C0393720	PREF=epilepsies, photosensitive reflex	TUI=T047	STY=disease or syndrome
 epilepsies, post-traumatic	CUI=C0014557	PREF=epilepsies, post-traumatic	TUI=T037	STY=injury or poisoning
@@ -517,7 +517,7 @@ epilepsy, microcephaly, skeletal dysplasia syndrome (disorder)	CUI=C2931579	PREF
 epilepsy, minor	CUI=C0014553	PREF=epilepsy, minor	TUI=T047	STY=disease or syndrome
 epilepsy, myoclonic astatic	CUI=C0393702	PREF=epilepsy, myoclonic astatic	TUI=T047	STY=disease or syndrome
 epilepsy, myoclonic, juvenile	CUI=C0270853	PREF=epilepsy, myoclonic, juvenile	TUI=T047	STY=disease or syndrome
-epilepsy, nos	CUI=C0014544	PREF=epilepsy, nos	TUI=T047	STY=disease or syndrome
+epilepsy	CUI=C0014544	PREF=epilepsy, nos	TUI=T047	STY=disease or syndrome
 epilepsy, not intractable	CUI=C1827389	PREF=epilepsy, not intractable	TUI=T047	STY=disease or syndrome
 epilepsy, not refractory	CUI=C1827389	PREF=epilepsy, not refractory	TUI=T047	STY=disease or syndrome
 epilepsy, not refractory (disorder)	CUI=C1827389	PREF=epilepsy, not refractory (disorder)	TUI=T047	STY=disease or syndrome
@@ -969,7 +969,7 @@ palatal-tympanic myoclonus (disorder)	CUI=C0393624	PREF=palatal-tympanic myoclon
 panayiotopoulos syndrome	CUI=C0393676	PREF=panayiotopoulos syndrome	TUI=T047	STY=disease or syndrome
 paramyoclonus multiplex	CUI=C0030463	PREF=paramyoclonus multiplex	TUI=T047	STY=disease or syndrome
 paramyoclonus multiplex (disorder)	CUI=C0030463	PREF=paramyoclonus multiplex (disorder)	TUI=T047	STY=disease or syndrome
-parietal lobe seizure	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	STY=Disease or SyndromeFrontal Lobes	CUI=C0016733	PREF=Frontal Lobes	TUI=T023	STY=Body Part, Organ, or Organ Component
+parietal lobe seizure	CUI=C0016733	PREF=Frontal Lobes	TUI=T023	STY=Body Part, Organ, or Organ Component
 parietal lobe seizures  epilepsy	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
 part seiz evolv 2ry gen seiz	CUI=C0474327	PREF=part seiz evolv 2ry gen seiz	TUI=T046	STY=pathologic function
 partial epilep.-consc.ok nos	CUI=C0234974	PREF=partial epilep.-consc.ok nos	TUI=T047	STY=disease or syndrome
@@ -999,7 +999,7 @@ partial seizure disorders	CUI=C0014547	PREF=partial seizure disorders	TUI=T047	S
 partial seizure evolving to secondary generalised seizure	CUI=C0474327	PREF=partial seizure evolving to secondary generalised seizure	TUI=T046	STY=pathologic function
 partial seizure evolving to  generalized seizure	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure	TUI=T046	STY=pathologic function
 partial seizure evolving to secondary generalized seizure (disorder)	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure (disorder)	TUI=T046	STY=pathologic function
-bilateral convulsive seizures   CUI=  C0877017 PREF=Generalized tonic-clonic seizures with focal onset  TUI=T047  STY=disease or syndrome
+bilateral convulsive seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=disease or syndrome
 partial seizure evolving to secondary generalized seizure (finding)	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure (finding)	TUI=T046	STY=pathologic function
 partial seizure with illusions and hallucinations	CUI=C0278202	PREF=partial seizure with illusions and hallucinations	TUI=T047	STY=disease or syndrome
 partial seizure with illusions and hallucinations (disorder)	CUI=C0278202	PREF=partial seizure with illusions and hallucinations (disorder)	TUI=T047	STY=disease or syndrome
@@ -1295,7 +1295,7 @@ systems, central nervous	CUI=C3714787	PREF=systems, central nervous	TUI=T022	STY
 television epilepsy	CUI=C0393720	PREF=television epilepsy	TUI=T047	STY=disease or syndrome
 temporal lobe epilepsy	CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
 temporal lobe seizure   CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
-temporal lobe seizures   CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Disease or SyndromeEpilepsies, Occipital Lobe	CUI=C0393691	PREF=Epilepsies, Occipital Lobe	TUI=T047	STY=Disease or Syndrome
+temporal lobe seizures   CUI=C0014556	PREF=Epilepsies, Occipital Lobe	TUI=T047	STY=Disease or Syndrome	CUI=C0393691
 temporo-parieto-occipital junction seizure	CUI=C3164682	PREF=temporo-parieto-occipital junction seizure	TUI=T033	STY=finding
 tensor tympani myoclonus	CUI=C1998254	PREF=tensor tympani myoclonus	TUI=T047	STY=disease or syndrome
 tic	CUI=C0040188	PREF=tic	TUI=T048	STY=mental or behavioral dysfunction
