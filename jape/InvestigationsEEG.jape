@@ -1,0 +1,18 @@
+Phase: Investigations
+Input: Investigation p startList Mentions InvestigationFindingEEG Sentence
+Options: control=appelt
+
+/* 
+  * get EEG, CT and MRI scans and their outcomes 
+*/
+
+
+Rule: getInvestigationsOutcomeEEG
+(
+  ({Investigation.Investigation == EEG}):invest
+   ({InvestigationFindingEEG})*
+    (({InvestigationFindingEEG}):outcome)+
+):match
+-->
+:match.Investigations = { rule = getInvestigationsOutcome1EEG, EEG_Performed = "Yes", EEG_Results = :outcome.InvestigationFindingEEG.Results, 
+CUI = :outcome.InvestigationFindingEEG.CUI, Negation = :outcome.InvestigationFindingEEG.Negation}

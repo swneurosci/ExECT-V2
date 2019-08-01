@@ -7,6 +7,7 @@ Options: control=appelt
 */
 
 Rule: doseMatch0
+Priority: 100
 (   
     ({ContextPrescription})?
     (({Drug})
@@ -31,6 +32,7 @@ Context = :match.ContextPrescription.context}
 */
 
 Rule: doseMatch1
+Priority: 99
 (
     ({ContextPrescription})?
     (({Drug})

@@ -15,7 +15,7 @@ Rule: getInvestigationsOutcomes
     (({InvestigationFinding}):outcome)+
 ):match
 -->
-:match.Investigations = { rule = getInvestigationsOutcome1, INVESTIGATION = :invest.Investigation@string, Outcome = :outcome.InvestigationFinding@string, 
+:match.Investigations1 = { rule = getInvestigationsOutcome1, INVESTIGATION = :invest.Investigation@string, Outcome = :outcome.InvestigationFinding@string, 
 CUI = :outcome.InvestigationFinding.CUI, Negation = :outcome.InvestigationFinding.Negation}
 
 Rule: getInvestigationsOutcomes
@@ -25,7 +25,7 @@ Rule: getInvestigationsOutcomes
     (({Mentions.STY == "Disease or Syndrome"} | {Mentions.STY =="Sign or Symptom"} | {InvestigationFinding}):outcome)+
 ):match
 -->
-:match.Investigations = { rule = getInvestigationsOutcome2, INVESTIGATION = :invest.Investigation@string, Outcome = :outcome.Mentions@string, 
+:match.Investigations1 = { rule = getInvestigationsOutcome2, INVESTIGATION = :invest.Investigation@string, Outcome = :outcome.Mentions@string, 
 CUI = :outcome.Mentions.CUI, Negation = :outcome.Mentions.Negation,Outcome = :outcome.InvestigationFinding@string, 
 CUI = :outcome.InvestigationFinding.CUI, Negation = :outcome.InvestigationFinding.Negation}
 
@@ -36,8 +36,7 @@ Rule: getInvestigationsOutcomes
     {Investigation.Outcome==abnormal} | {Investigation.Outcome==normal}
 ):match
 -->
-:match.Investigations = { rule = getInvestigationsOutcome3, INVESTIGATION = :match.Investigation@string, Outcome = :match.Investigation.Outcome}
-
+:match.Investigations1 = { rule = getInvestigationsOutcome3, INVESTIGATION = :match.Investigation@string, Outcome = :match.Investigation.Outcome}
 
 
 
@@ -49,5 +48,5 @@ Rule: getInvestigationsOutcomes
   *  ({CompoundLookup}):outcome
 *):match
 *-->
-*:match.Investigations = { rule = getInvestigationsOutcome, INVESTIGATION = :type.Lookup.PREF, OUTCOME = :outcome.CompoundLookup.findPREF  ,CUI = :outcome.CompoundLookup.findCUI, Negation = :outcome.CompoundLookup.Negation}
+*:match.Investigations1 = { rule = getInvestigationsOutcome, INVESTIGATION = :type.Lookup.PREF, OUTCOME = :outcome.CompoundLookup.findPREF  ,CUI = :outcome.CompoundLookup.findCUI, Negation = :outcome.CompoundLookup.Negation}
 */

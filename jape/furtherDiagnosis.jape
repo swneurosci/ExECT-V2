@@ -36,7 +36,7 @@ Rule: withEpilepsy
     ):diag
 ):item
 -->
-:item.Diagnosis = {rule = "withEpilepsy", PREF = :diag.Lookup.PREF  ,CUI = :diag.Lookup.inst, Negation = :diag.Lookup.Negation,
+:item.DiagnosisOld = {rule = "withEpilepsy", PREF = :diag.Lookup.PREF  ,CUI = :diag.Lookup.inst, Negation = :diag.Lookup.Negation,
 Experiencer = :diag.Lookup.Experiencer, Temporality = :diag.Lookup.Temporality,Certainty = :diag.Lookup.Certainty}
 
 
@@ -49,7 +49,7 @@ Rule: Refractory
 	{Lookup.STY == "Disease or Syndrome"}
 ):item
 -->
-:item.Diagnosis = {rule = "Refractory", PREF = :item.Lookup.PREF  ,refractory = "C1096063", Negation = :item.Lookup.Negation,
+:item.DiagnosisRefractory = {rule = "Refractory", PREF = :item.Lookup.PREF  ,refractory = "C1096063", Negation = :item.Lookup.Negation,
 Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality,Certainty = :item.Lookup.Certainty}
 
 

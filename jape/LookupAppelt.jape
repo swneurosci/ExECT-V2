@@ -1,0 +1,10 @@
+Phase: LookupAppelt
+Input:  Lookup4
+Options: control=appelt
+
+Rule: LookupAppelt
+(
+    ({Lookup4})
+):match
+-->
+:match.Lookup = { rule = "LookupAppelt", majorType = :match.Lookup4.majorType, minorType = :match.Lookup4.minorType, value = :match.Lookup4.value, PREF = :match.Lookup4.PREF, CUI = :match.Lookup4.CUI, STY = :match.Lookup4.STY}
