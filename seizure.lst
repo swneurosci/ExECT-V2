@@ -122,7 +122,8 @@ focal seizure disorder	CUI=C0014547	PREF=focal seizure disorder	TUI=T047	STY=dis
 focal seizure disorders	CUI=C0014547	PREF=focal seizure disorders	TUI=T047	STY=disease or syndrome
 focal seizure with experiential sensory symptoms	CUI=C3164682	PREF=focal seizure with experiential sensory symptoms	TUI=T033	STY=finding
 focal seizure with experiential sensory symptoms (disorder)	CUI=C3164682	PREF=focal seizure with experiential sensory symptoms (disorder)	TUI=T033	STY=finding
-focal seizure, nos	CUI=C0751495	PREF=focal seizure, nos	TUI=T047	STY=disease or syndrome
+focal seizure	CUI=C0751495	PREF=focal seizure, nos	TUI=T047	STY=disease or syndrome
+partial seizure	CUI=C0751495	PREF=focal seizure, nos	TUI=T047	STY=disease or syndrome
 frontal lobe seizure	CUI=C0085541	PREF=Frontal Lobe Epilepsy	TUI=T047	STY=Disease or Syndrome
 frontal lobe seizures	CUI=C0085541	PREF=Frontal Lobe Epilepsy	TUI=T047	STY=Disease or Syndrome
 gelastic seizure	CUI=C0270820	PREF=gelastic seizure	TUI=T047	STY=disease or syndrome
@@ -198,6 +199,8 @@ Secondarily generalised seizures	CUI=C0270838	PREF=Secondarily generalized seizu
 Secondarily generalized seizures, NOS	CUI=C0270838	PREF=Secondarily generalized seizures, NOS	TUI=T047	STY=Disease or Syndrome
 focal seizure	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=disease or syndrome
 partial seizure (finding)	CUI=C0751495	PREF=partial seizure (finding)	TUI=T047	STY=disease or syndrome
+focal seizures	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=disease or syndrome
+partial seizures (finding)	CUI=C0751495	PREF=partial seizure (finding)	TUI=T047	STY=disease or syndrome
 partial seizure dis	CUI=C0014547	PREF=partial seizure dis	TUI=T047	STY=disease or syndrome
 partial seizure dis motor	CUI=C0016399	PREF=partial seizure dis motor	TUI=T047	STY=disease or syndrome
 focal seizures	CUI=C0751495	PREF=partial seizure 	TUI=T047	STY=disease or syndrome
@@ -392,9 +395,16 @@ Blank episode	CUI=C0563606	CAT=Slang	PREF=Vacant episode	TUI=T048	STY=Mental or 
 Episode	CUI=C0332189	CAT=Slang	PREF=Episode	TUI=T079	STY=Temporal Concept
 Convulsion	CUI=C4048158	CAT=Slang	PREF=Convulsion	TUI=T184	STY=Sign or Symptom
 Loss of consciousness	CUI=C0041657	CAT=Slang	PREF=Loss of consciousness	TUI=T033	STY=Finding
-Event	CUI=C0441471	CAT=Slang	PREF=Event	TUI=T201	STY=Event
+event	CUI=C0441471	CAT=Slang	PREF=Event	TUI=T201	STY=Event
+events CUI=C0441471	CAT=Slang	PREF=Event	TUI=T201	STY=Event
 Collapse	CUI=C0344329	CAT=Slang	CAT=Slang	PREF=Collapse	TUI=T033	STY=Finding
 Funny spell	CUI=C0424531	CAT=Slang	PREF=Funny spell	TUI=T033	STY=Finding
 Funny turn	CUI=C0424531	CAT=Slang	PREF=Funny turn	TUI=T033	STY=Finding
+Funny turns	CUI=C0424531	CAT=Slang	PREF=Funny turn	TUI=T033	STY=Finding
 Odd episode	CUI=C0424531	CAT=Slang	PREF=Funny spell	TUI=T033	STY=Finding
-Unusual episode	CUI=C0424531	CAT=Slang	PREF=Funny spell	TUI=T033	STY=Finding	
+odd episodes	CUI=C0424531	CAT=Slang	PREF=Funny spell	TUI=T033	STY=Finding
+Unusual episodes	CUI=C0424531	CAT=Slang	PREF=Funny spell	TUI=T033	STY=Finding	
+Unusual episode	CUI=C0424531	CAT=Slang	PREF=Funny spell	TUI=T033	STY=Finding
+Muscle twitch	CUI=C0231530	PREF=Muscle twitch	TUI=T033	STY=Finding	
+jerk	CUI=C0231530	PREF=Muscle twitch	TUI=T033	STY=Finding
+jerks	CUI=C0231530	PREF=Muscle twitch	TUI=T033	STY=Finding
