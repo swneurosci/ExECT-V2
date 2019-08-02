@@ -1013,7 +1013,7 @@ partial seizure with multiple symptoms (finding)	CUI=C0278203	PREF=partial seizu
 partial seizure, gustatory	CUI=C0278192	PREF=partial seizure, gustatory	TUI=T047	STY=Disease or Syndrome
 partial seizure, visual	CUI=C0278188	PREF=partial seizure, visual	TUI=T047	STY=Disease or Syndrome
 partial seizures, gustatory	CUI=C0278192	PREF=partial seizures, gustatory	TUI=T047	STY=Disease or Syndrome
-partial seizures, nos	CUI=C0751495	PREF=partial seizures, nos	TUI=T047	STY=Disease or Syndrome
+partial seizure	CUI=C0751495	PREF=partial seizures, nos	TUI=T047	STY=Disease or Syndrome
 partial seizures, simple	CUI=C0234974	PREF=partial seizures, simple	TUI=T047	STY=Disease or Syndrome
 partial seizures, simple, consciousness preserved	CUI=C0234974	PREF=partial seizures, simple, consciousness preserved	TUI=T047	STY=Disease or Syndrome
 partial seizures, visual	CUI=C0278188	PREF=partial seizures, visual	TUI=T047	STY=Disease or Syndrome
@@ -1386,3 +1386,7 @@ generalised tonic-clonic seizures	CUI=C0494475	PREF=Generalised tonic clonic sei
 generalized tonic clonic seizures	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 generalized tonic clonic seizure	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 generalized tonic-clonic seizures	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
+focal seizure	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=disease or syndrome
+partial seizure (finding)	CUI=C0751495	PREF=partial seizure (finding)	TUI=T047	STY=disease or syndrome
+focal seizures	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=disease or syndrome
+partial seizures	CUI=C0751495	PREF=partial seizure (finding)	TUI=T047	STY=disease or syndrome
