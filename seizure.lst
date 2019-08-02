@@ -107,7 +107,8 @@ epileptic seizures, myoclonic	CUI=C4317123	PREF=epileptic seizures, myoclonic	TU
 epileptic seizures, nos	CUI=C0014544	PREF=epileptic seizures, nos	TUI=T047	STY=disease or syndrome
 epileptic seizures, tonic	CUI=C0086241	PREF=epileptic seizures, tonic	TUI=T047	STY=disease or syndrome
 epileptic seizures, tonic-clonic	CUI=C0014549	PREF=epileptic seizures, tonic-clonic	TUI=T047	STY=disease or syndrome
-febrile convulsion seizure	CUI=C0009952	PREF=febrile convulsion seizure	TUI=T047	STY=disease or syndrome
+febrile convulsion	CUI=C0009952	PREF=febrile convulsions	TUI=T047	STY=disease or syndrome
+febrile convulsions	CUI=C0009952	PREF=febrile convulsions	TUI=T047	STY=disease or syndrome
 febrile convulsion seizures	CUI=C0009952	PREF=febrile convulsion seizures	TUI=T047	STY=disease or syndrome
 febrile seizure (from fever)	CUI=C0009952	PREF=febrile seizure (from fever)	TUI=T047	STY=disease or syndrome
 febrile seizure nos	CUI=C0009952	PREF=febrile seizure nos	TUI=T047	STY=disease or syndrome
