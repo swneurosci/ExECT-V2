@@ -1380,7 +1380,7 @@ x-linked epilepsy with learning disability and behaviour disorder syndrome	CUI=C
 x-linked intellectual disability with seizure and psoriasis syndrome	CUI=C2931381	PREF=x-linked intellectual disability with seizure and psoriasis syndrome	TUI=T047	STY=Disease or Syndrome
 x-linked intellectual disability with seizure and psoriasis syndrome (disorder)	CUI=C2931381	PREF=x-linked intellectual disability with seizure and psoriasis syndrome (disorder)	TUI=T047	STY=Disease or Syndrome
 x-linked mental retardation associated with psoriasis	CUI=C2931381	PREF=x-linked mental retardation associated with psoriasis	TUI=T047	STY=Disease or Syndrome
-Generalised tonic clonic seizures	CUI=C0494475	PREF=Generalised tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
+generalised tonic clonic seizures	CUI=C0494475	PREF=Generalised tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 generalised tonic clonic seizure	CUI=C0494475	PREF=Generalised tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 generalised tonic-clonic seizures	CUI=C0494475	PREF=Generalised tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 generalized tonic clonic seizures	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
