@@ -1386,7 +1386,7 @@ generalised tonic-clonic seizures	CUI=C0494475	PREF=Generalised tonic clonic sei
 generalized tonic clonic seizures	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 generalized tonic clonic seizure	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 generalized tonic-clonic seizures	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
-focal seizure	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=disease or syndrome
 partial seizure (finding)	CUI=C0751495	PREF=partial seizure (finding)	TUI=T047	STY=disease or syndrome
-focal seizures	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=disease or syndrome
 partial seizures	CUI=C0751495	PREF=partial seizure (finding)	TUI=T047	STY=disease or syndrome
+focal seizures	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=disease or syndrome
+focal seizure	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=disease or syndrome
