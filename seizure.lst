@@ -107,7 +107,8 @@ epileptic seizures, myoclonic	CUI=C4317123	PREF=epileptic seizures, myoclonic	TU
 epileptic seizures, nos	CUI=C0014544	PREF=epileptic seizures, nos	TUI=T047	STY=disease or syndrome
 epileptic seizures, tonic	CUI=C0086241	PREF=epileptic seizures, tonic	TUI=T047	STY=disease or syndrome
 epileptic seizures, tonic-clonic	CUI=C0014549	PREF=epileptic seizures, tonic-clonic	TUI=T047	STY=disease or syndrome
-febrile convulsion seizure	CUI=C0009952	PREF=febrile convulsion seizure	TUI=T047	STY=disease or syndrome
+febrile convulsion	CUI=C0009952	PREF=febrile convulsions	TUI=T047	STY=disease or syndrome
+febrile convulsions	CUI=C0009952	PREF=febrile convulsions	TUI=T047	STY=disease or syndrome
 febrile convulsion seizures	CUI=C0009952	PREF=febrile convulsion seizures	TUI=T047	STY=disease or syndrome
 febrile seizure (from fever)	CUI=C0009952	PREF=febrile seizure (from fever)	TUI=T047	STY=disease or syndrome
 febrile seizure nos	CUI=C0009952	PREF=febrile seizure nos	TUI=T047	STY=disease or syndrome
@@ -196,7 +197,11 @@ Secondary generalised tonic clonic seizures	CUI=C0877017	PREF=Secondary generali
 Secondary generalized tonic clonic seizures	CUI=C0877017	PREF=Secondary generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 Generalized tonic-clonic seizures, secondary	CUI=C0877017	PREF=Generalized tonic-clonic seizures, secondary	TUI=T047	STY=Disease or Syndrome
 Secondarily generalised seizures	CUI=C0270838	PREF=Secondarily generalized seizures	TUI=T047	STY=Disease or Syndrome
-Secondarily generalized seizures, NOS	CUI=C0270838	PREF=Secondarily generalized seizures, NOS	TUI=T047	STY=Disease or Syndrome
+secondary generalised seizure	CUI=C0270838	PREF=secondary generalised seizure	TUI=T047	STY=Disease or Syndrome
+secondary generalized seizure	CUI=C0270838	PREF=secondary generalized seizure	TUI=T047	STY=Disease or Syndrome
+secondary generalised seizures	CUI=C0270838	PREF=secondary generalised seizures	TUI=T047	STY=Disease or Syndrome
+secondary generalized seizures	CUI=C0270838	PREF=secondary generalized seizures	TUI=T047	STY=Disease or Syndrome
+secondarily generalized seizures, NOS	CUI=C0270838	PREF=Secondarily generalized seizures, NOS	TUI=T047	STY=Disease or Syndrome
 focal seizure	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=disease or syndrome
 partial seizure (finding)	CUI=C0751495	PREF=partial seizure (finding)	TUI=T047	STY=disease or syndrome
 focal seizures	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=disease or syndrome
@@ -417,3 +422,9 @@ generalized tonic-clonic seizures	CUI=C0494475	PREF=Generalized tonic clonic sei
 smaller ones	CUI=C0441471	CAT=Slang	PREF=Event	TUI=T201	STY=Event
 absence	CUI=C0563606	CAT=Slang	PREF=Vacant episode	TUI=T048	STY=Mental or Behavioral Dysfunction
 absences	CUI=C0563606	CAT=Slang	PREF=Vacant episode	TUI=T048	STY=Mental or Behavioral Dysfunction
+non-epileptic seizure	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+non-epileptic seizures	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+non-epileptic attack	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+non-epileptic attacks	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+psychogenic seizure	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction	
+psychogenic seizures	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
