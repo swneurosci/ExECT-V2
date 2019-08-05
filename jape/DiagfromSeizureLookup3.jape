@@ -1,0 +1,32 @@
+Phase: DiagnosisfromSeziureLookup3
+Input:  Person Lookup3 Sentence
+Options: control=appelt
+
+Rule: Lookup3DiagFromSeizure1
+Priority: 100
+(
+
+	(
+	{Person}
+	({Lookup3.singleSeizure!=true, Lookup3.PREF != "Fit NOS", Lookup3.PREF != "Seizure free", Lookup3.generic != "yes", Lookup3.Negation == Affirmed, Lookup3.majorType == Lookup}):match1
+	)
+
+):match
+-->
+:match1.DiagnosisLookup3 = {rule = Lookup3DiagFromSeizure1, PREF = :match1.Lookup3.PREF, CUI = :match1.Lookup3.CUI, Negation = :match1.Lookup3.Negation, Certainty = :match1.Lookup3.Certainty}
+
+
+Rule: Lookup3DiagFromSeizure2
+Priority: 99
+(
+
+	(
+	{Person}
+	({Lookup3.singleSeizure!=true, Lookup3.PREF != "Fit NOS", Lookup3.PREF != "Seizure free", Lookup3.generic != "yes", Lookup3.Negation == Affirmed, Lookup3.majorType == Lookup})?
+	({Lookup3.singleSeizure!=true, Lookup3.PREF != "Fit NOS", Lookup3.PREF != "Seizure free", Lookup3.generic != "yes", Lookup3.Negation == Affirmed, Lookup3.majorType == Lookup}):match1
+	)
+
+):match
+-->
+:match1.DiagnosisLookup3 = {rule = Lookup3DiagFromSeizure2, PREF = :match1.Lookup3.PREF, CUI = :match1.Lookup3.CUI, Negation = :match1.Lookup3.Negation, Certainty = :match1.Lookup3.Certainty}
+
