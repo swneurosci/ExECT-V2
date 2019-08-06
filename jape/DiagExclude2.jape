@@ -6,7 +6,7 @@ Options: control=all
 Rule: DiagExclude2
 (   
     ()
-    ({Lookup.STY == "Disease or Syndrome"}):umls
+    ({Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"}):umls
 ):match
 -->
 :umls { 

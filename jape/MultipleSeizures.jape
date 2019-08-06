@@ -1,15 +1,27 @@
-Phase: MultipleSeizures
-Input:  Lookup
-Options: control=all
-
-Rule:GetPluralSeizures
-( 
+Imports: {import static gate.Utils.*; }
+Phase: Plurals
+Input: Lookup
+Options: control=appelt
+Rule:GetPlurals
+(
 {Lookup}
-):tag --> 
-:tag{ 
-
-String lastChar = doc.getContent().getContent(tagAnnots.lastNode.getOffset()-1).toString();
-if("s".equals(lastChar)) {
-features = Factory.newFeatureMap(); features.put("plural", "yes"); outputAS.add(tagAS.firstNode(), tagAS.lastNode(), "Lookup", features); 
-} 
+):tag
+-->
+:tag{
+Long tokenStart = tagAnnots.firstNode().getOffset();
+Long tokenEnd = tagAnnots.lastNode().getOffset();
+// check the token is longer 3 characters i.e. don't call "is", "was" a plural
+if(tokenEnd - tokenStart > 3) {
+   try{
+       String lastChar = doc.getContent().getContent(tagAnnots.lastNode().getOffset() - 1,
+                    tagAnnots.lastNode().getOffset()).toString();
+       if("s".equals(lastChar)) {
+       getOnlyAnn(tagAnnots).getFeatures().put("Plural","Yes");
+       }
+   }
+   catch(InvalidOffsetException e) {
+    // not possible
+    throw new LuckyException("Invalid offset from annotation");
+   }
+}
 }

@@ -8,7 +8,7 @@ Priority: 100
 
 	(
 	{Person}
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed}):match
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed, Lookup.Plural == Yes, Lookup.STY !~ "[Ss]ign and [Ss]ymptom"}):match
 	)
 
 ):match1
@@ -22,8 +22,8 @@ Priority: 99
 
 	(
 	{Person}
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed})?
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed}):match
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed, Lookup.Plural == Yes})?
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed, Lookup.Plural == Yes}):match
 	)
 
 ):match1

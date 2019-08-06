@@ -426,5 +426,7 @@ non-epileptic seizure	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disea
 non-epileptic seizures	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
 non-epileptic attack	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
 non-epileptic attacks	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
-psychogenic seizure	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction	
+psychogenic seizure	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
 psychogenic seizures	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
+seizures	CUI=C0036572	PREF=seizures	TUI=T184	STY=Sign or Symptom
+seizure	CUI=C0036572	PREF=seizure	TUI=T184	STY=Sign or Symptom	=

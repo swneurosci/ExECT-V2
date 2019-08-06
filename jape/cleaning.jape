@@ -40,7 +40,7 @@ Rule: url1
 Rule: cleanHealthCareTerms
 
 (
-  ({Lookup.STY == "Sign or Symptom"} | {Lookup.STY == "Disease or Syndrome"} | {Lookup.STY == "Disease"})
+  ({Lookup.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup.STY ==~ "[Dd]isease"})
   ({Lookup2.majorType == organization} | {Location})
 ):umls
 -->
@@ -52,7 +52,7 @@ Rule: cleanHealthCareTerms
 
 (
    ({Lookup2.majorType == organization} | {Location})
-   ({Lookup.STY == "Sign or Symptom"} | {Lookup.STY == "Disease or Syndrome"} | {Lookup.STY == "Disease"})
+   ({Lookup.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup.STY ==~ "[Dd]isease"})
   
 ):umls
 -->
@@ -65,8 +65,8 @@ Rule: cleanHealthCareTerms
 Rule: cleanDiagnosis
 
 (
-   ({Lookup.STY == "Sign or Symptom"} | {Lookup.STY == "Disease or Syndrome"} | {Lookup.STY == "Disease"}):umls
-	({Lookup.STY == "Health Care Activity"} | {Lookup.STY =="Health Care Related Organization"})
+   ({Lookup.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup.STY ==~ "[Dd]isease"}):umls
+	({Lookup.STY ==~ "[Hh]ealth [Cc]are [Aa]ctivity"} | {Lookup.STY ==~ "[Hh]ealth [Cc]are [Rr]elated [Oo]rganization"})
 ):match
 -->
 :umls { 
@@ -83,7 +83,7 @@ Rule: cleanDiagnosis
 Rule: removeUselessLookups
 
 (
-    ({Lookup.STY == "Temporal Concept"}):umls
+    ({Lookup.STY ==~ "[Tt]emporal [Cc]oncept"}):umls
 ):match
 -->
 :umls { 

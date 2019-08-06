@@ -14,11 +14,11 @@ Rule: getDiagnosis
 (
     ({DiagnosisTriggers.majorType == "diagnosis"})
 	(
-	{Lookup.STY == "Disease or Syndrome"} |
-	{Lookup.STY == "Sign or Symptom", Lookup.PREF != "Fit NOS"} |
-	{Lookup.STY == "Mental or Behavioral Dysfunction"} |
-	{Lookup.STY == "Congenital Abnormality"} |
-	({Lookup.STY == "Diagnostic Procedure"})?
+	{Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"} |
+	{Lookup.STY ==~ "[Ss]ign or [Ss]ymptom", Lookup.PREF != "Fit NOS"} |
+	{Lookup.STY ==~ "[Mm]ental or [Bb]ehavioral [Dd]ysfunction"} |
+	{Lookup.STY ==~ "[Cc]ongenital [Aa]bnormality"} |
+	({Lookup.STY ==~ "[Dd]iagnostic [Pp]rocedure"})?
 	):item
 ):label
 -->

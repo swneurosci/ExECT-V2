@@ -1,5 +1,5 @@
 Phase: furtherDiagnosis
-Input:  MedFinding listSent Lookup Person DiseaseSeverity Sentence Split Lookup2
+Input:  Lookup listSent Lookup Person DiseaseSeverity Sentence Split Lookup2
 Options: control=all
 
 
@@ -24,15 +24,15 @@ Rule: withEpilepsy
 
 (
 	({Person.majorType == "person"} | {Person.ruleFinal == "PersonFinal"} | {Lookup2.minorType==probability})
-	({Lookup.STY == "Disease or Syndrome", Lookup.Negation == "Affirmed"} |
-	{Lookup.STY == "Sign or Symptom", Lookup.PREF != "Fit NOS"} | 
-	{Lookup.STY == "Mental or Behavioral Dysfunction"} |
-	{Lookup.STY == "Congenital Abnormality"}
+	({Lookup.STY ==~ "[Dd]isease or [Ss]yndrome", Lookup.Negation == "Affirmed"} |
+	{Lookup.STY ==~ "[Ss]ign or [Ss]ymptom", Lookup.PREF != "Fit NOS"} | 
+	{Lookup.STY ==~ "[Mm]ental or [Bb]ehavioral [Dd]ysfunction"} |
+	{Lookup.STY ==~ "[Cc]ongenital [Aa]bnormality"}
 	)*
-	({Lookup.STY == "Disease or Syndrome", Lookup.Negation == "Affirmed"} |
-	{Lookup.STY == "Sign or Symptom", Lookup.PREF != "Fit NOS"} |
-	{Lookup.STY == "Mental or Behavioral Dysfunction"} |
-	{Lookup.STY == "Congenital Abnormality"}
+	({Lookup.STY ==~ "[Dd]isease or [Ss]yndrome", Lookup.Negation == "Affirmed"} |
+	{Lookup.STY ==~ "[Ss]ign or [Ss]ymptom", Lookup.PREF != "Fit NOS"} | 
+	{Lookup.STY ==~ "[Mm]ental or [Bb]ehavioral [Dd]ysfunction"} |
+	{Lookup.STY ==~ "[Cc]ongenital [Aa]bnormality"}
     ):diag
 ):item
 -->
@@ -46,7 +46,7 @@ Rule: Refractory
 
 (
 	{DiseaseSeverity.majorType == "treatment" ,DiseaseSeverity.minorType == "CUI" }
-	{Lookup.STY == "Disease or Syndrome"}
+	{Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"}
 ):item
 -->
 :item.DiagnosisRefractory = {rule = "Refractory", PREF = :item.Lookup.PREF  ,refractory = "C1096063", Negation = :item.Lookup.Negation,

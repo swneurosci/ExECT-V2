@@ -10,7 +10,7 @@ Rule: DiseaseCause
 
 (
 	{MedCause}
-	{Lookup.STY == "Disease or Syndrome"}
+	{Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"}
 ):item
 -->
 :item.DiagnosisCause = {rule = "EpCause", PREF = :item.Lookup.PREF  ,cause = "C1406659", Negation = :item.Lookup.Negation,

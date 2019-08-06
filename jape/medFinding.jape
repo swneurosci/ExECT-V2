@@ -4,11 +4,11 @@ Options: control=appelt
 
 Rule: medFind	
 (	
-	{Lookup.STY == "Disease or Syndrome"} | 
-	{Lookup.STY == "Sign or Symptom"} |
-	{Lookup.STY == "Finding", Lookup.PREF !~ "Medication"} | 
-	{Lookup.STY == "Mental or Behavioral Dysfunction"} |
-	{Lookup.STY == "Diagnostic Procedure"}
+	{Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"} | 
+	{Lookup.STY ==~ "[Ss]ign or [Ss]ymptom"} |
+	{Lookup.STY ==~ "[Ff]inding", Lookup.PREF !~ "[Mm]edication"} | 
+	{Lookup.STY ==~ "[Mm]ental or [Bb]ehavioral [Dd]ysfunction"} |
+	{Lookup.STY ==~ "[Dd]iagnostic [Pp]rocedure"}
 ):item
 -->
 :item.MedFinding = { rule = "medFinding", PREF = :item.Lookup.PREF  ,CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
