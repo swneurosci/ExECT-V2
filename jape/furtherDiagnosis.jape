@@ -1,5 +1,5 @@
 Phase: furtherDiagnosis
-Input:  Lookup listSent Lookup Person DiseaseSeverity Sentence Split Lookup2
+Input:  MedFinding listSent Lookup Person DiseaseSeverity Sentence Split Lookup2
 Options: control=all
 
 
