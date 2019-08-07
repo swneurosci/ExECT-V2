@@ -1344,7 +1344,7 @@ traumatic epilepsy (disorder)	CUI=C0014557	PREF=traumatic epilepsy (disorder)	TU
 type i mucolipidoses	CUI=C0268226	PREF=type i mucolipidoses	TUI=T047	STY=Disease or Syndrome
 type i mucolipidosis	CUI=C0268226	PREF=type i mucolipidosis	TUI=T047	STY=Disease or Syndrome
 typical absence seizure	CUI=C0014553	PREF=typical absence seizure	TUI=T047	STY=Disease or Syndrome
-typical absence seizure (disorder)	CUI=C0014553	PREF=typical absence seizure (disorder)	TUI=T047	STY=Disease or Syndrome
+typical absence seizures 	CUI=C0014553	PREF=typical absence seizures 	TUI=T047	STY=Disease or Syndrome
 typical absence seizure, intractable	CUI=C3495025	PREF=typical absence seizure, intractable	TUI=T047	STY=Disease or Syndrome
 typical absence seizure, non-intractable	CUI=C3495024	PREF=typical absence seizure, non-intractable	TUI=T047	STY=Disease or Syndrome
 typical absence seizure, non-refractory	CUI=C3495024	PREF=typical absence seizure, non-refractory	TUI=T047	STY=Disease or Syndrome

@@ -47,6 +47,20 @@ umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationc");
 }
 
+/*
+ * Non-epileptic seizures are not just a negation of epilepsy
+ * but a concept with its own CUI so this removes a negation from the lookup3 where they live
+ * it removes all negations of non-concept phrases
+ */
 
+Rule: removenon-epilepticAsNegation
+(
+({Lookup3 contains Trigger@string=="non"}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationb");
+}
 
 
