@@ -12,5 +12,6 @@ Rule: medFind
 ):item
 -->
 :item.MedFinding = { rule = "medFinding", PREF = :item.Lookup.PREF  ,CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
-Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty, Plural = :item.Lookup.Plural,
+Seizure = :item.Lookup.Seizure}
 

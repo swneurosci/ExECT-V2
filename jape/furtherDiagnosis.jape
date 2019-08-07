@@ -1,29 +1,36 @@
 Phase: furtherDiagnosis
-Input:  MedFinding listSent Lookup Person DiseaseSeverity Sentence Split Lookup2
+Input:  MedFinding listSent Lookup Person DiagnosisTriggers
 Options: control=all
 
 
 
-Rule: furtherDiagnosis
+Rule: furtherDiagnosis1
  
 
 (
-    {MedFinding within listSent}
+	({MedFinding within listSent, MedFinding.STY!=~"[Ss]ign or [Ss]ymptom", MedFinding.Seizure == No})
 ):item
 -->
-:item.Diagnosis = {rule = "listDiagnosis", PREF = :item.MedFinding.PREF, CUI = :item.MedFinding.CUI, STY = :item.MedFinding.STY, Negation = :item.MedFinding.Negation,
+:item.Diagnosis = {rule = "listDiagnosis1", PREF = :item.MedFinding.PREF, CUI = :item.MedFinding.CUI, STY = :item.MedFinding.STY, Negation = :item.MedFinding.Negation,
 Experiencer = :item.MedFinding.Experiencer, Temporality = :item.MedFinding.Temporality, Certainty = :item.MedFinding.Certainty}
 
+Rule: furtherDiagnosis2
+ 
 
+(
+	({MedFinding within listSent, MedFinding.STY!=~"[Ss]ign or [Ss]ymptom", MedFinding.Plural == Yes})
+):item
+-->
+:item.Diagnosis = {rule = "listDiagnosis2", PREF = :item.MedFinding.PREF, CUI = :item.MedFinding.CUI, STY = :item.MedFinding.STY, Negation = :item.MedFinding.Negation,
+Experiencer = :item.MedFinding.Experiencer, Temporality = :item.MedFinding.Temporality, Certainty = :item.MedFinding.Certainty}
 
-
-
+ 
 
 
 Rule: withEpilepsy
 
 (
-	({Person.majorType == "person"} | {Person.ruleFinal == "PersonFinal"} | {Lookup2.minorType==probability})
+	({Person.majorType == "person"} | {Person.ruleFinal == "PersonFinal"})
 	({Lookup.STY ==~ "[Dd]isease or [Ss]yndrome", Lookup.Negation == "Affirmed"} |
 	{Lookup.STY ==~ "[Ss]ign or [Ss]ymptom", Lookup.PREF != "Fit NOS"} | 
 	{Lookup.STY ==~ "[Mm]ental or [Bb]ehavioral [Dd]ysfunction"} |
@@ -41,17 +48,17 @@ Experiencer = :diag.Lookup.Experiencer, Temporality = :diag.Lookup.Temporality,C
 
 
 
-Rule: Refractory
-	
-
-(
-	{DiseaseSeverity.majorType == "treatment" ,DiseaseSeverity.minorType == "CUI" }
-	{Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"}
-):item
--->
-:item.DiagnosisRefractory = {rule = "Refractory", PREF = :item.Lookup.PREF  ,refractory = "C1096063", Negation = :item.Lookup.Negation,
-Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality,Certainty = :item.Lookup.Certainty}
-
+/*Rule: Refractory
+*	
+*
+*(
+*	{DiseaseSeverity.majorType == "treatment" ,DiseaseSeverity.minorType == "CUI" }
+*	{Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"}
+*):item
+*-->
+*:item.DiagnosisRefractory = {rule = "Refractory", PREF = :item.Lookup.PREF  ,refractory = "C1096063", Negation = :item.Lookup.Negation,
+*Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality,Certainty = :item.Lookup.Certainty}
+*/
 
 
 

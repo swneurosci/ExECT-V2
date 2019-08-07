@@ -13,4 +13,6 @@ minorType = :match.Lookup4.minorType,
 value = :match.Lookup4.value, 
 PREF = :match.Lookup4.PREF,
 CUI = :match.Lookup4.CUI, 
-STY = :match.Lookup4.STY}
+STY = :match.Lookup4.STY,
+Seizure = :match.Lookup4.Seizure,
+CAT = :match.Lookup4.CAT}
