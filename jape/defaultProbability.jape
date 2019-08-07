@@ -31,8 +31,6 @@ Rule: default1a
 
 
 
-
-
 Rule: default2
 (
 	({Lookup.majorType == umls, Lookup.Certainty ==~"(?i)", Lookup.Negation=="Negated"}):umls
