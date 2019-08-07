@@ -53,14 +53,14 @@ umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationc");
  * it removes all negations of non-concept phrases
  */
 
-Rule: removenon-epilepticAsNegation
+Rule: removenon-asnegation
 (
 ({Lookup3 contains Trigger@string=="non"}):umls
 ):match
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
-umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationb");
+umlsAnnots.iterator().next().getFeatures().put("rule","removenon-asnegation");
 }
 
 

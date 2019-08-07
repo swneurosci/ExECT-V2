@@ -1,0 +1,19 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: NegationCleanUp
+Input: NegConj Lookup Sentence Trigger Lookup3
+Options: control=all
+
+
+
+Rule: PutNegation
+
+(
+{Trigger.majorType == negation}  
+({Lookup3 contains Trigger@string=="non"}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
+umlsAnnots.iterator().next().getFeatures().put("rule","PutNegation");
+}
