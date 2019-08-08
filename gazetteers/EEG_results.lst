@@ -7,12 +7,12 @@ sharp:CUI=C0151611:Results=Abnormal
 poly-spike:CUI=C0151611:Results=Abnormal
 photosensitive:CUI=C0151611:Results=Abnormal
 burst suppression:CUI=C0151611:Results=Abnormal
-normal EEG:CUI=C0560017:Results=Normal
+normal EEG:CUI=C0560017:Results=Normal:Complete=Yes
 unstable:CUI=C0151611:Results=Abnormal
-abnormal EEG:CUI=C0151611:Results=Abnormal
+abnormal EEG:CUI=C0151611:Results=Abnormal:Complete=Yes
 epileptogenic:CUI=C0151611:Results=Abnormal
 abnormal:CUI=C0151611:Results=Abnormal
-EEG normal:CUI=C0560017:Results=Normal
+EEG normal:CUI=C0560017:Results=Normal:Complete=Yes
 focus:CUI=C0151611:Results=Abnormal
 irregular:CUI=C0151611:Results=Abnormal
 failed to alter:CUI=C0560017:Results=Normal
@@ -33,3 +33,8 @@ photosensitivity:CUI=C0151611:Results=Abnormal
 spike and wave:CUI=C0151611:Results=Abnormal
 polyspike and wave:CUI=C0151611:Results=Abnormal
 temporal slowing:CUI=C0151611:Results=Abnormal
+not available:Results=Unknown:=
+normal EEGs:CUI=C0560017:Results=Normal:Complete=Yes
+Abnormal:CUI=C0151611:Results=Abnormal
+Normal:CUI=C0560017:Results=Normal
+not have the results:Results=Unknown:=

@@ -2,6 +2,10 @@ Phase: KeepPrescriptionInText
 Input: Prescription0 Temporal Sentence
 Options: control=all
 
+/*
+* This Rule can be deleted, no longer used
+*/
+
 Rule: keepPrescriptionInText
 (   
     {Temporal}

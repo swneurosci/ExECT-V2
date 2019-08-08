@@ -8,11 +8,32 @@ Options: control=appelt
 
 
 Rule: getInvestigationsOutcomeEEG
+Priority: 100
 (
   ({Investigation.Investigation == EEG}):invest
-   ({InvestigationFindingEEG})*
-    (({InvestigationFindingEEG}):outcome)+
+  ({InvestigationFindingEEG})*
+  (({InvestigationFindingEEG}):outcome)+
 ):match
 -->
 :match.Investigations = { rule = getInvestigationsOutcome1EEG, EEG_Performed = "Yes", EEG_Results = :outcome.InvestigationFindingEEG.Results, 
 CUI = :outcome.InvestigationFindingEEG.CUI, Negation = :outcome.InvestigationFindingEEG.Negation}
+
+
+Rule: getInvestigationsOutcomeEEG2
+Priority: 99
+(
+  ({InvestigationFindingEEG.Complete == Yes})
+):match
+-->
+:match.Investigations = { rule = getInvestigationsOutcomeEEG2, EEG_Performed = "Yes", EEG_Results = :match.InvestigationFindingEEG.Results, 
+CUI = :match.InvestigationFindingEEG.CUI, Negation = :match.InvestigationFindingEEG.Negation}
+
+Rule: getInvestigationsOutcomeEEG3
+Priority: 98
+(
+  ({InvestigationFindingEEG})
+  ({Investigation.Investigation == EEG})
+):match
+-->
+:match.Investigations = { rule = getInvestigationsOutcomeEEG3, EEG_Performed = "Yes", EEG_Results = :match.InvestigationFindingEEG.Results, 
+CUI = :match.InvestigationFindingEEG.CUI, Negation = :match.InvestigationFindingEEG.Negation}

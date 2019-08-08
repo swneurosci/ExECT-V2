@@ -9,9 +9,29 @@ Options: control=appelt
 Rule: getInvestigationsOutcomeCT
 (
   ({Investigation.Investigation == CT}):invest
-   ({InvestigationFindingCT})*
-    (({InvestigationFindingCT}):outcome)+
+  ({InvestigationFindingCT})*
+  (({InvestigationFindingCT}):outcome)+
 ):match
 -->
 :match.Investigations = { rule = getInvestigationsOutcome1CT, CT_Performed = "Yes", CT_Results = :outcome.InvestigationFindingCT.Results, 
 CUI = :outcome.InvestigationFindingCT.CUI, Negation = :outcome.InvestigationFindingCT.Negation}
+
+
+Rule: getInvestigationsOutcomeCT2
+(
+  ({InvestigationFindingCT.Complete == Yes})
+):match
+-->
+:match.Investigations = { rule = getInvestigationsOutcome2CT, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
+
+
+Rule: getInvestigationsOutcomeCT3
+Priority: 98
+(
+  ({InvestigationFindingCT})
+  ({Investigation.Investigation == CT})
+):match
+-->
+:match.Investigations = { rule = getInvestigationsOutcomeCT3, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}

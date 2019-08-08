@@ -29,10 +29,14 @@ abnormalities:CUI=C0436539:Results=Abnormal
 brain asymmetry:CUI=C0436539:Results=Abnormal
 signal abnormality:CUI=C0436539:Results=Abnormal
 signal intensity:CUI=C0436539:Results=Abnormal
-normal CT:CUI=C0744602:Results=Normal
+normal CT:CUI=C0744602:Results=Normal:Complete=Yes
 atrophyc changes:CUI=C0436539:Results=Abnormal
 abnormality:CUI=C0436539:Results=Abnormal
 glioma:CUI=C0436539:Results=Abnormal
 mass effect:CUI=C0436539:Results=Abnormal
 normal:CUI=C0744602:Results=Normal
 abnormal:CUI=C0436539:Results=Abnormal
+not available:Results=Unknown
+Abnormal:CUI=C0436539:Results=Abnormal
+Normal:CUI=C0744602:Results=Normal
+not have the results:Results=Unknown:=

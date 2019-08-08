@@ -1,6 +1,10 @@
 Phase: Prescription0and2
 Input: Prescription0 Prescription2 Sentence
 Options: control=all
+/*
+* Can be deletes as no longer used
+*/
+
 
 Rule: Prescription0and2
 (

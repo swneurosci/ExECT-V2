@@ -4,6 +4,7 @@ Options: control=all
 
 /* 
  * Added layer to add specificty to SLaM prescription annotations
+ * These rules can be deleted as no longer used
 */
 
 Rule: keepPrescription
