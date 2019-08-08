@@ -1,0 +1,18 @@
+Phase: DrugFilter2
+Input: ContextPrescription Sentence Prescription4
+Options: control=all
+
+Rule: PrescriptionFilter2
+(
+    ({Prescription4 notContains ContextPrescription}):pres2
+):match
+-->
+:pres2.Prescription = { rule = PrescriptionFilter2,
+DrugName = :pres2.Prescription4.DrugName,  
+CUI = :pres2.Prescription4.CUI,
+DrugDose = :pres2.Prescription4.DrugDose, 
+DoseUnit =:pres2.Prescription4.DoseUnit, 
+Frequency = :pres2.Prescription4.Frequency, 
+time-unit = :pres2.Prescription4.time-unit, 
+dose-interval = :pres2.Prescription4.dose-interval, 
+Context = :match.Prescription4.Context}

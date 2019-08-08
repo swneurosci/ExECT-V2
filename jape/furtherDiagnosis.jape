@@ -1,15 +1,18 @@
 Phase: furtherDiagnosis
-Input:  MedFinding listSent Lookup Person DiagnosisTriggers
+Input:  MedFinding listSent Person DiagnosisTriggers startList Lookup
 Options: control=all
 
 
-
+/*
+*This rule doesnt yet work, cant work out why, want it to pick up only stuff at top of letter, stuff in list after diagnosis:
+*/
 Rule: furtherDiagnosis1
  
 
 (
-	({MedFinding within listSent, MedFinding.STY!=~"[Ss]ign or [Ss]ymptom", MedFinding.Seizure == No})
-):item
+	({DiagnosisTriggers})
+	({listSent, MedFinding within listSent, MedFinding.STY!=~"[Ss]ign or [Ss]ymptom", MedFinding.Seizure == No}):item
+):item1
 -->
 :item.Diagnosis = {rule = "listDiagnosis1", PREF = :item.MedFinding.PREF, CUI = :item.MedFinding.CUI, STY = :item.MedFinding.STY, Negation = :item.MedFinding.Negation,
 Experiencer = :item.MedFinding.Experiencer, Temporality = :item.MedFinding.Temporality, Certainty = :item.MedFinding.Certainty}

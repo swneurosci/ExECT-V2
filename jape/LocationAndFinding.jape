@@ -2,6 +2,9 @@ Phase: LocationAndFinding
 Input: Lookup Sentence startList Split listPoint
 Options: control=all
 
+/*
+*This is never picked up, assuming that its a left-over from BioYodie
+*/
 
 Rule: LocationAndFinding
 
@@ -10,7 +13,7 @@ Rule: LocationAndFinding
 	({Lookup.STY == "Finding"} | {Lookup.STY == "Disease or Syndrome"} | {Lookup.STY == "Congenital Abnormaility"}  | {Lookup.STY == "Sign or Symptom"}):find
 ):match
 -->
-:match.CompoundLookup = { rule = locationAndFinding, locPREF = :loc.Lookup.PREF, locCUI = :loc.Lookup.inst	, findPREF = :find.Lookup.PREF, findCUI = :find.Lookup.inst, Negation = :loc.Lookup.Negation}
+:match.CompoundLookup = { rule = locationAndFinding, locPREF = :loc.Lookup.PREF, locCUI = :loc.Lookup.inst, findPREF = :find.Lookup.PREF, findCUI = :find.Lookup.inst, Negation = :loc.Lookup.Negation}
 
 
 

@@ -44,7 +44,7 @@ Rule: keepCurrentPrescription1
     ({Prescription0 notContains ContextPrescription}):match
 ):matches
 -->
-:match.Prescription = { rule = keepCurrentPrescription1,
+:match.PrescriptionOld = { rule = keepCurrentPrescription1,
 DrugName = :match.Prescription0.DrugName,  
 CUI = :match.Prescription0.CUI,
 DrugDose = :match.Prescription0.DrugDose, 
@@ -59,7 +59,7 @@ Rule: PrescriptionContainsContext
     ({Prescription0 contains ContextPrescription}):match
 ):matches
 -->
-:match.Prescription4 = { rule = PrescriptionContainsContext,
+:match.Prescription5 = { rule = PrescriptionContainsContext,
 DrugName = :match.Prescription0.DrugName,  
 CUI = :match.Prescription0.CUI,
 DrugDose = :match.Prescription0.DrugDose, 
