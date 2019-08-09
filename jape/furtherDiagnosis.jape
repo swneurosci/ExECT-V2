@@ -11,7 +11,7 @@ Rule: furtherDiagnosis1
 
 (
 	({DiagnosisTriggers})
-	({listSent, MedFinding within listSent, MedFinding.STY!=~"[Ss]ign or [Ss]ymptom", MedFinding.Seizure == No}):item
+	({MedFinding within listSent, MedFinding.STY!=~"[Ss]ign or [Ss]ymptom", MedFinding.Seizure == No}):item
 ):item1
 -->
 :item.Diagnosis = {rule = "listDiagnosis1", PREF = :item.MedFinding.PREF, CUI = :item.MedFinding.CUI, STY = :item.MedFinding.STY, Negation = :item.MedFinding.Negation,
@@ -21,6 +21,7 @@ Rule: furtherDiagnosis2
  
 
 (
+	({Person})
 	({MedFinding within listSent, MedFinding.STY!=~"[Ss]ign or [Ss]ymptom", MedFinding.Plural == Yes})
 ):item
 -->

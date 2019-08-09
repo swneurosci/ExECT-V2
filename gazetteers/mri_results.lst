@@ -1,7 +1,7 @@
 malformation:CUI=C1319851:Results=Abnormal
 AVM:CUI=C1319851:Results=Abnormal
 malformations:CUI=C1319851:Results=Abnormal
-lesion:CUI=C1319851:Results=Abnormal
+lesion:CUI=C1319851:Results=Abnormal:=
 lesions:CUI=C1319851:Results=Abnormal
 degeneration:CUI=C1319851:Results=Abnormal
 degenerative brain disorder:CUI=C1319851:Results=Abnormal
@@ -41,4 +41,5 @@ abnormal:CUI=C1319851:Results=Abnormal
 not available:Results=Unknown
 Abnormal:CUI=C1319851:Results=Abnormal
 Normal:CUI=C0436481:Results=Normal
-not have the results:Results=Unknown:=
+not have the results:Results=Unknown
+non-epileptic:CUI=C0436481:Results=Normal

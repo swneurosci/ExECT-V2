@@ -1,13 +1,14 @@
 Phase: Investigations
-Input: Investigation p startList Mentions InvestigationFindingMRI Sentence
+Input: Investigation p startList Mentions InvestigationFindingMRI Sentence Diagnosis ContextInvestigations
 Options: control=appelt
 
 /* 
-  * get EEG, CT and MRI scans and their outcomes 
+  * get MRI scans and their outcomes 
 */
 
 
 Rule: getInvestigationsOutcomeMRI
+Priority: 100
 (
   ({Investigation.Investigation == MRI}):invest
   ({InvestigationFindingMRI})*
@@ -19,6 +20,7 @@ CUI = :outcome.InvestigationFindingMRI.CUI, Negation = :outcome.InvestigationFin
 
 
 Rule: getInvestigationsOutcomeMRI2
+Priority: 99
 (
   ({InvestigationFindingMRI.Complete == Yes})
 ):match
@@ -35,3 +37,14 @@ Priority: 98
 -->
 :match.Investigations = { rule = getInvestigationsOutcomeMRI3, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
 CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+
+
+Rule: InvestigationDiag
+Priority: 97
+(
+  ({Investigation.Investigation == MRI}):invest
+  ({Diagnosis})
+):match
+-->
+:match.Investigations = { rule = InvestigationDiag, MRI_Performed = "Yes", MRI_Results = "Abnormal", 
+CUI = "C1319851"}

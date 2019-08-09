@@ -14,7 +14,7 @@ epileptogenic:CUI=C0151611:Results=Abnormal
 abnormal:CUI=C0151611:Results=Abnormal
 EEG normal:CUI=C0560017:Results=Normal:Complete=Yes
 focus:CUI=C0151611:Results=Abnormal
-irregular:CUI=C0151611:Results=Abnormal
+irregular:CUI=C0151611:Results=Abnormal:=
 failed to alter:CUI=C0560017:Results=Normal
 unremarkable:CUI=C0560017:Results=Normal
 epileptic:CUI=C0151611:Results=Abnormal
@@ -33,8 +33,9 @@ photosensitivity:CUI=C0151611:Results=Abnormal
 spike and wave:CUI=C0151611:Results=Abnormal
 polyspike and wave:CUI=C0151611:Results=Abnormal
 temporal slowing:CUI=C0151611:Results=Abnormal
-not available:Results=Unknown:=
+not available:Results=Unknown
 normal EEGs:CUI=C0560017:Results=Normal:Complete=Yes
 Abnormal:CUI=C0151611:Results=Abnormal
 Normal:CUI=C0560017:Results=Normal
-not have the results:Results=Unknown:=
+not have the results:Results=Unknown
+non-epileptic:CUI=C0560017:Results=Normal
