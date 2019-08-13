@@ -694,7 +694,7 @@ generalized status epilepticus	CUI=C0038220	PREF=generalized status epilepticus	
 glut1 deficiency syndrome	CUI=C1847501	PREF=glut1 deficiency syndrome	TUI=T047	STY=Disease or Syndrome
 glycoprotein neuraminidase deficiencies	CUI=C0268226	PREF=glycoprotein neuraminidase deficiencies	TUI=T047	STY=Disease or Syndrome
 glycoprotein neuraminidase deficiency	CUI=C0268226	PREF=glycoprotein neuraminidase deficiency	TUI=T047	STY=Disease or Syndrome
-grand mal	CUI=C0014549	PREF=grand mal	TUI=T047	=	STY=Disease or Syndrome
+grand mal	CUI=C0014549	PREF=grand mal	TUI=T047	STY=Disease or Syndrome
 grand mal convulsion	CUI=C0014549	PREF=grand mal convulsion	TUI=T047	STY=Disease or Syndrome
 grand mal convulsions	CUI=C0014549	PREF=grand mal convulsions	TUI=T047	STY=Disease or Syndrome
 grand mal seizure dis	CUI=C0014549	PREF=grand mal seizure dis	TUI=T047	STY=Disease or Syndrome
@@ -1227,7 +1227,7 @@ simple febrile seizure	CUI=C0149886	PREF=simple febrile seizure	TUI=T047	STY=Dis
 simple febrile seizure (finding)	CUI=C0149886	PREF=simple febrile seizure (finding)	TUI=T047	STY=Disease or Syndrome
 simple part seiz consc not imp	CUI=C0234974	PREF=simple part seiz consc not imp	TUI=T047	STY=Disease or Syndrome
 simple part seiz with mot dysf	CUI=C0016399	PREF=simple part seiz with mot dysf	TUI=T047	STY=Disease or Syndrome
-simple partial seizure	CUI=C0234974	PREF=simple partial seizure	TUI=T047	STY=Disease or Syndrome
+simple partial seizure	CUI=C0234974	PREF=simple partial seizure	TUI=T047	STY=Disease or Syndrome	=
 simple partial seizure (disorder)	CUI=C0234974	PREF=simple partial seizure (disorder)	TUI=T047	STY=Disease or Syndrome
 simple partial seizure with motor dysfunction	CUI=C0016399	PREF=simple partial seizure with motor dysfunction	TUI=T047	STY=Disease or Syndrome
 simple partial seizure with motor dysfunction (disorder)	CUI=C0016399	PREF=simple partial seizure with motor dysfunction (disorder)	TUI=T047	STY=Disease or Syndrome
@@ -1397,3 +1397,4 @@ secondary generalised seizures	CUI=C0270838	PREF=secondary generalised seizures	
 secondary generalized seizures	CUI=C0270838	PREF=secondary generalized seizures	TUI=T047	STY=Disease or Syndrome
 seizures	CUI=C0036572	PREF=seizures	TUI=T184	STY=Sign or Symptom
 seizure	CUI=C0036572	PREF=seizure	TUI=T184	STY=Sign or Symptom
+simple partial seizures	CUI=C0234974	PREF=simple partial seizures	TUI=T047	STY=Disease or Syndrome	=
