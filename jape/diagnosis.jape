@@ -1,6 +1,6 @@
 Phase: Diagnosis
-Input:  Lookup Sentence DiagnosisTriggers
-Options: control=appelt
+Input:  Lookup DiagnosisTriggers NewParagraph
+Options: control=all
 
 /* 
   * Use certain Lookup.STY with diagnosis annotations 
@@ -14,18 +14,43 @@ Rule: getDiagnosis
 (
     ({DiagnosisTriggers.majorType == "diagnosis"})
 	(
-	{Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"} |
-	{Lookup.STY ==~ "[Ss]ign or [Ss]ymptom", Lookup.PREF != "Fit NOS"} |
-	{Lookup.STY ==~ "[Mm]ental or [Bb]ehavioral [Dd]ysfunction"} |
-	{Lookup.STY ==~ "[Cc]ongenital [Aa]bnormality"} |
-	({Lookup.STY ==~ "[Dd]iagnostic [Pp]rocedure"})?
+	{Lookup.STY ==~ "[Dd]isease or [Ss]yndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed}
 	):item
 ):label
 -->
-:item.Diagnosis = { rule = "getDiagnosis", PREF = :item.Lookup.PREF, CUI = :item.Lookup.inst, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+:item.Diagnosis = { rule = "getDiagnosis", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
+
+Rule: getDiagnosis
+(
+    ({DiagnosisTriggers.majorType == "diagnosis"})
+	(
+	{Lookup.STY ==~ "[Dd]isease or [Ss]yndrome", Lookup.Seizure == No, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed}
+	):item
+):label
+-->
+:item.Diagnosis = { rule = "getDiagnosis", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
 Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
 
 
+Rule: getDiagnosis2
+(
+	({DiagnosisTriggers})
+	({Lookup.STY == "Disease or Syndrome"})
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Seizure == No, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+):match1
+-->
+:item.Diagnosis = { rule = "getDiagnosis2", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
 
 
+Rule: getDiagnosis2
+(
+	({DiagnosisTriggers})
+	({Lookup.STY == "Disease or Syndrome"})
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+):match1
+-->
+:item.Diagnosis = { rule = "getDiagnosis2", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
 

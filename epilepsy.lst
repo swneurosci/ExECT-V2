@@ -1,6 +1,6 @@
 (epilepsy) or (epileptic attack)	CUI=C0014544	PREF=(epilepsy) or (epileptic attack)	TUI=T047	STY=Disease or Syndrome
 (epilepsy) or (epileptic attack) (disorder)	CUI=C0014544	PREF=(epilepsy) or (epileptic attack) (disorder)	TUI=T047	STY=Disease or Syndrome
-BCEOP - benign childhood epilepsy with occipital paroxysms	CUI=C0393675	Seizure=No	PREF=bceop - benign childhood epilepsy with occipital paroxysms	TUI=T047	STY=Disease or Syndrome	
+BCEOP - benign childhood epilepsy with occipital paroxysms	CUI=C0393675	Seizure=No	PREF=bceop - benign childhood epilepsy with occipital paroxysms	TUI=T047	STY=Disease or Syndrome
 BCEOP bnign chdhd ep & occ par	CUI=C0393675	PREF=bceop bnign chdhd ep & occ par	TUI=T047	Seizure=No	STY=Disease or Syndrome
 Batten dis	CUI=C0751383	PREF=batten dis	TUI=T047	Seizure=No	STY=Disease or Syndrome
 Batten disease, juvenile	CUI=C0751383	PREF=batten disease, juvenile	TUI=T047	Seizure=No	STY=Disease or Syndrome
@@ -402,7 +402,7 @@ epilep wth myoclon/astat seiz	CUI=C0393702	PREF=epilep wth myoclon/astat seiz	TU
 epilepsia minoris continua	CUI=C0270823	PREF=epilepsia minoris continua	TUI=T047	Seizure=No	STY=Disease or Syndrome
 epilepsia partialis continua (disorder)	CUI=C0085543	PREF=epilepsia partialis continua (disorder)	Seizure=No	TUI=T047	STY=Disease or Syndrome
 epilepsia partialis continua [kozhevnikof]	CUI=C0085543	PREF=epilepsia partialis continua [kozhevnikof]	TUI=T047	Seizure=No	STY=Disease or Syndrome
-epilepsies	CUI=C0014544	PREF=epilepsies	TUI=T047	Seizure=No	STY=Disease or Syndrome	
+epilepsies	CUI=C0014544	PREF=epilepsies	TUI=T047	Seizure=No	STY=Disease or Syndrome
 epilepsies, adolescent myoclonic	CUI=C0270853	PREF=epilepsies, adolescent myoclonic	Seizure=No	TUI=T047	STY=Disease or Syndrome
 epilepsies, akinetic	CUI=C0347869	PREF=epilepsies, akinetic	TUI=T047	Seizure=No	STY=Disease or Syndrome
 epilepsies, atonic	CUI=C0086236	PREF=epilepsies, atonic	TUI=T047	Seizure=No	STY=Disease or Syndrome
@@ -694,7 +694,7 @@ generalized status epilepticus	CUI=C0038220	PREF=generalized status epilepticus	
 glut1 deficiency syndrome	CUI=C1847501	PREF=glut1 deficiency syndrome	TUI=T047	STY=Disease or Syndrome
 glycoprotein neuraminidase deficiencies	CUI=C0268226	PREF=glycoprotein neuraminidase deficiencies	TUI=T047	STY=Disease or Syndrome
 glycoprotein neuraminidase deficiency	CUI=C0268226	PREF=glycoprotein neuraminidase deficiency	TUI=T047	STY=Disease or Syndrome
-grand mal	CUI=C0014549	PREF=grand mal	TUI=T047	Seizure=No	STY=Disease or Syndrome
+grand mal	CUI=C0014549	PREF=grand mal	TUI=T047	=	STY=Disease or Syndrome
 grand mal convulsion	CUI=C0014549	PREF=grand mal convulsion	TUI=T047	STY=Disease or Syndrome
 grand mal convulsions	CUI=C0014549	PREF=grand mal convulsions	TUI=T047	STY=Disease or Syndrome
 grand mal seizure dis	CUI=C0014549	PREF=grand mal seizure dis	TUI=T047	STY=Disease or Syndrome
@@ -994,7 +994,7 @@ partial epilepsy-conscious ok	CUI=C0234974	PREF=partial epilepsy-conscious ok	TU
 partial motor attacks	CUI=C0016399	PREF=partial motor attacks	TUI=T047	STY=Disease or Syndrome
 focal seizure	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=Disease or Syndrome
 partial seizure (finding)	CUI=C0751495	PREF=partial seizure (finding)	TUI=T047	STY=Disease or Syndrome
-focal epilepsy	CUI=C0014547	PREF=focal epilepsy	TUI=T047	Seizure=No	Seizure=No	STY=Disease or Syndrome
+focal epilepsy	CUI=C0014547	PREF=focal epilepsy	TUI=T047	Seizure=No	STY=Disease or Syndrome
 partial seizure dis motor	CUI=C0016399	PREF=partial seizure dis motor	TUI=T047	STY=Disease or Syndrome
 focal seizures	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=Disease or Syndrome
 partial seizure disorder, motor	CUI=C0016399	PREF=partial seizure disorder, motor	TUI=T047	STY=Disease or Syndrome
@@ -1214,7 +1214,7 @@ severe myoclonic epilepsy in infancy, intractable	CUI=C3494992	PREF=severe myocl
 severe myoclonic epilepsy in infancy, non-intractable	CUI=C3494991	PREF=severe myoclonic epilepsy in infancy, non-intractable	TUI=T047	Seizure=No	STY=Disease or Syndrome
 severe myoclonic epilepsy in infancy, non-refractory	CUI=C3494991	Seizure=No	PREF=severe myoclonic epilepsy in infancy, non-refractory	TUI=T047	STY=Disease or Syndrome
 severe myoclonic epilepsy in infancy, non-refractory (disorder)	CUI=C3494991	Seizure=No	PREF=severe myoclonic epilepsy in infancy, non-refractory (disorder)	TUI=T047	STY=Disease or Syndrome
-severe myoclonic epilepsy in infancy, refractory	CUI=C3494992	Seizure=No	Seizure=No	PREF=severe myoclonic epilepsy in infancy, refractory	TUI=T047	STY=Disease or Syndrome
+severe myoclonic epilepsy in infancy, refractory	CUI=C3494992	Seizure=No	PREF=severe myoclonic epilepsy in infancy, refractory	TUI=T047	STY=Disease or Syndrome
 severe myoclonic epilepsy in infancy, refractory (disorder)	CUI=C3494992	Seizure=No	PREF=severe myoclonic epilepsy in infancy, refractory (disorder)	TUI=T047	STY=Disease or Syndrome
 sialidase deficiency	CUI=C0268226	PREF=sialidase deficiency	TUI=T047	STY=Disease or Syndrome
 sialidosis	CUI=C0268226	PREF=sialidosis	TUI=T047	STY=Disease or Syndrome
@@ -1344,7 +1344,7 @@ traumatic epilepsy (disorder)	CUI=C0014557	Seizure=No	PREF=traumatic epilepsy (d
 type i mucolipidoses	CUI=C0268226	PREF=type i mucolipidoses	TUI=T047	STY=Disease or Syndrome
 type i mucolipidosis	CUI=C0268226	PREF=type i mucolipidosis	TUI=T047	STY=Disease or Syndrome
 typical absence seizure	CUI=C0014553	PREF=typical absence seizure	TUI=T047	STY=Disease or Syndrome
-typical absence seizures 	CUI=C0014553	PREF=typical absence seizures 	TUI=T047	STY=Disease or Syndrome
+typical absence seizures 	CUI=C0014553	PREF=typical absence seizures	TUI=T047	STY=Disease or Syndrome
 typical absence seizure, intractable	CUI=C3495025	PREF=typical absence seizure, intractable	TUI=T047	STY=Disease or Syndrome
 typical absence seizure, non-intractable	CUI=C3495024	PREF=typical absence seizure, non-intractable	TUI=T047	STY=Disease or Syndrome
 typical absence seizure, non-refractory	CUI=C3495024	PREF=typical absence seizure, non-refractory	TUI=T047	STY=Disease or Syndrome

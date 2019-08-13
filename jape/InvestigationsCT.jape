@@ -1,5 +1,5 @@
 Phase: Investigations
-Input: Investigation p startList Mentions InvestigationFindingCT Sentence Diagnosis ContextInvestigations
+Input: Investigation p startList Mentions InvestigationFindingCT Split Diagnosis ContextInvestigations
 Options: control=appelt
 
 /* 
@@ -8,6 +8,20 @@ Options: control=appelt
 
 Rule: getInvestigationsOutcomeCT
 Priority: 100
+(
+  ({ContextInvestigations})
+  ({Investigation.Investigation == CT}):invest
+  ({InvestigationFindingCT})*
+  (({InvestigationFindingCT}):outcome)+
+):match
+-->
+:match.InvestigationIgnore = { rule = getInvestigationsOutcome1CT, CT_Performed = "Yes", CT_Results = :outcome.InvestigationFindingCT.Results, 
+CUI = :outcome.InvestigationFindingCT.CUI, Negation = :outcome.InvestigationFindingCT.Negation}
+
+
+
+Rule: getInvestigationsOutcomeCT
+Priority: 99
 (
   ({Investigation.Investigation == CT}):invest
   ({InvestigationFindingCT})*
@@ -19,7 +33,7 @@ CUI = :outcome.InvestigationFindingCT.CUI, Negation = :outcome.InvestigationFind
 
 
 Rule: getInvestigationsOutcomeCT2
-Priority: 99
+Priority: 98
 (
   ({InvestigationFindingCT.Complete == Yes})
 ):match
@@ -28,8 +42,22 @@ Priority: 99
 CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
 
 
+
 Rule: getInvestigationsOutcomeCT3
-Priority: 98
+Priority: 97
+(
+  ({ContextInvestigations})
+  ({InvestigationFindingCT})
+  ({Investigation.Investigation == CT})
+):match
+-->
+:match.InvestigationIgnore = { rule = getInvestigationsOutcomeCT3, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
+
+
+
+Rule: getInvestigationsOutcomeCT3
+Priority: 96
 (
   ({InvestigationFindingCT})
   ({Investigation.Investigation == CT})
@@ -40,7 +68,7 @@ CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingC
 
 
 Rule: InvestigationDiag
-Priority: 97
+Priority: 95
 (
   ({Investigation.Investigation == CT}):invest
   ({Diagnosis})
@@ -48,3 +76,15 @@ Priority: 97
 -->
 :match.Investigations = { rule = InvestigationDiag, CT_Performed = "Yes", CT_Results = "Abnormal", 
 CUI = "C0436539"}
+
+
+Rule: InvestigationTwoSentences
+Priority: 94
+(
+  ({Investigation.Investigation == CT})
+  ({Split})
+  ({InvestigationFindingCT})
+):match
+-->
+:match.Investigations = { rule = InvestigationTwoSentences, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}

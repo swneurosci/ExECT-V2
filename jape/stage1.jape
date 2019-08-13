@@ -8,6 +8,7 @@ numberRange
 rangeOrNumber
 LookupSplit
 newLine
+newParagraph
 listPoint
 listSent
 Token2Verbs

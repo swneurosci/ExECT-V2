@@ -1,35 +1,62 @@
 Phase: furtherDiagnosis
-Input:  MedFinding listSent Person DiagnosisTriggers startList Lookup
+Input:  Person Lookup Split 
 Options: control=all
 
 
 /*
 *This rule doesnt yet work, cant work out why, want it to pick up only stuff at top of letter, stuff in list after diagnosis:
 */
-Rule: furtherDiagnosis1
- 
+/*Rule: furtherDiagnosis1
+ *
+ */
 
-(
-	({DiagnosisTriggers})
-	({MedFinding within listSent, MedFinding.STY!=~"[Ss]ign or [Ss]ymptom", MedFinding.Seizure == No}):item
-):item1
--->
-:item.Diagnosis = {rule = "listDiagnosis1", PREF = :item.MedFinding.PREF, CUI = :item.MedFinding.CUI, STY = :item.MedFinding.STY, Negation = :item.MedFinding.Negation,
-Experiencer = :item.MedFinding.Experiencer, Temporality = :item.MedFinding.Temporality, Certainty = :item.MedFinding.Certainty}
+/*(
+*	({MedFinding within listSent, MedFinding.STY!=~"[Ss]ign or [Ss]ymptom", MedFinding.Seizure == No}):item
+*):item1
+*-->
+*:item.Diagnosis = {rule = "listDiagnosis1", PREF = :item.MedFinding.PREF, CUI = :item.MedFinding.CUI, STY = :item.MedFinding.STY, Negation = :item.MedFinding.Negation,
+*Experiencer = :item.MedFinding.Experiencer, Temporality = :item.MedFinding.Temporality, Certainty = :item.MedFinding.Certainty}
+*
+*Rule: furtherDiagnosis2
+* 
+*
+*(
+*	({Person})
+*	({MedFinding within listSent, MedFinding.STY!=~"[Ss]ign or [Ss]ymptom", MedFinding.Plural == Yes, Lookup.Experiencer == Patient})
+*):item
+*-->
+*:item.Diagnosis = {rule = "listDiagnosis2", PREF = :item.MedFinding.PREF, CUI = :item.MedFinding.CUI, STY = :item.MedFinding.STY, Negation = :item.MedFinding.Negation,
+*Experiencer = :item.MedFinding.Experiencer, Temporality = :item.MedFinding.Temporality, Certainty = :item.MedFinding.Certainty}
+*/
 
-Rule: furtherDiagnosis2
+ Rule: furtherDiagnosis1
  
 
 (
 	({Person})
-	({MedFinding within listSent, MedFinding.STY!=~"[Ss]ign or [Ss]ymptom", MedFinding.Plural == Yes})
-):item
+	({Lookup.STY!=~"[Ss]ign or [Ss]ymptom", Lookup.Seizure == No, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed}):item
+):item1
 -->
-:item.Diagnosis = {rule = "listDiagnosis2", PREF = :item.MedFinding.PREF, CUI = :item.MedFinding.CUI, STY = :item.MedFinding.STY, Negation = :item.MedFinding.Negation,
-Experiencer = :item.MedFinding.Experiencer, Temporality = :item.MedFinding.Temporality, Certainty = :item.MedFinding.Certainty}
+:item.Diagnosis = {rule = "PersonDiagnosis1", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
 
- 
 
+/* This rule is basically DiagFromSeizure.jape
+*
+*
+*
+*Rule: furtherDiagnosis2
+*
+*
+*(
+*	({Person})
+*	({Lookup.STY!=~"[Ss]ign or [Ss]ymptom", Lookup.Plural == Yes, Lookup.Negation == Affirmed})
+*):item
+*-->
+*:item.Diagnosis = {rule = "PersonDiagnosis1", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+*Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
+*
+*/
 
 Rule: withEpilepsy
 

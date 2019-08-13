@@ -1,0 +1,17 @@
+Phase: NewParagraph
+Input:  NewLine Token
+Options: control=all
+
+
+/*
+*This rule doesnt yet work, cant work out why, want it to pick up only stuff at top of letter, stuff in list after diagnosis:
+*/
+Rule: NewParagraph
+ 
+
+(
+	({NewLine})
+    (({NewLine})):item
+):item1
+-->
+:item.NewParagraph = {}
