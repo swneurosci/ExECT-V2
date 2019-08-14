@@ -22,8 +22,7 @@ Rule: getInvestigationsOutcomeEEG
 Priority: 99
 (
   (({Investigation.Investigation == EEG})
-  ({InvestigationFindingEEG})*
-  (({InvestigationFindingEEG}):outcome)+):match
+  (({InvestigationFindingEEG}):outcome)):match
 ):match1
 -->
 :match1.Investigations = { rule = getInvestigationsOutcome1EEG, EEG_Performed = "Yes", EEG_Results = :outcome.InvestigationFindingEEG.Results, 
