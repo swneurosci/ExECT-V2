@@ -49,4 +49,5 @@ driving.lst:driving:driving::driving
 onset.lst:historic:symptoms:onset:Lookup2
 personAge.lst:person:time::Lookup2
 DiagnosisTriggers.lst:diagnosis:::DiagnosisTriggers
+opinion.lst:diagnosis:opinion::Lookup2
 contextInvestigations.lst:Investigations:Context::ContextInvestigations
