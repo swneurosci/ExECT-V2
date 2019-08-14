@@ -59,14 +59,22 @@
       <docList>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let35.docx.txt_0001C</resourceName>
+=======
+          <resourceName>Epi_Let21.docx.txt_00018</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let35.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let21.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -86,14 +94,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let36.docx.txt_0001D</resourceName>
+=======
+          <resourceName>Epi_Let22.docx.txt_00019</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let36.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let22.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -113,14 +129,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let37.docx.txt_0001E</resourceName>
+=======
+          <resourceName>Epi_Let23.docx.txt_0001A</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let37.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let23.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -140,14 +164,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let38.docx.txt_0001F</resourceName>
+=======
+          <resourceName>Epi_Let24.docx.txt_0001B</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let38.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let24.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -167,14 +199,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let39.docx.txt_00020</resourceName>
+=======
+          <resourceName>Epi_Let25.docx.txt_0001C</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let39.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let25.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -194,14 +234,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let40.docx.txt_00021</resourceName>
+=======
+          <resourceName>Epi_Let26.docx.txt_0001D</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let40.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let26.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -221,14 +269,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let41.docx.txt_00022</resourceName>
+=======
+          <resourceName>Epi_Let27.docx.txt_0001E</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let41.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let27.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -248,14 +304,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let42.docx.txt_00023</resourceName>
+=======
+          <resourceName>Epi_Let28.docx.txt_0001F</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let42.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let28.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -275,14 +339,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let43.docx.txt_00024</resourceName>
+=======
+          <resourceName>Epi_Let29.docx.txt_00020</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let43.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let29.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -302,14 +374,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let44.docx.txt_00025</resourceName>
+=======
+          <resourceName>Epi_Let30.docx.txt_00021</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let44.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let30.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -329,14 +409,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let45.docx.txt_00026</resourceName>
+=======
+          <resourceName>Epi_Let31.docx.txt_00022</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let45.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let31.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -356,14 +444,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let46.docx.txt_00027</resourceName>
+=======
+          <resourceName>Epi_Let32.docx.txt_00023</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let46.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let32.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -383,14 +479,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let47.docx.txt_00028</resourceName>
+=======
+          <resourceName>Epi_Let33.docx.txt_00024</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let47.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let33.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -410,14 +514,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let48.docx.txt_00029</resourceName>
+=======
+          <resourceName>Epi_Let34.docx.txt_00025</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let48.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let34.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -437,14 +549,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let49.docx.txt_0002A</resourceName>
+=======
+          <resourceName>Epi_Let35.docx.txt_00026</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let49.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let35.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -464,14 +584,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let50.docx.txt_0002B</resourceName>
+=======
+          <resourceName>Epi_Let36.docx.txt_00027</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let50.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let36.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -491,14 +619,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let51.docx.txt_0002C</resourceName>
+=======
+          <resourceName>Epi_Let37.docx.txt_00028</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let51.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let37.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -518,14 +654,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let52.docx.txt_0002D</resourceName>
+=======
+          <resourceName>Epi_Let38.docx.txt_00029</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let52.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let38.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -545,14 +689,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let53.docx.txt_0002E</resourceName>
+=======
+          <resourceName>Epi_Let39.docx.txt_0002A</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let53.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let39.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -572,14 +724,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let54.docx.txt_0002F</resourceName>
+=======
+          <resourceName>Epi_Let40.docx.txt_0002B</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let54.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let40.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -599,14 +759,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let55.docx.txt_00030</resourceName>
+=======
+          <resourceName>Epi_Let41.docx.txt_0002C</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let55.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let41.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -626,14 +794,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let56.docx.txt_00031</resourceName>
+=======
+          <resourceName>Epi_Let42.docx.txt_0002D</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let56.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let42.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -653,14 +829,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let57.docx.txt_00032</resourceName>
+=======
+          <resourceName>Epi_Let43.docx.txt_0002E</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let57.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let43.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -680,14 +864,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let58.docx.txt_00033</resourceName>
+=======
+          <resourceName>Epi_Let44.docx.txt_0002F</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let58.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let44.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -707,14 +899,22 @@
         </gate.util.persistence.LRPersistence>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
+<<<<<<< Updated upstream
           <resourceName>Epi_Let59.docx.txt_00034</resourceName>
+=======
+          <resourceName>Epi_Let45.docx.txt_00030</resourceName>
+>>>>>>> Stashed changes
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
+<<<<<<< Updated upstream
                   <urlString>$relpath$../../MarkUp/Diagnosis/Epi_Let59.docx.txt</urlString>
+=======
+                  <urlString>$relpath$../../letters/200_letters_txt/test_3%20%20letters/Epi_Let45.docx.txt</urlString>
+>>>>>>> Stashed changes
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -734,7 +934,11 @@
         </gate.util.persistence.LRPersistence>
       </docList>
       <resourceType>gate.corpora.CorpusImpl</resourceType>
+<<<<<<< Updated upstream
       <resourceName>Diag</resourceName>
+=======
+      <resourceName>test</resourceName>
+>>>>>>> Stashed changes
       <initParams class="gate.util.persistence.MapPersistence">
         <mapType>gate.util.SimpleFeatureMapImpl</mapType>
         <localMap/>
@@ -896,12 +1100,12 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>annotationSetName</string>
-                  <string></string>
-                </entry>
-                <entry>
                   <string>allowWithinWords</string>
                   <boolean>true</boolean>
+                </entry>
+                <entry>
+                  <string>annotationSetName</string>
+                  <string></string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -934,10 +1138,6 @@
                   <string>Bio</string>
                 </entry>
                 <entry>
-                  <string>inputASName</string>
-                  <string></string>
-                </entry>
-                <entry>
                   <string>annotationTypes</string>
                   <gate.util.persistence.CollectionPersistence>
                     <localList>
@@ -956,6 +1156,10 @@
                     </localList>
                     <collectionType>java.util.ArrayList</collectionType>
                   </gate.util.persistence.CollectionPersistence>
+                </entry>
+                <entry>
+                  <string>inputASName</string>
+                  <string></string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -1497,10 +1701,6 @@
                   <string>Epilepsy</string>
                 </entry>
                 <entry>
-                  <string>inputASName</string>
-                  <string>Bio</string>
-                </entry>
-                <entry>
                   <string>annotationTypes</string>
                   <gate.util.persistence.CollectionPersistence>
                     <localList>
@@ -1513,6 +1713,10 @@
                     </localList>
                     <collectionType>java.util.ArrayList</collectionType>
                   </gate.util.persistence.CollectionPersistence>
+                </entry>
+                <entry>
+                  <string>inputASName</string>
+                  <string>Bio</string>
                 </entry>
               </localMap>
             </runtimeParams>
