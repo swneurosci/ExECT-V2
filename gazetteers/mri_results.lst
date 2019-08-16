@@ -26,12 +26,9 @@ signal intensity:CUI=C1319851:Results=Abnormal
 heterotopic grey matter:CUI=C1319851:Results=Abnormal
 white matter changes:CUI=C1319851:Results=Abnormal
 abnormalities:CUI=C1319851:Results=Abnormal
-abnormal MRI brain:CUI=C1319851:Results=Abnormal:Complete=Yes
 brain asymmetry:CUI=C1319851:Results=Abnormal
 signal abnormality:CUI=C1319851:Results=Abnormal
 signal intensity:CUI=C1319851:Results=Abnormal
-normal MRI:CUI=C0436481:Results=Normal:Complete=Yes
-normal brain MRI:CUI=C0436481:Results=Normal:Complete=Yes
 atrophyc changes:CUI=C1319851:Results=Abnormal
 abnormality:CUI=C1319851:Results=Abnormal
 glioma:CUI=C1319851:Results=Abnormal
@@ -45,4 +42,4 @@ not have the results:Results=Unknown
 non-epileptic:CUI=C0436481:Results=Normal
 high intensity signal:CUI=C1319851:Results=Abnormal
 white-matter hyperintensities:CUI=C1319851:Results=Abnormal
-Heterotopic grey matter:CUI=C1319851:Results=Abnormal:=
+Heterotopic grey matter:CUI=C1319851:Results=Abnormal

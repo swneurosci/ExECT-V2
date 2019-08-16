@@ -1,4 +1,3 @@
-epilepsyold.lst:umls:Disease::Lookup5
 drugs.lst:Lookup:Disease::Drug
 seizure.lst:Lookup:Disease::Lookup3
 epilepsy.lst:umls:Disease::Lookup4

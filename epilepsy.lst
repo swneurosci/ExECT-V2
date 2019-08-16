@@ -179,8 +179,8 @@ autism spectrum disorder, epilepsy, arthrogryposis syndrome (disorder)	Seizure=N
 automatism absence	CUI=C0270837	PREF=automatism absence	TUI=T047	STY=Disease or Syndrome
 automatism petit mal	CUI=C0270837	PREF=automatism petit mal	TUI=T047	STY=Disease or Syndrome
 autosomal dominant cortical myoclonus and epilepsy	CUI=C4273988	PREF=autosomal dominant cortical myoclonus and epilepsy	TUI=T047	STY=Disease or Syndrome
-axi, cerebrospinal	CUI=C3714787	PREF=axi, cerebrospinal	TUI=T022	STY=body system
-axis, cerebrospinal	CUI=C3714787	PREF=axis, cerebrospinal	TUI=T022	STY=body system
+axi, cerebrospinal	CUI=C3714787	PREF=axi, cerebrospinal	TUI=T022	STY=Body System
+axis, cerebrospinal	CUI=C3714787	PREF=axis, cerebrospinal	TUI=T022	STY=Body System
 bafme - benign adult familial myoclonic epilepsy	CUI=C4273988	Seizure=No	PREF=bafme - benign adult familial myoclonic epilepsy	TUI=T047	STY=Disease or Syndrome
 battaglia neri syndrome	CUI=C2931579	PREF=battaglia neri syndrome	Seizure=No	TUI=T047	STY=Disease or Syndrome
 benign adult familial myoclonic epilepsy	CUI=C4273988	Seizure=No	PREF=benign adult familial myoclonic epilepsy	TUI=T047	STY=Disease or Syndrome
@@ -217,10 +217,10 @@ celiac disease with epilepsy and cerebral calcification syndrome	CUI=C4302597	Se
 celiac disease with epilepsy and cerebral calcification syndrome (disorder)	CUI=C4302597	Seizure=No	PREF=celiac disease with epilepsy and cerebral calcification syndrome (disorder)	TUI=T047	STY=Disease or Syndrome
 centerncephalic absence	CUI=C0270822	PREF=centerncephalic absence	TUI=T047	STY=Disease or Syndrome
 centerncephalic epilepsy	CUI=C0270822	PREF=centerncephalic epilepsy	TUI=T047	Seizure=No	STY=Disease or Syndrome
-central nerv system structure	CUI=C3714787	PREF=central nerv system structure	TUI=T022	STY=body system
-central nervous system structure	CUI=C3714787	PREF=central nervous system structure	TUI=T022	STY=body system
-central nervous system structure (body structure)	CUI=C3714787	PREF=central nervous system structure (body structure)	TUI=T022	STY=body system
-central nervous systems	CUI=C3714787	PREF=central nervous systems	TUI=T022	STY=body system
+central nerv system structure	CUI=C3714787	PREF=central nerv system structure	TUI=T022	STY=Body System
+central nervous system structure	CUI=C3714787	PREF=central nervous system structure	TUI=T022	STY=Body System
+central nervous system structure (body structure)	CUI=C3714787	PREF=central nervous system structure (body structure)	TUI=T022	STY=Body System
+central nervous systems	CUI=C3714787	PREF=central nervous systems	TUI=T022	STY=Body System
 centrencephalic absence	CUI=C0270822	PREF=centrencephalic absence	TUI=T047	STY=Disease or Syndrome
 centrencephalic epilepsy	CUI=C0270822	PREF=centrencephalic epilepsy	TUI=T047	Seizure=No	STY=Disease or Syndrome
 centrencephalic epilepsy (disorder)	CUI=C0270822	PREF=centrencephalic epilepsy (disorder)	TUI=T047	Seizure=No	STY=Disease or Syndrome
@@ -237,8 +237,8 @@ cerebral lipidosis myoclonic variant	CUI=C0751383	PREF=cerebral lipidosis myoclo
 cerebral lipidosis, myoclonic variant	CUI=C0751383	PREF=cerebral lipidosis, myoclonic variant	TUI=T047	STY=Disease or Syndrome
 cerebroretinal degeneration, juvenile	CUI=C0751383	PREF=cerebroretinal degeneration, juvenile	TUI=T047	Seizure=No	STY=Disease or Syndrome
 cerebroretinal degenerations, juvenile	CUI=C0751383	PREF=cerebroretinal degenerations, juvenile	TUI=T047	Seizure=No	STY=Disease or Syndrome
-cerebrospinal axi	CUI=C3714787	PREF=cerebrospinal axi	TUI=T022	STY=body system
-cerebrospinal axis	CUI=C3714787	PREF=cerebrospinal axis	TUI=T022	STY=body system
+cerebrospinal axi	CUI=C3714787	PREF=cerebrospinal axi	TUI=T022	STY=Body System
+cerebrospinal axis	CUI=C3714787	PREF=cerebrospinal axis	TUI=T022	STY=Body System
 ceroid lipofuscinosis, neuronal 3, juvenile	CUI=C0751383	PREF=ceroid lipofuscinosis, neuronal 3, juvenile	Seizure=No	TUI=T047	STY=Disease or Syndrome
 ceroid-lipofuscinoses, cln3-related neuronal	CUI=C0751383	PREF=ceroid-lipofuscinoses, cln3-related neuronal	Seizure=No	TUI=T047	STY=Disease or Syndrome
 ceroid-lipofuscinosis, cln3-related neuronal	CUI=C0751383	PREF=ceroid-lipofuscinosis, cln3-related neuronal	Seizure=No	TUI=T047	STY=Disease or Syndrome
@@ -259,7 +259,7 @@ cln3	CUI=C0751383	PREF=cln3	TUI=T047	Seizure=No	STY=Disease or Syndrome
 cln3 related neuronal ceroid lipofuscinosis	CUI=C0751383	PREF=cln3 related neuronal ceroid lipofuscinosis	Seizure=No	TUI=T047	STY=Disease or Syndrome
 cln3-related neuronal ceroid-lipofuscinoses	CUI=C0751383	PREF=cln3-related neuronal ceroid-lipofuscinoses	Seizure=No	TUI=T047	STY=Disease or Syndrome
 cln3-related neuronal ceroid-lipofuscinosis	CUI=C0751383	PREF=cln3-related neuronal ceroid-lipofuscinosis	Seizure=No	TUI=T047	STY=Disease or Syndrome
-cns - central nervous system	CUI=C3714787	PREF=cns - central nervous system	TUI=T022	STY=body system
+cns - central nervous system	CUI=C3714787	PREF=cns - central nervous system	TUI=T022	STY=Body System
 coeliac disease with epilepsy and cerebral calcification syndrome	CUI=C4302597	Seizure=No	PREF=coeliac disease with epilepsy and cerebral calcification syndrome	TUI=T047	STY=Disease or Syndrome
 complex febrile convulsion	CUI=C0751057	PREF=complex febrile convulsion	TUI=T047	STY=Disease or Syndrome
 complex febrile convulsions	CUI=C0751057	PREF=complex febrile convulsions	TUI=T047	STY=Disease or Syndrome
@@ -909,8 +909,8 @@ neonatal epilepsies, benign	CUI=C0270851	Seizure=No	PREF=neonatal epilepsies, be
 neonatal epilepsy, benign	CUI=C0270851	Seizure=No	PREF=neonatal epilepsy, benign	TUI=T047	STY=Disease or Syndrome
 neonatal seizures	CUI=C0159020	PREF=neonatal seizures	TUI=T047	STY=Disease or Syndrome
 neonatal sleep myoclonus, benign	CUI=C0751946	PREF=neonatal sleep myoclonus, benign	TUI=T047	STY=Disease or Syndrome
-nervous system, central	CUI=C3714787	PREF=nervous system, central	TUI=T022	STY=body system
-nervous systems, central	CUI=C3714787	PREF=nervous systems, central	TUI=T022	STY=body system
+nervous system, central	CUI=C3714787	PREF=nervous system, central	TUI=T022	STY=Body System
+nervous systems, central	CUI=C3714787	PREF=nervous systems, central	TUI=T022	STY=Body System
 neuraminidase deficiency	CUI=C0268226	PREF=neuraminidase deficiency	TUI=T047	STY=Disease or Syndrome
 neuronal ceroid lipofuscinosis juvenile type	CUI=C0751383	Seizure=No	PREF=neuronal ceroid lipofuscinosis juvenile type	TUI=T047	STY=Disease or Syndrome
 neuronal ceroid-lipofuscinoses, cln3-related	CUI=C0751383	Seizure=No	PREF=neuronal ceroid-lipofuscinoses, cln3-related	TUI=T047	STY=Disease or Syndrome
@@ -1105,7 +1105,7 @@ retropulsion absence	CUI=C0270821	PREF=retropulsion absence	TUI=T047	Seizure=No	
 retropulsion petit mal	CUI=C0270821	PREF=retropulsion petit mal	TUI=T047	Seizure=No	STY=Disease or Syndrome
 retropulsion petit mal (disorder)	CUI=C0270821	Seizure=No	PREF=retropulsion petit mal (disorder)	TUI=T047	STY=Disease or Syndrome
 rett syndrome	CUI=C0035372	PREF=rett syndrome	TUI=T047	Seizure=No	STY=Disease or Syndrome
-ring chromosome 20	CUI=C0265482	PREF=ring chromosome 20	TUI=T019	STY=congenital abnormality
+ring chromosome 20	CUI=C0265482	PREF=ring chromosome 20	TUI=T019	STY=Congenital Abnormality
 rolandic seizures with status epilepticus	CUI=C3662441	PREF=rolandic seizures with status epilepticus	TUI=T047	STY=Disease or Syndrome
 rum fits	CUI=C0586323	PREF=rum fits	TUI=T048	STY=Mental or Behavioral Dysfunction
 running epilepsy	CUI=C0270819	Seizure=No	PREF=running epilepsy	TUI=T047	STY=Disease or Syndrome
@@ -1276,10 +1276,10 @@ stiff baby syndrome	CUI=C1835614	Seizure=No	PREF=stiff baby syndrome	TUI=T047	ST
 stiff-baby syndrome	CUI=C1835614	Seizure=No	PREF=stiff-baby syndrome	TUI=T047	STY=Disease or Syndrome
 stiff-man syndrome, congenital	CUI=C1835614	Seizure=No	PREF=stiff-man syndrome, congenital	TUI=T047	STY=Disease or Syndrome
 stiff-person syndrome, congenital	CUI=C1835614	Seizure=No	PREF=stiff-person syndrome, congenital	TUI=T047	STY=Disease or Syndrome
-structure of central nervous system	CUI=C3714787	PREF=structure of central nervous system	TUI=T022	STY=body system
-structure of central nervous system (body structure)	CUI=C3714787	PREF=structure of central nervous system (body structure)	TUI=T022	STY=body system
-structures of the central nervous system	CUI=C3714787	PREF=structures of the central nervous system	TUI=T022	STY=body system
-sturge-weber syndrome	CUI=C0038505	PREF=sturge-weber syndrome	TUI=T019	STY=congenital abnormality
+structure of central nervous system	CUI=C3714787	PREF=structure of central nervous system	TUI=T022	STY=Body System
+structure of central nervous system (body structure)	CUI=C3714787	PREF=structure of central nervous system (body structure)	TUI=T022	STY=Body System
+structures of the central nervous system	CUI=C3714787	PREF=structures of the central nervous system	TUI=T022	STY=Body System
+sturge-weber syndrome	CUI=C0038505	PREF=sturge-weber syndrome	TUI=T019	STY=Congenital Abnormality
 SUDEP	CUI=C4304727	Seizure=No	PREF=sudden unexpected death in epilepsy	TUI=T033	STY=Finding
 sudden unexpected death in epilepsy	CUI=C4304727	Seizure=No	PREF=sudden unexpected death in epilepsy	TUI=T033	STY=Finding
 symptomat early myoclon enceph	CUI=C0270855	PREF=symptomat early myoclon enceph	TUI=T047	STY=Disease or Syndrome
@@ -1294,8 +1294,8 @@ syndrome, tonic-clonic seizure	CUI=C0014549	PREF=syndrome, tonic-clonic seizure	
 syndrome, west	CUI=C0037769	PREF=syndrome, west	TUI=T047	STY=Disease or Syndrome
 syndromes, tonic-clonic convulsion	CUI=C0014549	PREF=syndromes, tonic-clonic convulsion	TUI=T047	STY=Disease or Syndrome
 syndromes, tonic-clonic seizure	CUI=C0014549	PREF=syndromes, tonic-clonic seizure	TUI=T047	STY=Disease or Syndrome
-system, central nervous	CUI=C3714787	PREF=system, central nervous	TUI=T022	STY=body system
-systems, central nervous	CUI=C3714787	PREF=systems, central nervous	TUI=T022	STY=body system
+system, central nervous	CUI=C3714787	PREF=system, central nervous	TUI=T022	STY=Body System
+systems, central nervous	CUI=C3714787	PREF=systems, central nervous	TUI=T022	STY=Body System
 television epilepsy	CUI=C0393720	Seizure=No	PREF=television epilepsy	TUI=T047	STY=Disease or Syndrome
 temporal lobe epilepsy	CUI=C0014556	Seizure=No	PREF=Temporal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
 temporal lobe seizure	CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
@@ -1389,8 +1389,8 @@ generalised tonic-clonic seizures	CUI=C0494475	PREF=Generalised tonic clonic sei
 generalized tonic clonic seizures	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 generalized tonic clonic seizure	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 generalized tonic-clonic seizures	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
-partial seizure (finding)	CUI=C0751495	PREF=partial seizure (finding)	TUI=T047	STY=disease or syndrome
-partial seizures	CUI=C0751495	PREF=partial seizure (finding)	TUI=T047	STY=disease or syndrome
+partial seizure (finding)	CUI=C0751495	PREF=partial seizure (finding)	TUI=T047	STY=Disease or Syndrome
+partial seizures	CUI=C0751495	PREF=partial seizure (finding)	TUI=T047	STY=Disease or Syndrome
 secondary generalised seizure	CUI=C0270838	PREF=secondary generalised seizure	TUI=T047	STY=Disease or Syndrome
 secondary generalized seizure	CUI=C0270838	PREF=secondary generalized seizure	TUI=T047	STY=Disease or Syndrome
 secondary generalised seizures	CUI=C0270838	PREF=secondary generalised seizures	TUI=T047	STY=Disease or Syndrome

@@ -66,7 +66,7 @@ CUI = :match1.InvestigationFindingEEG.CUI, Negation = :match1.InvestigationFindi
 Rule: InvestigationDiag
 Priority: 95
 (
-  ({Investigation.Investigation == CT}):invest
+  ({Investigation.Investigation == EEG}):invest
   ({Diagnosis})
 ):match
 -->
