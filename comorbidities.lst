@@ -1,0 +1,114 @@
+17q21.31 deletion syndrome	CUI=C1864871	PREF=17q21.31 deletion syndrome	TUI=T047	STY=Disease or Syndrome
+17q21.31 microdeletion syndrome	CUI=C1864871	PREF=17q21.31 microdeletion syndrome	TUI=T047	STY=Disease or Syndrome
+alzheimer dementia	CUI=C0002395	PREF=dementia, alzheimer	TUI=T047	STY=Disease or Syndrome
+alzheimer dementias	CUI=C0002395	PREF=alzheimer dementias	TUI=T047	STY=Disease or Syndrome
+alzheimer sclerosis	CUI=C0002395	PREF=alzheimer sclerosis	TUI=T047	STY=Disease or Syndrome
+alzheimer sclerosis	CUI=C0002395	PREF=sclerosis, alzheimer	TUI=T047	STY=Disease or Syndrome
+alzheimer syndrome	CUI=C0002395	PREF=alzheimer syndrome	TUI=T047	STY=Disease or Syndrome
+alzheimer type dementia	CUI=C0002395	PREF=alzheimer type dementia	TUI=T047	STY=Disease or Syndrome
+alzheimer type senile dementia	CUI=C0002395	PREF=alzheimer type senile dementia	TUI=T047	STY=Disease or Syndrome
+alzheimer's disease	CUI=C0002395	PREF=ad - alzheimer's disease	TUI=T047	STY=Disease or Syndrome
+alzheimer-type dementia	CUI=C0002395	PREF=alzheimer-type dementia (atd)	TUI=T047	STY=Disease or Syndrome
+alzheimers disease	CUI=C0002395	PREF=alzheimers disease	TUI=T047	STY=Disease or Syndrome
+bohring opitz syndrome	CUI=C0796232	PREF=bohring opitz syndrome	TUI=T047	STY=Disease or Syndrome
+bops	CUI=C0796232	PREF=bops	TUI=T047	STY=Disease or Syndrome
+cardiocranial syndrome	CUI=C1857495	PREF=cardiocranial syndrome	TUI=T047	STY=Disease or Syndrome
+cardiocranial syndrome pfeiffer type	CUI=C1857495	PREF=cardiocranial syndrome pfeiffer type	TUI=T047	STY=Disease or Syndrome
+chromosome 17q21.31 microdeletion syndrome	CUI=C1864871	PREF=chromosome 17q21.31 microdeletion syndrome	TUI=T047	STY=Disease or Syndrome
+cognitive developmental delay	CUI=C1959866	PREF=cognitive developmental delay	TUI=T048	STY=Mental or Behavioral Dysfunction
+craniostenosis, sagittal, with congenital heart disease, mental deficiency, and mandibular ankylosis	CUI=C1857495	PREF=craniostenosis, sagittal, with congenital heart disease, mental deficiency, and mandibular ankylosis	TUI=T047	STY=Disease or Syndrome
+craniosynostosis with congenital heart disease and intellectual disability syndrome	CUI=C1857495	PREF=craniosynostosis with congenital heart disease and intellectual disability syndrome	TUI=T047	STY=Disease or Syndrome
+delay in sexual development and/or puberty	CUI=C0034012	PREF=delay in sexual development and/or puberty	TUI=T046	STY=Pathologic Function
+delayed cognitive development	CUI=C0557874	PREF=delayed cognitive development	TUI=T048	STY=Mental or Behavioral Dysfunction
+delayed development	CUI=C0424605	PREF=delayed development	TUI=T048	STY=Mental or Behavioral Dysfunction
+delayed psychomotor development	CUI=C0557874	PREF=delayed psychomotor development	TUI=T048	STY=Mental or Behavioral Dysfunction
+delayed pubertal development	CUI=C0034012	PREF=delayed pubertal development	TUI=T046	STY=Pathologic Function
+delayed puberty	CUI=C0034012	PREF=delayed puberty (disorder)	TUI=T046	STY=Pathologic Function
+delayed puberty	CUI=C0034012	PREF=puberty, delayed	TUI=T046	STY=Pathologic Function
+delayed sexual development	CUI=C0034012	PREF=delayed sexual development	TUI=T046	STY=Pathologic Function
+dementia	CUI=C0497327	PREF=dementia	TUI=T048	STY=Mental or Behavioral Dysfunction
+dementia alzheimer type	CUI=C0002395	PREF=dat - dementia alzheimer type	TUI=T047	STY=Disease or Syndrome
+dementia alzheimer's type	CUI=C0002395	PREF=dat - dementia alzheimer's type	TUI=T047	STY=Disease or Syndrome
+dementia in alzheimer's disease	CUI=C0002395	PREF=dementia in alzheimer's disease	TUI=T047	STY=Disease or Syndrome
+dementia of the alzheimer's type	CUI=C0002395	PREF=dementia of the alzheimer's type	TUI=T047	STY=Disease or Syndrome
+dend syndrome	CUI=C4303593	PREF=dend syndrome	TUI=T047	STY=Disease or Syndrome
+developmental delay	CUI=C0424605	PREF=delayed development	TUI=T048	STY=Mental or Behavioral Dysfunction
+developmental delay in early childhood	CUI=C0557874	PREF=developmental delay in early childhood	TUI=T048	STY=Mental or Behavioral Dysfunction
+developmental delay in feeding	CUI=C1960556	PREF=developmental delay in feeding	TUI=T048	STY=Mental or Behavioral Dysfunction
+developmental delay in fine motor function	CUI=C3839556	PREF=developmental delay in fine motor function	TUI=T048	STY=Mental or Behavioral Dysfunction
+developmental delay in social skills	CUI=C3840125	PREF=developmental delay in social skills	TUI=T033	sty=finding
+developmental delay of fine motor function	CUI=C3839556	PREF=developmental delay of fine motor function	TUI=T048	STY=Mental or Behavioral Dysfunction
+developmental delay, epilepsy, neonatal diabetes syndrome	CUI=C4303593	PREF=dend (developmental delay, epilepsy, neonatal diabetes) syndrome	TUI=T047	STY=Disease or Syndrome
+developmental delay, epilepsy, neonatal diabetes syndrome	CUI=C4303593	PREF=developmental delay, epilepsy, neonatal diabetes syndrome	TUI=T047	STY=Disease or Syndrome
+developmental delay, feeding	CUI=C1960556	PREF=developmental delay, feeding	TUI=T048	STY=Mental or Behavioral Dysfunction
+fine motor developmental delay	CUI=C3839556	PREF=fine motor developmental delay	TUI=T048	STY=Mental or Behavioral Dysfunction
+frank ter haar syndrome	CUI=C1855305	PREF=frank ter haar syndrome	TUI=T047	STY=Disease or Syndrome
+global developmental delay	CUI=C0557874	PREF=developmental delay, global	TUI=T048	STY=Mental or Behavioral Dysfunction
+global developmental delay	CUI=C0557874	PREF=global developmental delay	TUI=T048	STY=Mental or Behavioral Dysfunction
+headache	CUI=C0018681	PREF=headache	TUI=T184	sty=sign or symptom
+headaches	CUI=C0018681	PREF=headache	TUI=T184	sty=sign or symptom
+idiopathic parkinson disease	CUI=C0030567	PREF=idiopathic parkinson disease	TUI=T047	STY=Disease or Syndrome
+koolen de vries syndrome	CUI=C1864871	PREF=koolen de vries syndrome	TUI=T047	STY=Disease or Syndrome
+koolen de vries syndrome (disorder)	CUI=C1864871	PREF=koolen de vries syndrome (disorder)	TUI=T047	STY=Disease or Syndrome
+koolen syndrome	CUI=C1864871	PREF=koolen syndrome	TUI=T047	STY=Disease or Syndrome
+lack of psychomotor development	CUI=C0557874	PREF=lack of psychomotor development	TUI=T048	STY=Mental or Behavioral Dysfunction
+learning difficulties	CUI=C0424939 PREF=learning difficulties TUI=T033	sty=finding
+learning disability	CUI=C0751265	PREF=learning disability	TUI=T048	STY=Mental or Behavioral Dysfunction
+learning disability	CUI=C1321592	PREF=learning disability	TUI=T091	sty=biomedical occupation or discipline
+lewy body parkinson disease	CUI=C0030567	PREF=lewy body parkinson disease	TUI=T047	STY=Disease or Syndrome
+lewy body parkinson's disease	CUI=C0030567	PREF=lewy body parkinson's disease	TUI=T047	STY=Disease or Syndrome
+megalocornea, multiple skeletal anomalies, and developmental delay	CUI=C1855305	PREF=megalocornea, multiple skeletal anomalies, and developmental delay	TUI=T047	STY=Disease or Syndrome
+melnick-needles syndrome, autosomal recessive, formerly	CUI=C1855305	PREF=melnick-needles syndrome, autosomal recessive, formerly	TUI=T047	STY=Disease or Syndrome
+migraine	CUI=C0149931	PREF=migraine	TUI=T047	STY=Disease or Syndrome
+monosomy 17q21.31	CUI=C1864871	PREF=monosomy 17q21.31	TUI=T047	STY=Disease or Syndrome
+ms	CUI=C0026769	PREF=ms	TUI=T047	STY=Disease or Syndrome
+multiple sclerosis	CUI=C0026769	PREF=multiple sclerosis	TUI=T047	STY=Disease or Syndrome
+no psychomotor development	CUI=C0557874	PREF=no psychomotor development	TUI=T048	STY=Mental or Behavioral Dysfunction
+obesity, colitis, hypothyroidism, cardiac hypertrophy, developmental delay syndrome	CUI=C4302879	PREF=obesity, colitis, hypothyroidism, cardiac hypertrophy, developmental delay syndrome	TUI=T047	STY=Disease or Syndrome
+obesity, colitis, hypothyroidism, cardiac hypertrophy, developmental delay syndrome (disorder)	CUI=C4302879	PREF=obesity, colitis, hypothyroidism, cardiac hypertrophy, developmental delay syndrome (disorder)	TUI=T047	STY=Disease or Syndrome
+parkinson disease	CUI=C0030567	PREF=idiopathic parkinson disease	TUI=T047	STY=Disease or Syndrome
+parkinson disease	CUI=C0030567	PREF=parkinson disease, idiopathic	TUI=T047	STY=Disease or Syndrome
+parkinson's disease idiopathic	CUI=C0030567	PREF=parkinson's disease, idiopathic	TUI=T047	STY=Disease or Syndrome
+parkinson's disease, lewy body	CUI=C0030567	PREF=parkinson's disease, lewy body	TUI=T047	STY=Disease or Syndrome
+parkinson's syndrome	CUI=C0030567	PREF=parkinson's syndrome	TUI=T047	STY=Disease or Syndrome
+parkinsons disease	CUI=C0030567	PREF=parkinsons disease	TUI=T047	STY=Disease or Syndrome
+pd - parkinson's disease	CUI=C0030567	PREF=pd - parkinson's disease	TUI=T047	STY=Disease or Syndrome
+pfeiffer singer zschiesche syndrome	CUI=C1857495	PREF=pfeiffer singer zschiesche syndrome	TUI=T047	STY=Disease or Syndrome
+pfeiffer syndrome 2	CUI=C1857495	PREF=pfeiffer syndrome 2	TUI=T047	STY=Disease or Syndrome
+pfeiffer-type cardiocranial syndrome	CUI=C1857495	PREF=pfeiffer-type cardiocranial syndrome	TUI=T047	STY=Disease or Syndrome
+primary parkinsonism	CUI=C0030567	PREF=parkinsonism, primary	TUI=T047	STY=Disease or Syndrome
+primary senile degenerative dementia	CUI=C0002395	PREF=dementia, primary senile degenerative	TUI=T047	STY=Disease or Syndrome
+primary senile degenerative dementia	CUI=C0002395	PREF=primary senile degenerative dementia	TUI=T047	STY=Disease or Syndrome
+puberty - delayed	CUI=C0034012	PREF=puberty - delayed	TUI=T046	STY=Pathologic Function
+sagittal craniostenosis with congenital heart disease, mental deficiency and mandibular ankylosis	CUI=C1857495	PREF=sagittal craniostenosis with congenital heart disease, mental deficiency and mandibular ankylosis	TUI=T047	STY=Disease or Syndrome
+say meyer syndrome	CUI=C1839125	PREF=say meyer syndrome	TUI=T047	STY=Disease or Syndrome
+senile dementia	CUI=C0002395	PREF=dementia, senile	TUI=T047	STY=Disease or Syndrome
+senile dementia	CUI=C0002395	PREF=senile dementia	TUI=T047	STY=Disease or Syndrome
+senile dementia, alzheimer type	CUI=C0002395	PREF=senile dementia, alzheimer type	TUI=T047	STY=Disease or Syndrome
+shaking palsy	CUI=C0030567	PREF=shaking palsy	TUI=T047	STY=Disease or Syndrome
+trigonocephaly, short stature and developmental delay	CUI=C1839125	PREF=trigonocephaly, short stature and developmental delay	TUI=T047	STY=Disease or Syndrome
+trigonocephaly, short stature, and retarded psychomotor development	CUI=C1839125	PREF=trigonocephaly, short stature, and retarded psychomotor development	TUI=T047	STY=Disease or Syndrome
+trigonocephaly, short stature, developmental delay syndrome	CUI=C1839125	PREF=trigonocephaly, short stature, developmental delay syndrome	TUI=T047	STY=Disease or Syndrome
+trigonocephaly, short stature, developmental delay syndrome (disorder)	CUI=C1839125	PREF=trigonocephaly, short stature, developmental delay syndrome (disorder)	TUI=T047	STY=Disease or Syndrome
+unspecified delay in development	CUI=C0424605	PREF=unspecified delay in development	TUI=T048	STY=Mental or Behavioral Dysfunction
+visceral neuropathy and brain anomaly with facial dysmorphism and developmental delay syndrome	CUI=C4304402	PREF=visceral neuropathy and brain anomaly with facial dysmorphism and developmental delay syndrome	TUI=T047	STY=Disease or Syndrome
+visceral neuropathy and brain anomaly with facial dysmorphism and developmental delay syndrome (disorder)	CUI=C4304402	PREF=visceral neuropathy and brain anomaly with facial dysmorphism and developmental delay syndrome (disorder)	TUI=T047	STY=Disease or Syndrome
+complex febrile seizure	CUI=C0751057	PREF=complex febrile seizure	TUI=T047	STY=Disease or Syndrome
+febrile convulsion	CUI=C0009952	PREF=febrile convulsions	TUI=T047	STY=Disease or Syndrome
+febrile convulsions	CUI=C0009952	PREF=febrile convulsions	TUI=T047	STY=Disease or Syndrome
+febrile convulsion seizures	CUI=C0009952	PREF=febrile convulsion seizures	TUI=T047	STY=Disease or Syndrome
+complex febrile seizure	CUI=C0751057	PREF=seizure, febrile, complex	TUI=T047	STY=Disease or Syndrome
+simplefebrile seizure	CUI=C0149886	PREF=seizure, febrile, simple	TUI=T047	STY=Disease or Syndrome
+seizure associated with fever	CUI=C0009952	PREF=seizure, fever	TUI=T047	STY=Disease or Syndrome
+pyrexial seizures	CUI=C0009952	PREF=seizures, pyrexial	TUI=T047	STY=Disease or Syndrome
+simple febrile seizure	CUI=C0149886	PREF=simple febrile seizure	TUI=T047	STY=Disease or Syndrome
+alcohol withdrawal seizures	CUI=C0586323	PREF=seizures, alcohol withdrawal	TUI=T048	STY=Mental or Behavioral Dysfunction
+alcohol withdrawal induced seizures	CUI=C0586323	PREF=seizures, alcohol withdrawal-induced	TUI=T048	STY=Mental or Behavioral Dysfunction
+alcohol-related seizures	CUI=C0586323	PREF=seizures, alcohol-related	TUI=T048	STY=Mental or Behavioral Dysfunction
+alcoholic seizures	CUI=C0586323	PREF=seizures, alcoholic	TUI=T048	STY=Mental or Behavioral Dysfunction
+non-epileptic seizure	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+non-epileptic seizures	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+non-epileptic attack	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+non-epileptic attacks	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+psychogenic seizure	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
+psychogenic seizures	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction

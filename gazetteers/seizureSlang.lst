@@ -1,7 +1,25 @@
-event:generic=yes
-episode:generic=yes
-events:generic=yes
-episodes:generic=yes
-absences:generic=yes
-myoclonic jerks:generic=yes
-smaller ones:generic=yes
+major ones:CUI=C0441471:PREF=Event:TUI=T201:STY=Event:CAT=Slang
+smaller onese:	CUI=C0441471:	PREF=Event:	TUI=T201:	STY=Event:	CAT=Slang
+jerk:	CUI=C0231530:	PREF=Muscle twitch:	TUI=T033:	STY=Finding:	CAT=Slang
+jerks:	CUI=C0231530:	PREF=Muscle twitch:	TUI=T033:	STY=Finding:	CAT=Slang:
+Vacant episode:	CUI=C0563606:	PREF=Vacant episode:	TUI=T048:	STY=Mental or Behavioral Dysfunction:	CAT=Slang
+Blank spell:	CUI=C0563606:	PREF=Vacant episode:	TUI=T048:	STY=Mental or Behavioral Dysfunction:	CAT=Slang
+Blank episode:	CUI=C0563606:	PREF=Vacant episode:	TUI=T048:	STY=Mental or Behavioral Dysfunction:	CAT=Slang
+Episode:	CUI=C0332189:	PREF=Episode:	TUI=T079:	STY=Temporal Concept:	CAT=Slang
+Convulsion:	CUI=C4048158:	PREF=Convulsion:	TUI=T184:	STY=Sign or Symptom:	CAT=Slang
+Loss of consciousness:	CUI=C0041657:	PREF=Loss of consciousness:	TUI=T033:	STY=Finding:	CAT=Slang
+event:	CUI=C0441471:	PREF=Event:	TUI=T201:	STY=Event:	CAT=Slang
+events:	CUI=C0441471:	PREF=Event:	TUI=T201:	STY=Event:	CAT=Slang
+Collapse:	CUI=C0344329:	PREF=Collapse:	TUI=T033:	STY=Finding:	CAT=Slang
+Funny spell:	CUI=C0424531:	PREF=Funny turn:	TUI=T033:	STY=Finding:	CAT=Slang
+Funny turn:	CUI=C0424531:	PREF=Funny turn:	TUI=T033:	STY=Finding:	CAT=Slang
+Funny turns:	CUI=C0424531:	PREF=Funny turn:	TUI=T033:	STY=Finding:	CAT=Slang
+Odd episode:	CUI=C0424531:	PREF=Funny turn:	TUI=T033:	STY=Finding:	CAT=Slang
+odd episodes:	CUI=C0424531:	PREF=Funny turn:	TUI=T033:	STY=Finding:	CAT=Slang
+Unusual episodes:	CUI=C0424531:	PREF=Funny turn:	TUI=T033:	STY=Finding:	CAT=Slang
+Unusual episode:	CUI=C0424531:	PREF=Funny turn:	TUI=T033:	STY=Finding:	CAT=Slang
+Muscle twitch:	CUI=C0231530:	PREF=Muscle twitch:	TUI=T033:	STY=Finding:	CAT=Slang
+absence:	CUI=C0563606:	PREF=Vacant episode:	TUI=T048:	STY=Mental or Behavioral Dysfunction:	CAT=Slang	
+absences:	CUI=C0563606:	PREF=Vacant episode:	TUI=T048:	STY=Mental or Behavioral Dysfunction:	CAT=Slang
+myoclonic jerks:	CUI=C0027066:	PREF=myoclonus:	TUI=T184:	STY=Sign or Symptom:	CAT=Slang
+myoclonus:	CUI=C0027066:	PREF=myoclonus:	TUI=T184:	STY=Sign or Symptom:	CAT=Slang
