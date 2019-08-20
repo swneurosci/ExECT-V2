@@ -1248,9 +1248,9 @@ unspecified cerebrovascular disease	CUI=C0007820	PREF=unspecified cerebrovascula
 vascular accident of the brain	CUI=C0038454	PREF=vascular accident, brain	TUI=T047	STY=Disease or Syndrome
 vascular brain accidents	CUI=C0038454	PREF=vascular accidents, brain	TUI=T047	STY=Disease or Syndrome
 vascular disease, intracranial	CUI=C0007820	PREF=vascular disease, intracranial	TUI=T047	STY=Disease or Syndrome
-intracranial	vascular diseases	CUI=C0007820	PREF=vascular diseases, intracranial	TUI=T047	STY=Disease or Syndrome
+intracranial vascular diseases	CUI=C0007820	PREF=vascular diseases, intracranial	TUI=T047	STY=Disease or Syndrome
 vascular disorder, brain	CUI=C0007820	PREF=vascular disorder, brain	TUI=T047	STY=Disease or Syndrome
-intracranial	vascular disorder	CUI=C0007820	PREF=vascular disorder, intracranial	TUI=T047	STY=Disease or Syndrome
+intracranial vascular disorder	CUI=C0007820	PREF=vascular disorder, intracranial	TUI=T047	STY=Disease or Syndrome
 vascular brain disorders,	CUI=C0007820	PREF=vascular disorders, brain	TUI=T047	STY=Disease or Syndrome
 intracranial vascular disorders intracranial	CUI=C0007820	PREF=vascular disorders, intracranial	TUI=T047	STY=Disease or Syndrome
 vein of galen malformation	CUI=C1562503	PREF=vein of galen malformation	TUI=T019	STY=Congenital Abnormality
