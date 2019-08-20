@@ -1265,7 +1265,7 @@ venous valvular anomaly	CUI=C0340818	PREF=venous valvular anomaly	TUI=T019	STY=C
 venous-lymphatic malformation	CUI=C0340829	PREF=venous-lymphatic malformation	TUI=T019	STY=Congenital Abnormality
 ventricle tumor, cerebral	CUI=C0007798	PREF=ventricle tumor, cerebral	TUI=T191	STY=Neoplastic Process
 ventricle tumors, cerebral	CUI=C0007798	PREF=ventricle tumors, cerebral	TUI=T191	STY=Neoplastic Process
-severe traumatic brain injury	CUI=C3508474	PREF=severe traumatic brain injury	TUI=T037	STY=Injury or Poisoning	
+severe traumatic brain injury	CUI=C3508474	PREF=severe traumatic brain injury	TUI=T037	STY=Injury or Poisoning
 ventricular neoplasm of the brain	CUI=C0007798	PREF=ventricular neoplasm, brain	TUI=T191	STY=Neoplastic Process
 ventricular neoplasms of th brain	CUI=C0007798	PREF=ventricular neoplasms, brain	TUI=T191	STY=Neoplastic Process
 ventricular tumor  of the brain	CUI=C0007798	PREF=ventricular tumor, brain	TUI=T191	STY=Neoplastic Process
@@ -1274,3 +1274,6 @@ viral encephalitis	CUI=C0243010	PREF=viral encephalitis	TUI=T047	STY=Disease or 
 Dysembryoplastic neuroepithelial tumor	CUI=C1266177	PREF=Dysembryoplastic neuroepithelial tumor	TUI=T191	STY=Neoplastic Process
 DNET	CUI=C1266177	PREF=Dysembryoplastic neuroepithelial tumor	TUI=T191	STY=Neoplastic Process
 DNT	CUI=C1266177	PREF=Dysembryoplastic neuroepithelial tumor	TUI=T191	STY=Neoplastic Process
+microcephaly	CUI=C0025958	PREF=Microcephaly	TUI=T019	STY=Congenital Abnormality
+Microcephaly	CUI=C0424688	PREF=Microcephaly	TUI=T033	STY=Finding
+micro-caphaly	CUI=C0025958	PREF=Microcephaly	TUI=T019	STY=Congenital Abnormality
