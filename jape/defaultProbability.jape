@@ -10,6 +10,7 @@ Options: control=appelt
 
 
 Rule: default1
+Priority: 99
 (
 	({Lookup.majorType == umls, Lookup.Certainty==~"(?i)", Lookup.Negation=="Affirmed"}):umls
 ):match
@@ -19,8 +20,9 @@ Rule: default1
 }
 
 Rule: default1a
+Priority: 99
 (
-	({Lookup3.majorType == Lookup, Lookup3.Certainty==~"(?i)", Lookup3.Negation=="Affirmed"}):umls
+	({Lookup3.majorType == umls, Lookup3.Certainty==~"(?i)", Lookup3.Negation=="Affirmed"}):umls
 ):match
 -->
 :umls {
@@ -32,6 +34,7 @@ Rule: default1a
 
 
 Rule: default2
+Priority: 99
 (
 	({Lookup.majorType == umls, Lookup.Certainty ==~"(?i)", Lookup.Negation=="Negated"}):umls
 ):match
@@ -41,8 +44,9 @@ Rule: default2
 }
 
 Rule: default2
+Priority: 99
 (
-	({Lookup3.majorType == Lookup, Lookup.Certainty ==~"(?i)", Lookup.Negation=="Negated"}):umls
+	({Lookup3.majorType == umls, Lookup.Certainty ==~"(?i)", Lookup.Negation=="Negated"}):umls
 ):match
 -->
 :umls {
