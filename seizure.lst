@@ -340,7 +340,7 @@ tonic clonic seizure	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T04
 tonic clonic seizures	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 generalised tonic clonic seizure	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 generalised tonic-clonic seizures	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
-Seizures, Sensory	CUI=C0751496	PREF=sensory seizure	TUI=T184	STY=Sign or Symptom
+sensory Seizures	CUI=C0751496	PREF=sensory seizure	TUI=T184	STY=Sign or Symptom
 sensory seizure 	CUI=C0751496	PREF=sensory seizure	TUI=T184	STY=Sign or Symptom
 focal sensory seizures	CUI=C0544645	PREF=focal sensory seizure	TUI=047	STY=Disease or Syndrome
 Epileptic aura	CUI=C0234542	PREF=Epileptic aura	TUI=T184	STY=Sign or Symptom

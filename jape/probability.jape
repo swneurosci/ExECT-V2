@@ -11,6 +11,7 @@ Options: control=appelt
 
 
 Rule: prob1
+Priority: 100
 (
 	({Lookup2.minorType == probability}):prob
 	({Lookup.majorType == umls}):umls
@@ -22,9 +23,10 @@ Rule: prob1
 }
 
 Rule: prob2
+Priority: 100
 (
 	({Lookup2.minorType == probability}):prob
-	({Lookup3.majorType == Lookup}):umls
+	({Lookup3.majorType == umls}):umls
 ):match
 -->
 :umls {
