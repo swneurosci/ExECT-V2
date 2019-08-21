@@ -1398,3 +1398,15 @@ secondary generalized seizures	CUI=C0270838	PREF=secondary generalized seizures	
 seizures	CUI=C0036572	PREF=seizures	TUI=T184	STY=Sign or Symptom
 seizure	CUI=C0036572	PREF=seizure	TUI=T184	STY=Sign or Symptom
 simple partial seizures	CUI=C0234974	PREF=simple partial seizures	TUI=T047	STY=Disease or Syndrome	=
+symptomatic early myoclonic encephalopathy	CUI=C0270855	PREF=Symptomatic early myoclonic encephalopathy	TUI=T047	STY=Disease or Syndrome
+Early Myoclonic Encephalopathy	CUI=C0270855	PREF=Early Myoclonic Encephalopathy	TUI=T047	STY=Disease or Syndrome
+Myoclonic Epilepsy, Neonatal, With Suppression-Burst Pattern	CUI=C0270855	PREF=Myoclonic Epilepsy, Neonatal, With Suppression-Burst Pattern	TUI=T047	STY=Disease or Syndrome
+Symptomatic Myoclonic Epilepsies	CUI=C0338479	PREF=Symptomatic Myoclonic Epilepsies	TUI=T047	STY=Disease or Syndrome
+Symptomatic Myoclonic Epilepsy	CUI=C0338479	PREF=Symptomatic Myoclonic Epilepsy	TUI=T047	STY=Disease or Syndrome
+Early infantile epileptic encephalopathy with suppression bursts	CUI=C0393706	PREF=Early infantile epileptic encephalopathy with suppression bursts	TUI=T047	STY=Disease or Syndrome
+Early infant epileptic encephalopathy wth suppression bursts	CUI=C0393706	PREF=Early infant epileptic encephalopathy wth suppression bursts	TUI=T047	STY=Disease or Syndrome
+Early infantile epileptic encephalopathy with suppression bursts	CUI=C0393706	PREF=Early infantile epileptic encephalopathy with suppression bursts	TUI=T047	STY=Disease or Syndrome
+Ohtahara syndrome	CUI=C0393706	PREF=Ohtahara syndrome	TUI=T047	STY=Disease or Syndrome
+Myoclonic Encephalopathies	CUI=C0438414	PREF=Myoclonic Encephalopathies	TUI=T047	STY=Disease or Syndrome
+Myoclonic Encephalopathy	CUI=C0438414	PREF=Myoclonic Encephalopathy	TUI=T047	STY=Disease or Syndrome
+Symptomatic generalised epilepsy	CUI=C0270854	PREF=Symptomatic generalised epilepsy	TUI=T047	STY=Disease or Syndrome
