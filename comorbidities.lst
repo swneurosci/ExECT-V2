@@ -1276,4 +1276,4 @@ DNET	CUI=C1266177	PREF=Dysembryoplastic neuroepithelial tumor	TUI=T191	STY=Neopl
 DNT	CUI=C1266177	PREF=Dysembryoplastic neuroepithelial tumor	TUI=T191	STY=Neoplastic Process
 microcephaly	CUI=C0025958	PREF=Microcephaly	TUI=T019	STY=Congenital Abnormality
 Microcephaly	CUI=C0424688	PREF=Microcephaly	TUI=T033	STY=Finding
-micro-caphaly	CUI=C0025958	PREF=Microcephaly	TUI=T019	STY=Congenital Abnormality
+micro-cephaly	CUI=C0025958	PREF=Microcephaly	TUI=T019	STY=Congenital Abnormality
