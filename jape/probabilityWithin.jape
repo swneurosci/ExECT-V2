@@ -1,0 +1,38 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: ModifyLookup
+Input:Lookup Lookup2 Lookup3 Sentence
+Options: control=all
+
+ /*Rule: default1
+Priority: 99
+(
+	({Lookup3.Certainty == 3}):index
+    ({Lookup3.Certainty==~"(?i)"}):umls
+):match
+-->
+:umls {
+  getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
+    getOnlyAnn(bindings.get("index")).getFeatures().get("Level"));
+}*/
+
+Rule: Lookup3Mention
+(
+({Lookup3}):lookup3  
+)
+-->
+{
+  AnnotationSet span  = (gate.AnnotationSet) bindings.get("lookup3");
+  Annotation lookup3   = span.iterator().next();
+  AnnotationSet mentions = inputAS.getContained (span.firstNode ().getOffset (), span.lastNode ().getOffset ()) 
+  .get("Mention");
+  Iterator<Annotation>  mentionIter = mentions.iterator();
+
+ FeatureMap lookup3Features  = lookup3.getFeatures();
+   Set        lookup3FKeys     = lookup3Features.keySet();
+   Annotation mention;
+   FeatureMap mentionFeatures, additionalFeatures;
+   Iterator   keyIter;
+   Object     key, value;
+   String     mKey;
+   }

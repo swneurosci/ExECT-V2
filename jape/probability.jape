@@ -1,8 +1,8 @@
 Imports: {import static gate.Utils.*; }
 
 Phase: ModifyLookup
-Input:Lookup Lookup2 Lookup3 Sentence
-Options: control=appelt
+Input: Lookup Lookup2 Lookup3 Sentence
+Options: control=brill
 
 /*
  * assigns a certainty level  (1-5, 5 most certain)to Lookups 
@@ -20,17 +20,49 @@ Priority: 100
 :umls {
   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
+    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","rulea");
 }
 
 Rule: prob2
 Priority: 100
 (
 	({Lookup2.minorType == probability}):prob
-	({Lookup3.majorType == umls}):umls
+  ({Lookup3.majorType == umls}):umls
 ):match
 -->
 :umls {
   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
+    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruleb");
 }
 
+Rule: prob2
+Priority: 99
+(
+	({Lookup2.minorType == probability}):prob
+	({Lookup3.majorType == umls})+
+  ({Lookup3.majorType == umls}):umls
+):match
+-->
+:umls {
+  getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
+    getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
+    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","rulec");
+}
+
+/* this last rule doesn't work  - we are trying to copy the certainty feature from  the main  Lookup3 
+to lookup3 within it. The main Lookup is a correct certainty  but the inner one doesnt - it gets default
+certainty (if this is switched on) or no certainty - which could be a better option here) */
+
+Rule: prob3
+Priority: 99
+(
+	({Lookup2.minorType == probability}):prob
+  ({Lookup3 within Lookup3}):umls
+):match
+-->
+:umls {
+  getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
+    getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
+    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruled");
+}
