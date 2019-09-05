@@ -789,6 +789,7 @@ localisation-related epilepsy (disorder)	Seizure=No	CUI=C0014547	PREF=localisati
 localisation-related epilepsy -retired-	CUI=C0014547	Seizure=No	PREF=localisation-related epilepsy -retired-	TUI=T047	STY=Disease or Syndrome
 localisation-related idiopathic epilepsy	Seizure=No	CUI=C0472348	PREF=localisation-related idiopathic epilepsy	TUI=T047	STY=Disease or Syndrome
 symptomatic focal epilepsy	Seizure=No	CUI=C0472349	PREF=symptomatic focal epilepsy	TUI=T047	STY=Disease or Syndrome
+focal symptomatic epilepsy	CUI=C0472349	PREF=symptomatic focal epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset	CUI=C0475521	Seizure=No	PREF=localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset	TUI=T047	STY=Disease or Syndrome
 localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset nos	CUI=C0475521	Seizure=No	PREF=localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset nos	TUI=T047	STY=Disease or Syndrome
 localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with complex partial seizures	CUI=C0494472	Seizure=No	PREF=localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with complex partial seizures	TUI=T047	STY=Disease or Syndrome
