@@ -162,9 +162,9 @@ olfactory seizure (finding)	CUI=C0422853	PREF=olfactory seizure (finding)	TUI=T0
 olfactory seizures	CUI=C0422853	PREF=olfactory seizures	TUI=T047	STY=Disease or Syndrome
 osteogenesis imperfecta, retinopathy, seizures, intellectual disability syndrome	CUI=C4302824	PREF=osteogenesis imperfecta, retinopathy, seizures, intellectual disability syndrome	TUI=T047	STY=Disease or Syndrome
 osteogenesis imperfecta, retinopathy, seizures, intellectual disability syndrome (disorder)	CUI=C4302824	PREF=osteogenesis imperfecta, retinopathy, seizures, intellectual disability syndrome (disorder)	TUI=T047	STY=Disease or Syndrome
-parietal lobe seizure	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	STY=Disease or Syndrome	
+parietal lobe seizure	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
 parietal lobe seizures	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
-seizures of parietal lobe	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	STY=Disease or Syndrome 
+seizures of parietal lobe	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
 Secondary generalised tonic clonic seizures	CUI=C0877017	PREF=Secondary generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 Secondary generalized tonic clonic seizures	CUI=C0877017	PREF=Secondary generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 Generalized tonic-clonic seizures, secondary	CUI=C0877017	PREF=Generalized tonic-clonic seizures, secondary	TUI=T047	STY=Disease or Syndrome
