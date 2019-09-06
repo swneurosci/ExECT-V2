@@ -1,0 +1,72 @@
+Phase: Onset
+Input: Lookup3 Person Lookup2 Sentence Numeric timePeriod timeElapsed History
+Options: control=appelt
+
+Rule: seizuresFor1
+Priority: 100
+
+(   
+    {Person}
+	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed}
+	{timeElapsed}
+	{Numeric} 
+    {timePeriod}
+ ):match  
+ -->
+:match.Onset = {rule = seizuresFor1 , OnsetType = "time_since_episodes_started",
+PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
+STY = :match.Lookup3.STY, 
+timePeriod = :match.timePeriod.time-unit,
+value =:match.Numeric.value}
+
+
+Rule: onsetAge1
+Priority: 99
+
+(   
+	{Person}
+	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed}
+	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
+	{Person.majorType == person}
+	{Lookup2.majorType == historic}
+	{Numeric}
+	{timePeriod}
+	
+ ):match  
+ -->
+:match.Onset = {rule = onsetAge1, OnsetType = "age_episodes_started", 
+PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
+STY = :match.Lookup3.STY, 
+timePeriod = :match.timePeriod.time-unit,
+value =:match.Numeric.value}
+
+Rule: onsetAge2
+Priority: 99
+
+(   
+	{Person}
+	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed}
+	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
+	{Person.majorType == person}
+	{Lookup2.majorType == historic}
+	{Numeric}
+
+	
+ ):match  
+ -->
+:match.Onset = {rule = onsetAge2, OnsetType = "age_episodes_started", 
+PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
+STY = :match.Lookup3.STY,
+timePeriod = "Years"
+value =:match.Numeric.value}
+
+  
+
+
+
+
+
+
+ 
+ 
+

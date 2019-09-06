@@ -18,7 +18,7 @@ charities.lst:organization:charity::Lookup2
 health_care_terms.lst:organization:health_term::Lookup2
 wordnumbers.lst:frequency:number::Numeric
 seizureSlang.lst:umls:generic:undefined seizure:Lookup3
-pronoun.lst:person:pronoun::Person
+pronoun.lst:person:pronoun:person:Person
 CalenderUnit.lst:frequency:time::Calendar
 NegConj.lst:negation:allow::NegConj
 months.lst:time:date::Lookup2
