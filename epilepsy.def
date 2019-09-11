@@ -1,0 +1,4 @@
+epilepsy.lst:umls:Disease::Lookup4
+drugs.lst:Lookup:Disease::Drug
+seizure.lst:umls:Disease::Lookup3
+comorbidities.lst:umls:OtherDisease::Lookup3
