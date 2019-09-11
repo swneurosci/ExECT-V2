@@ -306,6 +306,10 @@
                   <string>Bio</string>
                 </entry>
                 <entry>
+                  <string>inputASName</string>
+                  <string></string>
+                </entry>
+                <entry>
                   <string>annotationTypes</string>
                   <gate.util.persistence.CollectionPersistence>
                     <localList>
@@ -324,10 +328,6 @@
                     </localList>
                     <collectionType>java.util.ArrayList</collectionType>
                   </gate.util.persistence.CollectionPersistence>
-                </entry>
-                <entry>
-                  <string>inputASName</string>
-                  <string></string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -402,7 +402,7 @@
                 <entry>
                   <string>listsURL</string>
                   <gate.util.persistence.PersistenceManager-RRPersistence>
-                    <uriString>$relpath$gaz.def</uriString>
+                    <uriString>$relpath$epilepsy.def</uriString>
                   </gate.util.persistence.PersistenceManager-RRPersistence>
                 </entry>
                 <entry>
@@ -906,6 +906,10 @@
                   <string>Epilepsy</string>
                 </entry>
                 <entry>
+                  <string>inputASName</string>
+                  <string>Bio</string>
+                </entry>
+                <entry>
                   <string>annotationTypes</string>
                   <gate.util.persistence.CollectionPersistence>
                     <localList>
@@ -918,10 +922,6 @@
                     </localList>
                     <collectionType>java.util.ArrayList</collectionType>
                   </gate.util.persistence.CollectionPersistence>
-                </entry>
-                <entry>
-                  <string>inputASName</string>
-                  <string>Bio</string>
                 </entry>
               </localMap>
             </runtimeParams>
