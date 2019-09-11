@@ -1,0 +1,47 @@
+Phase: OnsetDate
+Input: Lookup3 Person Lookup2 Sentence Numeric timeElapsed  PointInTime
+Options: control=appelt
+
+
+Rule: onsetDate1
+Priority: 98
+
+(   
+	{Person}
+	({Lookup2.majorType == historic})
+	({Person})?
+	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed}
+	{timeElapsed}
+	{Lookup2.majorType == time}
+	{PointInTime}
+	
+	
+ ):match  
+ -->
+:match.OnsetDate = {rule = onsetDate1, OnsetType = "date_of_onset", 
+PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
+STY = :match.Lookup3.STY, 
+Year = :match.PointInTime.Since,
+Month =:match.Lookup2.month,
+Day = ""}
+
+Rule: onsetDate2
+Priority: 98
+
+(   
+	{Person}
+    ({Lookup2})?
+	{Lookup2.majorType == historic, Lookup2.language == onset}
+	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed}
+	{timeElapsed.time == during}
+	{Numeric}
+	
+	
+ ):match  
+ -->
+:match.OnsetDate = {rule = onsetDate2, OnsetType = "date_of_onset", 
+PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
+STY = :match.Lookup3.STY, 
+Year = :match.Numeric.value,
+month = "",
+Day = ""}

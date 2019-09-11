@@ -1,0 +1,14 @@
+Phase: LookupWithin
+Input: Lookup3 
+Options: control=brill
+
+
+Rule: LookupWithin
+
+(
+  ({Lookup3 within {Lookup3}}):a
+  
+):match
+-->
+:a.Lookup3 = {rule = LookupWithin} 
+  

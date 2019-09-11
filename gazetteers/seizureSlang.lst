@@ -49,4 +49,5 @@ myoclonic jerks:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Sla
 myoclonus:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Slang
 Myoclonic jerks:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Slang
 Myoclonus:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Slang
-
+Turn:CUI=C0424531:PREF=Funny turn:TUI=T033:STY=Finding:CAT=Slang
+Turns:CUI=C0424531:PREF=Funny turn:TUI=T033:STY=Finding:CAT=Slang
