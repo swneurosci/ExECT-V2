@@ -1,0 +1,13 @@
+Multiphase:Onset
+
+Phases:
+
+OnsetAge
+OnsetAgeRange
+OnsetDate
+TimeSinceOnset
+/*AgeDiagnosed
+AgeDiagnosedRange
+DateDiagnosed
+TimeSinceDiagnosis
+*/

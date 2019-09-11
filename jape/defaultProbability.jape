@@ -61,8 +61,6 @@ Priority: 99
 
 
 
-
-
 Rule: default2
 (
 	({Lookup.Certainty ==" "}):umls

@@ -1,5 +1,5 @@
 Phase: LookupAppelt
-Input:  Lookup4
+Input:  Lookup4 Seizures Comorbidities
 Options: control=appelt
 
 Rule: LookupAppelt
@@ -16,3 +16,4 @@ CUI = :match.Lookup4.CUI,
 STY = :match.Lookup4.STY,
 Seizure = :match.Lookup4.Seizure,
 CAT = :match.Lookup4.CAT}
+

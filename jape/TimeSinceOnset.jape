@@ -1,0 +1,42 @@
+Phase: TimeSinceOnset
+Input: Lookup3 Person Sentence Numeric timePeriod timeElapsed Lookup2
+
+Options: control=appelt
+
+Rule: seizuresFor1
+Priority: 100
+
+(   
+    {Person}
+	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed}
+	{timeElapsed}
+	{Numeric} 
+    {timePeriod}
+ ):match  
+ -->
+:match.TimeSinceOnset = {rule = seizuresFor1 , OnsetType = "time_since_episodes_started",
+PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
+STY = :match.Lookup3.STY, 
+timePeriod = :match.timePeriod.time-unit,
+value =:match.Numeric.value}
+
+Rule: seizuresFor2
+Priority: 99
+
+(   
+    {Person}
+	{Lookup2.language == onset}
+	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed}
+	({Person})?
+	({Lookup2})?
+	{timeElapsed}
+	{Numeric} 
+    {timePeriod}
+	{timeElapsed}
+ ):match  
+ -->
+:match.TimeSinceOnset = {rule = seizuresFor2 , OnsetType = "time_since_episodes_started",
+PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
+STY = :match.Lookup3.STY, 
+timePeriod = :match.timePeriod.time-unit,
+value =:match.Numeric.value}

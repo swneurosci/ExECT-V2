@@ -51,3 +51,4 @@ personAge.lst:person:time::Lookup2
 DiagnosisTriggers.lst:diagnosis:::DiagnosisTriggers
 opinion.lst:diagnosis:opinion::Lookup2
 contextInvestigations.lst:Investigations:Context::ContextInvestigations
+change.lst:frequency:change::Lookup2

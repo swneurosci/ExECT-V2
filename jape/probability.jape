@@ -50,19 +50,24 @@ Priority: 99
     getOnlyAnn(umlsAnnots).getFeatures().put("Rule","rulec");
 }
 
-/* this last rule doesn't work  - we are trying to copy the certainty feature from  the main  Lookup3 
-to lookup3 within it. The main Lookup is a correct certainty  but the inner one doesnt - it gets default
-certainty (if this is switched on) or no certainty - which could be a better option here) */
+/* this last rule below doesn't work  - we are trying to copy the certainty feature from  the main  Lookup3 
+to lookup3 within it. The main Lookup has a correct certainty  but the inner one hasn't - it gets default
+certainty (if this is switched on) or no certainty - which could be a better option here, Certainty  == "3" was an experiment...) */
 
-Rule: prob3
-Priority: 99
+/*
+
+Rule:probdrift
+Priority:99
 (
-	({Lookup2.minorType == probability}):prob
-  ({Lookup3 within Lookup3}):umls
+  ({Lookup2.minorType == probability}):prob
+  ({Lookup3 within {lookup3.Certainty == "3" }}):umls
+
 ):match
 -->
 :umls {
   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
-    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruled");
-}
+    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","probdrift");
+} 
+
+*/
