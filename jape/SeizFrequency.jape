@@ -10,7 +10,7 @@ Priority: 99
 ):match
 -->
 :match.SeizFrequency1 = {Rule = SeizFrequency1, TimePeriod = :match.timePeriods.time-unit,
-NumberOfTimePeriods = :match.NumberRange.value}
+NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods = :match.NumberRange.N1}
 
 Rule: SeizFrequency2
 Priority: 100

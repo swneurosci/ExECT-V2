@@ -79,7 +79,7 @@ Priority: 100
 (
     ({ContextPrescription})?
     ({NumberRange})
-    ({Lookup3.majorType == "Lookup", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
     ({timePeriods})
 ):match
 -->
@@ -98,7 +98,7 @@ Priority: 99
 (
     ({ContextPrescription})?
     ({NumberRange})
-    ({Lookup3.majorType == "epilepsy", Lookup3.minorType == "seizure", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
     ({timePeriods})
 ):match
 -->
@@ -116,12 +116,13 @@ Rule: hSeizureFreq1c
 Priority: 98
 (
     ({ContextPrescription})?
-    ({Lookup3.majorType == "Lookup", Lookup3.minorType == "Disease", !Lookup3.PREF=="Seizure free", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", !Lookup3.PREF=="Seizure free", !Lookup3.PREF=="seizure free", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
     ({SeizFrequency1})
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "hSeizure1c", CUI = :match.Lookup3.CUI,
-NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods, TimePeriod = :match.SeizFrequency1.TimePeriod,
+NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency1.UpperNumberOfTimePeriods,
+LowerNumberOfTimePeriods = :match.SeizFrequency1.LowerNumberOfTimePeriods, TimePeriod = :match.SeizFrequency1.TimePeriod,
 QuantityTotal = "1"}
 
 /*
@@ -133,7 +134,7 @@ Rule: hSeizureFreq1d
 Priority: 98
 (
     ({ContextPrescription})?
-    ({Lookup3.majorType == "epilepsy", Lookup3.minorType == "seizure", !Lookup3.PREF=="Seizure free", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", !Lookup3.PREF=="Seizure free", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
     ({SeizFrequency2})
 ):match
 -->
@@ -145,7 +146,7 @@ Rule: hSeizureFreq1e
 Priority: 98
 (
     ({ContextPrescription})?
-    ({Lookup3.majorType == "epilepsy", Lookup3.minorType == "seizure", !Lookup3.PREF=="Seizure free", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", !Lookup3.PREF=="Seizure free", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
     ({SeizFrequency1})
 ):match
 -->
@@ -157,7 +158,7 @@ Rule: hSeizureFreq1f
 Priority: 97
 (
     ({ContextPrescription})?
-    ({Lookup3.majorType == "Lookup", Lookup3.minorType == "Disease", !Lookup3.PREF=="Seizure free", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", !Lookup3.PREF=="Seizure free", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
     ({SeizFrequency2})
 ):match
 -->
@@ -175,7 +176,7 @@ Rule: hSeizureFreq2a
 Priority: 98
 (
     ({ContextPrescription})?
-    ({Lookup3.majorType == "Lookup", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
     ({SeizFreq})
 ):match
 -->
@@ -190,7 +191,7 @@ Rule: hSeizureFreq2b
 Priority: 99
 (
     ({ContextPrescription})?
-    ({Lookup3.majorType == "Lookup", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
     ({NumberRange})
     ({SeizFreq})
 ):match
@@ -206,7 +207,7 @@ Rule: hSeizureFreq2c
 Priority: 99
 (
     ({ContextPrescription})?
-    ({Lookup3.majorType == "epilepsy", Lookup3.minorType == "seizure", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
     ({NumberRange})
     ({SeizFreq})
 ):match
@@ -222,7 +223,7 @@ Rule: hSeizureFreq2d
 Priority: 99
 (
     ({ContextPrescription})?
-    ({Lookup3.majorType == "Lookup", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
     ({Split})
     ({timePeriods})?
     ({SeizFrequency2})
@@ -243,7 +244,7 @@ Priority: 100
 (
     ({ContextPrescription})?
     ({NumberRange}):num1
-    ({Lookup3.majorType == "Lookup", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
     ({SeizFrequency1}):num2
 ):match
 -->
@@ -259,7 +260,7 @@ Rule: hSeizureFreq4a
 Priority: 95
 (
     ({ContextPrescription})?
-    ({Lookup3.majorType == "epilepsy", Lookup3.minorType == "seizure", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
     ({SeizFreq}):SF1
     ({NumberRange})
     ({SeizFreq}):SF2
@@ -278,7 +279,7 @@ Priority: 95
     ({NumberRange}):n1
     ({NumberRange}):n2
     ({timePeriods})
-    ({Lookup3.majorType == "epilepsy", Lookup3.minorType == "seizure", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "hSeizure5a", CUI = :match.Lookup3.CUI, NumberOfTimePeriods = :n2.NumberRange.value, TimePeriod = :match.timePeriods.time-unit, QuantityTotal = :n1.NumberRange.value,
@@ -295,7 +296,7 @@ Priority: 95
 (
     ({PointInTime})
     ({NumberRange})
-    ({Lookup3.majorType == "Lookup", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
 ):match
 -->
 :match.SeizureFrequency11 = { rule = hSeizureFreq6a, CUI = :match.Lookup3.CUI, QuantityTotal = :match.NumberRange.value, YearDate = :match.PointInTime.Since, SinceOrDuration = "Date"}
@@ -308,7 +309,7 @@ Rule: hSeizureFreq6a
 Priority: 95
 (
     ({NumberRange})
-    ({Lookup3.majorType == "Lookup", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
+    ({Lookup3.majorType == "umls", Lookup3.minorType == "Disease", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
     ({PointInTime})
 ):match
 -->
