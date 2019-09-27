@@ -6,3 +6,6 @@ last year:Since=Last_Year
 this year:Since=This_Year
 seen in the clinic:Since=LastClinic
 last being seen:Since=LastClinic
+all his life:Since=From_Birth
+all her life:Since=From_Birth
+from birth:Since=From_Birth

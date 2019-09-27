@@ -1,0 +1,27 @@
+Phase: DateDiagnosed
+Input: Lookup Person Lookup2 Sentence Numeric timeElapsed 
+
+Options: control=appelt
+
+
+Rule: DateDiagnosed1
+Priority: 98
+
+(   
+	{Person}
+	{Lookup2.majorType == historic}
+    {Lookup2.majorType == historic, Lookup2.minorType == symptoms}
+	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+	{timeElapsed}
+	{Numeric}
+	
+	
+ ):match  
+ -->
+:match.DateDiagnosed = {rule = DateDiagnosed1, OnsetType = "Year_Diagnosed", 
+PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
+STY = :match.Lookup.STY, 
+Certainty = :match.Lookup.Certainty,
+Year = :match.Numeric.value,
+Month ="",
+Day = ""}

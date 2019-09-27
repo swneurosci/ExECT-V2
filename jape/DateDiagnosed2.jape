@@ -1,0 +1,54 @@
+Phase: DateDiagnosed
+Input: Lookup Person Lookup3 Lookup2 DiagnosisTriggers Numeric timeElapsed Split
+
+Options: control = appelt
+
+
+Rule: DateDiagnosed2a
+Priority: 100
+
+(   
+    {Person}
+    {DiagnosisTriggers.majorType == diagnosis}
+    ({Lookup.majorType == umls , Lookup.Negation == Affirmed})
+    ({Lookup3})*
+    {Split}
+    {DiagnosisTriggers.majorType == diagnosis}
+    {Lookup2.majorType == historic}
+	{timeElapsed}
+	{Numeric}
+	
+	
+ ):match  
+ -->
+:match.DateDiagnosed2 = {rule = DateDiagnosed2a, OnsetType = "Year_Diagnosed", 
+PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
+STY = :match.Lookup.STY, 
+Certainty = :match.Lookup.Certainty,
+Year = :match.Numeric.value,
+Month ="",
+Day = ""}
+
+
+
+Rule: DateDiagnosed2b
+Priority: 99
+(   
+	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+    {Split}
+    {DiagnosisTriggers.majorType == diagnosis}
+    {Lookup2.majorType == historic}
+	{timeElapsed}
+	{Numeric}
+	
+	
+ ):match  
+ -->
+:match.DateDiagnosed2 = {rule = DateDiagnosed2b, OnsetType = "Year_Diagnosed", 
+PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
+STY = :match.Lookup.STY, 
+Certainty = :match.Lookup.Certainty,
+Year = :match.Numeric.value,
+Month ="",
+Day = ""}
+
