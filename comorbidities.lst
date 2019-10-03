@@ -96,7 +96,8 @@ visceral neuropathy and brain anomaly with facial dysmorphism and developmental 
 complex febrile seizure	CUI=C0751057	PREF=complex febrile seizure	TUI=T047	STY=Disease or Syndrome
 febrile convulsion	CUI=C0009952	PREF=febrile convulsions	TUI=T047	STY=Disease or Syndrome
 febrile convulsions	CUI=C0009952	PREF=febrile convulsions	TUI=T047	STY=Disease or Syndrome
-febrile convulsion seizures	CUI=C0009952	PREF=febrile convulsion seizures	TUI=T047	STY=Disease or Syndrome
+febrile seizures	CUI=C0009952	PREF=febrile convulsion seizures	TUI=T047	STY=Disease or Syndrome
+febrile seizure	CUI=C0009952	PREF=febrile convulsion seizures	TUI=T047	STY=Disease or Syndrome
 complex febrile seizure	CUI=C0751057	PREF=seizure, febrile, complex	TUI=T047	STY=Disease or Syndrome
 simplefebrile seizure	CUI=C0149886	PREF=seizure, febrile, simple	TUI=T047	STY=Disease or Syndrome
 seizure associated with fever	CUI=C0009952	PREF=seizure, fever	TUI=T047	STY=Disease or Syndrome

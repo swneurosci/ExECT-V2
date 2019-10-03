@@ -358,4 +358,6 @@ intractable atonic seizures	CUI=C3495021	PREF=Atonic seizure, intractable	TUI=T0
 refractory atonic seizures 	CUI=C3495021	PREF=Atonic seizure, refractory	TUI=T047	STY=Disease or Syndrome
 Atonic seizure, non-intractable	CUI=C3495022	PREF=Atonic seizure, non-intractable	TUI=T047	STY=Disease or Syndrome
 Atonic seizure, non-refractory	CUI=C3495022	PREF=Atonic seizure, non-refractory	TUI=T047	STY=Disease or Syndrome
-Seizure free	CUI=C1299590	PREF=Seizure Free	TUI=T033	STY=Finding
+seizure free	CUI=C1299590	PREF=seizure free	TUI=T033	STY=Finding	
+febrile seizure	CUI=C0009952	PREF=febrile seizure	TUI=T047	STY=Disease or Syndrome
+febrile seizures	CUI=C0009952	PREF=febrile seizure	TUI=T047	STY=Disease or Syndrome

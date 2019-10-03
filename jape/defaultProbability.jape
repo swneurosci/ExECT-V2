@@ -2,7 +2,7 @@ Imports: {import static gate.Utils.*; }
 
 Phase: ModifyLookup
 Input:Lookup Lookup2 Lookup3
-Options: control=appelt
+Options: control=all
 
 /*
  * if not certainty terms found, use Lookup.Negation to assign default value

@@ -51,7 +51,7 @@ Priority: 98
 
 (   
 	{Person}
-	({Lookup2.majorType == historic})
+	({Lookup2.majorType == historic , Lookup2.language == onset})
 	({Person})?
 	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed}
 	{timeElapsed}
@@ -88,3 +88,27 @@ STY = :match.Lookup.STY,
 Year = :match.PointInTime.Since,
 Month ="",
 Day = ""}
+
+Rule: onsetDate4
+Priority: 98
+
+(   
+	{Lookup2.majorType == historic}
+	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed}
+	{Lookup2.language == onset }
+	{timeElapsed}
+	{Numeric}
+	
+	
+	
+ ):match  
+ -->
+:match.OnsetDate = {rule = onsetDate4, OnsetType = "date_of_onset", 
+PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
+STY = :match.Lookup3.STY, 
+Year = :match.Numeric.value,
+Month ="",
+Day = ""}
+
+
+
