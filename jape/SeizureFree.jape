@@ -1,258 +1,255 @@
-Phase: SeizureFree
-Input: NumberRange timePeriods Lookup3 Sentence timeElapsed PartialDate Interaction Split
-Options: control=appelt
-
-
-Rule: seizureFree1b
-Priority: 99
-(
-    ({timeElapsed.time!=during}
-    {PartialDate}
-    ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})): match
-):s
--->
-:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1b1, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI, 
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2,
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0"
-}
-
-Rule: seizureFree1b
-Priority: 99
-(
-    ({timeElapsed.time!=during}
-    {Interaction}
-    ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})): match
-):s
--->
-:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1b2, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI, 
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2,
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0"
-}
-
-Rule: seizureFree1b
-Priority: 99
-(
-    ({timeElapsed.time!=during}
-    {timePeriods}
-    ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})): match
-):s
--->
-:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1b3, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI, 
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2,
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0"
-}
-
-
-Rule: seizureFree1b
-Priority: 100
-(
-    ({timeElapsed.time!=during}
-    {NumberRange}
-    {PartialDate}
-    ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})): match
-):s
--->
-:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1b4, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI, 
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2,
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0"
-}
-
-Rule: seizureFree1b
-Priority: 100
-(
-    ({timeElapsed.time!=during}
-    {NumberRange}
-    {Interaction}
-    ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})): match
-):s
--->
-:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1b5, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI, 
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2,
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0"
-}
-
-Rule: seizureFree1b
-Priority: 100
-(
-    ({timeElapsed.time!=during}
-    {NumberRange}
-    {timePeriods}
-    ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})): match
-):s
--->
-:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1b6, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI, 
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2,
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0"
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Rule: seizureFree1d
-Priority: 99
-(
-    (({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})
-    {timeElapsed.time == since}
-    {NumberRange}
-    {timePeriods}):match
-):s
--->
-:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1d1, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI, 
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2,
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0"
-}
-
-
-
-Rule: seizureFree1d
-Priority: 100
-(
-    (({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})
-    {timeElapsed.time == since}
-    {PartialDate}):match
-):s
--->
-:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1d2, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI, 
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2,
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0"
-}
-
-
-Rule: seizureFree1d
-Priority: 100
-(
-    (({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})
-    {timeElapsed.time == since}
-    {NumberRange}
-    {timePeriods}):match
-):s
--->
-:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1d3, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI, 
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2,
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0"
-}
-
-
-Rule: seizureFree1d
-Priority: 99
-(
-    (({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})
-    {timeElapsed.time == since}
-    {Interaction}):match
-):s
--->
-:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1d4, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI, 
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2,
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0"
-}
-
-Rule: seizureFree1d
-Priority: 99
-(
-    (({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})
-    {timeElapsed.time == since}
-    {PartialDate}):match
-):s
--->
-:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1d5, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI, 
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2,
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0"
-}
-
-
-Rule: seizureFree1d
-Priority: 99
-(
-    (({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})
-    {timeElapsed.time == since}
-    {Interaction}):match
-):s
--->
-:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1d6, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI , 
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2,
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0"
-}
-
-
-
-
-Rule: seizureFree1d
-Priority: 99
-(
-    (({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})
-    {timeElapsed.time == since}
-    {timePeriods}
-    ):match
-):s
--->
-:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1d7, PREF = "Fit Frequency", CUI = :match.Lookup3.CUI, 
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-NumberOfTimePeriods = :match.timePeriods.frequency, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2,
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0"
-}
-
-
-
-
-
-
-
-
-
-
-
-
-Rule: seizureFree1f
-Priority: 99
-(
-    ({Interaction}
-    ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})):match
-):s
--->
-:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1f, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI, 
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2,
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0"
-}
-
-
-
-
-
-
+Phase: SeizureFree 
+Input: NumberRange timePeriods Lookup3 Sentence timeElapsed PartialDate Interaction Split 
+Options: control=appelt 
+ 
+ 
+Rule: seizureFree1b 
+Priority: 99 
+( 
+    ({timeElapsed.time!=during} 
+    {PartialDate} 
+    ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})): match 
+):s 
+--> 
+:match.SeizureFree = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1b1, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI,  
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
+NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0" 
+} 
+ 
+Rule: seizureFree1b 
+Priority: 99 
+( 
+    ({timeElapsed.time!=during} 
+    {Interaction} 
+    ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})): match 
+):s 
+--> 
+:match.SeizureFree = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1b2, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI,  
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
+NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0" 
+} 
+ 
+Rule: seizureFree1b 
+Priority: 99 
+( 
+    ({timeElapsed.time!=during} 
+    {timePeriods} 
+    ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})): match 
+):s 
+--> 
+:match.SeizureFree = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1b3, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI,  
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
+NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0" 
+} 
+ 
+ 
+Rule: seizureFree1b 
+Priority: 100 
+( 
+    ({timeElapsed.time!=during} 
+    {NumberRange} 
+    {PartialDate} 
+    ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})): match 
+):s 
+--> 
+:match.SeizureFree = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1b4, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI,  
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
+NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0" 
+} 
+ 
+Rule: seizureFree1b 
+Priority: 100 
+( 
+    ({timeElapsed.time!=during} 
+    {NumberRange} 
+    {Interaction} 
+    ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})): match 
+):s 
+--> 
+:match.SeizureFree = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1b5, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI,  
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
+NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0" 
+} 
+ 
+Rule: seizureFree1b 
+Priority: 100 
+( 
+    ({timeElapsed.time!=during} 
+    {NumberRange} 
+    {timePeriods} 
+    ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})): match 
+):s 
+--> 
+:match.SeizureFree = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1b6, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI,  
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
+NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0" 
+} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Rule: seizureFree1d 
+Priority: 99 
+( 
+    (({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"}) 
+    {timeElapsed.time == since} 
+    {NumberRange} 
+    {timePeriods}):match 
+):s 
+--> 
+:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1d1, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI,  
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
+NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0" 
+} 
+ 
+ 
+ 
+Rule: seizureFree1d 
+Priority: 100 
+( 
+    (({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"}) 
+    {timeElapsed.time == since} 
+    {PartialDate}):match 
+):s 
+--> 
+:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1d2, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI,  
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
+NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0" 
+} 
+ 
+ 
+Rule: seizureFree1d 
+Priority: 100 
+( 
+    (({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"}) 
+    {timeElapsed.time == since} 
+    {NumberRange} 
+    {timePeriods}):match 
+):s 
+--> 
+:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1d3, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI,  
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
+NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0" 
+} 
+ 
+ 
+Rule: seizureFree1d 
+Priority: 99 
+( 
+    (({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"}) 
+    {timeElapsed.time == since} 
+    {Interaction}):match 
+):s 
+--> 
+:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1d4, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI,  
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
+NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0" 
+} 
+ 
+Rule: seizureFree1d 
+Priority: 99 
+( 
+    (({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"}) 
+    {timeElapsed.time == since} 
+    {PartialDate}):match 
+):s 
+--> 
+:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1d5, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI,  
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
+NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0" 
+} 
+ 
+ 
+Rule: seizureFree1d 
+Priority: 99 
+( 
+    (({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"}) 
+    {timeElapsed.time == since} 
+    {Interaction}):match 
+):s 
+--> 
+:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1d6, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI ,  
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
+NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0" 
+} 
+ 
+ 
+ 
+ 
+Rule: seizureFree1d 
+Priority: 99 
+( 
+    (({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"}) 
+    {timeElapsed.time == since} 
+    {timePeriods} 
+    ):match 
+):s 
+--> 
+:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1d7, PREF = "Fit Frequency", CUI = :match.Lookup3.CUI,  
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
+NumberOfTimePeriods = :match.timePeriods.frequency, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0" 
+} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Rule: seizureFree1f 
+Priority: 99 
+( 
+    ({Interaction} 
+    ({Lookup3.Negation == "Negated"} | {Lookup3.PREF == "Seizure free"})):match 
+):s 
+--> 
+:match.SeizureFrequency11 = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1f, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI,  
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
+NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, QuantityTotal = "0" 
+} 
+ 
+ 
+ 

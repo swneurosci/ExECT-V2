@@ -1,25 +1,25 @@
-Phase: SeizFrequency
-Input: NumberRange timePeriods Token Unit
-Options: control=appelt
-
-Rule: SeizFrequency1
-Priority: 99
-(
-    ({NumberRange})
-    ({timePeriods})
-):match
--->
-:match.SeizFrequency1 = {Rule = SeizFrequency1, TimePeriod = :match.timePeriods.time-unit,
-NumberOfTimePeriods = :match.NumberRange.value}
-
-Rule: SeizFrequency2
-Priority: 100
-(
-    ({NumberRange})
-    ({Token, !Unit})
-    ({timePeriods})
-):match
--->
-:match.SeizFrequency2 = {Rule = SeizFrequency2, TimePeriod = :match.timePeriods.time-unit,
-NumberOfTimePeriods = :match.timePeriods.frequency, QuantityTotal = :match.NumberRange.value,
+Phase: SeizFrequency 
+Input: NumberRange timePeriods Token Unit 
+Options: control=appelt 
+ 
+Rule: SeizFrequency1 
+Priority: 99 
+( 
+    ({NumberRange}) 
+    ({timePeriods}) 
+):match 
+--> 
+:match.SeizFrequency1 = {Rule = SeizFrequency1, TimePeriod = :match.timePeriods.time-unit, 
+NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods = :match.NumberRange.N1} 
+ 
+Rule: SeizFrequency2 
+Priority: 100 
+( 
+    ({NumberRange}) 
+    ({Token, !Unit}) 
+    ({timePeriods}) 
+):match 
+--> 
+:match.SeizFrequency2 = {Rule = SeizFrequency2, TimePeriod = :match.timePeriods.time-unit, 
+NumberOfTimePeriods = :match.timePeriods.frequency, QuantityTotal = :match.NumberRange.value, 
 QuantityLowerRange = :match.NumberRange.N1, QuantityUpperRange = :match.NumberRange.N2}
