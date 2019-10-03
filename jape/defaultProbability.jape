@@ -2,7 +2,7 @@ Imports: {import static gate.Utils.*; }
 
 Phase: ModifyLookup
 Input:Lookup Lookup2 Lookup3
-Options: control=appelt
+Options: control=all
 
 /*
  * if not certainty terms found, use Lookup.Negation to assign default value
@@ -49,7 +49,7 @@ Priority: 99
 Rule: default2
 Priority: 99
 (
-	({Lookup3.majorType == umls, Lookup.Certainty ==~"(?i)", Lookup.Negation=="Negated"}):umls
+	({Lookup3.majorType == umls, Lookup3.Certainty ==~"(?i)", Lookup3.Negation=="Negated"}):umls
 ):match
 -->
 :umls {
