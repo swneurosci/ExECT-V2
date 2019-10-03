@@ -313,4 +313,5 @@ Priority: 95
     ({PointInTime}) 
 ):match 
 --> 
+*):match
 :match.SeizureFrequency11 = { rule = hSeizureFreq6a, CUI = :match.Lookup3.CUI, QuantityTotal = :match.NumberRange.value, YearDate = :match.PointInTime.Since, SinceOrDuration = "Date"}
