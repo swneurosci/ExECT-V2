@@ -59,30 +59,7 @@
       <docList>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
-          <resourceName>TestOnset_cause.docx_00021</resourceName>
-          <initParams class="gate.util.persistence.MapPersistence">
-            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-            <localMap>
-              <entry>
-                <string>encoding</string>
-                <string>windows-1252</string>
-              </entry>
-              <entry>
-                <string>sourceUrl</string>
-                <gate.util.persistence.PersistenceManager-URLHolder>
-                  <urlString>$relpath$../../letters/onset_cause/TestOnset_cause.docx</urlString>
-                </gate.util.persistence.PersistenceManager-URLHolder>
-              </entry>
-              <entry>
-                <string>stringContent</string>
-                <string></string>
-              </entry>
-            </localMap>
-          </initParams>
-        </gate.util.persistence.LRPersistence>
-        <gate.util.persistence.LRPersistence>
-          <resourceType>gate.corpora.DocumentImpl</resourceType>
-          <resourceName>TestOnset_cause.txt_00022</resourceName>
+          <resourceName>TestOnset_cause.txt_00018</resourceName>
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
@@ -94,29 +71,6 @@
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
                   <urlString>$relpath$../../letters/onset_cause/TestOnset_cause.txt</urlString>
-                </gate.util.persistence.PersistenceManager-URLHolder>
-              </entry>
-              <entry>
-                <string>stringContent</string>
-                <string></string>
-              </entry>
-            </localMap>
-          </initParams>
-        </gate.util.persistence.LRPersistence>
-        <gate.util.persistence.LRPersistence>
-          <resourceType>gate.corpora.DocumentImpl</resourceType>
-          <resourceName>annotation.conf_00023</resourceName>
-          <initParams class="gate.util.persistence.MapPersistence">
-            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-            <localMap>
-              <entry>
-                <string>encoding</string>
-                <string>windows-1252</string>
-              </entry>
-              <entry>
-                <string>sourceUrl</string>
-                <gate.util.persistence.PersistenceManager-URLHolder>
-                  <urlString>$relpath$../../letters/onset_cause/annotation.conf</urlString>
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -276,12 +230,12 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>annotationSetName</string>
-                  <string></string>
-                </entry>
-                <entry>
                   <string>allowWithinWords</string>
                   <boolean>true</boolean>
+                </entry>
+                <entry>
+                  <string>annotationSetName</string>
+                  <string></string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -306,10 +260,6 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>annotationSetName</string>
-                  <string></string>
-                </entry>
-                <entry>
                   <string>annotationTypes</string>
                   <gate.util.persistence.CollectionPersistence>
                     <localList>
@@ -320,6 +270,10 @@
                     </localList>
                     <collectionType>java.util.ArrayList</collectionType>
                   </gate.util.persistence.CollectionPersistence>
+                </entry>
+                <entry>
+                  <string>annotationSetName</string>
+                  <string></string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -352,6 +306,10 @@
                   <string>Bio</string>
                 </entry>
                 <entry>
+                  <string>inputASName</string>
+                  <string></string>
+                </entry>
+                <entry>
                   <string>annotationTypes</string>
                   <gate.util.persistence.CollectionPersistence>
                     <localList>
@@ -370,10 +328,6 @@
                     </localList>
                     <collectionType>java.util.ArrayList</collectionType>
                   </gate.util.persistence.CollectionPersistence>
-                </entry>
-                <entry>
-                  <string>inputASName</string>
-                  <string></string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -993,6 +947,10 @@
                   <string>EpilepsyOnset</string>
                 </entry>
                 <entry>
+                  <string>inputASName</string>
+                  <string>Bio</string>
+                </entry>
+                <entry>
                   <string>annotationTypes</string>
                   <gate.util.persistence.CollectionPersistence>
                     <localList>
@@ -1008,10 +966,6 @@
                     </localList>
                     <collectionType>java.util.ArrayList</collectionType>
                   </gate.util.persistence.CollectionPersistence>
-                </entry>
-                <entry>
-                  <string>inputASName</string>
-                  <string>Bio</string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -1044,6 +998,10 @@
                   <string>Epilepsy</string>
                 </entry>
                 <entry>
+                  <string>inputASName</string>
+                  <string>Bio</string>
+                </entry>
+                <entry>
                   <string>annotationTypes</string>
                   <gate.util.persistence.CollectionPersistence>
                     <localList>
@@ -1056,10 +1014,6 @@
                     </localList>
                     <collectionType>java.util.ArrayList</collectionType>
                   </gate.util.persistence.CollectionPersistence>
-                </entry>
-                <entry>
-                  <string>inputASName</string>
-                  <string>Bio</string>
                 </entry>
               </localMap>
             </runtimeParams>
