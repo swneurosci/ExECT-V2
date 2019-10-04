@@ -53,7 +53,7 @@ Priority: 99
 	({Person})?
 	({Lookup2})?
 	{timeElapsed}
-	{Number} 
+	{Numeric} 
     {timePeriod}
 	
  ):match  
@@ -63,7 +63,7 @@ PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
 STY = :match.Lookup3.STY, 
 Certainty = :match.Lookup3.Certainty,
 timePeriod = :match.timePeriod.time-unit,
-value =:match.Number.value}
+value =:match.Numeric.value}
 
 Rule: seizuresFor4
 Priority: 99
@@ -197,4 +197,23 @@ Certainty = :b.Lookup3.Certainty,
 timePeriod = :match.timePeriod.time-unit,
 value ="1"}
 
+Rule: seizuresFor10
+Priority: 98
 
+(   
+	{Lookup2.majorType == person}
+	{timeElapsed.majorType == context}
+	{Numeric}
+	{timePeriod}
+	{Lookup2.language == onset}
+	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+	
+	
+ ):match  
+ -->
+:match.TimeSinceOnset = {rule = seizuresFor10, OnsetType = "time_since_episodes_started", 
+PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
+STY = :match.Lookup.STY, 
+Certainty = :match.Lookup.Certainty,
+timePeriod = :match.timePeriod.time-unit,
+value =:match.Numeric.value}

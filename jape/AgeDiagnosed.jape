@@ -1,6 +1,8 @@
 Phase: AgeDiagnosed
 Input: Lookup Person Lookup2 Sentence Numeric timePeriod 
- 
+
+  /*includes AgeDiagnosedRange*/
+
 Options: control=appelt
 
 
@@ -23,3 +25,53 @@ STY = :match.Lookup.STY,
 Certainty = :match.Lookup.Certainty,
 timePeriod = :match.timePeriod.time-unit,
 value =:match.Numeric.value}
+
+Rule: AgeDiagnosed1
+Priority: 99
+
+(   
+	{Person}
+    {Lookup2.majorType == historic}
+    {Lookup2.majorType == historic, Lookup2.minorType == symptoms}
+	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+	{Numeric}
+	{timePeriod}
+	
+ ):match  
+ -->
+:match.AgeDiagnosed = {rule = AgeDiagnosed1, OnsetType = "Age_Diagnosed", 
+PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
+STY = :match.Lookup.STY, 
+Certainty = :match.Lookup.Certainty,
+timePeriod = :match.timePeriod.time-unit,
+valueLower = "",
+valueUpper = "",
+value =:match.Numeric.value}
+
+
+Rule: AgeDiagnosed2
+Priority: 99
+
+(   
+	{Person}
+    {Lookup2.majorType == historic}
+    {Lookup2.majorType == historic, Lookup2.language == onset}
+	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+	{Person}
+	{Lookup2.minorType == time}
+	
+ ):match  
+ -->
+:match.AgeDiagnosed = {rule = AgeDiagnosed2, OnsetType = "Age_Diagnosed", 
+PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
+STY = :match.Lookup.STY, 
+Certainty = :match.Lookup.Certainty,
+timePeriod = :match.timePeriod.time-unit,
+timePeriod = :match.Lookup2.timeUnit,
+valueLower =:match.Lookup2.lowerAge,
+valueUpper = :match.Lookup2.upperAge,
+value = ""}
+
+
+
+
