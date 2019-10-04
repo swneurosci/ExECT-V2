@@ -141,3 +141,26 @@ timePeriod = :match.Lookup2.timeUnit,
 valueLower =:match.Lookup2.lowerAge,
 valueUpper = :match.Lookup2.upperAge,
 value = ""}
+
+Rule: onsetAgeRange7
+Priority: 98
+
+(   
+	{Lookup2.majorType == historic}
+	{Person}
+	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed} 
+	{timeElapsed}
+	{Person}
+	{Lookup2.minorType == time}
+
+	
+ ):match  
+ -->
+:match.OnsetAgeRange = {rule = onsetAgeRange7, OnsetType = "age_episodes_started", 
+PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
+STY = :match.Lookup3.STY, 
+Certainty = :match.Lookup3.Certainty,
+timePeriod = :match.Lookup2.timeUnit,
+valueLower =:match.Lookup2.lowerAge,
+valueUpper = :match.Lookup2.upperAge,
+value = ""}

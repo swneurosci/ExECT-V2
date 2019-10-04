@@ -9,3 +9,5 @@ last being seen:Since=LastClinic
 all his life:Since=From_Birth
 all her life:Since=From_Birth
 from birth:Since=From_Birth
+last visit:Since=LastClinic
+since birth:Since=From_Birth
