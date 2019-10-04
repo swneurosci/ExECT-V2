@@ -104,6 +104,7 @@ frontal lobe seizures	CUI=C0085541	PREF=Frontal Lobe Epilepsy	TUI=T047	STY=Disea
 gelastic seizure	CUI=C0270820	PREF=gelastic seizure	TUI=T047	STY=Disease or Syndrome
 gelastic seizure (disorder)	CUI=C0270820	PREF=gelastic seizure (disorder)	TUI=T047	STY=Disease or Syndrome
 generalised seizure	CUI=C0234533	PREF=generalised seizure	TUI=T047	STY=Disease or Syndrome
+generalised seizures	CUI=C0234533	PREF=generalised seizures	TUI=T047	STY=Disease or Syndrome
 generalised seizure disorder	CUI=C0014548	PREF=generalised seizure disorder	TUI=T047	STY=Disease or Syndrome
 generalised seizure disorder	CUI=C0014548	PREF=generalised seizure disorders	TUI=T047	STY=Disease or Syndrome
 generalised-onset seizures	CUI=C0311334	PREF=generalised-onset seizures	TUI=T047	STY=Disease or Syndrome
@@ -287,6 +288,7 @@ seizures, vestibular	CUI=C0422855	PREF=seizures, vestibular	TUI=T047	STY=Disease
 seizures, visual	CUI=C0270824	PREF=seizures, visual	TUI=T047	STY=Disease or Syndrome
 sesame (seizures, sensorineural deafness, ataxia, mental retardation, electrolyte imbalance) syndrome	CUI=C2748572	PREF=sesame (seizures, sensorineural deafness, ataxia, mental retardation, electrolyte imbalance) syndrome	TUI=T047	STY=Disease or Syndrome
 simple partial seizure	CUI=C0234974	PREF=simple partial seizure	TUI=T047	STY=Disease or Syndrome
+simple partial seizures	CUI=C0234974	PREF=simple partial seizures	TUI=T047	STY=Disease or Syndrome
 simple partial seizure (disorder)	CUI=C0234974	PREF=simple partial seizure (disorder)	TUI=T047	STY=Disease or Syndrome
 simple partial seizure with motor dysfunction	CUI=C0016399	PREF=simple partial seizure with motor dysfunction	TUI=T047	STY=Disease or Syndrome
 simple partial seizure with motor dysfunction (disorder)	CUI=C0016399	PREF=simple partial seizure with motor dysfunction (disorder)	TUI=T047	STY=Disease or Syndrome
