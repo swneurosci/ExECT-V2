@@ -54,3 +54,14 @@ Rule: getDiagnosisSeizures2
 :item.Diagnosis = { rule = "getDiagnosisSeizures2", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
 Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
 
+Rule: getDiagnosisSeizures3
+(
+	({DiagnosisTriggers})
+	({Lookup.STY == "Disease or Syndrome"})
+	({Lookup.STY == "Disease or Syndrome"})
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+):match1
+-->
+:item.Diagnosis = { rule = "getDiagnosisSeizures3", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
+
