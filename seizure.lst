@@ -4,6 +4,7 @@ Complex partial seizure	CUI=C0149958	PREF=Complex partial seizure	TUI=T047	STY=D
 Complex partial seizure of parietal lobe	CUI=C4039814	PREF=Complex partial seizure of parietal lobe	TUI=T047	STY=Disease or Syndrome
 Complex partial seizure of temporal lobe	CUI=C3661551	PREF=Complex partial seizure of temporal lobe	TUI=T047	STY=Disease or Syndrome
 Complex partial seizures	CUI=C0149958	PREF=Complex partial seizures	TUI=T047	STY=Disease or Syndrome
+Complex partial	CUI=C0149958	PREF=Complex partial seizures	TUI=T047	STY=Disease or Syndrome
 Jacksonian seizure	CUI=C0022333	PREF=Jacksonian seizure	TUI=T047	STY=Disease or Syndrome
 Partial complex seizure	CUI=C0149958	PREF=Partial complex seizure	TUI=T047	STY=Disease or Syndrome
 Partial complex seizure (disorder)	CUI=C0149958	PREF=Partial complex seizure (disorder)	TUI=T047	STY=Disease or Syndrome

@@ -1,5 +1,5 @@
 Phase: PartialDate
-Input: DayDate Month Numeric Token
+Input: DayDate Lookup2 Numeric Token
 Options: control=appelt
 
 /*
@@ -10,8 +10,8 @@ Rule: partialDate
 Priority: 99
 (
 	({DayDate})?
-	{Month}
+	{Lookup2.minorType == date}
 	({Numeric})?
 ):match
 -->
-:match.PartialDate = {rule = partialDate, day=:match.DayDate.value, month=:match.Month.month, year=:match.Numeric.value}
+:match.PartialDate = {rule = partialDate, day=:match.DayDate.value, month=:match.Lookup2.month, year=:match.Numeric.value}

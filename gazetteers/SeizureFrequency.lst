@@ -4,3 +4,6 @@ monthly:NumberOfTimePeriods=1:TimePeriod=Month:QuantityTotal=1
 per day:NumberOfTimePeriods=1:TimePeriod=Day:=
 per week:NumberOfTimePeriods=1:TimePeriod=Week:=
 per month:NumberOfTimePeriods=1:TimePeriod=Month:=
+in the last month:NumberOfTimePeriods=1:TimePeriod=Month
+in the last year:NumberOfTimePeriods=1:TimePeriod=Year
+in the last week:NumberOfTimePeriods=1:TimePeriod=Week

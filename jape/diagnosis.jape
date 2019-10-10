@@ -25,7 +25,7 @@ Rule: getDiagnosisEpilepsy
 (
     ({DiagnosisTriggers.majorType == "diagnosis"})
 	(
-	{Lookup.STY ==~ "[Dd]isease or [Ss]yndrome", Lookup.Seizure == No, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed}
+	{Lookup.STY ==~ "[Dd]isease or [Ss]yndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed}
 	):item
 ):label
 -->
@@ -37,7 +37,7 @@ Rule: getDiagnosisEpilepsy2
 (
 	({DiagnosisTriggers})
 	({Lookup.STY == "Disease or Syndrome"})
-	(({Lookup.STY == "Disease or Syndrome", Lookup.Seizure == No, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
 ):match1
 -->
 :item.Diagnosis = { rule = "getDiagnosisEpilepsy2", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,

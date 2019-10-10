@@ -11,3 +11,6 @@ all her life:Since=From_Birth
 from birth:Since=From_Birth
 last visit:Since=LastClinic
 since birth:Since=From_Birth
+discharge:Since=DischargeDate
+since being discharged:Since=DischargeDate
+since surgery:Since=Surgery
