@@ -1,6 +1,6 @@
 same:Quantity=Same
-increase:Quantity=Increasing
-decrease:Quantity=Decreasing
+increase:Quantity=Increased
+decrease:Quantity=Decreased
 frequent:Quantity=Frequent
 infrequent:Quantity=Infrequent
 some:Quantity=Some
