@@ -2,7 +2,7 @@
 (epilepsy) or (epileptic attack) (disorder)	CUI=C0014544	PREF=(epilepsy) or (epileptic attack) (disorder)	TUI=T047	STY=Disease or Syndrome
 BCEOP - benign childhood epilepsy with occipital paroxysms	CUI=C0393675	PREF=bceop - benign childhood epilepsy with occipital paroxysms	TUI=T047	STY=Disease or Syndrome
 BCEOP bnign chdhd ep & occ par	CUI=C0393675	PREF=bceop bnign chdhd ep & occ par	TUI=T047	STY=Disease or Syndrome
-Batten dis	CUI=C0751383	PREF=batten dis	TUI=T047	STY=Disease or Syndrome	
+Batten dis	CUI=C0751383	PREF=batten dis	TUI=T047	STY=Disease or Syndrome
 Batten disease, juvenile	CUI=C0751383	PREF=batten disease, juvenile	TUI=T047	STY=Disease or Syndrome
 Batten diseases, juvenile	CUI=C0751383	PREF=batten diseases, juvenile	TUI=T047	STY=Disease or Syndrome
 Batten mayou dis	CUI=C0751383	PREF=batten mayou dis	TUI=T047	STY=Disease or Syndrome
@@ -67,7 +67,7 @@ West's syndrome	CUI=C0037769	PREF=west's syndrome	TUI=T047	STY=Disease or Syndro
 [d]convulsions, febrile (context-dependent category)	CUI=C0009952	PREF=[d]convulsions, febrile (context-dependent category)	TUI=T047	STY=Disease or Syndrome
 [d]convulsions, febrile (situation)	CUI=C0009952	PREF=[d]convulsions, febrile (situation)	TUI=T047	STY=Disease or Syndrome
 [d]pyrexial convulsion	CUI=C0009952	PREF=[d]pyrexial convulsion	TUI=T047	STY=Disease or Syndrome
-[x]oth gen epilep + epilep syn	CUI=C0477370	PREF=[x]oth gen epilep + epilep syn	TUI=T047	STY=Disease or Syndrome	
+[x]oth gen epilep + epilep syn	CUI=C0477370	PREF=[x]oth gen epilep + epilep syn	TUI=T047	STY=Disease or Syndrome
 [x]other epilepsy	CUI=C0477371	PREF=[x]other epilepsy	TUI=T047	STY=Disease or Syndrome
 [x]other epilepsy (disorder)	CUI=C0477371	PREF=[x]other epilepsy (disorder)	TUI=T047	STY=Disease or Syndrome
 [x]other generalised epilepsy and epileptic syndromes	CUI=C0477370	PREF=[x]other generalised epilepsy and epileptic syndromes	TUI=T047	STY=Disease or Syndrome
@@ -138,7 +138,7 @@ alcohol-induced epilepsy (disorder)	CUI=C0586323	PREF=alcohol-induced epilepsy (
 alcohol-induced epilepsy [ambiguous]	CUI=C0586323	PREF=alcohol-induced epilepsy [ambiguous]	TUI=T048	STY=Mental or Behavioral Dysfunction	Epilepsy=Yes
 alcohol-related fit	CUI=C0586323	PREF=alcohol-related fit	TUI=T048	STY=Mental or Behavioral Dysfunction
 alcohol-related fit (finding)	CUI=C0586323	PREF=alcohol-related fit (finding)	TUI=T048	STY=Mental or Behavioral Dysfunction
-alcohol-related seizure	CUI=C0586323	PREF=alcohol-related seizure	TUI=T048	STY=Mental or Behavioral Dysfunction	
+alcohol-related seizure	CUI=C0586323	PREF=alcohol-related seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
 alcohol-related seizures	CUI=C0586323	PREF=alcohol-related seizures	TUI=T048	STY=Mental or Behavioral Dysfunction
 alcoholic seizure	CUI=C0586323	PREF=alcoholic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
 alcoholic seizures	CUI=C0586323	PREF=alcoholic seizures	TUI=T048	STY=Mental or Behavioral Dysfunction
@@ -538,7 +538,7 @@ epilepsy, reflex	CUI=C0270857	PREF=epilepsy, reflex	TUI=T047	STY=Disease or Synd
 epilepsy, refractory	CUI=C1096063	PREF=epilepsy, refractory	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy, running	CUI=C0270819	PREF=epilepsy, running	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy, sensory-induced	CUI=C0270857	PREF=epilepsy, sensory-induced	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-epilepsy, somatosensory	CUI=C0347874	PREF=epilepsy, somatosensory	TUI=T047q 	STY=Disease or Syndrome	Epilepsy=Yes
+epilepsy, somatosensory	CUI=C0347874	PREF=epilepsy, somatosensory	TUI=T047q	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy, tonic	CUI=C0086241	PREF=epilepsy, tonic	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy, tonic clonic	CUI=C0014549	PREF=epilepsy, tonic clonic	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy, tonic-clonic	CUI=C0014549	PREF=epilepsy, tonic-clonic	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes

@@ -1,0 +1,23 @@
+Phase: PatientHistory
+Input: Lookup3 Lookup2 Person 
+
+
+
+
+Options: control=appelt
+
+Rule: PtHistory1
+Priority: 100
+
+(   
+	{Person}
+    {Lookup2.majorType == historic , Lookup2.minorType == symptoms}
+	{Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}
+    
+ ):match  
+ -->
+:match.PatientHistory = {rule = PtHistory1, PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, 
+STY = :match.Lookup3.STY, Negation = :match.Lookup3.Negation,
+Experiencer = :match.Lookup3.Experiencer, Temporality = :match.Lookup3.Temporality, 
+Certainty = :match.Lookup3.Certainty}
+

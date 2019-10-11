@@ -53,3 +53,4 @@ opinion.lst:diagnosis:opinion::Lookup2
 contextInvestigations.lst:Investigations:Context::ContextInvestigations
 change.lst:frequency:change::Lookup2
 frequencychange.lst:frequency:change::Frequency
+cause.lst:diagnosis:causality::Lookup2

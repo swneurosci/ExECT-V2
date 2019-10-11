@@ -1282,4 +1282,6 @@ head injury other	CUI=C0497301	PREF=head injury other	TUI=T037	STY=Injury or Poi
 head injury	CUI=C0497301	PREF=head injury other	TUI=T037	STY=Injury or Poisoning
 open head injury	CUI=C0518454	PREF=head injury open	TUI=T037	STY=Injury or Poisoning	
 Multiple Head Injuries	CUI=C0451948 PREF=Head Injuries, Multiple	TUI=T037	STY=Injury or Poisoning
-Superficial Head Injury	CUI= C0347536	PREF=Head Injury, Superficial	TUI=T037	STY=Injury or Poisoning
+Superficial Head Injury	CUI=C0347536	PREF=Head Injury, Superficial	TUI=T037	STY=Injury or Poisoning
+Skull Fractures	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning
+Skull Fracture	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning 

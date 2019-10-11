@@ -364,3 +364,5 @@ Atonic seizure, non-refractory	CUI=C3495022	PREF=Atonic seizure, non-refractory	
 seizure free	CUI=C1299590	PREF=seizure free	TUI=T033	STY=Finding	
 febrile seizure	CUI=C0009952	PREF=febrile seizure	TUI=T047	STY=Disease or Syndrome
 febrile seizures	CUI=C0009952	PREF=febrile seizure	TUI=T047	STY=Disease or Syndrome
+symptomatic seizures	CUI=C4023516	PREF=Symptomatic seizures	TUI=T184	STY=Sign or Symptom
+symptomatic seizure	CUI=C4023516	PREF=Symptomatic seizures	TUI=T184	STY=Sign or Symptom

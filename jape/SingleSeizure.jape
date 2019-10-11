@@ -9,7 +9,7 @@ Options: control=appelt
 Rule: SingleSeizure
 (   
     ({Token@string == "a"} | {Token@string == "one"} | {Token@string == "single"} | {Token@string == "1"} | {Token@string == "an"})
-    ({Lookup3.Negation == Affirmed}):umls
+    ({Lookup3.Negation == Affirmed, Lookup3.minorType != "OtherDisease"}):umls
     {!timePeriods}
 ):match
 -->
