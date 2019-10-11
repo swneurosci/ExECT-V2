@@ -7,8 +7,10 @@ Rule: SeizureFrequencyFilter1
     ({SeizureFrequency11 notContains ContextPrescription, SeizureFrequency11.SeizureType != "Seizure free"})
 ):match
 -->
-:match.SeizureFrequency = { rule = Filter1, CUI = :match.SeizureFrequency11.CUI, TimePeriod = :match.SeizureFrequency11.TimePeriod,
+:match.SeizureFrequency = { rule2 = "filter", rule = :match.SeizureFrequency11.rule, CUI = :match.SeizureFrequency11.CUI, TimePeriod = :match.SeizureFrequency11.TimePeriod,
 NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, QuantityTotal = :match.SeizureFrequency11.QuantityTotal,
-QuantityLowerRange = :match.SeizureFrequency11.QuantityLowerRange, QuantityUpperRange = :match.SeizureFrequency11.QuantityUpperRange}
+QuantityLowerRange = :match.SeizureFrequency11.QuantityLowerRange, QuantityUpperRange = :match.SeizureFrequency11.QuantityUpperRange,
+YearDate = :match.SeizureFrequency11.YearDate, DayDate = :match.SeizureFrequency11.DayDate, MonthDate = :match.SeizureFrequency11.MonthDate,
+SinceOrDuration = :match.SeizureFrequency11.SinceOrDuration}
 
 

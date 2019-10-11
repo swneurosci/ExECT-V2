@@ -5,7 +5,7 @@ Options: control=appelt
 Rule: TwoSeizInOneTimePeriod
 (
     ({NumberRange})
-    ({Lookup3.majorType == "Lookup", Lookup3.minorType == "Disease"})
+    ({Lookup3.majorType == "umls", Lookup3.minorType != "OtherDisease"})
     ({SeizureFrequency})
 ):match
 -->

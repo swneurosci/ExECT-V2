@@ -1,13 +1,19 @@
 Phase: SeizureFree
-Input: Token PastTense
+Input: Person Lookup3 SeizureFree
 Options: control=appelt
 
-Rule: SeizureFree2
+Rule: PersonSeizureFree1
 (
-    ({!PastTense})
-    (({Token.string==~"[Ss]eizure"})
-    ({Token.string==~"[Ff]ree"})):SF
+    ({Person})
+    ({Lookup3.PREF == "seizure free", Lookup3 notWithin SeizureFree})
 ):match
 -->
-:SF.SeizureFree = { rule = SeizureFree2, CUI = "C1299590"}
+:match.SeizureFree = { rule = PersonSeizureFree1, CUI = :match.Lookup3.CUI }
 
+Rule: PersonSeizureFree2
+(
+    ({Person})
+    ({Lookup3.PREF != "seizure free", Lookup3.Negation == "Negated", Lookup3 notWithin SeizureFree})
+):match
+-->
+:match.SeizureFree = { rule = PersonSeizureFree2, CUI = :match.Lookup3.CUI }
