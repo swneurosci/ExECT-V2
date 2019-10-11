@@ -1,0 +1,12 @@
+Multiphase:EpilepsyCause
+
+/*These rules are set to select causes and suspected causes of epilepsy, the UMLS CUI that is returned relates to the cause, 
+  rather than a CUI associated with the type of epilepsy i.e.  if ther is a CUI for a specific type of 
+  symptomatic epilepsy it would be annotated in Diagnosis*/
+
+Phases:
+
+
+Symptomatic
+
+

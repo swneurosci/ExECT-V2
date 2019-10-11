@@ -4,7 +4,7 @@ Input: Lookup3 Lookup2 Person
 
 
 
-Options: control=appelt
+Options: control=Brill
 
 Rule: PtHistory1
 Priority: 100
@@ -12,12 +12,46 @@ Priority: 100
 (   
 	{Person}
     {Lookup2.majorType == historic , Lookup2.minorType == symptoms}
-	{Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+	Lookup3.Experiencer == Patient}):item
     
  ):match  
  -->
-:match.PatientHistory = {rule = PtHistory1, PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, 
-STY = :match.Lookup3.STY, Negation = :match.Lookup3.Negation,
-Experiencer = :match.Lookup3.Experiencer, Temporality = :match.Lookup3.Temporality, 
-Certainty = :match.Lookup3.Certainty}
+:item.PatientHistory = {rule = PtHistory1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
 
+Rule: PtHistory2
+Priority: 100
+
+(   
+	{Person}
+    {Lookup2.majorType == historic}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+	Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistory2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: PtHistory3
+Priority: 100
+
+(   
+	{Person}
+    {Lookup2.majorType == historic}
+	{Lookup3}
+	{Lookup2.minorType == causality}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+	Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistory3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}

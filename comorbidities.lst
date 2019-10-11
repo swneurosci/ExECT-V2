@@ -36,7 +36,7 @@ developmental delay	CUI=C0424605	PREF=delayed development	TUI=T048	STY=Mental or
 developmental delay in early childhood	CUI=C0557874	PREF=developmental delay in early childhood	TUI=T048	STY=Mental or Behavioral Dysfunction
 developmental delay in feeding	CUI=C1960556	PREF=developmental delay in feeding	TUI=T048	STY=Mental or Behavioral Dysfunction
 developmental delay in fine motor function	CUI=C3839556	PREF=developmental delay in fine motor function	TUI=T048	STY=Mental or Behavioral Dysfunction
-developmental delay in social skills	CUI=C3840125	PREF=developmental delay in social skills	TUI=T033	sty=finding
+developmental delay in social skills	CUI=C3840125	PREF=developmental delay in social skills	TUI=T033	STY=finding
 developmental delay of fine motor function	CUI=C3839556	PREF=developmental delay of fine motor function	TUI=T048	STY=Mental or Behavioral Dysfunction
 developmental delay, epilepsy, neonatal diabetes syndrome	CUI=C4303593	PREF=dend (developmental delay, epilepsy, neonatal diabetes) syndrome	TUI=T047	STY=Disease or Syndrome
 developmental delay, epilepsy, neonatal diabetes syndrome	CUI=C4303593	PREF=developmental delay, epilepsy, neonatal diabetes syndrome	TUI=T047	STY=Disease or Syndrome
@@ -45,16 +45,16 @@ fine motor developmental delay	CUI=C3839556	PREF=fine motor developmental delay	
 frank ter haar syndrome	CUI=C1855305	PREF=frank ter haar syndrome	TUI=T047	STY=Disease or Syndrome
 global developmental delay	CUI=C0557874	PREF=developmental delay, global	TUI=T048	STY=Mental or Behavioral Dysfunction
 global developmental delay	CUI=C0557874	PREF=global developmental delay	TUI=T048	STY=Mental or Behavioral Dysfunction
-headache	CUI=C0018681	PREF=headache	TUI=T184	sty=sign or symptom
-headaches	CUI=C0018681	PREF=headache	TUI=T184	sty=sign or symptom
+headache	CUI=C0018681	PREF=headache	TUI=T184	STY=sign or symptom
+headaches	CUI=C0018681	PREF=headache	TUI=T184	STY=sign or symptom
 idiopathic parkinson disease	CUI=C0030567	PREF=idiopathic parkinson disease	TUI=T047	STY=Disease or Syndrome
 koolen de vries syndrome	CUI=C1864871	PREF=koolen de vries syndrome	TUI=T047	STY=Disease or Syndrome
 koolen de vries syndrome (disorder)	CUI=C1864871	PREF=koolen de vries syndrome (disorder)	TUI=T047	STY=Disease or Syndrome
 koolen syndrome	CUI=C1864871	PREF=koolen syndrome	TUI=T047	STY=Disease or Syndrome
 lack of psychomotor development	CUI=C0557874	PREF=lack of psychomotor development	TUI=T048	STY=Mental or Behavioral Dysfunction
-learning difficulties	CUI=C0424939 PREF=learning difficulties TUI=T033	sty=finding
+learning difficulties	CUI=C0424939	PREF=learning difficulties	TUI=T033	STY=finding
 learning disability	CUI=C0751265	PREF=learning disability	TUI=T048	STY=Mental or Behavioral Dysfunction
-learning disability	CUI=C1321592	PREF=learning disability	TUI=T091	sty=biomedical occupation or discipline
+learning disability	CUI=C1321592	PREF=learning disability	TUI=T091	STY=biomedical occupation or discipline
 lewy body parkinson disease	CUI=C0030567	PREF=lewy body parkinson disease	TUI=T047	STY=Disease or Syndrome
 lewy body parkinson's disease	CUI=C0030567	PREF=lewy body parkinson's disease	TUI=T047	STY=Disease or Syndrome
 megalocornea, multiple skeletal anomalies, and developmental delay	CUI=C1855305	PREF=megalocornea, multiple skeletal anomalies, and developmental delay	TUI=T047	STY=Disease or Syndrome
@@ -593,8 +593,8 @@ dysplastic angiopathies, congenital	CUI=C0022739	PREF=dysplastic angiopathies, c
 dysplastic angiopathy, congenital	CUI=C0022739	PREF=dysplastic angiopathy, congenital	TUI=T047	STY=Disease or Syndrome
 ectactic vein	CUI=C0340822	PREF=ectactic vein	TUI=T019	STY=Congenital Abnormality
 ectactic vein (disorder)	CUI=C0340822	PREF=ectactic vein (disorder)	TUI=T019	STY=Congenital Abnormality
-electroencephalogram	CUI=C0013819	PREF=electroencephalogram	TUI=T060	sty=diagnostic procedure
-electroencephalogram	CUI=C1527380	PREF=electroencephalogram	TUI=T034	sty=laboratory or test result
+electroencephalogram	CUI=C0013819	PREF=electroencephalogram	TUI=T060	STY=diagnostic procedure
+electroencephalogram	CUI=C1527380	PREF=electroencephalogram	TUI=T034	STY=laboratory or test result
 embolic stroke	CUI=C0262469	PREF=embolic stroke	TUI=T047	STY=Disease or Syndrome
 embolic stroke (disorder)	CUI=C0262469	PREF=embolic stroke (disorder)	TUI=T047	STY=Disease or Syndrome
 enceph hypoxic ischemic	CUI=C0752304	PREF=enceph hypoxic ischemic	TUI=T047	STY=Disease or Syndrome
@@ -995,8 +995,8 @@ optic nerve sheath meningioma	CUI=C0346328	PREF=optic nerve sheath meningioma	TU
 optic nerve sheath neopl	CUI=C0751728	PREF=optic nerve sheath neopl	TUI=T191	STY=Neoplastic Process
 optic nerve sheath neoplasm	CUI=C0751728	PREF=optic nerve sheath neoplasm	TUI=T191	STY=Neoplastic Process
 optic nerve sheath tumors	CUI=C0751728	PREF=optic nerve sheath tumors	TUI=T191	STY=Neoplastic Process
-opticociliary shunt vessels	CUI=C0423462	PREF=opticociliary shunt vessels	TUI=T033	sty=finding
-opticociliary vessels	CUI=C0423462	PREF=opticociliary vessels	TUI=T033	sty=finding
+opticociliary shunt vessels	CUI=C0423462	PREF=opticociliary shunt vessels	TUI=T033	STY=finding
+opticociliary vessels	CUI=C0423462	PREF=opticociliary vessels	TUI=T033	STY=finding
 osteolyses, massive	CUI=C0029438	PREF=osteolyses, massive	TUI=T047	STY=Disease or Syndrome
 osteolysis and angiomatous naevi	CUI=C0029438	PREF=osteolysis and angiomatous naevi	TUI=T047	STY=Disease or Syndrome
 osteolysis and angiomatous nevi	CUI=C0029438	PREF=osteolysis and angiomatous nevi	TUI=T047	STY=Disease or Syndrome
@@ -1077,8 +1077,8 @@ retinal arteriovenous malformation	CUI=C0521570	PREF=retinal arteriovenous malfo
 retinal arteriovenous malformation (disorder)	CUI=C0521570	PREF=retinal arteriovenous malformation (disorder)	TUI=T019	STY=Congenital Abnormality
 retinal cirsoid aneurysm	CUI=C0423407	PREF=retinal cirsoid aneurysm	TUI=T020	STY=Acquired Abnormality
 retinal cirsoid aneurysm (disorder)	CUI=C0423407	PREF=retinal cirsoid aneurysm (disorder)	TUI=T020	STY=Acquired Abnormality
-retinociliary vein	CUI=C0423462	PREF=retinociliary vein	TUI=T033	sty=finding
-retinociliary vein (disorder)	CUI=C0423462	PREF=retinociliary vein (disorder)	TUI=T033	sty=finding
+retinociliary vein	CUI=C0423462	PREF=retinociliary vein	TUI=T033	STY=finding
+retinociliary vein (disorder)	CUI=C0423462	PREF=retinociliary vein (disorder)	TUI=T033	STY=finding
 retroaortic brachiocephalic vein	CUI=C3163891	PREF=retroaortic brachiocephalic vein	TUI=T019	STY=Congenital Abnormality
 retroaortic brachiocephalic vein	CUI=C3163891	PREF=retroaortic brachiocephalic vein	TUI=T047	STY=Disease or Syndrome
 retroaortic brachiocephalic vein (disorder)	CUI=C3163891	PREF=retroaortic brachiocephalic vein (disorder)	TUI=T019	STY=Congenital Abnormality
@@ -1233,6 +1233,8 @@ tumor, pineal	CUI=C0031941	PREF=tumor, pineal	TUI=T191	STY=Neoplastic Process
 tumor, pineal gland	CUI=C0031941	PREF=tumor, pineal gland	TUI=T191	STY=Neoplastic Process
 tumor, pineal parenchymal	CUI=C0031941	PREF=tumor, pineal parenchymal	TUI=T191	STY=Neoplastic Process
 focal traumatic brain injury	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
+post traumatic damage to the right frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
+post traumatic damage to the left frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
 tumors, brain ventricular	CUI=C0007798	PREF=tumors, brain ventricular	TUI=T191	STY=Neoplastic Process
 tumors, cerebral ventricle	CUI=C0007798	PREF=tumors, cerebral ventricle	TUI=T191	STY=Neoplastic Process
 glial cells tumors	CUI=C0017638	PREF=tumors, glial cell	TUI=T191	STY=Neoplastic Process
@@ -1261,7 +1263,7 @@ venous duct abnormality	CUI=C0344687	PREF=venous duct abnormality	TUI=T019	STY=C
 venous malformation	CUI=C0265950	PREF=venous malformation	TUI=T019	STY=Congenital Abnormality
 venous malformation	CUI=C2937220	PREF=venous malformation	TUI=T019	STY=Congenital Abnormality
 venous malformations	CUI=C0265950	PREF=venous malformations	TUI=T019	STY=Congenital Abnormality
-venous remnant	CUI=C0459163	PREF=venous remnant	TUI=T023	sty=body part, organ, or organ component
+venous remnant	CUI=C0459163	PREF=venous remnant	TUI=T023	STY=body part, organ, or organ component
 venous valvular anomaly	CUI=C0340818	PREF=venous valvular anomaly	TUI=T019	STY=Congenital Abnormality
 venous-lymphatic malformation	CUI=C0340829	PREF=venous-lymphatic malformation	TUI=T019	STY=Congenital Abnormality
 ventricle tumor, cerebral	CUI=C0007798	PREF=ventricle tumor, cerebral	TUI=T191	STY=Neoplastic Process
@@ -1285,3 +1287,8 @@ Multiple Head Injuries	CUI=C0451948 PREF=Head Injuries, Multiple	TUI=T037	STY=In
 Superficial Head Injury	CUI=C0347536	PREF=Head Injury, Superficial	TUI=T037	STY=Injury or Poisoning
 Skull Fractures	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning
 Skull Fracture	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning 
+Unspecified brain damage due to birth injury	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	STY=Injury or Poisoning
+brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	STY=Injury or Poisoning
+traumatic brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	STY=Injury or Poisoning
+hippocampal sclerosis	CUI=C1504404	PREF=Hippocampal sclerosis	TUI=T047	STY=Disease or Syndrome
+cortical dysplasia	CUI=C0431380	PREF=Cortical Dysplasia	TUI=T019	STY=Congenital Abnormality
