@@ -1,0 +1,93 @@
+Phase: EpiCause
+Input: Lookup Lookup3 DiagnosisTriggers Lookup2
+
+
+  /*These rules are set to select causes and suspected causes of epilepsy, the UMLS CUI that is returned relates to the cause, 
+  rather than a CUI associated with the type of epilepsy i.e.  if there is a CUI for a specific type of 
+  symptomatic epilepsy (STY = Disease or syndrome) it would be annotated in Diagnosis.  Epilepsies
+    with STY = "injury or poisoning" may have their own CUI and they would be annotated by Symptomatic*/
+
+  
+
+Options: control=Brill
+
+
+Rule: Cause1
+Priority: 100
+
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+    Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.EpiCause = {rule = Cause1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: Cause2
+Priority: 100
+
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+	{Lookup2.minorType == causality}
+    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+    Lookup3.Experiencer == Patient}):item
+ ):match  
+ -->
+:item.EpiCause = {rule = Cause2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: Cause3
+Priority: 98
+
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+	{Lookup2.minorType == causality}
+    {Lookup3.minorType == OtherDisease}
+    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+ ):match  
+ -->
+:item.EpiCause = {rule = Cause3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: Cause4
+Priority: 100
+
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+    Lookup3.Experiencer == Patient}):item
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+ ):match  
+ -->
+:item.EpiCause = {rule = Cause4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: Cause5
+Priority: 99
+
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+    {Lookup3.majorType == umls , Lookup3.minorType == Disease , Lookup3.Experiencer == Patient}
+    {Lookup2.minorType == causality}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+    Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.EpiCause = {rule = Cause5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}

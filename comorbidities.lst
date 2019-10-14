@@ -128,7 +128,7 @@ meningo-oculo-facial angiomatosis	CUI=C0038505	PREF=angiomatosis, meningo-oculo-
 angioosteohypertrophic syndrome	CUI=C0022739	PREF=angioosteohypertrophic syndrome	TUI=T047	STY=Disease or Syndrome
 angioosteohypertrophy syndromes	CUI=C0022739	PREF=angioosteohypertrophy syndromes	TUI=T047	STY=Disease or Syndrome
 angiopathies, congenital dysplastic	CUI=C0022739	PREF=angiopathies, congenital dysplastic	TUI=T047	STY=Disease or Syndrome
-congenital dysplastic angiopathy CUI=C0022739	PREF=angiopathy, congenital dysplastic	TUI=T047	STY=Disease or Syndrome
+congenital dysplastic angiopathy	CUI=C0022739	PREF=angiopathy, congenital dysplastic	TUI=T047	STY=Disease or Syndrome
 anomal portal vein termination	CUI=C0344674	PREF=anomal portal vein termination	TUI=T019	STY=Congenital Abnormality
 anomalous atrial bands	CUI=C0265868	PREF=anomalous atrial bands	TUI=T019	STY=Congenital Abnormality
 anomalous atrial bands (disorder)	CUI=C0265868	PREF=anomalous atrial bands (disorder)	TUI=T019	STY=Congenital Abnormality
@@ -161,7 +161,7 @@ arteriovenous fistula sten	CUI=C0340838	PREF=arteriovenous fistula sten	TUI=T019
 arteriovenous malformat skin	CUI=C0346071	PREF=arteriovenous malformat skin	TUI=T019	STY=Congenital Abnormality
 arteriovenous malformation	CUI=C0334533	PREF=arteriovenous malformation	TUI=T191	STY=Neoplastic Process
 arteriovenous malformation (morphologic abnormality)	CUI=C0003857	PREF=arteriovenous malformation (morphologic abnormality)	TUI=T019	STY=Congenital Abnormality
-peripheral arteriovenous malformation   CUI=C0495524	PREF=arteriovenous malformation (peripheral)	TUI=T019	STY=Congenital Abnormality
+peripheral arteriovenous malformation	CUI=C0495524	PREF=arteriovenous malformation (peripheral)	TUI=T019	STY=Congenital Abnormality
 arteriovenous malformation of brain	CUI=C0007772	PREF=arteriovenous malformation of brain	TUI=T019	STY=Congenital Abnormality
 arteriovenous malformation of cerebral vessels	CUI=C0917804	PREF=arteriovenous malformation of cerebral vessels	TUI=T019	STY=Congenital Abnormality
 arteriovenous malformation of precerebral vessels	CUI=C0348887	PREF=arteriovenous malformation of precerebral vessels	TUI=T019	STY=Congenital Abnormality
@@ -1283,7 +1283,7 @@ micro-cephaly	CUI=C0025958	PREF=Microcephaly	TUI=T019	STY=Congenital Abnormality
 head injury other	CUI=C0497301	PREF=head injury other	TUI=T037	STY=Injury or Poisoning
 head injury	CUI=C0497301	PREF=head injury other	TUI=T037	STY=Injury or Poisoning
 open head injury	CUI=C0518454	PREF=head injury open	TUI=T037	STY=Injury or Poisoning	
-Multiple Head Injuries	CUI=C0451948 PREF=Head Injuries, Multiple	TUI=T037	STY=Injury or Poisoning
+Multiple Head Injuries	CUI=C0451948	PREF=Head Injuries, Multiple	TUI=T037	STY=Injury or Poisoning
 Superficial Head Injury	CUI=C0347536	PREF=Head Injury, Superficial	TUI=T037	STY=Injury or Poisoning
 Skull Fractures	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning
 Skull Fracture	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning 

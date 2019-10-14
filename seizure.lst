@@ -75,7 +75,7 @@ epileptic seizures	CUI=C0014544	PREF=epileptic seizures	TUI=T047	STY=Disease or 
 akinetic epileptic seizures	CUI=C0347869	PREF=epileptic seizures - akinetic	TUI=T047	STY=Disease or Syndrome
 akinetic seizures	CUI=C0347869	PREF=epileptic seizures - akinetic	TUI=T047	STY=Disease or Syndrome
 atonic seizures	CUI=C0086236	PREF=epileptic seizures - atonic	TUI=T047	STY=Disease or Syndrome
-epileptic drop attack CUI=C0270846 PREF=Epileptic drop attack	TUI=T047	STY=Disease or Syndrome
+epileptic drop attack	CUI=C0270846	PREF=Epileptic drop attack	TUI=T047	STY=Disease or Syndrome
 epileptic seizures - atonic (finding)	CUI=C0086236	PREF=epileptic seizures - atonic (finding)	TUI=T047	STY=Disease or Syndrome
 epileptic seizures - clonic	CUI=C0347870	PREF=epileptic seizures - clonic	TUI=T047	STY=Disease or Syndrome
 epileptic seizures - clonic (finding)	CUI=C0347870	PREF=epileptic seizures - clonic (finding)	TUI=T047	STY=Disease or Syndrome
@@ -208,10 +208,9 @@ partial seizures, simple, consciousness preserved	CUI=C0234974	PREF=partial seiz
 partial seizures, visual	CUI=C0278188	PREF=partial seizures, visual	TUI=T047	STY=Disease or Syndrome
 petit mal, unspecified, without grand mal seizures	CUI=C0014553	PREF=petit mal, unspecified, without grand mal seizures	TUI=T047	STY=Disease or Syndrome
 petit-mal seizure	CUI=C0014553	PREF=petit-mal seizure	TUI=T047	STY=Disease or Syndrome
-post traumatic seizure dis	CUI=C0014557	PREF=post traumatic seizure dis	TUI=T037	STY=Injury or Poisoning
 post traumatic seizure disorder	CUI=C0014557	PREF=post traumatic seizure disorder	TUI=T037	STY=Injury or Poisoning
-post-traumatic seizure disorder	CUI=C0014557	PREF=post-traumatic seizure disorder	TUI=T037	STY=Injury or Poisoning
-post-traumatic seizure disorders	CUI=C0014557	PREF=post-traumatic seizure disorders	TUI=T037	STY=Injury or Poisoning
+post-traumatic seizure	CUI=C0014557	PREF=post-traumatic seizure disorder	TUI=T037	STY=Injury or Poisoning
+post-traumatic seizures	CUI=C0014557	PREF=post-traumatic seizure disorders	TUI=T037	STY=Injury or Poisoning
 pyridoxal phosphate-responsive seizures	CUI=C1864723	PREF=pyridoxal phosphate-responsive seizures	TUI=T047	STY=Disease or Syndrome
 pyridoxine-dependent seizures	CUI=C1849508	PREF=pyridoxine-dependent seizures	TUI=T047	STY=Disease or Syndrome
 rolandic seizures with status epilepticus	CUI=C3662441	PREF=rolandic seizures with status epilepticus	TUI=T047	STY=Disease or Syndrome
@@ -366,3 +365,5 @@ febrile seizure	CUI=C0009952	PREF=febrile seizure	TUI=T047	STY=Disease or Syndro
 febrile seizures	CUI=C0009952	PREF=febrile seizure	TUI=T047	STY=Disease or Syndrome
 symptomatic seizures	CUI=C4023516	PREF=Symptomatic seizures	TUI=T184	STY=Sign or Symptom
 symptomatic seizure	CUI=C4023516	PREF=Symptomatic seizures	TUI=T184	STY=Sign or Symptom
+post-traumatic epilepsy	CIU=C0014557	PREF=Epilepsy, Post-Traumatic	TUI=T037	STY=Injury or Poisoning
+post-traumatic seizure	CIU=C0014557	PREF=Epilepsy, Post-Traumatic	TUI=T037	STY=Injury or Poisoning
