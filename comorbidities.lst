@@ -1292,3 +1292,17 @@ brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to birth in
 traumatic brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	STY=Injury or Poisoning
 hippocampal sclerosis	CUI=C1504404	PREF=Hippocampal sclerosis	TUI=T047	STY=Disease or Syndrome
 cortical dysplasia	CUI=C0431380	PREF=Cortical Dysplasia	TUI=T019	STY=Congenital Abnormality
+Respiratory distress in neonatal period	CUI=C1850092	PREF=Respiratory distress in neonatal period	TUI=T033	STY=Finding
+birth asphyxia	CUI=C0004045	PREF=Birth asphyxia	TUI=T047	STY=Disease or Syndrome
+neonatal asphyxia	CUI=C0004045	PREF=Birth asphyxia	TUI=T047	STY=Disease or Syndrome
+asphyxia at birth	CUI=C0004045	PREF=Birth asphyxia	TUI=T047	STY=Disease or Syndrome
+Birth trauma, asphyxia and hypoxia	CUI=C0411037	PREF=Birth trauma, asphyxia and hypoxia	TUI=T047	STY=Disease or Syndrome
+fetal distress	CUI=C0015930	PREF=Fetal distress	TUI=T046	STY=Pathologic Function
+birth injury CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
+birth trauma	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
+traumatic birth history	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
+neonatal complicaions	CUI=C4735642	PREF=Neonatal complications	TUI=T033	STY=Finding	
+neonatal intensive care	CUI=C0021709	PREF=neonatal intensive care unit	TUI=T093	STY=Health Care Related Organization	
+stormy neonatal period	CUI=C4735642	PREF=Neonatal complications	TUI=T033	STY=Finding 
+stormy neonatal course	CUI=C4735642	PREF=Neonatal complications	TUI=T033	STY=Finding
+difficult noenatal period	CUI=C4735642	PREF=Neonatal complications	TUI=T033	STY=Finding

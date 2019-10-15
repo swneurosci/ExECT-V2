@@ -54,3 +54,4 @@ contextInvestigations.lst:Investigations:Context::ContextInvestigations
 change.lst:frequency:change::Lookup2
 frequencychange.lst:frequency:change::Frequency
 cause.lst:diagnosis:causality::Lookup2
+BirthHistory.lst:UMLS:prematurebirth::Lookup2

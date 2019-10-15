@@ -1,0 +1,10 @@
+preterm birth:value=under 37 weeks:CUI=C0151526
+premature birth:value=under 37 weeks:CUI=C0151526
+late preterm birth:value=34 to <37 weeks:CUI=C3829315
+moderate to late  preterm birth:value=32 to <37 weeks:CUI=4054482
+very pretern birth:value=28-32 weeks:CUI=C4053870
+extremely preterm birth:value=<28 weeks:CUI=C4055046
+born prematurely:value=under 37 weeks:CUI=C0151526
+born at term:value=born at term:CUI=C0233324
+term birth:value=born at term:CUI=C0233324
+

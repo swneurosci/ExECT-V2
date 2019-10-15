@@ -1,0 +1,50 @@
+Phase: BirthHistory
+Input: Lookup3 Lookup2 Person Numeric timePeriod
+
+
+Options: control=Brill
+
+Rule: Prem
+Priority: 100
+
+(   
+	{Person}
+    {Lookup2.majorType == historic}
+	{Numeric.value  <28}
+    {timePeriod.time-unit == Week}
+    
+    
+ ):match  
+ -->
+:match.BirthHistory = {rule = Prem1, PREF = "extremely preterm", CUI = C4055046, 
+STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "under 28 weeks"}
+
+Rule: Prem2
+Priority: 100
+
+(   
+	{Person}
+    {Lookup2.majorType == historic}
+	{Numeric.value  >=28 , Numeric.value <32} 
+    {timePeriod.time-unit == Week}
+    
+    
+ ):match  
+ -->
+:match.BirthHistory = {rule = Prem2, PREF = "very preterm", CUI = C4053870, 
+STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "28 to 32 weeks"}
+
+Rule: Prem3
+Priority: 100
+
+(   
+	{Person}
+    {Lookup2.majorType == historic}
+	{Numeric.value  >=32 , Numeric.value <37} 
+    {timePeriod.time-unit == Week}
+    
+    
+ ):match  
+ -->
+:match.BirthHistory = {rule = Prem3, PREF = "moderate to late preterm", CUI = C4054482, 
+STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "32 to 37 weeks"}
