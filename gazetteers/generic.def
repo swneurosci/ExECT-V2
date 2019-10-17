@@ -14,7 +14,6 @@ indicator.lst:indicator:::Lookup2
 higher-dose.lst:status:Increase::Medmod
 lower-dose.lst:status:Decrease::Medmod
 probability.lst:status:probability::Lookup2
-charities.lst:organization:charity::Lookup2
 health_care_terms.lst:organization:health_term::Lookup2
 wordnumbers.lst:frequency:number::Numeric
 seizureSlang.lst:umls:generic:undefined seizure:Lookup3
