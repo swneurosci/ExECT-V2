@@ -1306,3 +1306,24 @@ neonatal intensive care	CUI=C0021709	PREF=neonatal intensive care unit	TUI=T093	
 stormy neonatal period	CUI=C4735642	PREF=Neonatal complications	TUI=T033	STY=Finding 
 stormy neonatal course	CUI=C4735642	PREF=Neonatal complications	TUI=T033	STY=Finding
 difficult noenatal period	CUI=C4735642	PREF=Neonatal complications	TUI=T033	STY=Finding
+intracranial hemorrhage	CUI=C0151699	PREF=Intracranial hemorrhage	TUI=T046	STY=Pathologic Function
+intracranial haemorrhage	CUI=C0151699	PREF=Intracranial hemorrhage	TUI=T046	STY=Pathologic Function
+intracranial bleeding	CUI=C0151699	PREF=Intracranial hemorrhage	TUI=T046	STY=Pathologic Function
+intracranial bleed	CUI=C0151699	PREF=Intracranial hemorrhage	TUI=T046	STY=Pathologic Function
+Victim of vehicular AND/OR traffic accident	CUI=C0277693	PREF=Victim of vehicular AND/OR traffic accident	TUI=T033	STY=Finding
+road traffic accident	CUI=C0277693	PREF=Victim of vehicular AND/OR traffic accident	TUI=T033	STY=Finding
+RTA	CUI=C0277693	PREF=Victim of vehicular AND/OR traffic accident	TUI=T033	STY=Finding
+subarachnoid hemorrhage CUI=C0038525	PREF=Subarachnoid hemorrhage	TUI=T047	STY=Disease or Syndrome
+subarachnoid haemorrhage	CUI=C0038525	PREF=Subarachnoid hemorrhage	TUI=T047	STY=Disease or Syndrome
+neurofibromatosis 1	CUI=C0027831	PREF=Neurofibromatosis 1	TUI=T191	STY=Neoplastic Process
+NF1	CUI=C0027831	PREF=Neurofibromatosis 1	TUI=T191	STY=Neoplastic Process
+neurofibromatosis	CUI=C0027831	PREF=Neurofibromatosis 1	TUI=T191	STY=Neoplastic Process
+neurofibromatosis 2	CUI=C0027832	PREF=Neurofibromatosis 2	TUI=T191	STY=Neoplastic Process
+intracerebral haemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologic Function
+cerebral haemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologic Function
+intracerebral bleed	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologic Function
+intracerebral bleeds	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologic Function
+cerebral bleed	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologic Function
+ICH	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologic Function
+bleeding in brain	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologic Function
+	

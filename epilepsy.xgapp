@@ -230,12 +230,12 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>allowWithinWords</string>
-                  <boolean>true</boolean>
-                </entry>
-                <entry>
                   <string>annotationSetName</string>
                   <string></string>
+                </entry>
+                <entry>
+                  <string>allowWithinWords</string>
+                  <boolean>true</boolean>
                 </entry>
               </localMap>
             </runtimeParams>
