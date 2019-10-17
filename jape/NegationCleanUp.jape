@@ -37,7 +37,7 @@ umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationb");
 Rule: reverseNegation
 (
 {Trigger}
-({Lookup})[1,5]
+({Lookup.Language == "Trigger"})[1,5]
 {!NegConj}
 ({Lookup3.Negation == "Negated"}):umls
 ):match
