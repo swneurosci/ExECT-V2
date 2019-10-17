@@ -45,7 +45,6 @@ fine motor developmental delay	CUI=C3839556	PREF=fine motor developmental delay	
 frank ter haar syndrome	CUI=C1855305	PREF=frank ter haar syndrome	TUI=T047	STY=Disease or Syndrome
 global developmental delay	CUI=C0557874	PREF=developmental delay, global	TUI=T048	STY=Mental or Behavioral Dysfunction
 global developmental delay	CUI=C0557874	PREF=global developmental delay	TUI=T048	STY=Mental or Behavioral Dysfunction
-headache	CUI=C0018681	PREF=headache	TUI=T184	STY=sign or symptom
 headaches	CUI=C0018681	PREF=headache	TUI=T184	STY=sign or symptom
 idiopathic parkinson disease	CUI=C0030567	PREF=idiopathic parkinson disease	TUI=T047	STY=Disease or Syndrome
 koolen de vries syndrome	CUI=C1864871	PREF=koolen de vries syndrome	TUI=T047	STY=Disease or Syndrome
