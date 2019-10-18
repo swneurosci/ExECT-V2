@@ -11,6 +11,6 @@ Rule: SeizureFrequencyFilter1
 NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, QuantityTotal = :match.SeizureFrequency11.QuantityTotal,
 QuantityLowerRange = :match.SeizureFrequency11.QuantityLowerRange, QuantityUpperRange = :match.SeizureFrequency11.QuantityUpperRange,
 YearDate = :match.SeizureFrequency11.YearDate, DayDate = :match.SeizureFrequency11.DayDate, MonthDate = :match.SeizureFrequency11.MonthDate,
-SinceOrDuration = :match.SeizureFrequency11.SinceOrDuration}
+SinceOrDuration = :match.SeizureFrequency11.SinceOrDuration, Certainty = :match.SeizureFrequency11.Certainty, Negation = :match.SeizureFrequency11.Negation}
 
 
