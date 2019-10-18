@@ -8,9 +8,10 @@ Rule: SeizureFrequencyFilter1
 ):match
 -->
 :match.SeizureFrequency = { rule2 = "filter", rule = :match.SeizureFrequency11.rule, CUI = :match.SeizureFrequency11.CUI, TimePeriod = :match.SeizureFrequency11.TimePeriod,
-NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, QuantityTotal = :match.SeizureFrequency11.QuantityTotal,
-QuantityLowerRange = :match.SeizureFrequency11.QuantityLowerRange, QuantityUpperRange = :match.SeizureFrequency11.QuantityUpperRange,
+NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, NumberOfSeizures  = :match.SeizureFrequency11.NumberOfSeizures ,
+LowerNumberOfSeizures  = :match.SeizureFrequency11.LowerNumberOfSeizures, UpperNumberOfSeizures  = :match.SeizureFrequency11.UpperNumberOfSeizures,
 YearDate = :match.SeizureFrequency11.YearDate, DayDate = :match.SeizureFrequency11.DayDate, MonthDate = :match.SeizureFrequency11.MonthDate,
-SinceOrDuration = :match.SeizureFrequency11.SinceOrDuration, Certainty = :match.SeizureFrequency11.Certainty, Negation = :match.SeizureFrequency11.Negation}
+SinceOrDuration = :match.SeizureFrequency11.SinceOrDuration, Certainty = :match.SeizureFrequency11.Certainty, Negation = :match.SeizureFrequency11.Negation,
+PointInTime = :match.SeizureFrequency.PointInTime }
 
 
