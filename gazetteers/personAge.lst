@@ -1,59 +1,59 @@
-twenties:lowerAge=20:upperAge=29:timeUnit=year
-thirties:lowerAge=30:upperAge=39:timeUnit=year
-forities:lowerAge=40:upperAge=49:timeUnit=year
-fifties:lowerAge=50:upperAge=59:timeUnit=year
-sixties:lowerAge=60:upperAge=69:timeUnit=year
-senventies:lowerAge=70:upperAge=79:timeUnit=year
-eighties:lowerAge=80:upperAge=89:timeUnit=year
-nineties:lowerAge=90:upperAge=99:timeUnit=year
-child:lowerAge=1:upperAge=16:timeUnit=year
-teenager:lowerAge=13:upperAge=19:timeUnit=year
-teenage:lowerAge=13:upperAge=19:timeUnit=year
-teens:lowerAge=13:upperAge=19:timeUnit=year
-baby:lowerAge=0:upperAge=1:timeUnit=year
-toddler:loweAge=2: upperAge=3:timeUnit=year
-primary school:lowerAge=5: upperAge=11:timeUnit=year
-secondary school:lowerAge=12:upperAge=16:timeUnit=year
-infant:lowerAge=0:upperAge=1:timeUnit=year
-adolescence:lowerAge=10:upperAge=19:timeUnit=year
-adolescent:lowerAge=10:upperAge=19:timeUnit=year
-neonate:lowerAge=0:upperAge=1:timeUnit=month
-neonatal period:lowerAge=0:upperAge=28:timeUnit=day
-young child:lowerAge=1:upperAge=6:timeUnit=year
-childhood:lowerAge=2:upperAge=12:timeUnit=year
-young:lowerAge=13:upperAge=19:timeUnit=year
-early years:lowerAge=1:upperAge=6:timeUnit=year
-middle age:lowerAge=45:upperAge=65:timeUnit=year
-early teens:lowerAge=13:upperAge=14:timeUnit=year
-early teenage:lowerAge=13:upperAge=14:timeUnit=year
-mid teenage:lowerAge=15:upperAge=16:timeUnit=year
-mid teens:lowerAge=15:upperAge=16:timeUnit=year
-late teenage:lowerAge=17:upperAge=19:timeUnit=year
-late teens:lowerAge=17:upperAge=19:timeUnit=year
-early twenties:lowerAge=20:upperAge=23:timeUnit=year
-mid twenties:lowerAge=24:upperAge=26:timeUnit=year
-late twenties:lowerAge=27:upperAge=29:timeUnit=year
-early thirties:lowerAge=30:upperAge=33:timeUnit=year
-mid thirties:lowerAge=34:upperAge=36:timeUnit=year
-late thirties:lowerAge=37:upperAge=39:timeUnit=year
-early forities:lowerAge=40:upperAge=43:timeUnit=year
-mid forities:lowerAge=44:upperAge=46:timeUnit=year
-late forities:lowerAge=47:upperAge=49:timeUnit=year
-early fifties:lowerAge=50:upperAge=53:timeUnit=year
-mid fifties:lowerAge=54:upperAge=56:timeUnit=year
-late fifties:lowerAge=57:upperAge=59:timeUnit=year
-early sixties:lowerAge=60:upperAge=63:timeUnit=year
-mid sixties:lowerAge=64:upperAge=66:timeUnit=year
-late sixties:lowerAge=67:upperAge=69:timeUnit=year
-early sixties:lowerAge=60:upperAge=63:timeUnit=year
-mid sixties:lowerAge=64:upperAge=66:timeUnit=year
-late sixties:lowerAge=67:upperAge=69:timeUnit=year
-early senventies:lowerAge=70:upperAge=73:timeUnit=year
-mid senventies:lowerAge=74:upperAge=76:timeUnit=year
-late senventies:lowerAge=77:upperAge=79:timeUnit=year
-early eighties:lowerAge=80:upperAge=83:timeUnit=year
-mid eighties:lowerAge=84:upperAge=86:timeUnit=year
-late eighties:lowerAge=87:upperAge=89:timeUnit=year
-early nineties:lowerAge=90:upperAge=93:timeUnit=year
-mid nineties:lowerAge=94:upperAge=96:timeUnit=year
-late nineties:lowerAge=97:upperAge=99:timeUnit=year
+twenties:lowerAge=20:upperAge=29:timeUnit=Year
+thirties:lowerAge=30:upperAge=39:timeUnit=Year
+forities:lowerAge=40:upperAge=49:timeUnit=Year
+fifties:lowerAge=50:upperAge=59:timeUnit=Year
+sixties:lowerAge=60:upperAge=69:timeUnit=Year
+senventies:lowerAge=70:upperAge=79:timeUnit=Year
+eighties:lowerAge=80:upperAge=89:timeUnit=Year
+nineties:lowerAge=90:upperAge=99:timeUnit=Year
+child:lowerAge=1:upperAge=16:timeUnit=Year
+teenager:lowerAge=13:upperAge=19:timeUnit=Year
+teenage:lowerAge=13:upperAge=19:timeUnit=Year
+teens:lowerAge=13:upperAge=19:timeUnit=Year
+baby:lowerAge=0:upperAge=1:timeUnit=Year
+toddler:loweAge=2: upperAge=3:timeUnit=Year
+primary school:lowerAge=5: upperAge=11:timeUnit=Year
+secondary school:lowerAge=12:upperAge=16:timeUnit=Year
+infant:lowerAge=0:upperAge=1:timeUnit=Year
+adolescence:lowerAge=10:upperAge=19:timeUnit=Year
+adolescent:lowerAge=10:upperAge=19:timeUnit=Year
+neonate:lowerAge=0:upperAge=1:timeUnit=Month
+neonatal period:lowerAge=0:upperAge=28:timeUnit=Day
+young child:lowerAge=1:upperAge=6:timeUnit=Year
+childhood:lowerAge=2:upperAge=12:timeUnit=Year
+young:lowerAge=13:upperAge=19:timeUnit=Year
+early Years:lowerAge=1:upperAge=6:timeUnit=Year
+middle age:lowerAge=45:upperAge=65:timeUnit=Year
+early teens:lowerAge=13:upperAge=14:timeUnit=Year
+early teenage:lowerAge=13:upperAge=14:timeUnit=Year
+mid teenage:lowerAge=15:upperAge=16:timeUnit=Year
+mid teens:lowerAge=15:upperAge=16:timeUnit=Year
+late teenage:lowerAge=17:upperAge=19:timeUnit=Year
+late teens:lowerAge=17:upperAge=19:timeUnit=Year
+early twenties:lowerAge=20:upperAge=23:timeUnit=Year
+mid twenties:lowerAge=24:upperAge=26:timeUnit=Year
+late twenties:lowerAge=27:upperAge=29:timeUnit=Year
+early thirties:lowerAge=30:upperAge=33:timeUnit=Year
+mid thirties:lowerAge=34:upperAge=36:timeUnit=Year
+late thirties:lowerAge=37:upperAge=39:timeUnit=Year
+early forities:lowerAge=40:upperAge=43:timeUnit=Year
+mid forities:lowerAge=44:upperAge=46:timeUnit=Year
+late forities:lowerAge=47:upperAge=49:timeUnit=Year
+early fifties:lowerAge=50:upperAge=53:timeUnit=Year
+mid fifties:lowerAge=54:upperAge=56:timeUnit=Year
+late fifties:lowerAge=57:upperAge=59:timeUnit=Year
+early sixties:lowerAge=60:upperAge=63:timeUnit=Year
+mid sixties:lowerAge=64:upperAge=66:timeUnit=Year
+late sixties:lowerAge=67:upperAge=69:timeUnit=Year
+early sixties:lowerAge=60:upperAge=63:timeUnit=Year
+mid sixties:lowerAge=64:upperAge=66:timeUnit=Year
+late sixties:lowerAge=67:upperAge=69:timeUnit=Year
+early senventies:lowerAge=70:upperAge=73:timeUnit=Year
+mid senventies:lowerAge=74:upperAge=76:timeUnit=Year
+late senventies:lowerAge=77:upperAge=79:timeUnit=Year
+early eighties:lowerAge=80:upperAge=83:timeUnit=Year
+mid eighties:lowerAge=84:upperAge=86:timeUnit=Year
+late eighties:lowerAge=87:upperAge=89:timeUnit=Year
+early nineties:lowerAge=90:upperAge=93:timeUnit=Year
+mid nineties:lowerAge=94:upperAge=96:timeUnit=Year
+late nineties:lowerAge=97:upperAge=99:timeUnit=Year

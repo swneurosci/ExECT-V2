@@ -18,8 +18,8 @@ Priority: 100
 PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
 STY = :match.Lookup3.STY, 
 Certainty = :match.Lookup3.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value =:match.Numeric.value}
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value}
 
 Rule: seizuresFor2
 Priority: 99
@@ -40,8 +40,8 @@ Priority: 99
 PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
 STY = :match.Lookup3.STY, 
 Certainty = :match.Lookup3.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value =:match.Numeric.value}
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value}
 
 Rule: seizuresFor3
 Priority: 99
@@ -62,8 +62,8 @@ Priority: 99
 PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
 STY = :match.Lookup3.STY, 
 Certainty = :match.Lookup3.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value =:match.Numeric.value}
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value}
 
 Rule: seizuresFor4
 Priority: 99
@@ -84,8 +84,8 @@ Priority: 99
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value =:match.Numeric.value}
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value}
 
 
 Rule: seizuresFor5
@@ -109,10 +109,9 @@ Priority: 99
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-Year = :match.Numeric.value,
-Month ="",
-Day = ""}
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods = :match.Numeric.value,
+}
 
 Rule: seizuresFor6
 Priority: 98
@@ -132,8 +131,8 @@ Priority: 98
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value =:match.Numeric.value}
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value}
 
 Rule: seizuresFor7
 Priority: 98
@@ -153,8 +152,8 @@ Priority: 98
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value =:match.Numeric.value}
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value}
 
 Rule: seizuresFor8
 Priority: 98
@@ -173,8 +172,8 @@ Priority: 98
 PREF = :a.Lookup3.PREF, CUI = :a.Lookup3.CUI, TUI = :a.Lookup3.TUI,
 STY = :a.Lookup3.STY, 
 Certainty = :a.Lookup3.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value ="1"}
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods ="1"}
 
  
 Rule: seizuresFor9
@@ -194,8 +193,8 @@ Priority: 98
 PREF = :b.Lookup3.PREF, CUI = :b.Lookup3.CUI, TUI = :b.Lookup3.TUI,
 STY = :b.Lookup3.STY, 
 Certainty = :b.Lookup3.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value ="1"}
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods ="1"}
 
 Rule: seizuresFor10
 Priority: 98
@@ -215,5 +214,5 @@ Priority: 98
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value =:match.Numeric.value}
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value}

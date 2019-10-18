@@ -22,10 +22,10 @@ Priority: 99
 PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
 STY = :match.Lookup3.STY, 
 Certainty = :match.Lookup3.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value =:match.Numeric.value,
-valueLower = "",
-valueUpper = ""}
+AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value,
+AgeLower = "",
+AgeUpper = ""}
 
 Rule: onsetAge2
 Priority: 98
@@ -46,10 +46,10 @@ Priority: 98
 PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
 STY = :match.Lookup3.STY,
 Certainty = :match.Lookup3.Certainty,
-timePeriod = "Years"
-value =:match.Numeric.value,
-valueLower = "",
-valueUpper = ""}
+AgeUnit = "Year",
+Age =:match.Numeric.value,
+AgeLower = "",
+AgeUpper = ""}
 
  Rule: onsetAge3
 Priority: 98
@@ -68,14 +68,14 @@ Priority: 98
 PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
 STY = :match.Lookup3.STY, 
 Certainty = :match.Lookup3.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value =:match.Numeric.value,
-valueLower = "",
-valueUpper = ""}
+AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value,
+AgeLower = "",
+AgeUpper = ""}
  
 
 Rule: onsetAge4
-Priority: 98
+Priority: 9
 
 (   
 	{Person}
@@ -93,10 +93,10 @@ Priority: 98
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
-timePeriod = "Years",
-value = "",
-valueLower = :match.NumberRange.N1,
-valueUpper = :match.NumberRange.N2}
+AgeUnit = "Year",
+Age = :match.NumberRange.value,
+AgeLower = :match.NumberRange.N1,
+AgeUpper = :match.NumberRange.N2}
  
 Rule: onsetAge5
 Priority: 98
@@ -117,10 +117,10 @@ Priority: 98
 PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
 STY = :match.Lookup3.STY, 
 Certainty = :match.Lookup3.Certainty,
-timePeriod = "Years",
-value =:match.Numeric.value,
-valueLower = "",
-valueUpper = ""}
+AgeUnit = "Year",
+Age =:match.Numeric.value,
+AgeLower = "",
+AgeUpper = ""}
 
 Rule: onsetAge6
 Priority: 98
@@ -142,10 +142,10 @@ Priority: 98
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value =:match.Numeric.value,
-valueLower = "",
-valueUpper = ""}
+AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value,
+AgeLower = "",
+AgeUpper = ""}
 
 Rule: onsetAge7
 Priority: 98
@@ -166,10 +166,10 @@ Priority: 98
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value =:match.Numeric.value,
-valueLower = "",
-valueUpper = ""}
+AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value,
+AgeLower = "",
+AgeUpper = ""}
 
 Rule: onsetAge8
 Priority: 99
@@ -189,10 +189,10 @@ Priority: 99
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
-timePeriod = "Years",
-value = :match.Numeric.value,
-valueLower = "",
-valueUpper = ""}
+AgeUnit = "Year",
+Age =:match.Numeric.value,
+AgeLower = "",
+AgeUpper = ""}
  
 
  
