@@ -23,30 +23,11 @@ Priority: 99
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value =:match.Numeric.value}
+AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value,
+AgeLower = "",
+AgeUpper= ""}
 
-Rule: AgeDiagnosed1
-Priority: 99
-
-(   
-	{Person}
-    {Lookup2.majorType == historic}
-    {Lookup2.majorType == historic, Lookup2.minorType == symptoms}
-	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
-	{Numeric}
-	{timePeriod}
-	
- ):match  
- -->
-:match.AgeDiagnosed = {rule = AgeDiagnosed1, OnsetType = "Age_Diagnosed", 
-PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
-STY = :match.Lookup.STY, 
-Certainty = :match.Lookup.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-valueLower = "",
-valueUpper = "",
-value =:match.Numeric.value}
 
 
 Rule: AgeDiagnosed2
@@ -66,11 +47,10 @@ Priority: 99
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-timePeriod = :match.Lookup2.timeUnit,
-valueLower =:match.Lookup2.lowerAge,
-valueUpper = :match.Lookup2.upperAge,
-value = ""}
+AgeUnit = :match.Lookup2.timeUnit,
+AgeLower =:match.Lookup2.lowerAge,
+AgeUpper = :match.Lookup2.upperAge,
+Age = ""}
 
 
 

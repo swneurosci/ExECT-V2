@@ -1,20 +1,21 @@
 Phase: DateDiagnosed
-Input: Lookup Person Lookup2 Sentence Numeric timeElapsed 
+Input: Lookup Person Lookup2 Sentence Numeric timeElapsed PartielDate DiagnosisTriggers PointInTime
 
 Options: control=appelt
 
 
 Rule: DateDiagnosed1
-Priority: 98
+Priority: 100
 
 (   
 	{Person}
 	{Lookup2.majorType == historic}
-    {Lookup2.majorType == historic, Lookup2.minorType == symptoms}
+    {DiagnosisTriggers.majorType == diagnosis}
 	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
-	{timeElapsed}
+	{timeElapsed.time == in , timeElapsed.time != during}
 	{Numeric}
-	
+
+ 
 	
  ):match  
  -->
@@ -24,4 +25,31 @@ STY = :match.Lookup.STY,
 Certainty = :match.Lookup.Certainty,
 Year = :match.Numeric.value,
 Month ="",
-Day = ""}
+Day = "",
+PointInTime = ""}
+
+Rule: DateDiagnosed2
+Priority: 100
+
+(   
+	{Person}
+	{Lookup2.majorType == historic}
+    {DiagnosisTriggers.majorType == diagnosis}
+	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+	({Lookup2})?
+	({Person})?
+	{PointInTime}
+	
+
+ 
+	
+ ):match  
+ -->
+:match.DateDiagnosed = {rule = DateDiagnosed2, OnsetType = "When_Diagnosed", 
+PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
+STY = :match.Lookup.STY, 
+Certainty = :match.Lookup.Certainty,
+Year = "",
+Month ="",
+Day = "",
+PointInTime = :match.PointInTime.Since}

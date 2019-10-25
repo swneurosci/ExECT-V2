@@ -1,0 +1,52 @@
+Phase: FebrileSeizures
+Input: Lookup3 Lookup2 Person  Sentence 
+
+
+
+
+
+Options: control=appelt
+
+
+Rule: NoFebSeizures1
+Priority: 100
+
+(   
+	
+    {Lookup2.majorType == historic , Lookup2.type == history}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Negated, Lookup3.PREF == "febrile convulsions", 
+	Lookup3.Experiencer == Patient}):item
+	
+	
+    
+ ):match  
+ -->
+:item.FebrileSeizures = {rule = NoFebSeizures1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+
+
+
+
+
+Rule: FebSeizures1
+Priority: 100
+
+(   
+	
+    {Lookup2.majorType == historic , Lookup2.type == history}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.PREF == "febrile convulsions", 
+	Lookup3.Experiencer == Patient}):item
+	
+	
+    
+ ):match  
+ -->
+:item.FebrileSeizures = {rule = FebSeizures1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+

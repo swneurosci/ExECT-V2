@@ -79,10 +79,8 @@ Priority: 9
 
 (   
 	{Person}
-	({Lookup2.majorType == historic, Lookup2.minorType == symptoms})?
-	({Lookup2})?
-	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
-	({Lookup2.majorType == historic, Lookup2.minorType == symptoms})?
+	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed}
+	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	{History.majorType == person}
 	{NumberRange}
 	
@@ -95,8 +93,8 @@ STY = :match.Lookup.STY,
 Certainty = :match.Lookup.Certainty,
 AgeUnit = "Year",
 Age = :match.NumberRange.value,
-AgeLower = :match.NumberRange.N1,
-AgeUpper = :match.NumberRange.N2}
+AgeLower = "",
+AgeUpper = ""}
  
 Rule: onsetAge5
 Priority: 98
@@ -154,6 +152,7 @@ Priority: 98
 	{Person}
 	{Lookup2.majorType == historic}
 	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+	{timeElapsed.time == since}
 	{Numeric}
 	{timePeriod}
 	{History.majorType == person}

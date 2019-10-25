@@ -1,0 +1,69 @@
+Phase: PatientHistoryB
+Input: Lookup3 Lookup2 Person Numeric Sentence timeElapsed timePeriod
+
+/*additional rules to annotate items in patient history when they are stated one after another in longer sentences
+keeping the  appelt mode*/
+
+
+Options: control=appelt
+
+Rule: PtHistoryB1
+Priority: 100
+
+(  
+	{Person}
+    {Lookup2.majorType == historic , Lookup2.minorType == symptoms}
+	{Lookup3}
+	({Numeric})?
+	({timeElapsed})?
+	({Person})?
+	({Lookup2})?
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+	Lookup3.Experiencer == Patient}):item
+	
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryB1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty, 
+DateYear = :match.Numeric.value,
+Age = "",
+AgeUnit = :match.Lookup2.timeUnit,
+AgeLower = :match.Lookup2.lowerAge,
+AgeUpper =:match.Lookup2.upperAge,
+TimePeriod = "",
+NumberOfTimePeriods = ""}
+
+Rule: PtHistoryB2
+Priority: 99
+
+(   {Numeric}
+	{timePeriod}
+	{timeElapsed}
+	{Person}
+    {Lookup2.majorType == historic , Lookup2.minorType == symptoms}
+	{Lookup3}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+	Lookup3.Experiencer == Patient}):item
+	
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryB2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty, 
+DateYear = "",
+Datemonth = "",
+Age = "",
+AgeUnit = "",
+AgeLower = "",
+AgeUpper = "",
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value}
+
+
+
+

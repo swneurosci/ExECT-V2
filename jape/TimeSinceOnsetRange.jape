@@ -1,0 +1,52 @@
+Phase: TimeSinceOnsetRange
+Input: Lookup3 Person timePeriod timeElapsed Lookup2 Split MedCause NumberRange Sentence
+
+Options: control=appelt
+
+
+Rule: seizuresForRange1
+Priority: 100
+
+(   
+    
+	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient}
+	{Split}
+	{Person}
+    ({Person})?
+	{MedCause.majorType == context}
+	{timeElapsed.time == during}
+	{NumberRange}
+    {timePeriod}
+ ):match  
+ -->
+:match.TimeSinceOnset = {rule = seizuresForRange1 , OnsetType = "time_since_episodes_started",
+PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
+STY = :match.Lookup3.STY, 
+Certainty = :match.Lookup3.Certainty,
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods = "",
+LowerNumberOfTimePeriods =:match.NumberRange.N1,
+UpperNumberOfTimePeriods =:match.NumberRange.N2}
+
+
+Rule: seizuresForRange2
+Priority: 99
+
+(   
+
+	{Person}
+	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient}
+	{Lookup2.language == onset}
+	{NumberRange}
+    {timePeriod}
+    {timeElapsed.time == since}
+ ):match  
+ -->
+:match.TimeSinceOnset = {rule = seizuresForRange2 , OnsetType = "time_since_episodes_started",
+PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
+STY = :match.Lookup3.STY, 
+Certainty = :match.Lookup3.Certainty,
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods = "",
+LowerNumberOfTimePeriods =:match.NumberRange.N1,
+UpperNumberOfTimePeriods =:match.NumberRange.N2}

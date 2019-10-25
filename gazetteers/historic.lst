@@ -1,32 +1,33 @@
-history
-has tolerated
-since that time
-medication due
-Review of admission
-meds due
-Meds Due
-days
-weeks
-possible
-probably
-would get
-would take
-Apparently
-had
-may need
-previously
-given
-past
-wrote
-was
-did
-should
-recent
-recently
-had been
-rather than
-consider
-attributed
-enquired
-In the event
-If unwilling then
+history:type=history
+has tolerated:type=history
+since that time:type=time
+medication due:type=future
+Review of admission:type=review
+meds due:type=future
+Meds Due:type=future
+days:type=time
+weeks:type=time
+possible:type=hypothetical
+probably:type=hypothetical
+would get:type=future
+would take:type=future
+Apparently:type=seems
+had:type=past
+may need:type=hypothetical
+previously:type=past
+given:type=conditional
+past:type=past
+wrote:type=past
+was:type=past
+did:type=past
+should:type=hypothetical
+recent:type=recent
+recently:type=recent
+had been:type=past
+rather than:type=preference
+consider:type==hypothetical
+attributed:type=cause
+enquired:type=question
+In the event:type=hypothetical
+If unwilling then:type=hypothetical
+background of:type=history

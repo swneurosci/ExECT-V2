@@ -27,7 +27,8 @@ STY = :match.Lookup.STY,
 Certainty = :match.Lookup.Certainty,
 Year = :match.Numeric.value,
 Month ="",
-Day = ""}
+Day = "",
+PointInTime = ""}
 
 
 
@@ -50,5 +51,6 @@ STY = :match.Lookup.STY,
 Certainty = :match.Lookup.Certainty,
 Year = :match.Numeric.value,
 Month ="",
-Day = ""}
+Day = "",
+PointInTime = ""}
 

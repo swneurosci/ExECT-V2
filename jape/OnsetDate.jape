@@ -1,5 +1,5 @@
 Phase: OnsetDate
-Input: Lookup3 Person Lookup2 Sentence Numeric timeElapsed  PointInTime Lookup
+Input: Lookup3 Person Lookup2 Sentence Numeric timeElapsed  PointInTime Lookup PartialDate
 Options: control=appelt
 
 
@@ -12,7 +12,7 @@ Priority: 98
 	({Person})?
 	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed}
 	{timeElapsed}
-	{Lookup2.majorType == time}
+	{PartialDate}
 	{PointInTime}
 	
 	
@@ -21,9 +21,10 @@ Priority: 98
 :match.OnsetDate = {rule = onsetDate1, OnsetType = "date_of_onset", 
 PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
 STY = :match.Lookup3.STY, 
-Year = :match.PointInTime.Since,
-Month =:match.Lookup2.month,
-Day = ""}
+Year = "",
+Month =:match.PartialDate.month,
+Day = "",
+PointInTime =:match.PointInTime.Since}
 
 Rule: onsetDate2
 Priority: 98
@@ -34,7 +35,7 @@ Priority: 98
 	{Lookup2.majorType == historic, Lookup2.language == onset}
 	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed}
 	{timeElapsed.time == during}
-	{Numeric}
+	{PartialDate}
 	
 	
  ):match  
@@ -42,9 +43,10 @@ Priority: 98
 :match.OnsetDate = {rule = onsetDate2, OnsetType = "date_of_onset", 
 PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
 STY = :match.Lookup3.STY, 
-Year = :match.Numeric.value,
-month = "",
-Day = ""}
+Year = :match.PartialDate.year,
+Month = "",
+Day = "",
+PointInTime = ""} 
 
 Rule: onsetDate3
 Priority: 98
@@ -55,8 +57,7 @@ Priority: 98
 	({Person})?
 	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed}
 	{timeElapsed}
-	{Lookup2.majorType == time}
-	{Numeric}
+	{PartialDate}
 	
 	
  ):match  
@@ -64,9 +65,10 @@ Priority: 98
 :match.OnsetDate = {rule = onsetDate3, OnsetType = "date_of_onset", 
 PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
 STY = :match.Lookup3.STY, 
-Year = :match.Numeric.value,
-Month =:match.Lookup2.month,
-Day = ""}
+Year = :match.PartialDate.year,
+Month =:match.PartialDate.month,
+Day = "",
+PointInTime = ""}
 
 Rule: onsetDate4
 Priority: 98
@@ -85,11 +87,12 @@ Priority: 98
 :match.OnsetDate = {rule = onsetDate4, OnsetType = "date_of_onset", 
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
-Year = :match.PointInTime.Since,
+Year = "",
 Month ="",
-Day = ""}
+Day = "",
+PointInTime =:match.PointInTime.Since }
 
-Rule: onsetDate4
+Rule: onsetDate5
 Priority: 98
 
 (   
@@ -97,18 +100,40 @@ Priority: 98
 	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed}
 	{Lookup2.language == onset }
 	{timeElapsed}
+	{PartialDate}
+	
+	
+	
+ ):match  
+ -->
+:match.OnsetDate = {rule = onsetDate5, OnsetType = "date_of_onset", 
+PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
+STY = :match.Lookup3.STY, 
+Year = :match.PartialDate.year,
+Month ="",
+Day = "",
+PointInTime = ""}
+
+Rule: onsetDate6
+Priority: 98
+
+(   
+	{Lookup2.majorType == historic, Lookup2.language == onset}
+	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient}
+	{Lookup2.language == onset}
+	{timeElapsed.time == in}
 	{Numeric}
 	
 	
 	
  ):match  
  -->
-:match.OnsetDate = {rule = onsetDate4, OnsetType = "date_of_onset", 
+:match.OnsetDate = {rule = onsetDate6, OnsetType = "date_of_onset", 
 PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
 STY = :match.Lookup3.STY, 
 Year = :match.Numeric.value,
 Month ="",
-Day = ""}
-
+Day = "",
+PointInTime = ""}
 
 

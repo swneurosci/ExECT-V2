@@ -22,8 +22,8 @@ Priority: 99
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value =:match.Numeric.value}
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value}
 
 
 Rule: diagnosedFor2
@@ -36,6 +36,7 @@ Priority: 99
 	{Numeric}
 	{timePeriod}
 	{timeElapsed}
+	({Lookup2.minorType == causality})?
 	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
 	
 	
@@ -45,5 +46,7 @@ Priority: 99
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
-timePeriod = :match.timePeriod.time-unit,
-value =:match.Numeric.value}
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value}
+
+

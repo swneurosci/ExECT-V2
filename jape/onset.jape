@@ -5,10 +5,10 @@ Phases:
 
 OnsetAgeRange
 TimeSinceOnset
+TimeSinceOnsetRange
 OnsetAge
 OnsetDate
 AgeDiagnosed
-/*AgeDiagnosedRange*/
 DateDiagnosed
 DateDiagnosed2
 TimeSinceDiagnosis
