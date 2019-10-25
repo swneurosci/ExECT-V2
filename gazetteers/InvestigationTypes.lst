@@ -1,18 +1,6 @@
 EEG:Investigation=EEG
 MRI:Investigation=MRI
 CT:Investigation=CT
-abnormal EEG:Outcome=abnormal:Investigation=EEG
-normal EEG:Outcome=normal:Investigation=EEG
-EEG normal:Outcome=normal:Investigation=EEG
-EEG abnormal:Outcome=abnormal:Investigation=EEG
-abnormal MRI:Outcome=abnormal:Investigation=MRI
-normal MRI:Outcome=normal:Investigation=MRI
-MRI normal:Outcome=normal:Investigation=MRI
-MRI abnormal:Outcome=abnormal:Investigation=MRI
-abnormal CT:Outcome=abnormal:Investigation=CT
-normal CT:Outcome=normal:Investigation=CT
-CT normal:Outcome=normal:Investigation=CT
-CT abnormal:Outcome=abnormal:Investigation=CT
 EEGs~:Investigation=EEG
 MRIs~:Investigation=MRI
 CTs~:Investigation=CT

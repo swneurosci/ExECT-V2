@@ -43,3 +43,4 @@ non-epileptic:CUI=C0436481:Results=Normal
 high intensity signal:CUI=C1319851:Results=Abnormal
 white-matter hyperintensities:CUI=C1319851:Results=Abnormal
 Heterotopic grey matter:CUI=C1319851:Results=Abnormal
+no significant findings:CUI=C0436481:Results=Normal

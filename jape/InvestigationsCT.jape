@@ -1,5 +1,5 @@
 Phase: Investigations
-Input: Investigation p startList Mentions InvestigationFindingCT Split Diagnosis ContextInvestigations
+Input: Investigation p startList Mentions InvestigationFindingCT Split Diagnosis ContextInvestigations Conj
 Options: control=appelt
 
 /* 
@@ -31,16 +31,16 @@ Priority: 99
 :match.Investigations = { rule = getInvestigationsOutcome1CT, CT_Performed = "Yes", CT_Results = :outcome.InvestigationFindingCT.Results, 
 CUI = :outcome.InvestigationFindingCT.CUI, Negation = :outcome.InvestigationFindingCT.Negation}
 
-
-Rule: getInvestigationsOutcomeCT2
-Priority: 98
-(
-  ({InvestigationFindingCT.Complete == Yes})
-):match
--->
-:match.Investigations = { rule = getInvestigationsOutcome2CT, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
-CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
-
+/* Removed the Investigation complete from Investigation gazetteer.
+*Rule: getInvestigationsOutcomeCT2
+*Priority: 98
+*(
+*  ({Investigation.Complete == Yes, Investigation.Investigation == CT})
+*):match
+*-->
+*:match.Investigations = { rule = getInvestigationsOutcome2CT, CT_Performed = "Yes", CT_Results = :match.Investigation.Outcome, 
+*CUI = :match.Investigation.CUI, Negation = :match.Investigation.Negation}
+*/
 
 
 Rule: getInvestigationsOutcomeCT3
@@ -87,4 +87,29 @@ Priority: 94
 ):match
 -->
 :match.Investigations = { rule = InvestigationTwoSentences, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
+
+
+Rule: InvestigationTwoSentences
+Priority: 93
+(
+  ({Investigation.Investigation == CT})
+  ({Conj})
+  ({InvestigationFindingCT})
+):match
+-->
+:match.Investigations = { rule = getInvestigationsOutcomeCT4, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
+
+
+Rule: InvestigationTwoSentences
+Priority: 92
+(
+  ({Investigation.Investigation == CT})
+  ({Conj})
+  ({Split})
+  ({InvestigationFindingCT})
+):match
+-->
+:match.Investigations = { rule = getInvestigationsOutcomeCT5, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
 CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
