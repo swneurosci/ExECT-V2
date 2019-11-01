@@ -34,3 +34,4 @@ number of months:frequency=>1:time-unit=Month:type=greater:=
 a night:time-unit=Day:interval=1:period=yes:frequency=1 
 monthly:frequency=1:time-unit=Month:= 
 days:time-unit=Day:frequency=>1:= 
+fortnight:time-unit=week:frequency=2:=

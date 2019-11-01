@@ -113,3 +113,15 @@ Priority: 92
 -->
 :match.Investigations = { rule = getInvestigationsOutcomeCT5, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
 CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
+
+Rule: InvestigationTwoSentences
+Priority: 92
+(
+  ({Investigation.Investigation == CT})
+  ({Split})
+  ({Conj})
+  ({InvestigationFindingCT})
+):match
+-->
+:match.Investigations = { rule = getInvestigationsOutcomeCT5, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}

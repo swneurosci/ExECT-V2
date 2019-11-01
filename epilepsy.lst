@@ -1412,3 +1412,4 @@ Myoclonic Encephalopathy	CUI=C0438414	PREF=Myoclonic Encephalopathy	TUI=T047	STY
 Symptomatic generalised epilepsy	CUI=C0270854	PREF=Symptomatic generalised epilepsy	TUI=T047	STY=Disease or Syndrome
 Unverricht-Lundborg syndrome	CUI=C0751785	PREF=Unverricht-Lundborg syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 symptomatic epilepsy	CUI=C1406659	PREF=symptomatic epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+symptomatic structural focal epilepsy	CUI=C0472349	PREF=symptomatic focal epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes

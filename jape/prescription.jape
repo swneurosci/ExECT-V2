@@ -27,12 +27,33 @@ time-unit = :match1.DoseFrequency.time-unit,
 dose-interval = :match1.DoseFrequency.interval, 
 Context = :match.ContextPrescription.context}
 
+Rule: doseMatch0a
+Priority: 99
+(   
+    ({ContextPrescription})?
+    (({Measurement})
+    ({ContextPrescription})?
+    {Drug}
+    ({ContextPrescription})?
+    {DoseFrequency}):match1
+):match
+-->
+:match.Prescription0 = { rule = doseMatch0a, string = :match1.Drug@string,
+DrugName = :match1.Drug@string, 
+CUI = :match1.Drug.CUI,
+DrugDose = :match1.Measurement.quantity,
+DoseUnit  =:match1.Measurement.units, 
+Frequency = :match1.DoseFrequency.frequency,
+time-unit = :match1.DoseFrequency.time-unit, 
+dose-interval = :match1.DoseFrequency.interval, 
+Context = :match.ContextPrescription.context}
+
 /*
 * When no DoseFrequency is given, impled that frequency = 1 a day
 */
 
 Rule: doseMatch1
-Priority: 99
+Priority: 98
 (
     ({ContextPrescription})?
     (({Drug})
@@ -47,3 +68,5 @@ DrugDose = :match1.Measurement.quantity,
 DoseUnit =:match1.Measurement.units,
 Frequency = "1",
 Context = :match.ContextPrescription.context}
+
+

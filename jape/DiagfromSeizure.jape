@@ -29,3 +29,31 @@ Priority: 99
 ):match1
 -->
 :match.Diagnosis = {rule = DiagFromSeizure2b, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
+
+Rule: DiagnosisFromEpilepsyYes2a
+Priority: 100
+(
+
+	(
+	{Person}
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed, Lookup.Epilepsy == Yes, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
+	)
+
+):match1
+-->
+:match.Diagnosis = {rule = DiagFromEPIYES2a, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
+
+
+Rule: DiagnosisFromEpilepsyYes2b
+Priority: 99
+(
+
+	(
+	{Person}
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"})?
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed, Lookup.Epilepsy == Yes, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
+	)
+
+):match1
+-->
+:match.Diagnosis = {rule = DiagFromEPIYES2b, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
