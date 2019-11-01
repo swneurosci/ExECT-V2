@@ -1,5 +1,5 @@
 Phase: AgeDiagnosed
-Input: Lookup Person Lookup2 Sentence Numeric timePeriod 
+Input: Lookup Person Lookup2 Sentence Numeric timePeriod History
 
   /*includes AgeDiagnosedRange*/
 
@@ -53,5 +53,25 @@ AgeUpper = :match.Lookup2.upperAge,
 Age = ""}
 
 
+Rule: AgeDiagnosed3
+Priority: 99
+
+(   
+
+	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+    {Lookup2.majorType == historic}
+    {History.majorType == person}
+	{Numeric}
+	
+ ):match  
+ -->
+:match.AgeDiagnosed = {rule = AgeDiagnosed4, OnsetType = "Age_Diagnosed", 
+PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
+STY = :match.Lookup.STY, 
+Certainty = :match.Lookup.Certainty,
+AgeUnit = Year,
+AgeLower ="",
+AgeUpper = "",
+Age =  :match.Numeric.value}
 
 

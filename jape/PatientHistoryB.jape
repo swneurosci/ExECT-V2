@@ -2,7 +2,8 @@ Phase: PatientHistoryB
 Input: Lookup3 Lookup2 Person Numeric Sentence timeElapsed timePeriod
 
 /*additional rules to annotate items in patient history when they are stated one after another in longer sentences
-keeping the  appelt mode*/
+keeping the  appelt mode. As in PatientHistory the rules annotate events as - type of event with an UMLS CUI, 
+age (precise and as a range), date as year/month, and time since the event, as TimePeriod / NumberOfTimePeriods) */
 
 
 Options: control=appelt
@@ -34,10 +35,11 @@ AgeUnit = :match.Lookup2.timeUnit,
 AgeLower = :match.Lookup2.lowerAge,
 AgeUpper =:match.Lookup2.upperAge,
 TimePeriod = "",
-NumberOfTimePeriods = ""}
+NumberOfTimePeriods = "",
+PointInTime = ""}
 
 Rule: PtHistoryB2
-Priority: 99
+Priority: 100
 
 (   {Numeric}
 	{timePeriod}
@@ -62,8 +64,72 @@ AgeUnit = "",
 AgeLower = "",
 AgeUpper = "",
 TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods =:match.Numeric.value}
+NumberOfTimePeriods =:match.Numeric.value,
+PointInTime = ""}
 
 
+/*Rule: PtHistoryB3    work in progress
+Priority: 100
+
+(  
+	{Person}
+	{Lookup2.majorType == historic , Lookup2.Type == past}
+	({Lookup3})?
+	({Lookup3})?
+
+	{timePeriod}
+	{timeElapsed}
+	{Person}
+    
+	
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+	Lookup3.Experiencer == Patient}):item
+	
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryB3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty, 
+DateYear = "",
+Datemonth = "",
+Age = "",
+AgeUnit = "",
+AgeLower = "",
+AgeUpper = "",
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value,
+PointInTime = ""} */
+
+
+Rule: PtHistoryB3
+Priority: 100
+
+(   
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+	Lookup3.Experiencer == Patient}):item
+	{Person}	
+	{timeElapsed}
+	{Lookup3}
+	{timeElapsed}
+	{Numeric}
+	
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryB3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty, 
+DateYear = :match.Numeric.value,
+Datemonth = "",
+Age = "",
+AgeUnit = "",
+AgeLower = "",
+AgeUpper = "",
+TimePeriod = "",
+NumberOfTimePeriods ="",
+PointInTime = ""}
 
 

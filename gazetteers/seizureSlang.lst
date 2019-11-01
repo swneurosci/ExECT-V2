@@ -23,6 +23,7 @@ Convulsions:CUI=C4048158:PREF=Convulsion:TUI=T184:STY=Sign or Symptom:CAT=Slang
 convulsions:CUI=C4048158:PREF=Convulsion:TUI=T184:STY=Sign or Symptom:CAT=Slang
 Loss of consciousness:CUI=C0041657:PREF=Loss of consciousness:TUI=T033:STY=Finding:CAT=Slang
 loss of consciousness:CUI=C0041657:PREF=Loss of consciousness:TUI=T033:STY=Finding:CAT=Slang
+episodes of loss of consciousness:CUI=C0041657:PREF=Loss of consciousness:TUI=T033:STY=Finding:CAT=Slang
 event:CUI=C0441471:PREF=Event:TUI=T201:STY=Event:CAT=Slang
 events:CUI=C0441471:PREF=Event:TUI=T201:STY=Event:CAT=Slang
 Collapse:CUI=C0344329:PREF=Collapse:TUI=T033:STY=Finding:CAT=Slang

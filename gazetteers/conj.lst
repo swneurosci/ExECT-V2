@@ -3,3 +3,4 @@ as well as:type=conj
 and:type=conj
 with:type=with
 ,:type=,
+*:type=list

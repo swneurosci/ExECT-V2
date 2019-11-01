@@ -1,5 +1,3 @@
-(epilepsy) or (epileptic attack)	CUI=C0014544	PREF=(epilepsy) or (epileptic attack)	TUI=T047	STY=Disease or Syndrome
-(epilepsy) or (epileptic attack) (disorder)	CUI=C0014544	PREF=(epilepsy) or (epileptic attack) (disorder)	TUI=T047	STY=Disease or Syndrome
 BCEOP - benign childhood epilepsy with occipital paroxysms	CUI=C0393675	PREF=bceop - benign childhood epilepsy with occipital paroxysms	TUI=T047	STY=Disease or Syndrome
 BCEOP bnign chdhd ep & occ par	CUI=C0393675	PREF=bceop bnign chdhd ep & occ par	TUI=T047	STY=Disease or Syndrome
 Batten dis	CUI=C0751383	PREF=batten dis	TUI=T047	STY=Disease or Syndrome
@@ -63,23 +61,6 @@ Temporal lobe epilepsy	CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Dis
 West syndrome (disorder)	CUI=C0037769	PREF=west syndrome (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 West syndrome (finding)	CUI=C0037769	PREF=west syndrome (finding)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 West's syndrome	CUI=C0037769	PREF=west's syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-[d]convulsions, febrile	CUI=C0009952	PREF=[d]convulsions, febrile	TUI=T047	STY=Disease or Syndrome
-[d]convulsions, febrile (context-dependent category)	CUI=C0009952	PREF=[d]convulsions, febrile (context-dependent category)	TUI=T047	STY=Disease or Syndrome
-[d]convulsions, febrile (situation)	CUI=C0009952	PREF=[d]convulsions, febrile (situation)	TUI=T047	STY=Disease or Syndrome
-[d]pyrexial convulsion	CUI=C0009952	PREF=[d]pyrexial convulsion	TUI=T047	STY=Disease or Syndrome
-[x]oth gen epilep + epilep syn	CUI=C0477370	PREF=[x]oth gen epilep + epilep syn	TUI=T047	STY=Disease or Syndrome
-[x]other epilepsy	CUI=C0477371	PREF=[x]other epilepsy	TUI=T047	STY=Disease or Syndrome
-[x]other epilepsy (disorder)	CUI=C0477371	PREF=[x]other epilepsy (disorder)	TUI=T047	STY=Disease or Syndrome
-[x]other generalised epilepsy and epileptic syndromes	CUI=C0477370	PREF=[x]other generalised epilepsy and epileptic syndromes	TUI=T047	STY=Disease or Syndrome
-[x]other generalized epilepsy and epileptic syndromes	CUI=C0477370	PREF=[x]other generalized epilepsy and epileptic syndromes	TUI=T047	STY=Disease or Syndrome
-[x]other generalized epilepsy and epileptic syndromes (disorder)	CUI=C0477370	PREF=[x]other generalized epilepsy and epileptic syndromes (disorder)	TUI=T047	STY=Disease or Syndrome
-[x]other status epilepticus	CUI=C0477372	PREF=[x]other status epilepticus	TUI=T047	STY=Disease or Syndrome
-[x]other status epilepticus (disorder)	CUI=C0477372	PREF=[x]other status epilepticus (disorder)	TUI=T047	STY=Disease or Syndrome
-[x]status epilepticus, unspec	CUI=C0038220	PREF=[x]status epilepticus, unspec	TUI=T047	STY=Disease or Syndrome
-[x]status epilepticus, unspecified	CUI=C0038220	PREF=[x]status epilepticus, unspecified	TUI=T047	STY=Disease or Syndrome
-[x]status epilepticus, unspecified (disorder)	CUI=C0038220	PREF=[x]status epilepticus, unspecified (disorder)	TUI=T047	STY=Disease or Syndrome
-[x]tic disorders	CUI=C0040188	PREF=[x]tic disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
-[x]tic disorders (finding)	CUI=C0040188	PREF=[x]tic disorders (finding)	TUI=T048	STY=Mental or Behavioral Dysfunction
 absence epilepsy	CUI=C0014553	PREF=absence epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 absence seiz, mild clonic comp	CUI=C0422871	PREF=absence seiz, mild clonic comp	TUI=T033	STY=Finding
 absence seiz, tonic components	CUI=C0422873	PREF=absence seiz, tonic components	TUI=T033	STY=Finding
@@ -259,12 +240,7 @@ cln3	CUI=C0751383	PREF=cln3	TUI=T047	STY=Disease or Syndrome
 cln3 related neuronal ceroid lipofuscinosis	CUI=C0751383	PREF=cln3 related neuronal ceroid lipofuscinosis	TUI=T047	STY=Disease or Syndrome
 cln3-related neuronal ceroid-lipofuscinoses	CUI=C0751383	PREF=cln3-related neuronal ceroid-lipofuscinoses	TUI=T047	STY=Disease or Syndrome
 cln3-related neuronal ceroid-lipofuscinosis	CUI=C0751383	PREF=cln3-related neuronal ceroid-lipofuscinosis	TUI=T047	STY=Disease or Syndrome
-cns - central nervous system	CUI=C3714787	PREF=cns - central nervous system	TUI=T022	STY=Body System
 coeliac disease with epilepsy and cerebral calcification syndrome	CUI=C4302597	PREF=coeliac disease with epilepsy and cerebral calcification syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-complex febrile convulsion	CUI=C0751057	PREF=complex febrile convulsion	TUI=T047	STY=Disease or Syndrome
-complex febrile convulsions	CUI=C0751057	PREF=complex febrile convulsions	TUI=T047	STY=Disease or Syndrome
-complex febrile seizure	CUI=C0751057	PREF=complex febrile seizure	TUI=T047	STY=Disease or Syndrome
-complex febrile seizure (finding)	CUI=C0751057	PREF=complex febrile seizure (finding)	TUI=T047	STY=Disease or Syndrome
 complex focal seizures	CUI=C0270834	PREF=complex focal seizures	TUI=T047	STY=Disease or Syndrome
 complex part seiz + automatism	CUI=C0270837	PREF=complex part seiz + automatism	TUI=T047	STY=Disease or Syndrome
 complex part seiz,impair consc	CUI=C0270834	PREF=complex part seiz,impair consc	TUI=T047	STY=Disease or Syndrome
@@ -291,10 +267,7 @@ convulsion disorders, tonic-clonic	CUI=C0014549	PREF=convulsion disorders, tonic
 convulsion syndrome, tonic-clonic	CUI=C0014549	PREF=convulsion syndrome, tonic-clonic	TUI=T047	STY=Disease or Syndrome
 convulsion syndromes, tonic-clonic	CUI=C0014549	PREF=convulsion syndromes, tonic-clonic	TUI=T047	STY=Disease or Syndrome
 convulsion, benign neonatal	CUI=C0270851	PREF=convulsion, benign neonatal	TUI=T047	STY=Disease or Syndrome
-convulsion, febrile	CUI=C0009952	PREF=convulsion, febrile	TUI=T047	STY=Disease or Syndrome
-convulsion, fever	CUI=C0009952	PREF=convulsion, fever	TUI=T047	STY=Disease or Syndrome
 convulsion, grand mal	CUI=C0014549	PREF=convulsion, grand mal	TUI=T047	STY=Disease or Syndrome
-convulsion, pyrexial	CUI=C0009952	PREF=convulsion, pyrexial	TUI=T047	STY=Disease or Syndrome
 convulsion, tonic clonic	CUI=C0014549	PREF=convulsion, tonic clonic	TUI=T047	STY=Disease or Syndrome
 convulsions grand mal	CUI=C0014549	PREF=convulsions grand mal	TUI=T047	STY=Disease or Syndrome
 convulsions in newborn	CUI=C0159020	PREF=convulsions in newborn	TUI=T047	STY=Disease or Syndrome
@@ -305,10 +278,7 @@ convulsions local	CUI=C0751495	PREF=convulsions local	TUI=T047	STY=Disease or Sy
 convulsions neonatal	CUI=C0159020	PREF=convulsions neonatal	TUI=T047	STY=Disease or Syndrome
 convulsions of newborn	CUI=C0159020	PREF=convulsions of newborn	TUI=T047	STY=Disease or Syndrome
 convulsions, benign neonatal	CUI=C0270851	PREF=convulsions, benign neonatal	TUI=T047	STY=Disease or Syndrome
-convulsions, febrile	CUI=C0009952	PREF=convulsions, febrile	TUI=T047	STY=Disease or Syndrome
-convulsions, fever	CUI=C0009952	PREF=convulsions, fever	TUI=T047	STY=Disease or Syndrome
 convulsions, grand mal	CUI=C0014549	PREF=convulsions, grand mal	TUI=T047	STY=Disease or Syndrome
-convulsions, pyrexial	CUI=C0009952	PREF=convulsions, pyrexial	TUI=T047	STY=Disease or Syndrome
 convulsions, tonic clonic	CUI=C0014549	PREF=convulsions, tonic clonic	TUI=T047	STY=Disease or Syndrome
 convulsive epilepsies, generalized	CUI=C0311334	PREF=convulsive epilepsies, generalized	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 convulsive epilepsy, generalized	CUI=C0311334	PREF=convulsive epilepsy, generalized	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -391,11 +361,6 @@ early myoclonic encephalopathy (disorder)	CUI=C0270855	PREF=early myoclonic ence
 early onset cerebellar ataxia with myoclonus	CUI=C0007761	PREF=early onset cerebellar ataxia with myoclonus	TUI=T047	STY=Disease or Syndrome
 early onset cerebellar ataxia with myoclonus (disorder)	CUI=C0007761	PREF=early onset cerebellar ataxia with myoclonus (disorder)	TUI=T047	STY=Disease or Syndrome
 early-onset cerebellar ataxia with myoclonus [hunt's ataxia]	CUI=C0007761	PREF=early-onset cerebellar ataxia with myoclonus [hunt's ataxia]	TUI=T047	STY=Disease or Syndrome
-ef - epileptic fit	CUI=C0014544	PREF=ef - epileptic fit	TUI=T047	STY=Disease or Syndrome
-eiee3	CUI=C0270855	PREF=eiee3	TUI=T047	STY=Disease or Syndrome
-eig	CUI=C0270850	PREF=eig	TUI=T047	STY=Disease or Syndrome
-ejm	CUI=C0270853	PREF=ejm	TUI=T047	STY=Disease or Syndrome
-ep - epilepsy	CUI=C0014544	PREF=ep - epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epd	CUI=C1849508	PREF=epd	TUI=T047	STY=Disease or Syndrome
 epilectic attack, nos	CUI=C0014544	PREF=epilectic attack, nos	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilep wth myoclon/astat seiz	CUI=C0393702	PREF=epilep wth myoclon/astat seiz	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -789,6 +754,7 @@ localisation-related epilepsy (disorder)	CUI=C0014547	PREF=localisation-related 
 localisation-related epilepsy -retired-	CUI=C0014547	PREF=localisation-related epilepsy -retired-	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 localisation-related idiopathic epilepsy	CUI=C0472348	PREF=localisation-related idiopathic epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 symptomatic focal epilepsy	CUI=C0472349	PREF=symptomatic focal epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+lesional epilepsy	CUI=C0472349	PREF=symptomatic focal epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset	CUI=C0475521	PREF=localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset nos	CUI=C0475521	PREF=localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset nos	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with complex partial seizures	CUI=C0494472	PREF=localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with complex partial seizures	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -1302,20 +1268,6 @@ temporal lobe seizure	CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Dise
 temporal lobe seizures	CUI=C0014556	PREF=Epilepsies, Occipital Lobe	TUI=T047	STY=Disease or Syndrome
 temporo-parieto-occipital junction seizure	CUI=C3164682	PREF=temporo-parieto-occipital junction seizure	TUI=T033	STY=Finding
 tensor tympani myoclonus	CUI=C1998254	PREF=tensor tympani myoclonus	TUI=T047	STY=Disease or Syndrome
-tic	CUI=C0040188	PREF=tic	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic (finding)	CUI=C0040188	PREF=tic (finding)	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic [dup] (finding)	CUI=C0040188	PREF=tic [dup] (finding)	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic dis	CUI=C0040188	PREF=tic dis	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic disorder (disorder)	CUI=C0040188	PREF=tic disorder (disorder)	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic disorder nos	CUI=C0040188	PREF=tic disorder nos	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic disorder unspecified	CUI=C0040188	PREF=tic disorder unspecified	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic disorder unspecified (disorder)	CUI=C0040188	PREF=tic disorder unspecified (disorder)	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic disorder unspecified (finding)	CUI=C0040188	PREF=tic disorder unspecified (finding)	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic disorder, nos	CUI=C0040188	PREF=tic disorder, nos	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic disorder, unspecified	CUI=C0040188	PREF=tic disorder, unspecified	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic nos	CUI=C0040188	PREF=tic nos	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic nos (finding)	CUI=C0040188	PREF=tic nos (finding)	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic, nos	CUI=C0040188	PREF=tic, nos	TUI=T048	STY=Mental or Behavioral Dysfunction
 tonic clonic convulsion	CUI=C0014549	PREF=tonic clonic convulsion	TUI=T047	STY=Disease or Syndrome
 tonic clonic convulsion dis	CUI=C0014549	PREF=tonic clonic convulsion dis	TUI=T047	STY=Disease or Syndrome
 tonic clonic convulsion disorder	CUI=C0014549	PREF=tonic clonic convulsion disorder	TUI=T047	STY=Disease or Syndrome
@@ -1375,8 +1327,6 @@ visual seizure (finding)	CUI=C0278188	PREF=visual seizure (finding)	TUI=T047	STY
 visual seizures	CUI=C0270824	PREF=visual seizures	TUI=T047	STY=Disease or Syndrome
 vogt spielmeyer disease	CUI=C0751383	PREF=vogt spielmeyer disease	TUI=T047	STY=Disease or Syndrome
 west syndrome	CUI=C0037769	PREF=west syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-withdrawal-induced seizure, alcohol	CUI=C0586323	PREF=withdrawal-induced seizure, alcohol	TUI=T048	STY=Mental or Behavioral Dysfunction
-withdrawal-induced seizures, alcohol	CUI=C0586323	PREF=withdrawal-induced seizures, alcohol	TUI=T048	STY=Mental or Behavioral Dysfunction
 x-linked epilepsy with learning disability and behavior disorder syndrome	CUI=C4273990	PREF=x-linked epilepsy with learning disability and behavior disorder syndrome	TUI=T048	STY=Mental or Behavioral Dysfunction	Epilepsy=Yes
 x-linked epilepsy with learning disability and behavior disorder syndrome (disorder)	CUI=C4273990	PREF=x-linked epilepsy with learning disability and behavior disorder syndrome (disorder)	TUI=T048	STY=Mental or Behavioral Dysfunction	Epilepsy=Yes
 x-linked epilepsy with learning disability and behaviour disorder syndrome	CUI=C4273990	PREF=x-linked epilepsy with learning disability and behaviour disorder syndrome	TUI=T048	STY=Mental or Behavioral Dysfunction	Epilepsy=Yes
@@ -1407,9 +1357,10 @@ Early infantile epileptic encephalopathy with suppression bursts	CUI=C0393706	PR
 Early infant epileptic encephalopathy wth suppression bursts	CUI=C0393706	PREF=Early infant epileptic encephalopathy wth suppression bursts	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Early infantile epileptic encephalopathy with suppression bursts	CUI=C0393706	PREF=Early infantile epileptic encephalopathy with suppression bursts	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Ohtahara syndrome	CUI=C0393706	PREF=Ohtahara syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-Myoclonic Encephalopathies	CUI=C0438414	PREF=Myoclonic Encephalopathies	TUI=T047	STY=Disease or Syndrome
-Myoclonic Encephalopathy	CUI=C0438414	PREF=Myoclonic Encephalopathy	TUI=T047	STY=Disease or Syndrome
-Symptomatic generalised epilepsy	CUI=C0270854	PREF=Symptomatic generalised epilepsy	TUI=T047	STY=Disease or Syndrome
+Myoclonic Encephalopathies	CUI=C0438414	PREF=Myoclonic Encephalopathies	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+Myoclonic Encephalopathy	CUI=C0438414	PREF=Myoclonic Encephalopathy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+Symptomatic generalised epilepsy	CUI=C0270854	PREF=Symptomatic generalised epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Unverricht-Lundborg syndrome	CUI=C0751785	PREF=Unverricht-Lundborg syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 symptomatic epilepsy	CUI=C1406659	PREF=symptomatic epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+focal seizures with secondary generalisation	CUI=C0474327	PREF=partial seizure evolving to secondary generalised seizure	TUI=T046	STY=Pathologic Function	Epilepsy=Yes
 symptomatic structural focal epilepsy	CUI=C0472349	PREF=symptomatic focal epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes

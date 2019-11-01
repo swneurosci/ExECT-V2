@@ -53,7 +53,7 @@ koolen syndrome	CUI=C1864871	PREF=koolen syndrome	TUI=T047	STY=Disease or Syndro
 lack of psychomotor development	CUI=C0557874	PREF=lack of psychomotor development	TUI=T048	STY=Mental or Behavioral Dysfunction
 learning difficulties	CUI=C0424939	PREF=learning difficulties	TUI=T033	STY=finding
 learning disability	CUI=C0751265	PREF=learning disability	TUI=T048	STY=Mental or Behavioral Dysfunction
-learning disability	CUI=C1321592	PREF=learning disability	TUI=T091	STY=biomedical occupation or discipline
+learning disabilities	CUI=C0751265	PREF=learning disability	TUI=T048	STY=Mental or Behavioral Dysfunction
 lewy body parkinson disease	CUI=C0030567	PREF=lewy body parkinson disease	TUI=T047	STY=Disease or Syndrome
 lewy body parkinson's disease	CUI=C0030567	PREF=lewy body parkinson's disease	TUI=T047	STY=Disease or Syndrome
 megalocornea, multiple skeletal anomalies, and developmental delay	CUI=C1855305	PREF=megalocornea, multiple skeletal anomalies, and developmental delay	TUI=T047	STY=Disease or Syndrome
@@ -207,12 +207,13 @@ benign brain neoplasm	CUI=C0496899	PREF=benign brain neoplasm	TUI=T191	STY=Neopl
 benign brain neoplasms	CUI=C0496899	PREF=benign brain neoplasms	TUI=T191	STY=Neoplastic Process
 benign brain tumor	CUI=C0496899	PREF=benign brain tumor	TUI=T191	STY=Neoplastic Process
 benign brain tumour	CUI=C0496899	PREF=benign brain tumour	TUI=T191	STY=Neoplastic Process
-benign neoplasm brain	CUI=C0496899	PREF=benign neoplasm brain	TUI=T191	STY=Neoplastic Process
+benign neoplasm	CUI=C0086692	PREF=benign neoplasm	TUI=T191	STY=Neoplastic Process
 benign neoplasm of brain	CUI=C0496899	PREF=benign neoplasm of brain	TUI=T191	STY=Neoplastic Process
 benign neoplasm, brain	CUI=C0496899	PREF=benign neoplasm, brain	TUI=T191	STY=Neoplastic Process
 blue rubber bleb nevus	CUI=C0346072	PREF=blue rubber bleb nevus (disorder)	TUI=T019	STY=Congenital Abnormality
 blue rubber bleb nevus syndrome	CUI=C0346072	PREF=blue rubber bleb nevus syndrome	TUI=T019	STY=Congenital Abnormality
 brain cancer	CUI=C0153633	PREF=brain cancer	TUI=T191	STY=Neoplastic Process
+occipital tumour	CUI=C1263889	PREF=Neoplasm of occipital lobe	TUI=T191	STY=Neoplastic Process
 brain cancers	CUI=C0153633	PREF=brain cancers	TUI=T191	STY=Neoplastic Process
 brain damage	CUI=C0270611	PREF=brain damage	TUI=T037	STY=Injury or Poisoning
 brain damage	CUI=C1456496	PREF=brain damage	TUI=T037	STY=Injury or Poisoning
@@ -841,27 +842,14 @@ malignant cerebral tumor	CUI=C0346903	PREF=malignant cerebral tumor	TUI=T191	STY
 malignant cerebral tumour	CUI=C0346903	PREF=malignant cerebral tumour	TUI=T191	STY=Neoplastic Process
 malignant neopl brain	CUI=C0153633	PREF=malignant neopl brain	TUI=T191	STY=Neoplastic Process
 malignant neoplasm of brain	CUI=C0153633	PREF=malignant neoplasm of brain	TUI=T191	STY=Neoplastic Process
-malignant neoplasm of brain (disorder)	CUI=C0153633	PREF=malignant neoplasm of brain (disorder)	TUI=T191	STY=Neoplastic Process
-malignant neoplasm of brain nos	CUI=C0153633	PREF=malignant neoplasm of brain nos	TUI=T191	STY=Neoplastic Process
-malignant neoplasm of brain nos (disorder)	CUI=C0153633	PREF=malignant neoplasm of brain nos (disorder)	TUI=T191	STY=Neoplastic Process
-malignant neoplasm of brain, nos	CUI=C0153633	PREF=malignant neoplasm of brain, nos	TUI=T191	STY=Neoplastic Process
 malignant neoplasm of brain, unspecified	CUI=C0153633	PREF=malignant neoplasm of brain, unspecified	TUI=T191	STY=Neoplastic Process
 malignant neoplasm of cerebrum	CUI=C0346903	PREF=malignant neoplasm of cerebrum	TUI=T191	STY=Neoplastic Process
-malignant neoplasm of cerebrum (disorder)	CUI=C0346903	PREF=malignant neoplasm of cerebrum (disorder)	TUI=T191	STY=Neoplastic Process
-malignant neoplasm of cerebrum nos	CUI=C0346903	PREF=malignant neoplasm of cerebrum nos	TUI=T191	STY=Neoplastic Process
-malignant neoplasm of cerebrum nos (disorder)	CUI=C0346903	PREF=malignant neoplasm of cerebrum nos (disorder)	TUI=T191	STY=Neoplastic Process
-malignant neoplasm of cerebrum, nos	CUI=C0346903	PREF=malignant neoplasm of cerebrum, nos	TUI=T191	STY=Neoplastic Process
-malignant neoplasm of other part of brain nos	CUI=C0153642	PREF=malignant neoplasm of other part of brain nos	TUI=T191	STY=Neoplastic Process
-malignant neoplasm of other part of brain nos (disorder)	CUI=C0153642	PREF=malignant neoplasm of other part of brain nos (disorder)	TUI=T191	STY=Neoplastic Process
 malignant neoplasm of other parts of brain	CUI=C0153642	PREF=malignant neoplasm of other parts of brain	TUI=T191	STY=Neoplastic Process
-malignant neoplasm of other parts of brain (disorder)	CUI=C0153642	PREF=malignant neoplasm of other parts of brain (disorder)	TUI=T191	STY=Neoplastic Process
-malignant neoplasm, brain	CUI=C0153633	PREF=malignant neoplasm, brain	TUI=T191	STY=Neoplastic Process
-malignant neoplasms, brain	CUI=C0153633	PREF=malignant neoplasms, brain	TUI=T191	STY=Neoplastic Process
-malignant primary brain neopl	CUI=C0750979	PREF=malignant primary brain neopl	TUI=T191	STY=Neoplastic Process
+malignant neoplasm of brain	CUI=C0153633	PREF=malignant neoplasm, brain	TUI=T191	STY=Neoplastic Process
+malignant neoplasms ofbrain	CUI=C0153633	PREF=malignant neoplasms, brain	TUI=T191	STY=Neoplastic Process
 malignant primary brain neoplasms	CUI=C0750979	PREF=malignant primary brain neoplasms	TUI=T191	STY=Neoplastic Process
 malignant primary brain tumors	CUI=C0750979	PREF=malignant primary brain tumors	TUI=T191	STY=Neoplastic Process
 mass of hypothalamus	CUI=C0342417	PREF=mass of hypothalamus	TUI=T190	STY=Anatomical Abnormality
-mass of hypothalamus (finding)	CUI=C0342417	PREF=mass of hypothalamus (finding)	TUI=T190	STY=Anatomical Abnormality
 massive osteolyses	CUI=C0029438	PREF=massive osteolyses	TUI=T047	STY=Disease or Syndrome
 melas	CUI=C0162671	PREF=melas	TUI=T047	STY=Disease or Syndrome
 melas - mitochond myop/encephal/lact acidos/strke-like episo	CUI=C0162671	PREF=melas - mitochond myop/encephal/lact acidos/strke-like episo	TUI=T047	STY=Disease or Syndrome
@@ -900,16 +888,6 @@ myopathy, mitochondrial-encephalopathy-lactic acidosis-stroke	CUI=C0162671	PREF=
 neonatal cerebral infarction	CUI=C1299567	PREF=neonatal cerebral infarction	TUI=T047	STY=Disease or Syndrome
 neonatal stroke	CUI=C1299567	PREF=neonatal stroke	TUI=T047	STY=Disease or Syndrome
 neonatal stroke (disorder)	CUI=C1299567	PREF=neonatal stroke (disorder)	TUI=T047	STY=Disease or Syndrome
-neopl brain benign	CUI=C0496899	PREF=neopl brain benign	TUI=T191	STY=Neoplastic Process
-neopl brain malignant	CUI=C0153633	PREF=neopl brain malignant	TUI=T191	STY=Neoplastic Process
-neopl brain stem	CUI=C0677866	PREF=neopl brain stem	TUI=T191	STY=Neoplastic Process
-neopl brainstem	CUI=C0677866	PREF=neopl brainstem	TUI=T191	STY=Neoplastic Process
-neopl cerebellar	CUI=C0007762	PREF=neopl cerebellar	TUI=T191	STY=Neoplastic Process
-neopl cerebral ventricle	CUI=C0007798	PREF=neopl cerebral ventricle	TUI=T191	STY=Neoplastic Process
-neopl cerebroventricular	CUI=C0007798	PREF=neopl cerebroventricular	TUI=T191	STY=Neoplastic Process
-neopl intraventricular	CUI=C0007798	PREF=neopl intraventricular	TUI=T191	STY=Neoplastic Process
-neopl pineal	CUI=C0031941	PREF=neopl pineal	TUI=T191	STY=Neoplastic Process
-neopl ventricular brain	CUI=C0007798	PREF=neopl ventricular brain	TUI=T191	STY=Neoplastic Process
 neoplasm of brain stem	CUI=C0677866	PREF=neoplasm of brain stem	TUI=T191	STY=Neoplastic Process
 neoplasm of brain stem (disorder)	CUI=C0677866	PREF=neoplasm of brain stem (disorder)	TUI=T191	STY=Neoplastic Process
 neoplasm of cerebellum	CUI=C0007762	PREF=neoplasm of cerebellum	TUI=T191	STY=Neoplastic Process
@@ -933,35 +911,32 @@ neoplasm of uncertain behaviour nos	CUI=C0154129	PREF=neoplasm of uncertain beha
 neoplasm of uncertain behaviour of brain	CUI=C0496936	PREF=neoplasm of uncertain behaviour of brain	TUI=T191	STY=Neoplastic Process
 neoplasm of uncertain behaviour of brain (disorder)	CUI=C0496936	PREF=neoplasm of uncertain behaviour of brain (disorder)	TUI=T191	STY=Neoplastic Process
 neoplasm of uncertain or unknown behavior of brain, unspecified	CUI=C0496936	PREF=neoplasm of uncertain or unknown behavior of brain, unspecified	TUI=T191	STY=Neoplastic Process
-neoplasm, brain stem	CUI=C0677866	PREF=neoplasm, brain stem	TUI=T191	STY=Neoplastic Process
-neoplasm, brain ventricular	CUI=C0007798	PREF=neoplasm, brain ventricular	TUI=T191	STY=Neoplastic Process
-neoplasm, brainstem	CUI=C0677866	PREF=neoplasm, brainstem	TUI=T191	STY=Neoplastic Process
-neoplasm, cerebellar	CUI=C0007762	PREF=neoplasm, cerebellar	TUI=T191	STY=Neoplastic Process
-neoplasm, cerebral ventricle	CUI=C0007798	PREF=neoplasm, cerebral ventricle	TUI=T191	STY=Neoplastic Process
-neoplasm, cerebroventricular	CUI=C0007798	PREF=neoplasm, cerebroventricular	TUI=T191	STY=Neoplastic Process
-neoplasm, intraventricular	CUI=C0007798	PREF=neoplasm, intraventricular	TUI=T191	STY=Neoplastic Process
-neoplasm, pineal	CUI=C0031941	PREF=neoplasm, pineal	TUI=T191	STY=Neoplastic Process
+neoplasm of brain stem	CUI=C0677866	PREF=neoplasm, brain stem	TUI=T191	STY=Neoplastic Process
+neoplasm of brain ventricular	CUI=C0007798	PREF=neoplasm, brain ventricular	TUI=T191	STY=Neoplastic Process
+neoplasm of brainstem	CUI=C0677866	PREF=neoplasm, brainstem	TUI=T191	STY=Neoplastic Process
+neoplasm of cerebellar	CUI=C0007762	PREF=neoplasm, cerebellar	TUI=T191	STY=Neoplastic Process
+neoplasm of cerebral ventricle	CUI=C0007798	PREF=neoplasm, cerebral ventricle	TUI=T191	STY=Neoplastic Process
+neoplasm of cerebroventricular	CUI=C0007798	PREF=neoplasm, cerebroventricular	TUI=T191	STY=Neoplastic Process
+neoplasm of intraventricular	CUI=C0007798	PREF=neoplasm, intraventricular	TUI=T191	STY=Neoplastic Process
+neoplasm of pineal	CUI=C0031941	PREF=neoplasm, pineal	TUI=T191	STY=Neoplastic Process
 neoplasm, uncertain whether benign or malignant	CUI=C0677041	PREF=neoplasm, uncertain whether benign or malignant	TUI=T191	STY=Neoplastic Process
 neoplasm, uncertain whether benign or malignant (morphologic abnormality)	CUI=C0677041	PREF=neoplasm, uncertain whether benign or malignant (morphologic abnormality)	TUI=T191	STY=Neoplastic Process
 neoplasms of uncertain behaviour	CUI=C0154129	PREF=neoplasms of uncertain behaviour	TUI=T191	STY=Neoplastic Process
 neoplasms of uncertain behaviour (disorder)	CUI=C0154129	PREF=neoplasms of uncertain behaviour (disorder)	TUI=T191	STY=Neoplastic Process
-neoplasms, brain stem	CUI=C0677866	PREF=neoplasms, brain stem	TUI=T191	STY=Neoplastic Process
-neoplasms, brain ventricular	CUI=C0007798	PREF=neoplasms, brain ventricular	TUI=T191	STY=Neoplastic Process
-neoplasms, brain, benign	CUI=C0496899	PREF=neoplasms, brain, benign	TUI=T191	STY=Neoplastic Process
-neoplasms, brain, malignant	CUI=C0153633	PREF=neoplasms, brain, malignant	TUI=T191	STY=Neoplastic Process
-neoplasms, brainstem	CUI=C0677866	PREF=neoplasms, brainstem	TUI=T191	STY=Neoplastic Process
-neoplasms, cerebellar	CUI=C0007762	PREF=neoplasms, cerebellar	TUI=T191	STY=Neoplastic Process
-neoplasms, cerebral ventricle	CUI=C0007798	PREF=neoplasms, cerebral ventricle	TUI=T191	STY=Neoplastic Process
-neoplasms, cerebroventricular	CUI=C0007798	PREF=neoplasms, cerebroventricular	TUI=T191	STY=Neoplastic Process
-neoplasms, intraventricular	CUI=C0007798	PREF=neoplasms, intraventricular	TUI=T191	STY=Neoplastic Process
-neoplasms, pineal	CUI=C0031941	PREF=neoplasms, pineal	TUI=T191	STY=Neoplastic Process
+neoplasms of brain stem	CUI=C0677866	PREF=neoplasms, brain stem	TUI=T191	STY=Neoplastic Process
+neoplasms of brain ventricular	CUI=C0007798	PREF=neoplasms, brain ventricular	TUI=T191	STY=Neoplastic Process
+benign neoplasms of brain	CUI=C0496899	PREF=neoplasms, brain, benign	TUI=T191	STY=Neoplastic Process
+malignant neoplasms of brain	CUI=C0153633	PREF=neoplasms, brain, malignant	TUI=T191	STY=Neoplastic Process
+neoplasms of brainstem	CUI=C0677866	PREF=neoplasms, brainstem	TUI=T191	STY=Neoplastic Process
+cerebellar neoplasms	CUI=C0007762	PREF=neoplasms, cerebellar	TUI=T191	STY=Neoplastic Process
+neoplasms of cerebral ventricle	CUI=C0007798	PREF=neoplasms, cerebral ventricle	TUI=T191	STY=Neoplastic Process
+cerebroventricular neoplasms	CUI=C0007798	PREF=neoplasms, cerebroventricular	TUI=T191	STY=Neoplastic Process
+intraventricular neoplasms	CUI=C0007798	PREF=neoplasms, intraventricular	TUI=T191	STY=Neoplastic Process
+pineal neoplasms	CUI=C0031941	PREF=neoplasms, pineal	TUI=T191	STY=Neoplastic Process
 neoplasms, ventricular, brain	CUI=C0007798	PREF=neoplasms, ventricular, brain	TUI=T191	STY=Neoplastic Process
-neoplastic disease of uncertain behavior	CUI=C0154129	PREF=neoplastic disease of uncertain behavior	TUI=T191	STY=Neoplastic Process
-neoplastic disease of uncertain behavior (disorder)	CUI=C0154129	PREF=neoplastic disease of uncertain behavior (disorder)	TUI=T191	STY=Neoplastic Process
 neoplastic disease of uncertain behaviour	CUI=C0154129	PREF=neoplastic disease of uncertain behaviour	TUI=T191	STY=Neoplastic Process
 nervous system, central	CUI=C3714787	PREF=nervous system, central	TUI=T022	STY=Body System
 nervous systems, central	CUI=C3714787	PREF=nervous systems, central	TUI=T022	STY=Body System
-neur+mix neur-glial tum brain	CUI=C0346291	PREF=neur+mix neur-glial tum brain	TUI=T191	STY=Neoplastic Process
 neurocytoma	CUI=C1622510	PREF=neurocytoma	TUI=T191	STY=Neoplastic Process
 neurocytoma (morphologic abnormality)	CUI=C1622510	PREF=neurocytoma (morphologic abnormality)	TUI=T191	STY=Neoplastic Process
 neurocytoma -retired-	CUI=C1622510	PREF=neurocytoma -retired-	TUI=T191	STY=Neoplastic Process
@@ -999,13 +974,6 @@ opticociliary vessels	CUI=C0423462	PREF=opticociliary vessels	TUI=T033	STY=findi
 osteolyses, massive	CUI=C0029438	PREF=osteolyses, massive	TUI=T047	STY=Disease or Syndrome
 osteolysis and angiomatous naevi	CUI=C0029438	PREF=osteolysis and angiomatous naevi	TUI=T047	STY=Disease or Syndrome
 osteolysis and angiomatous nevi	CUI=C0029438	PREF=osteolysis and angiomatous nevi	TUI=T047	STY=Disease or Syndrome
-osteolysis+angiomatous naevi	CUI=C0029438	PREF=osteolysis+angiomatous naevi	TUI=T047	STY=Disease or Syndrome
-papvc - part anom pulm vn conn	CUI=C0158634	PREF=papvc - part anom pulm vn conn	TUI=T019	STY=Congenital Abnormality
-papvc - partial anomalous pulmonary venous connection	CUI=C0158634	PREF=papvc - partial anomalous pulmonary venous connection	TUI=T019	STY=Congenital Abnormality
-papvd - part anom pul vn drain	CUI=C0158634	PREF=papvd - part anom pul vn drain	TUI=T019	STY=Congenital Abnormality
-papvd - partial anomalous pulmonary venous drainage	CUI=C0158634	PREF=papvd - partial anomalous pulmonary venous drainage	TUI=T019	STY=Congenital Abnormality
-papvr - partial anomalous pulmonary venous return	CUI=C0158634	PREF=papvr - partial anomalous pulmonary venous return	TUI=T019	STY=Congenital Abnormality
-papvr-part anom pul venous ret	CUI=C0158634	PREF=papvr-part anom pul venous ret	TUI=T019	STY=Congenital Abnormality
 paralytic stroke	CUI=C1263853	PREF=paralytic stroke	TUI=T047	STY=Disease or Syndrome
 paralytic stroke (disorder)	CUI=C1263853	PREF=paralytic stroke (disorder)	TUI=T047	STY=Disease or Syndrome
 paralytic stroke, nos	CUI=C1263853	PREF=paralytic stroke, nos	TUI=T047	STY=Disease or Syndrome
@@ -1213,7 +1181,7 @@ thrombosis cerebral	CUI=C0079102	PREF=thrombosis cerebral	TUI=T047	STY=Disease o
 thrombosis cerebral arterial	CUI=C0795687	PREF=thrombosis cerebral arterial	TUI=T047	STY=Disease or Syndrome
 thrombosis of cerebral arteries	CUI=C0795687	PREF=thrombosis of cerebral arteries	TUI=T047	STY=Disease or Syndrome
 thrombosis of cerebral artery	CUI=C0795687	PREF=thrombosis of cerebral artery	TUI=T047	STY=Disease or Syndrome
-thrombosis, cerebral	CUI=C0079102	PREF=thrombosis, cerebral	TUI=T047	STY=Disease or Syndrome
+cerebral thrombosis	CUI=C0079102	PREF=thrombosis, cerebral	TUI=T047	STY=Disease or Syndrome
 thrombotic stroke	CUI=C0242129	PREF=thrombotic stroke	TUI=T047	STY=Disease or Syndrome
 total anom pulm venous connect	CUI=C0036400	PREF=total anom pulm venous connect	TUI=T019	STY=Congenital Abnormality
 total anomalous pulmonary venous connection	CUI=C0036400	PREF=total anomalous pulmonary venous connection	TUI=T019	STY=Congenital Abnormality
@@ -1273,6 +1241,7 @@ ventricular neoplasms of th brain	CUI=C0007798	PREF=ventricular neoplasms, brain
 ventricular tumor  of the brain	CUI=C0007798	PREF=ventricular tumor, brain	TUI=T191	STY=Neoplastic Process
 ventricular tumors of the brain	CUI=C0007798	PREF=ventricular tumors, brain	TUI=T191	STY=Neoplastic Process
 viral encephalitis	CUI=C0243010	PREF=viral encephalitis	TUI=T047	STY=Disease or Syndrome
+encephalitis	CUI=C0014038	PREF=encephalitis	TUI=T047	STY=Disease or Syndrome
 Dysembryoplastic neuroepithelial tumor	CUI=C1266177	PREF=Dysembryoplastic neuroepithelial tumor	TUI=T191	STY=Neoplastic Process
 DNET	CUI=C1266177	PREF=Dysembryoplastic neuroepithelial tumor	TUI=T191	STY=Neoplastic Process
 DNT	CUI=C1266177	PREF=Dysembryoplastic neuroepithelial tumor	TUI=T191	STY=Neoplastic Process
@@ -1299,6 +1268,9 @@ Birth trauma, asphyxia and hypoxia	CUI=C0411037	PREF=Birth trauma, asphyxia and 
 fetal distress	CUI=C0015930	PREF=Fetal distress	TUI=T046	STY=Pathologic Function
 birth injury CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
 birth trauma	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
+perinatal insult	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
+perinatal injury	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
+injury in the perinatal period	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
 traumatic birth history	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
 neonatal complicaions	CUI=C4735642	PREF=Neonatal complications	TUI=T033	STY=Finding	
 neonatal intensive care	CUI=C0021709	PREF=neonatal intensive care unit	TUI=T093	STY=Health Care Related Organization	
@@ -1324,5 +1296,50 @@ intracerebral bleed	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologi
 intracerebral bleeds	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologic Function
 cerebral bleed	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologic Function
 ICH	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologic Function
-bleeding in brain	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologic Function
-	
+bleeding in brain	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologic Function
+hydrocephalus	CUI=C0020255	PREF=hydrocephalus	TUI=T047	STY=Disease or Syndrome
+cerebral abscess	CUI=C1510428	PREF=cerebral abscess	TUI=T047	STY=Disease or Syndrome
+brain abscess	CUI=C0006105	PREF=brain abscess	TUI=T047	STY=Disease or Syndrome
+depression	CUI=C0011570	PREF=Mental Depression	TUI=T048	STY=Mental or Behavioral Dysfunction	
+tic	CUI=C0040188	PREF=tic	TUI=T048	STY=Mental or Behavioral Dysfunction
+tic (finding)	CUI=C0040188	PREF=tic (finding)	TUI=T048	STY=Mental or Behavioral Dysfunction
+tic [dup] (finding)	CUI=C0040188	PREF=tic [dup] (finding)	TUI=T048	STY=Mental or Behavioral Dysfunction
+tic dis	CUI=C0040188	PREF=tic dis	TUI=T048	STY=Mental or Behavioral Dysfunction
+tic disorder (disorder)	CUI=C0040188	PREF=tic disorder (disorder)	TUI=T048	STY=Mental or Behavioral Dysfunction
+tic disorder nos	CUI=C0040188	PREF=tic disorder nos	TUI=T048	STY=Mental or Behavioral Dysfunction
+tic disorder unspecified	CUI=C0040188	PREF=tic disorder unspecified	TUI=T048	STY=Mental or Behavioral Dysfunction
+tic disorder unspecified (disorder)	CUI=C0040188	PREF=tic disorder unspecified (disorder)	TUI=T048	STY=Mental or Behavioral Dysfunction
+tic disorder unspecified (finding)	CUI=C0040188	PREF=tic disorder unspecified (finding)	TUI=T048	STY=Mental or Behavioral Dysfunction
+tic disorder, nos	CUI=C0040188	PREF=tic disorder, nos	TUI=T048	STY=Mental or Behavioral Dysfunction
+tic disorder, unspecified	CUI=C0040188	PREF=tic disorder, unspecified	TUI=T048	STY=Mental or Behavioral Dysfunction
+tic nos	CUI=C0040188	PREF=tic nos	TUI=T048	STY=Mental or Behavioral Dysfunction
+tic nos (finding)	CUI=C0040188	PREF=tic nos (finding)	TUI=T048	STY=Mental or Behavioral Dysfunction
+tic, nos	CUI=C0040188	PREF=tic, nos	TUI=T048	STY=Mental or Behavioral Dysfunction
+withdrawal-induced seizure, alcohol	CUI=C0586323	PREF=withdrawal-induced seizure, alcohol	TUI=T048	STY=Mental or Behavioral Dysfunction
+withdrawal-induced seizures, alcohol	CUI=C0586323	PREF=withdrawal-induced seizures, alcohol	TUI=T048	STY=Mental or Behavioral Dysfunction
+neuronal heterotopia	CUI=C0266491	PREF=Neuronal heterotopia	TUI=T047	STY=Disease or Syndrome	
+gray matter heterotopia	CUI=C0266491	PREF=Neuronal heterotopia	TUI=T047	STY=Disease or Syndrome
+heterotopic grey matter	CUI=C0266491	PREF=Neuronal heterotopia	TUI=T047	STY=Disease or Syndrome
+neoplasm of temporal lobe	CUI=C1263887	PREF=neoplasm of temporal lobe	TUI=T191	STY=Neoplastic Process
+malignant neoplasm of temporal lobe of brain	CUI=C2118558	PREF=malignant neoplasm of temporal lobe of brain	TUI=T191	STY=Neoplastic Process
+neoplasm	CUI=C0027651	PREF=neoplasms	TUI=T191	STY=Neoplastic Process
+neoplasms	CUI=C0027651	PREF=neoplasms	TUI=T191	STY=Neoplastic Process
+lesion of brain	CUI=C0221505	PREF=lesion of brain	TUI=T047	STY=Disease or Syndrome
+bran lesion	CUI=C0221505	PREF=lesion of brain	TUI=T047	STY=Disease or Syndrome
+mass lesion of temporal lobe on left	CUI=C2026259	PREF=mass lesion of temporal lobe on left	TUI=T047	STY=Disease or Syndrome
+left temporal lobe lesion	CUI=C2026259	PREF=mass lesion of temporal lobe on left	TUI=T047	STY=Disease or Syndrome
+mass lesion of temporal lobe on right	CUI=C2026260	PREF=mass lesion of temporal lobe on right	TUI=T047	STY=Disease or Syndrome
+right temporal lobe lesion	CUI=C2026260	PREF=mass lesion of temporal lobe on right	TUI=T047	STY=Disease or Syndrome	
+mass lesion of temporal lobe	CUI=C2026258	PREF=mass lesion of temporal lobe	TUI=T047	STY=Disease or Syndrome
+temporal lobe lesion	CUI=C2026258	PREF=mass lesion of temporal lobe	TUI=T047	STY=Disease or Syndrome
+temporal structural lesion	CUI=C2026258	PREF=mass lesion of temporal lobe	TUI=T047	STY=Disease or Syndrome
+benigh brain lesion	CUI=C0741634	PREF=brain lesion benign	TUI=T047	STY=Disease or Syndrome
+autistic spectrum disorder	CUI=C1510586	PREF=Autism Spectrum Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
+autism	CUI=C1510586	PREF=Autism Spectrum Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
+learning difficulties	CUI=C0424939	PREF=Learning difficulties	TUI=T033	STY=Finding	
+behavioral disability	CUI=C0475639	PREF=Behavioral disability	TUI=T033	STY=Finding
+behavioral disabilities	CUI=C0475639	PREF=Behavioral disability	TUI=T033	STY=Finding
+behavior disorders	CUI=C0004930	PREF=Behavior Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
+behavioural disorders	CUI=C0004930	PREF=Behavior Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
+behavior disturbance	CUI=C0149623	PREF=behavior disturbance	TUI=T048	STY=Mental or Behavioral Dysfunction
+behavioural disturbance	CUI=C0149623	PREF=behavior disturbance	TUI=T048	STY=Mental or Behavioral Dysfunction	

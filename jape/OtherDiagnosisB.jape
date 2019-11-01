@@ -1,0 +1,43 @@
+Phase: OtherDiagnosisB
+Input: Lookup3 Lookup2 Sentence Lookup
+
+
+
+Options: control=brill
+
+
+
+
+
+Rule: OtherDiagB1
+Priority: 100
+
+(   
+
+	{Lookup2.minorType == opinion}
+	({Lookup2.minorType == probability})?
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.OtherDiagnosis = {rule = OtherDiagB1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: OtherDiagB2
+Priority: 100
+
+(   
+
+	{Lookup2.minorType == opinion}
+	({Lookup2.minorType == probability})?
+    {Lookup3}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.OtherDiagnosis = {rule = OtherDiagB2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}

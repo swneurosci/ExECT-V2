@@ -1,0 +1,79 @@
+Phase: OtherDiagnosisListB
+Input: Lookup3 DiagnosisTriggers Sentence Conj
+
+Options: control=brill
+
+
+
+Rule: OtherDiagListB1
+Priority: 100
+
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+	{Conj.type == list}
+	({Lookup3.minorType == generic, Lookup3.Negation == Affirmed, 
+	Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.OtherDiagnosis = {rule = OtherDiagListB1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: OtherDiagListB2
+Priority: 99
+
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+	{Conj.type == list}
+	{Conj.type == list}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, 
+	Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.OtherDiagnosis = {rule = OtherDiagListB2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: OtherDiagListB3
+Priority: 98
+
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+	{Conj.type == list}
+	{Conj.type == list}
+	{Lookup3}
+	{Conj.type == list}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, 
+	Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.OtherDiagnosis = {rule = OtherDiagListB3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: OtherDiagListB4
+Priority: 97
+
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+	{Conj.type == list}
+	{Conj.type == list}
+	{Lookup3}
+	{Conj.type == list}
+	{Lookup3}
+	{Conj.type == list}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, 
+	Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.OtherDiagnosis = {rule = OtherDiagListB4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}

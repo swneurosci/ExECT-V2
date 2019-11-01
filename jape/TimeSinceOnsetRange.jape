@@ -9,7 +9,7 @@ Priority: 100
 
 (   
     
-	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient}
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient}):item
 	{Split}
 	{Person}
     ({Person})?
@@ -19,10 +19,10 @@ Priority: 100
     {timePeriod}
  ):match  
  -->
-:match.TimeSinceOnset = {rule = seizuresForRange1 , OnsetType = "time_since_episodes_started",
-PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
-STY = :match.Lookup3.STY, 
-Certainty = :match.Lookup3.Certainty,
+:item.TimeSinceOnset = {rule = seizuresForRange1 , OnsetType = "time_since_episodes_started",
+PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+STY = :item.Lookup3.STY, 
+Certainty = :item.Lookup3.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods = "",
 LowerNumberOfTimePeriods =:match.NumberRange.N1,
@@ -35,17 +35,17 @@ Priority: 99
 (   
 
 	{Person}
-	{Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient}
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient}):item
 	{Lookup2.language == onset}
 	{NumberRange}
     {timePeriod}
     {timeElapsed.time == since}
  ):match  
  -->
-:match.TimeSinceOnset = {rule = seizuresForRange2 , OnsetType = "time_since_episodes_started",
-PREF = :match.Lookup3.PREF, CUI = :match.Lookup3.CUI, TUI = :match.Lookup3.TUI,
-STY = :match.Lookup3.STY, 
-Certainty = :match.Lookup3.Certainty,
+:item.TimeSinceOnset = {rule = seizuresForRange2 , OnsetType = "time_since_episodes_started",
+PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+STY = :item.Lookup3.STY, 
+Certainty = :item.Lookup3.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods = "",
 LowerNumberOfTimePeriods =:match.NumberRange.N1,

@@ -25,7 +25,8 @@ Rule: getDiagnosisEpilepsy
 (
     ({DiagnosisTriggers.majorType == "diagnosis"})
 	(
-	{Lookup.STY ==~ "[Dd]isease or [Ss]yndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed}
+	({Lookup.STY ==~ "[Dd]isease or [Ss]yndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})|
+	({Lookup.STY == "Pathologic Function", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})
 	):item
 ):label
 -->

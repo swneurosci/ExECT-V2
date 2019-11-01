@@ -186,6 +186,8 @@ focal seizures	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=Disease or Syndrom
 partial seizure disorder, motor	CUI=C0016399	PREF=partial seizure disorder, motor	TUI=T047	STY=Disease or Syndrome
 partial seizure disorders	CUI=C0014547	PREF=partial seizure disorders	TUI=T047	STY=Disease or Syndrome
 partial seizure evolving to secondary generalised seizure	CUI=C0474327	PREF=partial seizure evolving to secondary generalised seizure	TUI=T046	STY=Pathologic Function
+focal seizures with secondary generalisation	CUI=C0474327	PREF=partial seizure evolving to secondary generalised seizure	TUI=T046	STY=Pathologic Function
+focal seizure with secondary generalisation	CUI=C0474327	PREF=partial seizure evolving to secondary generalised seizure	TUI=T046	STY=Pathologic Function
 partial seizure evolving to  generalized seizure	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure	TUI=T046	STY=Pathologic Function
 partial seizure evolving to secondary generalized seizure (disorder)	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure (disorder)	TUI=T046	STY=Pathologic Function
 bilateral convulsive seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
@@ -265,7 +267,8 @@ seizure, generalized	CUI=C0234533	PREF=seizure, generalized	TUI=T047	STY=Disease
 seizure, gustatory partial	CUI=C0278192	PREF=seizure, gustatory partial	TUI=T047	STY=Disease or Syndrome
 myoclonic seizure	CUI=C4317123	PREF=seizure, myoclonic	TUI=T184	STY=sign or symptom
 olfactory seizure	CUI=C0422853	PREF=seizure, olfactory	TUI=T047	STY=Disease or Syndrome
-seizure, partial	CUI=C0751495	PREF=seizure, partial	TUI=T047	STY=Disease or Syndrome
+partial seizure	CUI=C0751495	PREF=seizure, partial	TUI=T047	STY=Disease or Syndrome
+partial seizures	CUI=C0751495	PREF=seizure, partial	TUI=T047	STY=Disease or Syndrome
 seizure, pyrexial	CUI=C0009952	PREF=seizure, pyrexial	TUI=T047	STY=Disease or Syndrome
 seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome	CUI=C2748572	PREF=seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome	TUI=T047	STY=Disease or Syndrome
 seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome (disorder)	CUI=C2748572	PREF=seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome (disorder)	TUI=T047	STY=Disease or Syndrome

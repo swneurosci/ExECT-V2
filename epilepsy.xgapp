@@ -59,13 +59,13 @@
       <docList>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
-          <resourceName>TestOnset_cause.txt_00014</resourceName>
+          <resourceName>TestOnset_cause.txt_0003B</resourceName>
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
               <entry>
                 <string>encoding</string>
-                <string>UTF8</string>
+                <string>windows-1252</string>
               </entry>
               <entry>
                 <string>sourceUrl</string>
@@ -260,10 +260,6 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>annotationSetName</string>
-                  <string></string>
-                </entry>
-                <entry>
                   <string>annotationTypes</string>
                   <gate.util.persistence.CollectionPersistence>
                     <localList>
@@ -274,6 +270,10 @@
                     </localList>
                     <collectionType>java.util.ArrayList</collectionType>
                   </gate.util.persistence.CollectionPersistence>
+                </entry>
+                <entry>
+                  <string>annotationSetName</string>
+                  <string></string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -1078,6 +1078,7 @@
                       <string>OtherDiagnosis</string>
                       <string>PatientHistory</string>
                       <string>BirthHistory</string>
+                      <string>FebrileSeizures</string>
                     </localList>
                     <collectionType>java.util.ArrayList</collectionType>
                   </gate.util.persistence.CollectionPersistence>

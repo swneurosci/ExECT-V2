@@ -5,7 +5,7 @@ Input: Lookup3 Lookup2 Person  Sentence
 
 
 
-Options: control=appelt
+Options: control=brill
 
 
 Rule: NoFebSeizures1
@@ -14,7 +14,7 @@ Priority: 100
 (   
 	
     {Lookup2.majorType == historic , Lookup2.type == history}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Negated, Lookup3.PREF == "febrile convulsions", 
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Negated, Lookup3.PREF =~ "febrile" , 
 	Lookup3.Experiencer == Patient}):item
 	
 	
@@ -28,16 +28,13 @@ Certainty = :item.Lookup3.Certainty}
 
 
 
-
-
-
 Rule: FebSeizures1
 Priority: 100
 
 (   
-	
-    {Lookup2.majorType == historic , Lookup2.type == history}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.PREF == "febrile convulsions", 
+	({Person})?
+    {Lookup2.majorType == historic , Lookup2.type == past}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.PREF =~ "febrile ", 
 	Lookup3.Experiencer == Patient}):item
 	
 	
@@ -50,3 +47,20 @@ Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality
 Certainty = :item.Lookup3.Certainty}
 
 
+Rule: FebSeizures2
+Priority: 100
+
+(   
+ 	{Person}
+    {Lookup2.majorType == historic , Lookup2.type == past}
+	({Lookup3.minorType == Disease, Lookup3.Negation == Affirmed, Lookup3.PREF  =~ "febrile", 
+	Lookup3.Experiencer == Patient}):item
+	
+	
+    
+ ):match  
+ -->
+:item.FebrileSeizures = {rule = FebSeizures2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}

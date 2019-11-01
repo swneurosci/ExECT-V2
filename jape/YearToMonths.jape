@@ -1,0 +1,32 @@
+Phase: YearToMonth
+Input: Numeric timePeriod Age
+
+
+Options: control=brill
+
+Rule: YearToMonths1
+Priority: 100
+
+(   
+    {Numeric.value == 1}
+	{timePeriod.time-unit == Year}  
+    
+ ):match  
+ -->
+:match.YearToMonths = {rule = YearToMonths1 , value = "12" , timePeriod = "Month"}
+
+
+Rule: YearToMonths2
+Priority: 100
+
+(   
+    
+    {Numeric.value == 2}
+	{timePeriod.time-unit == Year}
+    
+ ):match  
+ -->
+:match.YearToMonths = {rule = YearToMonths2 , value = "24" , timePeriod = "Month"}
+
+
+

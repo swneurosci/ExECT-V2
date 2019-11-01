@@ -25,9 +25,11 @@ recent:type=recent
 recently:type=recent
 had been:type=past
 rather than:type=preference
-consider:type==hypothetical
+consider:type=hypothetical
 attributed:type=cause
 enquired:type=question
 In the event:type=hypothetical
 If unwilling then:type=hypothetical
 background of:type=history
+did have:type=past
+had to:type=had to
