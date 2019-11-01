@@ -1,0 +1,21 @@
+Phase: BirthHistoryB
+Input: Lookup3 Lookup2 Person  Sentence
+
+Options: control=appelt
+
+Rule: Birth1
+Priority: 100
+
+(
+    {Person}
+    {Lookup2.majorType == historic}
+    ({Lookup2.type  == time})?
+    ({Lookup3.TUI == "T058" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
+   
+
+):match  
+ -->
+:item.BirthHistory = {rule = Birth1,  PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}

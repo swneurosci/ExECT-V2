@@ -1343,3 +1343,5 @@ behavior disorders	CUI=C0004930	PREF=Behavior Disorders	TUI=T048	STY=Mental or B
 behavioural disorders	CUI=C0004930	PREF=Behavior Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
 behavior disturbance	CUI=C0149623	PREF=behavior disturbance	TUI=T048	STY=Mental or Behavioral Dysfunction
 behavioural disturbance	CUI=C0149623	PREF=behavior disturbance	TUI=T048	STY=Mental or Behavioral Dysfunction	
+SCBU	CUI=C0583275	PREF=Admission to special care baby unit	TUI=T058	STY=Health Care Activity
+special care baby unit	CUI=C0583275	PREF=Admission to special care baby unit	TUI=T058	STY=Health Care Activity
