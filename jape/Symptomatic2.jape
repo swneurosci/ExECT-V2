@@ -1,5 +1,5 @@
 Phase: Symptomatic2
-Input:   Lookup2 Lookup
+Input:   Lookup2 Diagnosis
 
 
   /*These rules are set to annotate the word "symptomatic" before epilepsy diagnosis which has its own CUI . Symptomatic Epilepsy CUI is added and can be 
@@ -16,13 +16,29 @@ Priority: 100
 (   
    
 	{Lookup2.PREF == "Symptomatic Epilepsy"}
-	{Lookup.minorType == Disease, Lookup.Negation == Affirmed, Lookup.majorType == umls, 
-    Lookup.STY == "Disease or Syndrome", Lookup.Experiencer == Patient}
+	{Diagnosis.Negation == Affirmed, Diagnosis.STY == "Disease or Syndrome", Diagnosis.Experiencer == Patient,
+  Diagnosis.PREF !=~ symptomatic }
     
  ):match  
  -->
-:match.Symptomatic = {rule = SympEpi2, PREF = :match.Lookup2.PREF, CUI = :match.Lookup2.CUI, 
-Negation = :match.Lookup.Negation,
-Experiencer = :match.Lookup.Experiencer, Temporality = :match.Lookup.Temporality, 
-Certainty = :match.Lookup.Certainty}
+:match.Diagnosis1 = {rule2 = SympEpi2, rule =:match.Diagnosis.rule, PREF = :match.Diagnosis.PREF, CUI = :match.Diagnosis.CUI, 
+Negation = :match.Diagnosis.Negation,
+Experiencer = :match.Diagnosis.Experiencer, Temporality = :match.Diagnosis.Temporality, 
+Certainty = :match.Diagnosis.Certainty , Sypmtomatis = "Yes"}
+
+Rule: SympEpi2
+Priority: 100
+
+(   
+   
+	
+	{Diagnosis.Negation == Affirmed, Diagnosis.STY == "Disease or Syndrome", Diagnosis.Experiencer == Patient,
+  Diagnosis.PREF =~ symptomatic }
+    
+ ):match  
+ -->
+:match.Diagnosis1 = {rule2 = SympEpi2, rule =:match.Diagnosis.rule, PREF = :match.Diagnosis.PREF, CUI = :match.Diagnosis.CUI, 
+Negation = :match.Diagnosis.Negation,
+Experiencer = :match.Diagnosis.Experiencer, Temporality = :match.Diagnosis.Temporality, 
+Certainty = :match.Diagnosis.Certainty , Sypmtomatis = "Yes"}
 
