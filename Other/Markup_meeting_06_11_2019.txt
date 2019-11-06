@@ -1,0 +1,23 @@
+Annotation Notes 06/11/2019
+---------------------------
+
+Markup / ExECT v2
+-----------------
+-- Add "symptomatic" status as attribute of Diagnosis.
+-- Add laterality as attribute
+-- Seizure frequency or Seizure types should be a Diagnosis trigger (both GATE and Markup)
+-- Remove DrugName from Markup config
+-- Annotate things twice i.e "Focal epilepsy-probable temporal lobe" so Focal Epilepsy 5, temporal lobe epilepsy 4
+-- remove mgs from prescription units
+-- Certainty for Diagnosis only
+-- Not picking up onset letter EA3
+-- add ">2" as seizure frequency option for things like "few", "some" etc
+
+ExECT v3
+--------
+-- How to only annotate and JAPE for CT head
+-- Epilepsy Family History 
+-- Social stuff (driving, living alone, drinking....)
+-- Neurological examination
+-- Dates for Investigations
+

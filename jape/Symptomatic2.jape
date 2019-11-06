@@ -1,0 +1,28 @@
+Phase: Symptomatic2
+Input:   Lookup2 Lookup
+
+
+  /*These rules are set to annotate the word "symptomatic" before epilepsy diagnosis which has its own CUI . Symptomatic Epilepsy CUI is added and can be 
+  extracted as an entity in addition to the epilepsy diagnosis*/
+
+  
+
+Options: control=Brill
+
+
+Rule: SympEpi2
+Priority: 100
+
+(   
+   
+	{Lookup2.PREF == "Symptomatic Epilepsy"}
+	{Lookup.minorType == Disease, Lookup.Negation == Affirmed, Lookup.majorType == umls, 
+    Lookup.STY == "Disease or Syndrome", Lookup.Experiencer == Patient}
+    
+ ):match  
+ -->
+:match.Symptomatic = {rule = SympEpi2, PREF = :match.Lookup2.PREF, CUI = :match.Lookup2.CUI, 
+Negation = :match.Lookup.Negation,
+Experiencer = :match.Lookup.Experiencer, Temporality = :match.Lookup.Temporality, 
+Certainty = :match.Lookup.Certainty}
+

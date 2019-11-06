@@ -1364,3 +1364,5 @@ Unverricht-Lundborg syndrome	CUI=C0751785	PREF=Unverricht-Lundborg syndrome	TUI=
 symptomatic epilepsy	CUI=C1406659	PREF=symptomatic epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 focal seizures with secondary generalisation	CUI=C0474327	PREF=partial seizure evolving to secondary generalised seizure	TUI=T046	STY=Pathologic Function	Epilepsy=Yes
 symptomatic structural focal epilepsy	CUI=C0472349	PREF=symptomatic focal epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+epilepsy with grand mal seizures on awakening	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+epilepsy with generalised tonic clonic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
