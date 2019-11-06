@@ -1,0 +1,34 @@
+Phase: EpiCause2
+Input: Diagnosis Lookup3 Lookup2
+
+
+  /*These rules are set to select causes and suspected causes of epilepsy, when they are shown 
+   following an epilepsu diagnosis  - hence they have to follow Epilepsy diagnosis in the pipline in order to work */
+
+  
+
+Options: control=appelt
+
+
+
+
+Rule: Cause4
+Priority: 99
+
+(   
+	
+    {Diagnosis.Negation == Affirmed , Diagnosis.Experiencer == Patient}
+    ({Lookup2.minorType == probability})?
+    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+    Lookup3.Experiencer == Patient}):item
+  
+
+
+ ):match  
+ -->
+:item.EpilepsyCause = {rule = Cause4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+

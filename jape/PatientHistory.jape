@@ -170,7 +170,7 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 DateYear = "",
-Datemonth = "",
+DateMonth = "",
 Age = "",
 AgeUnit = "",
 AgeLower = "",
@@ -236,7 +236,7 @@ NumberOfTimePeriods = "",
 PointInTime = ""} 
 
 
-Rule: PtHistory9
+ Rule: PtHistory9
 Priority: 80
 
 (   
@@ -244,6 +244,7 @@ Priority: 80
 	{Lookup2.majorType == historic , Lookup2.type == past}
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
 	Lookup3.Experiencer == Patient}):item
+	{Person.majorType != person}
     
 
  ):match  

@@ -1,0 +1,42 @@
+Phase: PatientHistoryC
+Input: Person Lookup2 Lookup3 timeElapsed 
+Options: control=appelt
+
+
+
+/*  Additional PtHistory These rules annotate events in patient history - type of event with an UMLS CUI, age (precise and as a range), 
+date as year/month, and time since the event, as TimePeriod / NumberOfTimePeriods) */
+
+
+Rule: PtHistoryC1
+Priority: 100
+
+(   
+	{Person}
+    {Lookup2.majorType == historic}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+	Lookup3.Experiencer == Patient}):item
+    {Person}
+    {Lookup2.majorType == historic}
+    {timeElapsed.time == in}
+    {Person.minorType == pronoun}
+    ({Lookup2.minorType == time}):a
+
+
+
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryC1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty,
+DateYear = "",
+DateMonth = "",
+Age = "",
+AgeUnit = :a.Lookup2.timeUnit,
+AgeLower =:a.Lookup2.lowerAge,
+AgeUpper =:a.Lookup2.upperAge,
+TimePeriod = "",
+NumberOfTimePeriods = "",
+PointInTime = ""} 
+

@@ -32,3 +32,19 @@ Rule: numberRange2
 ):match
 -->
 :match.Range = { rule = numberRange2, N1 = :n1.Numeric.value, N2 = :n2.Numeric.value}
+
+
+Rule: numberRange3
+(
+
+    ({Numeric}):n1
+    {Token}
+    ({Numeric})
+    ({Numeric})?
+    ({Token.string == "and"})
+    ({Token})?
+    ({Token})?
+    ({Numeric}):n2
+):match
+-->
+:match.Range = { rule = numberRange3, N1 = :n1.Numeric.value, N2 = :n2.Numeric.value}

@@ -1,5 +1,6 @@
 Phase: PatientHistoryB
-Input: Lookup3 Lookup2 Person Numeric Sentence timeElapsed timePeriod
+Input: Lookup3 Lookup2 Person Numeric Sentence timeElapsed timePeriod Range 
+
 
 /*additional rules to annotate items in patient history when they are stated one after another in longer sentences
 keeping the  appelt mode. As in PatientHistory the rules annotate events as - type of event with an UMLS CUI, 
@@ -30,9 +31,10 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty, 
 DateYear = :match.Numeric.value,
+DateMonth = "",
 Age = "",
-AgeUnit = :match.Lookup2.timeUnit,
-AgeLower = :match.Lookup2.lowerAge,
+AgeUnit =:match.Lookup2.timeUnit,
+AgeLower =:match.Lookup2.lowerAge,
 AgeUpper =:match.Lookup2.upperAge,
 TimePeriod = "",
 NumberOfTimePeriods = "",
@@ -58,32 +60,26 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty, 
 DateYear = "",
-Datemonth = "",
+DateMonth = "",
 Age = "",
 AgeUnit = "",
 AgeLower = "",
 AgeUpper = "",
-TimePeriod = :match.timePeriod.time-unit,
+TimePeriod =:match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value,
 PointInTime = ""}
 
 
-/*Rule: PtHistoryB3    work in progress
+Rule: PtHistoryB3   
 Priority: 100
 
 (  
 	{Person}
-	{Lookup2.majorType == historic , Lookup2.Type == past}
-	({Lookup3})?
-	({Lookup3})?
-
-	{timePeriod}
-	{timeElapsed}
-	{Person}
-    
-	
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+	{Lookup2.majorType == historic , Lookup2.type == past}
+	{Numeric}
+	({Lookup3.minorType == Disease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
 	Lookup3.Experiencer == Patient}):item
+	({Range})
 	
     
  ):match  
@@ -93,14 +89,15 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty, 
 DateYear = "",
-Datemonth = "",
+DateMonth = "",
 Age = "",
-AgeUnit = "",
-AgeLower = "",
-AgeUpper = "",
-TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods =:match.Numeric.value,
-PointInTime = ""} */
+AgeUnit = "Year",
+AgeLower =:match.Range.N1,
+AgeUpper =:match.Range.N2,
+TimePeriod = "",
+NumberOfTimePeriods = "",
+PointInTime = ""} 
+
 
 
 Rule: PtHistoryB3
@@ -123,7 +120,7 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty, 
 DateYear = :match.Numeric.value,
-Datemonth = "",
+DateMonth = "",
 Age = "",
 AgeUnit = "",
 AgeLower = "",

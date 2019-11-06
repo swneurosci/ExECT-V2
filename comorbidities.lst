@@ -1345,3 +1345,4 @@ behavior disturbance	CUI=C0149623	PREF=behavior disturbance	TUI=T048	STY=Mental 
 behavioural disturbance	CUI=C0149623	PREF=behavior disturbance	TUI=T048	STY=Mental or Behavioral Dysfunction	
 SCBU	CUI=C0583275	PREF=Admission to special care baby unit	TUI=T058	STY=Health Care Activity
 special care baby unit	CUI=C0583275	PREF=Admission to special care baby unit	TUI=T058	STY=Health Care Activity
+gliosis	CUI=C0017639	PREF=gliosis	TUI=T046	STY=Pathologic Function
