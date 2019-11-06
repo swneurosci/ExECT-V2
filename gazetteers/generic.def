@@ -55,3 +55,4 @@ frequencychange.lst:frequency:change::Frequency
 cause.lst:diagnosis:causality::Lookup2
 BirthHistory.lst:UMLS:prematurebirth::Lookup2
 birth.lst:diagnosis:prematurebirth::Lookup2
+symptomatic.lst:diagnosis:UMLS::Lookup2

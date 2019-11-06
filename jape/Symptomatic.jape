@@ -1,5 +1,6 @@
 Phase: Symptomatic
-Input: Lookup3 Person Conj
+Input: Lookup3 Person Conj 
+
 
 
   /*These rules are set to select seizures or epilepsies that are symptomatic
@@ -26,5 +27,6 @@ Priority: 100
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
+
 
 
