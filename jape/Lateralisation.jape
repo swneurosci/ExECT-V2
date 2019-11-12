@@ -1,0 +1,26 @@
+Phase: Lateralisaion
+Input:   Lookup2 Diagnosis
+
+
+  /*These rules add "lateralisation" feature to epilepsy diagnosis if the lateralisation is specified in the diagnosis
+   as there are no specific Cuis for these types of focal epilepsied */
+
+  /*
+
+Options: control=appelt
+
+
+Rule: Later1
+Priority: 100
+
+(   
+   
+	{Lookup2.minorType == lateralisation}
+	{Diagnosis.Negation == Affirmed, Diagnosis.STY == "Disease or Syndrome", Diagnosis.Experiencer == Patient}
+    
+ ):match   
+ -->
+:match.Diagnosis1 = {rule2 = Later1, rule =:match.Diagnosis.rule, PREF = :match.Diagnosis.PREF, CUI = :match.Diagnosis.CUI, 
+Negation = :match.Diagnosis.Negation,
+Experiencer = :match.Diagnosis.Experiencer, Temporality = :match.Diagnosis.Temporality, 
+Certainty = :match.Diagnosis.Certainty , Lateralisation = :match.Lookup2.lateralisation}

@@ -55,7 +55,7 @@ Priority: 98
 	{Person}
 	({Lookup2.majorType == historic , Lookup2.language == onset})
 	({Person})?
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed}):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.minorType == Disease}):item
 	{timeElapsed}
 	{PartialDate}
 	

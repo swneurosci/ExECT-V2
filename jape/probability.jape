@@ -10,7 +10,7 @@ Options: control=brill
 */
 
 
-Rule: prob1
+Rule: probRuleA
 Priority: 100
 (
 	({Lookup2.minorType == probability}):prob
@@ -20,10 +20,10 @@ Priority: 100
 :umls {
   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
-    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","rulea");
+    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruleA");
 }
 
-Rule: prob2
+Rule: probRuleB
 Priority: 100
 (
 	({Lookup2.minorType == probability}):prob
@@ -33,10 +33,10 @@ Priority: 100
 :umls {
   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
-    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruleb");
+    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruleB");
 }
 
-Rule: prob2
+Rule: probRuleC
 Priority: 99
 (
 	({Lookup2.minorType == probability}):prob
@@ -47,10 +47,10 @@ Priority: 99
 :umls {
   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
-    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","rulec");
+    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruleC");
 }
 
-Rule: prob3
+Rule: probRuleD
 Priority: 100
 (
   ({Lookup3.majorType == umls , Lookup3.PREF == seizure}):umls
@@ -61,9 +61,24 @@ Priority: 100
 :umls {
   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
-    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruleb");
+    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruleD");
 }
 
+
+
+Rule: probRuleE
+Priority: 99
+(
+	({Lookup2.minorType == probability}):prob
+	({Lookup.majorType == umls})+
+  ({Lookup.majorType == umls}):umls
+):match
+-->
+:umls {
+  getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
+    getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
+    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruleE");
+}
 
 
 /* this last rule below doesn't work  - we are trying to copy the certainty feature from  the main  Lookup3 

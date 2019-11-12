@@ -2,12 +2,13 @@ Phase: Symptomatic2
 Input:   Lookup2 Diagnosis
 
 
-  /*These rules are set to annotate the word "symptomatic" before epilepsy diagnosis which has its own CUI . Symptomatic Epilepsy CUI is added and can be 
-  extracted as an entity in addition to the epilepsy diagnosis*/
+  /*These rules add "symptomatic" feature to epilepsy diagnosis if the diagnosis is symptomatic (with its own CUI)
+  or the word symptomatic precedes diagnosis and "lateralisation" feature to epilepsy diagnosis if 
+  the lateralisation is specified in the diagnosis as there are no specific CUIs for these types of focal epilepsied */ 
 
   
 
-Options: control=Brill
+Options: control=appelt
 
 
 Rule: SympEpi2
@@ -16,29 +17,33 @@ Priority: 100
 (   
    
 	{Lookup2.PREF == "Symptomatic Epilepsy"}
-	{Diagnosis.Negation == Affirmed, Diagnosis.STY == "Disease or Syndrome", Diagnosis.Experiencer == Patient,
-  Diagnosis.PREF !=~ symptomatic }
+  {Lookup2.minorType == lateralisation}
+	{Diagnosis.Negation == Affirmed, Diagnosis.PREF !=~ symptomatic}
     
  ):match  
  -->
 :match.Diagnosis1 = {rule2 = SympEpi2, rule =:match.Diagnosis.rule, PREF = :match.Diagnosis.PREF, CUI = :match.Diagnosis.CUI, 
-Negation = :match.Diagnosis.Negation,
-Experiencer = :match.Diagnosis.Experiencer, Temporality = :match.Diagnosis.Temporality, 
-Certainty = :match.Diagnosis.Certainty , Sypmtomatis = "Yes"}
+Negation = :match.Diagnosis.Negation, Certainty = :match.Diagnosis.Certainty , Sypmtomatic = "Yes", Lateralisation = :match.Lookup2.lateralisation }
 
 Rule: SympEpi2
 Priority: 100
 
 (   
    
-	
+	{Lookup2.minorType == lateralisation}
 	{Diagnosis.Negation == Affirmed, Diagnosis.STY == "Disease or Syndrome", Diagnosis.Experiencer == Patient,
-  Diagnosis.PREF =~ symptomatic }
+  Diagnosis.PREF =~ symptomatic}
     
  ):match  
  -->
 :match.Diagnosis1 = {rule2 = SympEpi2, rule =:match.Diagnosis.rule, PREF = :match.Diagnosis.PREF, CUI = :match.Diagnosis.CUI, 
 Negation = :match.Diagnosis.Negation,
 Experiencer = :match.Diagnosis.Experiencer, Temporality = :match.Diagnosis.Temporality, 
-Certainty = :match.Diagnosis.Certainty , Sypmtomatis = "Yes"}
+Certainty = :match.Diagnosis.Certainty , Sypmtomatic = "Yes" ,Lateralisation = :match.Lookup2.lateralisation }
+
+
+
+
+
+
 

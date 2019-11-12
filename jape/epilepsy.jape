@@ -3,6 +3,8 @@ Multiphase:Epilepsy
 Phases:
 
 diagnosis
+Diagnosis2
+/*Lateralisation*/ /* this + symptomatic attibutes are added to diagnosis (Diagnosis1) - for a moment in EpilepsyCause/Symptomatic2 */
 SeizFrequency
 SeizureFree
 SeizureFree2
@@ -21,7 +23,7 @@ SingleSeizureLookup
 DiagfromSeizure
 DiagfromSeizureLookup3
 RemoveSeizure
-DiseaseCause
+/*DiseaseCause */ /* this has been replaced by more detailed epilepsy cause rules and Symptomatic attribute to Diagnosis*/
 Lookup2Annotation
 InvestigationsEEG
 InvestigationsCT

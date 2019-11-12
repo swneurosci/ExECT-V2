@@ -2,12 +2,12 @@
 17q21.31 microdeletion syndrome	CUI=C1864871	PREF=17q21.31 microdeletion syndrome	TUI=T047	STY=Disease or Syndrome
 alzheimer dementia	CUI=C0002395	PREF=dementia, alzheimer	TUI=T047	STY=Disease or Syndrome
 alzheimer dementias	CUI=C0002395	PREF=alzheimer dementias	TUI=T047	STY=Disease or Syndrome
-alzheimer sclerosis	CUI=C0002395	PREF=alzheimer sclerosis	TUI=T047	STY=Disease or Syndrome
+alzheimer CUI=C0002395	PREF=alzheimer dementia	TUI=T047	STY=Disease or Syndrome
 alzheimer sclerosis	CUI=C0002395	PREF=sclerosis, alzheimer	TUI=T047	STY=Disease or Syndrome
 alzheimer syndrome	CUI=C0002395	PREF=alzheimer syndrome	TUI=T047	STY=Disease or Syndrome
 alzheimer type dementia	CUI=C0002395	PREF=alzheimer type dementia	TUI=T047	STY=Disease or Syndrome
 alzheimer type senile dementia	CUI=C0002395	PREF=alzheimer type senile dementia	TUI=T047	STY=Disease or Syndrome
-alzheimer's disease	CUI=C0002395	PREF=ad - alzheimer's disease	TUI=T047	STY=Disease or Syndrome
+alzheimer's disease	CUI=C0002395	PREF=alzheimer's disease	TUI=T047	STY=Disease or Syndrome
 alzheimer-type dementia	CUI=C0002395	PREF=alzheimer-type dementia (atd)	TUI=T047	STY=Disease or Syndrome
 alzheimers disease	CUI=C0002395	PREF=alzheimers disease	TUI=T047	STY=Disease or Syndrome
 bohring opitz syndrome	CUI=C0796232	PREF=bohring opitz syndrome	TUI=T047	STY=Disease or Syndrome
@@ -430,6 +430,7 @@ cerebrovascular accident with intracranial hemorrhage (disorder)	CUI=C3266655	PR
 cerebrovascular accident, nos	CUI=C0038454	PREF=cerebrovascular accident, nos	TUI=T047	STY=Disease or Syndrome
 cerebrovascular apoplexy	CUI=C0038454	PREF=cerebrovascular apoplexy	TUI=T047	STY=Disease or Syndrome
 cerebrovascular disease	CUI=C0007820	PREF=cerebrovascular disease (disorder)	TUI=T047	STY=Disease or Syndrome
+cerebral vascular disease	CUI=C0007820	PREF=cerebrovascular disease (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular lesion	CUI=C0007820	PREF=cerebrovascular lesion	TUI=T047	STY=Disease or Syndrome
 stroke	CUI=C0038454	PREF=stroke	TUI=T047	STY=Disease or Syndrome
 cerebrovascular stroke	CUI=C0038454	PREF=cerebrovascular stroke	TUI=T047	STY=Disease or Syndrome

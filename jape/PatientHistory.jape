@@ -153,7 +153,39 @@ TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value,
 PointInTime = "" }
 
-Rule: PtHistory6
+
+Rule: PtHistory6   
+Priority: 100
+
+(  
+	{Person}
+	{Lookup2.majorType == historic , Lookup2.minorType == symptoms}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+	Lookup3.Experiencer == Patient}):item
+	{timeElapsed}
+	{Person}
+	{Lookup2.type == past}
+	{Numeric}
+	
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistory6, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty, 
+YearDate = "",
+MonthDate = "",
+Age = :match.Numeric.value,
+AgeUnit = "Year",
+AgeLower ="",
+AgeUpper ="",
+TimePeriod = "",
+NumberOfTimePeriods = "",
+PointInTime = ""} 
+
+
+Rule: PtHistory7
 Priority: 90
 
 (   
@@ -165,7 +197,7 @@ Priority: 90
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistory6, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = PtHistory7, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -180,7 +212,7 @@ NumberOfTimePeriods ="",
 PointInTime = "" }
 
 
-Rule: PtHistory7
+Rule: PtHistory8
 Priority: 90
 
 (   {Numeric}
@@ -193,7 +225,7 @@ Priority: 90
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistory7, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = PtHistory8, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty, YearDate = "",
@@ -208,7 +240,7 @@ NumberOfTimePeriods =:match.Numeric.value,
 PointInTime = "" }
 
 
-Rule: PtHistory8
+Rule: PtHistory9
 Priority: 100
 
 (   
@@ -221,7 +253,7 @@ Priority: 100
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistory8, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = PtHistory9, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty , 
@@ -236,7 +268,7 @@ NumberOfTimePeriods = "",
 PointInTime = ""} 
 
 
- Rule: PtHistory9
+ Rule: PtHistory10
 Priority: 80
 
 (   
@@ -249,7 +281,7 @@ Priority: 80
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistory9, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = PtHistory10, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -264,7 +296,7 @@ NumberOfTimePeriods ="",
 PointInTime = ""}
 
 
-Rule: PtHistory10
+Rule: PtHistory11
 Priority: 90
 
 (   
@@ -280,7 +312,7 @@ Priority: 90
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistory10, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = PtHistory11, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,

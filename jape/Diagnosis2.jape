@@ -1,0 +1,88 @@
+Phase: Diagnosis2
+Input:   Lookup2 Diagnosis
+
+
+  /*These rules add Diagnosis when an attribute with another level of certainty follows the diagnosis of epilepsy */ 
+
+  
+
+Options: control=appelt
+
+
+Rule: Diagnosis2
+Priority: 100
+
+(   
+	{Diagnosis.Negation == Affirmed, Diagnosis.Experiencer == Patient} 
+   ({Lookup2.minorType == probability}):a
+    {Lookup2.lobe == temporal}
+    
+ ):match  
+ -->
+:match.Diagnosis2 = {rule = Diagnosis2, PREF = "Temporal lobe epilepsy", CUI = "C0014556", 
+Negation = :match.Diagnosis.Negation, Certainty = :a.Lookup2.Level}
+
+Rule: Diagnosis2
+Priority: 100
+
+(   
+	{Diagnosis.Negation == Affirmed, Diagnosis.Experiencer == Patient} 
+   ({Lookup2.minorType == probability}):a
+    {Lookup2.lobe == frontal}
+    
+ ):match  
+ -->
+:match.Diagnosis2 = {rule = Diagnosis2, PREF = "Frontal lobe epilepsy", CUI = "C0085541", 
+Negation = :match.Diagnosis.Negation, Certainty = :a.Lookup2.Level}
+
+Rule: Diagnosis2
+Priority: 100
+
+(   
+	{Diagnosis.Negation == Affirmed, Diagnosis.Experiencer == Patient} 
+   ({Lookup2.minorType == probability}):a
+    {Lookup2.lobe == occipital}
+    
+ ):match  
+ -->
+:match.Diagnosis2 = {rule = Diagnosis2, PREF = "Occipital lobe epilepsy", CUI = "C0393691", 
+Negation = :match.Diagnosis.Negation, Certainty = :a.Lookup2.Level}
+
+Rule: Diagnosis2
+Priority: 100
+
+(   
+	{Diagnosis.Negation == Affirmed, Diagnosis.Experiencer == Patient} 
+   ({Lookup2.minorType == probability}):a
+    {Lookup2.lobe == parietal}
+    
+ ):match  
+ -->
+:match.Diagnosis2 = {rule = Diagnosis2, PREF = "Parietal lobe epilepsy", CUI = "C0393690", 
+Negation = :match.Diagnosis.Negation, Certainty = :a.Lookup2.Level}
+
+Rule: Diagnosis2
+Priority: 100
+
+(   
+	{Diagnosis.Negation == Affirmed, Diagnosis.Experiencer == Patient} 
+   ({Lookup2.minorType == probability}):a
+    {Lookup2.epilepsy == focal}
+    
+ ):match  
+ -->
+:match.Diagnosis2 = {rule = Diagnosis2, PREF = "Focal epilepsy", CUI = "C0014547", 
+Negation = :match.Diagnosis.Negation, Certainty = :a.Lookup2.Level}
+
+Rule: Diagnosis2
+Priority: 100
+
+(   
+	{Diagnosis.Negation == Affirmed, Diagnosis.Experiencer == Patient} 
+   ({Lookup2.minorType == probability}):a
+    {Lookup2.epilepsy == generalised}
+    
+ ):match  
+ -->
+:match.Diagnosis2 = {rule = Diagnosis2, PREF = "Generalised epilepsy", CUI = "C0014548", 
+Negation = :match.Diagnosis.Negation, Certainty = :a.Lookup2.Level}

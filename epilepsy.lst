@@ -19,7 +19,7 @@ Complex partial seizure of temporal lobe	CUI=C3661551	PREF=Complex partial seizu
 Complex partial seizures	CUI=C0149958	PREF=Complex partial seizures	TUI=T047	STY=Disease or Syndrome
 Epilepsy, Frontal Lobe	CUI=C0085541	PREF=Epilepsy, Frontal Lobe	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Frontal Lobe Epilepsies	CUI=C0085541	PREF=Frontal Lobe Epilepsies	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-Frontal lobe epilepsy	CUI=C0085541	PREF=Frontal lobe epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+frontal lobe epilepsy	CUI=C0085541	PREF=Frontal lobe epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Frontal lobe epilepsy (disorder)	CUI=C0085541	PREF=Frontal lobe epilepsy (disorder)	TUI=T047	STY=Disease or Syndrome
 IGE	CUI=C0270850	PREF=idiopathic generalised epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 JAE	CUI=C4317339	PREF=juvenile absence epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -37,7 +37,7 @@ Lennox-Gastaut syndrome	CUI=C0238111	PREF=Lennox-Gastaut syndrome	TUI=T047	STY=D
 Lennox-Gastaut syndrome (disorder)	CUI=C0238111	PREF=Lennox-Gastaut syndrome (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Lennox-Gastaut syndrome (disorder) [ambiguous]	CUI=C0238111	PREF=Lennox-Gastaut syndrome (disorder) [ambiguous]	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Lobe Epilepsy, Occipital	CUI=C0393691	PREF=Lobe Epilepsy, Occipital	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-Occipital Lobe Epilepsies	CUI=C0393691	PREF=Occipital Lobe Epilepsies	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+occipital lobe epilepsiy	CUI=C0393691	PREF=Occipital Lobe Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Occipital Lobes	CUI=C0028785	PREF=Occipital Lobes	TUI=T023	STY=Body Part, Organ, or Organ Component
 Occipital lobe epilepsy	CUI=C0393691	PREF=Occipital lobe epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Occipital lobe epilepsy (disorder)	CUI=C0393691	PREF=Occipital lobe epilepsy (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -377,7 +377,7 @@ epilepsies, drug refractory	CUI=C1096063	PREF=epilepsies, drug refractory	TUI=T0
 epilepsies, drug resistant	CUI=C1096063	PREF=epilepsies, drug resistant	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsies, focal	CUI=C0014547	PREF=epilepsies, focal	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsies, gelastic	CUI=C0270820	PREF=epilepsies, gelastic	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-epilepsies, generalized	CUI=C0014548	PREF=epilepsies, generalized	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+generalised epilepsy	CUI=C0014548	PREF=generalised epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsies, generalized convulsive	CUI=C0311334	PREF=epilepsies, generalized convulsive	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsies, intractable	CUI=C1096063	PREF=epilepsies, intractable	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 juvenile myoclonic epilepsy	CUI=C0270853	PREF=JME	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -937,7 +937,7 @@ panayiotopoulos syndrome	CUI=C0393676	PREF=panayiotopoulos syndrome	TUI=T047	STY
 paramyoclonus multiplex	CUI=C0030463	PREF=paramyoclonus multiplex	TUI=T047	STY=Disease or Syndrome
 paramyoclonus multiplex (disorder)	CUI=C0030463	PREF=paramyoclonus multiplex (disorder)	TUI=T047	STY=Disease or Syndrome
 parietal lobe seizure	CUI=C0016733	PREF=Frontal Lobes	TUI=T023	STY=Body Part, Organ, or Organ Component
-parietal lobe seizures  epilepsy	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
+parietal lobe epilepsy	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
 part seiz evolv 2ry gen seiz	CUI=C0474327	PREF=part seiz evolv 2ry gen seiz	TUI=T046	STY=Pathologic Function
 partial epilep.-consc.ok nos	CUI=C0234974	PREF=partial epilep.-consc.ok nos	TUI=T047	STY=Disease or Syndrome
 partial epilepsies	CUI=C0014547	PREF=partial epilepsies	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -1264,6 +1264,7 @@ system, central nervous	CUI=C3714787	PREF=system, central nervous	TUI=T022	STY=B
 systems, central nervous	CUI=C3714787	PREF=systems, central nervous	TUI=T022	STY=Body System
 television epilepsy	CUI=C0393720	PREF=television epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 temporal lobe epilepsy	CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+focal epilepsy - temporal	CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 temporal lobe seizure	CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
 temporal lobe seizures	CUI=C0014556	PREF=Epilepsies, Occipital Lobe	TUI=T047	STY=Disease or Syndrome
 temporo-parieto-occipital junction seizure	CUI=C3164682	PREF=temporo-parieto-occipital junction seizure	TUI=T033	STY=Finding
@@ -1366,3 +1367,8 @@ focal seizures with secondary generalisation	CUI=C0474327	PREF=partial seizure e
 symptomatic structural focal epilepsy	CUI=C0472349	PREF=symptomatic focal epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy with grand mal seizures on awakening	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy with generalised tonic clonic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+epilepsy with generalised tonic clonic seizures on awakening	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+jeavons syndrome	CUI=C4274731	PREF=Jeavons syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+jeavons' syndrome	CUI=C4274731	PREF=Jeavons syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+epilepsy with eyelid myoclonia	CUI=C4274731	PREF=Jeavons syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+generalised epilepsy with eyelid myoclonia	CUI=C4274731	PREF=Jeavons syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes

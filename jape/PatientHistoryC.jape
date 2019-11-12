@@ -1,5 +1,5 @@
 Phase: PatientHistoryC
-Input: Person Lookup2 Lookup3 timeElapsed 
+Input: Person Lookup2 Lookup3 timeElapsed DiagnosisTriggers
 Options: control=appelt
 
 
@@ -39,4 +39,5 @@ AgeUpper =:a.Lookup2.upperAge,
 TimePeriod = "",
 NumberOfTimePeriods = "",
 PointInTime = ""} 
+
 

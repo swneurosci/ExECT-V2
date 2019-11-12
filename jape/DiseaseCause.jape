@@ -3,7 +3,7 @@ Input:  MedCause listSent Lookup Sentence
 Options: control=all
 
 
-
+/* this rule has been replaced with more detailed epilepsy cause rules and Symptomatic attribute added to Diagnosis */
 
 Rule: DiseaseCause
 	
