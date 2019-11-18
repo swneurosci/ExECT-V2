@@ -1,0 +1,38 @@
+Phase: OnsetAgeA
+Input: Lookup3 Person Lookup2 Numeric timePeriod Age
+Options: control=appelt
+
+
+Rule: onsetAgeA1
+Priority: 99
+
+(   
+	{Person}
+    {Lookup2.language == onset}
+    {Lookup3.CAT == Slang}
+	{Age.minorType == age}
+	{Numeric}
+	{timePeriod}
+	{Lookup2.language == onset}
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.TUI == T047}):item
+
+
+):match  
+ -->
+:item.Onset = {rule = onsetAgeA1, OnsetType = "age_episodes_started", 
+PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+STY = :item.Lookup3.STY, 
+Certainty = :item.Lookup3.Certainty,
+AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value,
+AgeLower = "",
+AgeUpper = "",
+DateYear = "",
+DateMonth ="",
+DateDateDay = "",
+PointInTime = "",
+TimePeriod = "",
+NumberOfTimePeriods ="",
+LowerNumberOfTimePeriods = "",
+UpperNumberOfTimePeriods = ""}
+	

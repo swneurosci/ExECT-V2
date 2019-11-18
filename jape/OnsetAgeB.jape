@@ -1,0 +1,68 @@
+Phase: Onset
+Input: Lookup3 Person Lookup2 Sentence Numeric timePeriod Age
+
+Options: control=appelt
+
+
+Rule: onsetAgeB1
+Priority: 100
+
+(   
+	{Person}
+	({Lookup3.minorType == Disease , Lookup3.Negation == Affirmed}):item
+	{Lookup2.majorType == historic, Lookup2.minorType == symptoms , Lookup2.type == began}
+	{Age}
+	{Numeric}
+	{timePeriod}
+	
+	
+ ):match  
+ -->
+:item.Onset = {rule = onsetAgeB17, OnsetType = "age_episodes_started", 
+PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+STY = :item.Lookup3.STY, 
+Certainty = :match.Lookup3.Certainty,
+AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value,
+AgeLower = "",
+AgeUpper = "",
+DateYear = "",
+DateMonth ="",
+DateDay = "",
+PointInTime = "",
+TimePeriod = "",
+NumberOfTimePeriods ="",
+LowerNumberOfTimePeriods = "",
+UpperNumberOfTimePeriods = ""}
+ 
+
+ Rule: onsetAgeB2
+Priority: 100
+
+(   
+	{Person}
+	({Lookup3.minorType == Disease , Lookup3.Negation == Affirmed}):item
+	{Lookup2.language == onset}
+	({Lookup2.minorType == time}):a
+	
+	
+	
+ ):match  
+ -->
+:item.Onset = {rule = onsetAgeB2, OnsetType = "age_episodes_started", 
+PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+STY = :item.Lookup3.STY, 
+Certainty = :match.Lookup3.Certainty,
+AgeUnit = :a.Lookup2.timeUnit,
+Age ="",
+AgeLower = :a.Lookup2.lowerAge,
+AgeUpper = :a.Lookup2.upperAge,
+DateYear = "",
+DateMonth ="",
+DateDay = "",
+PointInTime = "",
+TimePeriod = "",
+NumberOfTimePeriods ="",
+LowerNumberOfTimePeriods = "",
+UpperNumberOfTimePeriods = ""}
+ 

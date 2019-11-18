@@ -1,20 +1,20 @@
-started
-developed
-occured
-appear
-appeared
-manifest
-manifested
-new
-began
-onset
-suffered
-has had
-experienced
-diagnosed
-first
-suffering
-has been symptomatic
-suffering from
-sustained
-history is of
+started:type=began
+developed:type=began
+occured:type=began
+appeared:type=began
+manifested:type=began
+new:type=began
+began:type=began
+onset:type=began
+suffered:type=suffered
+has had:type=suffered
+experienced:type==suffered
+diagnosed:type=diagnosed
+first:type=began
+suffering:type=suffered
+has been symptomatic:type=suffered
+suffering from:type=suffered
+sustained:type=suffered
+history is of:type=suffered
+report him having:type=suffered
+report her having:type=suffered

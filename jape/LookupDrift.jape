@@ -1,0 +1,22 @@
+Phase: LookupDrift
+Input:  Lookup
+
+Options: control=appelt
+
+/* Not used in the pipline at the moment - to asign Seizures  to lookup when it is slpit as in the phrase "foral motor and sensory seizures" */
+
+Rule: LookupDrift
+(
+    ({Lookup.PREF !=~ seizure }):item
+    {Lookup.PREF =~ seizures}
+):match
+-->
+:match.Lookup  = {rule = "LookupDrift",
+majorType = :item.Lookup.majorType,
+minorType = :item.Lookup.minorType,
+value = :item.Lookup.value, 
+PREF = :item.Lookup.PREF,
+CUI = :item.Lookup.CUI, 
+STY = :item.Lookup.STY,
+Plural = "Yes",
+CAT = :item.Lookup.CAT}

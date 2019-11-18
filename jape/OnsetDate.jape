@@ -10,7 +10,7 @@ Priority: 98
 	{Person}
 	({Lookup2.majorType == historic})
 	({Person})?
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed}):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.CAT == seizures}):item
 	{timeElapsed}
 	{PartialDate}
 	{PointInTime}
@@ -120,7 +120,7 @@ Priority: 98
 (   
 	{Lookup2.majorType == historic, Lookup2.language == onset}
 	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient}):item
-	{Lookup2.language == onset}
+	({Lookup2.language == onset})?
 	{timeElapsed.time == in}
 	{Numeric}
 	

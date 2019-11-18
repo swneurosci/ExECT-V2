@@ -19,8 +19,8 @@ Episodes:CUI=C0332189:PREF=Episode:TUI=T079:STY=Temporal Concept:CAT=Slang
 episodes:CUI=C0332189:PREF=Episode:TUI=T079:STY=Temporal Concept:CAT=Slang
 Convulsion:CUI=C4048158:PREF=Convulsion:TUI=T184:STY=Sign or Symptom:CAT=Slang
 convulsion:CUI=C4048158:PREF=Convulsion:TUI=T184:STY=Sign or Symptom:CAT=Slang
-Convulsions:CUI=C4048158:PREF=Convulsion:TUI=T184:STY=Sign or Symptom:CAT=Slang
-convulsions:CUI=C4048158:PREF=Convulsion:TUI=T184:STY=Sign or Symptom:CAT=Slang
+Convulsions:CUI=C4048158:PREF=Convulsion:TUI=T184:STY=Sign or Symptom:CAT=Seizures
+convulsions:CUI=C4048158:PREF=Convulsion:TUI=T184:STY=Sign or Symptom:CAT=Seizures
 Loss of consciousness:CUI=C0041657:PREF=Loss of consciousness:TUI=T033:STY=Finding:CAT=Slang
 loss of consciousness:CUI=C0041657:PREF=Loss of consciousness:TUI=T033:STY=Finding:CAT=Slang
 episodes of loss of consciousness:CUI=C0041657:PREF=Loss of consciousness:TUI=T033:STY=Finding:CAT=Slang
@@ -42,14 +42,14 @@ unusual episode:CUI=C0424531:PREF=Funny turn:TUI=T033:STY=Finding:CAT=Slang
 unusual episodes:CUI=C0424531:PREF=Funny turn:TUI=T033:STY=Finding:CAT=Slang
 Unusual episode:CUI=C0424531:PREF=Funny turn:TUI=T033:STY=Finding:CAT=Slang
 muscle twitch:CUI=C0231530:PREF=Muscle twitch:TUI=T033:STY=Finding:CAT=Slang
-absence:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Slang
-Absences:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Slang
-Absence:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Slang
-absences:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Slang
+absence:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Seizures
+Absences:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Seizures
+Absence:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Seizures
+absences:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Seizures
 myoclonic jerks:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Slang
-myoclonus:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Slang
-Myoclonic jerks:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Slang
-Myoclonus:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Slang
+myoclonus:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Seizures
+Myoclonic jerks:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Seizures
+Myoclonus:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Seizures
 Turn:CUI=C0424531:PREF=Funny turn:TUI=T033:STY=Finding:CAT=Slang
 Turns:CUI=C0424531:PREF=Funny turn:TUI=T033:STY=Finding:CAT=Slang
 episodes of jerks:CUI=C0231530:PREF=Muscle twitch:TUI=T033:STY=Finding:CAT=Slang

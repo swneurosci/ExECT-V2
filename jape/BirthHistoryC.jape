@@ -1,0 +1,21 @@
+Phase: BirthHistoryC
+Input: Lookup3 DiagnosisTriggers
+Options: control=appelt
+
+/*these rule are to capture birth injuries and other events in the perinatal period*/
+
+
+Rule: BirthC1
+Priority: 100
+
+(
+    {DiagnosisTriggers}
+    ({Lookup3.PREF =~ "birth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
+   
+
+):match  
+ -->
+:item.BirthHistory = {rule = BirthC1,  PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}

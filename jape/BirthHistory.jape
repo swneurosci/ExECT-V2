@@ -13,8 +13,8 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic , Lookup2.Type == birth}
-	{Numeric.value  <28.0}
+    {Lookup2.majorType == historic , Lookup2.type == birth}
+	{Numeric.value  <28}
     {timePeriod.time-unit == Week}
     
     
@@ -28,8 +28,8 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic ,Lookup2.Type == birth }
-	{Numeric.value  >=28.0 , Numeric.value <32.0} 
+    {Lookup2.majorType == historic ,Lookup2.type == birth }
+	{Numeric.value  >=28 , Numeric.value <32} 
     {timePeriod.time-unit == Week}
     
     
@@ -43,8 +43,8 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic ,Lookup2.Type == birth }
-	{Numeric.value  >=32.0 , Numeric.value <37.0} 
+    {Lookup2.majorType == historic ,Lookup2.type == birth }
+	{Numeric.value  >=32 , Numeric.value <37} 
     {timePeriod.time-unit == Week}
     
     
@@ -58,8 +58,8 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic ,Lookup2.Type == birth }
-	{Numeric.value <37.0} 
+    {Lookup2.majorType == historic ,Lookup2.type == birth }
+	{Numeric.value <37} 
     {timePeriod.time-unit == Week}
     
     
@@ -77,8 +77,8 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic ,Lookup2.Type == birth }
-	{Numeric.value  >12.0}
+    {Lookup2.majorType == historic ,Lookup2.type == birth }
+	{Numeric.value  >12}
     {timePeriod.time-unit == Week}
     {Lookup2.minorType == prematurebirth}
     
@@ -93,8 +93,8 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic ,Lookup2.Type == birth }
-	{Numeric.value  >8.0 , Numeric.value <=12.0} 
+    {Lookup2.majorType == historic ,Lookup2.type == birth }
+	{Numeric.value  >8 , Numeric.value <=12} 
     {timePeriod.time-unit == Week}
     {Lookup2.minorType == prematurebirth}
     
@@ -109,8 +109,8 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic , Lookup2.Type == birth}
-	{Numeric.value >3.0 , Numeric.value <=8.0} 
+    {Lookup2.majorType == historic , Lookup2.type == birth}
+	{Numeric.value >3 , Numeric.value <=8} 
     {timePeriod.time-unit == Week}
     {Lookup2.minorType == prematurebirth}
     
@@ -125,8 +125,8 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic ,Lookup2.Type == birth }
-	{Numeric.value  >3.0}
+    {Lookup2.majorType == historic ,Lookup2.type == birth }
+	{Numeric.value  >3}
     {timePeriod.time-unit == Week}
     {Lookup2.minorType == prematurebirth}
     
@@ -141,7 +141,7 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic , Lookup2.Type == birth}
+    {Lookup2.majorType == historic , Lookup2.type == birth}
     ({Lookup2.majorType == historic})?
     ({Lookup2.minorType == prematurebirth}):item
     

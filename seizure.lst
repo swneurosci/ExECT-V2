@@ -345,7 +345,7 @@ tonic clonic seizure	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T04
 tonic clonic seizures	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 generalised tonic clonic seizure	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 generalised tonic-clonic seizures	CUI=C0494475	PREF=Generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
-sensory Seizures	CUI=C0751496	PREF=sensory seizure	TUI=T184	STY=Sign or Symptom
+sensory seizures	CUI=C0751496	PREF=sensory seizure	TUI=T184	STY=Sign or Symptom
 sensory seizure 	CUI=C0751496	PREF=sensory seizure	TUI=T184	STY=Sign or Symptom
 focal sensory seizures	CUI=C0544645	PREF=focal sensory seizure	TUI=047	STY=Disease or Syndrome
 Epileptic aura	CUI=C0234542	PREF=Epileptic aura	TUI=T184	STY=Sign or Symptom
@@ -369,4 +369,5 @@ febrile seizures	CUI=C0009952	PREF=febrile seizure	TUI=T047	STY=Disease or Syndr
 symptomatic seizures	CUI=C4023516	PREF=Symptomatic seizures	TUI=T184	STY=Sign or Symptom
 symptomatic seizure	CUI=C4023516	PREF=Symptomatic seizures	TUI=T184	STY=Sign or Symptom
 post-traumatic epilepsy	CIU=C0014557	PREF=Epilepsy, Post-Traumatic	TUI=T037	STY=Injury or Poisoning
-post-traumatic seizure	CIU=C0014557	PREF=Epilepsy, Post-Traumatic	TUI=T037	STY=Injury or Poisoning
+Post traumatic seizures	CIU=C2921125	PREF=Post traumatic seizures	TUI=T047	STY=Disease or Syndrome
+

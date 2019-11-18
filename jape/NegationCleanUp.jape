@@ -55,7 +55,7 @@ umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationc");
 
 Rule: removenon-asnegation
 (
-({Lookup3 contains Trigger@string=="non"}):umls
+({Lookup3 contains Trigger@string=~"[Nn]on"}):umls
 ):match
 -->
 :umls {

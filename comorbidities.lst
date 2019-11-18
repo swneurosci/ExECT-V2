@@ -1275,9 +1275,6 @@ injury in the perinatal period	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injur
 traumatic birth history	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
 neonatal complicaions	CUI=C4735642	PREF=Neonatal complications	TUI=T033	STY=Finding	
 neonatal intensive care	CUI=C0021709	PREF=neonatal intensive care unit	TUI=T093	STY=Health Care Related Organization	
-stormy neonatal period	CUI=C4735642	PREF=Neonatal complications	TUI=T033	STY=Finding 
-stormy neonatal course	CUI=C4735642	PREF=Neonatal complications	TUI=T033	STY=Finding
-difficult noenatal period	CUI=C4735642	PREF=Neonatal complications	TUI=T033	STY=Finding
 intracranial hemorrhage	CUI=C0151699	PREF=Intracranial hemorrhage	TUI=T046	STY=Pathologic Function
 intracranial haemorrhage	CUI=C0151699	PREF=Intracranial hemorrhage	TUI=T046	STY=Pathologic Function
 intracranial bleeding	CUI=C0151699	PREF=Intracranial hemorrhage	TUI=T046	STY=Pathologic Function
@@ -1347,3 +1344,5 @@ behavioural disturbance	CUI=C0149623	PREF=behavior disturbance	TUI=T048	STY=Ment
 SCBU	CUI=C0583275	PREF=Admission to special care baby unit	TUI=T058	STY=Health Care Activity
 special care baby unit	CUI=C0583275	PREF=Admission to special care baby unit	TUI=T058	STY=Health Care Activity
 gliosis	CUI=C0017639	PREF=gliosis	TUI=T046	STY=Pathologic Function
+obsessive compulsive disorder	CUI=C0028768	PREF=Obsessive-Compulsive Disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
+obsessive-compulsive disorder	CUI=C0028768	PREF=Obsessive-Compulsive Disorder	TUI=T048	STY=Mental or Behavioral Dysfunction

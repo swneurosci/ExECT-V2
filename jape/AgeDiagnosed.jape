@@ -13,20 +13,29 @@ Priority: 99
 	{Person}
     {Lookup2.majorType == historic}
     {Lookup2.majorType == historic, Lookup2.minorType == symptoms}
-	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
+	({History})?
 	{Numeric}
 	{timePeriod}
 	
  ):match  
  -->
-:match.AgeDiagnosed = {rule = AgeDiagnosed1, OnsetType = "Age_Diagnosed", 
-PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
-STY = :match.Lookup.STY, 
-Certainty = :match.Lookup.Certainty,
-AgeUnit = :match.timePeriod.time-unit,
-Age =:match.Numeric.value,
-AgeLower = "",
-AgeUpper= ""}
+:item.WhenDiagnosed = {rule = AgeDiagnosed1, OnsetType = "Age_Diagnosed", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
+DateYear = "",
+DateMonth ="",
+DateDay = "",
+PointInTime = "",
+TimePeriod = "",
+NumberOfTimePeriods ="",
+LowerNumberOfTimePeriods = "",
+UpperNumberOfTimePeriods = "",
+AgeUnit = "",
+AgeLower ="",
+AgeUpper = "",
+Age = ""}
 
 
 
@@ -37,16 +46,24 @@ Priority: 99
 	{Person}
     {Lookup2.majorType == historic}
     {Lookup2.majorType == historic, Lookup2.language == onset}
-	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
 	{Person}
 	{Lookup2.minorType == time}
 	
  ):match  
  -->
-:match.AgeDiagnosed = {rule = AgeDiagnosed2, OnsetType = "Age_Diagnosed", 
-PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
-STY = :match.Lookup.STY, 
-Certainty = :match.Lookup.Certainty,
+:item.WhenDiagnosed = {rule = AgeDiagnosed2, OnsetType = "Age_Diagnosed", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
+DateYear = "",
+DateMonth ="",
+DateDay = "",
+PointInTime = "",
+TimePeriod = "",
+NumberOfTimePeriods ="",
+LowerNumberOfTimePeriods = "",
+UpperNumberOfTimePeriods = "",
 AgeUnit = :match.Lookup2.timeUnit,
 AgeLower =:match.Lookup2.lowerAge,
 AgeUpper = :match.Lookup2.upperAge,
@@ -58,18 +75,26 @@ Priority: 99
 
 (   
 
-	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
-    {Lookup2.majorType == historic}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
+    {Lookup2.majorType == historic , Lookup2.type == diagnosed}
     {History.majorType == person}
 	{Numeric}
 	
  ):match  
  -->
-:match.AgeDiagnosed = {rule = AgeDiagnosed4, OnsetType = "Age_Diagnosed", 
-PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
-STY = :match.Lookup.STY, 
-Certainty = :match.Lookup.Certainty,
-AgeUnit = Year,
+:item.WhenDiagnosed = {rule = AgeDiagnosed3, OnsetType = "Age_Diagnosed", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
+DateYear = "",
+DateMonth ="",
+DateDay = "",
+PointInTime = "",
+TimePeriod = "",
+NumberOfTimePeriods ="",
+LowerNumberOfTimePeriods = "",
+UpperNumberOfTimePeriods = "",
+AgeUnit ="Year",
 AgeLower ="",
 AgeUpper = "",
 Age =  :match.Numeric.value}

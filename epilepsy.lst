@@ -963,6 +963,8 @@ partial seizure (finding)	CUI=C0751495	PREF=partial seizure (finding)	TUI=T047	S
 focal epilepsy	CUI=C0014547	PREF=focal epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 partial seizure dis motor	CUI=C0016399	PREF=partial seizure dis motor	TUI=T047	STY=Disease or Syndrome
 focal seizures	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=Disease or Syndrome
+focal sensory seizures	CUI=C0544645	PREF=focal sensory seizure	TUI=T047	STY=Disease or Syndrome
+sensory seizures	CUI=C0544645	PREF=focal sensory seizure	TUI=T047	STY=Disease or Syndrome 	
 partial seizure disorder, motor	CUI=C0016399	PREF=partial seizure disorder, motor	TUI=T047	STY=Disease or Syndrome
 partial seizure disorders	CUI=C0014547	PREF=partial seizure disorders	TUI=T047	STY=Disease or Syndrome
 partial seizure evolving to secondary generalised seizure	CUI=C0474327	PREF=partial seizure evolving to secondary generalised seizure	TUI=T046	STY=Pathologic Function
@@ -1029,9 +1031,6 @@ psychosensory epilepsy	CUI=C0347873	PREF=psychosensory epilepsy	TUI=T047	STY=Dis
 psychosensory epilepsy (disorder)	CUI=C0347873	PREF=psychosensory epilepsy (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 pte - post-traumatic epilepsy	CUI=C0014557	PREF=pte - post-traumatic epilepsy	TUI=T037	STY=Injury or Poisoning	Epilepsy=Yes
 pure photosensitive epilepsy	CUI=C0393721	PREF=pure photosensitive epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-pyrexial convulsions	CUI=C0009952	PREF=pyrexial convulsions	TUI=T047	STY=Disease or Syndrome
-pyrexial seizure	CUI=C0009952	PREF=pyrexial seizure	TUI=T047	STY=Disease or Syndrome
-pyrexial seizures	CUI=C0009952	PREF=pyrexial seizures	TUI=T047	STY=Disease or Syndrome
 pyridoxal 5'-phosphate-dependent epilepsy	CUI=C1864723	PREF=pyridoxal 5'-phosphate-dependent epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 pyridoxal 5-phosphate dependent epilepsy	CUI=C1864723	PREF=pyridoxal 5-phosphate dependent epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 pyridoxal 5-phosphate dependent epilepsy (disorder)	CUI=C1864723	PREF=pyridoxal 5-phosphate dependent epilepsy (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -1166,11 +1165,10 @@ seizures, fever	CUI=C0009952	PREF=seizures, fever	TUI=T047	STY=Disease or Syndro
 seizures, generalized, associated with fever	CUI=C0009952	PREF=seizures, generalized, associated with fever	TUI=T047	STY=Disease or Syndrome
 seizures, olfactory	CUI=C0422853	PREF=seizures, olfactory	TUI=T047	STY=Disease or Syndrome
 seizures, partial, afebrile	CUI=C0751495	PREF=seizures, partial, afebrile	TUI=T047	STY=Disease or Syndrome
-seizures, pyrexial	CUI=C0009952	PREF=seizures, pyrexial	TUI=T047	STY=Disease or Syndrome
 seizures, sensorineural deafness, ataxia, mental retardation and electrolyte imbalance	CUI=C2748572	PREF=seizures, sensorineural deafness, ataxia, mental retardation and electrolyte imbalance	TUI=T047	STY=Disease or Syndrome
 seizures, vertiginous	CUI=C0422855	PREF=seizures, vertiginous	TUI=T047	STY=Disease or Syndrome
 seizures, vestibular	CUI=C0422855	PREF=seizures, vestibular	TUI=T047	STY=Disease or Syndrome
-seizures, visual	CUI=C0270824	PREF=seizures, visual	TUI=T047	STY=Disease or Syndrome
+visual seizures CUI=C0270824	PREF=seizures, visual	TUI=T047	STY=Disease or Syndrome
 sensory-induced epilepsy	CUI=C0270857	PREF=sensory-induced epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 sesame (seizures, sensorineural deafness, ataxia, mental retardation, electrolyte imbalance) syndrome	CUI=C2748572	PREF=sesame (seizures, sensorineural deafness, ataxia, mental retardation, electrolyte imbalance) syndrome	TUI=T047	STY=Disease or Syndrome
 sesames	CUI=C2748572	PREF=sesames	TUI=T047	STY=Disease or Syndrome
@@ -1196,6 +1194,8 @@ simple part seiz with mot dysf	CUI=C0016399	PREF=simple part seiz with mot dysf	
 simple partial seizure	CUI=C0234974	PREF=simple partial seizure	TUI=T047	STY=Disease or Syndrome
 simple partial seizure (disorder)	CUI=C0234974	PREF=simple partial seizure (disorder)	TUI=T047	STY=Disease or Syndrome
 simple partial seizure with motor dysfunction	CUI=C0016399	PREF=simple partial seizure with motor dysfunction	TUI=T047	STY=Disease or Syndrome
+focal motor seizure	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
+focal motor	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 simple partial seizure with motor dysfunction (disorder)	CUI=C0016399	PREF=simple partial seizure with motor dysfunction (disorder)	TUI=T047	STY=Disease or Syndrome
 simple partial seizure with motor dysfunction (finding)	CUI=C0016399	PREF=simple partial seizure with motor dysfunction (finding)	TUI=T047	STY=Disease or Syndrome
 simple partial seizure, consciousness not impaired	CUI=C0234974	PREF=simple partial seizure, consciousness not impaired	TUI=T047	STY=Disease or Syndrome
@@ -1372,3 +1372,5 @@ jeavons syndrome	CUI=C4274731	PREF=Jeavons syndrome	TUI=T047	STY=Disease or Synd
 jeavons' syndrome	CUI=C4274731	PREF=Jeavons syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy with eyelid myoclonia	CUI=C4274731	PREF=Jeavons syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 generalised epilepsy with eyelid myoclonia	CUI=C4274731	PREF=Jeavons syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+post-traumatic epilepsy	CIU=C0014557	PREF=Epilepsy, Post-Traumatic	TUI=T037	STY=Injury or Poisoning	Epilepsy=Yes
+post traumatic epilepsy	CIU=C0014557	PREF=Epilepsy, Post-Traumatic	TUI=T037	STY=Injury or Poisoning	Epilepsy=Yes

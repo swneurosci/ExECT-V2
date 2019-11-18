@@ -1,5 +1,5 @@
 Phase: TimeSinceOnsetRange
-Input: Lookup3 Person timePeriod timeElapsed Lookup2 Split MedCause NumberRange Sentence
+Input: Lookup3 Person timePeriod timeElapsed Lookup2 Split MedCause Range Sentence
 
 Options: control=appelt
 
@@ -15,7 +15,7 @@ Priority: 100
     ({Person})?
 	{MedCause.majorType == context}
 	{timeElapsed.time == during}
-	{NumberRange}
+	{Range}
     {timePeriod}
  ):match  
  -->
@@ -37,7 +37,7 @@ Priority: 99
 	{Person}
 	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient}):item
 	{Lookup2.language == onset}
-	{NumberRange}
+	{Range}
     {timePeriod}
     {timeElapsed.time == since}
  ):match  

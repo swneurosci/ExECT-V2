@@ -1,22 +1,24 @@
 Phase: TimeSinceOnset
-Input: Lookup3 Lookup Person Sentence Numeric timePeriod timeElapsed Lookup2 
-Number Split Age DiagnosisTriggers MedCause NumberRange Frequency
+Input: Lookup3 Lookup Person Sentence Numeric timePeriod timeElapsed Lookup2 Split Age 
+
 
 Options: control=appelt		
 
 
-Rule: seizuresFor1
+Rule: TimeSinceOnset1
 Priority: 100
 
 (   
     {Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed}):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.CAT == seizures}):item
+	{Lookup2.language  == onset}
 	{timeElapsed}
 	{Numeric} 
     {timePeriod}
  ):match  
  -->
-:item.TimeSinceOnset = {rule = seizuresFor1 , OnsetType = "time_since_episodes_started",
+
+:item.Onset = {rule = TimeSinceOnset1 , OnsetType = "time_since_episodes_started",
 PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :item.Lookup3.Certainty,
@@ -27,13 +29,14 @@ UpperNumberOfTimePeriods = ""}
 
 
 
-Rule: seizuresFor2
+
+Rule: TimeSinceOnset2
 Priority: 99
 
 (   
     {Person}
 	{Lookup2.language == onset}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed}):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.CAT == seizures}):item
 	({Person})?
 	({Lookup2})?
 	{timeElapsed}
@@ -42,7 +45,7 @@ Priority: 99
 	
  ):match  
  -->
-:item.TimeSinceOnset = {rule = seizuresFor2 , OnsetType = "time_since_episodes_started",
+:item.Onset = {rule = TimeSinceOnset2 , OnsetType = "time_since_episodes_started",
 PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :item.Lookup3.Certainty,
@@ -51,7 +54,7 @@ NumberOfTimePeriods =:match.Numeric.value,
 LowerNumberOfTimePeriods = "",
 UpperNumberOfTimePeriods = ""}
 
-Rule: seizuresFor3
+Rule: TimeSinceOnset3
 Priority: 99
 
 (   
@@ -66,7 +69,7 @@ Priority: 99
 
  ):match  
  -->
-:item.TimeSinceOnset = {rule = seizuresFor3 , OnsetType = "time_since_episodes_started",
+:item.Onset = {rule = TimeSinceOnset3 , OnsetType = "time_since_episodes_started",
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
@@ -76,7 +79,7 @@ LowerNumberOfTimePeriods = "",
 UpperNumberOfTimePeriods = ""}
 
 
-Rule: seizuresFor4
+Rule: TimeSinceOnset4
 Priority: 99
 
 (   
@@ -93,7 +96,7 @@ Priority: 99
 	
  ):match  
  -->
-:item.TimeSinceOnset = {rule = seizuresFor4, OnsetType = "time_since_episodes_started", 
+:item.Onset = {rule = TimeSinceOnset4, OnsetType = "time_since_episodes_started", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
@@ -102,7 +105,7 @@ NumberOfTimePeriods = :match.Numeric.value,
 LowerNumberOfTimePeriods = "",
 UpperNumberOfTimePeriods = ""}
 
-Rule: seizuresFor5
+Rule: TimeSinceOnset5
 Priority: 98
 
 (   
@@ -110,13 +113,13 @@ Priority: 98
 	{Numeric}
 	{timePeriod}
 	{Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed}):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.CAT == seizures }):item
 	
 	
 	
  ):match  
  -->
-:item.TimeSinceOnset = {rule = seizuresFor5, OnsetType = "time_since_episodes_started", 
+:item.Onset = {rule = TimeSinceOnset5, OnsetType = "time_since_episodes_started", 
 PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :item.Lookup3.Certainty,
@@ -125,7 +128,7 @@ NumberOfTimePeriods =:match.Numeric.value,
 LowerNumberOfTimePeriods = "",
 UpperNumberOfTimePeriods = ""}
 
-Rule: seizuresFor6
+Rule: TimeSinceOnset6
 Priority: 98
 
 (   
@@ -139,7 +142,7 @@ Priority: 98
 	
  ):match  
  -->
-:item.TimeSinceOnset = {rule = seizuresFor6, OnsetType = "time_since_episodes_started", 
+:item.Onset = {rule = TimeSinceOnset6, OnsetType = "time_since_episodes_started", 
 PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
 STY = :match.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
@@ -148,52 +151,32 @@ NumberOfTimePeriods =:match.Numeric.value,
 LowerNumberOfTimePeriods = "",
 UpperNumberOfTimePeriods = ""}
 
-Rule: seizuresFor7
-Priority: 98
+Rule: TimeSinceOnset7
+Priority: 99
 
 (   
 	{timeElapsed.majorType == context}
 	{timePeriod}
 	{Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed}):a
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.CAT == seizures }):item
 	{Lookup3}
 	
 	
 ):match  
  -->
-:a.TimeSinceOnset = {rule = seizuresFor7, OnsetType = "time_since_episodes_started", 
-PREF = :a.Lookup3.PREF, CUI = :a.Lookup3.CUI, TUI = :a.Lookup3.TUI,
-STY = :a.Lookup3.STY, 
-Certainty = :a.Lookup3.Certainty,
+:item.Onset = {rule = TimeSinceOnset7, OnsetType = "time_since_episodes_started", 
+PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+STY = :item.Lookup3.STY, 
+Certainty = :item.Lookup3.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods ="1",
 LowerNumberOfTimePeriods = "",
 UpperNumberOfTimePeriods = ""}
 
  
-Rule: seizuresFor8
-Priority: 98
 
-(   
-	{timeElapsed.majorType == context}
-	{timePeriod}
-	{Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed}):a
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed}):b
-	
-	
- ):match  
- -->
-:b.TimeSinceOnset = {rule = seizuresFor8, OnsetType = "time_since_episodes_started", 
-PREF = :b.Lookup3.PREF, CUI = :b.Lookup3.CUI, TUI = :b.Lookup3.TUI,
-STY = :b.Lookup3.STY, 
-Certainty = :b.Lookup3.Certainty,
-TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods ="1",
-LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""}
 
-Rule: seizuresFor9
+Rule: TimeSinceOnset8
 Priority: 98
 
 (   
@@ -208,7 +191,7 @@ Priority: 98
 	
  ):match  
  -->
-:item.TimeSinceOnset = {rule = seizuresFor9, OnsetType = "time_since_episodes_started", 
+:item.Onset = {rule = TimeSinceOnset8, OnsetType = "time_since_episodes_started", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
@@ -218,7 +201,7 @@ LowerNumberOfTimePeriods = "",
 UpperNumberOfTimePeriods = ""}
 
 
-Rule: seizuresFor10
+Rule: TimeSinceOnset9
 Priority: 98
 
 (   
@@ -234,7 +217,7 @@ Priority: 98
 	
  ):match  
  -->
-:item.TimeSinceOnset = {rule = seizuresFor10, OnsetType = "time_since_episodes_started", 
+:item.Onset = {rule = TimeSinceOnset9, OnsetType = "time_since_episodes_started", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
@@ -243,6 +226,26 @@ NumberOfTimePeriods =:match.Numeric.value,
 LowerNumberOfTimePeriods = "",
 UpperNumberOfTimePeriods = ""}
 
+
+Rule: TimeSinceOnset10
+Priority: 100
+
+(   
+    {Person}
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.CAT == seizures}):item
+	{timeElapsed.time == during}
+	{Numeric} 
+    {timePeriod}
+ ):match  
+ -->
+:item.Onset = {rule = TimeSinceOnset10 , OnsetType = "time_since_episodes_started",
+PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+STY = :item.Lookup3.STY, 
+Certainty = :item.Lookup3.Certainty,
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value,
+LowerNumberOfTimePeriods = "",
+UpperNumberOfTimePeriods = ""}
 
 	
     

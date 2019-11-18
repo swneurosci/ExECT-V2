@@ -3,7 +3,9 @@ Input: Lookup3 Lookup2 Person  Sentence
 
 Options: control=appelt
 
-Rule: Birth1
+/*these rule are to capture birth injuries and other events in the perinatal period*/
+
+Rule: BirthB1
 Priority: 100
 
 (
@@ -15,7 +17,24 @@ Priority: 100
 
 ):match  
  -->
-:item.BirthHistory = {rule = Birth1,  PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.BirthHistory = {rule = BirthB1,  PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: BirthB2
+Priority: 100
+
+(
+    {Person}
+    {Lookup2.majorType == historic}
+    ({Lookup2.type  == time})?
+    ({Lookup3.PREF =~ "birth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
+   
+
+):match  
+ -->
+:item.BirthHistory = {rule = BirthB2,  PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}

@@ -11,7 +11,7 @@ Priority: 100
 	{Person}
 	{Lookup2.majorType == historic}
     {DiagnosisTriggers.majorType == diagnosis}
-	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
 	{timeElapsed.time == in , timeElapsed.time != during}
 	{Numeric}
 
@@ -19,14 +19,23 @@ Priority: 100
 	
  ):match  
  -->
-:match.DateDiagnosed = {rule = DateDiagnosed1, OnsetType = "Year_Diagnosed", 
-PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
-STY = :match.Lookup.STY, 
-Certainty = :match.Lookup.Certainty,
-Year = :match.Numeric.value,
-Month ="",
-Day = "",
-PointInTime = ""}
+:item.WhenDiagnosed = {rule = DateDiagnosed1, OnsetType = "Year_Diagnosed", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
+PointInTime = "",
+DateYear = :match.Numeric.value,
+DateMonth ="",
+DateDay = "",
+PointInTime = "",
+TimePeriod = "",
+NumberOfTimePeriods ="",
+LowerNumberOfTimePeriods = "",
+UpperNumberOfTimePeriods = "",
+AgeUnit ="Year",
+AgeLower ="",
+AgeUpper = "",
+Age =  ""}
 
 Rule: DateDiagnosed2
 Priority: 100
@@ -35,7 +44,7 @@ Priority: 100
 	{Person}
 	{Lookup2.majorType == historic}
     {DiagnosisTriggers.majorType == diagnosis}
-	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
 	({Lookup2})?
 	({Person})?
 	{PointInTime}
@@ -45,11 +54,20 @@ Priority: 100
 	
  ):match  
  -->
-:match.DateDiagnosed = {rule = DateDiagnosed2, OnsetType = "When_Diagnosed", 
-PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
-STY = :match.Lookup.STY, 
-Certainty = :match.Lookup.Certainty,
-Year = "",
-Month ="",
-Day = "",
-PointInTime = :match.PointInTime.Since}
+:item.WhenDiagnosed = {rule = DateDiagnosed2, OnsetType = "When_Diagnosed", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
+PointInTime = :match.PointInTime.Since,
+DateYear = "",
+DateMonth ="",
+DateDay = "",
+PointInTime = "",
+TimePeriod = "",
+NumberOfTimePeriods ="",
+LowerNumberOfTimePeriods = "",
+UpperNumberOfTimePeriods = "",
+AgeUnit ="Year",
+AgeLower ="",
+AgeUpper = "",
+Age =  ""}
