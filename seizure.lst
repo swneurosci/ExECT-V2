@@ -216,12 +216,11 @@ post-traumatic seizures	CUI=C0014557	PREF=post-traumatic seizure disorders	TUI=T
 pyridoxal phosphate-responsive seizures	CUI=C1864723	PREF=pyridoxal phosphate-responsive seizures	TUI=T047	STY=Disease or Syndrome
 pyridoxine-dependent seizures	CUI=C1849508	PREF=pyridoxine-dependent seizures	TUI=T047	STY=Disease or Syndrome
 rolandic seizures with status epilepticus	CUI=C3662441	PREF=rolandic seizures with status epilepticus	TUI=T047	STY=Disease or Syndrome
-seizure dis	CUI=C0014544	PREF=seizure dis	TUI=T047	STY=Disease or Syndrome
+seizure disorder	CUI=C0014544	PREF=seizure dis	TUI=T047	STY=Disease or Syndrome
 seizure dis absence	CUI=C0014553	PREF=seizure dis absence	TUI=T047	STY=Disease or Syndrome
 seizure dis complex partial	CUI=C0085417	PREF=seizure dis complex partial	TUI=T047	STY=Disease or Syndrome
 seizure dis convulsive generalized	CUI=C0311334	PREF=seizure dis convulsive generalized	TUI=T047	STY=Disease or Syndrome
-seizure dis focal	CUI=C0014547	PREF=seizure dis focal	TUI=T047	STY=Disease or Syndrome
-seizure dis generalized	CUI=C0014548	PREF=seizure dis generalized	TUI=T047	STY=Disease or Syndrome
+focal seizure disorder 	CUI=C0014547	PREF=seizure dis focal	TUI=T047	STY=Disease or Syndrome
 seizure dis generalized convulsive	CUI=C0311334	PREF=seizure dis generalized convulsive	TUI=T047	STY=Disease or Syndrome
 seizure dis generalized onset	CUI=C0311334	PREF=seizure dis generalized onset	TUI=T047	STY=Disease or Syndrome
 seizure dis grand mal	CUI=C0014549	PREF=seizure dis grand mal	TUI=T047	STY=Disease or Syndrome
@@ -234,10 +233,10 @@ seizure dis tonic clonic	CUI=C0014549	PREF=seizure dis tonic clonic	TUI=T047	STY
 seizure disorder (disorder)	CUI=C0014544	PREF=seizure disorder (disorder)	TUI=T047	STY=Disease or Syndrome
 seizure disorder as sequela of stroke	CUI=C3662042	PREF=seizure disorder as sequela of stroke	TUI=T046	STY=Pathologic Function
 seizure disorder as sequela of stroke (disorder)	CUI=C3662042	PREF=seizure disorder as sequela of stroke (disorder)	TUI=T046	STY=Pathologic Function
-seizure disorder nos	CUI=C0014544	PREF=seizure disorder nos	TUI=T047	STY=Disease or Syndrome
-seizure disorder, absence	CUI=C0014553	PREF=seizure disorder, absence	TUI=T047	STY=Disease or Syndrome
-seizure disorder, complex partial	CUI=C0085417	PREF=seizure disorder, complex partial	TUI=T047	STY=Disease or Syndrome
-seizure disorder, convulsive, generalized	CUI=C0311334	PREF=seizure disorder, convulsive, generalized	TUI=T047	STY=Disease or Syndrome
+seizure disorder	CUI=C0014544	PREF=seizure disorder nos	TUI=T047	STY=Disease or Syndrome
+absence seizure disorder	CUI=C0014553	PREF=seizure disorder, absence	TUI=T047	STY=Disease or Syndrome
+complex partial seizure disorder	CUI=C0085417	PREF=seizure disorder, complex partial	TUI=T047	STY=Disease or Syndrome
+generalized convulsive seizure disorder 	CUI=C0311334	PREF=seizure disorder, convulsive, generalized	TUI=T047	STY=Disease or Syndrome
 seizure disorder, focal	CUI=C0014547	PREF=seizure disorder, focal	TUI=T047	STY=Disease or Syndrome
 seizure disorder, generalized	CUI=C0014548	PREF=seizure disorder, generalized	TUI=T047	STY=Disease or Syndrome
 seizure disorder, generalized onset	CUI=C0311334	PREF=seizure disorder, generalized onset	TUI=T047	STY=Disease or Syndrome
@@ -261,15 +260,14 @@ seizure disorders, post-traumatic	CUI=C0014557	PREF=seizure disorders, post-trau
 seizure disorders, tonic-clonic	CUI=C0014549	PREF=seizure disorders, tonic-clonic	TUI=T047	STY=Disease or Syndrome
 seizure syndrome, tonic-clonic	CUI=C0014549	PREF=seizure syndrome, tonic-clonic	TUI=T047	STY=Disease or Syndrome
 seizure syndromes, tonic-clonic	CUI=C0014549	PREF=seizure syndromes, tonic-clonic	TUI=T047	STY=Disease or Syndrome
-seizure, auditory	CUI=C0422852	PREF=seizure, auditory	TUI=T046	STY=Pathologic Function
-seizure, focal	CUI=C0751495	PREF=seizure, focal	TUI=T047	STY=Disease or Syndrome
-seizure, generalized	CUI=C0234533	PREF=seizure, generalized	TUI=T047	STY=Disease or Syndrome
-seizure, gustatory partial	CUI=C0278192	PREF=seizure, gustatory partial	TUI=T047	STY=Disease or Syndrome
+auditory seizure	CUI=C0422852	PREF=seizure, auditory	TUI=T046	STY=Pathologic Function
+focal seizure CUI=C0751495	PREF=seizure, focal	TUI=T047	STY=Disease or Syndrome
+generalized seizure	CUI=C0234533	PREF=seizure, generalized	TUI=T047	STY=Disease or Syndrome
+gustatory partial seizure	CUI=C0278192	PREF=seizure, gustatory partial	TUI=T047	STY=Disease or Syndrome
 myoclonic seizure	CUI=C4317123	PREF=seizure, myoclonic	TUI=T184	STY=sign or symptom
 olfactory seizure	CUI=C0422853	PREF=seizure, olfactory	TUI=T047	STY=Disease or Syndrome
 partial seizure	CUI=C0751495	PREF=seizure, partial	TUI=T047	STY=Disease or Syndrome
 partial seizures	CUI=C0751495	PREF=seizure, partial	TUI=T047	STY=Disease or Syndrome
-seizure, pyrexial	CUI=C0009952	PREF=seizure, pyrexial	TUI=T047	STY=Disease or Syndrome
 seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome	CUI=C2748572	PREF=seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome	TUI=T047	STY=Disease or Syndrome
 seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome (disorder)	CUI=C2748572	PREF=seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome (disorder)	TUI=T047	STY=Disease or Syndrome
 seizure, vertiginous	CUI=C0422855	PREF=seizure, vertiginous	TUI=T047	STY=Disease or Syndrome

@@ -236,6 +236,7 @@ brain neoplasm malignant	CUI=C0153633	PREF=brain neoplasm malignant	TUI=T191	STY
 brain neoplasm, benign	CUI=C0496899	PREF=brain neoplasm, benign	TUI=T191	STY=Neoplastic Process
 brain neoplasm, malignant	CUI=C0153633	PREF=brain neoplasm, malignant	TUI=T191	STY=Neoplastic Process
 brain neoplasms	CUI=C0006118	PREF=brain neoplasms	TUI=T191	STY=Neoplastic Process
+brain tumour	CUI=C0006118	PREF=brain neoplasms	TUI=T191	STY=Neoplastic Process
 brain neoplasms, benign	CUI=C0496899	PREF=brain neoplasms, benign	TUI=T191	STY=Neoplastic Process
 brain neoplasms, malignant	CUI=C0153633	PREF=brain neoplasms, malignant	TUI=T191	STY=Neoplastic Process
 brain neoplasms, malignant, primary	CUI=C0750979	PREF=brain neoplasms, malignant, primary	TUI=T191	STY=Neoplastic Process
@@ -1346,3 +1347,4 @@ special care baby unit	CUI=C0583275	PREF=Admission to special care baby unit	TUI
 gliosis	CUI=C0017639	PREF=gliosis	TUI=T046	STY=Pathologic Function
 obsessive compulsive disorder	CUI=C0028768	PREF=Obsessive-Compulsive Disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
 obsessive-compulsive disorder	CUI=C0028768	PREF=Obsessive-Compulsive Disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
+craniotomy	CUI=C0010280	FREF=craniotomy	TUI=T061	STY=Therapeutic or Preventive Procedure	

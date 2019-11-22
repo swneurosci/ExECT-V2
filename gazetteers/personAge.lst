@@ -62,3 +62,8 @@ one:lowerAge=:upperAge=:Age=12:timeUnit=Month
 one year:lowerAge=:upperAge=:Age=12:timeUnit=Month 
 year and a half:lowerAge=:upperAge=:Age=18:timeUnit=Month 
 one and a half:lowerAge=:upperAge=:Age=18:timeUnit=Month 
+gcse:lowerAge=15:upperAge=16:Age=:timeUnit=Year
+gcse's:lowerAge=15:upperAge=16:Age=:timeUnit=Year
+a'levels:lowerAge=17:upperAge=18:Age=:timeUnit=Year
+a levels:lowerAge=17:upperAge=18:Age=:timeUnit=Year
+gces:lowerAge=17:upperAge=18:Age=:timeUnit=Year

@@ -27,13 +27,9 @@ the eighties:In=1980s
 1990s:In=1990s
 the 90s:In=1990s
 the ninties:In=1990s
-last Christmas:Since=lastChristmas
+last Christmas:Since=LastChristmas
 new year's eve:Since=NewYear'sEve
 new year's day:Since=NewYear'sDay
 birthday:Since=Birthday
 easter:Since=Easter
-gcse's:At=aged16
-gcses:At=aged16
-a'levels:At=aged18
-a levels:At=aged18
-gce's:At=aged18
+
