@@ -107,12 +107,14 @@ Priority: 99
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
 	{listPoint}
-	({Lookup2})?
+	({Lookup})?
+	({DiagnosisTriggers.majorType == diagnosis})?
 	{Lookup3}
 	{listPoint}
+	({listPoint})?
 	{Lookup3}
 	{listPoint}
-	{listPoint}
+	({listPoint})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, 
 	Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
     

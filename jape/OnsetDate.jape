@@ -98,7 +98,7 @@ Priority: 98
 
 (   
 	{Lookup2.majorType == historic}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient , Lookup3.CAT == seizures }):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,  Lookup3.Experiencer == Patient , Lookup3.CAT == seizures }):item
 	{Lookup2.language == onset }
 	{timeElapsed}
 	{PartialDate}
