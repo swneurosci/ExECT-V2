@@ -1,10 +1,10 @@
 Phase: DateDiagnosed
-Input: Lookup Person Lookup3 Lookup2 DiagnosisTriggers Numeric timeElapsed Split
+Input: Lookup Person Lookup3 Lookup2 DiagnosisTriggers Numeric timeElapsed Split 
 
 Options: control = appelt
+/*For when the date of diagnosis is in a sentance before or after the term of interest*/
 
-
-Rule: DateDiagnosed2a
+Rule: DateDiagnosedB1
 Priority: 100
 
 (   
@@ -21,18 +21,18 @@ Priority: 100
 	
  ):match  
  -->
-:item.WhenDiagnosed = {rule = DateDiagnosed2a, OnsetType = "Year_Diagnosed", 
+:item.WhenDiagnosed = {rule = DateDiagnosedB1, OnsetType = "Year_Diagnosed", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 Year = :match.Numeric.value,
-Month ="",
+/*Month ="",
 Day = "",
-PointInTime = ""}
+PointInTime = ""*/}
 
 
 
-Rule: DateDiagnosed2b
+Rule: DateDiagnosedB2
 Priority: 99
 (   
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
@@ -45,12 +45,32 @@ Priority: 99
 	
  ):match  
  -->
-:item.WhenDiagnosed = {rule = DateDiagnosed2b, OnsetType = "Year_Diagnosed", 
+:item.WhenDiagnosed = {rule = DateDiagnosedB2, OnsetType = "Year_Diagnosed", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 Year = :match.Numeric.value,
-Month ="",
+/*Month ="",
 Day = "",
-PointInTime = ""}
+PointInTime = ""*/}
 
+Rule: DateDiagnosedB3
+Priority: 99
+(   
+	({Lookup}):item
+    ({Lookup3})?
+    ({Lookup3})?
+    {Split}
+    {DiagnosisTriggers.majorType == diagnosis}
+    {Lookup2.majorType == historic}
+	{timeElapsed}
+	{Numeric}
+	
+	
+ ):match  
+ -->
+:item.WhenDiagnosed = {rule = DateDiagnosedB3, OnsetType = "Year_Diagnosed", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
+Year = :match.Numeric.value}

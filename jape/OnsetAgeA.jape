@@ -1,5 +1,5 @@
 Phase: OnsetAgeA
-Input: Lookup3 Person Lookup2 Numeric timePeriod Age
+Input: Lookup3 Person Lookup2 Numeric timePeriod Age History
 Options: control=appelt
 
 
@@ -25,7 +25,7 @@ STY = :item.Lookup3.STY,
 Certainty = :item.Lookup3.Certainty,
 AgeUnit = :match.timePeriod.time-unit,
 Age =:match.Numeric.value,
-AgeLower = "",
+/*AgeLower = "",
 AgeUpper = "",
 DateYear = "",
 DateMonth ="",
@@ -34,5 +34,33 @@ PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
 LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""}
+UpperNumberOfTimePeriods = ""*/}
 	
+
+Rule: onsetAgeA2
+Priority: 99
+
+(   
+	
+	{Person}
+    {Lookup2.language == onset}
+	{Lookup3}
+	{History}
+	{Numeric}
+	{timePeriod}
+	{History.majorType == person}
+	{Lookup2.type == time}
+	({Person})?
+	({Lookup2})?
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.minorType == Disease}):item
+
+	
+):match  
+ -->
+:item.Onset = {rule = onsetAgeA2, OnsetType = "age_episodes_started", 
+PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+STY = :item.Lookup3.STY, 
+Certainty = :item.Lookup3.Certainty,
+AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value}	
+

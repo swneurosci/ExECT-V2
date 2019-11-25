@@ -1,0 +1,58 @@
+Phase: OnsetDateB
+Input: Lookup3 Person Lookup2 timeElapsed  PointInTime Lookup PartialDate Split Diagnosis
+Options: control=appelt
+
+/*For when the seizure type is specified in the sentence before the date of onset*/
+
+Rule: OnsetDateB1
+Priority: 100
+
+(   
+	{Person}
+    {timeElapsed}
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.minorType == Disease , Lookup3.Experiencer == Patient}):item
+    {Split}
+    ({Split})?
+    {Person}
+    {Lookup2.language == onset , Lookup2.type == began}
+    {Lookup3.minorType == generic}
+	{timeElapsed}
+	{PartialDate}
+	
+	
+	
+ ):match  
+ -->
+:item.Onset = {rule = OnsetDateB1, OnsetType = "date_of_onset", 
+PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+STY = :item.Lookup3.STY, Certainty = :item.Lookup3.Certainty,
+DateYear = :match.PartialDate.year,
+DateMonth =:match.PartialDate.month,
+DateDay = ""}
+
+Rule: OnsetDateB2
+Priority: 100
+
+(   
+	
+	({Diagnosis}):item
+    {Split}
+    {Split}
+    {Person}
+    {Lookup2.language == onset , Lookup2.type == began}
+    {Lookup3.minorType == generic}
+	{timeElapsed}
+	{PartialDate}
+	
+	
+	
+ ):match  
+ -->
+:item.Onset = {rule = OnsetDateB2, OnsetType = "date_of_onset", 
+PREF = :item.Diagnosis.PREF, CUI = :item.Diagnosis.CUI, 
+Certainty = :item.Lookup3.Certainty,
+DateYear = :match.PartialDate.year,
+DateMonth =:match.PartialDate.month,
+DateDay = ""}
+
+

@@ -23,8 +23,8 @@ Priority: 100
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
-PointInTime = "",
 DateYear = :match.Numeric.value,
+/*PointInTime = "",
 DateMonth ="",
 DateDay = "",
 PointInTime = "",
@@ -32,10 +32,10 @@ TimePeriod = "",
 NumberOfTimePeriods ="",
 LowerNumberOfTimePeriods = "",
 UpperNumberOfTimePeriods = "",
-AgeUnit ="Year",
 AgeLower ="",
 AgeUpper = "",
-Age =  ""}
+Age =  "" ,*/ 
+AgeUnit ="Year",}
 
 Rule: DateDiagnosed2
 Priority: 100
@@ -59,7 +59,8 @@ PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 PointInTime = :match.PointInTime.Since,
-DateYear = "",
+AgeUnit ="Year",
+/*DateYear = "",
 DateMonth ="",
 DateDay = "",
 PointInTime = "",
@@ -67,7 +68,6 @@ TimePeriod = "",
 NumberOfTimePeriods ="",
 LowerNumberOfTimePeriods = "",
 UpperNumberOfTimePeriods = "",
-AgeUnit ="Year",
 AgeLower ="",
 AgeUpper = "",
-Age =  ""}
+Age =  ""*/}

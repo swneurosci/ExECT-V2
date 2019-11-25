@@ -11,3 +11,4 @@ ago:time=since
 For the last:time=during
 from:time=since
 From:time=since
+after:time=since

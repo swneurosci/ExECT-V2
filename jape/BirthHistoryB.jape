@@ -1,5 +1,5 @@
 Phase: BirthHistoryB
-Input: Lookup3 Lookup2 Person  Sentence
+Input: Lookup3 Lookup2 Person  Sentence DiagnosisTriggers 
 
 Options: control=appelt
 
@@ -29,12 +29,30 @@ Priority: 100
     {Person}
     {Lookup2.majorType == historic}
     ({Lookup2.type  == time})?
-    ({Lookup3.PREF =~ "birth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
+    ({Lookup3.PREF =~ "Birth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
    
 
 ):match  
  -->
 :item.BirthHistory = {rule = BirthB2,  PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+
+Rule: BirthB3
+Priority: 100
+
+(
+    {DiagnosisTriggers}
+    ({Lookup3})?
+    ({Lookup2})*
+    ({Lookup3.PREF =~ "Birth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
+   
+
+):match  
+ -->
+:item.BirthHistory = {rule = BirthB3,  PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}

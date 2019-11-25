@@ -59,7 +59,7 @@
       <docList>
         <gate.util.persistence.LRPersistence>
           <resourceType>gate.corpora.DocumentImpl</resourceType>
-          <resourceName>TestOnset_cause.txt_00018</resourceName>
+          <resourceName>Epi_Let1.docx_00014</resourceName>
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
@@ -70,7 +70,214 @@
               <entry>
                 <string>sourceUrl</string>
                 <gate.util.persistence.PersistenceManager-URLHolder>
-                  <urlString>$relpath$../../letters/onset_cause/TestOnset_cause.txt</urlString>
+                  <urlString>$relpath$../../letters/10_letters/Epi_Let1.docx</urlString>
+                </gate.util.persistence.PersistenceManager-URLHolder>
+              </entry>
+              <entry>
+                <string>stringContent</string>
+                <string></string>
+              </entry>
+            </localMap>
+          </initParams>
+        </gate.util.persistence.LRPersistence>
+        <gate.util.persistence.LRPersistence>
+          <resourceType>gate.corpora.DocumentImpl</resourceType>
+          <resourceName>Epi_Let10.docx_00015</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>encoding</string>
+                <string>windows-1252</string>
+              </entry>
+              <entry>
+                <string>sourceUrl</string>
+                <gate.util.persistence.PersistenceManager-URLHolder>
+                  <urlString>$relpath$../../letters/10_letters/Epi_Let10.docx</urlString>
+                </gate.util.persistence.PersistenceManager-URLHolder>
+              </entry>
+              <entry>
+                <string>stringContent</string>
+                <string></string>
+              </entry>
+            </localMap>
+          </initParams>
+        </gate.util.persistence.LRPersistence>
+        <gate.util.persistence.LRPersistence>
+          <resourceType>gate.corpora.DocumentImpl</resourceType>
+          <resourceName>Epi_Let2.docx_00016</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>encoding</string>
+                <string>windows-1252</string>
+              </entry>
+              <entry>
+                <string>sourceUrl</string>
+                <gate.util.persistence.PersistenceManager-URLHolder>
+                  <urlString>$relpath$../../letters/10_letters/Epi_Let2.docx</urlString>
+                </gate.util.persistence.PersistenceManager-URLHolder>
+              </entry>
+              <entry>
+                <string>stringContent</string>
+                <string></string>
+              </entry>
+            </localMap>
+          </initParams>
+        </gate.util.persistence.LRPersistence>
+        <gate.util.persistence.LRPersistence>
+          <resourceType>gate.corpora.DocumentImpl</resourceType>
+          <resourceName>Epi_Let3.docx_00017</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>encoding</string>
+                <string>windows-1252</string>
+              </entry>
+              <entry>
+                <string>sourceUrl</string>
+                <gate.util.persistence.PersistenceManager-URLHolder>
+                  <urlString>$relpath$../../letters/10_letters/Epi_Let3.docx</urlString>
+                </gate.util.persistence.PersistenceManager-URLHolder>
+              </entry>
+              <entry>
+                <string>stringContent</string>
+                <string></string>
+              </entry>
+            </localMap>
+          </initParams>
+        </gate.util.persistence.LRPersistence>
+        <gate.util.persistence.LRPersistence>
+          <resourceType>gate.corpora.DocumentImpl</resourceType>
+          <resourceName>Epi_Let4.docx_00018</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>encoding</string>
+                <string>windows-1252</string>
+              </entry>
+              <entry>
+                <string>sourceUrl</string>
+                <gate.util.persistence.PersistenceManager-URLHolder>
+                  <urlString>$relpath$../../letters/10_letters/Epi_Let4.docx</urlString>
+                </gate.util.persistence.PersistenceManager-URLHolder>
+              </entry>
+              <entry>
+                <string>stringContent</string>
+                <string></string>
+              </entry>
+            </localMap>
+          </initParams>
+        </gate.util.persistence.LRPersistence>
+        <gate.util.persistence.LRPersistence>
+          <resourceType>gate.corpora.DocumentImpl</resourceType>
+          <resourceName>Epi_Let5.docx_00019</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>encoding</string>
+                <string>windows-1252</string>
+              </entry>
+              <entry>
+                <string>sourceUrl</string>
+                <gate.util.persistence.PersistenceManager-URLHolder>
+                  <urlString>$relpath$../../letters/10_letters/Epi_Let5.docx</urlString>
+                </gate.util.persistence.PersistenceManager-URLHolder>
+              </entry>
+              <entry>
+                <string>stringContent</string>
+                <string></string>
+              </entry>
+            </localMap>
+          </initParams>
+        </gate.util.persistence.LRPersistence>
+        <gate.util.persistence.LRPersistence>
+          <resourceType>gate.corpora.DocumentImpl</resourceType>
+          <resourceName>Epi_Let6.docx_0001A</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>encoding</string>
+                <string>windows-1252</string>
+              </entry>
+              <entry>
+                <string>sourceUrl</string>
+                <gate.util.persistence.PersistenceManager-URLHolder>
+                  <urlString>$relpath$../../letters/10_letters/Epi_Let6.docx</urlString>
+                </gate.util.persistence.PersistenceManager-URLHolder>
+              </entry>
+              <entry>
+                <string>stringContent</string>
+                <string></string>
+              </entry>
+            </localMap>
+          </initParams>
+        </gate.util.persistence.LRPersistence>
+        <gate.util.persistence.LRPersistence>
+          <resourceType>gate.corpora.DocumentImpl</resourceType>
+          <resourceName>Epi_Let7.docx_0001B</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>encoding</string>
+                <string>windows-1252</string>
+              </entry>
+              <entry>
+                <string>sourceUrl</string>
+                <gate.util.persistence.PersistenceManager-URLHolder>
+                  <urlString>$relpath$../../letters/10_letters/Epi_Let7.docx</urlString>
+                </gate.util.persistence.PersistenceManager-URLHolder>
+              </entry>
+              <entry>
+                <string>stringContent</string>
+                <string></string>
+              </entry>
+            </localMap>
+          </initParams>
+        </gate.util.persistence.LRPersistence>
+        <gate.util.persistence.LRPersistence>
+          <resourceType>gate.corpora.DocumentImpl</resourceType>
+          <resourceName>Epi_Let8.docx_0001C</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>encoding</string>
+                <string>windows-1252</string>
+              </entry>
+              <entry>
+                <string>sourceUrl</string>
+                <gate.util.persistence.PersistenceManager-URLHolder>
+                  <urlString>$relpath$../../letters/10_letters/Epi_Let8.docx</urlString>
+                </gate.util.persistence.PersistenceManager-URLHolder>
+              </entry>
+              <entry>
+                <string>stringContent</string>
+                <string></string>
+              </entry>
+            </localMap>
+          </initParams>
+        </gate.util.persistence.LRPersistence>
+        <gate.util.persistence.LRPersistence>
+          <resourceType>gate.corpora.DocumentImpl</resourceType>
+          <resourceName>Epi_Let9.docx_0001D</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>encoding</string>
+                <string>windows-1252</string>
+              </entry>
+              <entry>
+                <string>sourceUrl</string>
+                <gate.util.persistence.PersistenceManager-URLHolder>
+                  <urlString>$relpath$../../letters/10_letters/Epi_Let9.docx</urlString>
                 </gate.util.persistence.PersistenceManager-URLHolder>
               </entry>
               <entry>
@@ -82,7 +289,7 @@
         </gate.util.persistence.LRPersistence>
       </docList>
       <resourceType>gate.corpora.CorpusImpl</resourceType>
-      <resourceName>test3</resourceName>
+      <resourceName>test2</resourceName>
       <initParams class="gate.util.persistence.MapPersistence">
         <mapType>gate.util.SimpleFeatureMapImpl</mapType>
         <localMap/>
@@ -230,12 +437,12 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>annotationSetName</string>
-                  <string></string>
-                </entry>
-                <entry>
                   <string>allowWithinWords</string>
                   <boolean>true</boolean>
+                </entry>
+                <entry>
+                  <string>annotationSetName</string>
+                  <string></string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -949,152 +1156,17 @@
               </localMap>
             </runtimeParams>
             <resourceType>gate.creole.Transducer</resourceType>
-            <resourceName>JAPE:Onset</resourceName>
+            <resourceName>JAPE:PatientHistory</resourceName>
             <initParams class="gate.util.persistence.MapPersistence">
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
                   <string>grammarURL</string>
                   <gate.util.persistence.PersistenceManager-RRPersistence>
-                    <uriString>$relpath$jape/onset.jape</uriString>
+                    <uriString>$relpath$jape/PatientHistory.jape</uriString>
                   </gate.util.persistence.PersistenceManager-RRPersistence>
                 </entry>
               </localMap>
-            </initParams>
-            <features class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap/>
-            </features>
-          </pr>
-        </gate.util.persistence.AnalyserRunningStrategyPersistence>
-        <gate.util.persistence.AnalyserRunningStrategyPersistence>
-          <runMode>1</runMode>
-          <featureName></featureName>
-          <featureValue></featureValue>
-          <pr class="gate.util.persistence.LanguageAnalyserPersistence">
-            <runtimeParams class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap>
-                <entry>
-                  <string>outputASName</string>
-                  <string>Bio</string>
-                </entry>
-                <entry>
-                  <string>inputASName</string>
-                  <string>Bio</string>
-                </entry>
-              </localMap>
-            </runtimeParams>
-            <resourceType>gate.creole.Transducer</resourceType>
-            <resourceName>JAPE:Comorbidities</resourceName>
-            <initParams class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap>
-                <entry>
-                  <string>grammarURL</string>
-                  <gate.util.persistence.PersistenceManager-RRPersistence>
-                    <uriString>$relpath$jape/Comorbidities.jape</uriString>
-                  </gate.util.persistence.PersistenceManager-RRPersistence>
-                </entry>
-              </localMap>
-            </initParams>
-            <features class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap/>
-            </features>
-          </pr>
-        </gate.util.persistence.AnalyserRunningStrategyPersistence>
-        <gate.util.persistence.AnalyserRunningStrategyPersistence>
-          <runMode>1</runMode>
-          <featureName></featureName>
-          <featureValue></featureValue>
-          <pr class="gate.util.persistence.LanguageAnalyserPersistence">
-            <runtimeParams class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap>
-                <entry>
-                  <string>tagASName</string>
-                  <string>Original markups</string>
-                </entry>
-                <entry>
-                  <string>outputASName</string>
-                  <string>EpilepsyOnset</string>
-                </entry>
-                <entry>
-                  <string>annotationTypes</string>
-                  <gate.util.persistence.CollectionPersistence>
-                    <localList>
-                      <string>AgeDiagnosed</string>
-                      <string>OnsetAgeRange</string>
-                      <string>OnsetDate</string>
-                      <string>DateDiagnosed</string>
-                      <string>OnsetAge</string>
-                      <string>TimeSinceOnset</string>
-                      <string>AgeDiagnosedRange</string>
-                      <string>TimeSinceDiagnosis</string>
-                      <string>DateDiagnosed2</string>
-                      <string>Onset</string>
-                    </localList>
-                    <collectionType>java.util.Arrays$ArrayList</collectionType>
-                  </gate.util.persistence.CollectionPersistence>
-                </entry>
-                <entry>
-                  <string>inputASName</string>
-                  <string>Bio</string>
-                </entry>
-              </localMap>
-            </runtimeParams>
-            <resourceType>gate.creole.annotransfer.AnnotationSetTransfer</resourceType>
-            <resourceName>EpilepsyOnset</resourceName>
-            <initParams class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap/>
-            </initParams>
-            <features class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap/>
-            </features>
-          </pr>
-        </gate.util.persistence.AnalyserRunningStrategyPersistence>
-        <gate.util.persistence.AnalyserRunningStrategyPersistence>
-          <runMode>1</runMode>
-          <featureName></featureName>
-          <featureValue></featureValue>
-          <pr class="gate.util.persistence.LanguageAnalyserPersistence">
-            <runtimeParams class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap>
-                <entry>
-                  <string>tagASName</string>
-                  <string>Original markups</string>
-                </entry>
-                <entry>
-                  <string>outputASName</string>
-                  <string>Patient History and Comorbidities</string>
-                </entry>
-                <entry>
-                  <string>annotationTypes</string>
-                  <gate.util.persistence.CollectionPersistence>
-                    <localList>
-                      <string>OtherDiagnosis</string>
-                      <string>PatientHistory</string>
-                      <string>BirthHistory</string>
-                      <string>FebrileSeizures</string>
-                    </localList>
-                    <collectionType>java.util.ArrayList</collectionType>
-                  </gate.util.persistence.CollectionPersistence>
-                </entry>
-                <entry>
-                  <string>inputASName</string>
-                  <string>Bio</string>
-                </entry>
-              </localMap>
-            </runtimeParams>
-            <resourceType>gate.creole.annotransfer.AnnotationSetTransfer</resourceType>
-            <resourceName>Comorbidities</resourceName>
-            <initParams class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap/>
             </initParams>
             <features class="gate.util.persistence.MapPersistence">
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
@@ -1132,6 +1204,185 @@
                   </gate.util.persistence.PersistenceManager-RRPersistence>
                 </entry>
               </localMap>
+            </initParams>
+            <features class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap/>
+            </features>
+          </pr>
+        </gate.util.persistence.AnalyserRunningStrategyPersistence>
+        <gate.util.persistence.AnalyserRunningStrategyPersistence>
+          <runMode>1</runMode>
+          <featureName></featureName>
+          <featureValue></featureValue>
+          <pr class="gate.util.persistence.LanguageAnalyserPersistence">
+            <runtimeParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap>
+                <entry>
+                  <string>outputASName</string>
+                  <string>Bio</string>
+                </entry>
+                <entry>
+                  <string>inputASName</string>
+                  <string>Bio</string>
+                </entry>
+              </localMap>
+            </runtimeParams>
+            <resourceType>gate.creole.Transducer</resourceType>
+            <resourceName>JAPE:Onset</resourceName>
+            <initParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap>
+                <entry>
+                  <string>grammarURL</string>
+                  <gate.util.persistence.PersistenceManager-RRPersistence>
+                    <uriString>$relpath$jape/onset.jape</uriString>
+                  </gate.util.persistence.PersistenceManager-RRPersistence>
+                </entry>
+              </localMap>
+            </initParams>
+            <features class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap/>
+            </features>
+          </pr>
+        </gate.util.persistence.AnalyserRunningStrategyPersistence>
+        <gate.util.persistence.AnalyserRunningStrategyPersistence>
+          <runMode>1</runMode>
+          <featureName></featureName>
+          <featureValue></featureValue>
+          <pr class="gate.util.persistence.LanguageAnalyserPersistence">
+            <runtimeParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap>
+                <entry>
+                  <string>tagASName</string>
+                  <string>Original markups</string>
+                </entry>
+                <entry>
+                  <string>outputASName</string>
+                  <string>Patient History and Comorbidities</string>
+                </entry>
+                <entry>
+                  <string>annotationTypes</string>
+                  <gate.util.persistence.CollectionPersistence>
+                    <localList>
+                      <string>PatientHistory</string>
+                      <string>BirthHistory</string>
+                      <string>FebrileSeizures</string>
+                    </localList>
+                    <collectionType>java.util.ArrayList</collectionType>
+                  </gate.util.persistence.CollectionPersistence>
+                </entry>
+                <entry>
+                  <string>inputASName</string>
+                  <string>Bio</string>
+                </entry>
+              </localMap>
+            </runtimeParams>
+            <resourceType>gate.creole.annotransfer.AnnotationSetTransfer</resourceType>
+            <resourceName>PatientHistory</resourceName>
+            <initParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap/>
+            </initParams>
+            <features class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap/>
+            </features>
+          </pr>
+        </gate.util.persistence.AnalyserRunningStrategyPersistence>
+        <gate.util.persistence.AnalyserRunningStrategyPersistence>
+          <runMode>1</runMode>
+          <featureName></featureName>
+          <featureValue></featureValue>
+          <pr class="gate.util.persistence.LanguageAnalyserPersistence">
+            <runtimeParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap>
+                <entry>
+                  <string>tagASName</string>
+                  <string>Original markups</string>
+                </entry>
+                <entry>
+                  <string>outputASName</string>
+                  <string>EpilepsyCause</string>
+                </entry>
+                <entry>
+                  <string>annotationTypes</string>
+                  <gate.util.persistence.CollectionPersistence>
+                    <localList>
+                      <string>EpilepsyCause</string>
+                      <string>Symptomatic</string>
+                    </localList>
+                    <collectionType>java.util.Arrays$ArrayList</collectionType>
+                  </gate.util.persistence.CollectionPersistence>
+                </entry>
+                <entry>
+                  <string>inputASName</string>
+                  <string>Bio</string>
+                </entry>
+              </localMap>
+            </runtimeParams>
+            <resourceType>gate.creole.annotransfer.AnnotationSetTransfer</resourceType>
+            <resourceName>EpilepsyCause</resourceName>
+            <initParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap/>
+            </initParams>
+            <features class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap/>
+            </features>
+          </pr>
+        </gate.util.persistence.AnalyserRunningStrategyPersistence>
+        <gate.util.persistence.AnalyserRunningStrategyPersistence>
+          <runMode>1</runMode>
+          <featureName></featureName>
+          <featureValue></featureValue>
+          <pr class="gate.util.persistence.LanguageAnalyserPersistence">
+            <runtimeParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap>
+                <entry>
+                  <string>tagASName</string>
+                  <string>Original markups</string>
+                </entry>
+                <entry>
+                  <string>outputASName</string>
+                  <string>EpilepsyOnset</string>
+                </entry>
+                <entry>
+                  <string>annotationTypes</string>
+                  <gate.util.persistence.CollectionPersistence>
+                    <localList>
+                      <string>AgeDiagnosed</string>
+                      <string>OnsetAgeRange</string>
+                      <string>OnsetDate</string>
+                      <string>DateDiagnosed</string>
+                      <string>OnsetAge</string>
+                      <string>TimeSinceOnset</string>
+                      <string>AgeDiagnosedRange</string>
+                      <string>TimeSinceDiagnosis</string>
+                      <string>DateDiagnosed2</string>
+                      <string>Onset</string>
+                      <string>WhenDiagnosed</string>
+                    </localList>
+                    <collectionType>java.util.ArrayList</collectionType>
+                  </gate.util.persistence.CollectionPersistence>
+                </entry>
+                <entry>
+                  <string>inputASName</string>
+                  <string>Bio</string>
+                </entry>
+              </localMap>
+            </runtimeParams>
+            <resourceType>gate.creole.annotransfer.AnnotationSetTransfer</resourceType>
+            <resourceName>EpilepsyOnset</resourceName>
+            <initParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap/>
             </initParams>
             <features class="gate.util.persistence.MapPersistence">
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
@@ -1223,6 +1474,7 @@
         <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[29]/pr"/>
         <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[30]/pr"/>
         <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[31]/pr"/>
+        <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[32]/pr"/>
       </localList>
       <collectionType>java.util.ArrayList</collectionType>
     </prList>

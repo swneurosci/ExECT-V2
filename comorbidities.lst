@@ -639,7 +639,6 @@ glioma	CUI=C0017638	PREF=glioma	TUI=T191	STY=Neoplastic Process
 glioma (disorder)	CUI=C0017638	PREF=glioma (disorder)	TUI=T191	STY=Neoplastic Process
 glioma (morphologic abnormality)	CUI=C0017638	PREF=glioma (morphologic abnormality)	TUI=T191	STY=Neoplastic Process
 glioma of brain	CUI=C3665419	PREF=glioma of brain	TUI=T191	STY=Neoplastic Process
-glioma, nos	CUI=C0017638	PREF=glioma, nos	TUI=T191	STY=Neoplastic Process
 gliomas	CUI=C0017638	PREF=gliomas	TUI=T191	STY=Neoplastic Process
 glioneuronal tumor	CUI=C2363902	PREF=glioneuronal tumor	TUI=T191	STY=Neoplastic Process
 gorham dis	CUI=C0029438	PREF=gorham dis	TUI=T047	STY=Disease or Syndrome
@@ -1261,6 +1260,7 @@ Unspecified brain damage due to birth injury	CUI=C1536522	PREF=Unspecified brain
 brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	STY=Injury or Poisoning
 traumatic brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	STY=Injury or Poisoning
 hippocampal sclerosis	CUI=C1504404	PREF=Hippocampal sclerosis	TUI=T047	STY=Disease or Syndrome
+mesial temporal lobe sclerosis	CUI=C3164863	PREF=mesial temporal lobe sclerosis	TUI=T047	STY=Disease or Syndrome
 cortical dysplasia	CUI=C0431380	PREF=Cortical Dysplasia	TUI=T019	STY=Congenital Abnormality
 Respiratory distress in neonatal period	CUI=C1850092	PREF=Respiratory distress in neonatal period	TUI=T033	STY=Finding
 birth asphyxia	CUI=C0004045	PREF=Birth asphyxia	TUI=T047	STY=Disease or Syndrome
@@ -1347,4 +1347,17 @@ special care baby unit	CUI=C0583275	PREF=Admission to special care baby unit	TUI
 gliosis	CUI=C0017639	PREF=gliosis	TUI=T046	STY=Pathologic Function
 obsessive compulsive disorder	CUI=C0028768	PREF=Obsessive-Compulsive Disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
 obsessive-compulsive disorder	CUI=C0028768	PREF=Obsessive-Compulsive Disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
-craniotomy	CUI=C0010280	FREF=craniotomy	TUI=T061	STY=Therapeutic or Preventive Procedure	
+craniotomy	CUI=C0010280	PREF=craniotomy	TUI=T061	STY=Therapeutic or Preventive Procedure	
+removal of intracranial tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061	STY=Therapeutic or Preventive Procedure	
+removal of brain tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061	STY=Therapeutic or Preventive Procedure	
+brain tumour operation	CUI=C1096120	PREF=Brain tumor operstion	TUI=T061	STY=Therapeutic or Preventive Procedure
+astrocytoma surgery	CUI=C1096492	PREF=Astrocytoma surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
+meningioma surgery CUI=C1096493	PREF=Meningioma surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
+astrocytoma of brain	CUI=C3695127	PREF=Astrocytoma of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
+brain astrocytoma	CUI=C3695127	PREF=Astrocytoma of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
+right hemiplegia	CUI=C0457433	PREF=Right hemiplegia	TUI=T033	STY=Finding
+right-sided hemiplegia	CUI=C0457433	PREF=Right hemiplegia	TUI=T033	STY=Finding
+right sided hemiplegia	CUI=C0457433	PREF=Right hemiplegia	TUI=T033	STY=Finding
+left hemiplegia	CUI=C0457434	PREF=Left hemiplegia	TUI=T033	STY=Finding
+left-sided hemiplegia	CUI=C0457434	PREF=Left hemiplegia	TUI=T033	STY=Finding
+left sided hemiplegia	CUI=C0457434	PREF=Left hemiplegia	TUI=T033	STY=Finding

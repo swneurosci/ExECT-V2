@@ -1,4 +1,4 @@
-Phase: PatientHistoryB
+Phase: PatientHistB
 Input: Lookup3 Lookup2 Person Numeric Sentence timeElapsed timePeriod Range 
 
 
@@ -59,15 +59,15 @@ Priority: 100
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty, 
+TimePeriod =:match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value,
+/*PointInTime = "",
 YearDate = "",
 MonthDate = "",
 Age = "",
 AgeUnit = "",
 AgeLower = "",
-AgeUpper = "",
-TimePeriod =:match.timePeriod.time-unit,
-NumberOfTimePeriods =:match.Numeric.value,
-PointInTime = ""}
+AgeUpper = "",*/}
 
 
 Rule: PtHistoryB3   
@@ -94,9 +94,9 @@ Age = "",
 AgeUnit = "Year",
 AgeLower =:match.Range.N1,
 AgeUpper =:match.Range.N2,
-TimePeriod = "",
+/*TimePeriod = "",
 NumberOfTimePeriods = "",
-PointInTime = ""} 
+PointInTime = ""*/} 
 
 
 
@@ -120,6 +120,7 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty, 
 YearDate = :match.Numeric.value,
+/*
 MonthDate = "",
 Age = "",
 AgeUnit = "",
@@ -127,7 +128,9 @@ AgeLower = "",
 AgeUpper = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
-PointInTime = ""}
+PointInTime = ""
+*/
+}
 
 
 Rule: PtHistoryB5   
@@ -147,7 +150,7 @@ Priority: 100
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty, 
-YearDate = "",
+/*YearDate = "",
 MonthDate = "",
 Age = "",
 AgeUnit = "",
@@ -155,7 +158,7 @@ AgeLower ="",
 AgeUpper ="",
 TimePeriod = "",
 NumberOfTimePeriods = "",
-PointInTime = ""} 
+PointInTime = ""*/} 
 
 
 
@@ -179,11 +182,12 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty, 
 YearDate = :match.Numeric.value,
-MonthDate = "",
+/*MonthDate = "",
 Age = "",
 AgeUnit ="",
 AgeLower = "", 
 AgeUpper = "",
 TimePeriod = "",
 NumberOfTimePeriods = "",
-PointInTime = ""}
+PointInTime = ""*/}
+

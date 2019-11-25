@@ -15,7 +15,7 @@ Priority: 100
     
  ):match  
  -->
-:item.OtherDiagnosis = {rule = OtherDiagList1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = OtherDiagList1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
@@ -35,7 +35,7 @@ Priority: 90
     
  ):match  
  -->
-:item.OtherDiagnosis = {rule = OtherDiagList2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = OtherDiagList2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
@@ -53,7 +53,7 @@ Priority: 90
     
  ):match  
  -->
-:item.OtherDiagnosis = {rule = OtherDiagList3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = OtherDiagList3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
@@ -73,7 +73,7 @@ Priority: 90
     
  ):match  
  -->
-:item.OtherDiagnosis = {rule = OtherDiagList4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = OtherDiagList4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
@@ -95,7 +95,7 @@ Priority: 90
     
  ):match  
  -->
-:item.OtherDiagnosis = {rule = OtherDiagList5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = OtherDiagList5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
@@ -117,7 +117,23 @@ Priority: 99
     
  ):match  
  -->
-:item.OtherDiagnosis = {rule = OtherDiagList5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = OtherDiagList5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: OtherDiagList6
+Priority: 90
+
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+	{listPoint}
+	{Lookup3}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagList6, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}

@@ -1,0 +1,28 @@
+Phase: EpiCause3
+Input: PatientHistory Lookup3 Lookup2
+
+
+  /*These rules are set to select causes and suspected causes of epilepsy, the UMLS CUI that is returned relates to the cause, 
+  rather than a CUI associated with the type of epilepsy i.e.  if there is a CUI for a specific type of 
+  symptomatic epilepsy (STY = Disease or syndrome) it would be annotated in Diagnosis.  Epilepsies
+    with STY = "injury or poisoning" may have their own CUI and they would be annotated by Symptomatic*/
+
+  
+
+Options: control=Brill
+
+
+
+Rule: Cause3a
+Priority: 100
+
+(   
+	({PatientHistory}):item
+	{Lookup2.minorType == causality}
+    ({Lookup} | {Lookup3})
+ ):match  
+ -->
+:item.EpilepsyCause = {rule = Cause3a, PREF = :item.PatientHistory.PREF, CUI = :item.PatientHistory.CUI, 
+STY = :item.PatientHistory.STY, Negation = :item.PatientHistory.Negation,
+Experiencer = :item.PatientHistory.Experiencer, Temporality = :item.PatientHistory.Temporality, 
+Certainty = :item.PatientHistory.Certainty}

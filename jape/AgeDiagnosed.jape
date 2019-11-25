@@ -24,7 +24,7 @@ Priority: 99
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
-DateYear = "",
+/*DateYear = "",
 DateMonth ="",
 DateDay = "",
 PointInTime = "",
@@ -35,7 +35,7 @@ UpperNumberOfTimePeriods = "",
 AgeUnit = "",
 AgeLower ="",
 AgeUpper = "",
-Age = ""}
+Age = ""*/}
 
 
 
@@ -56,14 +56,14 @@ Priority: 99
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
-DateYear = "",
+/*DateYear = "",
 DateMonth ="",
 DateDay = "",
 PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
 LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = "",
+UpperNumberOfTimePeriods = "",*/
 AgeUnit = :match.Lookup2.timeUnit,
 AgeLower =:match.Lookup2.lowerAge,
 AgeUpper = :match.Lookup2.upperAge,
@@ -86,7 +86,7 @@ Priority: 99
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
-DateYear = "",
+/*DateYear = "",
 DateMonth ="",
 DateDay = "",
 PointInTime = "",
@@ -94,9 +94,9 @@ TimePeriod = "",
 NumberOfTimePeriods ="",
 LowerNumberOfTimePeriods = "",
 UpperNumberOfTimePeriods = "",
-AgeUnit ="Year",
 AgeLower ="",
-AgeUpper = "",
+AgeUpper = "",*/
+AgeUnit ="Year",
 Age =  :match.Numeric.value}
 
 

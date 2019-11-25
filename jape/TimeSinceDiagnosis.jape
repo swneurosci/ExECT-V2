@@ -11,17 +11,17 @@ Priority: 99
     {Person}
 	({Lookup2.language == onset})?
     {DiagnosisTriggers.majorType == diagnosis}
-	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
 	{timeElapsed}
 	{Numeric} 
     {timePeriod}
 	
  ):match  
  -->
-:match.WhenDiagnosed = {rule = TimeSinceDiagnosis1 , OnsetType = "time_since_diagnosis",
-PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
-STY = :match.Lookup.STY, 
-Certainty = :match.Lookup.Certainty,
+:item.WhenDiagnosed = {rule = TimeSinceDiagnosis1 , OnsetType = "time_since_diagnosis",
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value}
 
@@ -37,16 +37,17 @@ Priority: 99
 	{timePeriod}
 	{timeElapsed}
 	({Lookup2.minorType == causality})?
-	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
 	
 	
  ):match  
  -->
-:match.WhenDiagnosed = {rule = TimeSinceDiagnosis2 , OnsetType = "time_since_diagnosis",
-PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
-STY = :match.Lookup.STY, 
-Certainty = :match.Lookup.Certainty,
+:item.WhenDiagnosed = {rule = TimeSinceDiagnosis2 , OnsetType = "time_since_diagnosis",
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value}
+
 
 

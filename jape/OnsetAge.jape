@@ -8,7 +8,8 @@ Priority: 99
 
 (   
 	{Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.CAT == seizures}):item
+	(({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.CAT == seizures})|
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.minorType == Disease})):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	{Person.majorType == person}
 	({Lookup2.majorType == historic})?
@@ -25,7 +26,7 @@ STY = :item.Lookup3.STY,
 Certainty = :item.Lookup3.Certainty,
 AgeUnit = :match.timePeriod.time-unit,
 Age =:match.Numeric.value,
-AgeLower = "",
+/*AgeLower = "",
 AgeUpper = "",
 DateYear = "",
 DateMonth ="",
@@ -34,15 +35,15 @@ PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
 LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""}
+UpperNumberOfTimePeriods = ""*/}
 
 Rule: onsetAge2
 Priority: 98
 
 (   
 	{Person}
-	(({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,Lookup3.CAT == seizures}
-	|{Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,Lookup3.minorType == Disease}) ):item
+	(({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,Lookup3.CAT == seizures})|
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,Lookup3.minorType == Disease})):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	{Person.majorType == person}
 	{Lookup2.majorType == historic}
@@ -58,7 +59,7 @@ STY = :item.Lookup3.STY,
 Certainty = :item.Lookup3.Certainty,
 AgeUnit = "Year",
 Age =:match.Numeric.value,
-AgeLower = "",
+/*AgeLower = "",
 AgeUpper = "",
 AgeLower = "",
 AgeUpper = "",
@@ -69,7 +70,7 @@ PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
 LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""}
+UpperNumberOfTimePeriods = ""*/}
 
  Rule: onsetAge3
 Priority: 98
@@ -90,8 +91,8 @@ STY = :item.Lookup3.STY,
 Certainty = :item.Lookup3.Certainty,
 AgeUnit = :match.timePeriod.time-unit,
 Age =:match.Numeric.value,
-AgeLower = "",
-AgeUpper = ""}
+/*AgeLower = "",
+AgeUpper = ""*/}
  
 
 Rule: onsetAge4
@@ -99,7 +100,8 @@ Priority: 9
 
 (   
 	{Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.CAT == Seizures}):item
+	(({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.CAT == Seizures})|
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,Lookup3.minorType == Disease})):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	{History.majorType == person}
 	{Range}
@@ -113,7 +115,7 @@ STY = :item.Lookup3.STY,
 Certainty = :item.Lookup3.Certainty,
 AgeUnit = "Year",
 Age = :match.Range.value,
-AgeLower = "",
+/*AgeLower = "",
 AgeUpper = "",
 DateYear = "",
 DateMonth ="",
@@ -122,7 +124,7 @@ PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
 LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""}
+UpperNumberOfTimePeriods = ""*/}
  
 Rule: onsetAge5
 Priority: 98
@@ -132,20 +134,21 @@ Priority: 98
 	({Lookup2.minorType == probability})
 	({Lookup2.majorType == historic, Lookup2.minorType == symptoms})?
 	({Lookup2})?
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.CAT == Seizures}):item
+	(({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.CAT == Seizures})|
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,Lookup3.minorType == Disease})):item
 	{History.majorType == person}
 	{Numeric}
 	
 	
  ):match  
  -->
-:match.Onset = {rule = onsetAge5, OnsetType = "age_episodes_started", 
+:item.Onset = {rule = onsetAge5, OnsetType = "age_episodes_started", 
 PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :item.Lookup3.Certainty,
 AgeUnit = "Year",
 Age =:match.Numeric.value,
-AgeLower = "",
+/*AgeLower = "",
 AgeUpper = "",
 DateYear = "",
 DateMonth ="",
@@ -154,7 +157,7 @@ PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
 LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""}
+UpperNumberOfTimePeriods = ""*/}
 
 Rule: onsetAge6
 Priority: 98
@@ -163,12 +166,11 @@ Priority: 98
 	{Person}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed }):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
-	({Person})?
-	{Lookup2}
+	({Person})
+	({Lookup2})?
 	{Numeric}
 	{timePeriod}
-	
-	
+		
 	
  ):match  
  -->
@@ -177,8 +179,8 @@ PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 AgeUnit = :match.timePeriod.time-unit,
-Age =:match.Numeric.value,
-AgeLower = "",
+Age =:match.Numeric.value
+/*AgeLower = "",
 AgeUpper = "",
 DateYear = "",
 DateMonth ="",
@@ -187,12 +189,12 @@ PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
 LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""}
+UpperNumberOfTimePeriods = ""*/}
 
  
 
 
-Rule: onsetAge8
+Rule: onsetAge7
 Priority: 98
 
 (   
@@ -208,13 +210,13 @@ Priority: 98
 	
  ):match  
  -->
-:item.Onset = {rule = onsetAge8, OnsetType = "age_episodes_started", 
+:item.Onset = {rule = onsetAge7, OnsetType = "age_episodes_started", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 AgeUnit = :match.timePeriod.time-unit,
 Age =:match.Numeric.value,
-AgeLower = "",
+/*AgeLower = "",
 AgeUpper = "",
 DateYear = "",
 DateMonth ="",
@@ -223,9 +225,9 @@ PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
 LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""}
+UpperNumberOfTimePeriods = ""*/}
 
-Rule: onsetAge9
+Rule: onsetAge8
 Priority: 99
 
 (   
@@ -239,13 +241,13 @@ Priority: 99
 	
  ):match  
  -->
-:item.Onset = {rule = onsetAge9, OnsetType = "age_episodes_started", 
+:item.Onset = {rule = onsetAge8, OnsetType = "age_episodes_started", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 AgeUnit = "Year",
 Age =:match.Numeric.value,
-AgeLower = "",
+/*AgeLower = "",
 AgeUpper = "",
 DateYear = "",
 DateMonth ="",
@@ -254,14 +256,15 @@ PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
 LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""}
+UpperNumberOfTimePeriods = ""*/}
  
-Rule: onsetAge10
+Rule: onsetAge9
 Priority: 99
 
 (   
 	{Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.CAT == Seizures}):item
+	(({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.CAT == Seizures})|
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,Lookup3.minorType == Disease})):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	({timeElapsed})
 	({Numeric})
@@ -272,13 +275,13 @@ Priority: 99
 	
  ):match  
  -->
-:item.Onset = {rule = onsetAge10, OnsetType = "age_episodes_started", 
+:item.Onset = {rule = onsetAge9, OnsetType = "age_episodes_started", 
 PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :item.Lookup3.Certainty,
 AgeUnit = "Year",
 Age =:a.Numeric.value,
-AgeLower = "",
+/*AgeLower = "",
 AgeUpper = "",
 DateYear = "",
 DateMonth ="",
@@ -287,8 +290,32 @@ PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
 LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""}
+UpperNumberOfTimePeriods = ""*/}
  
  
- 
+ Rule: onsetAge10
+Priority: 98
+
+(   
+	{Person}
+	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
+	{Lookup3}
+	{History.majorType == person}
+	{Numeric}
+	{timePeriod}
+	{Lookup2.language == onset}
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.minorType == Disease}):item
+
+	
+	
+ ):match  
+ -->
+:item.Onset= {rule = onsetAge10, OnsetType = "age_episodes_started", 
+PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+STY = :item.Lookup3.STY, 
+Certainty = :item.Lookup3.Certainty,
+AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value,
+/*AgeLower = "",
+AgeUpper = ""*/}
 

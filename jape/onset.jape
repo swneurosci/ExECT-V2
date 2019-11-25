@@ -6,12 +6,14 @@ YearToMonths
 OnsetAgeRange
 TimeSinceOnset
 TimeSinceOnsetB
+/*TimeSinceOnsetC*/
 TimeSinceOnsetRange
 OnsetAgeA
 OnsetAge
 OnsetAgeB
 OnsetDate
+OnsetDateB
 AgeDiagnosed
 DateDiagnosed
-DateDiagnosed2
+DateDiagnosedB
 TimeSinceDiagnosis

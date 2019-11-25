@@ -8,7 +8,7 @@ began:type=began
 onset:type=began
 suffered:type=suffered
 has had:type=suffered
-experienced:type==suffered
+experienced:type=suffered
 diagnosed:type=diagnosed
 first:type=began
 suffering:type=suffered

@@ -964,7 +964,7 @@ focal epilepsy	CUI=C0014547	PREF=focal epilepsy	TUI=T047	STY=Disease or Syndrome
 partial seizure dis motor	CUI=C0016399	PREF=partial seizure dis motor	TUI=T047	STY=Disease or Syndrome
 focal seizures	CUI=C0751495	PREF=partial seizure	TUI=T047	STY=Disease or Syndrome
 focal sensory seizures	CUI=C0544645	PREF=focal sensory seizure	TUI=T047	STY=Disease or Syndrome
-sensory seizures	CUI=C0544645	PREF=focal sensory seizure	TUI=T047	STY=Disease or Syndrome 	
+sensory seizures	CUI=C0544645	PREF=focal sensory seizure	TUI=T047	STY=Disease or Syndrome
 partial seizure disorder, motor	CUI=C0016399	PREF=partial seizure disorder, motor	TUI=T047	STY=Disease or Syndrome
 partial seizure disorders	CUI=C0014547	PREF=partial seizure disorders	TUI=T047	STY=Disease or Syndrome
 partial seizure evolving to secondary generalised seizure	CUI=C0474327	PREF=partial seizure evolving to secondary generalised seizure	TUI=T046	STY=Pathologic Function

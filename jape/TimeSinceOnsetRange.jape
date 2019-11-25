@@ -9,7 +9,7 @@ Priority: 100
 
 (   
     
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient}):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient , Lookup3.CAT == seizures}):item
 	{Split}
 	{Person}
     ({Person})?
@@ -19,7 +19,7 @@ Priority: 100
     {timePeriod}
  ):match  
  -->
-:item.TimeSinceOnset = {rule = seizuresForRange1 , OnsetType = "time_since_episodes_started",
+:item.Onset = {rule = seizuresForRange1 , OnsetType = "time_since_episodes_started",
 PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :item.Lookup3.Certainty,
@@ -35,14 +35,14 @@ Priority: 99
 (   
 
 	{Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient}):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient , Lookup3.CAT == seizures }):item
 	{Lookup2.language == onset}
 	{Range}
     {timePeriod}
     {timeElapsed.time == since}
  ):match  
  -->
-:item.TimeSinceOnset = {rule = seizuresForRange2 , OnsetType = "time_since_episodes_started",
+:item.Onset = {rule = seizuresForRange2 , OnsetType = "time_since_episodes_started",
 PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :item.Lookup3.Certainty,
