@@ -1,5 +1,5 @@
 Phase: DiagnosisfromSeziure
-Input:  Person Sentence Lookup
+Input:  Person Sentence Lookup Investigation
 Options: control=appelt
 
 Rule: DiagnosisFromSeizure2a
@@ -13,7 +13,7 @@ Priority: 100
 
 ):match1
 -->
-:match.Diagnosis = {rule = DiagFromSeizure2a, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
+:match.DiagnosisA = {rule = DiagFromSeizure2a, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
 
 
 Rule: DiagnosisFromSeizure2b
@@ -28,7 +28,7 @@ Priority: 99
 
 ):match1
 -->
-:match.Diagnosis = {rule = DiagFromSeizure2b, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
+:match.DiagnosisA = {rule = DiagFromSeizure2b, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
 
 Rule: DiagnosisFromEpilepsyYes2a
 Priority: 100
@@ -41,7 +41,7 @@ Priority: 100
 
 ):match1
 -->
-:match.Diagnosis = {rule = DiagFromEPIYES2a, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
+:match.DiagnosisA = {rule = DiagFromEPIYES2a, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
 
 
 Rule: DiagnosisFromEpilepsyYes2b
@@ -56,4 +56,4 @@ Priority: 99
 
 ):match1
 -->
-:match.Diagnosis = {rule = DiagFromEPIYES2b, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
+:match.DiagnosisA = {rule = DiagFromEPIYES2b, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}

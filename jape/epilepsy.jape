@@ -2,9 +2,9 @@ Multiphase:Epilepsy
 
 Phases:
 
-diagnosis
-Diagnosis2
-/*Lateralisation*/ /* this + symptomatic attibutes are added to diagnosis (Diagnosis1) - for a moment in EpilepsyCause/Symptomatic2 */
+diagnosisA
+DiagnosisB
+/*Lateralisation*/ /* this + symptomatic attributes are added to diagnosis (DiagnosisA) - for a moment in EpilepsyCause/Symptomatic2 */
 SeizFrequency
 SeizureFree
 SeizureFree2

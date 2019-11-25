@@ -107,6 +107,7 @@ Priority: 99
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
 	{listPoint}
+	({Lookup2})?
 	{Lookup3}
 	{listPoint}
 	{Lookup3}

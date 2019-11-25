@@ -9,7 +9,7 @@ Priority: 100
 
 (   
 	{Person}
-	({Lookup3.minorType == Disease , Lookup3.Negation == Affirmed}):item
+	({Lookup3.minorType == Disease ,Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms , Lookup2.type == began}
 	{Age}
 	{Numeric}
@@ -41,7 +41,7 @@ Priority: 100
 
 (   
 	{Person}
-	({Lookup3.minorType == Disease , Lookup3.Negation == Affirmed}):item
+	({Lookup3.minorType == Disease ,Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
 	{Lookup2.language == onset}
 	({Lookup2.minorType == time}):a
 	
@@ -73,7 +73,7 @@ Priority: 100
 
 (   
 	{Person}
-	({Lookup3.minorType == Disease , Lookup3.Negation == Affirmed }):item
+	({Lookup3.minorType == Disease ,Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed }):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms , Lookup2.type == began}
 	{Numeric}
 	{timePeriod}

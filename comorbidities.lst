@@ -76,6 +76,8 @@ pfeiffer singer zschiesche syndrome	CUI=C1857495	PREF=pfeiffer singer zschiesche
 pfeiffer syndrome 2	CUI=C1857495	PREF=pfeiffer syndrome 2	TUI=T047	STY=Disease or Syndrome
 pfeiffer-type cardiocranial syndrome	CUI=C1857495	PREF=pfeiffer-type cardiocranial syndrome	TUI=T047	STY=Disease or Syndrome
 primary parkinsonism	CUI=C0030567	PREF=parkinsonism, primary	TUI=T047	STY=Disease or Syndrome
+parkinsonian disorders	CUI=C0242422	PREF=Parkinsonian Disorders	TUI=T047	STY=Disease or Syndrome
+parkinsonism	CUI=C0242422	PREF=Parkinsonian Disorders	TUI=T047	STY=Disease or Syndrome
 primary senile degenerative dementia	CUI=C0002395	PREF=dementia, primary senile degenerative	TUI=T047	STY=Disease or Syndrome
 primary senile degenerative dementia	CUI=C0002395	PREF=primary senile degenerative dementia	TUI=T047	STY=Disease or Syndrome
 puberty - delayed	CUI=C0034012	PREF=puberty - delayed	TUI=T046	STY=Pathologic Function
