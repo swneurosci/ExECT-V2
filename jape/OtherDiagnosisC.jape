@@ -1,0 +1,25 @@
+Phase: OtherDiagnosisC
+Input: Investigation  Lookup3
+
+
+
+Options: control=brill
+
+
+
+
+
+Rule: OtherDiagC1
+Priority: 100
+
+(   
+
+	{Investigation.Investigation != EEG}
+	({Lookup3.minorType == OtherDisease, Lookup3.majorType == umls}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagC1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
