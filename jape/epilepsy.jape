@@ -23,6 +23,7 @@ SingleSeizureLookup
 DiagfromSeizure
 DiagfromSeizureLookup3
 RemoveSeizure
+DiagnosisFilter
 /*DiseaseCause */ /* this has been replaced by more detailed epilepsy cause rules and Symptomatic attribute to Diagnosis*/
 Lookup2Annotation
 InvestigationsEEG

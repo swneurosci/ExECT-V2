@@ -8,7 +8,7 @@ Rule: PersonSeizureFree1
     ({Lookup3.PREF == "seizure free", Lookup3 notWithin SeizureFree})
 ):match
 -->
-:match.SeizureFree = { rule = PersonSeizureFree1, CUI = :match.Lookup3.CUI, Certainty = "5", Negation = :match.Lookup3.Negation }
+:match.SeizureFrequency = { rule = PersonSeizureFree1, CUI = :match.Lookup3.CUI, Certainty = "5", Negation = :match.Lookup3.Negation }
 
 Rule: PersonSeizureFree2
 (

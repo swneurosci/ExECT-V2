@@ -1,5 +1,5 @@
 Phase: DiagnosisB
-Input:   Lookup2 DiagnosisA
+Input:   Lookup2 DiagnosisA listPoint
 
 
   /*These rules add DiagnosisA when an attribute with another level of certainty follows the diagnosis of epilepsy */ 

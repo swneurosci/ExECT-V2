@@ -1,0 +1,27 @@
+Phase: DiagnosisFilter
+Input:  DiagnosisA DiagnosisB
+Options: control=all
+
+Rule: DiagnosisAFilter
+Priority: 100
+(
+
+	(
+	{DiagnosisA}
+	)
+
+):match
+-->
+:match.Diagnosis = {rule = :match.DiagnosisA.rule, PREF = :match.DiagnosisA.PREF, CUI = :match.DiagnosisA.CUI, Negation = :match.DiagnosisA.Negation, Certainty = :match.DiagnosisA.Certainty}
+
+Rule: DiagnosisBFilter
+Priority: 100
+(
+
+	(
+	{DiagnosisB}
+	)
+
+):match
+-->
+:match.Diagnosis = {rule = :match.DiagnosisB.rule, PREF = :match.DiagnosisB.PREF, CUI = :match.DiagnosisB.CUI, Negation = :match.DiagnosisB.Negation, Certainty = :match.DiagnosisB.Certainty}
