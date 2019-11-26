@@ -14,7 +14,7 @@ Priority: 100
 (   
 	
     {Lookup2.majorType == historic , Lookup2.type == history}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Negated, Lookup3.PREF =~ "febrile" , 
+	({Lookup3.minorType == Disease, Lookup3.Negation == Negated, Lookup3.PREF =~ "febrile" , 
 	Lookup3.Experiencer == Patient}):item
 	
 	
@@ -34,7 +34,7 @@ Priority: 100
 (   
 	({Person})?
     {Lookup2.majorType == historic , Lookup2.type == past}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.PREF =~ "febrile ", 
+	({Lookup3.minorType == Disease, Lookup3.Negation == Affirmed, Lookup3.PREF =~ "febrile ", 
 	Lookup3.Experiencer == Patient}):item
 	
 	

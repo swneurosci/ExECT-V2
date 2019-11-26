@@ -2248,7 +2248,7 @@
                       <string>WhenDiagnosed</string>
                       <string>EpilepsyCause</string>
                     </localList>
-                    <collectionType>java.util.Arrays$ArrayList</collectionType>
+                    <collectionType>java.util.ArrayList</collectionType>
                   </gate.util.persistence.CollectionPersistence>
                 </entry>
               </localMap>

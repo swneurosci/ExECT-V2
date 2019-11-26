@@ -37,7 +37,8 @@ Priority: 100
 	
 	({Diagnosis}):item
     {Split}
-    {Split}
+    ({Split})?
+    ({Split})
     {Person}
     {Lookup2.language == onset , Lookup2.type == began}
     {Lookup3.minorType == generic}
