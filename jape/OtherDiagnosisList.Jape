@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisList
-Input: Lookup3 DiagnosisTriggers listSent listPoint 
+Input: Lookup3 DiagnosisTriggers listSent listPoint PartialDate
 
 Options: control=Brill
 
@@ -12,13 +12,17 @@ Priority: 100
 	({listPoint})?
 	{listPoint}
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
-    
+    ({PartialDate})
+	
+
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagList1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
+Certainty = :item.Lookup3.Certainty,
+DateYear = :match.PartialDate.year,
+DateMonth =:match.PartialDate.month}
 
 Rule: OtherDiagList2
 Priority: 90

@@ -232,7 +232,7 @@ Priority: 99
 
 (   
 	{Person}
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
+	({Lookup2.majorType == historic, Lookup2.minorType == symptoms}|{Lookup2.majorType == historic, Lookup2.type == has})
 	({Lookup.majorType == umls , Lookup.Experiencer == Patient , Lookup.Negation == Affirmed}):item
 	{timeElapsed}
 	{History.majorType == person}
@@ -319,3 +319,25 @@ Age =:match.Numeric.value,
 /*AgeLower = "",
 AgeUpper = ""*/}
 
+Rule: onsetAge11
+Priority: 99
+
+(   
+	{Person}
+	({Lookup2.majorType == historic, Lookup2.minorType == symptoms}|{Lookup2.majorType == historic, Lookup2.type == has})
+	({Lookup.majorType == umls , Lookup.Experiencer == Patient , Lookup.Negation == Affirmed}):item
+	{timeElapsed}
+	{Person}
+	{Lookup2}
+	{Numeric}
+	{timePeriod}
+	{Age}
+
+ ):match  
+ -->
+:item.Onset = {rule = onsetAge11, OnsetType = "age_episodes_started", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
+AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value}

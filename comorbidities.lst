@@ -1363,3 +1363,16 @@ right sided hemiplegia	CUI=C0457433	PREF=Right hemiplegia	TUI=T033	STY=Finding
 left hemiplegia	CUI=C0457434	PREF=Left hemiplegia	TUI=T033	STY=Finding
 left-sided hemiplegia	CUI=C0457434	PREF=Left hemiplegia	TUI=T033	STY=Finding
 left sided hemiplegia	CUI=C0457434	PREF=Left hemiplegia	TUI=T033	STY=Finding
+Charcot-Marie-Tooth Disease	CUI=C0007959	PREF=Charcot-Marie-Tooth Disease	TUI=T047	STY=Disease or Syndrome
+epithelial cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	STY=Anatomical Abnormality	
+epidermal cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	STY=Anatomical Abnormality
+epidermoid cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	STY=Anatomical Abnormality
+epidermoid cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	STY=Anatomical Abnormality
+Epidermoid cyst excision	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure	
+excision of epidermoid cyst	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure	
+epidermoid cyst resected	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure	
+epidermoid cyst removed	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure
+tumor debulking	CUI=C0439805 PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
+de-bulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
+debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
+Epidermoid tumor CUI=C0854911	PREF=Central nervous system epidermoid tumour	TUI=T190	STY=Anatomical Abnormality
