@@ -29,15 +29,16 @@ Priority: 99
 CUI = :outcome.InvestigationFindingEEG.CUI, Negation = :outcome.InvestigationFindingEEG.Negation}
 
 
-/* Removed the Investigation complete from Investigation gazetteer.
-*Rule: getInvestigationsOutcomeEEG2
-*Priority: 98
-*(
-*  ({Investigation.Complete == Yes, Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
-*):match
-*-->
-*:match.Investigations = { rule = getInvestigationsOutcomeEEG2, EEG_Performed = "Yes", EEG_Type = :match.Investigation.Type, EEG_Results = :match.Investigation.Outcome, 
-*CUI = :match.Investigation.CUI, Negation = :match.Investigation.Negation}
+/*
+ Removed the Investigation complete from Investigation gazetteer.
+Rule: getInvestigationsOutcomeEEG2
+Priority: 98
+(
+  ({Investigation.Complete == Yes, Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+):match
+-->
+:match.Investigations = { rule = getInvestigationsOutcomeEEG2, EEG_Performed = "Yes", EEG_Type = :match.Investigation.Type, EEG_Results = :match.Investigation.Outcome, 
+CUI = :match.Investigation.CUI, Negation = :match.Investigation.Negation}
 */
 
 Rule: getInvestigationsOutcomeEEG3
