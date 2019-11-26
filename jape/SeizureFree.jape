@@ -1,5 +1,5 @@
 Phase: SeizureFree 
-Input: NumberRange timePeriods Lookup3 Sentence timeElapsed PartialDate Interaction Split PointInTime
+Input: NumberRange timePeriods Lookup3 Sentence timeElapsed PartialDate Interaction Split PointInTime Coincide
 Options: control=appelt 
  
  

@@ -1,5 +1,5 @@
 Phase: SeizureFree
-Input: Person Lookup3 SeizureFree
+Input: Person Lookup3 SeizureFree Coincide
 Options: control=appelt
 
 Rule: PersonSeizureFree1

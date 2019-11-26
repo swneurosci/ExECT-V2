@@ -1,5 +1,5 @@
 Phase: SeizureFrequency 
-Input: SeizFrequency1 SeizFrequency2 NumberRange timePeriods Lookup3 Split SeizFreq Prescription0 SeizureFree ContextPrescription Age PointInTime timeElapsed
+Input: SeizFrequency1 SeizFrequency2 NumberRange timePeriods Lookup3 Split SeizFreq Prescription0 SeizureFree ContextPrescription Age PointInTime timeElapsed Coincide
 Options: control=appelt 
  
 /* 

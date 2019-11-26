@@ -59,3 +59,4 @@ symptomatic.lst:diagnosis:UMLS::Lookup2
 lateralisation.lst:diagnosis:lateralisation::Lookup2
 lobes.lst:diagnosis:lobes::Lookup2
 EpilepsyType.lst:diagnosis:type::Lookup2
+coincide.lst:coincide:coincide::Coincide

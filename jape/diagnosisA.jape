@@ -77,3 +77,56 @@ Rule: getDiagnosisSeizures3
 -->
 :item.DiagnosisA = { rule = "getDiagnosisEpilepsy3", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
 Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
+
+
+Rule: getDiagnosisSeizures4
+(
+	({DiagnosisTriggers})
+	({Lookup.STY == "Disease or Syndrome"})
+	({Lookup.STY == "Disease or Syndrome"})
+	({Lookup.STY == "Disease or Syndrome"})
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+):match1
+-->
+:item.DiagnosisA = { rule = "getDiagnosisEpilepsy4", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
+
+
+Rule: getDiagnosisSeizures5
+(
+	({DiagnosisTriggers})
+	({Lookup.STY == "Disease or Syndrome"})
+	({Lookup.STY == "Disease or Syndrome"})
+	({Lookup.STY == "Disease or Syndrome"})
+	({Lookup.STY == "Disease or Syndrome"})
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+):match1
+-->
+:item.DiagnosisA = { rule = "getDiagnosisEpilepsy5", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
+
+Rule: getDiagnosisSeizures3
+(
+	({DiagnosisTriggers})
+	({Lookup.STY == "Disease or Syndrome"})
+	({Lookup.STY == "Disease or Syndrome"})
+	({Lookup.STY == "Disease or Syndrome"})
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+):match1
+-->
+:item.DiagnosisA = { rule = "getDiagnosisSeizures4", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
+
+
+Rule: getDiagnosisSeizures3
+(
+	({DiagnosisTriggers})
+	({Lookup.STY == "Disease or Syndrome"})
+	({Lookup.STY == "Disease or Syndrome"})
+	({Lookup.STY == "Disease or Syndrome"})
+	({Lookup.STY == "Disease or Syndrome"})
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+):match1
+-->
+:item.DiagnosisA = { rule = "getDiagnosisSeizures5", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}

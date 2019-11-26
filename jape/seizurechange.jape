@@ -1,5 +1,5 @@
 Phase: SeizureChange
-Input: Lookup3 Split SeizureFree SeizureFrequency Frequency timeElapsed NumberRange timePeriods PartialDate
+Input: Lookup3 Split SeizureFree SeizureFrequency Frequency timeElapsed NumberRange timePeriods PartialDate Coincide
 Options: control=appelt 
 
 
