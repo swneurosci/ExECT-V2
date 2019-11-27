@@ -7,7 +7,6 @@ DiagnosisB
 /*Lateralisation*/ /* this + symptomatic attributes are added to diagnosis (DiagnosisA) - for a moment in EpilepsyCause/Symptomatic2 */
 SeizFrequency
 SeizureFree
-SeizureFree2
 seizure-frequency
 SF
 SeizFreqFilter
