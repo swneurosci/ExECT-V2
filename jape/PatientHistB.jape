@@ -191,3 +191,25 @@ TimePeriod = "",
 NumberOfTimePeriods = "",
 PointInTime = ""*/}
 
+Rule: PtHistoryB7
+Priority: 100
+
+(   
+	{Person}
+	{Lookup2.type == past}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+	Lookup3.Experiencer == Patient}):item
+	({Numeric}):a
+	({Numeric})?
+	{timePeriod}
+	
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryB7, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty, 
+AgeUnit =:match.timePeriod.time-unit,
+Age =:a.Numeric.value}
+
