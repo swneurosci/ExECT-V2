@@ -39,3 +39,5 @@ removed:type=past
 resected:type=past
 has:type=has
 has got:type=has
+underwent:type=treated
+treated:type=treated

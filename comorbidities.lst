@@ -1376,3 +1376,8 @@ tumor debulking	CUI=C0439805 PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Pr
 de-bulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
 debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
 Epidermoid tumor CUI=C0854911	PREF=Central nervous system epidermoid tumour	TUI=T190	STY=Anatomical Abnormality
+Charcot-Marie Tooth Disease	CUI=C0007959	PREF=Charcot-Marie Tooth Disease	TUI=T047	STY=Disease or Syndrome
+Charcot Marie Tooth Disease	CUI=C0007959	PREF=Charcot-Marie Tooth Disease	TUI=T047	STY=Disease or Syndrome
+Thrombocytopenia	CUI=C0040034	PREF=Thrombocytopenia	TUI=T047	STY=Disease or Syndrome
+Visual Impairment	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
+Impaired vision	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding

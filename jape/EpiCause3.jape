@@ -1,5 +1,5 @@
 Phase: EpiCause3
-Input: PatientHistory Lookup3 Lookup2 Lookup
+Input: PatientHistory Lookup3 Lookup2 Lookup Sentence
 
 
   /*These rules are set to select causes and suspected causes of epilepsy, the UMLS CUI that is returned relates to the cause, 
