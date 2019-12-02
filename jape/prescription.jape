@@ -69,4 +69,29 @@ DoseUnit =:match1.Measurement.units,
 Frequency = "1",
 Context = :match.ContextPrescription.context}
 
+/*
+" should be increased by 200mg so that he takes Tegretol 400mg in the morning and 600mg nocte"
+*/
 
+Rule: doseMatch0
+Priority: 100
+(   
+    ({ContextPrescription})?
+    {Measurement}
+    ({ContextPrescription})?
+    (({Drug})
+    ({ContextPrescription})?
+    {Measurement}
+    ({ContextPrescription})?
+    {DoseFrequency}):match1
+):match
+-->
+:match.Prescription0 = { rule = doseMatch0, string = :match1.Drug@string,
+DrugName = :match1.Drug@string, 
+CUI = :match1.Drug.CUI,
+DrugDose = :match1.Measurement.quantity,
+DoseUnit  =:match1.Measurement.units, 
+Frequency = :match1.DoseFrequency.frequency,
+time-unit = :match1.DoseFrequency.time-unit, 
+dose-interval = :match1.DoseFrequency.interval, 
+Context = :match.ContextPrescription.context}

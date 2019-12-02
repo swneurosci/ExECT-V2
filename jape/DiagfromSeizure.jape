@@ -1,6 +1,6 @@
 Phase: DiagnosisfromSeziure
-Input:  Person Sentence Lookup Investigation
-Options: control=appelt
+Input:  Person Sentence Lookup Investigation DiagnosisTriggers
+Options: control=all
 
 Rule: DiagnosisFromSeizure2a
 Priority: 100
@@ -22,7 +22,7 @@ Priority: 99
 
 	(
 	{Person}
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"})?
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed, Lookup.Plural == Yes, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
 	)
 
@@ -36,12 +36,12 @@ Priority: 100
 
 	(
 	{Person}
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed, Lookup.Epilepsy == Yes, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.Epilepsy == Yes, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
 	)
 
 ):match1
 -->
-:match.DiagnosisA = {rule = DiagFromEPIYES2a, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
+:match.DiagnosisA = {rule = DiagFromEpiYes2a, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
 
 
 Rule: DiagnosisFromEpilepsyYes2b
@@ -50,10 +50,10 @@ Priority: 99
 
 	(
 	{Person}
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"})?
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed, Lookup.Epilepsy == Yes, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
 	)
 
 ):match1
 -->
-:match.DiagnosisA = {rule = DiagFromEPIYES2b, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
+:match.DiagnosisA = {rule = DiagFromEpiYes2b, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
