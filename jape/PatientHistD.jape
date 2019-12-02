@@ -1,0 +1,34 @@
+Phase: PatientHistD
+Input: Lookup3 Lookup2 Person Numeric timePeriod Split
+
+
+/* These rules annotate events in patient history - type of event with an UMLS CUI, age (precise and as a range), 
+date as year/month, and time since the event, as TimePeriod / NumberOfTimePeriods) */
+
+
+Options: control=appelt
+
+Rule: PtHistoryD1
+Priority: 100
+
+(   
+	{Person}
+	{Lookup2.type == past}
+    {Lookup3}
+	({Numeric}):a
+	({Numeric})?
+	{timePeriod}
+    {Split}
+    {Lookup2.minorType == causality}
+    ({Lookup3})?
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+	Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryD1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty, 
+AgeUnit =:match.timePeriod.time-unit,
+Age =:a.Numeric.value}
