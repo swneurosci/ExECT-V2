@@ -19,7 +19,7 @@ Priority: 100
 (   
 	({PatientHistory}):item
 	{Lookup2.minorType == causality}
-    ({Lookup} | {Lookup3})
+    ({Lookup})
  ):match  
  -->
 :item.EpilepsyCause = {rule = Cause3a, PREF = :item.PatientHistory.PREF, CUI = :item.PatientHistory.CUI, 

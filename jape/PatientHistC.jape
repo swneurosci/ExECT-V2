@@ -1,5 +1,5 @@
 Phase: PatientHistC
-Input: Person Lookup2 Lookup3 timeElapsed DiagnosisTriggers sentence
+Input: Person Lookup2 Lookup3 timeElapsed DiagnosisTriggers Sentence
 Options: control=appelt
 
 
@@ -40,6 +40,7 @@ TimePeriod = "",
 NumberOfTimePeriods = "",
 PointInTime = ""} 
 
+
 Rule: PtHistoryC2
 Priority: 100
 
@@ -79,8 +80,8 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
-Rule: PtHistoryC3
-Priority: 100
+Rule: PtHistoryC4
+Priority: 80
 
 (   
 	{Person}
@@ -88,25 +89,7 @@ Priority: 100
     {Lookup2.type == suffered}
     {timeElapsed}
     {Lookup3}
-    ({timeElapsed})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-	Lookup3.Experiencer == Patient}):item
-   
-
-
- ):match  
- -->
-:item.PatientHistory = {rule = PtHistoryC3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
-
-Rule: PtHistoryC4
-Priority: 100
-
-(   
-	{Person}
-    {Lookup2.type == treated}
+    ({timeElapsed})
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
 	Lookup3.Experiencer == Patient}):item
    
@@ -118,3 +101,23 @@ Priority: 100
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
+
+Rule: PtHistoryC5
+Priority: 98
+
+(   
+	{Person}
+    {Lookup2.type == treated}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+	Lookup3.Experiencer == Patient}):item
+   
+
+
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryC5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+

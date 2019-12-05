@@ -186,3 +186,27 @@ PointInTime =:match.PointInTime.Since,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value}
 
+Rule: onsetDate9
+Priority: 98
+
+(   
+	{Person}
+	{Lookup3}
+	{Lookup2.language == onset}
+	{timeElapsed.time == in}
+	{Numeric}
+	{Person}
+	{Lookup2.type == suffered}
+	(({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.CAT == seizures }) |
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.minorType == Disease }) ):item
+	
+	
+ ):match  
+ -->
+:item.Onset = {rule = onsetDate9, OnsetType = "date_of_onset", 
+PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+STY = :item.Lookup3.STY, 
+DateYear = :match.Numeric.value,
+DateMonth ="",
+DateDay = ""
+/*PointInTime = ""*/}

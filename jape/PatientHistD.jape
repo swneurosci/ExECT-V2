@@ -32,3 +32,7 @@ Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality
 Certainty = :item.Lookup3.Certainty, 
 AgeUnit =:match.timePeriod.time-unit,
 Age =:a.Numeric.value}
+
+
+
+

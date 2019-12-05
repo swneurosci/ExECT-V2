@@ -1270,7 +1270,7 @@ neonatal asphyxia	CUI=C0004045	PREF=Birth asphyxia	TUI=T047	STY=Disease or Syndr
 asphyxia at birth	CUI=C0004045	PREF=Birth asphyxia	TUI=T047	STY=Disease or Syndrome
 Birth trauma, asphyxia and hypoxia	CUI=C0411037	PREF=Birth trauma, asphyxia and hypoxia	TUI=T047	STY=Disease or Syndrome
 fetal distress	CUI=C0015930	PREF=Fetal distress	TUI=T046	STY=Pathologic Function
-birth injury CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
+birth injury	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
 birth trauma	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
 perinatal insult	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
 perinatal injury	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
@@ -1381,3 +1381,5 @@ Charcot Marie Tooth Disease	CUI=C0007959	PREF=Charcot-Marie Tooth Disease	TUI=T0
 Thrombocytopenia	CUI=C0040034	PREF=Thrombocytopenia	TUI=T047	STY=Disease or Syndrome
 Visual Impairment	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
 Impaired vision	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
+hypothyroidism	CUI=C0020676	PREF=Hypothyroidism	TUI=T047	STY=Disease or Syndrome
+hypoparathyroidism	CUI=C0020626	PREF=Hypoparathyroidism	TUI=T047	STY=Disease or Syndrome
