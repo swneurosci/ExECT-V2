@@ -65,16 +65,6 @@ Priority: 96
 CUI = :match1.InvestigationFindingEEG.CUI, Negation = :match1.InvestigationFindingEEG.Negation}
 
 
-Rule: InvestigationDiag
-Priority: 95
-(
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):invest
-  ({Diagnosis})
-):match
--->
-:match.Investigations = { rule = InvestigationDiag, EEG_Performed = "Yes", EEG_Results = "Abnormal", 
-CUI = "C0151611"}
-
 Rule: InvestigationTwoSentences
 Priority: 94
 (
@@ -120,3 +110,28 @@ Priority: 92
 -->
 :match.Investigations = { rule = getInvestigationsOutcomeEEG6, EEG_Performed = "Yes", EEG_Type = :match.Investigation.Type, EEG_Results = :outcome.InvestigationFindingEEG.Results, 
 CUI = :outcome.InvestigationFindingEEG.CUI, Negation = :outcome.InvestigationFindingEEG.Negation}
+
+
+Rule: InvestigationDiag
+Priority: 90
+(
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):invest
+  ({Diagnosis})
+  ({InvestigationFindingEEG})
+):match
+-->
+:match.Investigations = { rule = InvestigationSKIPDiag, EEG_Performed = "Yes", EEG_Results = "Abnormal", 
+CUI = :match.InvestigationFindingEEG.CUI, EEG_Type = :match.Investigation.Type, EEG_Results = :match.InvestigationFindingEEG.Results}
+
+
+
+
+Rule: InvestigationDiag
+Priority: 15
+(
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):invest
+  ({Diagnosis})
+):match
+-->
+:match.Investigations = { rule = InvestigationDiag, EEG_Performed = "Yes", EEG_Results = "Abnormal", 
+CUI = "C0151611"}

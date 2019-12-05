@@ -1,5 +1,5 @@
 Phase: SeizureFree 
-Input: NumberRange timePeriods Lookup3 Sentence timeElapsed PartialDate Interaction Split PointInTime Coincide Person
+Input: NumberRange timePeriods Lookup3 Sentence timeElapsed PartialDate Interaction Split PointInTime Coincide Person SeizFrequency1
 Options: control=appelt 
  
  
@@ -352,11 +352,36 @@ TimePeriod = :match.timePeriods.time-unit,   NumberOfSeizures = "0" , Certainty 
 } 
 
 
+Rule: HseizureFree2a
+Priority: 99
+(
+    ({Person})
+    ({Lookup3.PREF == "seizure free",Lookup3.Temporality != "hypothetical"})
+    ({timeElapsed})?
+    ({SeizFrequency1})
+):match
+-->
+:match.SeizureFrequency = { rule = HseizureFree3a, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = :match.Lookup3.Negation, TimePeriod = :match.SeizFrequency1.TimePeriod, NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods }
+
+Rule: HseizureFree2a
+Priority: 99
+(
+    ({Person})
+    ({Lookup3.PREF == "seizure free",Lookup3.Temporality != "hypothetical"})
+    ({timeElapsed})?
+    ({PartialDate})
+):match
+-->
+:match.SeizureFrequency = { rule = HseizureFree3a, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = :match.Lookup3.Negation, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year }
+
+
+
+
 Rule: HseizureFreeNoTime
 Priority: 10
 (
     ({Person})
-    ({Lookup3.PREF == "seizure free",Lookup3.Temporality != "hypothetical"})
+    ({Lookup3.PREF == "seizure free",Lookup3.Temporality != "hypothetical", Lookup3.Negation == "Affirmed"})
 ):match
 -->
 :match.SeizureFrequency = { rule = HseizureFreeNoTime, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = :match.Lookup3.Negation }

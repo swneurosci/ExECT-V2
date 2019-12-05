@@ -1,0 +1,18 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: NegationCleanUp3
+Input: Lookup Sentence Token 
+Options: control=all
+
+Rule: reverseNegation
+(
+({Token@string =~ "non[-]"})
+({Token})+
+({Lookup.Negation == "Negated"}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+umlsAnnots.iterator().next().getFeatures().put("rule1","reverseNegationa");
+}
+

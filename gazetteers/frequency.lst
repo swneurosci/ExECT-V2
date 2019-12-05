@@ -60,4 +60,8 @@ BD:frequency=2:time-unit=day:interval=1
 day:frequency=1:time-unit=day:interval=1
 twice a day:frequency=2:time-unit=day
 once-a-day:frequency=1:time-unit=day:interval=1:when=day
-twice daily:frequency=2:time-unit=day:=
+twice daily:frequency=2:time-unit=day
+in the morning and lunchtime:frequency=2
+in the morning and afternoon:frequency=2
+morning and afternoon:frequency=2:=
+morning and lunchtime:frequency=2:=

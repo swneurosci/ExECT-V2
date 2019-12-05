@@ -5,5 +5,6 @@ annotation-pruning
 cleaning
 NegationCleanUp
 NegationCleanup2
+NegationCleanup3
 removeUselessLookups
 NegationBack
