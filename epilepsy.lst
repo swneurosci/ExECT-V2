@@ -1,6 +1,6 @@
 myoclonic epilepsy	CUI=C0014550	PREF=Myoclonic Epilepsy	TUI=T047	STY=Disease or Syndrome
-post traumatic epilepsy	CIU=C0014557	PREF=Epilepsy, Post-Traumatic	TUI=T037	STY=Injury or Poisoning	Epilepsy=Yes
-post-traumatic epilepsy	CIU=C0014557	PREF=Epilepsy, Post-Traumatic	TUI=T037	STY=Injury or Poisoning	Epilepsy=Yes
+post traumatic epilepsy	CUI=C0014557	PREF=Epilepsy, Post-Traumatic	TUI=T037	STY=Injury or Poisoning	Epilepsy=Yes
+post-traumatic epilepsy	CUI=C0014557	PREF=Epilepsy, Post-Traumatic	TUI=T037	STY=Injury or Poisoning	Epilepsy=Yes
 ataxia, dentate cerebellar	CUI=C0007761	PREF=Myoclonic Cerebellar Dyssynergia	TUI=T047	STY=Disease or Syndrome	
 ataxias, dentate cerebellar	CUI=C0007761	PREF=Myoclonic Cerebellar Dyssynergia	TUI=T047	STY=Disease or Syndrome	
 atrophies, dentate cerebellar	CUI=C0007761	PREF=Myoclonic Cerebellar Dyssynergia	TUI=T047	STY=Disease or Syndrome	
@@ -704,7 +704,7 @@ cryptogenic general epilepsy	CUI=C0472354	PREF=cryptogenic general epilepsy	TUI=
 cryptogenic generalised epilepsy	CUI=C0472354	PREF=cryptogenic generalised epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 cryptogenic generalized epilepsy	CUI=C0472354	PREF=cryptogenic generalized epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 cryptogenic generalized epilepsy disorder	CUI=C0472354	PREF=cryptogenic generalized epilepsy (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-epilepsy undeterm focal/gener	CUI=C0472355	PREF=epilepsy undeterm focal/gener	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+epilepsy undeterm focal/gener	CUI=C0472355	PREF=epilepsy undetermined whether focal or generalised	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy undetermined whether focal or generalised	CUI=C0472355	PREF=epilepsy undetermined whether focal or generalised	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy undetermined whether focal or generalized	CUI=C0472355	PREF=epilepsy undetermined whether focal or generalized	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy undetermined whether focal or generalized (disorder)	CUI=C0472355	PREF=epilepsy undetermined whether focal or generalized (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes

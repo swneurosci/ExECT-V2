@@ -1363,6 +1363,7 @@ right sided hemiplegia	CUI=C0457433	PREF=Right hemiplegia	TUI=T033	STY=Finding
 left hemiplegia	CUI=C0457434	PREF=Left hemiplegia	TUI=T033	STY=Finding
 left-sided hemiplegia	CUI=C0457434	PREF=Left hemiplegia	TUI=T033	STY=Finding
 left sided hemiplegia	CUI=C0457434	PREF=Left hemiplegia	TUI=T033	STY=Finding
+spastic hemiplegia	CUI=C0154694	PREF=Hemiplegia, Spastic	TUI=T047	STY=Disease or Syndrome
 Charcot-Marie-Tooth Disease	CUI=C0007959	PREF=Charcot-Marie-Tooth Disease	TUI=T047	STY=Disease or Syndrome
 epithelial cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	STY=Anatomical Abnormality	
 epidermal cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	STY=Anatomical Abnormality
@@ -1376,6 +1377,7 @@ tumor debulking	CUI=C0439805 PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Pr
 de-bulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
 debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
 Epidermoid tumor CUI=C0854911	PREF=Central nervous system epidermoid tumour	TUI=T190	STY=Anatomical Abnormality
+epidermoid tumour	CUI=C0854911	PREF=Central nervous system epidermoid tumour	TUI=T190	STY=Anatomical Abnormality
 Charcot-Marie Tooth Disease	CUI=C0007959	PREF=Charcot-Marie Tooth Disease	TUI=T047	STY=Disease or Syndrome
 Charcot Marie Tooth Disease	CUI=C0007959	PREF=Charcot-Marie Tooth Disease	TUI=T047	STY=Disease or Syndrome
 Thrombocytopenia	CUI=C0040034	PREF=Thrombocytopenia	TUI=T047	STY=Disease or Syndrome
@@ -1383,3 +1385,8 @@ Visual Impairment	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
 Impaired vision	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
 hypothyroidism	CUI=C0020676	PREF=Hypothyroidism	TUI=T047	STY=Disease or Syndrome
 hypoparathyroidism	CUI=C0020626	PREF=Hypoparathyroidism	TUI=T047	STY=Disease or Syndrome
+postural tremor	CUI=C0234378	PREF=Static Tremor	TUI=T033	STY=Finding
+static tremor	CUI=C0234378	PREF=Static Tremor	TUI=T033	STY=Finding
+nystagmus	CUI=C0028738	PREF=Nystagmus	TUI=T047	STY=Disease or Syndrome
+tremor	CUI=C0040822	PREF=Tremor	TUI=T184	STY=sign or symptom
+hemiparesis	CUI=C0018989	PREF=Hemiparesis	TUI=T184	STY=sign or symptom

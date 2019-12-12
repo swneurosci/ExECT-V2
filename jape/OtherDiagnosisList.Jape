@@ -1,7 +1,7 @@
 Phase: OtherDiagnosisList
 Input: Lookup3 DiagnosisTriggers listSent listPoint PartialDate Numeric
 
-Options: control=Brill
+Options: control=brill
 
 
 Rule: OtherDiagList1
@@ -12,7 +12,7 @@ Priority: 100
 	({listPoint})?
 	{listPoint}
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
-    ({PartialDate})?
+    ({PartialDate})
 	
 
  ):match  
@@ -25,15 +25,18 @@ DateYear = :match.PartialDate.year,
 DateMonth =:match.PartialDate.month}
 
 Rule: OtherDiagList2
-Priority: 90
+Priority: 100
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
-    ({listPoint})?
+    ({listPoint})
+	({Lookup3})?
+	({DiagnosisTriggers})?
+	({Lookup3})?
 	{listPoint}
     {Lookup3}
+	({Lookup3})?
     {listPoint}
-	({listPoint})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, 
     Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
     
@@ -44,8 +47,80 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
+Rule: OtherDiagList2b
+Priority: 100
+
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+    ({listPoint})
+	({Lookup3})?
+	({DiagnosisTriggers})?
+	({Lookup3})?
+	{listPoint}
+    {Lookup3}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, 
+    Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagList2b, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: OtherDiagList2c
+Priority: 100
+
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+    ({listPoint})
+	({Lookup3})?
+	({DiagnosisTriggers})?
+	({Lookup3})?
+	{listPoint}
+    {Lookup3}
+	({Lookup3})?
+	{listPoint}
+	{Lookup3}
+	{listPoint}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, 
+    Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagList2c, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: OtherDiagList2d
+Priority: 100
+
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+    ({listPoint})
+	({Lookup3})?
+	({DiagnosisTriggers})?
+	({Lookup3})?
+	{listPoint}
+    {Lookup3}
+	({Lookup3})?
+	{listPoint}
+	{Lookup3}
+	{listPoint}
+	{Lookup3}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, 
+    Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagList2d, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
 Rule: OtherDiagList3
-Priority: 90
+Priority: 100
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
@@ -64,11 +139,15 @@ Certainty = :item.Lookup3.Certainty}
 
 
 Rule: OtherDiagList4
-Priority: 90
+Priority: 100
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
+	({Lookup3})?
 	{listPoint}
+	({DiagnosisTriggers})?
+	({Lookup3})?
+	({listPoint})?
 	{Lookup3}
 	{Lookup3}
 	{listPoint}
@@ -84,7 +163,7 @@ Certainty = :item.Lookup3.Certainty}
 
 
 Rule: OtherDiagList5
-Priority: 90
+Priority: 100
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
@@ -106,7 +185,7 @@ Certainty = :item.Lookup3.Certainty}
 
 
 Rule: OtherDiagList6
-Priority: 99
+Priority: 100
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
@@ -129,7 +208,7 @@ Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality
 Certainty = :item.Lookup3.Certainty}
 
 Rule: OtherDiagList7
-Priority: 90
+Priority: 100
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
@@ -146,7 +225,7 @@ Certainty = :item.Lookup3.Certainty}
 
 
 Rule: OtherDiagList8
-Priority: 99
+Priority: 100
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
@@ -169,7 +248,7 @@ Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality
 Certainty = :item.Lookup3.Certainty}
 
 Rule: OtherDiagList9
-Priority: 99
+Priority: 100
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
@@ -194,11 +273,12 @@ Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality
 Certainty = :item.Lookup3.Certainty}
 
 Rule: OtherDiagList9
-Priority: 99
+Priority: 100
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
 	{listPoint}
+	({Lookup3})?
 	({DiagnosisTriggers.majorType == diagnosis})?
 	{Lookup3}
 	{listPoint}
@@ -221,7 +301,7 @@ Certainty = :item.Lookup3.Certainty}
 
 
 Rule: OtherDiagList10
-Priority: 99
+Priority: 100
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
@@ -245,7 +325,7 @@ DateYear = :match.PartialDate.year,
 DateMonth =:match.PartialDate.month}
 
 Rule: OtherDiagList2
-Priority: 90
+Priority: 100
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
