@@ -11,7 +11,7 @@ Priority: 100
 	{Person}
 	{Lookup2.majorType == historic}
     {DiagnosisTriggers.majorType == diagnosis}
-	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient}):item
 	{timeElapsed.time == in , timeElapsed.time != during}
 	{Numeric}
 
@@ -25,8 +25,8 @@ STY = :item.Lookup.STY,
 Certainty = :item.Lookup.Certainty,
 DateYear = :match.Numeric.value,
 /*PointInTime = "",
-DateMonth ="",
-DateDay = "",
+MonthDate ="",
+DayDate = "",
 PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
@@ -41,10 +41,10 @@ Rule: DateDiagnosed2
 Priority: 100
 
 (   
-	{Person}
+	{DiagnosisTriggers}
 	{Lookup2.majorType == historic}
     {DiagnosisTriggers.majorType == diagnosis}
-	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient}):item
 	({Lookup2})?
 	({Person})?
 	{PointInTime}
@@ -61,8 +61,8 @@ Certainty = :item.Lookup.Certainty,
 PointInTime = :match.PointInTime.Since,
 AgeUnit ="Year",
 /*DateYear = "",
-DateMonth ="",
-DateDay = "",
+MonthDate ="",
+DayDate = "",
 PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
@@ -71,3 +71,24 @@ UpperNumberOfTimePeriods = "",
 AgeLower ="",
 AgeUpper = "",
 Age =  ""*/}
+
+Rule: DateDiagnosed2
+Priority: 100
+
+(   
+	{Person}
+	{Lookup2.majorType == historic}
+	{PointInTime}
+    {DiagnosisTriggers.majorType == diagnosis}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient}):item
+
+ 
+	
+ ):match  
+ -->
+:item.WhenDiagnosed = {rule = DateDiagnosed2, OnsetType = "When_Diagnosed", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
+PointInTime = :match.PointInTime.Since}
+

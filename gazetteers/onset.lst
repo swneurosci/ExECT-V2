@@ -11,6 +11,7 @@ has had:type=suffered
 experienced:type=suffered
 diagnosed:type=diagnosed
 first:type=began
+1st:type=began
 suffering:type=suffered
 has been symptomatic:type=suffered
 suffering from:type=suffered

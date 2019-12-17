@@ -1,0 +1,27 @@
+Phase: OnsetDateC
+Input: Lookup3 DiagnosisTriggers Lookup2  PartialDate Numeric
+Options: control=appelt
+
+/*For when the seizure type is specified in "Diagnosis" with a  date of onset*/
+
+
+Rule: OnsetDateC
+Priority: 100
+
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+     {Lookup2.type == began}
+	({Lookup3})?
+    ({Lookup3.minorType == Disease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+    ({PartialDate})?
+	
+
+ ):match  
+ -->
+:item.Onset = {rule = OnsetDateC, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty,
+YearDate = :match.PartialDate.year,
+MonthDate =:match.PartialDate.month,
+DayDate =:match.PartialDate.day}

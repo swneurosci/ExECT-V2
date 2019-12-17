@@ -2,7 +2,7 @@
 17q21.31 microdeletion syndrome	CUI=C1864871	PREF=17q21.31 microdeletion syndrome	TUI=T047	STY=Disease or Syndrome
 alzheimer dementia	CUI=C0002395	PREF=dementia, alzheimer	TUI=T047	STY=Disease or Syndrome
 alzheimer dementias	CUI=C0002395	PREF=alzheimer dementias	TUI=T047	STY=Disease or Syndrome
-alzheimer CUI=C0002395	PREF=alzheimer dementia	TUI=T047	STY=Disease or Syndrome
+alzheimer	CUI=C0002395	PREF=alzheimer dementia	TUI=T047	STY=Disease or Syndrome
 alzheimer sclerosis	CUI=C0002395	PREF=sclerosis, alzheimer	TUI=T047	STY=Disease or Syndrome
 alzheimer syndrome	CUI=C0002395	PREF=alzheimer syndrome	TUI=T047	STY=Disease or Syndrome
 alzheimer type dementia	CUI=C0002395	PREF=alzheimer type dementia	TUI=T047	STY=Disease or Syndrome
@@ -59,6 +59,7 @@ lewy body parkinson's disease	CUI=C0030567	PREF=lewy body parkinson's disease	TU
 megalocornea, multiple skeletal anomalies, and developmental delay	CUI=C1855305	PREF=megalocornea, multiple skeletal anomalies, and developmental delay	TUI=T047	STY=Disease or Syndrome
 melnick-needles syndrome, autosomal recessive, formerly	CUI=C1855305	PREF=melnick-needles syndrome, autosomal recessive, formerly	TUI=T047	STY=Disease or Syndrome
 migraine	CUI=C0149931	PREF=migraine	TUI=T047	STY=Disease or Syndrome
+migraines	CUI=C0149931	PREF=migraine	TUI=T047	STY=Disease or Syndrome
 monosomy 17q21.31	CUI=C1864871	PREF=monosomy 17q21.31	TUI=T047	STY=Disease or Syndrome
 ms	CUI=C0026769	PREF=ms	TUI=T047	STY=Disease or Syndrome
 multiple sclerosis	CUI=C0026769	PREF=multiple sclerosis	TUI=T047	STY=Disease or Syndrome
@@ -1354,7 +1355,7 @@ removal of intracranial tumour	CUI=C0841323	PREF=Removal of intracranial tumor	T
 removal of brain tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061	STY=Therapeutic or Preventive Procedure	
 brain tumour operation	CUI=C1096120	PREF=Brain tumor operstion	TUI=T061	STY=Therapeutic or Preventive Procedure
 astrocytoma surgery	CUI=C1096492	PREF=Astrocytoma surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
-meningioma surgery CUI=C1096493	PREF=Meningioma surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
+meningioma surgery	CUI=C1096493	PREF=Meningioma surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
 astrocytoma of brain	CUI=C3695127	PREF=Astrocytoma of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
 brain astrocytoma	CUI=C3695127	PREF=Astrocytoma of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
 right hemiplegia	CUI=C0457433	PREF=Right hemiplegia	TUI=T033	STY=Finding
@@ -1376,7 +1377,7 @@ epidermoid cyst removed	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=
 tumor debulking	CUI=C0439805 PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
 de-bulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
 debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
-Epidermoid tumor CUI=C0854911	PREF=Central nervous system epidermoid tumour	TUI=T190	STY=Anatomical Abnormality
+Epidermoid tumor	CUI=C0854911	PREF=Central nervous system epidermoid tumour	TUI=T190	STY=Anatomical Abnormality
 epidermoid tumour	CUI=C0854911	PREF=Central nervous system epidermoid tumour	TUI=T190	STY=Anatomical Abnormality
 Charcot-Marie Tooth Disease	CUI=C0007959	PREF=Charcot-Marie Tooth Disease	TUI=T047	STY=Disease or Syndrome
 Charcot Marie Tooth Disease	CUI=C0007959	PREF=Charcot-Marie Tooth Disease	TUI=T047	STY=Disease or Syndrome
@@ -1390,3 +1391,6 @@ static tremor	CUI=C0234378	PREF=Static Tremor	TUI=T033	STY=Finding
 nystagmus	CUI=C0028738	PREF=Nystagmus	TUI=T047	STY=Disease or Syndrome
 tremor	CUI=C0040822	PREF=Tremor	TUI=T184	STY=sign or symptom
 hemiparesis	CUI=C0018989	PREF=Hemiparesis	TUI=T184	STY=sign or symptom
+psychotic episodes	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
+cavernoma	CUI=C0018920	PREF=Hemangioma, Cavernous	TUI=T191	STY=Neoplastic Process
+cavernous hemangioma	CUI=C0018920	PREF=Hemangioma, Cavernous	TUI=T191	STY=Neoplastic Process

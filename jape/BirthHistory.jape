@@ -164,8 +164,8 @@ Priority: 100
     
  ):match  
  -->
-:item.BirthHistory = {rule = Prem10, PREF = :item.Lookup2.minorType, CUI = :item.Lookup2.CUI, 
-Negation = Affirmed, Experiencer = Patient, Range = "under 37 weeks"}
+:item.BirthHistory = {rule = Prem10, PREF = :item.Lookup2.value, CUI = :item.Lookup2.CUI, 
+Negation = Affirmed, Experiencer = Patient}
 
 
 

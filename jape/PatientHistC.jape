@@ -1,5 +1,5 @@
 Phase: PatientHistC
-Input: Person Lookup2 Lookup3 timeElapsed DiagnosisTriggers Sentence PartialDate
+Input: Person Lookup2 Lookup3 timeElapsed DiagnosisTriggers Sentence PartialDate Numeric
 Options: control=appelt
 
 
@@ -41,13 +41,16 @@ NumberOfTimePeriods = "",
 PointInTime = ""} 
 
 
+
+
 Rule: PtHistoryC2
 Priority: 100
 
 (   
 	{Person}
     {Lookup2.type == has}
-    ({Lookup2})?
+    {Lookup2.type == suffered}
+    {timeElapsed}
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
 	Lookup3.Experiencer == Patient}):item
    
@@ -60,27 +63,12 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
-Rule: PtHistoryC3
-Priority: 100
-
-(   
-	{Person}
-    {Lookup2.type == has}
-    {Lookup2.type == suffered}
-    {timeElapsed}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-	Lookup3.Experiencer == Patient}):item
-   
 
 
- ):match  
- -->
-:item.PatientHistory = {rule = PtHistoryC3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
 
-Rule: PtHistoryC4
+
+
+Rule: PtHistoryC7
 Priority: 80
 
 (   
@@ -90,6 +78,8 @@ Priority: 80
     {timeElapsed}
     {Lookup3}
     ({timeElapsed})
+	({Numeric})*
+    ({Lookup3})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
 	Lookup3.Experiencer == Patient}):item
    
@@ -97,70 +87,7 @@ Priority: 80
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryC4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
-
-Rule: PtHistoryC5
-Priority: 98
-
-(   
-	{Person}
-    {Lookup2.type == treated}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-	Lookup3.Experiencer == Patient}):item
-    {Person}
-    {Lookup3}
-    {timeElapsed}
-   {PartialDate}
-
-
- ):match  
- -->
-:item.PatientHistory = {rule = PtHistoryC5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty,
-DateMonth =:match.PartialDate.month,
-DateYear =:match.PartialDate.year}
-
-
-Rule: PtHistoryC6
-Priority: 98
-
-(   
-	{Person}
-    {Lookup2.type == treated}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-	Lookup3.Experiencer == Patient}):item
-   
-
-
- ):match  
- -->
-:item.PatientHistory = {rule = PtHistoryC6, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
-
-
-Rule: PtHistoryC6
-Priority: 98
-
-(   
-	{Person}
-    {Lookup2.type == treated}
-    {Lookup3}
-    {Person}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-	Lookup3.Experiencer == Patient}):item
-   
-
-
- ):match  
- -->
-:item.PatientHistory = {rule = PtHistoryC6, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = PtHistoryC7, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}

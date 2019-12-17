@@ -1,0 +1,27 @@
+Phase: OtherDiagnosisListE
+Input: Lookup3 DiagnosisTriggers listSent listPoint PartialDate Numeric
+
+Options: control=appelt
+
+Rule: OtherDiagListE1
+Priority: 100
+
+(   
+	
+	{DiagnosisTriggers}
+	({Lookup3})?
+	{listPoint}
+    {Lookup3}
+    ({Lookup3})?
+    {listPoint}
+    {Lookup3}
+    {listPoint}
+    {Lookup3}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, 
+    Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagListE1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}

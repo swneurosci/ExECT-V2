@@ -4,3 +4,9 @@ and:type=conj
 with:type=with
 ,:type=,
 *:type=list
+-:type=list
+·:type=list
+
+
+
+

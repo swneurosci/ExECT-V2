@@ -9,7 +9,7 @@ Input: Lookup Lookup3 DiagnosisTriggers Lookup2
 
   
 
-Options: control=Brill
+Options: control=appelt
 
 
 
@@ -70,8 +70,8 @@ Rule: Cause4
 Priority: 99
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
-    ({Lookup3})
+	
+    ({Lookup2.type == suffered})
     {Lookup3.majorType == umls , Lookup3.minorType == Disease , Lookup3.Experiencer == Patient}
     {Lookup2.minorType == causality}
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
@@ -83,3 +83,4 @@ Priority: 99
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
+

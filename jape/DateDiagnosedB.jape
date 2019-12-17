@@ -10,7 +10,7 @@ Priority: 100
 (   
     {Person}
     {DiagnosisTriggers.majorType == diagnosis}
-    ({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
+    ({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient}):item
     ({Lookup3})*
     {Split}
     {DiagnosisTriggers.majorType == diagnosis}
@@ -35,7 +35,7 @@ PointInTime = ""*/}
 Rule: DateDiagnosedB2
 Priority: 99
 (   
-	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient}):item
     {Split}
     {DiagnosisTriggers.majorType == diagnosis}
     {Lookup2.majorType == historic}
@@ -57,7 +57,7 @@ PointInTime = ""*/}
 Rule: DateDiagnosedB3
 Priority: 99
 (   
-	({Lookup}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed, Lookup.Experiencer == Patient}):item
     ({Lookup3})?
     ({Lookup3})?
     {Split}

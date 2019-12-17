@@ -1,5 +1,6 @@
 Phase: AgeDiagnosed
-Input: Lookup Person Lookup2 Sentence Numeric timePeriod History
+Input: Lookup Person Lookup2 Sentence Numeric timePeriod History DiagnosisTriggers
+
 
   /*includes AgeDiagnosedRange*/
 
@@ -12,8 +13,8 @@ Priority: 99
 (   
 	{Person}
     {Lookup2.majorType == historic}
-    {Lookup2.majorType == historic, Lookup2.minorType == symptoms}
-	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
+    {DiagnosisTriggers}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,Lookup.Experiencer == Patient }):item
 	({History})?
 	{Numeric}
 	{timePeriod}
@@ -25,8 +26,8 @@ PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 /*DateYear = "",
-DateMonth ="",
-DateDay = "",
+MonthDate ="",
+DayDate = "",
 PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
@@ -46,7 +47,7 @@ Priority: 99
 	{Person}
     {Lookup2.majorType == historic}
     {Lookup2.majorType == historic, Lookup2.language == onset}
-	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient }):item
 	{Person}
 	{Lookup2.minorType == time}
 	
@@ -57,8 +58,8 @@ PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 /*DateYear = "",
-DateMonth ="",
-DateDay = "",
+MonthDate ="",
+DayDate = "",
 PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",
@@ -75,7 +76,7 @@ Priority: 99
 
 (   
 
-	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient }):item
     {Lookup2.majorType == historic , Lookup2.type == diagnosed}
     {History.majorType == person}
 	{Numeric}
@@ -87,8 +88,8 @@ PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 /*DateYear = "",
-DateMonth ="",
-DateDay = "",
+MonthDate ="",
+DayDate = "",
 PointInTime = "",
 TimePeriod = "",
 NumberOfTimePeriods ="",

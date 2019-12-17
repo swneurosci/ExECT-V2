@@ -5,6 +5,7 @@ Phases:
 YearToMonths
 OnsetAgeRange
 TimeSinceOnset
+TimeSinceOnsetA
 TimeSinceOnsetB
 /*TimeSinceOnsetC*/
 TimeSinceOnsetRange
@@ -13,6 +14,7 @@ OnsetAge
 OnsetAgeB
 OnsetDate
 OnsetDateB
+OnsetDateC
 AgeDiagnosed
 DateDiagnosed
 DateDiagnosedB
