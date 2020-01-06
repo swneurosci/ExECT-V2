@@ -15,11 +15,11 @@ Priority: 100
 (   
 	{DiagnosisA.Negation == Affirmed, DiagnosisA.Experiencer == Patient} 
    ({Lookup2.minorType == probability}):a
-    {Lookup2.lobe == temporal}
+   ({Lookup2.lobe == temporal}):b
     
  ):match  
  -->
-:match.DiagnosisB = {rule = DiagnosisB1, PREF = "Temporal lobe epilepsy", CUI = "C0014556", 
+:b.DiagnosisB = {rule = DiagnosisB1, PREF = "Temporal lobe epilepsy", CUI = "C0014556", 
 Negation = :match.DiagnosisA.Negation, Certainty = :a.Lookup2.Level}
 
 Rule: DiagnosisB2
@@ -28,11 +28,11 @@ Priority: 100
 (   
 	{DiagnosisA.Negation == Affirmed, DiagnosisA.Experiencer == Patient} 
    ({Lookup2.minorType == probability}):a
-    {Lookup2.lobe == frontal}
+   ({Lookup2.lobe == frontal}):b
     
  ):match  
  -->
-:match.DiagnosisB = {rule = DiagnosisB2, PREF = "Frontal lobe epilepsy", CUI = "C0085541", 
+:b.DiagnosisB = {rule = DiagnosisB2, PREF = "Frontal lobe epilepsy", CUI = "C0085541", 
 Negation = :match.DiagnosisA.Negation, Certainty = :a.Lookup2.Level}
 
 Rule: DiagnosisB3
@@ -41,11 +41,11 @@ Priority: 100
 (   
 	{DiagnosisA.Negation == Affirmed, DiagnosisA.Experiencer == Patient} 
    ({Lookup2.minorType == probability}):a
-    {Lookup2.lobe == occipital}
+   ({Lookup2.lobe == occipital}):b
     
  ):match  
  -->
-:match.DiagnosisB = {rule = DiagnosisB3, PREF = "Occipital lobe epilepsy", CUI = "C0393691", 
+:b.DiagnosisB = {rule = DiagnosisB3, PREF = "Occipital lobe epilepsy", CUI = "C0393691", 
 Negation = :match.DiagnosisA.Negation, Certainty = :a.Lookup2.Level}
 
 Rule: DiagnosisB4
@@ -54,11 +54,11 @@ Priority: 100
 (   
 	{DiagnosisA.Negation == Affirmed, DiagnosisA.Experiencer == Patient} 
    ({Lookup2.minorType == probability}):a
-    {Lookup2.lobe == parietal}
+   ({Lookup2.lobe == parietal}):b
     
  ):match  
  -->
-:match.DiagnosisB = {rule = DiagnosisB4, PREF = "Parietal lobe epilepsy", CUI = "C0393690", 
+:b.DiagnosisB = {rule = DiagnosisB4, PREF = "Parietal lobe epilepsy", CUI = "C0393690", 
 Negation = :match.DiagnosisA.Negation, Certainty = :a.Lookup2.Level}
 
 Rule: DiagnosisB5
@@ -67,11 +67,11 @@ Priority: 100
 (   
 	{DiagnosisA.Negation == Affirmed, DiagnosisA.Experiencer == Patient} 
    ({Lookup2.minorType == probability}):a
-    {Lookup2.epilepsy == focal}
+   ({Lookup2.epilepsy == focal}):b
     
  ):match  
  -->
-:match.DiagnosisB = {rule = DiagnosisB5, PREF = "Focal epilepsy", CUI = "C0014547", 
+:b.DiagnosisB = {rule = DiagnosisB5, PREF = "Focal epilepsy", CUI = "C0014547", 
 Negation = :match.DiagnosisA.Negation, Certainty = :a.Lookup2.Level}
 
 Rule: DiagnosisB6
@@ -80,9 +80,9 @@ Priority: 100
 (   
 	{DiagnosisA.Negation == Affirmed, DiagnosisA.Experiencer == Patient} 
    ({Lookup2.minorType == probability}):a
-    {Lookup2.epilepsy == generalised}
+   ({Lookup2.epilepsy == generalised}):b
     
  ):match  
  -->
-:match.DiagnosisB = {rule = DiagnosisB6, PREF = "Generalised epilepsy", CUI = "C0014548", 
+:b.DiagnosisB = {rule = DiagnosisB6, PREF = "Generalised epilepsy", CUI = "C0014548", 
 Negation = :match.DiagnosisA.Negation, Certainty = :a.Lookup2.Level}

@@ -1,6 +1,6 @@
 Phase: DiagnosisFilter
 Input:  DiagnosisA DiagnosisB
-Options: control=all
+Options: control=appelt
 
 Rule: DiagnosisAFilter
 Priority: 100
