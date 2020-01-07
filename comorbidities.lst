@@ -1394,3 +1394,7 @@ hemiparesis	CUI=C0018989	PREF=Hemiparesis	TUI=T184	STY=sign or symptom
 psychotic episodes	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
 cavernoma	CUI=C0018920	PREF=Hemangioma, Cavernous	TUI=T191	STY=Neoplastic Process
 cavernous hemangioma	CUI=C0018920	PREF=Hemangioma, Cavernous	TUI=T191	STY=Neoplastic Process
+lobectomy of brain	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	STY=Therapeutic or Preventive Procedure	
+excision of brain lobe	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
+resection of brain lobe	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
+brain lobectomy	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
