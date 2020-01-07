@@ -1,0 +1,10 @@
+C0151526	preterm birth
+C0151526	premature birth
+C0151526	born prematurely
+C3829315	late preterm birth
+C4054482	moderate to late  preterm birth
+C4053870	very preterm birth
+C4055046	extremely preterm birth
+C4055046	extreme preterm birth
+C0233324	born at term
+C0233324	term birth

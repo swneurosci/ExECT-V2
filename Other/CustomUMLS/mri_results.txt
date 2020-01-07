@@ -1,0 +1,2 @@
+C0436481	MRI normal
+C1319851	MRI abnormal

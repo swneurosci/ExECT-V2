@@ -1,0 +1,56 @@
+C0441471	major ones
+C0441471	smaller onese
+C0231530	jerk
+C0231530	jerks
+C0231530	Jerk
+C0231530	Jerks
+C0563606	Vacant episode
+C0563606	Vacant episodes
+C0563606	vacant episode
+C0563606	vacant episodes
+C0563606	Blank spell
+C0563606	blank spell
+C0563606	blank spells
+C0563606	Blank episode
+C0563606	blank episodes
+C0332189	Episode
+C0332189	episode
+C0332189	Episodes
+C0332189	episodes
+C4048158	Convulsion
+C4048158	convulsion
+C4048158	Convulsions
+C4048158	convulsions
+C0041657	Loss of consciousness
+C0041657	loss of consciousness
+C0041657	episodes of loss of consciousness
+C0441471	event
+C0441471	events
+C0344329	Collapse
+C0424531	funny do
+C0424531	funny dos
+C0424531	funny spell
+C0424531	funny turn
+C0424531	funny turns
+C0424531	Funny spell
+C0424531	Funny turn
+C0424531	Funny turns
+C0424531	odd episode
+C0424531	odd episodes
+C0424531	Unusual episodes
+C0424531	unusual episode
+C0424531	unusual episodes
+C0424531	Unusual episode
+C0231530	muscle twitch
+C0563606	absence
+C0563606	Absences
+C0563606	Absence
+C0563606	absences
+C0027066	myoclonic jerks
+C0027066	myoclonus
+C0027066	Myoclonic jerks
+C0027066	Myoclonus
+C0424531	Turn
+C0424531	Turns
+C0231530	episodes of jerks
+C0231530	jerking episodes

@@ -1,0 +1,838 @@
+C0031977	Piracetam
+C0031977	Piracetam
+C0031977	Piracetam (product)
+C0031977	Product containing piracetam
+C0031977	Product containing piracetam (medicinal product)
+C0031977	Piracetam
+C0031977	Piracetam
+C0031977	Piracetam (substance)
+C0031977	Piracetam (substance)
+C0360117	Barbiturate antiepileptic
+C0360117	Barbiturate antiepileptic
+C0360117	Barbiturate antiepileptic
+C0360117	Barbiturate antiepileptic (product)
+C0360117	Barbiturate antiepileptic (substance)
+C0360117	Barbiturate antiepileptic (substance)
+C0053067	Beclamide
+C0053067	Beclamide
+C0053067	Beclamide - chemical (substance)
+C0053067	Beclamide (substance)
+C0053067	Beclamide - chemical
+C0053067	Beclamide
+C0053067	Beclamide
+C0053067	Beclamide (product)
+C0053067	Beclamide
+C0053067	Beclamide (substance)
+C0360123	Carbazepine antiepileptic
+C0360123	Carbazepine antiepileptic
+C0360123	Carbazepine antiepileptic
+C0360123	Carbazepine antiepileptic (product)
+C0360123	Carbazepine antiepileptic (substance)
+C0360123	Carbazepine antiepileptic (substance)
+C0355653	Drugs for control of epilepsy
+C0355653	Drugs for the control of epilepsy
+C0355653	Drugs for the control of epilepsy
+C0355653	Drugs for the control of epilepsy (product)
+C0355653	Drugs for the control of epilepsy (substance)
+C0355712	Drugs used in status epilept
+C0355712	Drugs used in status epilepticus
+C0355712	Drugs used in status epilepticus (product)
+C0355712	Drugs used in status epilepticus
+C0355712	Drugs used in status epilepticus (substance)
+C0595982	Febrile Convulsion Medications
+C0360125	Gaba related antiepileptic
+C0360125	Gaba related antiepileptic
+C0360125	Gaba related antiepileptic (product)
+C0360125	Gaba related antiepileptic (substance)
+C0060926	Gabapentin
+C0060926	gabapentin
+C0060926	Gabapentin
+C0060926	Gabapentin
+C0060926	gabapentin
+C0060926	Product containing gabapentin
+C0060926	Gabapentin (product)
+C0060926	Product containing gabapentin (medicinal product)
+C0060926	Gabapentin
+C0060926	Gabapentin
+C0060926	Gabapentin (substance)
+C0060926	Gabapentin (substance)
+C0020208	Hydantoin
+C0020208	Hydantoin antiepileptic
+C0020208	Hydantoin derivative anticonvulsant (substance)
+C0020208	Hydantoin (product)
+C0020208	Hydantoin
+C0020208	Hydantoin derivative anticonvulsant (product)
+C0020208	Hydantoin derivative anticonvulsant
+C0020208	Hydantoin derivative anticonvulsant
+C0020208	Hydantoin derivative anticonvulsant
+C0020208	Hydantoin
+C0020208	Hydantoin antiepileptic
+C0020208	Hydantoin (substance)
+C0020208	Hydantoin (substance)
+C0064636	Lamotrigine
+C0064636	lamotrigine
+C0064636	Lamotrigine
+C0064636	lamoTRIgine
+C0064636	Lamotrigine
+C0064636	lamotrigine
+C0064636	Product containing lamotrigine (medicinal product)
+C0064636	Lamotrigine (product)
+C0064636	Product containing lamotrigine
+C0064636	Lamotrigine
+C0064636	Lamotrigine
+C0064636	Lamotrigine (substance)
+C0064636	Lamotrigine (substance)
+C0038623	Succinimides
+C0038623	Succinimide antiepileptic
+C0038623	Succinimide antiepileptic
+C0038623	Product containing succinimide
+C0038623	Product containing succinimide (medicinal product)
+C0038623	Succinimide (product)
+C0038623	Succinimide
+C0038623	Succinimide
+C0038623	Succinimide (substance)
+C0038623	Succinimide (substance)
+C0080356	Valproate
+C0080356	Valproate product
+C0080356	Valproate
+C0080356	Valproate
+C0080356	Valproate
+C0080356	Valproate (substance)
+C0080356	Valproate
+C0080356	Valproate
+C0080356	Valproate (product)
+C0080356	Product containing valproate
+C0080356	Product containing valproate (medicinal product)
+C0080356	Valproate product
+C0080356	Valproate
+C0080356	Valproate
+C0080356	Valproate (substance)
+C0080356	Valproate (substance)
+C0076829	topiramate
+C0076829	topiramate
+C0076829	Topiramate
+C0076829	Topiramate
+C0076829	Topiramate
+C0076829	Product containing topiramate (medicinal product)
+C0076829	Product containing topiramate
+C0076829	Topiramate (product)
+C0076829	Topiramate
+C0076829	Topiramate
+C0076829	Topiramate (substance)
+C0076829	Topiramate (substance)
+C0053218	Benzodiazepine antiepileptic
+C0053218	Benzodiazepine antiepileptic (product)
+C0053218	Benzodiazepine antiepileptic
+C0053218	Benzodiazepine antiepileptic
+C0053218	Benzodiazepine antiepileptic (product)
+C0053218	Benzodiazepine antiepileptic
+C0053218	Benzodiazepine antiepileptic
+C0068897	tiagabine
+C0068897	Tiagabine
+C0068897	Tiagabine
+C0068897	tiaGABine
+C0068897	Tiagabine
+C0068897	tiagabine
+C0068897	Tiagabine (product)
+C0068897	Product containing tiagabine
+C0068897	Product containing tiagabine (medicinal product)
+C0068897	Tiagabine
+C0068897	Tiagabine
+C0068897	Tiagabine (substance)
+C0068897	Tiagabine (substance)
+C0591452	Epilim Chrono
+C0020208	Hydantoin
+C0020208	Hydantoin antiepileptic
+C0020208	Hydantoin derivative anticonvulsant (substance)
+C0020208	Hydantoin (product)
+C0020208	Hydantoin
+C0020208	Hydantoin derivative anticonvulsant (product)
+C0020208	Hydantoin derivative anticonvulsant
+C0020208	Hydantoin derivative anticonvulsant
+C0020208	Hydantoin derivative anticonvulsant
+C0020208	Hydantoin
+C0020208	Hydantoin antiepileptic
+C0020208	Hydantoin (substance)
+C0020208	Hydantoin (substance)
+C0893761	lacosamide
+C0893761	Lacosamide (substance)
+C0893761	Lacosamide
+C0893761	Lacosamide
+C0893761	Lacosamide
+C0893761	Lacosamide
+C0893761	Product containing lacosamide
+C0893761	Product containing lacosamide (medicinal product)
+C0893761	Lacosamide (product)
+C0004745	Barbiturates
+C0004745	Barbiturates
+C0004745	Barbiturate
+C0004745	Barbiturate
+C0004745	Barbiturates
+C0004745	Barbiturate (substance)
+C0004745	Barbiturate
+C0004745	Barbiturates
+C0004745	Barbiturate
+C0004745	Barbiturates
+C0004745	Barbiturate
+C0004745	Barbiturate
+C0004745	Barbiturate (product)
+C0004745	Barbiturate (substance)
+C0004745	"Barbiturate, NOS"
+C0004745	Barbiturate (substance)
+C0705941	topiramate 15 MG Oral Capsule
+C0705941	Topiramate 15mg capsule (product)
+C0705941	Topiramate 15mg capsule
+C0705941	Topiramate 15mg beads in capsule (product)
+C0705941	Topiramate 15mg beads in capsule
+C0705941	Topiramate 15mg beads in capsule (substance)
+C0705941	Topiramate 15mg sprinkle capsule
+C4048284	Benzodiazepine
+C4048284	Benzodiazepine
+C4048284	Benzodiazepine (product)
+C4048284	Benzodiazepine (substance)
+C4048284	Benzodiazepine
+C4048284	Benzodiazepine
+C4048284	"Benzodiazepine, NOS"
+C4048284	Benzodiazepine (substance)
+C0071754	potassium bromide
+C0071754	Potassium bromide
+C0071754	Potassium bromide (product)
+C0071754	Potassium bromide
+C0071754	Potassium bromide (substance)
+C0006949	Carbamazepine
+C0006949	Carbamazepine
+C0006949	Carbamazepine
+C0006949	Carbamazepine
+C0006949	Carbamazepine product
+C0006949	Carbamazepine
+C0006949	Carbamazepine - chemical
+C0006949	Carbamazepine
+C0006949	carBAMazepine
+C0006949	Carbamazepine
+C0006949	Carbamazepine - chemical (substance)
+C0006949	Carbamazepine - chemical
+C0006949	Carbamazepine
+C0006949	Product containing carbamazepine (medicinal product)
+C0006949	Carbamazepine (product)
+C0006949	Carbamazepine product
+C0006949	Product containing carbamazepine
+C0006949	Carbamazepine
+C0006949	Carbamazepine
+C0006949	Carbamazepine (substance)
+C0006949	Carbamazepine (substance)
+C0060135	felbamate
+C0060135	Felbamate
+C0060135	Felbamate
+C0060135	Felbamate product (product)
+C0060135	Product containing felbamate
+C0060135	Product containing felbamate (medicinal product)
+C0060135	Felbamate
+C0060135	Felbamate (substance)
+C0060135	Felbamate product
+C0078844	zonisamide
+C0078844	Zonisamide
+C0078844	Zonisamide
+C0078844	zonisamide
+C0078844	Zonisamide (product)
+C0078844	Product containing zonisamide (medicinal product)
+C0078844	Product containing zonisamide
+C0078844	Zonisamide (substance)
+C0078844	Zonisamide
+C0078844	Zonisamide
+C0038807	sulthiame
+C0038807	Sultiame
+C0038807	Sultiame (product)
+C0038807	Sulthiame
+C0038807	Sulthiame
+C0038807	sultiame
+C0038807	Sulthiamine
+C0038807	Sulthiamine (substance)
+C0038807	Sulthiame
+C0038807	Sultiame
+C0360121	Parenteral phenobarbitone
+C0360121	Parenteral phenobarbital
+C0360121	Parenteral phenobarbitone (product)
+C0360121	Parenteral phenobarbitone
+C0360121	Parenteral phenobarbital (product)
+C0360121	Parenteral form phenobarbital
+C0360121	Parenteral form phenobarbital
+C0360121	Parenteral form phenobarbitone
+C0360121	Parenteral form phenobarbital
+C0360121	Product containing phenobarbitone in parenteral dosage form
+C0360121	Product containing phenobarbitone in parenteral dosage form (medicinal product form)
+C0360121	Parenteral form phenobarbitone (product)
+C0360121	Phenobarbitone in parenteral dosage form
+C0360121	Parenteral phenobarbitone (substance)
+C0301399	Methyl phenyl ethyl hydantoin
+C0301399	Methyl phenyl ethyl hydantoin (substance)
+C0074730	sodium bromide
+C0074730	Sodium bromide
+C0074730	Sodium bromide (substance)
+C0705940	topiramate 25 MG Oral Capsule
+C0705940	Topiramate 25mg capsule
+C0705940	Topiramate 25mg capsule (product)
+C0705940	Topiramate 25mg beads in capsule (product)
+C0705940	Topiramate 25mg beads in capsule
+C0705940	Topiramate 25mg beads in capsule (substance)
+C0705940	Topiramate 25mg sprinkle capsule
+C2725260	eslicarbazepine
+C2725260	Eslicarbazepine (substance)
+C2725260	Eslicarbazepine
+C2725260	Eslicarbazepine
+C2725260	Eslicarbazepine (product)
+C0530684	ezogabine
+C0530684	ezogabine
+C0530684	Retigabine
+C0530684	Retigabine (substance)
+C0530684	Ezogabine
+C0530684	Ezogabine
+C0530684	Ezogabine
+C0530684	Retigabine
+C0530684	Ezogabine
+C0530684	Product containing retigabine
+C0530684	Product containing retigabine (medicinal product)
+C0530684	Retigabine (product)
+C0530684	retigabine
+C1988112	Fosphenytoin &#x7C; Bld-Ser-Plas
+C0109002	methsuximide
+C0109002	methsuximide
+C0109002	Methsuximide
+C0109002	Methsuximide
+C0109002	Product containing mesuximide (medicinal product)
+C0109002	Methsuximide (product)
+C0109002	Product containing methsuximide
+C0109002	Mesuximide
+C0109002	Mesuximide (substance)
+C0109002	Methsuximide (substance)
+C0109002	Product containing mesuximide
+C0109002	mesuximide
+C0109002	Methsuximide
+C0109002	Methsuximide
+C0109002	Mesuximide
+C0060926	Gabapentin
+C0060926	gabapentin
+C0060926	Gabapentin
+C0060926	Gabapentin
+C0060926	gabapentin
+C0060926	Product containing gabapentin
+C0060926	Gabapentin (product)
+C0060926	Product containing gabapentin (medicinal product)
+C0060926	Gabapentin
+C0060926	Gabapentin
+C0060926	Gabapentin (substance)
+C0060926	Gabapentin (substance)
+C0070592	phensuximide
+C0070592	Phensuximide
+C0070592	Phensuximide - chemical
+C0070592	Phensuximide - chemical (substance)
+C0070592	Phensuximide
+C0070592	Phensuximide
+C0070592	Phensuximide
+C0070592	Phensuximide (product)
+C0070592	Phensuximide (substance)
+C0377265	Levetiracetam
+C0377265	Levetiracetam
+C0377265	levETIRAcetam
+C0377265	Levetiracetam
+C0377265	Levetiracetam (substance)
+C0377265	Levetiracetam
+C0377265	Levetiracetam (product)
+C0377265	Product containing levetiracetam
+C0377265	Product containing levetiracetam (medicinal product)
+C0377265	Levetiracetam
+C0377265	Levetiracetam (substance)
+C0377265	Levetiracetam
+C0377265	Levetiracetam
+C0377265	Levetiracetam (product)
+C0377265	Levetiracetam (substance)
+C0015043	Ethosuximide
+C0015043	Ethosuximide
+C0015043	Ethosuximide
+C0015043	Ethosuximide
+C0015043	Ethosuximide (substance)
+C0015043	Ethosuximide
+C0015043	Ethosuximide
+C0015043	Product containing ethosuximide (medicinal product)
+C0015043	Ethosuximide (product)
+C0015043	Product containing ethosuximide
+C0015043	Ethosuximide
+C0015043	Ethosuximide
+C0015043	Ethosuximide (substance)
+C0015043	Ethosuximide (substance)
+C0064636	Lamotrigine
+C0064636	lamotrigine
+C0064636	Lamotrigine
+C0064636	lamoTRIgine
+C0064636	Lamotrigine
+C0064636	lamotrigine
+C0064636	Product containing lamotrigine (medicinal product)
+C0064636	Lamotrigine (product)
+C0064636	Product containing lamotrigine
+C0064636	Lamotrigine
+C0064636	Lamotrigine
+C0064636	Lamotrigine (substance)
+C0064636	Lamotrigine (substance)
+C1975441	Vigabatrin &#x7C; bld-ser-plas
+C0070072	paramethadione
+C0070072	Paramethadione
+C0070072	Paramethadione - chemical
+C0070072	Paramethadione - chemical (substance)
+C0070072	Paramethadione
+C0070072	Paramethadione
+C0070072	Paramethadione
+C0070072	Isoethadione
+C0070072	Paramethad
+C0070072	Paramethadione (product)
+C0070072	Paramethadione (substance)
+C0075262	Stiripentol (product)
+C0075262	Stiripentol (substance)
+C0075262	Stiripentol
+C0075262	Stiripentol
+C0075262	Stiripentol
+C0075262	Stiripentol
+C0080356	Valproate
+C0080356	Valproate product
+C0080356	Valproate
+C0080356	Valproate
+C0080356	Valproate
+C0080356	Valproate (substance)
+C0080356	Valproate
+C0080356	Valproate
+C0080356	Valproate (product)
+C0080356	Product containing valproate
+C0080356	Product containing valproate (medicinal product)
+C0080356	Valproate product
+C0080356	Valproate
+C0080356	Valproate
+C0080356	Valproate (substance)
+C0080356	Valproate (substance)
+C0041038	Trimethadione
+C0041038	Trimethadione
+C0041038	Trimethadione
+C0041038	Trimethadione - chemical
+C0041038	Trimethadione - chemical (substance)
+C0041038	Trimethadione
+C0041038	Trimethadione (product)
+C0041038	Product containing trimethadione (medicinal product)
+C0041038	Product containing trimethadione
+C0041038	Trimethadione
+C0041038	Trimethadione
+C0041038	Troxidone
+C0041038	Trimethadione (substance)
+C1981551	Anticonvulsants &#x7C; urine
+C1981550	Anticonvulsants &#x7C; bld-ser-plas
+C0070525	phenacemide
+C0070525	Phenacemide
+C0070525	Phenacemide
+C0070525	Phenacemide
+C0070525	Phenacemide
+C0070525	Phenylacetylcarbamide
+C0070525	Phenylacetylurea
+C0070525	Phenacemide (product)
+C0070525	Phenacemide (substance)
+C0031507	Phenytoin
+C0031507	Phenytoin
+C0031507	Phenytoin
+C0031507	Phenytoin
+C0031507	Phenylhydantoin
+C0031507	Phenytoin product
+C0031507	Phenytoin
+C0031507	Phenytoin - chemical
+C0031507	Phenytoin
+C0031507	Phenytoin - chemical
+C0031507	Phenytoin - chemical (substance)
+C0031507	Phenytoin
+C0031507	Phenytoin product
+C0031507	DPH
+C0031507	Product containing phenytoin
+C0031507	Diphenylhydantoin
+C0031507	Phenylhydantoin
+C0031507	Product containing phenytoin (medicinal product)
+C0031507	Phenytoin (product)
+C0031507	Phenytoin
+C0031507	Phenytoin
+C0031507	Diphenylhydantoin
+C0031507	DPH
+C0031507	Phenytoin (substance)
+C0031507	Phenytoin
+C0031507	Phenytoin (substance)
+C0657912	pregabalin
+C0657912	Pregabalin
+C0657912	Pregabalin
+C0657912	pregabalin
+C0657912	Product containing pregabalin (medicinal product)
+C0657912	Pregabalin (product)
+C0657912	Product containing pregabalin
+C0657912	Pregabalin (substance)
+C0657912	Pregabalin
+C0657912	Pregabalin
+C1974052	Sulthiame &#x7C; bld-ser-plas
+C0044411	1-Hydroxymidazolam
+C0044411	1-Hydroxymidazolam
+C0044411	1-Hydroxymidazolam (substance)
+C0044411	1-Hydroxymidazolam
+C0076829	topiramate
+C0076829	topiramate
+C0076829	Topiramate
+C0076829	Topiramate
+C0076829	Topiramate
+C0076829	Product containing topiramate (medicinal product)
+C0076829	Product containing topiramate
+C0076829	Topiramate (product)
+C0076829	Topiramate
+C0076829	Topiramate
+C0076829	Topiramate (substance)
+C0076829	Topiramate (substance)
+C0025381	Mephenytoin
+C0025381	Mephenytoin
+C0025381	Mephenytoin
+C0025381	Mephenytoin
+C0025381	Mephenytoin (product)
+C0025381	Product containing mephenytoin (medicinal product)
+C0025381	Product containing mephenytoin
+C0025381	Mephenytoin
+C0025381	Methoin
+C0025381	Methylphenylethylhydantoin
+C0025381	Mephenytoin (substance)
+C0025381	Mephenytoin
+C0069751	oxcarbazepine
+C0069751	Oxcarbazepine
+C0069751	OXcarbazepine
+C0069751	Oxcarbazepine
+C0069751	Oxcarbazepine (substance)
+C0069751	Oxcarbazepine
+C0069751	oxcarbazepine
+C0069751	Product containing oxcarbazepine
+C0069751	Oxcarbazepine (product)
+C0069751	Product containing oxcarbazepine (medicinal product)
+C0069751	Oxcarbazepine (substance)
+C0069751	Oxcarbazepine
+C0069751	Oxcarbazepine
+C0069751	Oxcarbazepine (substance)
+C0033148	Primidone
+C0033148	Primidone
+C0033148	Hexamidinum
+C0033148	Primidone
+C0033148	Primidone
+C0033148	Primidone product (product)
+C0033148	Primidone product
+C0033148	Primidone
+C0033148	Desoxyphenobarbital
+C0033148	Primidone (product)
+C0033148	Hexamidinum
+C0033148	Product containing primidone (medicinal product)
+C0033148	Product containing primidone
+C0033148	Primidone
+C0033148	Primidone
+C0033148	Desoxyphenobarbital
+C0033148	Primidone (substance)
+C0033148	Primidone (substance)
+C0015046	Ethotoin
+C0015046	Ethotoin
+C0015046	Ethotoin
+C0015046	Product containing ethotoin (medicinal product)
+C0015046	Product containing ethotoin
+C0015046	Ethotoin product (product)
+C0015046	Ethotoin
+C0015046	Ethotoin (substance)
+C0015046	Ethotoin product
+C0015046	Ethotoin
+C1994495	Pheneturide &#x7C; bld-ser-plas
+C2698764	perampanel
+C2698764	Perampanel
+C2698764	Perampanel (substance)
+C2698764	Perampanel
+C2698764	Perampanel (product)
+C2698764	Product containing perampanel
+C2698764	Product containing perampanel (medicinal product)
+C0251504	zaleplon
+C0251504	Zaleplon
+C0251504	Zaleplon (substance)
+C0251504	Zaleplon
+C0251504	Zaleplon
+C0251504	Zaleplon (product)
+C0251504	Product containing zaleplon
+C0251504	Product containing zaleplon (medicinal product)
+C0251504	Zaleplon (substance)
+C0251504	Zaleplon
+C0251504	Zaleplon
+C0251504	Zaleplon (substance)
+C0059837	Pheneturide
+C0059837	Pheneturide
+C0059837	Pheneturide
+C0059837	Pheneturide (substance)
+C0068897	tiagabine
+C0068897	Tiagabine
+C0068897	Tiagabine
+C0068897	tiaGABine
+C0068897	Tiagabine
+C0068897	tiagabine
+C0068897	Tiagabine (product)
+C0068897	Product containing tiagabine
+C0068897	Product containing tiagabine (medicinal product)
+C0068897	Tiagabine
+C0068897	Tiagabine
+C0068897	Tiagabine (substance)
+C0068897	Tiagabine (substance)
+C0213404	Rufinamide
+C0213404	Rufinamide
+C0213404	Rufinamide (substance)
+C0213404	rufinamide
+C0213404	Rufinamide
+C0213404	Rufinamide
+C0213404	Rufinamide (product)
+C0213404	Product containing rufinamide (medicinal product)
+C0213404	Product containing rufinamide
+C0012386	Dimethadione
+C0012386	Dimethadione
+C0012386	Dimethadione
+C0012386	Dimethadione
+C0012386	Dimethadione (substance)
+C0008221	Chlormethiazole
+C0008221	Clomethiazole
+C0008221	Chlormethiazole
+C0008221	Chlormethiazole
+C0008221	Chlormethiazole
+C0008221	Chlormethiazole (substance)
+C0008221	Chlormethiazole (product)
+C0008221	Product containing clomethiazole
+C0008221	Product containing clomethiazole (medicinal product)
+C0008221	Clomethiazole
+C0008221	clomethiazole
+C0008221	Chlormethiazole
+C0008221	Clomethiazole
+C0008221	Clomethiazole (substance)
+C0008221	Chlormethiazole (substance)
+C0030438	Paraldehyde
+C0030438	Paraldehyde
+C0030438	Paraldehyde product
+C0030438	Paraldehyde
+C0030438	Paraldehyde
+C0030438	Paraldehyde
+C0030438	Paraldehyde (substance)
+C0030438	Paraldehyde
+C0030438	Paraldehyde
+C0030438	Paraldehyde
+C0030438	Paracetaldehyde
+C0030438	Paracetaldehyde
+C0030438	Paraldehyde product
+C0030438	Paraldehyde (product)
+C0030438	Paraldehyde (substance)
+C0030438	Paraldehyde (substance)
+C0031977	Piracetam
+C0031977	Piracetam
+C0031977	Piracetam (product)
+C0031977	Product containing piracetam
+C0031977	Product containing piracetam (medicinal product)
+C0031977	Piracetam
+C0031977	Piracetam
+C0031977	Piracetam (substance)
+C0031977	Piracetam (substance)
+C0360117	Barbiturate antiepileptic
+C0360117	Barbiturate antiepileptic
+C0360117	Barbiturate antiepileptic
+C0360117	Barbiturate antiepileptic (product)
+C0360117	Barbiturate antiepileptic (substance)
+C0360117	Barbiturate antiepileptic (substance)
+C0360123	Carbazepine antiepileptic
+C0360123	Carbazepine antiepileptic
+C0360123	Carbazepine antiepileptic
+C0360123	Carbazepine antiepileptic (product)
+C0360123	Carbazepine antiepileptic (substance)
+C0360123	Carbazepine antiepileptic (substance)
+C0038623	Succinimides
+C0038623	Succinimide antiepileptic
+C0038623	Succinimide antiepileptic
+C0038623	Product containing succinimide
+C0038623	Product containing succinimide (medicinal product)
+C0038623	Succinimide (product)
+C0038623	Succinimide
+C0038623	Succinimide
+C0038623	Succinimide (substance)
+C0038623	Succinimide (substance)
+C0048044	Vigabatrin
+C0048044	Vigabatrin
+C0048044	Vigabatrin
+C0048044	Vigabatrin product
+C0048044	Vigabatrin - chemical (substance)
+C0048044	Vigabatrin - chemical
+C0048044	Vigabatrin
+C0048044	Vigabatrin (substance)
+C0048044	Vigabatrin - chemical
+C0048044	Vigabatrin
+C0048044	Vigabatrin
+C0048044	Product containing vigabatrin (medicinal product)
+C0048044	Vigabatrin product (product)
+C0048044	Product containing vigabatrin
+C0048044	Vigabatrin product
+C0048044	Vigabatrin
+C0048044	Vigabatrin product (substance)
+C0048044	Gamma vinyl GABA
+C0048044	Gamma vinyl gamma aminobutyric acid
+C1289959	Desmethylparamethadione (substance)
+C1289959	Desmethylparamethadione
+C0304361	Oxazolidinediones
+C0304361	Oxazolidinedione (product)
+C0304361	Product containing oxazolidinedione
+C0304361	Product containing oxazolidinedione (medicinal product)
+C0304361	Oxazolidinedione (substance)
+C0304361	Oxazolidinedione
+C0304361	Oxazolidinedione
+C0304361	"Oxazolidinedione, NOS"
+C0304361	Oxazolidinedione (substance)
+C0053067	Beclamide
+C0053067	Beclamide
+C0053067	Beclamide - chemical (substance)
+C0053067	Beclamide (substance)
+C0053067	Beclamide - chemical
+C0053067	Beclamide
+C0053067	Beclamide
+C0053067	Beclamide (product)
+C0053067	Beclamide
+C0053067	Beclamide (substance)
+C0024480	Magnesium sulfate
+C0024480	Magnesium sulphate
+C0024480	Magnesium Sulfate
+C0024480	Magnesium sulfate (product)
+C0024480	Magnesium sulphate
+C0024480	Product containing magnesium sulfate (medicinal product)
+C0024480	Product containing magnesium sulfate
+C0024480	Magnesium sulfate
+C0024480	Magnesium sulfate
+C0024480	Magnesium sulphate
+C0024480	Magnesium sulfate (substance)
+C0024480	Magnesium sulfate (substance)
+C0355653	Drugs for control of epilepsy
+C0355653	Drugs for the control of epilepsy
+C0355653	Drugs for the control of epilepsy
+C0355653	Drugs for the control of epilepsy (product)
+C0355653	Drugs for the control of epilepsy (substance)
+C0355712	Drugs used in status epilept
+C0355712	Drugs used in status epilepticus
+C0355712	Drugs used in status epilepticus (product)
+C0355712	Drugs used in status epilepticus
+C0355712	Drugs used in status epilepticus (substance)
+C0360125	Gaba related antiepileptic
+C0360125	Gaba related antiepileptic
+C0360125	Gaba related antiepileptic (product)
+C0360125	Gaba related antiepileptic (substance)
+C0053218	Benzodiazepine antiepileptic
+C0053218	Benzodiazepine antiepileptic (product)
+C0053218	Benzodiazepine antiepileptic
+C0053218	Benzodiazepine antiepileptic
+C0053218	Benzodiazepine antiepileptic (product)
+C0053218	Benzodiazepine antiepileptic
+C0053218	Benzodiazepine antiepileptic
+C4518413	Parenteral magnesium sulfate
+C4518413	Parenteral magnesium sulphate product
+C4518413	Parenteral magnesium sulfate product
+C4518413	Parenteral magnesium sulfate
+C4518413	Parenteral magnesium sulfate (product)
+C4518413	Parenteral magnesium sulphate
+C4518413	Parenteral magnesium sulfate
+C4518413	Parenteral magnesium sulphate
+C4518413	Parenteral magnesium sulfate (product)
+C4518413	Magnesium sulphate I.V
+C4518413	Magnesium sulfate I.V
+C4518413	Magnesium sulfate I.V (product)
+C4518413	Parenteral form magnesium sulphate
+C4518413	Parenteral form magnesium sulfate (product)
+C4518413	Magnesium sulfate in parenteral dosage form
+C4518413	Parenteral form magnesium sulphate product
+C4518413	Product containing magnesium sulfate in parenteral dosage form (medicinal product form)
+C4518413	Product containing magnesium sulfate in parenteral dosage form
+C4518413	Parenteral form magnesium sulfate
+C4518413	Magnesium sulfate I.V (substance)
+C4518413	Parenteral magnesium sulfate (substance)
+C4518413	Parenteral magnesium sulfate product (product)
+C1445641	Phenyltriazine derivative anticonvulsant (substance)
+C1445641	Phenyltriazine derivative anticonvulsant
+C0054635	caramiphen
+C0054635	Caramiphen
+C0054635	Caramiphen
+C0054635	Caramiphen (product)
+C0054635	Caramiphen (substance)
+C0042291	Valproic Acid
+C0042291	Valproic acid
+C0042291	Valproic Acid
+C0042291	DPA
+C0042291	DPA
+C0042291	DPA - dipropylacetic acid
+C0042291	DPA - dipropylacetic acid
+C0042291	Product containing valproic acid
+C0042291	2-Propylvaleric acid
+C0042291	2-Propylpentanoic acid
+C0042291	Product containing valproic acid (medicinal product)
+C0042291	Valproic acid (product)
+C0042291	Dipropylacetic acid
+C0042291	2-Propylpentanoic acid
+C0042291	2-Propylvaleric acid
+C0042291	Dipropylacetic acid
+C0042291	Valproic acid
+C0042291	Valproic acid
+C0042291	Valproic acid (substance)
+C0042291	Valproic acid (substance)
+C1628315	Deoxybarbiturate (substance)
+C1628315	Deoxybarbiturate
+C0030883	Pentobarbital
+C0030883	Pentobarbital
+C0030883	PENTobarbital
+C0030883	Pentobarbitone - chemical (substance)
+C0030883	Pentobarbitone - chemical
+C0030883	Pentobarbital
+C0030883	Pentobarbital (product)
+C0030883	Product containing pentobarbital (medicinal product)
+C0030883	Pentobarbitone
+C0030883	Product containing pentobarbital
+C0030883	Pentobarbital
+C0030883	Pentobarbital
+C0030883	Pentobarbitone
+C0030883	Pentobarbital (substance)
+C0030883	Pentobarbital (substance)
+C0025382	Methylphenobarbital
+C0025382	Methylphenobarbitone
+C0025382	Mephobarbital
+C0025382	Mephobarbital
+C0025382	Mephobarbital product
+C0025382	Mephobarbital product (product)
+C0025382	Mephobarbital
+C0025382	Methylphenobarbital (substance)
+C0025382	Product containing methylphenobarbital (medicinal product)
+C0025382	Mephobarbital (product)
+C0025382	Product containing mephobarbital
+C0025382	Methylphenobarbitone
+C0025382	Mephobarbital (substance)
+C0025382	Product containing methylphenobarbital
+C0025382	methylphenobarbital
+C0025382	Mephobarbital
+C0025382	Mephobarbital
+C0025382	Methylphenobarbital
+C0025382	Methylphenobarbital
+C0025382	Mephobarbital (substance)
+C1699861	Brivaracetam (product)
+C1699861	Brivaracetam (substance)
+C1699861	Brivaracetam
+C1699861	Brivaracetam
+C1699861	Brivaracetam
+C1699861	Brivaracetam
+C0055891	Clobazam
+C0055891	clobazam
+C0037567	Sodium Valproate
+C0037567	sodium valproate
+C0037567	sodium Valproate
+C0037567	Sodium valproate
+C0700087	Tegretol
+C0700087	tegretol
+C0031412	Phenobarbital 
+C0031412	phenobarbital 
+C0031412	Phenobarbitone
+C0031412	phenobarbitone
+C0026056	midazolam
+C0026056	Midazolam
+C0009011	clonazepam
+C0009011	Clonazepam
+C0876060	Keppra
+C0678180	Lamictal
+C0876060	keppra
+C0591451	Epilim
+C0700016	Mysoline
