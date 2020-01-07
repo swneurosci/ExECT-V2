@@ -149,7 +149,9 @@ generalised onset seizures	CUI=C0311334	PREF=Generalized convulsive epilepsy	TUI
 generalised seizure	CUI=C0234533	PREF=Generalized seizures	TUI=T047	STY=Disease or Syndrome
 generalised seizures	CUI=C0234533	PREF=generalised seizures	TUI=T047	STY=Disease or Syndrome
 generalised tonic clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
+generalised tonic-clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
 generalised tonic-clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
+generalised tonic clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
 generalized convulsive seizure	CUI=C0311334	PREF=Generalized convulsive epilepsy	TUI=T047	STY=Disease or Syndrome
 generalized convulsive seizures	CUI=C0311334	PREF=Generalized convulsive epilepsy	TUI=T047	STY=Disease or Syndrome
 generalized status epilepticus	CUI=C0038220	PREF=Status Epilepticus	TUI=T047	STY=Disease or Syndrome
