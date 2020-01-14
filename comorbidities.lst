@@ -1398,3 +1398,8 @@ lobectomy of brain	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	STY=Therapeutic
 excision of brain lobe	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
 resection of brain lobe	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
 brain lobectomy	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
+Post-traumatic stress disorder	CUI=C0038436	PREF=Post-traumatic stress disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
+Post traumatic stress disorder	CUI=C0038436	PREF=Post-traumatic stress disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
+PTSD	CUI=C0038436	PREF=Post-traumatic stress disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
+syncope		CUI=C0039070	PREF=syncope	TUI=T184	STY=sign or symptom
+Vasovagal syncope	CUI=C0042420 PREF=Vasovagal syncope	TUI=T047	STY=Disease or Syndrome

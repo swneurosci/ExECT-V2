@@ -1399,3 +1399,7 @@ C0195961	lobectomy of brain
 C0195961	excision of brain lobe
 C0195961	resection of brain lobe
 C0195961	brain lobectomy
+C0038436	Post-traumatic stress disorder
+C0038436	PTSD	
+C0039070	syncope
+C0042420	vasovagal syncope

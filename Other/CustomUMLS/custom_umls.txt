@@ -1,4 +1,4 @@
-﻿C0195961	lobectomy of brain		
+C0195961	lobectomy of brain		
 C0195961	excision of brain lobe
 C0195961	resection of brain lobe
 C0195961	brain lobectomyC0020208	Hydantoin
@@ -3035,16 +3035,12 @@ C0014549	tonic-clonic seizure syndrome
 C0014549	tonic-clonic seizure syndrome
 C0014549	tonic-clonic seizure syndromes
 C0014553	absence epilepsy
-C0014553	absence seizure
 C0014553	absence seizure disorder
 C0014553	absence seizure disorders
-C0014553	absence seizures
 C0014553	epilepsy, absence
-C0014553	petit mal (disorder)
 C0014553	petit mal epilepsies
 C0014553	petit mal epilepsy
 C0014553	petit mal epilepsy
-C0014553	petit-mal seizure
 C0014553	seizure disorder, absence
 C0014553	seizure disorders, absence
 C0014553	typical absence seizure
@@ -4545,4 +4541,7 @@ C0195961	lobectomy of brain
 C0195961	excision of brain lobe
 C0195961	resection of brain lobe
 C0195961	brain lobectomy
-C0700016	Mysoline
+C0038436	Post-traumatic stress disorder
+C0038436	PTSD	
+C0039070	syncope
+C0042420	vasovagal syncope

@@ -23,7 +23,7 @@ young child:lowerAge=1:upperAge=6:timeUnit=Year
 early childhood:lowerAge=1:upperAge=6:timeUnit=Year
 childhood:lowerAge=2:upperAge=12:timeUnit=Year
 young:lowerAge=13:upperAge=19:timeUnit=Year
-early Years:lowerAge=1:upperAge=6:timeUnit=Year
+early years:lowerAge=1:upperAge=6:timeUnit=Year
 middle age:lowerAge=45:upperAge=65:timeUnit=Year
 early teens:lowerAge=13:upperAge=14:timeUnit=Year
 early teenage:lowerAge=13:upperAge=14:timeUnit=Year
