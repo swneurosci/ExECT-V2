@@ -419,3 +419,5 @@ myoclonic seizure	CUI=C4317123	PREF=Myoclonic Seizures	TUI=T184	STY=sign or symp
 myoclonic seizures	CUI=C4317123	PREF=Myoclonic Seizures	TUI=T184	STY=sign or symptom
 focal myoclonus	CUI=C4511434	PREF=focal myoclonus	TUI=T033	STY=Finding
 Focal emotional seizure	CUI=C4732752	PREF=Focal emotional seizure	TUI=T047	STY=Disease or Syndrome
+Generalised tonic seizure	CUI=C0270844	PREF=Tonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalised tonic seizures	CUI=C0270844	PREF=Tonic seizures	TUI=T047	STY=Disease or Syndrome

@@ -4545,3 +4545,5 @@ C0038436	Post-traumatic stress disorder
 C0038436	PTSD	
 C0039070	syncope
 C0042420	vasovagal syncope
+C0270844	Generalised tonic seizures
+C0270844	Generalised tonic seizure

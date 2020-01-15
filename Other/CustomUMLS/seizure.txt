@@ -420,3 +420,5 @@ C0278188	visual partial seizures
 C0270824	visual seizure
 C0270824	visual seizures
 C1864723	vitamine B6 dependent seizures
+C0270844	Generalised tonic seizures
+C0270844	Generalised tonic seizure

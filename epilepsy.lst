@@ -1136,3 +1136,5 @@ myoclonus, cerebellar ataxia, deafness syndrome (disorder)	CUI=C4518566	PREF=Myo
 epilepsy of infancy with migrating focal seizures	CUI=C4518639	PREF=Epilepsy of infancy with migrating focal seizures	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy of infancy with migrating focal seizures (disorder)	CUI=C4518639	PREF=Epilepsy of infancy with migrating focal seizures	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Focal emotional seizure	CUI=C4732752	PREF=Focal emotional seizure	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+Generalised tonic seizure	CUI=C0270844	PREF=Tonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalised tonic seizures	CUI=C0270844	PREF=Tonic seizures	TUI=T047	STY=Disease or Syndrome

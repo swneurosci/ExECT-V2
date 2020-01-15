@@ -1136,3 +1136,5 @@ C4518566	"myoclonus, cerebellar ataxia, deafness syndrome (disorder)"
 C4518639	epilepsy of infancy with migrating focal seizures
 C4518639	epilepsy of infancy with migrating focal seizures (disorder)
 C4732752	Focal emotional seizure
+C0270844	Generalised tonic seizures
+C0270844	Generalised tonic seizure
