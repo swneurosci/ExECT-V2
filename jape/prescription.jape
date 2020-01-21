@@ -71,6 +71,8 @@ Context = :match.ContextPrescription.context}
 
 /*
 " should be increased by 200mg so that he takes Tegretol 400mg in the morning and 600mg nocte"
+if i changed the area picked up to match1 not match, then it would pick up the tegretol 400mg and 660mg
+currently would not pick them up, but need to check out how mwould interact with other rules, and would move opening of match1 bracket up one line to ContextPrescription
 */
 
 Rule: doseMatch0
