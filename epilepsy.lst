@@ -164,7 +164,6 @@ partial seizure disorder, motor	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T
 simple partial seizure with motor dysfunction	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
 simple partial seizure with motor dysfunction (disorder)	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
 simple partial seizures with motor signs	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
-frontal lobe	CUI=C0016733	PREF=Frontal Lobes	TUI=T023	STY=Body Part, Organ, or Organ Component
 intention myoclonus (finding)	CUI=C0021712	PREF=Myoclonus, Intention	TUI=T184	STY=sign or symptom
 myoclonus, intention	CUI=C0021712	PREF=Myoclonus, Intention	TUI=T184	STY=sign or symptom
 Jacksonian seizure	CUI=C0022333	PREF=Jacksonian seizure	TUI=T047	STY=Disease or Syndrome
@@ -182,13 +181,11 @@ myoclonus (finding)	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
 myoclonus disorder	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
 myoclonus nos	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
 myoclonus nos (disorder)	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-Occipital Lobes	CUI=C0028785	PREF=Occipital Lobes	TUI=T023	STY=Body Part, Organ, or Organ Component
 myoclonus, palatal	CUI=C0030214	PREF=Myoclonus, Palatal	TUI=T184	STY=sign or symptom
 palatal myoclonus (disorder)	CUI=C0030214	PREF=Myoclonus, Palatal	TUI=T184	STY=sign or symptom
 palatal nystagmus	CUI=C0030214	PREF=Myoclonus, Palatal	TUI=T184	STY=sign or symptom
 paramyoclonus multiplex	CUI=C0030463	PREF=paramyoclonus multiplex	TUI=T047	STY=Disease or Syndrome
 paramyoclonus multiplex (disorder)	CUI=C0030463	PREF=paramyoclonus multiplex (disorder)	TUI=T047	STY=Disease or Syndrome
-Parietal Lobes	CUI=C0030560	PREF=Parietal Lobes	TUI=T023	STY=Body Part, Organ, or Organ Component	Epilepsy=Yes
 Cerebroatrophic hyperammonaemia	CUI=C0035372	PREF=Rett Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Cerebroatrophic hyperammonemia	CUI=C0035372	PREF=Rett Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 rett syndrome	CUI=C0035372	PREF=Rett Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -212,7 +209,6 @@ status epilepticus 	CUI=C0038220	PREF=Status Epilepticus	TUI=T047	STY=Disease or
 status epilepticus, generalized	CUI=C0038220	PREF=Status Epilepticus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 status epilepticus, unspecified	CUI=C0038220	PREF=Status Epilepticus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 sturge-weber syndrome	CUI=C0038505	PREF=sturge-weber syndrome	TUI=T019	STY=Congenital Abnormality	Epilepsy=Yes
-Temporal Lobes	CUI=C0039485	PREF=Temporal Lobes	TUI=T023	STY=Body Part, Organ, or Organ Component
 complex partial epilepsy	CUI=C0085417	PREF=Epilepsy, Complex Partial	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 complex partial epileptic seizure	CUI=C0085417	PREF=Epilepsy, Complex Partial	TUI=T047	STY=Disease or Syndrome
 complex partial seizure disorder	CUI=C0085417	PREF=Epilepsy, Complex Partial	TUI=T047	STY=Disease or Syndrome
@@ -312,7 +308,7 @@ Lennox-Gastaut syndrome	CUI=C0238111	PREF=Lennox-Gastaut syndrome	TUI=T047	STY=D
 Lennox-Gastaut syndrome (disorder)	CUI=C0238111	PREF=Lennox-Gastaut syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 dysphonia of palatopharyngolaryngeal myoclonus	CUI=C0264608	PREF=Dysphonia of palatopharyngolaryngeal myoclonus	TUI=T047	STY=Disease or Syndrome
 dysphonia of palatopharyngolaryngeal myoclonus (disorder)	CUI=C0264608	PREF=Dysphonia of palatopharyngolaryngeal myoclonus	TUI=T047	STY=Disease or Syndrome
-ring chromosome 20	CUI=C0265482	PREF=ring chromosome 20	TUI=T019	STY=Congenital Abnormality	Epilepsy=Yes
+ring chromosome 20	CUI=C0265482	PREF=ring chromosome 20	TUI=T019	STY=Congenital Abnormality	=
 cherry red spot myoclonus syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
 cherry red spot-myoclonus syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
 cherry-red spot myoclonus synd	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
@@ -603,8 +599,6 @@ Early infant epileptic encephalopathy wth suppression bursts	CUI=C0393706	PREF=E
 Early infantile epileptic encephalopathy with suppression bursts	CUI=C0393706	PREF=Early infantile epileptic encephalopathy with suppression bursts	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Early infantile epileptic encephalopathy with suppression bursts	CUI=C0393706	PREF=Early infantile epileptic encephalopathy with suppression bursts	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Ohtahara syndrome	CUI=C0393706	PREF=Early infantile epileptic encephalopathy with suppression bursts	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-situation-related seizures	CUI=C0393707	PREF=situation-related seizures	TUI=T033	STY=Finding
-situation-related seizures (disorder)	CUI=C0393707	PREF=situation-related seizures	TUI=T033	STY=Finding
 drug-induced epilepsy	CUI=C0393715	PREF=drug-induced epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 drug-induced epilepsy (disorder)	CUI=C0393715	PREF=drug-induced epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsies, photosensitive reflex	CUI=C0393720	PREF=Reflex Epilepsy, Photosensitive	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -674,13 +668,11 @@ absence seizure with mild clonic components (disorder)	CUI=C0422871	PREF=Absence
 absence seizure with atonic components	CUI=C0422872	PREF=Absence seizure with atonic components	TUI=T046	STY=Pathologic Function
 absence seizure with atonic components (disorder)	CUI=C0422872	PREF=Absence seizure with atonic components	TUI=T046	STY=Pathologic Function
 absences, atonic	CUI=C0422872	PREF=Absence seizure with atonic components	TUI=T046	STY=Pathologic Function
-absence seiz, tonic components	CUI=C0422873	PREF=Absence seizure with tonic components	TUI=T033	STY=Finding
 absence seizure with tonic components	CUI=C0422873	PREF=Absence seizure with tonic components	TUI=T033	STY=Finding
 absence seizure with tonic components (disorder)	CUI=C0422873	PREF=Absence seizure with tonic components	TUI=T033	STY=Finding
 absence seizure with automatisms	CUI=C0422874	PREF=Absence seizure with automatisms	TUI=T033	STY=Finding
 absence seizure with automatisms (disorder)	CUI=C0422874	PREF=Absence seizure with automatisms	TUI=T033	STY=Finding
 absence seizure, automatisms	CUI=C0422874	PREF=Absence seizure with automatisms	TUI=T033	STY=Finding
-absence seiz,autonom component	CUI=C0422875	PREF=absence seiz,autonom component	TUI=T033	STY=Finding
 absence seizure with autonomic components	CUI=C0422875	PREF=Absence seizure with autonomic components	TUI=T033	STY=Finding
 absence seizure with autonomic components (disorder)	CUI=C0422875	PREF=Absence seizure with autonomic components	TUI=T033	STY=Finding
 Myoclonic Encephalopathies	CUI=C0438414	PREF=Myoclonic Encephalopathy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -708,7 +700,7 @@ epilepsy undeterm focal/gener	CUI=C0472355	PREF=epilepsy undetermined whether fo
 epilepsy undetermined whether focal or generalised	CUI=C0472355	PREF=epilepsy undetermined whether focal or generalised	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy undetermined whether focal or generalized	CUI=C0472355	PREF=epilepsy undetermined whether focal or generalized	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy undetermined whether focal or generalized (disorder)	CUI=C0472355	PREF=epilepsy undetermined whether focal or generalized (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-focal seizures with secondary generalisation	CUI=C0474327	PREF=partial seizure evolving to secondary generalised seizure	TUI=T046	STY=Pathologic Function	=
+focal seizures with secondary generalisation	CUI=C0474327	PREF=partial seizure evolving to secondary generalised seizure	TUI=T046	STY=Pathologic Function
 part seiz evolv 2ry gen seiz	CUI=C0474327	PREF=part seiz evolv 2ry gen seiz	TUI=T046	STY=Pathologic Function
 partial seizure evolving to  generalized seizure	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure	TUI=T046	STY=Pathologic Function
 partial seizure evolving to secondary generalised seizure	CUI=C0474327	PREF=partial seizure evolving to secondary generalised seizure	TUI=T046	STY=Pathologic Function
@@ -837,13 +829,13 @@ Benign neonatal sleep myoclonus	CUI=C0751946	PREF=Neonatal Sleep Myoclonus, Beni
 focal clonic seizures	CUI=C0752323	PREF=Focal Clonic Seizures	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 focal tonic seizures	CUI=C0752324	PREF=Focal tonic seizures	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 bilateral convulsive seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-Generalized tonic-clonic seizures, secondary	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome	=
-Generalized tonic-clonic seizures, secondary	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome	=
+Generalized tonic-clonic seizures, secondary	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+Generalized tonic-clonic seizures, secondary	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 focal to bilateral tonic-clonic seizure	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-Secondary generalised tonic clonic seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome	=
-Secondary generalized tonic clonic seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome	=
-Partial seizures with secondary generalization	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome	=
-Generalized tonic-clonic seizures, secondary	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome	=
+Secondary generalised tonic clonic seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+Secondary generalized tonic clonic seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+Partial seizures with secondary generalization	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+Generalized tonic-clonic seizures, secondary	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 Secondarily generalised tonic-clonic seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 drug refractory epilepsies	CUI=C1096063	PREF=Drug Resistant Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 drug refractory epilepsy	CUI=C1096063	PREF=Drug Resistant Epilepsy	FTUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -934,9 +926,6 @@ CECTS	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrom
 febrile myoclonus	CUI=C2711743	PREF=febrile myoclonus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 myoclonus associated with fever	CUI=C2711743	PREF=febrile myoclonus	TUI=T047	STY=Disease or Syndrome
 myoclonus associated with fever (disorder)	CUI=C2711743	PREF=febrile myoclonus	TUI=T047	STY=Disease or Syndrome
-hypnic jerk	CUI=C2732862	PREF=Hypnic jerk	TUI=T033	STY=Finding
-hypnic jerk (finding)	CUI=C2732862	PREF=Hypnic jerk	TUI=T033	STY=Finding
-hypnic twitch	CUI=C2732862	PREF=Hypnic jerk	TUI=T033	STY=Finding
 epilepsy, ataxia, sensorineural deafness and tubulopathy	CUI=C2748572	PREF=SeSAME syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome	CUI=C2748572	PREF=SeSAME syndrome	TUI=T047	STY=Disease or Syndrome
 seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome (disorder)	CUI=C2748572	PREF=SeSAME syndrome	TUI=T047	STY=Disease or Syndrome
@@ -1024,20 +1013,6 @@ brainstem myoclonus (disorder)	CUI=C3698072	PREF=Brainstem myoclonus	TUI=T047	ST
 cerebral cortex myoclonus	CUI=C3698239	PREF=Cerebral cortex myoclonus	TUI=T047	STY=Disease or Syndrome
 cerebral cortex myoclonus (disorder)	CUI=C3698239	PREF=Cerebral cortex myoclonus	TUI=T047	STY=Disease or Syndrome
 cortical myoclonus	CUI=C3698239	PREF=Cerebral cortex myoclonus	TUI=T047	STY=Disease or Syndrome
-axi, cerebrospinal	CUI=C3714787	PREF=Central Nervous System	TUI=T022	STY=Body System
-axis, cerebrospinal	CUI=C3714787	PREF=Central Nervous System	TUI=T022	STY=Body System
-central nervous system structure	CUI=C3714787	PREF=Central Nervous System	TUI=T022	STY=Body System
-central nervous system structure (body structure)	CUI=C3714787	PREF=Central Nervous System	TUI=T022	STY=Body System
-central nervous systems	CUI=C3714787	PREF=Central Nervous System	TUI=T022	STY=Body System
-cerebrospinal axi	CUI=C3714787	PREF=Central Nervous System	TUI=T022	STY=Body System
-cerebrospinal axis	CUI=C3714787	PREF=Central Nervous System	TUI=T022	STY=Body System
-nervous system, central	CUI=C3714787	PREF=Central Nervous System	TUI=T022	STY=Body System
-nervous systems, central	CUI=C3714787	PREF=Central Nervous System	TUI=T022	STY=Body System
-structure of central nervous system	CUI=C3714787	PREF=Central Nervous System	TUI=T022	STY=Body System
-structure of central nervous system (body structure)	CUI=C3714787	PREF=Central Nervous System	TUI=T022	STY=Body System
-structures of the central nervous system	CUI=C3714787	PREF=Central Nervous System	TUI=T022	STY=Body System
-system, central nervous	CUI=C3714787	PREF=Central Nervous System	TUI=T022	STY=Body System
-systems, central nervous	CUI=C3714787	PREF=Central Nervous System	TUI=T022	STY=Body System
 epilepsy in mother complicating pregnancy	CUI=C3826393	PREF=Epilepsy in mother complicating pregnancy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy in mother complicating pregnancy (disorder)	CUI=C3826393	PREF=Epilepsy in mother complicating pregnancy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy in pregnancy	CUI=C3826393	PREF=Epilepsy in mother complicating pregnancy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -1138,3 +1113,5 @@ epilepsy of infancy with migrating focal seizures (disorder)	CUI=C4518639	PREF=E
 Focal emotional seizure	CUI=C4732752	PREF=Focal emotional seizure	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Generalised tonic seizure	CUI=C0270844	PREF=Tonic seizures	TUI=T047	STY=Disease or Syndrome
 Generalised tonic seizures	CUI=C0270844	PREF=Tonic seizures	TUI=T047	STY=Disease or Syndrome
+Symptomatic seizure	CUI=C4023516	PREF=Symptomatic seizures	TUI=T184	STY=sign or symptom
+Symptomatic seizures	CUI=C4023516	PREF=Symptomatic seizures	TUI=T184	STY=sign or symptom

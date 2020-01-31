@@ -1403,3 +1403,6 @@ Post traumatic stress disorder	CUI=C0038436	PREF=Post-traumatic stress disorder	
 PTSD	CUI=C0038436	PREF=Post-traumatic stress disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
 syncope	CUI=C0039070	PREF=syncope	TUI=T184	STY=sign or symptom
 Vasovagal syncope	CUI=C0042420 PREF=Vasovagal syncope	TUI=T047	STY=Disease or Syndrome
+hypnic jerk	CUI=C2732862	PREF=Hypnic jerk	TUI=T033	STY=Finding
+hypnic jerk (finding)	CUI=C2732862	PREF=Hypnic jerk	TUI=T033	STY=Finding
+hypnic twitch	CUI=C2732862	PREF=Hypnic jerk	TUI=T033	STY=Finding
