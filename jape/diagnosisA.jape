@@ -14,7 +14,7 @@ Rule: getDiagnosisSeizures
 (
     ({DiagnosisTriggers.majorType == "diagnosis"})
 	(
-	{Lookup.STY == "Disease or Syndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed}
+	{Lookup.STY == "Disease or Syndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}
 	):item
 ):label
 -->
@@ -25,8 +25,8 @@ Rule: getDiagnosisEpilepsy
 (
     ({DiagnosisTriggers.majorType == "diagnosis"})
 	(
-	({Lookup.STY == "Disease or Syndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})|
-	({Lookup.STY == "Pathologic Function", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})
+	({Lookup.STY == "Disease or Syndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})|
+	({Lookup.STY == "Pathologic Function", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})
 	):item
 ):label
 -->
@@ -38,7 +38,7 @@ Rule: getDiagnosisEpilepsy2
 (
 	({DiagnosisTriggers})
 	({Lookup.STY == "Disease or Syndrome"})
-	(({Lookup.STY == "Disease or Syndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
 :item.DiagnosisA = { rule = "getDiagnosisEpilepsy2", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
@@ -49,7 +49,7 @@ Rule: getDiagnosisSeizures2
 (
 	({DiagnosisTriggers})
 	({Lookup.STY == "Disease or Syndrome"})
-	(({Lookup.STY == "Disease or Syndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
 :item.DiagnosisA = { rule = "getDiagnosisSeizures2", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
@@ -60,7 +60,7 @@ Rule: getDiagnosisSeizures3
 	({DiagnosisTriggers})
 	({Lookup.STY == "Disease or Syndrome"})
 	({Lookup.STY == "Disease or Syndrome"})
-	(({Lookup.STY == "Disease or Syndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
 :item.DiagnosisA = { rule = "getDiagnosisSeizures3", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
@@ -72,7 +72,7 @@ Rule: getDiagnosisSeizures3
 	({DiagnosisTriggers})
 	({Lookup.STY == "Disease or Syndrome"})
 	({Lookup.STY == "Disease or Syndrome"})
-	(({Lookup.STY == "Disease or Syndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
 :item.DiagnosisA = { rule = "getDiagnosisEpilepsy3", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
@@ -85,7 +85,7 @@ Rule: getDiagnosisSeizures4
 	({Lookup.STY == "Disease or Syndrome"})
 	({Lookup.STY == "Disease or Syndrome"})
 	({Lookup.STY == "Disease or Syndrome"})
-	(({Lookup.STY == "Disease or Syndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
 :item.DiagnosisA = { rule = "getDiagnosisEpilepsy4", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
@@ -99,7 +99,7 @@ Rule: getDiagnosisSeizures5
 	({Lookup.STY == "Disease or Syndrome"})
 	({Lookup.STY == "Disease or Syndrome"})
 	({Lookup.STY == "Disease or Syndrome"})
-	(({Lookup.STY == "Disease or Syndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
 :item.DiagnosisA = { rule = "getDiagnosisEpilepsy5", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
@@ -111,7 +111,7 @@ Rule: getDiagnosisSeizures3
 	({Lookup.STY == "Disease or Syndrome"})
 	({Lookup.STY == "Disease or Syndrome"})
 	({Lookup.STY == "Disease or Syndrome"})
-	(({Lookup.STY == "Disease or Syndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
 :item.DiagnosisA = { rule = "getDiagnosisSeizures4", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
@@ -125,7 +125,7 @@ Rule: getDiagnosisSeizures3
 	({Lookup.STY == "Disease or Syndrome"})
 	({Lookup.STY == "Disease or Syndrome"})
 	({Lookup.STY == "Disease or Syndrome"})
-	(({Lookup.STY == "Disease or Syndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed})):item
+	(({Lookup.STY == "Disease or Syndrome", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
 :item.DiagnosisA = { rule = "getDiagnosisSeizures5", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
