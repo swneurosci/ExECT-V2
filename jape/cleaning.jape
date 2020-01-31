@@ -61,6 +61,16 @@ Rule: cleanHealthCareTerms
 }
 
 
+Rule: cleanHealthCareTermsWithin
+
+(
+   ({Lookup within Lookup2.majorType == organization})
+):umls
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+}
+
 
 Rule: cleanDiagnosis
 
