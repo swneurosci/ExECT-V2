@@ -112,26 +112,3 @@ Priority: 92
 CUI = :outcome.InvestigationFindingEEG.CUI, Negation = :outcome.InvestigationFindingEEG.Negation}
 
 
-Rule: InvestigationDiag
-Priority: 90
-(
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):invest
-  ({Diagnosis})
-  ({InvestigationFindingEEG})
-):match
--->
-:match.Investigations = { rule = InvestigationSKIPDiag, EEG_Performed = "Yes", EEG_Results = "Abnormal", 
-CUI = :match.InvestigationFindingEEG.CUI, EEG_Type = :match.Investigation.Type, EEG_Results = :match.InvestigationFindingEEG.Results}
-
-
-
-
-Rule: InvestigationDiag
-Priority: 15
-(
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):invest
-  ({Diagnosis})
-):match
--->
-:match.Investigations = { rule = InvestigationDiag, EEG_Performed = "Yes", EEG_Results = "Abnormal", 
-CUI = "C0151611"}

@@ -113,26 +113,3 @@ CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFinding
 
 
 
-Rule: InvestigationDiag
-Priority: 90
-(
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):invest
-  ({Diagnosis})
-  ({InvestigationFindingMRI})
-):match
--->
-:match.Investigations = { rule = InvestigationSKIPDiag, MRI_Performed = "Yes",  
-CUI = :match.InvestigationFindingMRI.CUI, MRI_Results = :match.InvestigationFindingMRI.Results}
-
-
-
-
-Rule: InvestigationDiag
-Priority: 15
-(
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):invest
-  ({Diagnosis})
-):match
--->
-:match.Investigations = { rule = InvestigationDiag, MRI_Performed = "Yes", MRI_Results = "Abnormal", 
-CUI = "C1319851"}
