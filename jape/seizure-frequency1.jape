@@ -1,0 +1,267 @@
+Phase: SeizureFrequency 
+Input: SeizFrequency1 SeizFrequency2 NumberRange timePeriods Lookup3 Split SeizFreq Prescription0 SeizureFree ContextPrescription Age PointInTime timeElapsed Coincide PartialDate
+Options: control=appelt 
+
+
+/* SeizureFrequency time (months weeks etc.) */
+
+/* SeizFrequency1 - Number = seizures | SeizFrequency2 - Number = TimePeriods (LOOKUP£ MUST COME BEFORE THE NUMBER, OTHERWISE ITS EASY TO SPOT*/
+ 
+/* 
+* 3 seizures in the last month 
+*/ 
+ 
+Rule: hSeizureFreq1a 
+Priority: 100 
+( 
+    ({ContextPrescription})? 
+    ({NumberRange}) 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({timePeriods}) 
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = "hSeizure1a", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+NumberOfTimePeriods = :match.timePeriods.frequency, TimePeriod = :match.timePeriods.time-unit, 
+NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2} 
+
+
+/* 
+* SeizFreq = daily/weekly/monthly/per day/per week/per month/in a month/week/year = THIS IS A GAZETTEER FROM GATE I CREATED (MIGHT BE WORTH REMOVING THESE FROM OTHER FREQUENCY TRIGGERS)
+* used for 4 seizure in the last month or 3 seizures per week or one seizure daily
+*/ 
+  
+Rule: hSeizureFreq2a 
+Priority: 100  
+( 
+    ({ContextPrescription})? 
+    ({NumberRange})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({SeizFreq}) 
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = "hSeizure2a", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, 
+NumberOfTimePeriods = :match.SeizFreq.NumberOfTimePeriods, TimePeriod = :match.SeizFreq.TimePeriod, NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2}  
+ 
+/* 
+* SeizFreq = daily/weekly/monthly/per day/per week/per month 
+* seizures three times per day 
+*/ 
+ 
+Rule: hSeizureFreq2b 
+Priority: 100  
+( 
+    ({ContextPrescription})? 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({NumberRange}) 
+    ({SeizFreq}) 
+):match
+--> 
+:match.SeizureFrequency11 = { rule = "hSeizure2b", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, 
+NumberOfTimePeriods = :match.SeizFreq.NumberOfTimePeriods, TimePeriod = :match.SeizFreq.TimePeriod, 
+NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2} 
+ 
+/* 
+* SeizFreq = daily/weekly/monthly/per day/per week/per month/in a month/week/year
+* used for a seizure per day this rule, when number of seizures is not defined
+*/ 
+ 
+Rule: hSeizureFreq2c
+Priority: 100 
+( 
+    ({ContextPrescription})? 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({SeizFreq}) 
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = "hSeizure2c", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+ NumberOfTimePeriods = :match.SeizFreq.NumberOfTimePeriods, TimePeriod = :match.SeizFreq.TimePeriod, NumberOfSeizures = "1"} 
+ 
+
+
+/* 
+* Seizure in the last 3 months 
+* also picks up =  seizures have really increased since then, particularly in the last 2 years 
+* Look to block above with freqChange
+*/ 
+ 
+ 
+Rule: hSeizureFreq3a 
+Priority: 100 
+( 
+    ({ContextPrescription})? 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({SeizFrequency1}) 
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = "hSeizure3a", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency1.UpperNumberOfTimePeriods, 
+LowerNumberOfTimePeriods = :match.SeizFrequency1.LowerNumberOfTimePeriods, TimePeriod = :match.SeizFrequency1.TimePeriod, 
+NumberOfSeizures = "1"} 
+ 
+/* Think this rule might be wrong, SeizFrequency1 should be for NumberOfTimePeriods not NumberOfSeizures */
+ 
+Rule: hSeizureFreq3b 
+Priority: 100 
+( 
+    ({ContextPrescription})? 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({SeizFrequency1}) 
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = "hSeizure3b", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods, TimePeriod = :match.SeizFrequency1.TimePeriod, 
+NumberOfSeizures = "1"} 
+
+
+/* 
+* 3 seizures every 4 weeks 
+*/ 
+ 
+Rule: hSeizureFreq3c 
+Priority: 100 
+( 
+    ({ContextPrescription})? 
+    ({NumberRange}):num1 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({SeizFrequency1}):num2 
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = "hSeizure3c", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,  
+NumberOfTimePeriods = :num2.SeizFrequency1.NumberOfTimePeriods, TimePeriod = :match.SeizFrequency1.TimePeriod,  
+NumberOfSeizures = :num1.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2} 
+
+/* 
+* episode between 10 and 40 times a day, but also wrongly picking up "nocturnal events over the past 2 months" 
+*/ 
+ 
+/*
+* 13 simple partial seizures over the last 4 months
+*/
+
+Rule: hSeizure3d
+Priority: 100 
+( 
+    ({NumberRange}):a 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({timeElapsed})
+    ({SeizFrequency1}) 
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = hSeizureFreq3d, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, NumberOfSeizures = :a.NumberRange.value, TimePeriod = :match.SeizFrequency1.TimePeriod, NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods}
+
+/* 
+*  seizures may be once every two to three weeks - doesnt work as seizure here is hypothetical
+*  generalised tonic clonic seizure once in 3 months
+*/ 
+ 
+Rule: hSeizureFreq3e 
+Priority: 100 
+( 
+    ({ContextPrescription})? 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({NumberRange}):num1 
+    ({timeElapsed})?
+    ({SeizFrequency1}):num2 
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = "hSeizure3e", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,  
+NumberOfTimePeriods = :num2.SeizFrequency1.NumberOfTimePeriods, TimePeriod = :match.SeizFrequency1.TimePeriod,  
+NumberOfSeizures = :num1.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2} 
+ 
+
+
+Rule: hSeizureFreq4a 
+Priority: 100 
+( 
+    ({ContextPrescription})? 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({SeizFrequency2}) 
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = "hSeizure4a", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+ NumberOfTimePeriods = :match.SeizFrequency2.NumberOfTimePeriods, TimePeriod = :match.SeizFrequency2.TimePeriod,
+ NumberOfSeizures = :match.SeizFrequency2.QuantityTotal, LowerNumberOfSeizures  = :match.SeizFrequency2.QuantityLowerRange, UpperNumberOfSeizures  = :match.SeizFrequency2.QuantityUpperRange} 
+
+
+/* complex partial seizure. These happen most weeks and can be up to 3 times per day */ 
+
+
+Rule: hSeizureFreq4b
+Priority: 100 
+( 
+    ({ContextPrescription})? 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Split}) 
+    ({timePeriods})?
+    ({SeizFrequency2}) 
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = "hSeizure4b", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+ NumberOfTimePeriods = :match.SeizFrequency2.NumberOfTimePeriods, TimePeriod = :match.SeizFrequency2.TimePeriod,
+ NumberOfSeizures = :match.SeizFrequency2.QuantityTotal, LowerNumberOfSeizures  = :match.SeizFrequency2.QuantityLowerRange, UpperNumberOfSeizures  = :match.SeizFrequency2.QuantityUpperRange} 
+
+/* seizures from sleep roughly 4-5 times per week */
+
+Rule: hSeizureFreq4c
+Priority: 100 
+(
+    ({ContextPrescription})?
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
+    ({timeElapsed})
+    ({SeizFrequency2})
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = "hSeizure4c", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+ NumberOfTimePeriods = :match.SeizFrequency2.NumberOfTimePeriods, TimePeriod = :match.SeizFrequency2.TimePeriod,
+ NumberOfSeizures = :match.SeizFrequency2.QuantityTotal, LowerNumberOfSeizures  = :match.SeizFrequency2.QuantityLowerRange, UpperNumberOfSeizures  = :match.SeizFrequency2.QuantityUpperRange} 
+
+
+/* Her last seizure was 6 years ago */
+
+Rule: LastSeizure1
+Priority: 100 
+(
+    ({timeElapsed.time  == "last"})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
+    ({NumberRange})
+    ({timePeriods})
+    ({timeElapsed.time == "since"})?
+):match
+-->
+:match.SeizureFrequency11 = { rule = "LastSeizure1", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+ NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2, 
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "1"}
+
+/*  complex partial seizures however has not had any of these for the last 2 years.   */
+
+Rule: LastSeizure2
+Priority: 100 
+(
+    ({!NumberRange})
+    ({Lookup3})?
+    (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}):lookup
+    ({timeElapsed.time  == "last"}|{timeElapsed.time  == "during"})
+    ({NumberRange}):num
+    ({timePeriods})):match
+):match1
+-->
+:match.SeizureFrequency11 = { rule = "LastSeizure2", CUI = :lookup.Lookup3.CUI, Certainty = :lookup.Lookup3.Certainty, Negation = :lookup.Lookup3.Negation,
+ NumberOfTimePeriods = :num.NumberRange.value, LowerNumberOfTimePeriods  = :num.NumberRange.N1, UpperNumberOfTimePeriods  = :num.NumberRange.N2, 
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "1"}
+
+
+Rule: LastSeizure3
+Priority: 100 
+(
+    ({!NumberRange})
+    ({Lookup3})?
+    (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}):lookup
+    ({timeElapsed.time  == "last"})
+    ({NumberRange.value == 1})
+    ({NumberRange}):num
+    ({timePeriods})):match
+):match1
+-->
+:match.SeizureFrequency11 = { rule = "LastSeizure3", CUI = :lookup.Lookup3.CUI, Certainty = :lookup.Lookup3.Certainty, Negation = :lookup.Lookup3.Negation,
+ NumberOfTimePeriods = :num.NumberRange.value, LowerNumberOfTimePeriods  = :num.NumberRange.N1, UpperNumberOfTimePeriods  = :num.NumberRange.N2, 
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "1"}
