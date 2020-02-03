@@ -2,7 +2,7 @@ Phase: SeizFrequency
 Input: NumberRange timePeriods Token Unit Lookup3
 Options: control=appelt 
  
-Rule: SeizFrequency1 
+Rule: SeizFrequency1a 
 Priority: 99 
 ( 
     ({NumberRange}
@@ -10,16 +10,28 @@ Priority: 99
     ({Token.string != ago})  
 ):match1 
 --> 
-:match.SeizFrequency1 = {Rule = SeizFrequency1, TimePeriod = :match.timePeriods.time-unit, 
+:match.SeizFrequency1 = {Rule = SeizFrequency1a, TimePeriod = :match.timePeriods.time-unit, 
 NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods = :match.NumberRange.N1} 
+
+
+Rule: SeizFrequency1b 
+Priority: 98
+(   
+    ({timePeriods}):match
+    ({Token.string != ago})  
+):match1 
+--> 
+:match.SeizFrequency1 = {Rule = SeizFrequency1b, TimePeriod = :match.timePeriods.time-unit, 
+NumberOfTimePeriods = :match.timePeriods.frequency} 
  
+
 Rule: SeizFrequency2 
 Priority: 100 
 ( 
     (({NumberRange}) 
     ({Token, !Unit, !Lookup3}) 
     ({timePeriods})):match
-    ):match1 
+):match1 
 --> 
 :match.SeizFrequency2 = {Rule = SeizFrequency2, TimePeriod = :match.timePeriods.time-unit, 
 NumberOfTimePeriods = :match.timePeriods.frequency, QuantityTotal = :match.NumberRange.value, 
