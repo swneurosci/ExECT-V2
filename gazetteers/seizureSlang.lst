@@ -46,7 +46,7 @@ absence:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfu
 Absences:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Seizures
 Absence:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Seizures
 absences:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Seizures
-myoclonic jerks:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Slang
+myoclonic jerks:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Seizures
 myoclonus:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Seizures
 Myoclonic jerks:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Seizures
 Myoclonus:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Seizures
