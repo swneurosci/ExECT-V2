@@ -251,15 +251,15 @@ Priority: 100
  NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2, 
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "1"}
 
-/*  complex partial seizures however has not had any of these for the last 2 years.   */
+/*  complex partial seizures however has not had any of these for the last 2 years. (NEED TO GET THE HAS NOT HAD INTO THIS RULE)
+IT ALSO PICKS UP -  She had febrile CONVULSIONS AS A CHILD, AND FOR THE LAST 10 YEARS has had complex partial seizures.  */
 
 Rule: LastSeizure2
 Priority: 100 
 (
-    ({!NumberRange})
     ({Lookup3})?
     (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}):lookup
-    ({timeElapsed.time  == "last"}|{timeElapsed.time  == "during"})
+    ({timeElapsed.time  == "during"})
     ({NumberRange}):num
     ({timePeriods})):match
 ):match1
@@ -268,12 +268,11 @@ Priority: 100
  NumberOfTimePeriods = :num.NumberRange.value, LowerNumberOfTimePeriods  = :num.NumberRange.N1, UpperNumberOfTimePeriods  = :num.NumberRange.N2, 
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "1"}
 
+/*  She has had five generalised tonic seizures, the last one approximately five years ago. - DOESNT WORK, NEED TO RETHINK THIS   */
 
 Rule: LastSeizure3
 Priority: 100 
 (
-    ({!NumberRange})
-    ({Lookup3})?
     (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}):lookup
     ({timeElapsed.time  == "last"})
     ({NumberRange.value == 1})
