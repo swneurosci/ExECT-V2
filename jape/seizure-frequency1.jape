@@ -147,7 +147,10 @@ Priority: 100
     ({SeizFrequency1}) 
 ):match 
 --> 
-:match.SeizureFrequency11 = { rule = hSeizureFreq3d, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, NumberOfSeizures = :a.NumberRange.value, TimePeriod = :match.SeizFrequency1.TimePeriod, NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods}
+:match.SeizureFrequency11 = { rule = hSeizureFreq3d, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+ NumberOfSeizures = :a.NumberRange.value, LowerNumberOfSeizures  = :a.NumberRange.N1, UpperNumberOfSeizures  = :a.NumberRange.N2
+ TimePeriod = :match.SeizFrequency1.TimePeriod, NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods,
+LowerNumberOfTimePeriods = :match.SeizFrequency1.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency1.UpperNumberOfTimePeriods}
 
 /* 
 *  seizures may be once every two to three weeks - doesnt work as seizure here is hypothetical
@@ -165,7 +168,8 @@ Priority: 100
 ):match 
 --> 
 :match.SeizureFrequency11 = { rule = "hSeizure3e", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,  
-NumberOfTimePeriods = :num2.SeizFrequency1.NumberOfTimePeriods, TimePeriod = :match.SeizFrequency1.TimePeriod,  
+NumberOfTimePeriods = :num2.SeizFrequency1.NumberOfTimePeriods, TimePeriod = :match.SeizFrequency1.TimePeriod,
+LowerNumberOfTimePeriods = :match.SeizFrequency1.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency1.UpperNumberOfTimePeriods,
 NumberOfSeizures = :num1.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2} 
  
 
