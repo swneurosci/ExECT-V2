@@ -13,9 +13,9 @@ Long tokenEnd = tagAnnots.lastNode().getOffset();
 // check the token is longer 3 characters i.e. don't call "is", "was" a plural
 if(tokenEnd - tokenStart > 3) {
    try{
-       String lastChar = doc.getContent().getContent(tagAnnots.lastNode().getOffset() - 1,
+       String string = doc.getContent().getContent(tagAnnots.firstNode().getOffset(),
                     tagAnnots.lastNode().getOffset()).toString();
-       if("s".equals(lastChar)) {
+       if(string.contains("seizures")) {
        getOnlyAnn(tagAnnots).getFeatures().put("Plural","Yes");
        }
    }
@@ -25,3 +25,24 @@ if(tokenEnd - tokenStart > 3) {
    }
 }
 }
+
+
+/* This doesnt work, trying to replace above with it so we can pick out 'seizures' and 'seizure'
+Imports: {import static gate.Utils.*; }
+Phase: Plurals
+Input: Lookup
+Options: control=appelt
+Rule:GetPlurals
+(
+{Lookup}
+):tag
+-->
+:tag{
+    String = doc.getContent().getContent(tagAnnots.getFeatures().get(""));
+        if(string.contains("seizures"))
+       {
+       getOnlyAnn(tagAnnots).getFeatures().put("Plural","Yes");
+       }
+ 
+}
+*/
