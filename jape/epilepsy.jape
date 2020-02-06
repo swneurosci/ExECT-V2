@@ -8,8 +8,9 @@ DiagnosisB
 SeizFrequency
 SeizureFree
 seizure-frequency1
-seizure-frequency2
+/*seizure-frequency2*/ /*back in with seiz-freq1*/
 SF
+seizurechange
 SeizFreqFilter
 SeizFreeFilter
 SeizFreeFilter2
@@ -31,4 +32,3 @@ Lookup2Annotation
 InvestigationsEEG
 InvestigationsCT
 InvestigationsMRI
-seizurechange

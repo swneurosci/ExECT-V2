@@ -12,6 +12,7 @@ NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, NumberOfSei
 LowerNumberOfSeizures  = :match.SeizureFrequency11.LowerNumberOfSeizures, UpperNumberOfSeizures  = :match.SeizureFrequency11.UpperNumberOfSeizures,
 YearDate = :match.SeizureFrequency11.YearDate, DayDate = :match.SeizureFrequency11.DayDate, MonthDate = :match.SeizureFrequency11.MonthDate,
 SinceOrDuration = :match.SeizureFrequency11.SinceOrDuration, Certainty = :match.SeizureFrequency11.Certainty, Negation = :match.SeizureFrequency11.Negation,
-PointInTime = :match.SeizureFrequency11.PointInTime, LowerNuberOfTimePeriods = :match.SeizureFrequency11.LowerNuberOfTimePeriods, UpperNuberOfTimePeriods = :match.SeizureFrequency11.UpperNuberOfTimePeriods}
+PointInTime = :match.SeizureFrequency11.PointInTime, LowerNuberOfTimePeriods = :match.SeizureFrequency11.LowerNuberOfTimePeriods, 
+UpperNuberOfTimePeriods = :match.SeizureFrequency11.UpperNuberOfTimePeriods, FrequencyChange = :match.SeizureFrequency11.FrequencyChange}
 
 

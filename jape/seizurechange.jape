@@ -1,5 +1,5 @@
 Phase: SeizureChange
-Input: Lookup3 Split SeizureFree SeizureFrequency Frequency timeElapsed NumberRange timePeriods PartialDate Coincide
+Input: Lookup3 Split SeizureFree SeizureFrequency Frequency timeElapsed NumberRange timePeriods PartialDate Coincide PointInTime Drug
 Options: control=appelt 
 
 
@@ -12,45 +12,96 @@ Priority: 100
 ( 
     ({Frequency})
     ({timeElapsed.time == during})?
-    ({Lookup3.majorType == "umls", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({timeElapsed})
     ({NumberRange})
     ({timePeriods})
 ):match 
 --> 
-:match.SeizureFrequency11 = { rule = "SeizureChange1a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange1a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
+
+/* Seizures Changed since 1 year ago */
 
 Rule: SeizureChange1b
 Priority: 100 
 ( 
     
-    ({Lookup3.majorType == "umls", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({Frequency})      
     ({timeElapsed})+
     ({NumberRange})
     ({timePeriods})
 ):match 
 --> 
-:match.SeizureFrequency11 = { rule = "SeizureChange1b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange1b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
 
 
-/*
-* Since Date
-*/
+/* last year this seizure Frequency has changed */
+
+
+Rule: SeizureChange1c
+Priority: 100 
+( 
+    ({timeElapsed})
+    ({NumberRange})
+    ({timePeriods})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency})      
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange1c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2} 
+
+
+/* over the lst few months the frequency of seizures has been increasing */
+
+
+Rule: SeizureChange1d
+Priority: 100 
+( 
+    ({timePeriods})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency})      
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange1d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.timePeriods.frequency} 
+
+
+/* There hasn’t been any change in the frequency of these seizures for the last 10 years */
+
+
+Rule: SeizureChange1e
+Priority: 100 
+( 
+    ({Frequency})
+    ({timeElapsed})?
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({timeElapsed})
+    ({NumberRange})
+    ({timePeriods})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange1e", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
+
+
+/* Since Date */
+
 
 Rule: SeizureChange2a
 Priority: 100 
 ( 
     ({Frequency})
     ({timeElapsed.time == during})?
-    ({Lookup3.majorType == "umls", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({timeElapsed})
     ({PartialDate})
 ):match 
 --> 
-:match.SeizureFrequency11 = { rule = "SeizureChange2a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange2a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year } 
 
 
@@ -58,15 +109,274 @@ Rule: SeizureChange2b
 Priority: 100 
 ( 
     
-    ({Lookup3.majorType == "umls", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({Frequency})      
     ({timeElapsed})+
     ({PartialDate})
 ):match 
 --> 
-:match.SeizureFrequency11 = { rule = "SeizureChange2b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange2b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
 
+
+/* Point in Time seizure change */
+
+
+Rule: SeizureChange3a
+Priority: 100 
+( 
+    ({PointInTime})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange3a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+PointInTime = :match.PointInTime.Since} 
+
+
+Rule: SeizureChange3b
+Priority: 100 
+( 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency})
+    ({PointInTime})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange3b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+PointInTime = :match.PointInTime.Since} 
+
+
+Rule: SeizureChange3c
+Priority: 100 
+( 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency})
+    ({timeElapsed})
+    ({PointInTime})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange3c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+PointInTime = :match.PointInTime.Since} 
+
+Rule: SeizureChange3d
+Priority: 100 
+( 
+    ({Frequency})
+    ({timeElapsed})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({PointInTime})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange3c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+PointInTime = :match.PointInTime.Since} 
+
+/* 
+*No Time period 
+*/
+
+
+Rule: SeizureChange4a
+Priority: 99 
+( 
+    ({Frequency})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
+    Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange4a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation } 
+
+
+Rule: SeizureChange4b
+Priority: 99 
+( 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
+    Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
+    ({Frequency})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange4b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation } 
+
+
+Rule: SeizureChange4c
+Priority: 99 
+( 
+    ({Frequency})
+    ({timeElapsed})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
+    Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange4c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation } 
+
+
+
+/* Negated Seizure */
+
+
+
+Rule: SeizureChangeNegated1a
+Priority: 100 
+( 
+    ({Frequency.Negation == Negated})
+    ({timeElapsed.time == during})?
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({timeElapsed})
+    ({NumberRange})
+    ({timePeriods})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated1a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
+
+/* Seizures Changed since 1 year ago */
+
+Rule: SeizureChangeNegated1b
+Priority: 100 
+( 
+    
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency.Negation == Negated})      
+    ({timeElapsed})+
+    ({NumberRange})
+    ({timePeriods})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated1b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
+
+
+/* last year this seizure Frequency has changed */
+
+
+Rule: SeizureChangeNegated1c
+Priority: 100 
+( 
+    ({timeElapsed})
+    ({NumberRange})
+    ({timePeriods})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency.Negation == Negated})      
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated1c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2} 
+
+
+/* over the lst few months the frequency of seizures has been increasing */
+
+
+Rule: SeizureChangeNegated1d
+Priority: 100 
+( 
+    ({timePeriods})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency.Negation == Negated})      
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated1d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.timePeriods.frequency} 
+
+
+/* There hasn’t been any change in the frequency of these seizures for the last 10 years */
+
+
+Rule: SeizureChangeNegated1e
+Priority: 100 
+( 
+    ({Frequency.Negation == Negated})
+    ({timeElapsed})?
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({timeElapsed})
+    ({NumberRange})
+    ({timePeriods})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated1e", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
+
+
+/* Since Date */
+
+
+Rule: SeizureChangeNegated2a
+Priority: 100 
+( 
+    ({Frequency.Negation == Negated})
+    ({timeElapsed.time == during})?
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({timeElapsed})
+    ({PartialDate})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated2a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year } 
+
+
+Rule: SeizureChangeNegated2b
+Priority: 100 
+( 
+    
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency.Negation == Negated})      
+    ({timeElapsed})+
+    ({PartialDate})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated2b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
+
+
+/* Point in Time seizure change */
+
+
+Rule: SeizureChangeNegated3a
+Priority: 100 
+( 
+    ({PointInTime})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency.Negation == Negated})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated3a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+PointInTime = :match.PointInTime.Since} 
+
+
+Rule: SeizureChangeNegated3b
+Priority: 100 
+( 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency.Negation == Negated})
+    ({PointInTime})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated3b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+PointInTime = :match.PointInTime.Since} 
+
+
+Rule: SeizureChangeNegated3c
+Priority: 100 
+( 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency.Negation == Negated})
+    ({timeElapsed})
+    ({PointInTime})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated3c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+PointInTime = :match.PointInTime.Since} 
+
+
+Rule: SeizureChangeNegated3d
+Priority: 100 
+( 
+    ({Frequency.Negation == Negated})
+    ({timeElapsed})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({PointInTime})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated3d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+PointInTime = :match.PointInTime.Since} 
 
 
 /* 
@@ -74,12 +384,244 @@ TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRa
 */
 
 
-Rule: SeizureChange3
+Rule: SeizureChangeNegated4a
 Priority: 99 
 ( 
-    ({Frequency})
-    ({Lookup3.majorType == "umls", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
+    ({Frequency.Negation1 == Negated})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
     Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
 ):match 
 --> 
-:match.SeizureFrequency11 = { rule = "SeizureChange3", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation } 
+:match.SeizureChange = { rule = "SeizureChangeNegated4a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
+
+
+Rule: SeizureChangeNegated4b
+Priority: 99 
+( 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
+    Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
+    ({Frequency.Negation1 == Negated})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated4b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
+
+
+Rule: SeizureChangeNegated4c
+Priority: 99 
+( 
+    ({Frequency.Negation1 == Negated})
+    ({timeElapsed})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
+    Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated4c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
+
+
+
+/* Negated Change in Frequency */
+
+
+
+Rule: NegatedSeizureChange1a
+Priority: 100 
+( 
+    ({Frequency.Negation == Negated})
+    ({timeElapsed.time == during})?
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({timeElapsed})
+    ({NumberRange})
+    ({timePeriods})
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChange1a", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
+
+/* Seizures Changed since 1 year ago */
+
+Rule: NegatedSeizureChange1b
+Priority: 100 
+( 
+    
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency.Negation == Negated})      
+    ({timeElapsed})+
+    ({NumberRange})
+    ({timePeriods})
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChange1b", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
+
+
+/* last year this seizure Frequency has changed */
+
+
+Rule: NegatedSeizureChange1c
+Priority: 100 
+( 
+    ({timeElapsed})
+    ({NumberRange})
+    ({timePeriods})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency.Negation == Negated})      
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChange1c", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2} 
+
+
+/* over the lst few months the frequency of seizures has been increasing */
+
+
+Rule: NegatedSeizureChange1d
+Priority: 100 
+( 
+    ({timePeriods})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency.Negation == Negated})      
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChange1d", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.timePeriods.frequency} 
+
+
+/* There hasn’t been any change in the frequency of these seizures for the last 10 years */
+
+
+Rule: NegatedSeizureChange1e
+Priority: 100 
+( 
+    ({Frequency.Negation == Negated})
+    ({timeElapsed})?
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({timeElapsed})
+    ({NumberRange})
+    ({timePeriods})
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChange1e", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
+
+
+/* Since Date */
+
+
+Rule: NegatedSeizureChange2a
+Priority: 100 
+( 
+    ({Frequency.Negation == Negated})
+    ({timeElapsed.time == during})?
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({timeElapsed})
+    ({PartialDate})
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChange2a", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year } 
+
+
+Rule: NegatedSeizureChange2b
+Priority: 100 
+( 
+    
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency.Negation == Negated})      
+    ({timeElapsed})+
+    ({PartialDate})
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChange2b", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
+
+
+/* Point in Time seizure change */
+
+
+Rule: NegatedSeizureChange3a
+Priority: 100 
+( 
+    ({PointInTime})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency.Negation == Negated})
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChange3a", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+PointInTime = :match.PointInTime.Since} 
+
+
+Rule: NegatedSeizureChange3b
+Priority: 100 
+( 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency.Negation == Negated})
+    ({PointInTime})
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChange3b", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+PointInTime = :match.PointInTime.Since} 
+
+
+Rule: NegatedSeizureChange3c
+Priority: 100 
+( 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Frequency.Negation == Negated})
+    ({timeElapsed})
+    ({PointInTime})
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChange3c", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+PointInTime = :match.PointInTime.Since} 
+
+
+Rule: NegatedSeizureChange3d
+Priority: 100 
+( 
+    ({Frequency.Negation == Negated})
+    ({timeElapsed})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({PointInTime})
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChange3d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+PointInTime = :match.PointInTime.Since} 
+
+
+/* 
+*No Time period 
+*/
+
+
+Rule: NegatedSeizureChange4a
+Priority: 99 
+( 
+    ({Frequency.Negation == Negated})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
+    Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChange4a", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
+
+
+Rule: NegatedSeizureChange4b
+Priority: 99 
+( 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
+    Lookup3 notWithin SeizureChange, Lookup3 notWithin SeizureFree}) 
+    ({Frequency.Negation == Negated})
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChange4b", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
+
+
+Rule: NegatedSeizureChange4c
+Priority: 99 
+( 
+    ({Frequency.Negation == Negated})
+    ({timeElapsed})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
+    Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChange4c", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
