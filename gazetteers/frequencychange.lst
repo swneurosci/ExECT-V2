@@ -6,7 +6,7 @@ decrease:Quantity=Decreased
 frequent:Quantity=Frequent
 infrequent:Quantity=Infrequent
 no change:Quantity=Same
-better:Quantity=Decreased
+got better:Quantity=Decreased
 worse:Quantity=Increased
 higher rate:Quantity=Increased
 lower rate:Quantity=Decreased
@@ -22,3 +22,9 @@ worsened:Quantity=Increased
 increased:Quantity=Increased
 decreased:Quantity=Decreased
 improvement:Quantity=Decreased
+not changed:Quantity=Same:Negation1=Negated
+increasing:Quantity=Increased
+hasn't been any change:Quantity=Same:Negation1=Negated
+hasn’t been any change:Quantity=Same:Negation1=Negated
+less frequent:Quantity=Decreased
+getting better:Quantity=Decreased:=
