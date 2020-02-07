@@ -28,10 +28,11 @@ a single month:time-unit=Month:interval=1:period=yes:frequency=1
 year:frequency=1:time-unit=Year
 month:frequency=1:time-unit=Month
 week:frequency=1:time-unit=Week
-more than a year:frequency=1:time-unit=Year:type=greater:=
-number of years:frequency=2:time-unit=Year:type=greater:=
-number of months:frequency=2:time-unit=Month:type=greater:=
+more than a year:frequency=1:time-unit=Year:type=greater
+number of years:frequency=2:time-unit=Year:type=greater
+number of months:frequency=2:time-unit=Month:type=greater
 a night:time-unit=Day:interval=1:period=yes:frequency=1
 monthly:frequency=1:time-unit=Month
 days:time-unit=Day:frequency=>1
 fortnight:time-unit=week:frequency=2
+each day:time-unit=Day:freqency=1:=
