@@ -432,6 +432,8 @@ Priority: 100
     ({driving})?
     ({timeElapsed})?
     ({driving})?
+    ({Person})?
+    ({driving})?
     ({Lookup3.PREF != "seizure free", Lookup3.Temporality != "hypothetical"})?
     ({driving})?
     ({timeElapsed})
