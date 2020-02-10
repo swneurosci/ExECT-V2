@@ -60,3 +60,6 @@ lateralisation.lst:diagnosis:lateralisation::Lookup2
 lobes.lst:diagnosis:lobes::Lookup2
 EpilepsyType.lst:diagnosis:type::Lookup2
 coincide.lst:coincide:coincide::Coincide
+NoSeizure.lst::::NoSeizure
+LastSeizure.lst::::LastSeizure
+SeizureFrequencyBlock.lst::::SFBlock
