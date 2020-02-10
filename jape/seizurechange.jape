@@ -584,9 +584,23 @@ Priority: 100
     ({PointInTime})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange3d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureFrequency = { rule = "NegatedSeizureChange3d", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 PointInTime = :match.PointInTime.Since} 
 
+/*  no improvement in her seizure frequency since last time she was seen in the clinic */
+
+Rule: NegatedSeizureChange3e
+Priority: 100 
+( 
+    ({Frequency.Negation == Negated})
+    ({timeElapsed.time == in})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({timeElapsed.time == since})
+    ({PointInTime})
+):match 
+--> 
+:match.SeizureFrequency = { rule = "NegatedSeizureChange3e", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+PointInTime = :match.PointInTime.Since} 
 
 /* 
 *No Time period 
