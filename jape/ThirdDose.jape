@@ -19,7 +19,7 @@ Rule: ThirdDose
 -->
 :match.Prescription0 = { rule = "ThirdDose",
 string = :p1.Prescription0.drug,
- DrugName = :p1.Prescription0.drug,
+ DrugName = :p1.Prescription0.DrugName,
  CUI = :p1.Prescription0.CUI, 
  route = :p1.Prescription0.route,
  status = :p1.Prescription.status,
@@ -29,5 +29,28 @@ string = :p1.Prescription0.drug,
  time-unit = :p2.DoseFrequency.time-unit,
  dose-interval = :p2.DoseFrequency.interval,
  when = :p2.DoseFrequency.when,
+ drug-type = :p1.Prescription0.drug-type,
+ Contex = :match.Prescription0.Contex}
+
+Rule: ThirdDose
+(
+	({ContexPrescription})?
+	({Prescription0 notContains DoseFrequency, Prescription0.rule == "secondDose2"}):p1
+	({ContexPrescription})?
+	({Measurement.dimension!=time}):p2
+):match
+-->
+:match.Prescription0 = { rule = "ThirdDose",
+string = :p1.Prescription0.drug,
+ DrugName = :p1.Prescription0.DrugName,
+ CUI = :p1.Prescription0.CUI, 
+ route = :p1.Prescription0.route,
+ status = :p1.Prescription.status,
+ DrugDose = :p2.Measurement.quantity,
+ DoseUnit = :p2.Measurement.units,
+ Frequency = :p1.DoseFrequency.frequency,
+ time-unit = :p1.DoseFrequency.time-unit,
+ dose-interval = :p1.DoseFrequency.interval,
+ when = :p1.DoseFrequency.when,
  drug-type = :p1.Prescription0.drug-type,
  Contex = :match.Prescription0.Contex}

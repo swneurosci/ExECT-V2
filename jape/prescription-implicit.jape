@@ -33,6 +33,32 @@ string = :p1.Prescription0.drug,
 
 
 
+Rule: SecondDose2
+(
+	({ContexPrescription})?
+	({Prescription0 notContains DoseFrequency}):p1
+	({ContexPrescription})?
+	({Measurement.dimension!=time}):p2
+):match
+-->
+:match.Prescription0 = { rule = "secondDose2",
+string = :p1.Prescription0.drug,
+ DrugName = :p1.Prescription0.DrugName,
+ CUI = :p1.Prescription0.CUI, 
+ route = :p1.Prescription0.route,
+ status = :p1.Prescription.status,
+ DrugDose = :p2.Measurement.quantity,
+ DoseUnit = :p2.Measurement.units,
+ Frequency = :p1.DoseFrequency.frequency,
+ time-unit = :p1.DoseFrequency.time-unit,
+ dose-interval = :p1.DoseFrequency.interval,
+ when = :p1 .DoseFrequency.when,
+ drug-type = :p1.Prescription0.drug-type,
+ Contex = :p1.Prescription0.Contex}
+
+
+
+
 
 
 
