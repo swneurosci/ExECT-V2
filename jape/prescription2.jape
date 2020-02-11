@@ -8,7 +8,8 @@ Rule: doseMatch2
     ({Prescription0})+:pres2
 ):match
 -->
-:match.Prescription2 = { rule = doseMatch2,
+:match.Prescription2 = { rule1 = doseMatch2,
+rule = :match.Prescription0.rule,
 DrugName = :match.Prescription0.DrugName,  
 CUI = :match.Prescription0.CUI,
 DrugDose = :match.Prescription0.DrugDose, 

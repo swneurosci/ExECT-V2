@@ -7,7 +7,9 @@ Rule: PrescriptionFilter2
     ({Prescription4 notContains ContextPrescription}):pres2
 ):match
 -->
-:pres2.Prescription = { rule = PrescriptionFilter2,
+:pres2.Prescription = { rule3 = PrescriptionFilter2,
+rule2 = :pres2.Prescription4.rule2,
+rule = :pres2.Prescription4.rule,
 DrugName = :pres2.Prescription4.DrugName,  
 CUI = :pres2.Prescription4.CUI,
 DrugDose = :pres2.Prescription4.DrugDose, 
