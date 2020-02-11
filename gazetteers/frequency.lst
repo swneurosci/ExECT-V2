@@ -10,6 +10,8 @@ q.3h.:frequency=1:time-unit=hour:interval=3
 q.4h.:frequency=1:time-unit=hour:interval=4
 mane:frequency=1:time-unit=day:when=morning
 am:frequency=1:time-unit=day:when=morning
+a.m.:frequency=1:time-unit=day:when=morning
+a.m:frequency=1:time-unit=day:when=morning
 in the morning:frequency=1:time-unit=day:when=morning
 nocte:frequency=1:time-unit=day:when=night
 at night:frequency=1:time-unit=day:when=night
@@ -20,11 +22,13 @@ b.i.d.:frequency=2:time-unit=day:interval=1
 bd:frequency=2:time-unit=day:interval=1
 t.i.d.:frequency=3:time-unit=day:interval=1
 tds:frequency=3:time-unit=day:interval=1
+t.d.s.:frequency=3:time-unit=day:interval=1
+t.d.s:frequency=3:time-unit=day:interval=1
 qid:frequency=4:time-unit=day:interval=1
 q.i.d.:frequency=4:time-unit=day:interval=1
 qds:frequency=4:time-unit=day:interval=1
-prn:time-unit=as required
-p.r.n.:time-unit=as required
+prn:time-unit=as required:frequency=As_Required
+p.r.n.:time-unit=as required:frequency=As_Required
 in the evening:frequency=1:time-unit=day:when=night
 b.d.:frequency=2:time-unit=day:interval=1
 per week:frequency=1:time-unit=week:interval=1:=
@@ -39,6 +43,8 @@ a year:frequency=1:time-unit=year:interval=1
 in the night:frequency=1:time-unit=day:when=night
 b.d:frequency=2:time-unit=day:interval=1
 pm:frequency=1:time-unit=day:interval=1:when=night
+p.m:frequency=1:time-unit=day:interval=1:when=night
+p.m.:frequency=1:time-unit=day:interval=1:when=night
 morning:frequency=1:time-unit=day:when=morning
 afternoon:frequency=1:time-unit=day:when=day
 evening:frequency=1:time-unit=day:when=night
