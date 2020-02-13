@@ -70,6 +70,18 @@ CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingC
 Rule: InvestigationTwoSentences
 Priority: 94
 (
+  ({ContextInvestigations})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Split})
+  ({InvestigationFindingCT})
+):match
+-->
+:match.InvestigationIgnore = { rule = IgnoreInvestigationTwoSentences, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
+
+Rule: InvestigationTwoSentences
+Priority: 94
+(
   ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
   ({Split})
   ({InvestigationFindingCT})
@@ -78,6 +90,18 @@ Priority: 94
 :match.Investigations = { rule = InvestigationTwoSentences, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
 CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
 
+
+Rule: InvestigationTwoSentences
+Priority: 93
+(
+  ({ContextInvestigations})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Conj})
+  ({InvestigationFindingCT})
+):match
+-->
+:match.InvestigationIgnore = { rule = getInvestigationsOutcomeCT4, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
 
 Rule: InvestigationTwoSentences
 Priority: 93
@@ -94,6 +118,20 @@ CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingC
 Rule: InvestigationTwoSentences
 Priority: 92
 (
+  ({ContextInvestigations})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Conj})
+  ({Split})
+  ({InvestigationFindingCT})
+):match
+-->
+:match.InvestigationIgnore = { rule = getInvestigationsOutcomeCT5, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
+
+
+Rule: InvestigationTwoSentences
+Priority: 92
+(
   ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
   ({Conj})
   ({Split})
@@ -101,6 +139,21 @@ Priority: 92
 ):match
 -->
 :match.Investigations = { rule = getInvestigationsOutcomeCT5, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
+
+
+
+Rule: InvestigationTwoSentences
+Priority: 92
+(
+  ({ContextInvestigations})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Split})
+  ({Conj})
+  ({InvestigationFindingCT})
+):match
+-->
+:match.InvestigationIgnore = { rule = getInvestigationsOutcomeCT6, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
 CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
 
 Rule: InvestigationTwoSentences
@@ -112,8 +165,93 @@ Priority: 92
   ({InvestigationFindingCT})
 ):match
 -->
-:match.Investigations = { rule = getInvestigationsOutcomeCT5, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+:match.Investigations = { rule = getInvestigationsOutcomeCT6, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
 CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
 
 
+
+Rule: getInvestigationsOutcomeCT
+Priority: 92
+(
+  ({ContextInvestigations})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation})*
+  ({Conj})?
+  ({Investigation})
+  ({InvestigationFindingCT})
+):match
+-->
+:match.InvestigationIgnore= { rule = getInvestigationsOutcomeCT7, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
+
+Rule: getInvestigationsOutcomeCT
+Priority: 92
+(
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation})*
+  ({Conj})?
+  ({Investigation})
+  ({InvestigationFindingCT})
+):match
+-->
+:match.Investigations= { rule = getInvestigationsOutcomeCT7, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negation}
+
+
+Rule: getInvestigationsOutcomeCT
+Priority: 92
+(
+  ({ContextInvestigations})
+  ({InvestigationFindingCT})
+  ({Investigation})*
+  ({Conj})?
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+):match
+-->
+:match.InvestigationIgnore= { rule = getInvestigationsOutcomeCT8, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negationn}
+
+
+Rule: getInvestigationsOutcomeCT
+Priority: 92
+(
+  ({InvestigationFindingCT})
+  ({Investigation})*
+  ({Conj})?
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+):match
+-->
+:match.Investigations= { rule = getInvestigationsOutcomeCT8, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negationn}
+
+
+Rule: getInvestigationsOutcomeEEG
+Priority: 92
+(
+  ({ContextInvestigations})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation})*
+  ({Conj})?
+  ({Investigation})
+  ({Split})
+  ({InvestigationFindingCT})
+):match
+-->
+:match.InvestigationIgnore= { rule = getInvestigationsOutcomeCT9, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negationn}
+
+
+Rule: getInvestigationsOutcomeEEG
+Priority: 92
+(
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation})*
+  ({Conj})?
+  ({Investigation})
+  ({Split})
+  ({InvestigationFindingCT})
+):match
+-->
+:match.Investigations= { rule = getInvestigationsOutcomeCT9, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
+CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingCT.Negationn}
 

@@ -67,12 +67,39 @@ CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFinding
 Rule: InvestigationTwoSentences
 Priority: 94
 (
+  ({ContextInvestigations})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Split})
+  ({InvestigationFindingMRI})
+):match
+-->
+:match.InvestigationIgnore = { rule = InvestigationTwoSentences, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
+CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+
+
+Rule: InvestigationTwoSentences
+Priority: 94
+(
   ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
   ({Split})
   ({InvestigationFindingMRI})
 ):match
 -->
 :match.Investigations = { rule = InvestigationTwoSentences, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
+CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+
+
+
+Rule: getInvestigationsOutcomeMRI
+Priority: 93
+(
+  ({ContextInvestigations})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Conj})
+  ({InvestigationFindingMRI})
+):match
+-->
+:match.InvestigationIgnore = { rule = getInvestigationsOutcomeMRI4, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
 CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
 
 Rule: getInvestigationsOutcomeMRI
@@ -90,6 +117,20 @@ CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFinding
 Rule: getInvestigationsOutcomeMRI
 Priority: 92
 (
+  ({ContextInvestigations})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Conj})
+  ({Split})
+  ({InvestigationFindingMRI})
+):match
+-->
+:match.InvestigationIgnore = { rule = getInvestigationsOutcomeMRI5, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
+CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+
+
+Rule: getInvestigationsOutcomeMRI
+Priority: 92
+(
   ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
   ({Conj})
   ({Split})
@@ -98,6 +139,22 @@ Priority: 92
 -->
 :match.Investigations = { rule = getInvestigationsOutcomeMRI5, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
 CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+
+
+
+Rule: getInvestigationsOutcomeMRI
+Priority: 92
+(
+  ({ContextInvestigations})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Split})
+  ({Conj})
+  ({InvestigationFindingMRI})
+):match
+-->
+:match.InvestigationIgnore = { rule = getInvestigationsOutcomeMRI6, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
+CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+
 
 Rule: getInvestigationsOutcomeMRI
 Priority: 92
@@ -112,4 +169,88 @@ Priority: 92
 CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
 
 
+Rule: getInvestigationsOutcomeMRI
+Priority: 92
+(
+  ({ContextInvestigations})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation})*
+  ({Conj})?
+  ({Investigation})
+  ({InvestigationFindingMRI})
+):match
+-->
+:match.InvestigationIgnore= { rule = getInvestigationsOutcomeMRI7, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
+CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+
+
+Rule: getInvestigationsOutcomeMRI
+Priority: 92
+(
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation})*
+  ({Conj})?
+  ({Investigation})
+  ({InvestigationFindingMRI})
+):match
+-->
+:match.Investigations= { rule = getInvestigationsOutcomeMRI7, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
+CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+
+
+Rule: getInvestigationsOutcomeMRI
+Priority: 92
+(
+  ({ContextInvestigations})
+  ({InvestigationFindingMRI})
+  ({Investigation})*
+  ({Conj})?
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+):match
+-->
+:match.InvestigationIgnore= { rule = getInvestigationsOutcomeMRI8, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
+CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+
+
+Rule: getInvestigationsOutcomeMRI
+Priority: 92
+(
+  ({InvestigationFindingMRI})
+  ({Investigation})*
+  ({Conj})?
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+):match
+-->
+:match.Investigations= { rule = getInvestigationsOutcomeMRI8, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
+CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+
+
+Rule: getInvestigationsOutcomeEEG
+Priority: 92
+(
+  ({ContextInvestigations})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation})*
+  ({Conj})?
+  ({Investigation})
+  ({Split})
+  ({InvestigationFindingMRI})
+):match
+-->
+:match.InvestigationIgnore= { rule = getInvestigationsOutcomeMRI9, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
+CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+
+Rule: getInvestigationsOutcomeEEG
+Priority: 92
+(
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation})*
+  ({Conj})?
+  ({Investigation})
+  ({Split})
+  ({InvestigationFindingMRI})
+):match
+-->
+:match.Investigations= { rule = getInvestigationsOutcomeMRI9, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
+CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
 
