@@ -1,0 +1,34 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: ModifyLookup
+Input: InvestigationFindingEEG
+Options: control=all
+
+/*
+ * Changed the CUI and Result for Negated Outcomes for CTs
+*/
+
+
+Rule: probRuleA
+Priority: 100
+(
+    ({InvestigationFindingEEG.Negation == Negated, InvestigationFindingEEG.Results == Normal, !InvestigationFindingEEG.Ignore == Yes}):CT
+):match
+-->
+:match{
+  getOnlyAnn(matchAnnots).getFeatures().put("Results", "Abnormal");
+    getOnlyAnn(matchAnnots).getFeatures().put("CUI","C0151611");
+    getOnlyAnn(matchAnnots).getFeatures().put("Rule1","NegatedNormalEEG");
+}
+
+Rule: probRuleB
+Priority: 100
+(
+    ({InvestigationFindingEEG.Negation == Negated, InvestigationFindingEEG.Results == Abnormal, !InvestigationFindingEEG.Ignore == Yes}):CT
+):match
+-->
+:match{
+  getOnlyAnn(matchAnnots).getFeatures().put("Results", "Normal");
+    getOnlyAnn(matchAnnots).getFeatures().put("CUI","C0560017");
+    getOnlyAnn(matchAnnots).getFeatures().put("Rule1","NegatedAbnormalEEG");
+    }

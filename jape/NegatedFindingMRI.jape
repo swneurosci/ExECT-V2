@@ -1,0 +1,34 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: ModifyLookup
+Input: InvestigationFindingMRI
+Options: control=all
+
+/*
+ * Changed the CUI and Result for Negated Outcomes for CTs
+*/
+
+
+Rule: probRuleA
+Priority: 100
+(
+    ({InvestigationFindingMRI.Negation == Negated, InvestigationFindingMRI.Results == Normal, !InvestigationFindingMRI.Ignore == Yes}):CT
+):match
+-->
+:match{
+  getOnlyAnn(matchAnnots).getFeatures().put("Results", "Abnormal");
+    getOnlyAnn(matchAnnots).getFeatures().put("CUI","C1319851");
+    getOnlyAnn(matchAnnots).getFeatures().put("Rule1","NegatedNormalMRI");
+}
+
+Rule: probRuleB
+Priority: 100
+(
+    ({InvestigationFindingMRI.Negation == Negated, InvestigationFindingMRI.Results == Abnormal, !InvestigationFindingMRI.Ignore == Yes}):CT
+):match
+-->
+:match{
+  getOnlyAnn(matchAnnots).getFeatures().put("Results", "Normal");
+    getOnlyAnn(matchAnnots).getFeatures().put("CUI","C0436481");
+    getOnlyAnn(matchAnnots).getFeatures().put("Rule1","NegatedAbnormalMRI");
+    }
