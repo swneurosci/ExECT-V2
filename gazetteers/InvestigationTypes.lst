@@ -17,3 +17,6 @@ Ambulatory EEG:Investigation=EEG:Type=Ambulatory
 EEGs:Investigation=EEG
 video telemetry:Investigation=EEG:Type=VideoTelemetry
 24 hour EEG:Investigation=EEG:Type=Prolonged
+sleep deprived EEG:Investigation=EEG:Type=SleepDeprived
+MRIs:Investigation=MRI
+CTs:Investigation=CT
