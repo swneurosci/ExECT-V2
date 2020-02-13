@@ -26,12 +26,12 @@ localised repetitive diacharges:CUI=C0151611:Results=Abnormal
 low amplitude fast activity:CUI=C0151611:Results=Abnormal					
 low voltage fast activity:CUI=C0151611:Results=Abnormal					
 multifocal discharges:CUI=C0151611:Results=Abnormal					
-no significant findings:CUI=C0560017:Results=Normal					
-non-epileptic:CUI=C0560017:Results=Normal					
+no significant findings:CUI=C0560017:Results=Normal:Ignore=Yes				
+non-epileptic:CUI=C0560017:Results=Normal:Ignore=Yes
 normal:CUI=C0560017:Results=Normal					
 Normal:CUI=C0560017:Results=Normal					
-not available:Results=Unknown					
-not have the results:Results=Unknown					
+not available:Results=Unknown:Ignore=Yes
+not have the results:Results=Unknown:Ignore=Yes
 paroxysmal fast activity:CUI=C0151611:Results=Abnormal					
 photoparoxysmal response:CUI=C0151611:Results=Abnormal					
 photosensitive:CUI=C0151611:Results=Abnormal					
@@ -54,5 +54,8 @@ spike-wave:CUI=C0151611:Results=Abnormal
 temporal intermittent rhythmic delta activity:CUI=C0151611:Results=Abnormal					
 temporal slowing:CUI=C0151611:Results=Abnormal					
 unremarkable:CUI=C0560017:Results=Normal					
-unstable:CUI=C0151611:Results=Abnormal					
-					
+unstable:CUI=C0151611:Results=Abnormal
+epileptic activity was not seen:CUI=C0560017:Results=Normal:Ignore=Yes
+left sided changes:CUI=C0151611:Results=Abnormal
+right sided changes:CUI=C0151611:Results=Abnormal
+both normal:CUI=C0560017:Results=Normal
