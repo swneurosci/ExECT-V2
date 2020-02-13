@@ -48,8 +48,8 @@ C0014544	epileptic convulsions
 C0014544	epileptic disorder
 C0014544	epileptic fit
 C0014544	epileptic fits
-C0014544	epileptic seizure
-C0014544	epileptic seizures
+C4317109	epileptic seizure
+C4317109	epileptic seizures
 C0014544	seizure disorders
 C0014547	"disorders, focal seizure"
 C0014547	"disorders, partial seizure"
@@ -113,10 +113,8 @@ C0014549	tonic-clonic seizure syndrome
 C0014549	tonic-clonic seizure syndrome
 C0014549	tonic-clonic seizure syndromes
 C0014553	absence epilepsy
-C0014553	absence seizure
 C0014553	absence seizure disorder
 C0014553	absence seizure disorders
-C0014553	absence seizures
 C0014553	"epilepsy, absence"
 C0014553	petit mal (disorder)
 C0014553	petit mal epilepsies
@@ -125,9 +123,6 @@ C0014553	petit mal epilepsy
 C0014553	petit-mal seizure
 C0014553	"seizure disorder, absence"
 C0014553	"seizure disorders, absence"
-C0014553	typical absence seizure
-C0014553	typical absence seizures 
-C0014553	typical absences
 C0014556	focal epilepsy - temporal
 C0014556	temporal lobe epilepsy
 C0014556	temporal lobe seizure
@@ -164,7 +159,6 @@ C0016399	"partial seizure disorder, motor"
 C0016399	simple partial seizure with motor dysfunction
 C0016399	simple partial seizure with motor dysfunction (disorder)
 C0016399	simple partial seizures with motor signs
-C0016733	frontal lobe
 C0021712	intention myoclonus (finding)
 C0021712	"myoclonus, intention"
 C0022333	Jacksonian seizure
@@ -176,19 +170,15 @@ C0027066	jerks - myoclonic
 C0027066	"jerks, myoclonic"
 C0027066	myoclonic disorder
 C0027066	myoclonic disorder (disorder)
-C0027066	myoclonic jerk
-C0027066	myoclonic jerking
 C0027066	myoclonus (finding)
 C0027066	myoclonus disorder
 C0027066	myoclonus nos
 C0027066	myoclonus nos (disorder)
-C0028785	Occipital Lobes
 C0030214	"myoclonus, palatal"
 C0030214	palatal myoclonus (disorder)
 C0030214	palatal nystagmus
 C0030463	paramyoclonus multiplex
 C0030463	paramyoclonus multiplex (disorder)
-C0030560	Parietal Lobes
 C0035372	Cerebroatrophic hyperammonaemia
 C0035372	Cerebroatrophic hyperammonemia
 C0035372	rett syndrome
@@ -212,7 +202,6 @@ C0038220	status epilepticus
 C0038220	"status epilepticus, generalized"
 C0038220	"status epilepticus, unspecified"
 C0038505	sturge-weber syndrome
-C0039485	Temporal Lobes
 C0085417	complex partial epilepsy
 C0085417	complex partial epileptic seizure
 C0085417	complex partial seizure disorder
@@ -598,13 +587,10 @@ C0393702	myoclonic atonic seizure
 C0393702	myoclonic-atonic seizures
 C0393703	myoclonic absence seizure
 C0393703	myoclonic absence seizure
-C0393703	myoclonic absences
 C0393706	Early infant epileptic encephalopathy wth suppression bursts
 C0393706	Early infantile epileptic encephalopathy with suppression bursts
 C0393706	Early infantile epileptic encephalopathy with suppression bursts
 C0393706	Ohtahara syndrome
-C0393707	situation-related seizures
-C0393707	situation-related seizures (disorder)
 C0393715	drug-induced epilepsy
 C0393715	drug-induced epilepsy (disorder)
 C0393720	"epilepsies, photosensitive reflex"
@@ -674,13 +660,11 @@ C0422871	absence seizure with mild clonic components (disorder)
 C0422872	absence seizure with atonic components
 C0422872	absence seizure with atonic components (disorder)
 C0422872	"absences, atonic"
-C0422873	"absence seiz, tonic components"
 C0422873	absence seizure with tonic components
 C0422873	absence seizure with tonic components (disorder)
 C0422874	absence seizure with automatisms
 C0422874	absence seizure with automatisms (disorder)
 C0422874	"absence seizure, automatisms"
-C0422875	"absence seiz,autonom component"
 C0422875	absence seizure with autonomic components
 C0422875	absence seizure with autonomic components (disorder)
 C0438414	Myoclonic Encephalopathies
@@ -934,9 +918,6 @@ C2363129	CECTS
 C2711743	febrile myoclonus
 C2711743	myoclonus associated with fever
 C2711743	myoclonus associated with fever (disorder)
-C2732862	hypnic jerk
-C2732862	hypnic jerk (finding)
-C2732862	hypnic twitch
 C2748572	"epilepsy, ataxia, sensorineural deafness and tubulopathy"
 C2748572	"seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome"
 C2748572	"seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome (disorder)"
@@ -1024,20 +1005,6 @@ C3698072	brainstem myoclonus (disorder)
 C3698239	cerebral cortex myoclonus
 C3698239	cerebral cortex myoclonus (disorder)
 C3698239	cortical myoclonus
-C3714787	"axi, cerebrospinal"
-C3714787	"axis, cerebrospinal"
-C3714787	central nervous system structure
-C3714787	central nervous system structure (body structure)
-C3714787	central nervous systems
-C3714787	cerebrospinal axi
-C3714787	cerebrospinal axis
-C3714787	"nervous system, central"
-C3714787	"nervous systems, central"
-C3714787	structure of central nervous system
-C3714787	structure of central nervous system (body structure)
-C3714787	structures of the central nervous system
-C3714787	"system, central nervous"
-C3714787	"systems, central nervous"
 C3826393	epilepsy in mother complicating pregnancy
 C3826393	epilepsy in mother complicating pregnancy (disorder)
 C3826393	epilepsy in pregnancy
@@ -1136,5 +1103,23 @@ C4518566	"myoclonus, cerebellar ataxia, deafness syndrome (disorder)"
 C4518639	epilepsy of infancy with migrating focal seizures
 C4518639	epilepsy of infancy with migrating focal seizures (disorder)
 C4732752	Focal emotional seizure
-C0270844	Generalised tonic seizures
 C0270844	Generalised tonic seizure
+C0270844	Generalised tonic seizures
+C4023516	Symptomatic seizure
+C4023516	Symptomatic seizures
+C0014547	focal onset epilepsy
+C0472349	Focal symptomatic epilepsy
+C0085541	frontal lobe onset seizure
+C0027066	myoclonus
+C4023512	myoclonic absence
+C4023512	myoclonic absences
+C0393703	myoclonic absence epilepsy
+C0234533	generalised seizures
+C0014547	sub-cortical epilepsy
+C0270850	"idiopathic, generalised epilepsy"
+C4316903	absence seizure
+C4316903	typical absence seizure
+C4316903	typical absence seizures 
+C4316903	typical absences
+C4316903	absence type seizure
+C4316903	absence type seizures
