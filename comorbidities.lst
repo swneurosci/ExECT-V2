@@ -157,7 +157,7 @@ appelt-gerken-lenz syndrome	CUI=C0392475	PREF=appelt-gerken-lenz syndrome	TUI=T0
 apvr	CUI=C0036400	PREF=apvr	TUI=T019	STY=Congenital Abnormality
 arterioven fistula occlusion	CUI=C0340837	PREF=arterioven fistula occlusion	TUI=T019	STY=Congenital Abnormality
 arteriovenous angioma	CUI=C0340835	PREF=arteriovenous angioma	TUI=T019	STY=Congenital Abnormality
-Congenital arteriovenous fistula hemorrhage CUI=C0340842	PREF=Congenital arteriovenous fistula hemorrhage	TUI=T046	STY=Pathologic Function
+Congenital arteriovenous fistula hemorrhage	CUI=C0340842	PREF=Congenital arteriovenous fistula hemorrhage	TUI=T046	STY=Pathologic Function
 Arteriovenous fistula hemorrhage	CUI=C0340912	PREF=arteriovenous fistula hemorrhage	TUI=T046	STY=Pathologic Function
 arteriovenous fistula hemorrhage	CUI=C0340839	PREF=arteriovenous fistul thrombos	TUI=T019	STY=Congenital Abnormality
 arteriovenous fistula infect	CUI=C0340840	PREF=arteriovenous fistula infect	TUI=T047	STY=Disease or Syndrome
