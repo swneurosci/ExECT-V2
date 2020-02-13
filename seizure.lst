@@ -1,8 +1,5 @@
 major motor seizure	CUI=C0014549	PREF=major motor seizure dis	TUI=T047	STY=Disease or Syndrome
 tonic-clonic epileptic seizures 	CUI=C0014549	PREF=epileptic seizures, tonic-clonic	TUI=T047	STY=Disease or Syndrome
-typical absence seizure	CUI=C0014553	PREF=Absence epilepsy	TUI=T047	STY=Disease or Syndrome
-typical absence seizures 	CUI=C0014553	PREF=Absence epilepsy	TUI=T047	STY=Disease or Syndrome
-typical absences	CUI=C0014553	PREF=Absence epilepsy	TUI=T047	STY=Disease or Syndrome
 temporal lobe seizure	CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
 temporal lobe seizures	CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
 focal motor	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
@@ -18,13 +15,6 @@ simple partial seizures with motor signs	CUI=C0016399	PREF=Epilepsy, Partial, Mo
 myoclonus, intention	CUI=C0021712	PREF=Myoclonus, Intention	TUI=T184	STY=sign or symptom
 Jacksonian seizure	CUI=C0022333	PREF=Jacksonian seizure	TUI=T047	STY=Disease or Syndrome
 Jacksonian seizures	CUI=C0022333	PREF=Jacksonian seizure	TUI=T047	STY=Disease or Syndrome
-jerk, myoclonic	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-jerking, myoclonic	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-jerks - myoclonic	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-jerks, myoclonic	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-myoclonic jerk	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-myoclonic jerking	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-myoclonic jerks	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
 myoclonus, palatal	CUI=C0030214	PREF=Myoclonus, Palatal	TUI=T184	STY=sign or symptom
 palatal nystagmus	CUI=C0030214	PREF=Myoclonus, Palatal	TUI=T184	STY=sign or symptom
 paramyoclonus multiplex	CUI=C0030463	PREF=paramyoclonus multiplex	TUI=T047	STY=Disease or Syndrome
@@ -193,7 +183,6 @@ myoclonic-atonic seizure	CUI=C0393702	PREF=Myoclonic Astatic Epilepsy	TUI=T047	S
 myoclonic-atonic seizures	CUI=C0393702	PREF=Myoclonic Astatic Epilepsy	TUI=T047	STY=Disease or Syndrome
 myoclonic absence seizure	CUI=C0393703	PREF=Myoclonic Absence Epilepsy	TUI=T047	STY=Disease or Syndrome
 myoclonic absence seizures	CUI=C0393703	PREF=Myoclonic Absence Epilepsy	TUI=T047	STY=Disease or Syndrome
-myoclonic absences	CUI=C0393703	PREF=Myoclonic Absence Epilepsy	TUI=T047	STY=Disease or Syndrome
 situation related seizures	CUI=C0393707	PREF=situation-related seizures 	TUI=T033	STY=Finding
 situation-related seizures	CUI=C0393707	PREF=situation-related seizures	TUI=T033	STY=Finding
 eyelid myoclonus with absences	CUI=C0393722	PREF=Eyelid myoclonus with absences	TUI=T047	STY=Disease or Syndrome
@@ -259,7 +248,7 @@ grand mal convulsions	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=D
 tonic clonic convulsion	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
 tonic clonic convulsions	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
 tonic clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-tonic clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
+tonic clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
 tonic/clonic convulsions	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
 tonic-clonic convulsion	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
 tonic-clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
@@ -419,3 +408,12 @@ focal myoclonus	CUI=C4511434	PREF=focal myoclonus	TUI=T033	STY=Finding
 Focal emotional seizure	CUI=C4732752	PREF=Focal emotional seizure	TUI=T047	STY=Disease or Syndrome
 Generalised tonic seizure	CUI=C0270844	PREF=Tonic seizures	TUI=T047	STY=Disease or Syndrome
 Generalised tonic seizures	CUI=C0270844	PREF=Tonic seizures	TUI=T047	STY=Disease or Syndrome
+frontal lobe onset seizure	CUI=C0085541	PREF=Epilepsy, Frontal Lobe	TUI=T047	STY=Disease or Syndrome
+myoclonic absence	CUI=C4023512	PREF=Myoclonic Absence	TUI=T047	STY=Disease or Syndrome
+myoclonic absences	CUI=C4023512	PREF=Myoclonic Absence	TUI=T047	STY=Disease or Syndrome
+typical absence seizure	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
+typical absence seizures 	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
+typical absences	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
+absence type seizure	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
+absence type seizures	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
+

@@ -1408,3 +1408,10 @@ Vasovagal syncope	CUI=C0042420 PREF=Vasovagal syncope	TUI=T047	STY=Disease or Sy
 hypnic jerk	CUI=C2732862	PREF=Hypnic jerk	TUI=T033	STY=Finding
 hypnic jerk (finding)	CUI=C2732862	PREF=Hypnic jerk	TUI=T033	STY=Finding
 hypnic twitch	CUI=C2732862	PREF=Hypnic jerk	TUI=T033	STY=Finding
+jerk, myoclonic	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
+jerking, myoclonic	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
+jerks - myoclonic	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
+jerks, myoclonic	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
+myoclonic jerk	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
+myoclonic jerking	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
+myoclonic jerks	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
