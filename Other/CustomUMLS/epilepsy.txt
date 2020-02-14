@@ -1118,6 +1118,7 @@ C0234533	generalised seizures
 C0014547	sub-cortical epilepsy
 C0270850	"idiopathic, generalised epilepsy"
 C4316903	absence seizure
+C4316903	absence seizures
 C4316903	typical absence seizure
 C4316903	typical absence seizures 
 C4316903	typical absences
