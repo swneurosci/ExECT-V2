@@ -1123,3 +1123,4 @@ typical absence seizures 	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Diseas
 typical absences	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 absence type seizure	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 absence type seizures	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
+absence seizures	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
