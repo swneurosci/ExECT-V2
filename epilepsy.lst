@@ -243,7 +243,6 @@ epileptic seizures - tonic (finding)	CUI=C0086241	PREF=Epilepsy, Tonic	TUI=T047	
 epileptic seizures, tonic	CUI=C0086241	PREF=Epilepsy, Tonic	TUI=T047	STY=Disease or Syndrome
 tonic epilepsies	CUI=C0086241	PREF=Epilepsy, Tonic	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 tonic epilepsy	CUI=C0086241	PREF=Epilepsy, Tonic	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-Complex Partial	CUI=C0149958	PREF=Complex Partial Seizure	TUI=T047	STY=Disease or Syndrome
 Complex Partial Seizure	CUI=C0149958	PREF=Complex Partial Seizure	TUI=T047	STY=Disease or Syndrome
 Complex Partial Seizures	CUI=C0149958	PREF=Complex Partial Seizure	TUI=T047	STY=Disease or Syndrome
 Partial complex seizure	CUI=C0149958	PREF=Complex Partial Seizure	TUI=T047	STY=Disease or Syndrome
@@ -301,7 +300,7 @@ Lennox-Gastaut syndrome	CUI=C0238111	PREF=Lennox-Gastaut syndrome	TUI=T047	STY=D
 Lennox-Gastaut syndrome (disorder)	CUI=C0238111	PREF=Lennox-Gastaut syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 dysphonia of palatopharyngolaryngeal myoclonus	CUI=C0264608	PREF=Dysphonia of palatopharyngolaryngeal myoclonus	TUI=T047	STY=Disease or Syndrome
 dysphonia of palatopharyngolaryngeal myoclonus (disorder)	CUI=C0264608	PREF=Dysphonia of palatopharyngolaryngeal myoclonus	TUI=T047	STY=Disease or Syndrome
-ring chromosome 20	CUI=C0265482	PREF=ring chromosome 20	TUI=T019	STY=Congenital Abnormality	=
+ring chromosome 20	CUI=C0265482	PREF=ring chromosome 20	TUI=T019	STY=Congenital Abnormality
 cherry red spot myoclonus syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
 cherry red spot-myoclonus syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
 cherry-red spot myoclonus synd	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
@@ -586,13 +585,13 @@ myoclonic astatic epilepsy (disorder)	CUI=C0393702	PREF=Myoclonic Astatic Epilep
 myoclonic atonic seizure	CUI=C0393702	PREF=Myoclonic Astatic Epilepsy	TUI=T047	STY=Disease or Syndrome
 myoclonic-atonic seizures	CUI=C0393702	PREF=Myoclonic Astatic Epilepsy	TUI=T047	STY=Disease or Syndrome
 myoclonic absence seizure	CUI=C0393703	PREF=Myoclonic Absence Epilepsy	TUI=T047	STY=Disease or Syndrome
-myoclonic absence seizure	CUI=C0393703	PREF=Myoclonic Absence Epilepsy	TUI=T047	STY=Disease or Syndrome
+myoclonic absence seizures	CUI=C0393703	PREF=Myoclonic Absence Epilepsy	TUI=T047	STY=Disease or Syndrome
 Early infant epileptic encephalopathy wth suppression bursts	CUI=C0393706	PREF=Early infantile epileptic encephalopathy with suppression bursts	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Early infantile epileptic encephalopathy with suppression bursts	CUI=C0393706	PREF=Early infantile epileptic encephalopathy with suppression bursts	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Early infantile epileptic encephalopathy with suppression bursts	CUI=C0393706	PREF=Early infantile epileptic encephalopathy with suppression bursts	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Ohtahara syndrome	CUI=C0393706	PREF=Early infantile epileptic encephalopathy with suppression bursts	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-drug-induced epilepsy	CUI=C0393715	PREF=drug-induced epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-drug-induced epilepsy (disorder)	CUI=C0393715	PREF=drug-induced epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+drug-induced epilepsy	CUI=C0393715	PREF=Drug-induced epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+drug-induced epilepsy (disorder)	CUI=C0393715	PREF=Drug-induced epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsies, photosensitive reflex	CUI=C0393720	PREF=Reflex Epilepsy, Photosensitive	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy, photogenic	CUI=C0393720	PREF=Reflex Epilepsy, Photosensitive	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy, photosensitive	CUI=C0393720	PREF=Reflex Epilepsy, Photosensitive	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -757,7 +756,7 @@ atypical absence seizure	CUI=C0595948	PREF=Atypical absence seizure	TUI=T047	STY
 atypical absence seizure (disorder)	CUI=C0595948	PREF=Atypical absence seizure	TUI=T047	STY=Disease or Syndrome
 atypical absence seizures	CUI=C0595948	PREF=Atypical absence seizure	TUI=T047	STY=Disease or Syndrome
 seizures, atypical absence	CUI=C0595948	PREF=Atypical absence seizure	TUI=T047	STY=Disease or SyndromeC0494475
-dravet syndrome	CUI=C0751122	PREF=dravet syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+dravet syndrome	CUI=C0751122	PREF=Infantile Severe Myoclonic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 atypical absence epilepsy	CUI=C0751124	PREF=Epilepsy, Absence, Atypical	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 atypical absence epilepsy (disorder)	CUI=C0751124	PREF=Epilepsy, Absence, Atypical	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy, absence, atypical	CUI=C0751124	PREF=epilepsy, absence, atypical	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
