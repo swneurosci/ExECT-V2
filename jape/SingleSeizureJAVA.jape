@@ -2,7 +2,8 @@ Imports: {import static gate.Utils.*; }
 Phase: Plurals
 Input: Lookup
 Options: control=brill
-Rule:GetPlurals
+Rule:GetSingleSeizures
+Priority: 100
 (
 {Lookup}
 ):tag
@@ -15,8 +16,8 @@ if(tokenEnd - tokenStart > 3) {
    try{
        String string = doc.getContent().getContent(tagAnnots.firstNode().getOffset(),
                     tagAnnots.lastNode().getOffset()).toString().toLowerCase();
-       if(string.contains("seizures")) {
-       getOnlyAnn(tagAnnots).getFeatures().put("Plural","Yes");
+      if(string.contains("seizure") && !string.contains("seizures")) {
+       getOnlyAnn(tagAnnots).getFeatures().put("SingleSeizure","Yes");
        }
    }
    catch(InvalidOffsetException e) {
@@ -26,8 +27,8 @@ if(tokenEnd - tokenStart > 3) {
 }
 }
 
-
-Rule:GetPlurals2
+Rule:GetSingleSeizures
+Priority: 100
 (
 {Lookup}
 ):tag
@@ -40,8 +41,8 @@ if(tokenEnd - tokenStart > 3) {
    try{
        String string = doc.getContent().getContent(tagAnnots.firstNode().getOffset(),
                     tagAnnots.lastNode().getOffset()).toString().toLowerCase();
-       if(string.contains("convulsions")) {
-       getOnlyAnn(tagAnnots).getFeatures().put("Plural","Yes");
+      if(string.contains("convulsion") && !string.contains("convulsions")) {
+       getOnlyAnn(tagAnnots).getFeatures().put("SingleSeizure","Yes");
        }
    }
    catch(InvalidOffsetException e) {
@@ -50,5 +51,3 @@ if(tokenEnd - tokenStart > 3) {
    }
 }
 }
-
-
