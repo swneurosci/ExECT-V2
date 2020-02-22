@@ -353,8 +353,8 @@ typical absence seizures, non-intractable	CUI=C3495024	PREF=Typical absence seiz
 typical absence seizures, non-refractory	CUI=C3495024	PREF=Typical absence seizure, non-refractory	TUI=T047	STY=Disease or Syndrome
 intractable typical absence seizure	CUI=C3495025	PREF=typical absence seizure, intractable	TUI=T047	STY=Disease or Syndrome
 refractory typical absence seizure 	CUI=C3495025	PREF=typical absence seizure, refractory	TUI=T047	STY=Disease or Syndrome
-typical absence seizures, intractable	CUI=C3495025	PREF=Typical absence seizure, refractory	TUI=T047	STY=Disease or Syndrome
-typical absence seizures, refractory	CUI=C3495025	PREF=Typical absence seizure, refractory	TUI=T047	STY=Disease or Syndrome
+typical absence seizures intractable	CUI=C3495025	PREF=Typical absence seizure, refractory	TUI=T047	STY=Disease or Syndrome
+typical absence seizures refractory	CUI=C3495025	PREF=Typical absence seizure, refractory	TUI=T047	STY=Disease or Syndrome
 Complex partial epileptic seizure of temporal lobe	CUI=C3661551	PREF=Complex partial seizure of temporal lobe	TUI=T047	STY=Disease or Syndrome
 Complex partial seizure of temporal lobe	CUI=C3661551	PREF=Complex partial seizure of temporal lobe	TUI=T047	STY=Disease or Syndrome
 Partial epileptic seizures of temporal lobe with impairment of consciousness	CUI=C3661551	PREF=Complex partial seizure of temporal lobe	TUI=T047	STY=Disease or Syndrome
@@ -414,6 +414,4 @@ myoclonic absences	CUI=C4023512	PREF=Myoclonic Absence	TUI=T047	STY=Disease or S
 typical absence seizure	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 typical absence seizures 	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 typical absences	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
-absence type seizure	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
-absence type seizures	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 
