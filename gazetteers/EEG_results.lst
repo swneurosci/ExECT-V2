@@ -59,3 +59,4 @@ epileptic activity was not seen:CUI=C0560017:Results=Normal:Ignore=Yes
 left sided changes:CUI=C0151611:Results=Abnormal
 right sided changes:CUI=C0151611:Results=Abnormal
 both normal:CUI=C0560017:Results=Normal
+non-specific interictal changes:CUI=C0151611:Results=Abnormal

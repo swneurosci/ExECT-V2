@@ -20,3 +20,5 @@ video telemetry:Investigation=EEG:Type=VideoTelemetry
 sleep deprived EEG:Investigation=EEG:Type=SleepDeprived
 MRIs:Investigation=MRI
 CTs:Investigation=CT
+EEG/videotelemetry:Investigation=EEG:Type=VideoTelemetry
+sleep deprived EEGs:Investigation=EEG:Type=SleepDeprived

@@ -48,4 +48,4 @@ clear:CUI=C0436481:Results=Normal
 unremarkable:CUI=C0436481:Results=Normal
 epileptic activity was not seen:CUI=C0436481:Results=Normal:Ignore=Yes
 both normal:CUI=C0436481:Results=Normal
-
+non-specific lesion:CUI=C1319851:Results=Abnormal:Ignore=Yes
