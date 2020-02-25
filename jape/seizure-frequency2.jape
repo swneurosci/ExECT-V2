@@ -51,6 +51,21 @@ Priority: 95
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "1",
  YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.Day}
 
+/* the last seizure was on [DATE] */
+
+Rule: LastSeizure3b
+Priority: 95 
+(
+    ({timeElapsed.time  == "last"})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
+    ({PartialDate})
+):match
+-->
+:match.SeizureFrequency11 = { rule = "LastSeizure3b", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+ NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2, 
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "1",
+ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.Day}
+
  /* He reports his last seizure was in [YEAR] */
 
 Rule: LastSeizure4
