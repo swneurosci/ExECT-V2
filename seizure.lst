@@ -414,4 +414,3 @@ myoclonic absences	CUI=C4023512	PREF=Myoclonic Absence	TUI=T047	STY=Disease or S
 typical absence seizure	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 typical absence seizures 	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 typical absences	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
-
