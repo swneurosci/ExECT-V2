@@ -64,3 +64,4 @@ NoSeizure.lst::::NoSeizure
 LastSeizure.lst::::LastSeizure
 SeizureFrequencyBlock.lst::::SFBlock
 KidsDose.lst::::KidsDose
+DiagnosisB.lst:ExtraDiag:DiagB::DiagB
