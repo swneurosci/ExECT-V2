@@ -1,5 +1,5 @@
 Phase: DiagnosisB
-Input: DiagnosisA DiagBFiltered Split
+Input: DiagnosisA DiagBFiltered Split Lookup Lookup3
 
 
 /*These rules add DiagnosisA when an attribute with another level of certainty follows the diagnosis of epilepsy */ 
