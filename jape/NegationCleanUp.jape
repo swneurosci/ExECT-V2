@@ -1,7 +1,7 @@
 Imports: {import static gate.Utils.*; }
 
 Phase: NegationCleanUp
-Input: NegConj Lookup Sentence Trigger Lookup3
+Input: NegConj Lookup Sentence Trigger LookupTrigger Lookup3
 Options: control=all
 
 Rule: reverseNegation
@@ -19,7 +19,19 @@ umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationa");
 }
 
 
-
+Rule: reverseNegation
+(
+{Trigger}
+({Lookup3})[1,5]
+{!NegConj} 
+{!Trigger}
+({Lookup3.Negation == "Negated"}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationa");
+}
 
 
 Rule: removeSeizureFreeAsNegation
@@ -33,11 +45,36 @@ umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationb");
 }
 
 
+Rule: removeSeizureFreeAsNegation
+(
+({Lookup3 contains Trigger@string=="free"}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationb");
+}
+
+
 
 Rule: reverseNegation
 (
 {Trigger}
-({Lookup.Language == "Trigger"})[1,5]
+({LookupTrigger.Language == "Trigger"})[1,5]
+{!NegConj}
+({Lookup.Negation == "Negated"}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationc");
+}
+
+
+Rule: reverseNegation
+(
+{Trigger}
+({LookupTrigger.Language == "Trigger"})[1,5]
 {!NegConj}
 ({Lookup3.Negation == "Negated"}):umls
 ):match
@@ -53,6 +90,17 @@ umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationc");
  * it removes all negations of non-concept phrases
  */
 
+
+Rule: removenon-asnegation
+(
+({Lookup contains Trigger@string=~"[Nn]on"}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+umlsAnnots.iterator().next().getFeatures().put("rule","removenon-asnegation");
+}
+
 Rule: removenon-asnegation
 (
 ({Lookup3 contains Trigger@string=~"[Nn]on"}):umls
@@ -61,6 +109,5 @@ Rule: removenon-asnegation
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","removenon-asnegation");
+
 }
-
-
