@@ -148,3 +148,24 @@ Frequency = :match1.DoseFrequency.frequency,
 time-unit = :match1.DoseFrequency.time-unit, 
 dose-interval = :match1.DoseFrequency.interval, 
 Context = :match.ContextPrescription.context}
+
+
+/* Rule to pick up midazolam without frequency or Dose */
+
+
+Rule: doseMatch0
+Priority: 100
+(   
+    ({ContextPrescription})?
+    ({Drug.CUI == C0026056}):match1
+):match
+-->
+:match.Prescription0 = { rule = doseMatch0, string = :match1.Drug@string,
+DrugName = :match1.Drug@string, 
+CUI = :match1.Drug.CUI,
+DrugDose = :match1.Measurement.quantity,
+DoseUnit  =:match1.Measurement.units, 
+Frequency = "As_Required",
+time-unit = :match1.DoseFrequency.time-unit, 
+dose-interval = :match1.DoseFrequency.interval, 
+Context = :match.ContextPrescription.context}
