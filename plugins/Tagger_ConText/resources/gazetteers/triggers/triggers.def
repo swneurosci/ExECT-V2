@@ -1,8 +1,8 @@
 post-condition-negation-terms.lst:negation:post-condition::Trigger
 pre-condition-negation-terms.lst:negation:pre-condition::Trigger
 pseudo-negation-terms.lst:negation:pseudo-trigger::Trigger
-pre-condition-possibility-phrase.lst:pre-condition:possibility:Trigger
-post-condition-possibility-terms.lst:post-condition:possibility:Trigger
+pre-condition-possibility-phrase.lst:pre-condition:possibility:Trigger:LookupTrigger
+post-condition-possibility-terms.lst:post-condition:possibility:Trigger:LookupTrigger
 termination-terms.lst:termination:termination::Termination-Term
 triggers-experiencer.lst:experiencer:trigger::Trigger
 triggers_temporality_hypothetical.lst:temporality:hypothetical::Trigger
