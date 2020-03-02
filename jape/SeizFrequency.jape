@@ -6,7 +6,7 @@ Rule: SeizFrequency1a
 Priority: 99 
 ( 
     ({NumberRange}
-    {timePeriods notContains Token.string == per, timePeriods notContains Token.string == a}):match
+    {timePeriods notContains Token.string == per, timePeriods notContains Token.string == a, timePeriods notContains Token.string == every, timePeriods notContains Token.string == each}):match
     ({Token.string != ago})  
 ):match1 
 --> 
@@ -18,7 +18,7 @@ Rule: SeizFrequency2b
 Priority: 100 
 ( 
     (({NumberRange}):num
-    ({timePeriods contains Token.string == per}|{timePeriods contains Token.string == a})):match
+    ({timePeriods contains Token.string == per}|{timePeriods contains Token.string == a}|{timePeriods contains Token.string == every}|{timePeriods contains Token.string == each})):match
     ({Token.string != ago})  
 ):match1 
 --> 
