@@ -1,10 +1,11 @@
 Phase: SeizureFrequency
-Input: SeizureFrequency1 SFBlock Sentence
+Input: SeizureFrequency1 SFBlock Sentence SpaceToken
 Options: control=appelt
 
 Rule: SeizureFrequencyFilter2
 (
     ({Sentence contains {SeizureFrequency1 notContains SFBlock}, Sentence notContains SFBlock})
+    ({SpaceToken})
 ):match
 -->
 :match.SeizureFrequency2 = { rule2 = "SFBlockFilter", rule = :match.SeizureFrequency1.rule, CUI = :match.SeizureFrequency1.CUI, TimePeriod = :match.SeizureFrequency1.TimePeriod,
@@ -13,4 +14,4 @@ LowerNumberOfSeizures  = :match.SeizureFrequency1.LowerNumberOfSeizures, UpperNu
 YearDate = :match.SeizureFrequency1.YearDate, DayDate = :match.SeizureFrequency1.DayDate, MonthDate = :match.SeizureFrequency1.MonthDate,
 SinceOrDuration = :match.SeizureFrequency1.SinceOrDuration, Certainty = :match.SeizureFrequency1.Certainty, Negation = :match.SeizureFrequency1.Negation,
 AgeUnit = :match.SeizureFrequency1.AgeUnit, Age = :match.SeizureFrequency1.Age, AgeLower = :match.SeizureFrequency1.AgeLower, AgeUpper = :match.SeizureFrequency1.AgeUpper,
-PointInTime = :match.SeizureFrequency1.PointInTime, LowerNuberOfTimePeriods = :match.SeizureFrequency1.LowerNuberOfTimePeriods, UpperNuberOfTimePeriods = :match.SeizureFrequency1.UpperNuberOfTimePeriods}
+PointInTime = :match.SeizureFrequency1.PointInTime, LowerNumberOfTimePeriods = :match.SeizureFrequency1.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizureFrequency1.UpperNumberOfTimePeriods}

@@ -15,7 +15,7 @@ Rule: hSeizureFreq1a
 Priority: 100 
 ( 
     ({ContextPrescription})? 
-    ({PointInTime})?
+    /*({PointInTime})?*/
     ({NumberRange}) 
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({timePeriods}) 
@@ -189,6 +189,7 @@ Priority: 100
 
 
 /* complex partial seizure. These happen most weeks and can be up to 3 times per day */ 
+/* this rule straight into SeizFreq because so far cant handle blocks over two sentences*/
 
 
 Rule: hSeizureFreq4b
@@ -201,7 +202,7 @@ Priority: 100
     ({SeizFrequency2}) 
 ):match 
 --> 
-:match.SeizureFrequency11 = { rule = "hSeizure4b", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureFrequency = { rule = "hSeizure4b", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
  NumberOfTimePeriods = :match.SeizFrequency2.NumberOfTimePeriods, TimePeriod = :match.SeizFrequency2.TimePeriod,
  NumberOfSeizures = :match.SeizFrequency2.QuantityTotal, LowerNumberOfSeizures  = :match.SeizFrequency2.QuantityLowerRange, UpperNumberOfSeizures  = :match.SeizFrequency2.QuantityUpperRange} 
 
@@ -302,6 +303,19 @@ Priority: 95
 :match.SeizureFrequency11 = { rule = hSeizureFreqPointInTime2, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, 
 NumberOfSeizures = :match.NumberRange.value, PointInTime = :match.PointInTime.Since, SinceOrDuration = "Date"}
 
+Rule: hSeizurePartialDate3
+Priority: 99 
+( 
+    ({PartialDate})? 
+    (({NumberRange})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({timeElapsed})
+    ({PartialDate})):match 
+):match1 
+--> 
+:match.SeizureFrequency11 = { rule = hSeizurePartialDate3, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2,
+YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.Day}
 
 
 /* Since? [Date], [Person] had [NumberRange] [Lookup3] - further my letter of Nov 2009, J has had 6 to 7 seizures */
@@ -326,7 +340,7 @@ Rule: hSeizurePartialDate2
 Priority: 95 
 ( 
     ({PartialDate})
-    ({Split})
+    ({Split})?
     ({NumberRange})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({timeElapsed}) 
@@ -346,19 +360,6 @@ Priority: 95
 ):match 
 --> 
 :match.SeizureFrequency11 = { rule = hSeizurePartialDate2b, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
-NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2,
-YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.Day}
-
-Rule: hSeizurePartialDate3
-Priority: 95 
-( 
-    ({NumberRange})
-    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
-    ({timeElapsed})
-    ({PartialDate}) 
-):match 
---> 
-:match.SeizureFrequency11 = { rule = hSeizurePartialDate3, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2,
 YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.Day}
 
