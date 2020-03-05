@@ -10,11 +10,16 @@ seizure-frequency1
 seizure-frequency2
 SF
 seizurechange
+SeizFreqSentence
+SeizChangeSentence
+SeizFreeSentence
 SeizFreqFilter
 SeizFreqFilter2
 SeizFreqFilter3
 SeizFreeFilter
 SeizFreeFilter2
+SeizChangeFilter
+SeizChangeFilter2
 TwoSeizureFreqOneTimePeriod
 EpilepsyMentions
 SeizureSince
