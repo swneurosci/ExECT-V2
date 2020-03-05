@@ -65,3 +65,4 @@ LastSeizure.lst::::LastSeizure
 SeizureFrequencyBlock.lst::::SFBlock
 KidsDose.lst::::KidsDose
 DiagnosisB.lst:ExtraDiag:DiagB::DiagB
+SChangeBlock.lst::::SChangeBlock
