@@ -2,6 +2,8 @@ Phase: SeizFrequency
 Input: NumberRange timePeriods Token Unit Lookup3
 Options: control=appelt 
  
+/* SeizFrequency1 - Number = TimePeriods | SeizFrequency2 - Number = Seizures (LOOKUP3 MUST COME BEFORE THE NUMBER, OTHERWISE ITS EASY TO SPOT*/
+
 Rule: SeizFrequency1a 
 Priority: 99 
 ( 
