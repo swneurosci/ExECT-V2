@@ -14,5 +14,5 @@ YearDate = :match.SeizureChange.YearDate, DayDate = :match.SeizureChange.DayDate
 SinceOrDuration = :match.SeizureChange.SinceOrDuration, Certainty = :match.SeizureChange.Certainty, Negation = :match.SeizureChange.Negation,
 AgeUnit = :match.SeizureChange.AgeUnit, Age = :match.SeizureChange.Age, AgeLower = :match.SeizureChange.AgeLower, AgeUpper = :match.SeizureChange.AgeUpper,
 PointInTime = :match.SeizureChange.PointInTime, LowerNuberOfTimePeriods = :match.SeizureChange.LowerNuberOfTimePeriods, 
-UpperNuberOfTimePeriods = :match.SeizureChange.UpperNuberOfTimePeriods}
+UpperNuberOfTimePeriods = :match.SeizureChange.UpperNuberOfTimePeriods, FrequencyChange = :match.SeizureChange.FrequencyChange}
 
