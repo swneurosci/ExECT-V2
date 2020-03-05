@@ -210,6 +210,25 @@ Priority: 99
 :match.SeizureChange = { rule = "SeizureChange4c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation } 
 
 
+/*  doesn’t feel her seizure frequency has changed over the last few years */
+/* Lookup is contained within the Frequency "doesnt feel her seizure frequency has changed" */
+
+
+Rule: SeizureChange5
+Priority: 99 
+( 
+    ({Frequency.ContainsLookUp == Yes})
+    ({timeElapsed})
+    ({NumberRange})
+    ({timePeriods})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange5", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2}
+
+
+
+
 
 /* Negated Seizure */
 
