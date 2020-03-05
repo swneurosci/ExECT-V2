@@ -1,10 +1,10 @@
 Phase: SeizureFrequency
-Input: SeizureFrequencyDriving driving Sentence
+Input: SeizureFrequencyDriving SFreeBlock SFreeSentence
 Options: control=appelt
 
 Rule: SeizureFrequencyFilter1
 (
-    ({Sentence contains {SeizureFrequencyDriving notContains driving}, Sentence notContains driving})
+    ({SFreeSentence contains {SeizureFrequencyDriving notContains SFreeBlock}, SFreeSentence notContains SFreeBlock})
 ):match
 -->
 :match.SeizureFrequencyNotDriving = { rule2 = "DrivingFilter", rule = :match.SeizureFrequencyDriving.rule, CUI = :match.SeizureFrequencyDriving.CUI, TimePeriod = :match.SeizureFrequencyDriving.TimePeriod,
@@ -15,17 +15,4 @@ SinceOrDuration = :match.SeizureFrequencyDriving.SinceOrDuration, Certainty = :m
 AgeUnit = :match.SeizureFrequencyDriving.AgeUnit, Age = :match.SeizureFrequencyDriving.Age, AgeLower = :match.SeizureFrequencyDriving.AgeLower, AgeUpper = :match.SeizureFrequencyDriving.AgeUpper,
 PointInTime = :match.SeizureFrequencyDriving.PointInTime, LowerNuberOfTimePeriods = :match.SeizureFrequencyDriving.LowerNuberOfTimePeriods, UpperNuberOfTimePeriods = :match.SeizureFrequencyDriving.UpperNuberOfTimePeriods}
 
-/*
-Rule: SeizureFrequencyFilter1
-(
-    ({SeizureFrequencyDriving notContains driving})
-):match
--->
-:match.SeizureFrequency = { rule2 = "DrivingFilter", rule = :match.SeizureFrequencyDriving.rule, CUI = :match.SeizureFrequencyDriving.CUI, TimePeriod = :match.SeizureFrequencyDriving.TimePeriod,
-NumberOfTimePeriods = :match.SeizureFrequencyDriving.NumberOfTimePeriods, NumberOfSeizures  = :match.SeizureFrequencyDriving.NumberOfSeizures ,
-LowerNumberOfSeizures  = :match.SeizureFrequencyDriving.LowerNumberOfSeizures, UpperNumberOfSeizures  = :match.SeizureFrequencyDriving.UpperNumberOfSeizures,
-YearDate = :match.SeizureFrequencyDriving.YearDate, DayDate = :match.SeizureFrequencyDriving.DayDate, MonthDate = :match.SeizureFrequencyDriving.MonthDate,
-SinceOrDuration = :match.SeizureFrequencyDriving.SinceOrDuration, Certainty = :match.SeizureFrequencyDriving.Certainty, Negation = :match.SeizureFrequencyDriving.Negation,
-PointInTime = :match.SeizureFrequencyDriving.PointInTime, LowerNuberOfTimePeriods = :match.SeizureFrequencyDriving.LowerNuberOfTimePeriods, UpperNuberOfTimePeriods = :match.SeizureFrequencyDriving.UpperNuberOfTimePeriods}
-*/
 

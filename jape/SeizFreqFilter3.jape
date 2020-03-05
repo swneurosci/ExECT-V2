@@ -7,8 +7,8 @@ Rule: SeizureFrequencySecondFilter
     ({SeizureFrequency11 within SeizureFrequency2})
 ):match
 -->
-:match.SeizureFrequency = { rule2 = "SecondFilter", rule = :match.SeizureFrequency11.rule, CUI = :match.SeizureFrequency11.CUI, TimePeriod = :match.SeizureFrequency11.TimePeriod,
-NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, NumberOfSeizures  = :match.SeizureFrequency11.NumberOfSeizures ,
+:match.SeizureFrequency = { rule2 = "SecondFilter", rule = :match.SeizureFrequency11.rule, CUI = :match.SeizureFrequency11.CUI, string = :match.SeizureFrequency2.string
+TimePeriod = :match.SeizureFrequency11.TimePeriod, NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, NumberOfSeizures  = :match.SeizureFrequency11.NumberOfSeizures ,
 LowerNumberOfSeizures  = :match.SeizureFrequency11.LowerNumberOfSeizures, UpperNumberOfSeizures  = :match.SeizureFrequency11.UpperNumberOfSeizures,
 YearDate = :match.SeizureFrequency11.YearDate, DayDate = :match.SeizureFrequency11.DayDate, MonthDate = :match.SeizureFrequency11.MonthDate,
 SinceOrDuration = :match.SeizureFrequency11.SinceOrDuration, Certainty = :match.SeizureFrequency11.Certainty, Negation = :match.SeizureFrequency11.Negation,
