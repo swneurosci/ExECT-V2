@@ -3,7 +3,7 @@ new File(scriptParams.outputFile).withWriterAppend{ out ->
     anno ->
       def f = anno.getFeatures()
       def (A,B,C) =  doc.getFeatures().get("gate.SourceURL").split("_|\\.")
-      String[] id = A.split("/")
+      String[] id = C.split("/")
       out.writeLine(/"${id[-1]}","${f.get('CUI')}","${f.get('Negation')}","${f.get('Certainty')}","${f.get('rule')}",/)
     }
   }
