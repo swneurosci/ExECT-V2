@@ -5,7 +5,7 @@ Options: control=appelt
 
 /* SeizureFrequency time (months weeks etc.) */
 
-/* SeizFrequency1 - Number = seizures | SeizFrequency2 - Number = TimePeriods (LOOKUP3 MUST COME BEFORE THE NUMBER, OTHERWISE ITS EASY TO SPOT*/
+/* SeizFrequency1 - Number = TimePeriods | SeizFrequency2 - Number = Seizures (LOOKUP3 MUST COME BEFORE THE NUMBER, OTHERWISE ITS EASY TO SPOT*/
  
 /* 
 * 3 seizures in the last month 
@@ -74,7 +74,7 @@ Priority: 100
  NumberOfTimePeriods = :match.SeizFreq.NumberOfTimePeriods, TimePeriod = :match.SeizFreq.TimePeriod, NumberOfSeizures = "1"} 
  
 
-
+/* SeizFrequency1 - Number = TimePeriods | SeizFrequency2 - Number = Seizures (LOOKUP3 MUST COME BEFORE THE NUMBER, OTHERWISE ITS EASY TO SPOT*/
 /* 
 * Seizure in the last 3 months 
 * also picks up =  seizures have really increased since then, particularly in the last 2 years 
@@ -165,7 +165,9 @@ NumberOfTimePeriods = :num2.SeizFrequency1.NumberOfTimePeriods, TimePeriod = :ma
 LowerNumberOfTimePeriods = :match.SeizFrequency1.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency1.UpperNumberOfTimePeriods,
 NumberOfSeizures = :num1.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2} 
  
+/* SeizFrequency1 - Number = TimePeriods | SeizFrequency2 - Number = Seizures (LOOKUP3 MUST COME BEFORE THE NUMBER, OTHERWISE ITS EASY TO SPOT*/
 
+/* Seizures every 3 weeks */
 
 Rule: hSeizureFreq4a 
 Priority: 100 
