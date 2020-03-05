@@ -18,7 +18,7 @@ Priority: 100
     ({timePeriods})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChange1a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange1a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
 
 /* Seizures Changed since 1 year ago */
@@ -34,7 +34,7 @@ Priority: 100
     ({timePeriods})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChange1b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange1b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
 
 
@@ -51,22 +51,23 @@ Priority: 100
     ({Frequency})      
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChange1c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange1c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2} 
 
 
-/* over the lst few months the frequency of seizures has been increasing */
+/* over the last few months the frequency of seizures has been increasing */
 
 
 Rule: SeizureChange1d
 Priority: 100 
 ( 
+    ({timeElapsed})
     ({timePeriods})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({Frequency})      
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChange1d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange1d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.timePeriods.frequency} 
 
 
@@ -84,7 +85,7 @@ Priority: 100
     ({timePeriods})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChange1e", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange1e", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
 
 
@@ -101,7 +102,7 @@ Priority: 100
     ({PartialDate})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChange2a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange2a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year } 
 
 
@@ -115,7 +116,7 @@ Priority: 100
     ({PartialDate})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChange2b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange2b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
 
 
@@ -130,7 +131,7 @@ Priority: 100
     ({Frequency})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChange3a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange3a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 PointInTime = :match.PointInTime.Since} 
 
 
@@ -142,7 +143,7 @@ Priority: 100
     ({PointInTime})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChange3b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange3b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 PointInTime = :match.PointInTime.Since} 
 
 
@@ -155,7 +156,7 @@ Priority: 100
     ({PointInTime})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChange3c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange3c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 PointInTime = :match.PointInTime.Since} 
 
 Rule: SeizureChange3d
@@ -167,7 +168,7 @@ Priority: 100
     ({PointInTime})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChange3c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureChange = { rule = "SeizureChange3d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 PointInTime = :match.PointInTime.Since} 
 
 /* 
@@ -183,7 +184,7 @@ Priority: 99
     Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChange4a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation } 
+:match.SeizureChange = { rule = "SeizureChange4a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation } 
 
 
 Rule: SeizureChange4b
@@ -194,7 +195,7 @@ Priority: 99
     ({Frequency})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChange4b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation } 
+:match.SeizureChange = { rule = "SeizureChange4b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation } 
 
 
 Rule: SeizureChange4c
@@ -206,7 +207,7 @@ Priority: 99
     Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChange4c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation } 
+:match.SeizureChange = { rule = "SeizureChange4c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation } 
 
 
 
@@ -225,7 +226,7 @@ Priority: 100
     ({timePeriods})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChangeNegated1a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "SeizureChangeNegated1a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
 
 /* Seizures Changed since 1 year ago */
@@ -241,7 +242,7 @@ Priority: 100
     ({timePeriods})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChangeNegated1b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "SeizureChangeNegated1b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
 
 
@@ -258,7 +259,7 @@ Priority: 100
     ({Frequency.Negation == Negated})      
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChangeNegated1c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "SeizureChangeNegated1c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2} 
 
 
@@ -273,7 +274,7 @@ Priority: 100
     ({Frequency.Negation == Negated})      
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChangeNegated1d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "SeizureChangeNegated1d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.timePeriods.frequency} 
 
 
@@ -291,7 +292,7 @@ Priority: 100
     ({timePeriods})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChangeNegated1e", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "SeizureChangeNegated1e", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
 
 
@@ -308,7 +309,7 @@ Priority: 100
     ({PartialDate})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChangeNegated2a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "SeizureChangeNegated2a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year } 
 
 
@@ -322,7 +323,7 @@ Priority: 100
     ({PartialDate})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChangeNegated2b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "SeizureChangeNegated2b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
 
 
@@ -337,7 +338,7 @@ Priority: 100
     ({Frequency.Negation == Negated})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChangeNegated3a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "SeizureChangeNegated3a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 PointInTime = :match.PointInTime.Since} 
 
 
@@ -349,7 +350,7 @@ Priority: 100
     ({PointInTime})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChangeNegated3b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "SeizureChangeNegated3b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 PointInTime = :match.PointInTime.Since} 
 
 
@@ -362,7 +363,7 @@ Priority: 100
     ({PointInTime})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChangeNegated3c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "SeizureChangeNegated3c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 PointInTime = :match.PointInTime.Since} 
 
 
@@ -375,7 +376,7 @@ Priority: 100
     ({PointInTime})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChangeNegated3d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "SeizureChangeNegated3d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 PointInTime = :match.PointInTime.Since} 
 
 
@@ -392,7 +393,7 @@ Priority: 99
     Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChangeNegated4a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
+:match.SeizureChange = { rule = "SeizureChangeNegated4a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
 
 
 Rule: SeizureChangeNegated4b
@@ -403,7 +404,7 @@ Priority: 99
     ({Frequency.Negation1 == Negated})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChangeNegated4b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
+:match.SeizureChange = { rule = "SeizureChangeNegated4b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
 
 
 Rule: SeizureChangeNegated4c
@@ -415,7 +416,7 @@ Priority: 99
     Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "SeizureChangeNegated4c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
+:match.SeizureChange = { rule = "SeizureChangeNegated4c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
 
 
 
@@ -434,7 +435,7 @@ Priority: 100
     ({timePeriods})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange1a", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "NegatedSeizureChange1a", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
 
 /* Seizures Changed since 1 year ago */
@@ -450,7 +451,7 @@ Priority: 100
     ({timePeriods})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange1b", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "NegatedSeizureChange1b", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
 
 
@@ -467,7 +468,7 @@ Priority: 100
     ({Frequency.Negation == Negated})      
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange1c", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "NegatedSeizureChange1c", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2} 
 
 
@@ -482,7 +483,7 @@ Priority: 100
     ({Frequency.Negation == Negated})      
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange1d", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "NegatedSeizureChange1d", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.timePeriods.frequency} 
 
 
@@ -500,7 +501,7 @@ Priority: 100
     ({timePeriods})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange1e", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "NegatedSeizureChange1e", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
 
 
@@ -517,7 +518,7 @@ Priority: 100
     ({PartialDate})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange2a", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "NegatedSeizureChange2a", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year } 
 
 
@@ -531,7 +532,7 @@ Priority: 100
     ({PartialDate})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange2b", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "NegatedSeizureChange2b", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
 
 
@@ -546,7 +547,7 @@ Priority: 100
     ({Frequency.Negation == Negated})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange3a", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "NegatedSeizureChange3a", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 PointInTime = :match.PointInTime.Since} 
 
 
@@ -558,7 +559,7 @@ Priority: 100
     ({PointInTime})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange3b", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "NegatedSeizureChange3b", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 PointInTime = :match.PointInTime.Since} 
 
 
@@ -571,7 +572,7 @@ Priority: 100
     ({PointInTime})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange3c", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "NegatedSeizureChange3c", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 PointInTime = :match.PointInTime.Since} 
 
 
@@ -584,7 +585,7 @@ Priority: 100
     ({PointInTime})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange3d", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "NegatedSeizureChange3d", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 PointInTime = :match.PointInTime.Since} 
 
 /*  no improvement in her seizure frequency since last time she was seen in the clinic */
@@ -599,7 +600,7 @@ Priority: 100
     ({PointInTime})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange3e", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
+:match.SeizureChange = { rule = "NegatedSeizureChange3e", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
 PointInTime = :match.PointInTime.Since} 
 
 /* 
@@ -615,7 +616,7 @@ Priority: 99
     Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange4a", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
+:match.SeizureChange = { rule = "NegatedSeizureChange4a", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
 
 
 Rule: NegatedSeizureChange4b
@@ -626,7 +627,7 @@ Priority: 99
     ({Frequency.Negation == Negated})
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange4b", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
+:match.SeizureChange = { rule = "NegatedSeizureChange4b", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
 
 
 Rule: NegatedSeizureChange4c
@@ -638,4 +639,4 @@ Priority: 99
     Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
 ):match 
 --> 
-:match.SeizureFrequency = { rule = "NegatedSeizureChange4c", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
+:match.SeizureChange = { rule = "NegatedSeizureChange4c", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
