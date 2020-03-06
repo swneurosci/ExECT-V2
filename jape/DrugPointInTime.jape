@@ -1,0 +1,30 @@
+Phase: SeizureFrequency
+Input: Drug DrugPointInTime Split Token
+Options: control=all
+
+Rule: SeizureFrequencySecondFilter
+(
+    ({DrugPointInTime})
+    ({Token})?
+    ({Drug})
+):match
+-->
+:match.PointInTime = { rule = "ContPrescDrug", Since = "DrugChange"}
+
+Rule: SeizureFrequencySecondFilter
+(
+    ({Drug})
+    ({Token})?
+    ({DrugPointInTime})
+):match
+-->
+:match.PointInTime = { rule = "ContPrescDrug2", Since = "DrugChange"}
+
+
+Rule: SeizureFrequencySecondFilter
+(
+    ({Drug})
+    ({Token.string == "has"})
+):match
+-->
+:match.PointInTime = { rule = "DrugHas", Since = "DrugChange"}
