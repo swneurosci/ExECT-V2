@@ -1,5 +1,5 @@
 Phase: SeizureFrequency 
-Input: SeizFrequency1 SeizFrequency2 NumberRange timePeriods Lookup3 Split SeizFreq Prescription0 SeizureFree ContextPrescription Age PointInTime timeElapsed Coincide PartialDate NoSeizure LastSeizure
+Input: SeizFrequency1 SeizFrequency2 NumberRange timePeriods Lookup3 Split SeizFreq Prescription0 SeizureFree Age PointInTime timeElapsed Coincide PartialDate NoSeizure LastSeizure
 Options: control=appelt 
 
 /* Her last seizure was 6 years ago - THINK NEED TO ADD AGO INTO THIS RULE */
@@ -70,6 +70,7 @@ Priority: 95
 (
     ({timeElapsed.time  == "last"})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
+    ({timeElapsed.time==during})*
     ({PartialDate})
 ):match
 -->

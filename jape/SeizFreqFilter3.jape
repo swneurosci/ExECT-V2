@@ -1,6 +1,6 @@
 Phase: SeizureFrequency
 Input: SeizureFrequency11 SFBlock Sentence
-Options: control=appelt
+Options: control=all
 
 Rule: SeizureFrequencySecondFilter
 (
