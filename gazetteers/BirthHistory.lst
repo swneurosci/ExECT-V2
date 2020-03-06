@@ -1,4 +1,8 @@
-preterm birth:value=under_37_weeks:TUI=T046:CUI=C0151526
+premature:value=under_37_weeks:TUI=T046:CUI=C0151526
+prematurely:value=under_37_weeks:TUI=T046:CUI=C0151526
+preterm:value=under_37_weeks:TUI=T046:CUI=C0151526
+born early:value=under_37_weeks:TUI=T046:CUI=C0151526
+pre term:value=under_37_weeks:TUI=T046:CUI=C0151526
 premature birth:value=under_37_weeks:TUI=T046:CUI=C0151526
 born prematurely:value=under_37_weeks:TUI=T046:CUI=C0151526
 late preterm birth:value=34_to_<37_weeks:TUI=T033:CUI=C3829315
@@ -8,4 +12,4 @@ extremely preterm birth:value=<28_weeks:TUI=T033:CUI=C4055046
 extreme preterm birth:value=<28_weeks:TUI=T033:CUI=C4055046
 born at term:value=term_birth:TUI=T040:CUI=C0233324
 term birth:value=term_birth:TUI=T040:CUI=C0233324
-
+term:value=value=term_birth:TUI=T040:CUI=C0233324
