@@ -1,61 +1,63 @@
-abnormal:CUI=C0151611:Results=Abnormal					
-Abnormal:CUI=C0151611:Results=Abnormal					
-abnormalities:CUI=C0151611:Results=Abnormal					
-abnormality:CUI=C0151611:Results=Abnormal					
-bilateral discharges:CUI=C0151611:Results=Abnormal					
-burst suppression:CUI=C0151611:Results=Abnormal					
-clear:CUI=C0560017:Results=Normal					
-did not capture any events:CUI=C0560017:Results=Normal					
-dysrhythmic:CUI=C0151611:Results=Abnormal					
-epileptic:CUI=C0151611:Results=Abnormal					
-epileptiform:CUI=C0151611:Results=Abnormal					
-epileptogenic:CUI=C0151611:Results=Abnormal					
-failed to alter:CUI=C0560017:Results=Normal					
-focal diacharge:CUI=C0151611:Results=Abnormal					
+abnormal:CUI=C0151611:Results=Abnormal
+Abnormal:CUI=C0151611:Results=Abnormal
+abnormalities:CUI=C0151611:Results=Abnormal
+abnormality:CUI=C0151611:Results=Abnormal
+bilateral discharges:CUI=C0151611:Results=Abnormal
+burst suppression:CUI=C0151611:Results=Abnormal
+clear:CUI=C0560017:Results=Normal
+did not capture any events:CUI=C0560017:Results=Normal:Ignore=Yes
+dysrhythmic:CUI=C0151611:Results=Abnormal
+epileptic:CUI=C0151611:Results=Abnormal
+epileptiform:CUI=C0151611:Results=Abnormal
+epileptogenic:CUI=C0151611:Results=Abnormal
+failed to alter:CUI=C0560017:Results=Normal
+focal diacharge:CUI=C0151611:Results=Abnormal
 focal slowing:CUI=C0151611:Results=Abnormal
-focal ictal rhythms:CUI=C0151611:Results=Abnormal					
-focus:CUI=C0151611:Results=Abnormal					
-generalised discharges:CUI=C0151611:Results=Abnormal					
-generalised slowing:CUI=C0151611:Results=Abnormal					
-hypsarrhythmia:CUI=C0151611:Results=Abnormal					
-irregular:CUI=C0151611:Results=Abnormal					
-left side slowing:CUI=C0151611:Results=Abnormal					
-localised diacharge:CUI=C0151611:Results=Abnormal					
-localised diacharges:CUI=C0151611:Results=Abnormal					
-localised repetitive diacharges:CUI=C0151611:Results=Abnormal					
-low amplitude fast activity:CUI=C0151611:Results=Abnormal					
-low voltage fast activity:CUI=C0151611:Results=Abnormal					
-multifocal discharges:CUI=C0151611:Results=Abnormal					
-no significant findings:CUI=C0560017:Results=Normal:Ignore=Yes				
+focal ictal rhythms:CUI=C0151611:Results=Abnormal
+focus:CUI=C0151611:Results=Abnormal
+generalised discharges:CUI=C0151611:Results=Abnormal
+generalised slowing:CUI=C0151611:Results=Abnormal
+hypsarrhythmia:CUI=C0151611:Results=Abnormal
+irregular:CUI=C0151611:Results=Abnormal
+left side slowing:CUI=C0151611:Results=Abnormal
+localised diacharge:CUI=C0151611:Results=Abnormal
+localised diacharges:CUI=C0151611:Results=Abnormal
+localised repetitive diacharges:CUI=C0151611:Results=Abnormal
+low amplitude fast activity:CUI=C0151611:Results=Abnormal
+low voltage fast activity:CUI=C0151611:Results=Abnormal
+multifocal discharges:CUI=C0151611:Results=Abnormal
+no significant findings:CUI=C0560017:Results=Normal:Ignore=Yes
 non-epileptic:CUI=C0560017:Results=Normal:Ignore=Yes
-normal:CUI=C0560017:Results=Normal					
-Normal:CUI=C0560017:Results=Normal					
+normal:CUI=C0560017:Results=Normal
+Normal:CUI=C0560017:Results=Normal
 not available:Results=Unknown:Ignore=Yes
 not have the results:Results=Unknown:Ignore=Yes
-paroxysmal fast activity:CUI=C0151611:Results=Abnormal					
-photoparoxysmal response:CUI=C0151611:Results=Abnormal					
-photosensitive:CUI=C0151611:Results=Abnormal					
-photosensitive:CUI=C0151611:Results=Abnormal					
-photosensitivity:CUI=C0151611:Results=Abnormal					
-polyspike and wave:CUI=C0151611:Results=Abnormal					
-polyspike:CUI=C0151611:Results=Abnormal					
-poly-spike:CUI=C0151611:Results=Abnormal					
-polyspike-and-wave:CUI=C0151611:Results=Abnormal					
-right side slowing:CUI=C0151611:Results=Abnormal					
-sharp:CUI=C0151611:Results=Abnormal					
-slow spike and wave:CUI=C0151611:Results=Abnormal					
-slow spike-wave discharges:CUI=C0151611:Results=Abnormal					
-slow wave:CUI=C0151611:Results=Abnormal					
-spike and wave:CUI=C0151611:Results=Abnormal					
-spike wave discharges:CUI=C0151611:Results=Abnormal					
-spike:CUI=C0151611:Results=Abnormal					
-spikes:CUI=C0151611:Results=Abnormal					
-spike-wave:CUI=C0151611:Results=Abnormal					
-temporal intermittent rhythmic delta activity:CUI=C0151611:Results=Abnormal					
-temporal slowing:CUI=C0151611:Results=Abnormal					
-unremarkable:CUI=C0560017:Results=Normal					
+paroxysmal fast activity:CUI=C0151611:Results=Abnormal
+photoparoxysmal response:CUI=C0151611:Results=Abnormal
+photosensitive:CUI=C0151611:Results=Abnormal
+photosensitive:CUI=C0151611:Results=Abnormal
+photosensitivity:CUI=C0151611:Results=Abnormal
+polyspike and wave:CUI=C0151611:Results=Abnormal
+polyspike:CUI=C0151611:Results=Abnormal
+poly-spike:CUI=C0151611:Results=Abnormal
+polyspike-and-wave:CUI=C0151611:Results=Abnormal
+right side slowing:CUI=C0151611:Results=Abnormal
+sharp:CUI=C0151611:Results=Abnormal
+slow spike and wave:CUI=C0151611:Results=Abnormal
+slow spike-wave discharges:CUI=C0151611:Results=Abnormal
+slow wave:CUI=C0151611:Results=Abnormal
+spike and wave:CUI=C0151611:Results=Abnormal
+spike wave discharges:CUI=C0151611:Results=Abnormal
+spike:CUI=C0151611:Results=Abnormal
+spikes:CUI=C0151611:Results=Abnormal
+spike-wave:CUI=C0151611:Results=Abnormal
+temporal intermittent rhythmic delta activity:CUI=C0151611:Results=Abnormal
+temporal slowing:CUI=C0151611:Results=Abnormal
+unremarkable:CUI=C0560017:Results=Normal
 unstable:CUI=C0151611:Results=Abnormal
 epileptic activity was not seen:CUI=C0560017:Results=Normal:Ignore=Yes
 left sided changes:CUI=C0151611:Results=Abnormal
 right sided changes:CUI=C0151611:Results=Abnormal
 both normal:CUI=C0560017:Results=Normal
+non-specific interictal changes:CUI=C0151611:Results=Abnormal:Ignore=Yes
+no changes:CUI=C0560017:Results=Normal:Ignore=Yes

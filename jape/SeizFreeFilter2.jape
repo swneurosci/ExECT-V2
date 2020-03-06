@@ -1,5 +1,5 @@
 Phase: SeizureFrequency
-Input: SeizureFrequencyDriving driving Sentence
+Input: SeizureFrequencyDriving SFreeBlock Sentence
 Options: control=appelt
 
 Rule: SeizureFrequencySecondFilter
@@ -14,4 +14,5 @@ YearDate = :match.SeizureFrequencyDriving.YearDate, DayDate = :match.SeizureFreq
 SinceOrDuration = :match.SeizureFrequencyDriving.SinceOrDuration, Certainty = :match.SeizureFrequencyDriving.Certainty, Negation = :match.SeizureFrequencyDriving.Negation,
 AgeUnit = :match.SeizureFrequencyDriving.AgeUnit, Age = :match.SeizureFrequencyDriving.Age, AgeLower = :match.SeizureFrequencyDriving.AgeLower, AgeUpper = :match.SeizureFrequencyDriving.AgeUpper,
 PointInTime = :match.SeizureFrequencyDriving.PointInTime, LowerNuberOfTimePeriods = :match.SeizureFrequencyDriving.LowerNuberOfTimePeriods, UpperNuberOfTimePeriods = :match.SeizureFrequencyDriving.UpperNuberOfTimePeriods}
+
 

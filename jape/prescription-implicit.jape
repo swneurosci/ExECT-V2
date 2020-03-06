@@ -49,10 +49,10 @@ string = :p1.Prescription0.drug,
  status = :p1.Prescription.status,
  DrugDose = :p2.Measurement.quantity,
  DoseUnit = :p2.Measurement.units,
- Frequency = :p1.DoseFrequency.frequency,
- time-unit = :p1.DoseFrequency.time-unit,
+ Frequency = :p1.Prescription0.Frequency,
+ time-unit = :p1.Prescription0.time-unit,
  dose-interval = :p1.DoseFrequency.interval,
- when = :p1 .DoseFrequency.when,
+ when = :p1.Prescription0.when,
  drug-type = :p1.Prescription0.drug-type,
  Contex = :p1.Prescription0.Contex}
 

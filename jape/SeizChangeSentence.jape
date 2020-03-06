@@ -1,17 +1,20 @@
 Phase: SeizureFrequency
-Input: SeizureFrequency11 SFBlock Sentence
-Options: control=appelt
+Input: SeizureChange Split
+Options: control=all
 
-Rule: SeizureFrequencySecondFilter
+Rule: SChangeSentence
 (
-    ({SeizureFrequency11 within SeizureFrequency2})
-):match
+    ({Split})
+    ({SeizureChange})?
+    ({SeizureChange}):match
+    ({SeizureChange})?
+    ({Split})
+):match1
 -->
-:match.SeizureFrequency = { rule2 = "SecondFilter", rule = :match.SeizureFrequency11.rule, CUI = :match.SeizureFrequency11.CUI, string = :match.SeizureFrequency2.string
-TimePeriod = :match.SeizureFrequency11.TimePeriod, NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, NumberOfSeizures  = :match.SeizureFrequency11.NumberOfSeizures ,
+:match1.SChangeSentence = { rule2 = "SChangeSentence", rule = :match.SeizureFrequency11.rule, CUI = :match.SeizureFrequency11.CUI, TimePeriod = :match.SeizureFrequency11.TimePeriod,
+NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, NumberOfSeizures  = :match.SeizureFrequency11.NumberOfSeizures ,
 LowerNumberOfSeizures  = :match.SeizureFrequency11.LowerNumberOfSeizures, UpperNumberOfSeizures  = :match.SeizureFrequency11.UpperNumberOfSeizures,
 YearDate = :match.SeizureFrequency11.YearDate, DayDate = :match.SeizureFrequency11.DayDate, MonthDate = :match.SeizureFrequency11.MonthDate,
 SinceOrDuration = :match.SeizureFrequency11.SinceOrDuration, Certainty = :match.SeizureFrequency11.Certainty, Negation = :match.SeizureFrequency11.Negation,
 AgeUnit = :match.SeizureFrequency11.AgeUnit, Age = :match.SeizureFrequency11.Age, AgeLower = :match.SeizureFrequency11.AgeLower, AgeUpper = :match.SeizureFrequency11.AgeUpper,
 PointInTime = :match.SeizureFrequency11.PointInTime, LowerNumberOfTimePeriods = :match.SeizureFrequency11.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizureFrequency11.UpperNumberOfTimePeriods}
-

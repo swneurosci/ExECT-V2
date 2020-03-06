@@ -1,4 +1,4 @@
-temporal:lobe=temporal 
-occipital:lobe=occipital
-parietal:lobe=parietal
-frontal:lobe=frontal
+temporal:lobe=temporal:PREF=Temporal lobe epilepsy:CUI=C0014556
+occipital:lobe=occipital:PREF=Occipital lobe epilepsy:CUI=C0393691
+parietal:lobe=parietal:PREF=Parietal lobe epilepsy:CUI=C0393690
+frontal:lobe=frontal:PREF=Frontal lobe epilepsy:CUI=C0085541

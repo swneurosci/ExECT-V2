@@ -38,3 +38,4 @@ since I last seen her:Since=LastClinic
 since I last seen him:Since=LastClinic
 since I last saw him:Since=LastClinic
 since I last saw her:Since=LastClinic
+after discharge:Since=DischargeDate

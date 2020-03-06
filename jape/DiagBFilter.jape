@@ -1,0 +1,25 @@
+Phase: DiagBFiltered
+Input:  Lookup DiagB
+Options: control=all
+
+Rule: DiagBFilter
+Priority: 100
+
+/* blocks words like Focal in Focal Epilepsy - should already be picked up in DiagA */
+
+(   
+	{DiagB notWithin Lookup}
+):match  
+ -->
+:match.DiagBFiltered = {ruleFilter = FilterDiagB, PREF = :match.DiagB.PREF, CUI = :match.DiagB.CUI}
+
+/* secondary generalisation already a lookup on its own, this is so can still be picked up */
+
+Rule: DiagBFilterSecondGen
+Priority: 100
+
+(   
+	{DiagB.LookUp == Yes}
+):match  
+ -->
+:match.DiagBFiltered = {ruleFilter = DiagBFilterSecondGen, PREF = :match.DiagB.PREF, CUI = :match.DiagB.CUI}

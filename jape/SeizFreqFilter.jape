@@ -16,3 +16,4 @@ PointInTime = :match.SeizureFrequency11.PointInTime, LowerNumberOfTimePeriods = 
 UpperNumberOfTimePeriods = :match.SeizureFrequency11.UpperNumberOfTimePeriods, FrequencyChange = :match.SeizureFrequency11.FrequencyChange}
 
 
+/* Maybe should put some triggers from ContextPrescription into SFBlock to skip this step and put SFreq11 into SeizFreqFilter2 */

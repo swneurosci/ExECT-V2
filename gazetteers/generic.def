@@ -44,7 +44,7 @@ SeizureFrequency.lst::::SeizFreq
 SeizureOnset.lst::::SeizOnset
 age.lst:age:age::Age
 PointInTime.lst:time:since::PointInTime
-driving.lst:driving:driving::driving
+driving.lst:driving:driving::SFreeBlock
 onset.lst:historic:symptoms:onset:Lookup2
 personAge.lst:person:time::Lookup2
 DiagnosisTriggers.lst:diagnosis:::DiagnosisTriggers
@@ -64,3 +64,5 @@ NoSeizure.lst::::NoSeizure
 LastSeizure.lst::::LastSeizure
 SeizureFrequencyBlock.lst::::SFBlock
 KidsDose.lst::::KidsDose
+DiagnosisB.lst:ExtraDiag:DiagB::DiagB
+SChangeBlock.lst::::SChangeBlock

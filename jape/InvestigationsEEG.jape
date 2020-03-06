@@ -213,6 +213,7 @@ Rule: getInvestigationsOutcomeEEG
 Priority: 92
 (
   ({InvestigationFindingEEG}):outcome
+  ({Conj})?
   ({Investigation})*
   ({Conj})?
   ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):EEG
@@ -250,3 +251,17 @@ Priority: 92
 -->
 :match.Investigations= { rule = getInvestigationsOutcomeEEG9, EEG_Performed = "Yes", EEG_Type = :EEG.Investigation.Type, EEG_Results = :outcome.InvestigationFindingEEG.Results, 
 CUI = :outcome.InvestigationFindingEEG.CUI, Negation = :outcome.InvestigationFindingEEG.Negation}
+
+
+Rule: getInvestigationsOutcomeEEG
+Priority: 92
+(
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Conj})?
+  ({Investigation})
+  (({Split})|({Conj}))?
+  ({InvestigationFindingEEG})
+):match
+-->
+:match.Investigations= { rule = getInvestigationsOutcomeEEG10, EEG_Performed = "Yes", EEG_Results = :match.InvestigationFindingEEG.Results, 
+CUI = :match.InvestigationFindingEEG.CUI, Negation = :match.InvestigationFindingEEG.Negation}

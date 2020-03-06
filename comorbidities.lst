@@ -1410,3 +1410,7 @@ MI	CUI=C0027051	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome
 myocardial infarct	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome
 heart attack	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome
 Cardiac infarction	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome
+non epileptic seizure	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+non epileptic seizures	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+non epileptic attack	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+non epileptic attacks	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome

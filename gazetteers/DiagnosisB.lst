@@ -1,0 +1,10 @@
+symptomatic:epilepsy=symptomatic:CUI=C1406659:PREF=Symptomatic Epilepsy
+focal:epilepsy=focal:CUI=C0014547:PREF=Focal Epilepsy
+generalised:epilepsy=generalised:CUI=C0014548:PREF=Generalised Epilepsy
+temporal:lobe=temporal:CUI=C0014556:PREF=Temporal Lobe Epilepsy
+occipital:lobe=occipital:CUI=C0393691:PREF=Occipital Lobe Epilepsy
+parietal:lobe=parietal:CUI=C0393690:PREF=Parietal Lobe Epilepsy
+frontal:lobe=frontal:CUI=C0085541:PREF=Frontal Lobe Epilepsy
+refractory:epilepsy=refractory:CUI=C1096063:PREF=Drug Resistant Epilepsy
+intractable:epilepsy=refractory:CUI=C1096063:PREF=Drug Resistant Epilepsy
+secondary generalisation:epilepsy=secondary generalisation:CUI=C0270838:PREF=Secondarily Generalized Seizures:LookUp=Yes

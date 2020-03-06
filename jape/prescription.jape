@@ -49,11 +49,45 @@ dose-interval = :match1.DoseFrequency.interval,
 Context = :match.ContextPrescription.context}
 
 /*
-* When no DoseFrequency is given, impled that frequency = 1 a day
+* When no DoseFrequency is given, impled that frequency = 1 a day, apart from clobazam and midazolam, these are As_Required when no time frame mentioned
 */
 
-Rule: doseMatch1a
+Rule: doseMatch1aAsRequired
 Priority: 98
+(
+    ({ContextPrescription})?
+    (({Drug.CUI == C0026056} | {Drug.CUI == C0055891})
+    ({ContextPrescription})?
+    {Measurement}):match1
+):match
+-->
+:match.Prescription0 = { rule = doseMatch1aAsRequired, string = :match1.Drug@string,
+DrugName = :match1.Drug@string, 
+CUI = :match1.Drug.CUI,
+DrugDose = :match1.Measurement.quantity,
+DoseUnit =:match1.Measurement.units,
+Frequency = "As_Required",
+Context = :match.ContextPrescription.context}
+
+Rule: doseMatch1bAsRequired
+Priority: 98
+(
+    ({ContextPrescription})?
+    (({Measurement})
+    ({ContextPrescription})?
+    ({Drug.CUI == C0026056} | {Drug.CUI == C0055891})):match1
+):match
+-->
+:match.Prescription0 = { rule = doseMatch1bAsRequired, string = :match1.Drug@string,
+DrugName = :match1.Drug@string, 
+CUI = :match1.Drug.CUI,
+DrugDose = :match1.Measurement.quantity,
+DoseUnit =:match1.Measurement.units,
+Frequency = "As_Required",
+Context = :match.ContextPrescription.context}
+
+Rule: doseMatch1a
+Priority: 97
 (
     ({ContextPrescription})?
     (({Drug})
@@ -70,7 +104,7 @@ Frequency = "1",
 Context = :match.ContextPrescription.context}
 
 Rule: doseMatch1b
-Priority: 98
+Priority: 97
 (
     ({ContextPrescription})?
     (({Measurement})
@@ -111,6 +145,27 @@ CUI = :match1.Drug.CUI,
 DrugDose = :match1.Measurement.quantity,
 DoseUnit  =:match1.Measurement.units, 
 Frequency = :match1.DoseFrequency.frequency,
+time-unit = :match1.DoseFrequency.time-unit, 
+dose-interval = :match1.DoseFrequency.interval, 
+Context = :match.ContextPrescription.context}
+
+
+/* Rule to pick up midazolam without frequency or Dose */
+
+
+Rule: doseMatch0
+Priority: 100
+(   
+    ({ContextPrescription})?
+    ({Drug.CUI == C0026056}):match1
+):match
+-->
+:match.Prescription0 = { rule = doseMatch0, string = :match1.Drug@string,
+DrugName = :match1.Drug@string, 
+CUI = :match1.Drug.CUI,
+DrugDose = :match1.Measurement.quantity,
+DoseUnit  =:match1.Measurement.units, 
+Frequency = "As_Required",
 time-unit = :match1.DoseFrequency.time-unit, 
 dose-interval = :match1.DoseFrequency.interval, 
 Context = :match.ContextPrescription.context}

@@ -1,0 +1,18 @@
+Phase: SeizureFrequency
+Input: SeizureChange SChangeBlock SChangeSentence
+Options: control=appelt
+
+Rule: SeizureChangeFilter1
+(
+    ({SChangeSentence contains {SeizureChange notContains SChangeBlock}, SChangeSentence notContains SChangeBlock})
+):match
+-->
+:match.SeizureChange2 = { rule2 = "filter", rule = :match.SeizureChange.rule, CUI = :match.SeizureChange.CUI, TimePeriod = :match.SeizureChange.TimePeriod,
+NumberOfTimePeriods = :match.SeizureChange.NumberOfTimePeriods, NumberOfSeizures  = :match.SeizureChange.NumberOfSeizures ,
+LowerNumberOfSeizures  = :match.SeizureChange.LowerNumberOfSeizures, UpperNumberOfSeizures  = :match.SeizureChange.UpperNumberOfSeizures,
+YearDate = :match.SeizureChange.YearDate, DayDate = :match.SeizureChange.DayDate, MonthDate = :match.SeizureChange.MonthDate,
+SinceOrDuration = :match.SeizureChange.SinceOrDuration, Certainty = :match.SeizureChange.Certainty, Negation = :match.SeizureChange.Negation,
+PointInTime = :match.SeizureChange.PointInTime, LowerNumberOfTimePeriods = :match.SeizureChange.LowerNumberOfTimePeriods, 
+UpperNumberOfTimePeriods = :match.SeizureChange.UpperNumberOfTimePeriods, FrequencyChange = :match.SeizureChange.FrequencyChange}
+
+

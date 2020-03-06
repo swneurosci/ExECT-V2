@@ -13,6 +13,6 @@ Rule: reverseNegation
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
-umlsAnnots.iterator().next().getFeatures().put("rule1","reverseNegationa");
+umlsAnnots.iterator().next().getFeatures().put("rule1","reverseNegation1a");
 }
 
