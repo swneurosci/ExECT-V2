@@ -5,7 +5,7 @@ Options: control=appelt
 /*these rule are to capture birth injuries and other events in the perinatal period*/
 
 
-Rule: BirthC1
+Rule: BirthD1
 Priority: 100
 
 (
@@ -20,7 +20,25 @@ Priority: 100
 
 ):match  
  -->
-:item.BirthHistory = {rule = BirthC1,  PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.BirthHistory = {rule = BirthD1,  PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: BirthD2
+Priority: 100
+
+(
+    {Lookup3.minorType == Disease}
+    {Split}
+    ({Lookup2})?
+    {Lookup2.minorType == causality}
+    ({Lookup3.minorType == OtherDisease , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed, Lookup3.PREF =~ "Birth"}):item
+   
+
+):match  
+ -->
+:item.BirthHistory = {rule = BirthD2,  PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}

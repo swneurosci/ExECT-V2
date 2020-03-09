@@ -1,5 +1,5 @@
 Phase: BirthHistory
-Input: Lookup3 Lookup2 Person Numeric timePeriod 
+Input: Lookup3 Lookup2 Person Numeric timePeriod History
 
 /* Rules to annotate premature birth, Prem1 - Prem4  get  preterm births described in terms of age at birth in weeks,
 rules Prem5 - Prem8 get preterm births described in terms of the number of weeks short of full term and converst them 
@@ -14,6 +14,7 @@ Priority: 100
 (   
 	{Person}
     {Lookup2.majorType == historic , Lookup2.type == birth}
+    {History.majorType == person}
 	{Numeric.value  <28}
     {timePeriod.time-unit == Week}
     
@@ -29,6 +30,7 @@ Priority: 100
 (   
 	{Person}
     {Lookup2.majorType == historic ,Lookup2.type == birth }
+    {History.majorType == person}
 	{Numeric.value  >=28 , Numeric.value <32} 
     {timePeriod.time-unit == Week}
     
@@ -45,6 +47,7 @@ Priority: 100
 (   
 	{Person}
     {Lookup2.majorType == historic ,Lookup2.type == birth }
+    {History.majorType == person}
 	{Numeric.value  >=32 , Numeric.value <34} 
     {timePeriod.time-unit == Week}
     
@@ -60,6 +63,7 @@ Priority: 100
 (   
 	{Person}
     {Lookup2.majorType == historic ,Lookup2.type == birth }
+    {History.majorType == person}
 	{Numeric.value  >=34 , Numeric.value <37} 
     {timePeriod.time-unit == Week}
     
@@ -75,6 +79,7 @@ Priority: 100
 (   
 	{Person}
     {Lookup2.majorType == historic ,Lookup2.type == birth }
+    
 	{Numeric.value <37} 
     {timePeriod.time-unit == Week}
     

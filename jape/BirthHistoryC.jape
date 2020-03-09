@@ -1,5 +1,5 @@
 Phase: BirthHistoryC
-Input: Lookup3 DiagnosisTriggers
+Input: Lookup3 DiagnosisTriggers Sentence
 Options: control=appelt
 
 /*these rule are to capture birth injuries and other events in the perinatal period*/
@@ -9,8 +9,8 @@ Rule: BirthC1
 Priority: 100
 
 (
-    {DiagnosisTriggers}
-    ({Lookup3.PREF =~ "birth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
+    {DiagnosisTriggers.majorType == diagnosis}
+    ({Lookup3.PREF =~ "birth",  Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
    
 
 ):match  
