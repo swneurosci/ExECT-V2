@@ -23,7 +23,6 @@ delayed cognitive development	CUI=C0557874	PREF=delayed cognitive development	TU
 delayed development	CUI=C0424605	PREF=delayed development	TUI=T048	STY=Mental or Behavioral Dysfunction
 delayed psychomotor development	CUI=C0557874	PREF=delayed psychomotor development	TUI=T048	STY=Mental or Behavioral Dysfunction
 delayed pubertal development	CUI=C0034012	PREF=delayed pubertal development	TUI=T046	STY=Pathologic Function
-delayed puberty	CUI=C0034012	PREF=delayed puberty (disorder)	TUI=T046	STY=Pathologic Function
 delayed puberty	CUI=C0034012	PREF=puberty, delayed	TUI=T046	STY=Pathologic Function
 delayed sexual development	CUI=C0034012	PREF=delayed sexual development	TUI=T046	STY=Pathologic Function
 dementia	CUI=C0497327	PREF=dementia	TUI=T048	STY=Mental or Behavioral Dysfunction
@@ -38,17 +37,13 @@ developmental delay in feeding	CUI=C1960556	PREF=developmental delay in feeding	
 developmental delay in fine motor function	CUI=C3839556	PREF=developmental delay in fine motor function	TUI=T048	STY=Mental or Behavioral Dysfunction
 developmental delay in social skills	CUI=C3840125	PREF=developmental delay in social skills	TUI=T033	STY=finding
 developmental delay of fine motor function	CUI=C3839556	PREF=developmental delay of fine motor function	TUI=T048	STY=Mental or Behavioral Dysfunction
-developmental delay, epilepsy, neonatal diabetes syndrome	CUI=C4303593	PREF=dend (developmental delay, epilepsy, neonatal diabetes) syndrome	TUI=T047	STY=Disease or Syndrome
 developmental delay, epilepsy, neonatal diabetes syndrome	CUI=C4303593	PREF=developmental delay, epilepsy, neonatal diabetes syndrome	TUI=T047	STY=Disease or Syndrome
 developmental delay, feeding	CUI=C1960556	PREF=developmental delay, feeding	TUI=T048	STY=Mental or Behavioral Dysfunction
 fine motor developmental delay	CUI=C3839556	PREF=fine motor developmental delay	TUI=T048	STY=Mental or Behavioral Dysfunction
 frank ter haar syndrome	CUI=C1855305	PREF=frank ter haar syndrome	TUI=T047	STY=Disease or Syndrome
 global developmental delay	CUI=C0557874	PREF=developmental delay, global	TUI=T048	STY=Mental or Behavioral Dysfunction
-global developmental delay	CUI=C0557874	PREF=global developmental delay	TUI=T048	STY=Mental or Behavioral Dysfunction
-headaches	CUI=C0018681	PREF=headache	TUI=T184	STY=sign or symptom
 idiopathic parkinson disease	CUI=C0030567	PREF=idiopathic parkinson disease	TUI=T047	STY=Disease or Syndrome
 koolen de vries syndrome	CUI=C1864871	PREF=koolen de vries syndrome	TUI=T047	STY=Disease or Syndrome
-koolen de vries syndrome (disorder)	CUI=C1864871	PREF=koolen de vries syndrome (disorder)	TUI=T047	STY=Disease or Syndrome
 koolen syndrome	CUI=C1864871	PREF=koolen syndrome	TUI=T047	STY=Disease or Syndrome
 lack of psychomotor development	CUI=C0557874	PREF=lack of psychomotor development	TUI=T048	STY=Mental or Behavioral Dysfunction
 learning difficulties	CUI=C0424939	PREF=learning difficulties	TUI=T033	STY=finding
@@ -65,14 +60,11 @@ ms	CUI=C0026769	PREF=ms	TUI=T047	STY=Disease or Syndrome
 multiple sclerosis	CUI=C0026769	PREF=multiple sclerosis	TUI=T047	STY=Disease or Syndrome
 no psychomotor development	CUI=C0557874	PREF=no psychomotor development	TUI=T048	STY=Mental or Behavioral Dysfunction
 obesity, colitis, hypothyroidism, cardiac hypertrophy, developmental delay syndrome	CUI=C4302879	PREF=obesity, colitis, hypothyroidism, cardiac hypertrophy, developmental delay syndrome	TUI=T047	STY=Disease or Syndrome
-obesity, colitis, hypothyroidism, cardiac hypertrophy, developmental delay syndrome (disorder)	CUI=C4302879	PREF=obesity, colitis, hypothyroidism, cardiac hypertrophy, developmental delay syndrome (disorder)	TUI=T047	STY=Disease or Syndrome
 parkinson disease	CUI=C0030567	PREF=idiopathic parkinson disease	TUI=T047	STY=Disease or Syndrome
-parkinson disease	CUI=C0030567	PREF=parkinson disease, idiopathic	TUI=T047	STY=Disease or Syndrome
 parkinson's disease idiopathic	CUI=C0030567	PREF=parkinson's disease, idiopathic	TUI=T047	STY=Disease or Syndrome
 parkinson's disease, lewy body	CUI=C0030567	PREF=parkinson's disease, lewy body	TUI=T047	STY=Disease or Syndrome
 parkinson's syndrome	CUI=C0030567	PREF=parkinson's syndrome	TUI=T047	STY=Disease or Syndrome
 parkinsons disease	CUI=C0030567	PREF=parkinsons disease	TUI=T047	STY=Disease or Syndrome
-pd - parkinson's disease	CUI=C0030567	PREF=pd - parkinson's disease	TUI=T047	STY=Disease or Syndrome
 pfeiffer singer zschiesche syndrome	CUI=C1857495	PREF=pfeiffer singer zschiesche syndrome	TUI=T047	STY=Disease or Syndrome
 pfeiffer syndrome 2	CUI=C1857495	PREF=pfeiffer syndrome 2	TUI=T047	STY=Disease or Syndrome
 pfeiffer-type cardiocranial syndrome	CUI=C1857495	PREF=pfeiffer-type cardiocranial syndrome	TUI=T047	STY=Disease or Syndrome
@@ -85,7 +77,6 @@ puberty - delayed	CUI=C0034012	PREF=puberty - delayed	TUI=T046	STY=Pathologic Fu
 sagittal craniostenosis with congenital heart disease, mental deficiency and mandibular ankylosis	CUI=C1857495	PREF=sagittal craniostenosis with congenital heart disease, mental deficiency and mandibular ankylosis	TUI=T047	STY=Disease or Syndrome
 say meyer syndrome	CUI=C1839125	PREF=say meyer syndrome	TUI=T047	STY=Disease or Syndrome
 senile dementia	CUI=C0002395	PREF=dementia, senile	TUI=T047	STY=Disease or Syndrome
-senile dementia	CUI=C0002395	PREF=senile dementia	TUI=T047	STY=Disease or Syndrome
 senile dementia, alzheimer type	CUI=C0002395	PREF=senile dementia, alzheimer type	TUI=T047	STY=Disease or Syndrome
 shaking palsy	CUI=C0030567	PREF=shaking palsy	TUI=T047	STY=Disease or Syndrome
 trigonocephaly, short stature and developmental delay	CUI=C1839125	PREF=trigonocephaly, short stature and developmental delay	TUI=T047	STY=Disease or Syndrome
@@ -171,12 +162,10 @@ arteriovenous malformation of cerebral vessels	CUI=C0917804	PREF=arteriovenous m
 arteriovenous malformation of precerebral vessels	CUI=C0348887	PREF=arteriovenous malformation of precerebral vessels	TUI=T019	STY=Congenital Abnormality
 arteriovenous malformation of precerebral vessels (disorder)	CUI=C0348887	PREF=arteriovenous malformation of precerebral vessels (disorder)	TUI=T019	STY=Congenital Abnormality
 arteriovenous malformation of skin	CUI=C0346071	PREF=arteriovenous malformation of skin	TUI=T019	STY=Congenital Abnormality
-arteriovenous malformation of skin (disorder)	CUI=C0346071	PREF=arteriovenous malformation of skin (disorder)	TUI=T019	STY=Congenital Abnormality
 arteriovenous malformation of spinal vessel	CUI=C0348023	PREF=arteriovenous malformation of spinal vessel	TUI=T019	STY=Congenital Abnormality
 arteriovenous malformation of the gastrointestinal tract, nos	CUI=C0521549	PREF=arteriovenous malformation of the gastrointestinal tract, nos	TUI=T019	STY=Congenital Abnormality
 arteriovenous malformation of the peripheral vascular system	CUI=C0495524	PREF=arteriovenous malformation of the peripheral vascular system	TUI=T019	STY=Congenital Abnormality
 arteriovenous malformation of trunk	CUI=C3838886	PREF=arteriovenous malformation of trunk	TUI=T019	STY=Congenital Abnormality
-arteriovenous malformation of trunk (disorder)	CUI=C3838886	PREF=arteriovenous malformation of trunk (disorder)	TUI=T019	STY=Congenital Abnormality
 arteriovenous malformation, cerebral	CUI=C0917804	PREF=arteriovenous malformation, cerebral	TUI=T019	STY=Congenital Abnormality
 arteriovenous malformation, intracranial	CUI=C0007772	PREF=arteriovenous malformation, intracranial	TUI=T019	STY=Congenital Abnormality
 arteriovenous malformation, nos	CUI=C0003857	PREF=arteriovenous malformation, nos	TUI=T019	STY=Congenital Abnormality
@@ -186,11 +175,8 @@ arteriovenous malformations, intracranial	CUI=C0007772	PREF=arteriovenous malfor
 arteriovenous shunt	CUI=C0003855	PREF=arteriovenous shunt	TUI=T190	STY=Anatomical Abnormality
 arteriovenous-lymphat malforma	CUI=C0340844	PREF=arteriovenous-lymphat malforma	TUI=T019	STY=Congenital Abnormality
 arteriovenous-lymphatic malformation	CUI=C0340844	PREF=arteriovenous-lymphatic malformation	TUI=T019	STY=Congenital Abnormality
-arteriovenous-lymphatic malformation (disorder)	CUI=C0340844	PREF=arteriovenous-lymphatic malformation (disorder)	TUI=T019	STY=Congenital Abnormality
 atresia of cardiac vein	CUI=C0265866	PREF=atresia of cardiac vein	TUI=T019	STY=Congenital Abnormality
-atresia of cardiac vein (disorder)	CUI=C0265866	PREF=atresia of cardiac vein (disorder)	TUI=T019	STY=Congenital Abnormality
 atresia of vein nec	CUI=C0340816	PREF=atresia of vein nec	TUI=T019	STY=Congenital Abnormality
-atresia of vein nec (disorder)	CUI=C0340816	PREF=atresia of vein nec (disorder)	TUI=T019	STY=Congenital Abnormality
 atrial anomalous bands	CUI=C0265868	PREF=atrial anomalous bands	TUI=T019	STY=Congenital Abnormality
 atrium, subdivided left	CUI=C0009995	PREF=atrium, subdivided left	TUI=T019	STY=Congenital Abnormality
 atriums, subdivided left	CUI=C0009995	PREF=atriums, subdivided left	TUI=T019	STY=Congenital Abnormality
@@ -273,14 +259,12 @@ brainstem tumor	CUI=C0677866	PREF=brainstem tumor	TUI=T191	STY=Neoplastic Proces
 brainstem tumors	CUI=C0677866	PREF=brainstem tumors	TUI=T191	STY=Neoplastic Process
 bregeat syndrome	CUI=C0346069	PREF=bregeat syndrome	TUI=T019	STY=Congenital Abnormality
 bregeat's syndrome	CUI=C0346069	PREF=bregeat's syndrome	TUI=T019	STY=Congenital Abnormality
-bregeat's syndrome (disorder)	CUI=C0346069	PREF=bregeat's syndrome (disorder)	TUI=T019	STY=Congenital Abnormality
 cancer of brain	CUI=C0153633	PREF=cancer of brain	TUI=T191	STY=Neoplastic Process
 cancer of the brain	CUI=C0153633	PREF=cancer of the brain	TUI=T191	STY=Neoplastic Process
 brain cancer	CUI=C0153633	PREF=cancer, brain	TUI=T191	STY=Neoplastic Process
 cancers, brain	CUI=C0153633	PREF=cancers, brain	TUI=T191	STY=Neoplastic Process
 capil-ven-lymph malform	CUI=C0340830	PREF=capil-ven-lymph malform	TUI=T019	STY=Congenital Abnormality
 capillary-venous malformation	CUI=C0340828	PREF=capillary-venous malformation	TUI=T019	STY=Congenital Abnormality
-capillary-venous malformation (disorder)	CUI=C0340828	PREF=capillary-venous malformation (disorder)	TUI=T019	STY=Congenital Abnormality
 capillary-venous-lymphatic malformation	CUI=C0340830	PREF=capillary-venous-lymphatic malformation	TUI=T019	STY=Congenital Abnormality
 capillary-venous-lymphatic malformation (disorder)	CUI=C0340830	PREF=capillary-venous-lymphatic malformation (disorder)	TUI=T019	STY=Congenital Abnormality
 central nerv system structure	CUI=C3714787	PREF=central nerv system structure	TUI=T022	STY=Body System
@@ -291,15 +275,12 @@ cerebellar neopl	CUI=C0007762	PREF=cerebellar neopl	TUI=T191	STY=Neoplastic Proc
 cerebellar neoplasm	CUI=C0007762	PREF=cerebellar neoplasm	TUI=T191	STY=Neoplastic Process
 cerebellar neoplasms	CUI=C0007762	PREF=cerebellar neoplasms	TUI=T191	STY=Neoplastic Process
 cerebellar stroke	CUI=C2674383	PREF=cerebellar stroke	TUI=T047	STY=Disease or Syndrome
-cerebellar stroke (disorder)	CUI=C2674383	PREF=cerebellar stroke (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebellar tumor	CUI=C0007762	PREF=cerebellar tumor	TUI=T191	STY=Neoplastic Process
 cerebellar tumors	CUI=C0007762	PREF=cerebellar tumors	TUI=T191	STY=Neoplastic Process
 cerebral apoplexy	CUI=C0038454	PREF=cerebral apoplexy	TUI=T047	STY=Disease or Syndrome
 cerebral apoplexy, nos	CUI=C0038454	PREF=cerebral apoplexy, nos	TUI=T047	STY=Disease or Syndrome
 cerebral arterial occlusion	CUI=C0028790	PREF=cerebral arterial occlusion	TUI=T020	STY=Acquired Abnormality
-cerebral arterial occlusion (disorder)	CUI=C0028790	PREF=cerebral arterial occlusion (disorder)	TUI=T020	STY=Acquired Abnormality
 cerebral arterial thrombosis	CUI=C0795687	PREF=cerebral arterial thrombosis	TUI=T047	STY=Disease or Syndrome
-cerebral arterial thrombosis (disorder)	CUI=C0795687	PREF=cerebral arterial thrombosis (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebral arteriovenous malform	CUI=C0917804	PREF=cerebral arteriovenous malform	TUI=T019	STY=Congenital Abnormality
 cerebral arteriovenous malformation (disorder)	CUI=C0917804	PREF=cerebral arteriovenous malformation (disorder)	TUI=T019	STY=Congenital Abnormality
 cerebral artery occlusion	CUI=C0028790	PREF=cerebral artery occlusion	TUI=T020	STY=Acquired Abnormality
@@ -311,22 +292,15 @@ cerebral artery occlusion, unspecified	CUI=C0028790	PREF=cerebral artery occlusi
 cerebral brain hemorrhage	CUI=C2937358	PREF=cerebral brain hemorrhage	TUI=T046	STY=Pathologic Function
 cerebral brain hemorrhages	CUI=C2937358	PREF=cerebral brain hemorrhages	TUI=T046	STY=Pathologic Function
 cerebral damage	CUI=C0270611	PREF=cerebral damage	TUI=T037	STY=Injury or Poisoning
-cerebral haemorrhage (disorder)	CUI=C2937358	PREF=cerebral haemorrhage (disorder)	TUI=T046	STY=Pathologic Function
 cerebral haemorrhage nos	CUI=C2937358	PREF=cerebral haemorrhage nos	TUI=T046	STY=Pathologic Function
-cerebral haemorrhage nos (disorder)	CUI=C2937358	PREF=cerebral haemorrhage nos (disorder)	TUI=T046	STY=Pathologic Function
-cerebral hemorrhage (disorder)	CUI=C2937358	PREF=cerebral hemorrhage (disorder)	TUI=T046	STY=Pathologic Function
 cerebral hemorrhage nos	CUI=C2937358	PREF=cerebral hemorrhage nos	TUI=T046	STY=Pathologic Function
-cerebral hemorrhage nos (disorder)	CUI=C2937358	PREF=cerebral hemorrhage nos (disorder)	TUI=T046	STY=Pathologic Function
-cerebral infarction (disorder)	CUI=C0007785	PREF=cerebral infarction (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebral infarction nos	CUI=C0007785	PREF=cerebral infarction nos	TUI=T047	STY=Disease or Syndrome
-cerebral infarction nos (disorder)	CUI=C0007785	PREF=cerebral infarction nos (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebral infarction, nos	CUI=C0007785	PREF=cerebral infarction, nos	TUI=T047	STY=Disease or Syndrome
 cerebral infarction, unspecified	CUI=C0007785	PREF=cerebral infarction, unspecified	TUI=T047	STY=Disease or Syndrome
 cerebral infarctions	CUI=C0007785	PREF=cerebral infarctions	TUI=T047	STY=Disease or Syndrome
 cerebral infarcts	CUI=C0007785	PREF=cerebral infarcts	TUI=T047	STY=Disease or Syndrome
 cerebral parenchym haemorrhage	CUI=C2937358	PREF=cerebral parenchym haemorrhage	TUI=T046	STY=Pathologic Function
 cerebral parenchymal haemorrhage	CUI=C2937358	PREF=cerebral parenchymal haemorrhage	TUI=T046	STY=Pathologic Function
-cerebral parenchymal hemorrhage (disorder)	CUI=C2937358	PREF=cerebral parenchymal hemorrhage (disorder)	TUI=T046	STY=Pathologic Function
 cerebral parenchymal hemorrhages	CUI=C2937358	PREF=cerebral parenchymal hemorrhages	TUI=T046	STY=Pathologic Function
 cerebral sinus thrombosis, embolism and/or inflammation	CUI=C1263852	PREF=cerebral sinus thrombosis, embolism and/or inflammation	TUI=T046	STY=Pathologic Function
 cerebral stroke	CUI=C0038454	PREF=cerebral stroke	TUI=T047	STY=Disease or Syndrome
@@ -336,7 +310,6 @@ cerebral thrombosis	CUI=C0795687	PREF=cerebral thrombosis	TUI=T047	STY=Disease o
 cerebral thrombosis (disorder)	CUI=C0079102	PREF=cerebral thrombosis (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebral tumor (malignant)	CUI=C0346903	PREF=cerebral tumor (malignant)	TUI=T191	STY=Neoplastic Process
 cerebral tumor - malignant	CUI=C0346903	PREF=cerebral tumor - malignant	TUI=T191	STY=Neoplastic Process
-cerebral tumor - malignant (disorder)	CUI=C0346903	PREF=cerebral tumor - malignant (disorder)	TUI=T191	STY=Neoplastic Process
 cerebral tumour (malignant)	CUI=C0346903	PREF=cerebral tumour (malignant)	TUI=T191	STY=Neoplastic Process
 cerebral tumour - malignant	CUI=C0346903	PREF=cerebral tumour - malignant	TUI=T191	STY=Neoplastic Process
 cerebral vascular disturbance	CUI=C0007820	PREF=cerebral vascular disturbance	TUI=T047	STY=Disease or Syndrome
@@ -350,89 +323,49 @@ cerebral ventricle tumors	CUI=C0007798	PREF=cerebral ventricle tumors	TUI=T191	S
 cerebrofacial angiomatosis	CUI=C0022739	PREF=cerebrofacial angiomatosis	TUI=T047	STY=Disease or Syndrome
 cerebrospinal axi	CUI=C3714787	PREF=cerebrospinal axi	TUI=T022	STY=Body System
 cerebrospinal axis	CUI=C3714787	PREF=cerebrospinal axis	TUI=T022	STY=Body System
-cerebrovasc disease nos	CUI=C0007820	PREF=cerebrovasc disease nos	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident	CUI=C0038454	PREF=cerebrovascular accident (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to cerebral artery occlusion	CUI=C0393951	PREF=cerebrovascular accident due to cerebral artery occlusion	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to cerebral artery occlusion (disorder)	CUI=C0393951	PREF=cerebrovascular accident due to cerebral artery occlusion (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to embolus of basilar artery	CUI=C4551380	PREF=cerebrovascular accident due to embolus of basilar artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to embolus of basilar artery (disorder)	CUI=C4551380	PREF=cerebrovascular accident due to embolus of basilar artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to embolus of left vertebral artery	CUI=C4551359	PREF=cerebrovascular accident due to embolus of left vertebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to embolus of left vertebral artery (disorder)	CUI=C4551359	PREF=cerebrovascular accident due to embolus of left vertebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to embolus of right vertebral artery	CUI=C4551376	PREF=cerebrovascular accident due to embolus of right vertebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to embolus of right vertebral artery (disorder)	CUI=C4551376	PREF=cerebrovascular accident due to embolus of right vertebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to left carotid artery stenosis	CUI=C4273982	PREF=cerebrovascular accident due to left carotid artery stenosis	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to left carotid artery stenosis (disorder)	CUI=C4273982	PREF=cerebrovascular accident due to left carotid artery stenosis (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to nonpyogenic thrombus of cerebral vein	CUI=C4551371	PREF=cerebrovascular accident due to nonpyogenic thrombus of cerebral vein	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to nonpyogenic thrombus of cerebral vein (disorder)	CUI=C4551371	PREF=cerebrovascular accident due to nonpyogenic thrombus of cerebral vein (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of cerebral artery	CUI=C0393951	PREF=cerebrovascular accident due to occlusion of cerebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of cerebral artery (disorder)	CUI=C0393951	PREF=cerebrovascular accident due to occlusion of cerebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of left anterior cerebral artery	CUI=C4520263	PREF=cerebrovascular accident due to occlusion of left anterior cerebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of left anterior cerebral artery (disorder)	CUI=C4520263	PREF=cerebrovascular accident due to occlusion of left anterior cerebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of left carotid artery	CUI=C4543237	PREF=cerebrovascular accident due to occlusion of left carotid artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of left carotid artery (disorder)	CUI=C4543237	PREF=cerebrovascular accident due to occlusion of left carotid artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of left cerebellar artery	CUI=C4543230	PREF=cerebrovascular accident due to occlusion of left cerebellar artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of left cerebellar artery (disorder)	CUI=C4543230	PREF=cerebrovascular accident due to occlusion of left cerebellar artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of left middle cerebral artery	CUI=C4543238	PREF=cerebrovascular accident due to occlusion of left middle cerebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of left middle cerebral artery (disorder)	CUI=C4543238	PREF=cerebrovascular accident due to occlusion of left middle cerebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of left pontine artery	CUI=C4543232	PREF=cerebrovascular accident due to occlusion of left pontine artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of left pontine artery (disorder)	CUI=C4543232	PREF=cerebrovascular accident due to occlusion of left pontine artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of left posterior cerebral artery	CUI=C4543240	PREF=cerebrovascular accident due to occlusion of left posterior cerebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of left posterior cerebral artery (disorder)	CUI=C4543240	PREF=cerebrovascular accident due to occlusion of left posterior cerebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of left posterior communicating artery	CUI=C4520262	PREF=cerebrovascular accident due to occlusion of left posterior communicating artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of left posterior communicating artery (disorder)	CUI=C4520262	PREF=cerebrovascular accident due to occlusion of left posterior communicating artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of left vertebral artery	CUI=C4543233	PREF=cerebrovascular accident due to occlusion of left vertebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of left vertebral artery (disorder)	CUI=C4543233	PREF=cerebrovascular accident due to occlusion of left vertebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of right anterior cerebral artery	CUI=C4520264	PREF=cerebrovascular accident due to occlusion of right anterior cerebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of right anterior cerebral artery (disorder)	CUI=C4520264	PREF=cerebrovascular accident due to occlusion of right anterior cerebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of right carotid artery	CUI=C4273983	PREF=cerebrovascular accident due to occlusion of right carotid artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of right carotid artery (disorder)	CUI=C4273983	PREF=cerebrovascular accident due to occlusion of right carotid artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of right cerebellar artery	CUI=C4543234	PREF=cerebrovascular accident due to occlusion of right cerebellar artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of right cerebellar artery (disorder)	CUI=C4543234	PREF=cerebrovascular accident due to occlusion of right cerebellar artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of right middle cerebral artery	CUI=C4543242	PREF=cerebrovascular accident due to occlusion of right middle cerebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of right middle cerebral artery (disorder)	CUI=C4543242	PREF=cerebrovascular accident due to occlusion of right middle cerebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of right pontine artery	CUI=C4543235	PREF=cerebrovascular accident due to occlusion of right pontine artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of right pontine artery (disorder)	CUI=C4543235	PREF=cerebrovascular accident due to occlusion of right pontine artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of right posterior cerebral artery	CUI=C4543236	PREF=cerebrovascular accident due to occlusion of right posterior cerebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of right posterior cerebral artery (disorder)	CUI=C4543236	PREF=cerebrovascular accident due to occlusion of right posterior cerebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of right posterior communicating artery	CUI=C4520265	PREF=cerebrovascular accident due to occlusion of right posterior communicating artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to occlusion of right posterior communicating artery (disorder)	CUI=C4520265	PREF=cerebrovascular accident due to occlusion of right posterior communicating artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of right vertebral artery	CUI=C4543231	PREF=cerebrovascular accident due to occlusion of right vertebral artery	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to occlusion of right vertebral artery (disorder)	CUI=C4543231	PREF=cerebrovascular accident due to occlusion of right vertebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to right carotid artery occlusion	CUI=C4273983	PREF=cerebrovascular accident due to right carotid artery occlusion	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to right carotid artery occlusion (disorder)	CUI=C4273983	PREF=cerebrovascular accident due to right carotid artery occlusion (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to right carotid artery stenosis	CUI=C4273984	PREF=cerebrovascular accident due to right carotid artery stenosis	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to right carotid artery stenosis (disorder)	CUI=C4273984	PREF=cerebrovascular accident due to right carotid artery stenosis (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to right vertebral artery occlusion	CUI=C4543231	PREF=cerebrovascular accident due to right vertebral artery occlusion	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to stenosis of left carotid artery	CUI=C4273982	PREF=cerebrovascular accident due to stenosis of left carotid artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to stenosis of left carotid artery (disorder)	CUI=C4273982	PREF=cerebrovascular accident due to stenosis of left carotid artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to stenosis of left vertebral artery	CUI=C4543116	PREF=cerebrovascular accident due to stenosis of left vertebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to stenosis of left vertebral artery (disorder)	CUI=C4543116	PREF=cerebrovascular accident due to stenosis of left vertebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to stenosis of right carotid artery	CUI=C4273984	PREF=cerebrovascular accident due to stenosis of right carotid artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to stenosis of right carotid artery (disorder)	CUI=C4273984	PREF=cerebrovascular accident due to stenosis of right carotid artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to stenosis of right vertebral artery	CUI=C4543115	PREF=cerebrovascular accident due to stenosis of right vertebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to stenosis of right vertebral artery (disorder)	CUI=C4543115	PREF=cerebrovascular accident due to stenosis of right vertebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to thrombus of basilar artery	CUI=C4543199	PREF=cerebrovascular accident due to thrombus of basilar artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to thrombus of basilar artery (disorder)	CUI=C4543199	PREF=cerebrovascular accident due to thrombus of basilar artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to thrombus of left carotid artery	CUI=C4543198	PREF=cerebrovascular accident due to thrombus of left carotid artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to thrombus of left carotid artery (disorder)	CUI=C4543198	PREF=cerebrovascular accident due to thrombus of left carotid artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to thrombus of left middle cerebral artery	CUI=C4543202	PREF=cerebrovascular accident due to thrombus of left middle cerebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to thrombus of left middle cerebral artery (disorder)	CUI=C4543202	PREF=cerebrovascular accident due to thrombus of left middle cerebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to thrombus of left vertebral artery	CUI=C4551382	PREF=cerebrovascular accident due to thrombus of left vertebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to thrombus of left vertebral artery (disorder)	CUI=C4551382	PREF=cerebrovascular accident due to thrombus of left vertebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to thrombus of right carotid artery	CUI=C4543200	PREF=cerebrovascular accident due to thrombus of right carotid artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to thrombus of right carotid artery (disorder)	CUI=C4543200	PREF=cerebrovascular accident due to thrombus of right carotid artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to thrombus of right cerebellar artery	CUI=C4520261	PREF=cerebrovascular accident due to thrombus of right cerebellar artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to thrombus of right cerebellar artery (disorder)	CUI=C4520261	PREF=cerebrovascular accident due to thrombus of right cerebellar artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to thrombus of right middle cerebral artery	CUI=C4543201	PREF=cerebrovascular accident due to thrombus of right middle cerebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to thrombus of right middle cerebral artery (disorder)	CUI=C4543201	PREF=cerebrovascular accident due to thrombus of right middle cerebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to thrombus of right posterior cerebral artery	CUI=C4520260	PREF=cerebrovascular accident due to thrombus of right posterior cerebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to thrombus of right posterior cerebral artery (disorder)	CUI=C4520260	PREF=cerebrovascular accident due to thrombus of right posterior cerebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident due to thrombus of right vertebral artery	CUI=C4520259	PREF=cerebrovascular accident due to thrombus of right vertebral artery	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident due to thrombus of right vertebral artery (disorder)	CUI=C4520259	PREF=cerebrovascular accident due to thrombus of right vertebral artery (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident during surgery	CUI=C4274870	PREF=cerebrovascular accident during surgery	TUI=T046	STY=Pathologic Function
-cerebrovascular accident during surgery (disorder)	CUI=C4274870	PREF=cerebrovascular accident during surgery (disorder)	TUI=T046	STY=Pathologic Function
 cerebrovascular accident with intracranial hemorrhage	CUI=C3266655	PREF=cerebrovascular accident with intracranial hemorrhage	TUI=T047	STY=Disease or Syndrome
-cerebrovascular accident with intracranial hemorrhage (disorder)	CUI=C3266655	PREF=cerebrovascular accident with intracranial hemorrhage (disorder)	TUI=T047	STY=Disease or Syndrome
 cerebrovascular accident, nos	CUI=C0038454	PREF=cerebrovascular accident, nos	TUI=T047	STY=Disease or Syndrome
 cerebrovascular apoplexy	CUI=C0038454	PREF=cerebrovascular apoplexy	TUI=T047	STY=Disease or Syndrome
 cerebrovascular disease	CUI=C0007820	PREF=cerebrovascular disease (disorder)	TUI=T047	STY=Disease or Syndrome
@@ -444,15 +377,12 @@ cerebrovascular strokes	CUI=C0038454	PREF=cerebrovascular strokes	TUI=T047	STY=D
 cerebroventricular neoplasm	CUI=C0007798	PREF=cerebroventricular neoplasm	TUI=T191	STY=Neoplastic Process
 cerebroventricular neoplasms	CUI=C0007798	PREF=cerebroventricular neoplasms	TUI=T191	STY=Neoplastic Process
 cerebrum ca	CUI=C0346903	PREF=cerebrum ca	TUI=T191	STY=Neoplastic Process
-cerebrum ca (disorder)	CUI=C0346903	PREF=cerebrum ca (disorder)	TUI=T191	STY=Neoplastic Process
 cerebrum hemorrhage	CUI=C2937358	PREF=cerebrum hemorrhage	TUI=T046	STY=Pathologic Function
 cerebrum hemorrhages	CUI=C2937358	PREF=cerebrum hemorrhages	TUI=T046	STY=Pathologic Function
 chiari network	CUI=C0265868	PREF=chiari network	TUI=T019	STY=Congenital Abnormality
-chiari network (body structure)	CUI=C0265868	PREF=chiari network (body structure)	TUI=T019	STY=Congenital Abnormality
 chiari network of venous valves	CUI=C0265868	PREF=chiari network of venous valves	TUI=T019	STY=Congenital Abnormality
 chiari network venous valves	CUI=C0265868	PREF=chiari network venous valves	TUI=T019	STY=Congenital Abnormality
 chiari's network	CUI=C0265868	PREF=chiari's network	TUI=T019	STY=Congenital Abnormality
-chiari's network (disorder)	CUI=C0265868	PREF=chiari's network (disorder)	TUI=T019	STY=Congenital Abnormality
 chondrodysplasia with haemangioma	CUI=C0024454	PREF=chondrodysplasia with haemangioma	TUI=T047	STY=Disease or Syndrome
 chondrodysplasia+haemangioma	CUI=C0024454	PREF=chondrodysplasia+haemangioma	TUI=T047	STY=Disease or Syndrome
 chronic cerebrovascular accident	CUI=C3536593	PREF=chronic cerebrovascular accident	TUI=T047	STY=Disease or Syndrome
@@ -468,9 +398,7 @@ cobb syndrome	CUI=C0346068	PREF=cobb syndrome	TUI=T047	STY=Disease or Syndrome
 cobb's syndrome	CUI=C0346068	PREF=cobb's syndrome	TUI=T047	STY=Disease or Syndrome
 completed stroke	CUI=C0265114	PREF=completed stroke	TUI=T047	STY=Disease or Syndrome
 congenital abnormality of great veins and coronary sinus	CUI=C0340827	PREF=congenital abnormality of great veins and coronary sinus	TUI=T019	STY=Congenital Abnormality
-congenital abnormality of great veins and coronary sinus (disorder)	CUI=C0340827	PREF=congenital abnormality of great veins and coronary sinus (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital abnormality of systemic vein	CUI=C3165169	PREF=congenital abnormality of systemic vein	TUI=T019	STY=Congenital Abnormality
-congenital abnormality of systemic vein (disorder)	CUI=C3165169	PREF=congenital abnormality of systemic vein (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital abnormality of vein	CUI=C2937220	PREF=congenital abnormality of vein	TUI=T019	STY=Congenital Abnormality
 congenital absence of vein	CUI=C0265951	PREF=congenital absence of vein	TUI=T019	STY=Congenital Abnormality
 congenital aneurysm of coronary sinus	CUI=C0344686	PREF=congenital aneurysm of coronary sinus	TUI=T019	STY=Congenital Abnormality
@@ -487,65 +415,42 @@ congenital arteriovenous anomaly of the gastrointestinal tract	CUI=C0521549	PREF
 congenital arteriovenous fistula	CUI=C0332965	PREF=congenital arteriovenous fistula	TUI=T019	STY=Congenital Abnormality
 congenital arteriovenous fistula haemorrhage	CUI=C0340842	PREF=congenital arteriovenous fistula haemorrhage	TUI=T046	STY=Pathologic Function
 congenital arteriovenous fistula hemorrhage	CUI=C0340842	PREF=congenital arteriovenous fistula hemorrhage	TUI=T046	STY=Pathologic Function
-congenital arteriovenous fistula hemorrhage (disorder)	CUI=C0340842	PREF=congenital arteriovenous fistula hemorrhage (disorder)	TUI=T046	STY=Pathologic Function
 congenital arteriovenous fistula infection	CUI=C0340840	PREF=congenital arteriovenous fistula infection	TUI=T047	STY=Disease or Syndrome
-congenital arteriovenous fistula infection (disorder)	CUI=C0340840	PREF=congenital arteriovenous fistula infection (disorder)	TUI=T047	STY=Disease or Syndrome
 congenital arteriovenous fistula occlusion	CUI=C0340837	PREF=congenital arteriovenous fistula occlusion	TUI=T019	STY=Congenital Abnormality
-congenital arteriovenous fistula occlusion (disorder)	CUI=C0340837	PREF=congenital arteriovenous fistula occlusion (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital arteriovenous fistula of kidney	CUI=C0521552	PREF=congenital arteriovenous fistula of kidney	TUI=T019	STY=Congenital Abnormality
-congenital arteriovenous fistula of kidney (disorder)	CUI=C0521552	PREF=congenital arteriovenous fistula of kidney (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital arteriovenous fistula rupture	CUI=C0340843	PREF=congenital arteriovenous fistula rupture	TUI=T019	STY=Congenital Abnormality
-congenital arteriovenous fistula rupture (disorder)	CUI=C0340843	PREF=congenital arteriovenous fistula rupture (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital arteriovenous fistula stenosis	CUI=C0340838	PREF=congenital arteriovenous fistula stenosis	TUI=T019	STY=Congenital Abnormality
-congenital arteriovenous fistula stenosis (disorder)	CUI=C0340838	PREF=congenital arteriovenous fistula stenosis (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital arteriovenous fistula thrombosis	CUI=C0340839	PREF=congenital arteriovenous fistula thrombosis	TUI=T019	STY=Congenital Abnormality
-congenital arteriovenous fistula thrombosis (disorder)	CUI=C0340839	PREF=congenital arteriovenous fistula thrombosis (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital arteriovenous fistula, nos	CUI=C0332965	PREF=congenital arteriovenous fistula, nos	TUI=T019	STY=Congenital Abnormality
 congenital arteriovenous malf	CUI=C0003857	PREF=congenital arteriovenous malf	TUI=T019	STY=Congenital Abnormality
 congenital arteriovenous malformation	CUI=C0003857	PREF=congenital arteriovenous malformation	TUI=T019	STY=Congenital Abnormality
-congenital arteriovenous malformation (disorder)	CUI=C0003857	PREF=congenital arteriovenous malformation (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital arteriovenous malformation of retina	CUI=C0431454	PREF=congenital arteriovenous malformation of retina	TUI=T019	STY=Congenital Abnormality
 congenital arteriovenous malformation of retina (disorder)	CUI=C0431454	PREF=congenital arteriovenous malformation of retina (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital arteriovenous malformation of the gastrointestinal tract	CUI=C0521549	PREF=congenital arteriovenous malformation of the gastrointestinal tract	TUI=T019	STY=Congenital Abnormality
 congenital arteriovenous malformation of the gastrointestinal tract (disorder)	CUI=C0521549	PREF=congenital arteriovenous malformation of the gastrointestinal tract (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital atresia of cardiac vein	CUI=C0265866	PREF=congenital atresia of cardiac vein	TUI=T019	STY=Congenital Abnormality
-congenital atresia of cardiac vein (disorder)	CUI=C0265866	PREF=congenital atresia of cardiac vein (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital atresia of vein	CUI=C0265952	PREF=congenital atresia of vein	TUI=T019	STY=Congenital Abnormality
-congenital atresia of vein (disorder)	CUI=C0265952	PREF=congenital atresia of vein (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital atresia of vein, nos	CUI=C0265952	PREF=congenital atresia of vein, nos	TUI=T019	STY=Congenital Abnormality
 congenital av - arteriovenous fistula	CUI=C0332965	PREF=congenital av - arteriovenous fistula	TUI=T019	STY=Congenital Abnormality
 congenital av-arterioven fist	CUI=C0332965	PREF=congenital av-arterioven fist	TUI=T019	STY=Congenital Abnormality
 congenital cerebral arteriovenous malformation	CUI=C0917804	PREF=congenital cerebral arteriovenous malformation	TUI=T019	STY=Congenital Abnormality
 congenital coronary arteriovenous fistula	CUI=C2937219	PREF=congenital coronary arteriovenous fistula	TUI=T019	STY=Congenital Abnormality
-congenital coronary arteriovenous fistula (disorder)	CUI=C2937219	PREF=congenital coronary arteriovenous fistula (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital coronary sinus stenosis	CUI=C0344684	PREF=congenital coronary sinus stenosis	TUI=T019	STY=Congenital Abnormality
-congenital coronary sinus stenosis (disorder)	CUI=C0344684	PREF=congenital coronary sinus stenosis (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital dysplastic angiopathies	CUI=C0022739	PREF=congenital dysplastic angiopathies	TUI=T047	STY=Disease or Syndrome
 congenital dysplastic angiopathy	CUI=C0022739	PREF=congenital dysplastic angiopathy	TUI=T047	STY=Disease or Syndrome
 congenital enlargement of coronary sinus	CUI=C0344686	PREF=congenital enlargement of coronary sinus	TUI=T019	STY=Congenital Abnormality
-congenital enlargement of coronary sinus (disorder)	CUI=C0344686	PREF=congenital enlargement of coronary sinus (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital hypoplasia of cardiac vein	CUI=C0265867	PREF=congenital hypoplasia of cardiac vein	TUI=T019	STY=Congenital Abnormality
-congenital hypoplasia of cardiac vein (disorder)	CUI=C0265867	PREF=congenital hypoplasia of cardiac vein (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital intracranial arteriovenous malformations	CUI=C0007772	PREF=congenital intracranial arteriovenous malformations	TUI=T019	STY=Congenital Abnormality
-congenital multiple enchondromata with haemangioma (& [kast's syndrome])	CUI=C0024454	PREF=congenital multiple enchondromata with haemangioma (& [kast's syndrome])	TUI=T047	STY=Disease or Syndrome
-congenital multiple enchondromata with haemangioma (& [kast's syndrome]) (disorder)	CUI=C0024454	PREF=congenital multiple enchondromata with haemangioma (& [kast's syndrome]) (disorder)	TUI=T047	STY=Disease or Syndrome
-congenital multiple enchondromata with hemangioma (& [kast's syndrome])	CUI=C0024454	PREF=congenital multiple enchondromata with hemangioma (& [kast's syndrome])	TUI=T047	STY=Disease or Syndrome
 congenital phlebectasia	CUI=C0265953	PREF=congenital phlebectasia	TUI=T019	STY=Congenital Abnormality
-congenital phlebectasia (disorder)	CUI=C0265953	PREF=congenital phlebectasia (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital portal-systemic shunt	CUI=C1290495	PREF=congenital portal-systemic shunt	TUI=T019	STY=Congenital Abnormality
-congenital portal-systemic shunt (disorder)	CUI=C1290495	PREF=congenital portal-systemic shunt (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital pulmonary vein confluence	CUI=C1290492	PREF=congenital pulmonary vein confluence	TUI=T019	STY=Congenital Abnormality
-congenital pulmonary vein confluence (disorder)	CUI=C1290492	PREF=congenital pulmonary vein confluence (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital renal arteriovenous malformation	CUI=C1533649	PREF=congenital renal arteriovenous malformation	TUI=T019	STY=Congenital Abnormality
 congenital transposition of azygos vein	CUI=C0685760	PREF=congenital transposition of azygos vein	TUI=T019	STY=Congenital Abnormality
-congenital transposition of azygos vein (disorder)	CUI=C0685760	PREF=congenital transposition of azygos vein (disorder)	TUI=T019	STY=Congenital Abnormality
 congenital varix	CUI=C0265953	PREF=congenital varix	TUI=T019	STY=Congenital Abnormality
 congenital venous malformation of skin	CUI=C4511301	PREF=congenital venous malformation of skin	TUI=T019	STY=Congenital Abnormality
-congenital venous malformation of skin (disorder)	CUI=C4511301	PREF=congenital venous malformation of skin (disorder)	TUI=T019	STY=Congenital Abnormality
 cor triatriatum sinistrum	CUI=C0009995	PREF=cor triatriatum sinistrum	TUI=T019	STY=Congenital Abnormality
 coron sinus defect in l atrium	CUI=C0344681	PREF=coron sinus defect in l atrium	TUI=T019	STY=Congenital Abnormality
 coronary sinus defect in left atrium	CUI=C0344681	PREF=coronary sinus defect in left atrium	TUI=T019	STY=Congenital Abnormality
-coronary sinus defect in left atrium (disorder)	CUI=C0344681	PREF=coronary sinus defect in left atrium (disorder)	TUI=T019	STY=Congenital Abnormality
 cranial meningioma	CUI=C0349604	PREF=cranial meningioma	TUI=T191	STY=Neoplastic Process
 ct - cerebral thrombosis	CUI=C0079102	PREF=ct - cerebral thrombosis	TUI=T047	STY=Disease or Syndrome
 ct - cerebral thrombosis	CUI=C0795687	PREF=ct - cerebral thrombosis	TUI=T047	STY=Disease or Syndrome
@@ -556,8 +461,6 @@ cva - cerebral artery occlusion	CUI=C0393951	PREF=cva - cerebral artery occlusio
 cva - cerebral infarction	CUI=C0007785	PREF=cva - cerebral infarction	TUI=T047	STY=Disease or Syndrome
 cva - cerebrovascular accid due to intracerebral haemorrhage	CUI=C2937358	PREF=cva - cerebrovascular accid due to intracerebral haemorrhage	TUI=T046	STY=Pathologic Function
 cva - cerebrovascular accident	CUI=C0038454	PREF=cva - cerebrovascular accident	TUI=T047	STY=Disease or Syndrome
-cva - cerebrovascular accident (& unspecified [& stroke])	CUI=C0038454	PREF=cva - cerebrovascular accident (& unspecified [& stroke])	TUI=T047	STY=Disease or Syndrome
-cva - cerebrovascular accident (& unspecified [& stroke]) (disorder)	CUI=C0038454	PREF=cva - cerebrovascular accident (& unspecified [& stroke]) (disorder)	TUI=T047	STY=Disease or Syndrome
 cva - cerebrovascular accident due to cerebral artery occlusion	CUI=C0393951	PREF=cva - cerebrovascular accident due to cerebral artery occlusion	TUI=T047	STY=Disease or Syndrome
 cva - cerebrovascular accident due to cerebral artery occlusion (disorder)	CUI=C0393951	PREF=cva - cerebrovascular accident due to cerebral artery occlusion (disorder)	TUI=T047	STY=Disease or Syndrome
 cva - cerebrovascular accident unspecified	CUI=C0038454	PREF=cva - cerebrovascular accident unspecified	TUI=T047	STY=Disease or Syndrome
@@ -571,28 +474,18 @@ cvas (cerebrovascular accident)	CUI=C0038454	PREF=cvas (cerebrovascular accident
 cvd - cerebrovascular disease	CUI=C0007820	PREF=cvd - cerebrovascular disease	TUI=T047	STY=Disease or Syndrome
 damage, anoxic brain	CUI=C0003132	PREF=damage, anoxic brain	TUI=T046	STY=Pathologic Function
 deep vein aplasia	CUI=C0340819	PREF=deep vein aplasia	TUI=T019	STY=Congenital Abnormality
-deep vein aplasia (disorder)	CUI=C0340819	PREF=deep vein aplasia (disorder)	TUI=T019	STY=Congenital Abnormality
 deep vein hypoplasia	CUI=C0340821	PREF=deep vein hypoplasia	TUI=T019	STY=Congenital Abnormality
-deep vein hypoplasia (disorder)	CUI=C0340821	PREF=deep vein hypoplasia (disorder)	TUI=T019	STY=Congenital Abnormality
 diffuse arteriovenous fistula	CUI=C0340833	PREF=diffuse arteriovenous fistula	TUI=T019	STY=Congenital Abnormality
-diffuse arteriovenous fistula (disorder)	CUI=C0340833	PREF=diffuse arteriovenous fistula (disorder)	TUI=T019	STY=Congenital Abnormality
 diffuse phlebectasia	CUI=C0265953	PREF=diffuse phlebectasia	TUI=T019	STY=Congenital Abnormality
-disease, cerebrovascular	CUI=C0007820	PREF=disease, cerebrovascular	TUI=T047	STY=Disease or Syndrome
 disease, hypothalamic	CUI=C0020655	PREF=disease, hypothalamic	TUI=T047	STY=Disease or Syndrome
 disease, klippel-trenaunay	CUI=C0022739	PREF=disease, klippel-trenaunay	TUI=T047	STY=Disease or Syndrome
-diseases, cerebrovascular	CUI=C0007820	PREF=diseases, cerebrovascular	TUI=T047	STY=Disease or Syndrome
 diseases, hypothalamic	CUI=C0020655	PREF=diseases, hypothalamic	TUI=T047	STY=Disease or Syndrome
 disorder of hypothalamus	CUI=C0020655	PREF=disorder of hypothalamus	TUI=T047	STY=Disease or Syndrome
-disorder of hypothalamus (disorder)	CUI=C0020655	PREF=disorder of hypothalamus (disorder)	TUI=T047	STY=Disease or Syndrome
 disorder of optic chiasm associated with non-pituitary neoplasm	CUI=C0155309	PREF=disorder of optic chiasm associated with non-pituitary neoplasm	TUI=T047	STY=Disease or Syndrome
-disorder of optic chiasm associated with non-pituitary neoplasm (disorder)	CUI=C0155309	PREF=disorder of optic chiasm associated with non-pituitary neoplasm (disorder)	TUI=T047	STY=Disease or Syndrome
 disorder of optic chiasm associated with other neoplasm	CUI=C0155309	PREF=disorder of optic chiasm associated with other neoplasm	TUI=T047	STY=Disease or Syndrome
 disorder of optic chiasm associated with pituitary neoplasms and disorders	CUI=C0155308	PREF=disorder of optic chiasm associated with pituitary neoplasms and disorders	TUI=T047	STY=Disease or Syndrome
-disorder of optic chiasm associated with pituitary neoplasms and/or disorders	CUI=C0155308	PREF=disorder of optic chiasm associated with pituitary neoplasms and/or disorders	TUI=T047	STY=Disease or Syndrome
-disorder of optic chiasm associated with pituitary neoplasms and/or disorders (disorder)	CUI=C0155308	PREF=disorder of optic chiasm associated with pituitary neoplasms and/or disorders (disorder)	TUI=T047	STY=Disease or Syndrome
 disorders of optic chiasm associated with pituitary neoplasms and disorders	CUI=C0155308	PREF=disorders of optic chiasm associated with pituitary neoplasms and disorders	TUI=T047	STY=Disease or Syndrome
 ductus venosus abnormality	CUI=C0344687	PREF=ductus venosus abnormality	TUI=T019	STY=Congenital Abnormality
-ductus venosus abnormality (disorder)	CUI=C0344687	PREF=ductus venosus abnormality (disorder)	TUI=T019	STY=Congenital Abnormality
 dyschondrodysplasia with hemangiomas	CUI=C0024454	PREF=dyschondrodysplasia with hemangiomas	TUI=T047	STY=Disease or Syndrome
 dyschondroplasia and cavernous haemangioma	CUI=C0024454	PREF=dyschondroplasia and cavernous haemangioma	TUI=T047	STY=Disease or Syndrome
 dyschondroplasia+haemangioma	CUI=C0024454	PREF=dyschondroplasia+haemangioma	TUI=T047	STY=Disease or Syndrome
@@ -808,9 +701,7 @@ left atriums, subdivided	CUI=C0009995	PREF=left atriums, subdivided	TUI=T019	STY
 left inferior caval vein connecting to left sided atrium	CUI=C3164907	PREF=left inferior caval vein connecting to left sided atrium	TUI=T019	STY=Congenital Abnormality
 left inferior caval vein connecting to right sided atrium	CUI=C3165122	PREF=left inferior caval vein connecting to right sided atrium	TUI=T019	STY=Congenital Abnormality
 left inferior vena cava connecting to left sided atrium	CUI=C3164907	PREF=left inferior vena cava connecting to left sided atrium	TUI=T019	STY=Congenital Abnormality
-left inferior vena cava connecting to left sided atrium (disorder)	CUI=C3164907	PREF=left inferior vena cava connecting to left sided atrium (disorder)	TUI=T019	STY=Congenital Abnormality
 left inferior vena cava connecting to right sided atrium	CUI=C3165122	PREF=left inferior vena cava connecting to right sided atrium	TUI=T019	STY=Congenital Abnormality
-left inferior vena cava connecting to right sided atrium (disorder)	CUI=C3165122	PREF=left inferior vena cava connecting to right sided atrium (disorder)	TUI=T019	STY=Congenital Abnormality
 left sided cerebral hemisphere cerebrovascular accident	CUI=C0586325	PREF=left sided cerebral hemisphere cerebrovascular accident	TUI=T047	STY=Disease or Syndrome
 left sided cerebral hemisphere cerebrovascular accident (disorder)	CUI=C0586325	PREF=left sided cerebral hemisphere cerebrovascular accident (disorder)	TUI=T047	STY=Disease or Syndrome
 left sided cva	CUI=C0586325	PREF=left sided cva	TUI=T047	STY=Disease or Syndrome
@@ -858,15 +749,10 @@ malignant primary brain tumors	CUI=C0750979	PREF=malignant primary brain tumors	
 mass of hypothalamus	CUI=C0342417	PREF=mass of hypothalamus	TUI=T190	STY=Anatomical Abnormality
 massive osteolyses	CUI=C0029438	PREF=massive osteolyses	TUI=T047	STY=Disease or Syndrome
 melas	CUI=C0162671	PREF=melas	TUI=T047	STY=Disease or Syndrome
-melas - mitochond myop/encephal/lact acidos/strke-like episo	CUI=C0162671	PREF=melas - mitochond myop/encephal/lact acidos/strke-like episo	TUI=T047	STY=Disease or Syndrome
 melas - mitochondrial encephalopathy, lactic acidosis and stroke-like episodes	CUI=C0162671	PREF=melas - mitochondrial encephalopathy, lactic acidosis and stroke-like episodes	TUI=T047	STY=Disease or Syndrome
 melas - mitochondrial myopathy, encephalopathy, lactic acidosis and stroke-like episodes	CUI=C0162671	PREF=melas - mitochondrial myopathy, encephalopathy, lactic acidosis and stroke-like episodes	TUI=T047	STY=Disease or Syndrome
-melas mito myo/enceph/lac/strk	CUI=C0162671	PREF=melas mito myo/enceph/lac/strk	TUI=T047	STY=Disease or Syndrome
-melas-mito enc lact ac & strok	CUI=C0162671	PREF=melas-mito enc lact ac & strok	TUI=T047	STY=Disease or Syndrome
-melas-mitochond encephal, lactic acidos & strokelike episode	CUI=C0162671	PREF=melas-mitochond encephal, lactic acidos & strokelike episode	TUI=T047	STY=Disease or Syndrome
 meningioma of brain	CUI=C0349604	PREF=meningioma of brain	TUI=T191	STY=Neoplastic Process
 meningioma of optic nerve sheath	CUI=C0346328	PREF=meningioma of optic nerve sheath	TUI=T191	STY=Neoplastic Process
-meningioma of optic nerve sheath (disorder)	CUI=C0346328	PREF=meningioma of optic nerve sheath (disorder)	TUI=T191	STY=Neoplastic Process
 meningioma optic nerve sheath	CUI=C0346328	PREF=meningioma optic nerve sheath	TUI=T191	STY=Neoplastic Process
 meningioma, intracranial	CUI=C0349604	PREF=meningioma, intracranial	TUI=T191	STY=Neoplastic Process
 meningiomas, intracranial	CUI=C0349604	PREF=meningiomas, intracranial	TUI=T191	STY=Neoplastic Process
@@ -875,14 +761,9 @@ meningo oculo facial angiomatosis	CUI=C0038505	PREF=meningo oculo facial angioma
 meningo-oculo-facial angiomatosis	CUI=C0038505	PREF=meningo-oculo-facial angiomatosis	TUI=T019	STY=Congenital Abnormality
 meningofacial angiomatosis-cerebral calcification syndrome	CUI=C0038505	PREF=meningofacial angiomatosis-cerebral calcification syndrome	TUI=T019	STY=Congenital Abnormality
 migraine-induced stroke	CUI=C4518466	PREF=migraine-induced stroke	TUI=T047	STY=Disease or Syndrome
-mitoch enc lact ac & strlik ep	CUI=C0162671	PREF=mitoch enc lact ac & strlik ep	TUI=T047	STY=Disease or Syndrome
-mitoch myop/enceph/lact/strke	CUI=C0162671	PREF=mitoch myop/enceph/lact/strke	TUI=T047	STY=Disease or Syndrome
-mitoch myopath/encephalopath/lactic acidos/strke-like episod	CUI=C0162671	PREF=mitoch myopath/encephalopath/lactic acidos/strke-like episod	TUI=T047	STY=Disease or Syndrome
-mitochond encephalopathy, lact acidosis & strokelike episode	CUI=C0162671	PREF=mitochond encephalopathy, lact acidosis & strokelike episode	TUI=T047	STY=Disease or Syndrome
 mitochondrial diseases	CUI=C0751651	PREF=mitochondrial diseases	TUI=T047	STY=Disease or Syndrome
 mitochondrial encephalomyopathy, lactic acidosis, and stroke-like episodes	CUI=C0162671	PREF=mitochondrial encephalomyopathy, lactic acidosis, and stroke-like episodes	TUI=T047	STY=Disease or Syndrome
 mitochondrial encephalopathy, lactic acidosis and stroke-like episodes	CUI=C0162671	PREF=mitochondrial encephalopathy, lactic acidosis and stroke-like episodes	TUI=T047	STY=Disease or Syndrome
-mitochondrial encephalopathy, lactic acidosis and stroke-like episodes (disorder)	CUI=C0162671	PREF=mitochondrial encephalopathy, lactic acidosis and stroke-like episodes (disorder)	TUI=T047	STY=Disease or Syndrome
 mitochondrial myopathy, encephalopathy, lactic acidosis and stroke-like episodes	CUI=C0162671	PREF=mitochondrial myopathy, encephalopathy, lactic acidosis and stroke-like episodes	TUI=T047	STY=Disease or Syndrome
 mitochondrial myopathy, encephalopathy, lactic acidosis and stroke-like episodes (disorder)	CUI=C0162671	PREF=mitochondrial myopathy, encephalopathy, lactic acidosis and stroke-like episodes (disorder)	TUI=T047	STY=Disease or Syndrome
 mitochondrial myopathy, lactic acidosis, stroke-like episode	CUI=C0162671	PREF=mitochondrial myopathy, lactic acidosis, stroke-like episode	TUI=T047	STY=Disease or Syndrome
@@ -893,29 +774,19 @@ multiple enchondromatosis, maffucci type	CUI=C0024454	PREF=multiple enchondromat
 myopathy, mitochondrial-encephalopathy-lactic acidosis-stroke	CUI=C0162671	PREF=myopathy, mitochondrial-encephalopathy-lactic acidosis-stroke	TUI=T047	STY=Disease or Syndrome
 neonatal cerebral infarction	CUI=C1299567	PREF=neonatal cerebral infarction	TUI=T047	STY=Disease or Syndrome
 neonatal stroke	CUI=C1299567	PREF=neonatal stroke	TUI=T047	STY=Disease or Syndrome
-neonatal stroke (disorder)	CUI=C1299567	PREF=neonatal stroke (disorder)	TUI=T047	STY=Disease or Syndrome
 neoplasm of brain stem	CUI=C0677866	PREF=neoplasm of brain stem	TUI=T191	STY=Neoplastic Process
-neoplasm of brain stem (disorder)	CUI=C0677866	PREF=neoplasm of brain stem (disorder)	TUI=T191	STY=Neoplastic Process
 neoplasm of cerebellum	CUI=C0007762	PREF=neoplasm of cerebellum	TUI=T191	STY=Neoplastic Process
-neoplasm of cerebellum (disorder)	CUI=C0007762	PREF=neoplasm of cerebellum (disorder)	TUI=T191	STY=Neoplastic Process
 neoplasm of cerebral meninges	CUI=C1263890	PREF=neoplasm of cerebral meninges	TUI=T191	STY=Neoplastic Process
-neoplasm of cerebral meninges (disorder)	CUI=C1263890	PREF=neoplasm of cerebral meninges (disorder)	TUI=T191	STY=Neoplastic Process
 neoplasm of cerebral ventricle	CUI=C0007798	PREF=neoplasm of cerebral ventricle	TUI=T191	STY=Neoplastic Process
-neoplasm of cerebral ventricle (disorder)	CUI=C0007798	PREF=neoplasm of cerebral ventricle (disorder)	TUI=T191	STY=Neoplastic Process
 neoplasm of cerebrum	CUI=C1263885	PREF=neoplasm of cerebrum	TUI=T191	STY=Neoplastic Process
 neoplasm of cerebrum (disorder)	CUI=C1263885	PREF=neoplasm of cerebrum (disorder)	TUI=T191	STY=Neoplastic Process
 neoplasm of optic nerve and sheath	CUI=C0751728	PREF=neoplasm of optic nerve and sheath	TUI=T191	STY=Neoplastic Process
-neoplasm of optic nerve and sheath (disorder)	CUI=C0751728	PREF=neoplasm of optic nerve and sheath (disorder)	TUI=T191	STY=Neoplastic Process
 neoplasm of pineal gland	CUI=C0031941	PREF=neoplasm of pineal gland	TUI=T191	STY=Neoplastic Process
-neoplasm of pineal gland (disorder)	CUI=C0031941	PREF=neoplasm of pineal gland (disorder)	TUI=T191	STY=Neoplastic Process
 neoplasm of uncertain behavior nos	CUI=C0154129	PREF=neoplasm of uncertain behavior nos	TUI=T191	STY=Neoplastic Process
-neoplasm of uncertain behavior nos (disorder)	CUI=C0154129	PREF=neoplasm of uncertain behavior nos (disorder)	TUI=T191	STY=Neoplastic Process
 neoplasm of uncertain behavior of brain	CUI=C0496936	PREF=neoplasm of uncertain behavior of brain	TUI=T191	STY=Neoplastic Process
-neoplasm of uncertain behavior of brain (disorder)	CUI=C0496936	PREF=neoplasm of uncertain behavior of brain (disorder)	TUI=T191	STY=Neoplastic Process
 neoplasm of uncertain behavior of brain, nos	CUI=C0496936	PREF=neoplasm of uncertain behavior of brain, nos	TUI=T191	STY=Neoplastic Process
 neoplasm of uncertain behaviour nos	CUI=C0154129	PREF=neoplasm of uncertain behaviour nos	TUI=T191	STY=Neoplastic Process
 neoplasm of uncertain behaviour of brain	CUI=C0496936	PREF=neoplasm of uncertain behaviour of brain	TUI=T191	STY=Neoplastic Process
-neoplasm of uncertain behaviour of brain (disorder)	CUI=C0496936	PREF=neoplasm of uncertain behaviour of brain (disorder)	TUI=T191	STY=Neoplastic Process
 neoplasm of uncertain or unknown behavior of brain, unspecified	CUI=C0496936	PREF=neoplasm of uncertain or unknown behavior of brain, unspecified	TUI=T191	STY=Neoplastic Process
 neoplasm of brain stem	CUI=C0677866	PREF=neoplasm, brain stem	TUI=T191	STY=Neoplastic Process
 neoplasm of brain ventricular	CUI=C0007798	PREF=neoplasm, brain ventricular	TUI=T191	STY=Neoplastic Process
@@ -926,9 +797,7 @@ neoplasm of cerebroventricular	CUI=C0007798	PREF=neoplasm, cerebroventricular	TU
 neoplasm of intraventricular	CUI=C0007798	PREF=neoplasm, intraventricular	TUI=T191	STY=Neoplastic Process
 neoplasm of pineal	CUI=C0031941	PREF=neoplasm, pineal	TUI=T191	STY=Neoplastic Process
 neoplasm, uncertain whether benign or malignant	CUI=C0677041	PREF=neoplasm, uncertain whether benign or malignant	TUI=T191	STY=Neoplastic Process
-neoplasm, uncertain whether benign or malignant (morphologic abnormality)	CUI=C0677041	PREF=neoplasm, uncertain whether benign or malignant (morphologic abnormality)	TUI=T191	STY=Neoplastic Process
 neoplasms of uncertain behaviour	CUI=C0154129	PREF=neoplasms of uncertain behaviour	TUI=T191	STY=Neoplastic Process
-neoplasms of uncertain behaviour (disorder)	CUI=C0154129	PREF=neoplasms of uncertain behaviour (disorder)	TUI=T191	STY=Neoplastic Process
 neoplasms of brain stem	CUI=C0677866	PREF=neoplasms, brain stem	TUI=T191	STY=Neoplastic Process
 neoplasms of brain ventricular	CUI=C0007798	PREF=neoplasms, brain ventricular	TUI=T191	STY=Neoplastic Process
 benign neoplasms of brain	CUI=C0496899	PREF=neoplasms, brain, benign	TUI=T191	STY=Neoplastic Process
@@ -944,16 +813,13 @@ neoplastic disease of uncertain behaviour	CUI=C0154129	PREF=neoplastic disease o
 nervous system, central	CUI=C3714787	PREF=nervous system, central	TUI=T022	STY=Body System
 nervous systems, central	CUI=C3714787	PREF=nervous systems, central	TUI=T022	STY=Body System
 neurocytoma	CUI=C1622510	PREF=neurocytoma	TUI=T191	STY=Neoplastic Process
-neurocytoma (morphologic abnormality)	CUI=C1622510	PREF=neurocytoma (morphologic abnormality)	TUI=T191	STY=Neoplastic Process
 neurocytoma -retired-	CUI=C1622510	PREF=neurocytoma -retired-	TUI=T191	STY=Neoplastic Process
 neurocytomas	CUI=C1622510	PREF=neurocytomas	TUI=T191	STY=Neoplastic Process
 neuroepitheliomatous neoplasm	CUI=C0334594	PREF=neuroepitheliomatous neoplasm	TUI=T191	STY=Neoplastic Process
-neuroepitheliomatous neoplasm (morphologic abnormality)	CUI=C0334594	PREF=neuroepitheliomatous neoplasm (morphologic abnormality)	TUI=T191	STY=Neoplastic Process
 neuroepitheliomatous tum brain	CUI=C0346291	PREF=neuroepitheliomatous tum brain	TUI=T191	STY=Neoplastic Process
 neuroepitheliomatous tumor of brain	CUI=C0346291	PREF=neuroepitheliomatous tumor of brain	TUI=T191	STY=Neoplastic Process
 neuroepitheliomatous tumour of brain	CUI=C0346291	PREF=neuroepitheliomatous tumour of brain	TUI=T191	STY=Neoplastic Process
 neuronal and mixed neuronal - glial tumor of brain	CUI=C0346291	PREF=neuronal and mixed neuronal - glial tumor of brain	TUI=T191	STY=Neoplastic Process
-neuronal and mixed neuronal - glial tumor of brain (disorder)	CUI=C0346291	PREF=neuronal and mixed neuronal - glial tumor of brain (disorder)	TUI=T191	STY=Neoplastic Process
 neuronal and mixed neuronal - glial tumour of brain	CUI=C0346291	PREF=neuronal and mixed neuronal - glial tumour of brain	TUI=T191	STY=Neoplastic Process
 neuronal and mixed neuronal-glial tumor	CUI=C0474844	PREF=neuronal and mixed neuronal-glial tumor	TUI=T191	STY=Neoplastic Process
 neuronal and mixed neuronal-glial tumor (morphologic abnormality)	CUI=C0474844	PREF=neuronal and mixed neuronal-glial tumor (morphologic abnormality)	TUI=T191	STY=Neoplastic Process
@@ -961,15 +827,11 @@ neuronal and mixed neuronal-glial tumour	CUI=C0474844	PREF=neuronal and mixed ne
 neuronal+mix neuron-glial tum	CUI=C0474844	PREF=neuronal+mix neuron-glial tum	TUI=T191	STY=Neoplastic Process
 neuroretinoangiomatosis	CUI=C0038505	PREF=neuroretinoangiomatosis	TUI=T019	STY=Congenital Abnormality
 nonparalytic stroke	CUI=C0265112	PREF=nonparalytic stroke	TUI=T047	STY=Disease or Syndrome
-nonparalytic stroke (disorder)	CUI=C0265112	PREF=nonparalytic stroke (disorder)	TUI=T047	STY=Disease or Syndrome
 nonpyogenic cerebral venous thrombosis with stroke	CUI=C4551371	PREF=nonpyogenic cerebral venous thrombosis with stroke	TUI=T047	STY=Disease or Syndrome
 nontraumatic ruptured cerebral aneurysm	CUI=C4076297	PREF=nontraumatic ruptured cerebral aneurysm	TUI=T047	STY=Disease or Syndrome
-nontraumatic ruptured cerebral aneurysm (disorder)	CUI=C4076297	PREF=nontraumatic ruptured cerebral aneurysm (disorder)	TUI=T047	STY=Disease or Syndrome
 occlusion of cerebral arteries	CUI=C0028790	PREF=occlusion of cerebral arteries	TUI=T020	STY=Acquired Abnormality
 occlusion of cerebral artery	CUI=C0028790	PREF=occlusion of cerebral artery	TUI=T020	STY=Acquired Abnormality
-occlusion of cerebral artery (disorder)	CUI=C0028790	PREF=occlusion of cerebral artery (disorder)	TUI=T020	STY=Acquired Abnormality
 occlusive stroke	CUI=C1298680	PREF=occlusive stroke	TUI=T047	STY=Disease or Syndrome
-occlusive stroke (disorder)	CUI=C1298680	PREF=occlusive stroke (disorder)	TUI=T047	STY=Disease or Syndrome
 opt chiasm w pituit dis	CUI=C0155308	PREF=opt chiasm w pituit dis	TUI=T047	STY=Disease or Syndrome
 optic nerve sheath meningioma	CUI=C0346328	PREF=optic nerve sheath meningioma	TUI=T191	STY=Neoplastic Process
 optic nerve sheath neopl	CUI=C0751728	PREF=optic nerve sheath neopl	TUI=T191	STY=Neoplastic Process
@@ -981,11 +843,9 @@ osteolyses, massive	CUI=C0029438	PREF=osteolyses, massive	TUI=T047	STY=Disease o
 osteolysis and angiomatous naevi	CUI=C0029438	PREF=osteolysis and angiomatous naevi	TUI=T047	STY=Disease or Syndrome
 osteolysis and angiomatous nevi	CUI=C0029438	PREF=osteolysis and angiomatous nevi	TUI=T047	STY=Disease or Syndrome
 paralytic stroke	CUI=C1263853	PREF=paralytic stroke	TUI=T047	STY=Disease or Syndrome
-paralytic stroke (disorder)	CUI=C1263853	PREF=paralytic stroke (disorder)	TUI=T047	STY=Disease or Syndrome
 paralytic stroke, nos	CUI=C1263853	PREF=paralytic stroke, nos	TUI=T047	STY=Disease or Syndrome
 parenchymal hemorrhage, cerebral	CUI=C2937358	PREF=parenchymal hemorrhage, cerebral	TUI=T046	STY=Pathologic Function
 parenchymal hemorrhages, cerebral	CUI=C2937358	PREF=parenchymal hemorrhages, cerebral	TUI=T046	STY=Pathologic Function
-parkes weber syndrome (disorder)	CUI=C0038505	PREF=parkes weber syndrome (disorder)	TUI=T019	STY=Congenital Abnormality
 parkes-weber syndrome	CUI=C0038505	PREF=parkes-weber syndrome	TUI=T019	STY=Congenital Abnormality
 part anom pulm ven conn	CUI=C0158634	PREF=part anom pulm ven conn	TUI=T019	STY=Congenital Abnormality
 part anom pulm vn connection	CUI=C0158634	PREF=part anom pulm vn connection	TUI=T019	STY=Congenital Abnormality
@@ -997,22 +857,17 @@ partially unroofed coronary sinus	CUI=C0344681	PREF=partially unroofed coronary 
 perin hypox - ischaem encephal	CUI=C0475802	PREF=perin hypox - ischaem encephal	TUI=T047	STY=Disease or Syndrome
 perinatal anoxic-ischaemic brain injury	CUI=C0475802	PREF=perinatal anoxic-ischaemic brain injury	TUI=T047	STY=Disease or Syndrome
 perinatal anoxic-ischemic brain injury	CUI=C0475802	PREF=perinatal anoxic-ischemic brain injury	TUI=T047	STY=Disease or Syndrome
-perinatal anoxic-ischemic brain injury (disorder)	CUI=C0475802	PREF=perinatal anoxic-ischemic brain injury (disorder)	TUI=T047	STY=Disease or Syndrome
 perinatal hypoxic - ischaemic encephalopathy	CUI=C0475802	PREF=perinatal hypoxic - ischaemic encephalopathy	TUI=T047	STY=Disease or Syndrome
 perinatal hypoxic - ischemic encephalopathy	CUI=C0475802	PREF=perinatal hypoxic - ischemic encephalopathy	TUI=T047	STY=Disease or Syndrome
 periph arteriovenous malformat	CUI=C0495524	PREF=periph arteriovenous malformat	TUI=T019	STY=Congenital Abnormality
 peripheral arterio-venous malformation	CUI=C0495524	PREF=peripheral arterio-venous malformation	TUI=T019	STY=Congenital Abnormality
 peripheral arteriovenous malformation	CUI=C0495524	PREF=peripheral arteriovenous malformation	TUI=T019	STY=Congenital Abnormality
-peripheral arteriovenous malformation (disorder)	CUI=C0495524	PREF=peripheral arteriovenous malformation (disorder)	TUI=T019	STY=Congenital Abnormality
 peripheral venous malformation	CUI=C3839028	PREF=peripheral venous malformation	TUI=T047	STY=Disease or Syndrome
-peripheral venous malformation (disorder)	CUI=C3839028	PREF=peripheral venous malformation (disorder)	TUI=T047	STY=Disease or Syndrome
-phakomatosis, sturge weber	CUI=C0038505	PREF=phakomatosis, sturge weber	TUI=T019	STY=Congenital Abnormality
 phakomatosis, sturge-weber	CUI=C0038505	PREF=phakomatosis, sturge-weber	TUI=T019	STY=Congenital Abnormality
 phantom bone disease	CUI=C0029438	PREF=phantom bone disease	TUI=T047	STY=Disease or Syndrome
 pineal gland neoplasm	CUI=C0031941	PREF=pineal gland neoplasm	TUI=T191	STY=Neoplastic Process
 pineal gland tumor	CUI=C0031941	PREF=pineal gland tumor	TUI=T191	STY=Neoplastic Process
 pineal gland tumors	CUI=C0031941	PREF=pineal gland tumors	TUI=T191	STY=Neoplastic Process
-pineal neopl	CUI=C0031941	PREF=pineal neopl	TUI=T191	STY=Neoplastic Process
 pineal neoplasm	CUI=C0031941	PREF=pineal neoplasm	TUI=T191	STY=Neoplastic Process
 pineal neoplasms	CUI=C0031941	PREF=pineal neoplasms	TUI=T191	STY=Neoplastic Process
 pineal parenchymal tumor	CUI=C0031941	PREF=pineal parenchymal tumor	TUI=T191	STY=Neoplastic Process
@@ -1020,19 +875,15 @@ pineal parenchymal tumors	CUI=C0031941	PREF=pineal parenchymal tumors	TUI=T191	S
 pineal tumors	CUI=C0031941	PREF=pineal tumors	TUI=T191	STY=Neoplastic Process
 pineal tumour	CUI=C0031941	PREF=pineal tumour	TUI=T191	STY=Neoplastic Process
 pinealoma	CUI=C0031941	PREF=pinealoma	TUI=T191	STY=Neoplastic Process
-pinealoma (disorder)	CUI=C0031941	PREF=pinealoma (disorder)	TUI=T191	STY=Neoplastic Process
-pinealoma (morphologic abnormality)	CUI=C0031941	PREF=pinealoma (morphologic abnormality)	TUI=T191	STY=Neoplastic Process
 pinealomas	CUI=C0031941	PREF=pinealomas	TUI=T191	STY=Neoplastic Process
 pkws	CUI=C0038505	PREF=pkws	TUI=T019	STY=Congenital Abnormality
 porencephalic cyst	CUI=C4082172	PREF=porencephalic cyst	TUI=T047	STY=Disease or Syndrome
-porencephalic cyst (disorder)	CUI=C4082172	PREF=porencephalic cyst (disorder)	TUI=T047	STY=Disease or Syndrome
 primary malignant brain neopl	CUI=C0750979	PREF=primary malignant brain neopl	TUI=T191	STY=Neoplastic Process
 primary malignant brain neoplasms	CUI=C0750979	PREF=primary malignant brain neoplasms	TUI=T191	STY=Neoplastic Process
 primary malignant brain tumors	CUI=C0750979	PREF=primary malignant brain tumors	TUI=T191	STY=Neoplastic Process
 primary malignant neoplasm of brain	CUI=C0750979	PREF=primary malignant neoplasm of brain	TUI=T191	STY=Neoplastic Process
 primary malignant neoplasm of brain (disorder)	CUI=C0750979	PREF=primary malignant neoplasm of brain (disorder)	TUI=T191	STY=Neoplastic Process
 progressing stroke	CUI=C0265113	PREF=progressing stroke	TUI=T047	STY=Disease or Syndrome
-progressing stroke (disorder)	CUI=C0265113	PREF=progressing stroke (disorder)	TUI=T047	STY=Disease or Syndrome
 prominent eustachian valve	CUI=C0344698	PREF=prominent eustachian valve	TUI=T019	STY=Congenital Abnormality
 prominent valve inf vena cava	CUI=C0344698	PREF=prominent valve inf vena cava	TUI=T019	STY=Congenital Abnormality
 prominent valve of inferior vena cava	CUI=C0344698	PREF=prominent valve of inferior vena cava	TUI=T019	STY=Congenital Abnormality
@@ -1040,7 +891,6 @@ prominent valve of inferior vena cava (disorder)	CUI=C0344698	PREF=prominent val
 pulmonary vein abnormality	CUI=C0265914	PREF=pulmonary vein abnormality	TUI=T019	STY=Congenital Abnormality
 pulmonary venous return anomaly	CUI=C0036400	PREF=pulmonary venous return anomaly	TUI=T019	STY=Congenital Abnormality
 pv - pulmonary vein abnormality	CUI=C0265914	PREF=pv - pulmonary vein abnormality	TUI=T019	STY=Congenital Abnormality
-pv - pulmonary vn abnormality	CUI=C0265914	PREF=pv - pulmonary vn abnormality	TUI=T019	STY=Congenital Abnormality
 rasmussen syndrome	CUI=C0393484	PREF=rasmussen syndrome	TUI=T047	STY=Disease or Syndrome
 rbs	CUI=C0392475	PREF=rbs	TUI=T047	STY=Disease or Syndrome
 remnants of valves of sinus venosus	CUI=C0265868	PREF=remnants of valves of sinus venosus	TUI=T019	STY=Congenital Abnormality
@@ -1049,51 +899,27 @@ retinal arteriovenous anomaly	CUI=C0521570	PREF=retinal arteriovenous anomaly	TU
 retinal arteriovenous malformation	CUI=C0521570	PREF=retinal arteriovenous malformation	TUI=T019	STY=Congenital Abnormality
 retinal arteriovenous malformation (disorder)	CUI=C0521570	PREF=retinal arteriovenous malformation (disorder)	TUI=T019	STY=Congenital Abnormality
 retinal cirsoid aneurysm	CUI=C0423407	PREF=retinal cirsoid aneurysm	TUI=T020	STY=Acquired Abnormality
-retinal cirsoid aneurysm (disorder)	CUI=C0423407	PREF=retinal cirsoid aneurysm (disorder)	TUI=T020	STY=Acquired Abnormality
 retinociliary vein	CUI=C0423462	PREF=retinociliary vein	TUI=T033	STY=finding
-retinociliary vein (disorder)	CUI=C0423462	PREF=retinociliary vein (disorder)	TUI=T033	STY=finding
 retroaortic brachiocephalic vein	CUI=C3163891	PREF=retroaortic brachiocephalic vein	TUI=T019	STY=Congenital Abnormality
-retroaortic brachiocephalic vein	CUI=C3163891	PREF=retroaortic brachiocephalic vein	TUI=T047	STY=Disease or Syndrome
-retroaortic brachiocephalic vein (disorder)	CUI=C3163891	PREF=retroaortic brachiocephalic vein (disorder)	TUI=T019	STY=Congenital Abnormality
-retroaortic brachiocephalic vein (disorder)	CUI=C3163891	PREF=retroaortic brachiocephalic vein (disorder)	TUI=T047	STY=Disease or Syndrome
-right inferior caval vein connecting to left atrium and right atrium	CUI=C3164087	PREF=right inferior caval vein connecting to left atrium and right atrium	TUI=T019	STY=Congenital Abnormality
-right inferior caval vein connecting to left sided atrium	CUI=C3164330	PREF=right inferior caval vein connecting to left sided atrium	TUI=T019	STY=Congenital Abnormality
-right inferior vena cava connecting to left atrium and right atrium	CUI=C3164087	PREF=right inferior vena cava connecting to left atrium and right atrium	TUI=T019	STY=Congenital Abnormality
-right inferior vena cava connecting to left atrium and right atrium (disorder)	CUI=C3164087	PREF=right inferior vena cava connecting to left atrium and right atrium (disorder)	TUI=T019	STY=Congenital Abnormality
-right inferior vena cava connecting to left sided atrium	CUI=C3164330	PREF=right inferior vena cava connecting to left sided atrium	TUI=T019	STY=Congenital Abnormality
-right inferior vena cava connecting to left sided atrium (disorder)	CUI=C3164330	PREF=right inferior vena cava connecting to left sided atrium (disorder)	TUI=T019	STY=Congenital Abnormality
 right sided cerebral hemisphere cerebrovascular accident	CUI=C0586324	PREF=right sided cerebral hemisphere cerebrovascular accident	TUI=T047	STY=Disease or Syndrome
-right sided cerebral hemisphere cerebrovascular accident (disorder)	CUI=C0586324	PREF=right sided cerebral hemisphere cerebrovascular accident (disorder)	TUI=T047	STY=Disease or Syndrome
 right sided cva	CUI=C0586324	PREF=right sided cva	TUI=T047	STY=Disease or Syndrome
 right vertebral artery embolism with stroke	CUI=C4551376	PREF=right vertebral artery embolism with stroke	TUI=T047	STY=Disease or Syndrome
 robert's syndrome	CUI=C0392475	PREF=robert's syndrome	TUI=T047	STY=Disease or Syndrome
-roberts-sc phocomelia syndrome (disorder)	CUI=C0392475	PREF=roberts-sc phocomelia syndrome (disorder)	TUI=T047	STY=Disease or Syndrome
-rt cerebral hemisphere cva	CUI=C0586324	PREF=rt cerebral hemisphere cva	TUI=T047	STY=Disease or Syndrome
 rupture of blood vessel in brain	CUI=C2937358	PREF=rupture of blood vessel in brain	TUI=T046	STY=Pathologic Function
 rupture of cerebral arteriovenous malformation	CUI=C0241799	PREF=rupture of cerebral arteriovenous malformation	TUI=T046	STY=Pathologic Function
 ruptured aneurysm of intracranial artery	CUI=C3266645	PREF=ruptured aneurysm of intracranial artery	TUI=T047	STY=Disease or Syndrome
-ruptured aneurysm of intracranial artery (disorder)	CUI=C3266645	PREF=ruptured aneurysm of intracranial artery (disorder)	TUI=T047	STY=Disease or Syndrome
 ruptured cerebr arterven malf	CUI=C0241799	PREF=ruptured cerebr arterven malf	TUI=T046	STY=Pathologic Function
 ruptured cerebral aneurysm	CUI=C0242084	PREF=ruptured cerebral aneurysm	TUI=T047	STY=Disease or Syndrome
-ruptured cerebral aneurysm (disorder)	CUI=C0242084	PREF=ruptured cerebral aneurysm (disorder)	TUI=T047	STY=Disease or Syndrome
 ruptured cerebral arteriovenous malformation	CUI=C0241799	PREF=ruptured cerebral arteriovenous malformation	TUI=T046	STY=Pathologic Function
-ruptured cerebral arteriovenous malformation (disorder)	CUI=C0241799	PREF=ruptured cerebral arteriovenous malformation (disorder)	TUI=T046	STY=Pathologic Function
-sc syndrome	CUI=C0392475	PREF=sc syndrome	TUI=T047	STY=Disease or Syndrome
 schizencephaly	CUI=C0266484	PREF=schizencephaly	TUI=T019	STY=Congenital Abnormality
-scimitar syndrome (disorder)	CUI=C0036400	PREF=scimitar syndrome (disorder)	TUI=T019	STY=Congenital Abnormality
 spinal arteriovenous malformat	CUI=C0348023	PREF=spinal arteriovenous malformat	TUI=T019	STY=Congenital Abnormality
 spinal arteriovenous malformation	CUI=C0348023	PREF=spinal arteriovenous malformation	TUI=T019	STY=Congenital Abnormality
-spinal arteriovenous malformation (disorder)	CUI=C0348023	PREF=spinal arteriovenous malformation (disorder)	TUI=T019	STY=Congenital Abnormality
 splenoportal vascular anomaly	CUI=C0340826	PREF=splenoportal vascular anomaly	TUI=T019	STY=Congenital Abnormality
-splenoportal vascular anomaly (disorder)	CUI=C0340826	PREF=splenoportal vascular anomaly (disorder)	TUI=T019	STY=Congenital Abnormality
 spongy venous malformation	CUI=C0340825	PREF=spongy venous malformation	TUI=T019	STY=Congenital Abnormality
-spongy venous malformation (disorder)	CUI=C0340825	PREF=spongy venous malformation (disorder)	TUI=T019	STY=Congenital Abnormality
 stroke - intracerebral haem'ge	CUI=C2937358	PREF=stroke - intracerebral haem'ge	TUI=T046	STY=Pathologic Function
 stroke and cerebrovascular accident unspecified	CUI=C0038454	PREF=stroke and cerebrovascular accident unspecified	TUI=T047	STY=Disease or Syndrome
-stroke and cerebrovascular accident unspecified (disorder)	CUI=C0038454	PREF=stroke and cerebrovascular accident unspecified (disorder)	TUI=T047	STY=Disease or Syndrome
 stroke and migraine	CUI=C4518466	PREF=stroke and migraine	TUI=T047	STY=Disease or Syndrome
 stroke co-occurrent with migraine	CUI=C4518466	PREF=stroke co-occurrent with migraine	TUI=T047	STY=Disease or Syndrome
-stroke co-occurrent with migraine (disorder)	CUI=C4518466	PREF=stroke co-occurrent with migraine (disorder)	TUI=T047	STY=Disease or Syndrome
 stroke due to basilar artery thrombus	CUI=C4543199	PREF=stroke due to basilar artery thrombus	TUI=T047	STY=Disease or Syndrome
 stroke due to cerebral arterial occlusion	CUI=C0393951	PREF=stroke due to cerebral arterial occlusion	TUI=T047	STY=Disease or Syndrome
 stroke due to intracerebral haemorrhage	CUI=C2937358	PREF=stroke due to intracerebral haemorrhage	TUI=T046	STY=Pathologic Function
@@ -1112,27 +938,18 @@ stroke due to thrombus of right vertebral artery	CUI=C4520259	PREF=stroke due to
 stroke in the puerperium	CUI=C0554399	PREF=stroke in the puerperium	TUI=T047	STY=Disease or Syndrome
 stroke in the puerperium (disorder)	CUI=C0554399	PREF=stroke in the puerperium (disorder)	TUI=T047	STY=Disease or Syndrome
 stroke nos	CUI=C0038454	PREF=stroke nos	TUI=T047	STY=Disease or Syndrome
-stroke nos (disorder)	CUI=C0038454	PREF=stroke nos (disorder)	TUI=T047	STY=Disease or Syndrome
 stroke of uncertain pathology	CUI=C0393963	PREF=stroke of uncertain pathology	TUI=T047	STY=Disease or Syndrome
-stroke of uncertain pathology (disorder)	CUI=C0393963	PREF=stroke of uncertain pathology (disorder)	TUI=T047	STY=Disease or Syndrome
 stroke unspecified	CUI=C0038454	PREF=stroke unspecified	TUI=T047	STY=Disease or Syndrome
 stroke, cerebral	CUI=C0038454	PREF=stroke, cerebral	TUI=T047	STY=Disease or Syndrome
 stroke, cerebrovascular	CUI=C0038454	PREF=stroke, cerebrovascular	TUI=T047	STY=Disease or Syndrome
 stroke, lacunar	CUI=C3178801	PREF=stroke, lacunar	TUI=T047	STY=Disease or Syndrome
-stroke, nos	CUI=C0038454	PREF=stroke, nos	TUI=T047	STY=Disease or Syndrome
-stroke, not specified as haemorrhage or infarction	CUI=C0038454	PREF=stroke, not specified as haemorrhage or infarction	TUI=T047	STY=Disease or Syndrome
-stroke, not specified as hemorrhage or infarction	CUI=C0038454	PREF=stroke, not specified as hemorrhage or infarction	TUI=T047	STY=Disease or Syndrome
 stroke-in-evolution syndrome	CUI=C0265113	PREF=stroke-in-evolution syndrome	TUI=T047	STY=Disease or Syndrome
-stroke/cva - undefined	CUI=C0038454	PREF=stroke/cva - undefined	TUI=T047	STY=Disease or Syndrome
-stroke/cva unspecified	CUI=C0038454	PREF=stroke/cva unspecified	TUI=T047	STY=Disease or Syndrome
 strokes	CUI=C0038454	PREF=strokes	TUI=T047	STY=Disease or Syndrome
 strokes, cerebral	CUI=C0038454	PREF=strokes, cerebral	TUI=T047	STY=Disease or Syndrome
 strokes, cerebrovascular	CUI=C0038454	PREF=strokes, cerebrovascular	TUI=T047	STY=Disease or Syndrome
 strokes, lacunar	CUI=C3178801	PREF=strokes, lacunar	TUI=T047	STY=Disease or Syndrome
 structure of central nervous system	CUI=C3714787	PREF=structure of central nervous system	TUI=T022	STY=Body System
-structure of central nervous system (body structure)	CUI=C3714787	PREF=structure of central nervous system (body structure)	TUI=T022	STY=Body System
 structures of the central nervous system	CUI=C3714787	PREF=structures of the central nervous system	TUI=T022	STY=Body System
-sturge dis	CUI=C0038505	PREF=sturge dis	TUI=T019	STY=Congenital Abnormality
 sturge disease	CUI=C0038505	PREF=sturge disease	TUI=T019	STY=Congenital Abnormality
 sturge kalischer weber syndrome	CUI=C0038505	PREF=sturge kalischer weber syndrome	TUI=T019	STY=Congenital Abnormality
 sturge syndrome	CUI=C0038505	PREF=sturge syndrome	TUI=T019	STY=Congenital Abnormality
@@ -1143,42 +960,16 @@ sturge's syndrome	CUI=C0038505	PREF=sturge's syndrome	TUI=T019	STY=Congenital Ab
 sturge-weber disease	CUI=C0038505	PREF=sturge-weber disease	TUI=T019	STY=Congenital Abnormality
 sturge-weber phakomatosis	CUI=C0038505	PREF=sturge-weber phakomatosis	TUI=T019	STY=Congenital Abnormality
 sturge-weber sequence	CUI=C0038505	PREF=sturge-weber sequence	TUI=T019	STY=Congenital Abnormality
-sturge-weber sequence (disorder)	CUI=C0038505	PREF=sturge-weber sequence (disorder)	TUI=T019	STY=Congenital Abnormality
-sturge-weber syndrome (disorder)	CUI=C0038505	PREF=sturge-weber syndrome (disorder)	TUI=T019	STY=Congenital Abnormality
-sturge-weber(-dimitri) syndrome	CUI=C0038505	PREF=sturge-weber(-dimitri) syndrome	TUI=T019	STY=Congenital Abnormality
 sturge-weber-krabbe syndrome	CUI=C0038505	PREF=sturge-weber-krabbe syndrome	TUI=T019	STY=Congenital Abnormality
 subdivided left atrium	CUI=C0009995	PREF=subdivided left atrium	TUI=T019	STY=Congenital Abnormality
 subdivided left atriums	CUI=C0009995	PREF=subdivided left atriums	TUI=T019	STY=Congenital Abnormality
 supernumerary azygos vein	CUI=C0685761	PREF=supernumerary azygos vein	TUI=T019	STY=Congenital Abnormality
-supernumerary azygos vein (disorder)	CUI=C0685761	PREF=supernumerary azygos vein (disorder)	TUI=T019	STY=Congenital Abnormality
 sws	CUI=C0038505	PREF=sws	TUI=T019	STY=Congenital Abnormality
 angio-osteohypertrophy syndrome	CUI=C0022739	PREF=syndrome, angio-osteohypertrophy	TUI=T047	STY=Disease or Syndrome
-syndrome, angioosteohypertrophy	CUI=C0022739	PREF=syndrome, angioosteohypertrophy	TUI=T047	STY=Disease or Syndrome
-syndrome, encephalofacial hemangiomatosis	CUI=C0038505	PREF=syndrome, encephalofacial hemangiomatosis	TUI=T019	STY=Congenital Abnormality
-syndrome, klippel trenaunay	CUI=C0022739	PREF=syndrome, klippel trenaunay	TUI=T047	STY=Disease or Syndrome
-syndrome, klippel-trenaunay	CUI=C0022739	PREF=syndrome, klippel-trenaunay	TUI=T047	STY=Disease or Syndrome
-syndrome, klippel-trenaunay-weber	CUI=C0022739	PREF=syndrome, klippel-trenaunay-weber	TUI=T047	STY=Disease or Syndrome
-syndrome, klippel-trÃ©naunay-weber	CUI=C0022739	PREF=syndrome, klippel-trÃ©naunay-weber	TUI=T047	STY=Disease or Syndrome
-syndrome, ktw	CUI=C0022739	PREF=syndrome, ktw	TUI=T047	STY=Disease or Syndrome
-syndrome, lacunar	CUI=C3178801	PREF=syndrome, lacunar	TUI=T047	STY=Disease or Syndrome
-syndrome, maffucci	CUI=C0024454	PREF=syndrome, maffucci	TUI=T047	STY=Disease or Syndrome
-syndrome, melas	CUI=C0162671	PREF=syndrome, melas	TUI=T047	STY=Disease or Syndrome
-syndrome, parkes weber	CUI=C0038505	PREF=syndrome, parkes weber	TUI=T019	STY=Congenital Abnormality
-syndrome, parkes-weber	CUI=C0038505	PREF=syndrome, parkes-weber	TUI=T019	STY=Congenital Abnormality
-syndrome, scimitar	CUI=C0036400	PREF=syndrome, scimitar	TUI=T019	STY=Congenital Abnormality
 sturge syndrome	CUI=C0038505	PREF=syndrome, sturge	TUI=T019	STY=Congenital Abnormality
-syndrome, sturge's	CUI=C0038505	PREF=syndrome, sturge's	TUI=T019	STY=Congenital Abnormality
 sturge-kalischer-weber syndrome	CUI=C0038505	PREF=syndrome, sturge-kalischer-weber	TUI=T019	STY=Congenital Abnormality
 sturge-weber syndrome	CUI=C0038505	PREF=syndrome, sturge-weber	TUI=T019	STY=Congenital Abnormality
 sturge-weber-dimitri syndrome	CUI=C0038505	PREF=syndrome, sturge-weber-dimitri	TUI=T019	STY=Congenital Abnormality
-syndrome, sturge-weber-krabbe	CUI=C0038505	PREF=syndrome, sturge-weber-krabbe	TUI=T019	STY=Congenital Abnormality
-syndromes, angio-osteohypertrophy	CUI=C0022739	PREF=syndromes, angio-osteohypertrophy	TUI=T047	STY=Disease or Syndrome
-syndromes, angioosteohypertrophy	CUI=C0022739	PREF=syndromes, angioosteohypertrophy	TUI=T047	STY=Disease or Syndrome
-syndromes, klippel-trenaunay	CUI=C0022739	PREF=syndromes, klippel-trenaunay	TUI=T047	STY=Disease or Syndrome
-syndromes, ktw	CUI=C0022739	PREF=syndromes, ktw	TUI=T047	STY=Disease or Syndrome
-syndromes, lacunar	CUI=C3178801	PREF=syndromes, lacunar	TUI=T047	STY=Disease or Syndrome
-system, central nervous	CUI=C3714787	PREF=system, central nervous	TUI=T022	STY=Body System
-systems, central nervous	CUI=C3714787	PREF=systems, central nervous	TUI=T022	STY=Body System
 total anomalous pulmonary venous connection	CUI=C0036400	PREF=total anomalous pulmonary venous connection	TUI=T019	STY=Congenital Abnormality
 total anomalous pulmonary venous drainage	CUI=C0036400	PREF=tapvd - total anomalous pulmonary venous drainage	TUI=T019	STY=Congenital Abnormality
 tetraphocomelia-cleft palate syndrome	CUI=C0392475	PREF=tetraphocomelia-cleft palate syndrome	TUI=T047	STY=Disease or Syndrome
@@ -1189,22 +980,15 @@ thrombosis of cerebral arteries	CUI=C0795687	PREF=thrombosis of cerebral arterie
 thrombosis of cerebral artery	CUI=C0795687	PREF=thrombosis of cerebral artery	TUI=T047	STY=Disease or Syndrome
 cerebral thrombosis	CUI=C0079102	PREF=thrombosis, cerebral	TUI=T047	STY=Disease or Syndrome
 thrombotic stroke	CUI=C0242129	PREF=thrombotic stroke	TUI=T047	STY=Disease or Syndrome
-total anom pulm venous connect	CUI=C0036400	PREF=total anom pulm venous connect	TUI=T019	STY=Congenital Abnormality
 total anomalous pulmonary venous connection	CUI=C0036400	PREF=total anomalous pulmonary venous connection	TUI=T019	STY=Congenital Abnormality
-traumatic and/or non-traumatic brain injury	CUI=C1456496	PREF=traumatic and/or non-traumatic brain injury	TUI=T037	STY=Injury or Poisoning
 traumatic brain injury	CUI=C0876926	PREF=traumatic brain injury	TUI=T037	STY=Injury or Poisoning
 truncal arteriovenous fistula	CUI=C0340832	PREF=truncal arteriovenous fistula	TUI=T019	STY=Congenital Abnormality
 tumor of optic nerve and sheath	CUI=C0751728	PREF=tumor of optic nerve and sheath	TUI=T191	STY=Neoplastic Process
 tumor of pineal gland	CUI=C0031941	PREF=tumor of pineal gland	TUI=T191	STY=Neoplastic Process
-tumor, borderline malignancy	CUI=C0677041	PREF=tumor, borderline malignancy	TUI=T191	STY=Neoplastic Process
 brain stem tumor	CUI=C0677866	PREF=tumor, brain stem	TUI=T191	STY=Neoplastic Process
 brain ventricular tumor	CUI=C0007798	PREF=tumor, brain ventricular	TUI=T191	STY=Neoplastic Process
 cerebellar tumor	CUI=C0007762	PREF=tumor, cerebellar	TUI=T191	STY=Neoplastic Process
 tumor of the cerebral ventricle	CUI=C0007798	PREF=tumor, cerebral ventricle	TUI=T191	STY=Neoplastic Process
-tumor, glial cell	CUI=C0017638	PREF=tumor, glial cell	TUI=T191	STY=Neoplastic Process
-tumor, pineal	CUI=C0031941	PREF=tumor, pineal	TUI=T191	STY=Neoplastic Process
-tumor, pineal gland	CUI=C0031941	PREF=tumor, pineal gland	TUI=T191	STY=Neoplastic Process
-tumor, pineal parenchymal	CUI=C0031941	PREF=tumor, pineal parenchymal	TUI=T191	STY=Neoplastic Process
 focal traumatic brain injury	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
 post traumatic damage to the right frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
 post traumatic damage to the left frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
@@ -1306,21 +1090,8 @@ cerebral abscess	CUI=C1510428	PREF=cerebral abscess	TUI=T047	STY=Disease or Synd
 brain abscess	CUI=C0006105	PREF=brain abscess	TUI=T047	STY=Disease or Syndrome
 depression	CUI=C0011570	PREF=Mental Depression	TUI=T048	STY=Mental or Behavioral Dysfunction	
 tic	CUI=C0040188	PREF=tic	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic (finding)	CUI=C0040188	PREF=tic (finding)	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic [dup] (finding)	CUI=C0040188	PREF=tic [dup] (finding)	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic dis	CUI=C0040188	PREF=tic dis	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic disorder (disorder)	CUI=C0040188	PREF=tic disorder (disorder)	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic disorder nos	CUI=C0040188	PREF=tic disorder nos	TUI=T048	STY=Mental or Behavioral Dysfunction
 tic disorder unspecified	CUI=C0040188	PREF=tic disorder unspecified	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic disorder unspecified (disorder)	CUI=C0040188	PREF=tic disorder unspecified (disorder)	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic disorder unspecified (finding)	CUI=C0040188	PREF=tic disorder unspecified (finding)	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic disorder, nos	CUI=C0040188	PREF=tic disorder, nos	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic disorder, unspecified	CUI=C0040188	PREF=tic disorder, unspecified	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic nos	CUI=C0040188	PREF=tic nos	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic nos (finding)	CUI=C0040188	PREF=tic nos (finding)	TUI=T048	STY=Mental or Behavioral Dysfunction
-tic, nos	CUI=C0040188	PREF=tic, nos	TUI=T048	STY=Mental or Behavioral Dysfunction
-withdrawal-induced seizure, alcohol	CUI=C0586323	PREF=withdrawal-induced seizure, alcohol	TUI=T048	STY=Mental or Behavioral Dysfunction
-withdrawal-induced seizures, alcohol	CUI=C0586323	PREF=withdrawal-induced seizures, alcohol	TUI=T048	STY=Mental or Behavioral Dysfunction
+alcohol withdrawal-induced seizure	CUI=C0586323	PREF=withdrawal-induced seizure, alcohol	TUI=T048	STY=Mental or Behavioral Dysfunction
 neuronal heterotopia	CUI=C0266491	PREF=Neuronal heterotopia	TUI=T047	STY=Disease or Syndrome	
 gray matter heterotopia	CUI=C0266491	PREF=Neuronal heterotopia	TUI=T047	STY=Disease or Syndrome
 heterotopic grey matter	CUI=C0266491	PREF=Neuronal heterotopia	TUI=T047	STY=Disease or Syndrome
@@ -1371,7 +1142,6 @@ Charcot-Marie-Tooth Disease	CUI=C0007959	PREF=Charcot-Marie-Tooth Disease	TUI=T0
 epithelial cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	STY=Anatomical Abnormality	
 epidermal cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	STY=Anatomical Abnormality
 epidermoid cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	STY=Anatomical Abnormality
-epidermoid cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	STY=Anatomical Abnormality
 Epidermoid cyst excision	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure	
 excision of epidermoid cyst	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure	
 epidermoid cyst resected	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure	
@@ -1391,7 +1161,6 @@ hypoparathyroidism	CUI=C0020626	PREF=Hypoparathyroidism	TUI=T047	STY=Disease or 
 postural tremor	CUI=C0234378	PREF=Static Tremor	TUI=T033	STY=Finding
 static tremor	CUI=C0234378	PREF=Static Tremor	TUI=T033	STY=Finding
 nystagmus	CUI=C0028738	PREF=Nystagmus	TUI=T047	STY=Disease or Syndrome
-tremor	CUI=C0040822	PREF=Tremor	TUI=T184	STY=sign or symptom
 hemiparesis	CUI=C0018989	PREF=Hemiparesis	TUI=T184	STY=sign or symptom
 psychotic episodes	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
 cavernoma	CUI=C0018920	PREF=Hemangioma, Cavernous	TUI=T191	STY=Neoplastic Process
@@ -1404,13 +1173,24 @@ Post-traumatic stress disorder	CUI=C0038436	PREF=Post-traumatic stress disorder	
 Post traumatic stress disorder	CUI=C0038436	PREF=Post-traumatic stress disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
 PTSD	CUI=C0038436	PREF=Post-traumatic stress disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
 syncope	CUI=C0039070	PREF=syncope	TUI=T184	STY=sign or symptom
-Vasovagal syncope	CUI=C0042420 PREF=Vasovagal syncope	TUI=T047	STY=Disease or Syndrome
+vasovagal syncope	CUI=C0042420 PREF=Vasovagal syncope	TUI=T047	STY=Disease or Syndrome
 myocardial infarction	CUI=C0027051	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome
 MI	CUI=C0027051	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome
-myocardial infarct	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome
-heart attack	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome
-Cardiac infarction	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome
-non epileptic seizure	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
-non epileptic seizures	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
-non epileptic attack	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
-non epileptic attacks	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+myocardial infarct	CUI=C0027051	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome
+heart attack	CUI=C0027051	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome
+cardiac infarction	CUI=C0027051	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome
+dissociative convulsions	CUI=C0349245	PREF=dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
+pseudoseizures	CUI=C0349245	PREF=dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
+chronic headache	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease or Syndrome
+alcohol abuse	CUI=C0085762	PREF=alcohol abuse	TUI=T048	STY=Mental or Behavioral Dysfunction
+history of alcohol abuse	CUI=C0221628	PREF=history of alcohol abuse	TUI=T033	STY=Finding
+diabetes	CUI=C0011847	PREF=Diabetes	TUI=T047	STY=Disease or Syndrome
+attention deficit hyperactivity disorder	CUI=C1263846	PREF=Attention deficit hyperactivity disorder	TUI=T048	STY=Mental or Behavioral Dysfunctiona
+adhd	CUI=C1263846	PREF=Attention deficit hyperactivity disorder	TUI=T048	STY=Mental or Behavioral Dysfunctiona
+attention deficit disorder	CUI=C1263846	PREF=Attention deficit hyperactivity disorder	TUI=T048	STY=Mental or Behavioral Dysfunctiona
+mental disorders	CUI=C0004936	PREF=Mental disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
+mental illness	CUI=C0004936	PREF=Mental disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
+mental health disorder	CUI=C0004936	PREF=Mental disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
+psychiatric illness	CUI=C0004936	PREF=Mental disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
+schizophrenia	CUI=C0036341	PREF=Schizaphrenia	TUI=T048	STY=Mental or Behavioral Dysfunction
+drug abuse	CUI=C0013146	PREF=Drug abuse	TUI=T048	STY=Mental or Behavioral Dysfunction
