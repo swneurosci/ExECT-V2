@@ -34,7 +34,7 @@ Priority: 98
 	
     ({Person})
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
-	({Lookup3.majorType == umls , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
+	({Lookup3.majorType == umls, Lookup3.CUI != C0036572, Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
 	{History.majorType == person}
 	{Range}
 	

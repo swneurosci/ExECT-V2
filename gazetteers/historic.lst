@@ -1,4 +1,4 @@
-history:type=history
+
 has tolerated:type=history
 since that time:type=time
 medication due:type=future
@@ -10,7 +10,7 @@ weeks:type=time
 possible:type=hypothetical
 probably:type=hypothetical
 would get:type=future
-would take:type=birth
+would take:type=future
 Apparently:type=seems
 had:type=past
 may need:type=hypothetical

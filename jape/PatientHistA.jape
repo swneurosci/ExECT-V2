@@ -1,5 +1,5 @@
 Phase: PatientHistA
-Input: Lookup3 Lookup2 Person Numeric Sentence timeElapsed timePeriod DiagnosisTriggers PointInTime Age YearToMonths PartialDate
+Input: Lookup3 Lookup2 Person Numeric Sentence timeElapsed timePeriod DiagnosisTriggers PointInTime Age YearToMonths PartialDate Number
 
 /* These rules annotate events in patient history - type of event with an UMLS CUI, age (precise and as a range), 
 date as year/month, and time since the event, as TimePeriod / NumberOfTimePeriods) */
@@ -68,7 +68,7 @@ Priority: 90
 	{Person}
     {Lookup2.majorType == historic , Lookup2.minorType != symptoms}
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-	Lookup3.Experiencer == Patient}):item
+	Lookup3.Experiencer == Patient, Lookup3.PREF !~ "[birth]"}):item
 	({timeElapsed.time == in})?
 	({timePeriod})?
 	({Numeric})?
@@ -79,16 +79,8 @@ Priority: 90
 :item.PatientHistory = {rule = PtHistoryA2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty , 
-YearDate = :match.Numeric.value
-/*MonthDate = "",
-Age = "",
-AgeUnit = "",
-AgeLower = "",
-AgeUpper = "",
-TimePeriod = "",
-NumberOfTimePeriods = "",
-PointInTime = ""*/ }
+Certainty = :item.Lookup3.Certainty, 
+YearDate = :match.Numeric.value}
 
 Rule: PtHistoryA2a
 Priority: 90
@@ -98,9 +90,9 @@ Priority: 90
     {Lookup2.majorType == historic , Lookup2.minorType == symptoms}
 	({Lookup3.minorType == Disease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
 	Lookup3.Experiencer == Patient}):item
-	({timeElapsed.time == in})?
-	({timePeriod})?
-	({Numeric})?
+	({timeElapsed.time == in})
+	({timePeriod})
+	({Numeric})
 	
     
  ):match  
@@ -128,16 +120,7 @@ Priority: 99
 :item.PatientHistory = {rule = PtHistoryA3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty, 
-/*YearDate = "",
-MonthDate = "",
-Age = "",
-AgeUnit = "",
-AgeLower = "",
-AgeUpper = "",
-TimePeriod = "",
-NumberOfTimePeriods = "",
-PointInTime = "" */}
+Certainty = :item.Lookup3.Certainty}
 
 Rule: PtHistoryA4
 Priority: 99
@@ -189,14 +172,7 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods =:match.Numeric.value,
-/*PointInTime = "",
-YearDate = "",
-MonthDate = "",
-Age = "",
-AgeUnit = "",
-AgeLower = "",
-AgeUpper = ""*/}
+NumberOfTimePeriods =:match.Numeric.value}
 
 
 Rule: PtHistoryA6   
@@ -222,12 +198,7 @@ Certainty = :item.Lookup3.Certainty,
 YearDate = "",
 MonthDate = "",
 Age = :match.Numeric.value,
-AgeUnit = "Year",
-/*AgeLower ="",
-AgeUpper ="",
-TimePeriod = "",
-NumberOfTimePeriods = "",
-PointInTime = ""*/} 
+AgeUnit = "Year"} 
 
 
 Rule: PtHistoryA7
@@ -269,14 +240,7 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty, YearDate = "",
 TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods =:match.Numeric.value,
-/*PointInTime = "" ,
-YearDate = "",
-MonthDate = "",
-Age = "",
-AgeUnit = "",
-AgeLower = "",
-AgeUpper = ""*/}
+NumberOfTimePeriods =:match.Numeric.value}
 
 
 Rule: PtHistoryA9
@@ -324,16 +288,7 @@ Priority: 80
 :item.PatientHistory = {rule = PtHistoryA10, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty,
-/*YearDate = "",
-MonthDate = "",
-Age = "",
-AgeUnit = "",
-AgeLower = "",
-AgeUpper = "",
-TimePeriod = "",
-NumberOfTimePeriods ="",
-PointInTime = ""*/}
+Certainty = :item.Lookup3.Certainty}
 
 
 Rule: PtHistoryA11
@@ -360,10 +315,7 @@ MonthDate = "",
 Age = "",
 AgeUnit = :match.YearToMonths.timePeriod,
 AgeLower = :match.YearToMonths.value,
-AgeUpper = :a.Numeric.value
-/*TimePeriod = "",
-NumberOfTimePeriods ="",
-PointInTime = ""*/}
+AgeUpper = :a.Numeric.value}
 
 
 Rule: PtHistoryA12
@@ -378,9 +330,6 @@ Priority: 100
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
 	Lookup3.Experiencer == Patient}):item
     
-	
-   
-
 
  ):match  
  -->
@@ -404,8 +353,6 @@ Priority: 100
 	Lookup3.Experiencer == Patient}):item
     
 	
-   
-
 
  ):match  
  -->
@@ -439,7 +386,7 @@ PointInTime = :match.PointInTime.Since,
 MonthDate =:match.Lookup2.month}
 
 
-Rule: PtHistoryA13
+Rule: PtHistoryA13a
 Priority: 100
 
 (   
@@ -454,7 +401,7 @@ Priority: 100
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA13, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = PtHistoryA13a, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -530,3 +477,25 @@ Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality
 Certainty = :item.Lookup3.Certainty, 
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods = :match.Numeric.value}
+
+Rule: PtHistoryA17
+Priority: 100
+
+(   
+	{Person}
+	{Lookup2.type == past}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+	Lookup3.Experiencer == Patient}):item
+	{Age}
+	{Number}
+	{timePeriod}
+	
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryA17, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty, 
+AgeUnit =:match.timePeriod.time-unit,
+Age =:match.Number.value}

@@ -53,8 +53,7 @@ contextInvestigations.lst:Investigations:Context::ContextInvestigations
 change.lst:frequency:change::Lookup2
 frequencychange.lst:frequency:change::Frequency
 cause.lst:diagnosis:causality::Lookup2
-BirthHistory.lst:UMLS:prematurebirth::Lookup2
-birth.lst:diagnosis:prematurebirth::Lookup2
+BirthHistory.lst:UMLS:gestation::Lookup2
 symptomatic.lst:diagnosis:UMLS::Lookup2
 lateralisation.lst:diagnosis:lateralisation::Lookup2
 lobes.lst:diagnosis:lobes::Lookup2
@@ -67,3 +66,4 @@ KidsDose.lst::::KidsDose
 DiagnosisB.lst:ExtraDiag:DiagB::DiagB
 SChangeBlock.lst::::SChangeBlock
 DrugPointInTime.lst::::DrugPointInTime
+Pronouns.lst:demontrative:::Pronouns

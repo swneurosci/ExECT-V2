@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisListC
-Input: Lookup3 DiagnosisTriggers listSent listPoint PartialDate Numeric
+Input: Lookup3 DiagnosisTriggers listSent listPoint PartialDate Numeric Person
 
 Options: control=appelt
 

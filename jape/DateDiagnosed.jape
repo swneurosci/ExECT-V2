@@ -1,5 +1,5 @@
 Phase: DateDiagnosed
-Input: Lookup Person Lookup2 Sentence Numeric timeElapsed PartielDate DiagnosisTriggers PointInTime
+Input: Lookup Person Lookup2 Sentence Numeric timeElapsed PartialDate DiagnosisTriggers PointInTime
 
 Options: control=appelt
 
@@ -24,18 +24,7 @@ PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 DateYear = :match.Numeric.value,
-/*PointInTime = "",
-MonthDate ="",
-DayDate = "",
-PointInTime = "",
-TimePeriod = "",
-NumberOfTimePeriods ="",
-LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = "",
-AgeLower ="",
-AgeUpper = "",
-Age =  "" ,*/ 
-AgeUnit ="Year",}
+AgeUnit ="Year"}
 
 Rule: DateDiagnosed2
 Priority: 100
@@ -59,20 +48,9 @@ PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 PointInTime = :match.PointInTime.Since,
-AgeUnit ="Year",
-/*DateYear = "",
-MonthDate ="",
-DayDate = "",
-PointInTime = "",
-TimePeriod = "",
-NumberOfTimePeriods ="",
-LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = "",
-AgeLower ="",
-AgeUpper = "",
-Age =  ""*/}
+AgeUnit ="Year"}
 
-Rule: DateDiagnosed2
+Rule: DateDiagnosed3
 Priority: 100
 
 (   
@@ -86,9 +64,30 @@ Priority: 100
 	
  ):match  
  -->
-:item.WhenDiagnosed = {rule = DateDiagnosed2, OnsetType = "When_Diagnosed", 
+:item.WhenDiagnosed = {rule = DateDiagnosed3, OnsetType = "When_Diagnosed", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 PointInTime = :match.PointInTime.Since}
 
+Rule: DateDiagnosed4
+Priority: 100
+
+(   
+	{Person}
+	{Lookup2.majorType == historic}
+    {DiagnosisTriggers.majorType == diagnosis}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient}):item
+	{timeElapsed.time == in}
+	{PartialDate}
+
+ 
+	
+ ):match  
+ -->
+:item.WhenDiagnosed = {rule = DateDiagnosed4, OnsetType = "When_Diagnosed", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
+MonthDate = :match.PartialDate.month,
+YearDate = :match.PartialDate.year}
