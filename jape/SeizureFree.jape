@@ -804,6 +804,18 @@ Priority: 99
 :match.SeizureFrequencyDriving = { rule = HseizureFree4c, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negated = "Affirmed",
 PointInTime = :match.PointInTime.Since}
 
+/* she has not had any further seizures since starting Zonisamide*/
+
+Rule: HseizureFree4d
+Priority: 99
+(
+    ({Lookup3.Negation == "Negated", Lookup3.Temporality != "hypothetical", !Lookup3.CAT == "Slang"})
+    ({PointInTime contains Token.string == "since"})
+):match
+-->
+:match.SeizureFrequencyDriving = { rule = HseizureFree4d, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negated = "Affirmed",
+PointInTime = :match.PointInTime.Since}
+
 
 Rule: HseizureFree5a
 Priority: 99
