@@ -26,6 +26,4 @@ PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :item.Lookup3.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods =:match.Numeric.value
-/*LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""*/}
+NumberOfTimePeriods =:match.Numeric.value}

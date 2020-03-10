@@ -174,9 +174,7 @@ PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :item.Lookup3.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods ="1"
-/*LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""*/}
+NumberOfTimePeriods ="1"}
 
  
 
@@ -201,9 +199,7 @@ PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods =:match.Numeric.value
-/*LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""*/}
+NumberOfTimePeriods =:match.Numeric.value}
 
 
 Rule: TimeSinceOnset9
@@ -227,9 +223,7 @@ PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods =:match.Numeric.value
-/*LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""*/}
+NumberOfTimePeriods =:match.Numeric.value}
 
 
 Rule: TimeSinceOnset10
@@ -249,9 +243,7 @@ PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :item.Lookup3.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods =:match.Numeric.value
-/*LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""*/}
+NumberOfTimePeriods =:match.Numeric.value}
 
 	
     

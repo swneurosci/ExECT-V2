@@ -45,8 +45,7 @@ PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 YearDate = :match.PartialDate.year,
 MonthDate = "",
-DayDate = "",
-/*PointInTime = ""*/} 
+DayDate = ""} 
 
 Rule: OnsetDate3
 Priority: 98
@@ -67,8 +66,7 @@ PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 YearDate = :match.PartialDate.year,
 MonthDate =:match.PartialDate.month,
-DayDate = ""
-/*PointInTime = ""*/}
+DayDate = ""}
 
 Rule: onsetDate4
 Priority: 98
@@ -87,18 +85,15 @@ Priority: 98
  -->
 :item.Onset = {rule = OnsetDate4, OnsetType = "date_of_onset", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
-/*YearDate = "",
-MonthDate ="",
-DayDate = "",*/
-PointInTime =:match.PointInTime.Since }
+STY = :item.Lookup.STY,
+PointInTime =:match.PointInTime.Since}
 
 Rule: onsetDate5
 Priority: 98
 
 (   
 	{Lookup2.majorType == historic}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,  Lookup3.Experiencer == Patient , Lookup3.CAT == seizures }):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.minorType == Disease, Lookup3.CUI != C0036572}):item
 	{Lookup2.language == onset }
 	{timeElapsed}
 	{PartialDate}
@@ -134,8 +129,7 @@ PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 YearDate = :match.Numeric.value,
 MonthDate ="",
-DayDate = ""  
-/*PointInTime = ""*/}
+DayDate = ""}
 
 
 Rule: onsetDate7
@@ -158,8 +152,7 @@ PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 YearDate = :match.Numeric.value,
 MonthDate ="",
-DayDate = ""
-/*PointInTime = ""*/}
+DayDate = ""}
 
 
 Rule: onsetDate8

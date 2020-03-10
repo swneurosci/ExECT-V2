@@ -23,17 +23,7 @@ PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :match.Lookup3.Certainty,
 AgeUnit = :match.timePeriod.time-unit,
-Age =:match.Numeric.value,
-/*AgeLower = "",
-AgeUpper = "",
-DateYear = "",
-DateMonth ="",
-DateDay = "",
-PointInTime = "",
-TimePeriod = "",
-NumberOfTimePeriods ="",
-LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""*/}
+Age =:match.Numeric.value}
  
 
  Rule: onsetAgeB2
@@ -56,15 +46,7 @@ Certainty = :match.Lookup3.Certainty,
 AgeUnit = :a.Lookup2.timeUnit,
 Age ="",
 AgeLower = :a.Lookup2.lowerAge,
-AgeUpper = :a.Lookup2.upperAge,
-/*DateYear = "",
-DateMonth ="",
-DateDay = "",
-PointInTime = "",
-TimePeriod = "",
-NumberOfTimePeriods ="",
-LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""*/}
+AgeUpper = :a.Lookup2.upperAge}
  
 
 

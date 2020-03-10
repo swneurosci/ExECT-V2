@@ -24,17 +24,7 @@ PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :item.Lookup3.Certainty,
 AgeUnit = :match.timePeriod.time-unit,
-Age =:match.Numeric.value,
-/*AgeLower = "",
-AgeUpper = "",
-YearDate = "",
-MonthDate ="",
-DateDateDay = "",
-PointInTime = "",
-TimePeriod = "",
-NumberOfTimePeriods ="",
-LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = ""*/}
+Age =:match.Numeric.value}
 	
 
 Rule: onsetAgeA2
