@@ -87,16 +87,6 @@ Priority: 99
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
-/*DateYear = "",
-MonthDate ="",
-DayDate = "",
-PointInTime = "",
-TimePeriod = "",
-NumberOfTimePeriods ="",
-LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = "",
-AgeLower ="",
-AgeUpper = "",*/
 AgeUnit ="Year",
 Age =  :match.Numeric.value}
 
