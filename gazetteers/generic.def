@@ -66,4 +66,4 @@ KidsDose.lst::::KidsDose
 DiagnosisB.lst:ExtraDiag:DiagB::DiagB
 SChangeBlock.lst::::SChangeBlock
 DrugPointInTime.lst::::DrugPointInTime
-Pronouns.lst:demontrative:::Pronouns
+Pronouns.lst::grammer::Pronouns
