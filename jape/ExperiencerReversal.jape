@@ -1,0 +1,44 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: ModifyLookup
+Input: OtherPerson Lookup2 Person Lookup3 Lookup
+Options: control=brill
+
+/*
+ * If "Other person" reports events relating to a family member it assigns these 
+ events to that family member not to a person reporting the events i.e Experiencer = Patient
+*/
+
+
+Rule: ExperiencerReversal
+Priority: 100
+(
+	{OtherPerson.majorType == family}
+    ({Lookup2})?
+    {Lookup2.language == onset}
+    {Person.kind == firstName}
+	({Lookup3.majorType == umls, Lookup3.minorType == Disease, 
+    Lookup3.Experiencer == Other}):umls
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
+
+}
+Rule: ExperiencerReversal
+Priority: 100
+(
+	{OtherPerson.majorType == family}
+    ({Lookup2})?
+    {Lookup2.language == onset}
+    {Person.kind == firstName}
+    {Lookup3}
+	({Lookup3.majorType == umls, Lookup3.minorType == Disease, 
+    Lookup3.Experiencer == Other}):umls
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
+}
