@@ -185,6 +185,7 @@ situation-related seizures	CUI=C0393707	PREF=situation-related seizures	TUI=T033
 eyelid myoclonus with absences	CUI=C0393722	PREF=Eyelid myoclonus with absences	TUI=T047	STY=Disease or Syndrome
 photomyoclonus	CUI=C0393722	PREF=Eyelid myoclonus with absences	TUI=T047	STY=Disease or Syndrome
 non-convulsive simple partial status epilepticus	CUI=C0393733	PREF=Non-convulsive simple partial status epilepticus	TUI=T047	STY=Disease or Syndrome
+non-convulsive simple partial status epilepticus (disorder)	CUI=C0393733	PREF=Non-convulsive simple partial status epilepticus	TUI=T047	STY=Disease or Syndrome
 complex partial status epilepticus 	CUI=C0393734	PREF=Complex Partial Status Epilepticus	TUI=T047	STY=Disease or Syndrome
 psychomotor status	CUI=C0393734	PREF=Complex Partial Status Epilepticus	TUI=T047	STY=Disease or Syndrome
 status epilepticus, complex partial	CUI=C0393734	PREF=Complex Partial Status Epilepticus	TUI=T047	STY=Disease or Syndrome
@@ -219,6 +220,16 @@ absence seizure with automatisms	CUI=C0422874	PREF=absence seizure with automati
 absence seizure, automatisms	CUI=C0422874	PREF=Absence seizure with automatisms	TUI=T033	STY=Finding
 absence seizures with automatisms	CUI=C0422874	PREF=Absence seizure with automatisms	TUI=T033	STY=Finding
 absence seizure with autonomic components	CUI=C0422875	PREF=absence seizure with autonomic components	TUI=T033	STY=finding
+focal to bilateral convulsive seizures	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure	TUI=T046	STY=Pathologic Function
+focal to bilateral tonic-clonic seizure	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure	TUI=T046	STY=Pathologic Function
+partial seizure evolving to  generalised seizure	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure	TUI=T046	STY=Pathologic Function
+partial seizures evolving to  generalised seizures	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure	TUI=T046	STY=Pathologic Function
+partial seizure evolving to secondary generalised seizure	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure	TUI=T046	STY=Pathologic Function
+partial seizures evolving to secondary generalised seizures	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure	TUI=T046	STY=Pathologic Function
+partial seizures evolving to  generalized seizures	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure	TUI=T046	STY=Pathologic Function
+partial seizures evolving to  generalized seizures	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure	TUI=T046	STY=Pathologic Function
+partial seizures evolving to secondary generalised seizure   	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure (disorder)	TUI=T046	STY=Pathologic Function
+partial seizures evolving to secondary generalised seizures	CUI=C0474327	PREF=partial seizure evolving to secondary generalized seizure	TUI=T046	STY=Pathologic Function
 other status epilepticus	CUI=C0477372	PREF=other status epilepticus	TUI=T047	STY=Disease or Syndrome
 convulsions grand mal	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
 generalised tonic clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
@@ -278,7 +289,10 @@ afebrile seizure	CUI=C0863106	PREF=Afebrile seizure	TUI=T047	STY=Disease or Synd
 afebrile seizures	CUI=C0863106	PREF=Afebrile seizure	TUI=T047	STY=Disease or Syndrome
 bilateral convulsive seizure	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 bilateral convulsive seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+focal seizure with secondary generalisation	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+focal seizures with secondary generalisation	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 Generalized tonic-clonic seizures, secondary	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+Partial seizures with secondary generalization	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 Secondarily generalised tonic-clonic seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 Secondary generalised tonic clonic seizure	CUI=C0877017	PREF=Secondary generalized tonic clonic seizures	TUI=T047	STY=Disease or Syndrome
 Secondary generalised tonic clonic seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
@@ -375,7 +389,6 @@ benign focal seizures of adolescence	CUI=C4275141	PREF=Benign focal seizure of a
 absence seizure	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 absence seizures	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 petit-mal seizure	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
-petit mal	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 petit-mal seizures	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 attack - epileptic	CUI=C4317109	PREF=Epileptic Seizures	TUI=T047	STY=Disease or Syndrome
 epileptic attacks	CUI=C4317109	PREF=Epileptic Seizures	TUI=T047	STY=Disease or Syndrome
