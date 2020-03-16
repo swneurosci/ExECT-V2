@@ -1,22 +1,22 @@
-Diagnosis
-diagnosis
-diagnosed
-Diagnosed
-Suffers
-suffers
-in keeping with
-suffering
-seizure type
-seizure types
-seizure type and frequency
-story is consistent with
-history is consistent with
-problems:
-problem:
-very suggestive of
-would be consistent with
-history is suggestive of
-possibility of
-symptoms are suggestive of
-my impression is
-we are dealing with
+Diagnosis:type=diagnosis
+diagnosis:type=diagnosis
+diagnosed:type=diagnosis
+Diagnosed:type=diagnosis
+Suffers:type=diagnosis
+suffers:type=diagnosis
+in keeping with:type=diagnosis
+suffering:type=diagnosis
+seizure type:type=seizureType
+seizure types:type=seizureType
+seizure type and frequency:type=seizureType
+story is consistent with:type=diagnosis
+history is consistent with:type=diagnosis
+problems:type=diagnosis
+problem:type=diagnosis
+very suggestive of:type=diagnosis
+would be consistent with:type=diagnosis
+history is suggestive of:type=diagnosis
+possibility of:type=diagnosis
+symptoms are suggestive of:type=diagnosis
+my impression is:type=diagnosis
+we are dealing with:type=diagnosis
