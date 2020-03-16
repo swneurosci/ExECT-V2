@@ -1040,6 +1040,7 @@ Microcephaly	CUI=C0424688	PREF=Microcephaly	TUI=T033	STY=Finding
 micro-cephaly	CUI=C0025958	PREF=Microcephaly	TUI=T019	STY=Congenital Abnormality
 head injury other	CUI=C0497301	PREF=head injury other	TUI=T037	STY=Injury or Poisoning
 head injury	CUI=C0497301	PREF=head injury other	TUI=T037	STY=Injury or Poisoning
+head injuries	CUI=C0497301	PREF=head injury other	TUI=T037	STY=Injury or Poisoning
 open head injury	CUI=C0518454	PREF=head injury open	TUI=T037	STY=Injury or Poisoning	
 Multiple Head Injuries	CUI=C0451948	PREF=Head Injuries, Multiple	TUI=T037	STY=Injury or Poisoning
 Superficial Head Injury	CUI=C0347536	PREF=Head Injury, Superficial	TUI=T037	STY=Injury or Poisoning

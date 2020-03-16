@@ -67,3 +67,4 @@ DiagnosisB.lst:ExtraDiag:DiagB::DiagB
 SChangeBlock.lst::::SChangeBlock
 DrugPointInTime.lst::::DrugPointInTime
 Pronouns.lst::grammer::Pronouns
+MedicalHistory.lst:diagnosis:past::MedicalHistory
