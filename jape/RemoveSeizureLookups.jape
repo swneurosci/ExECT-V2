@@ -19,7 +19,7 @@ Rule: RemoveSeizure
 Rule: RemoveSeizure
  (
      ({Lookup3.minorType == Disease}):umls
-     {Token.string =~ type}
+     ({Token.string =~ type}|{Token.string =~ marker})
  
 ):matches
 -->
