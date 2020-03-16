@@ -1,8 +1,7 @@
-early 
-mid
-late
-old
-of age
-age of
-aged
-before the age of
+old:value=aged
+of age:value=aged
+age of:value=aged
+aged:value=aged
+before the age of:value=topAge
+until the age of:value=topAge
+till the age of:value=topAge
