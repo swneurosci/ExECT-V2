@@ -1,5 +1,5 @@
 Phase: OnsetDateB
-Input: Lookup3 Person Lookup2 timeElapsed  PointInTime Lookup PartialDate Split Diagnosis Numeric timePeriod
+Input: Lookup3 Person Lookup2 timeElapsed  PointInTime Lookup PartialDate Split  Numeric timePeriod
 Options: control=appelt
 
 
@@ -37,13 +37,13 @@ Priority: 100
 
 (   
 	
-	({Diagnosis}):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.minorType == Disease , Lookup3.Experiencer == Patient}):item
     {Split}
     ({Split})?
-    ({Split})
+    ({Split})?
     {Person}
     {Lookup2.language == onset , Lookup2.type == began}
-    {Lookup3.minorType == generic}
+    ({Lookup3.minorType == generic})?
 	{timeElapsed}
 	{PartialDate}
 	
@@ -82,3 +82,4 @@ STY = :item.Lookup3.STY,
 YearDate = :match.Numeric.value,
 MonthDate ="",
 DayDate = ""}
+
