@@ -1,0 +1,28 @@
+Phase: RemoveSeizureLookups
+Input: Lookup3 Token
+
+Options: contral=all
+
+//removes seizure mentions from Lookup3 = generic,  if followed by certain tokens//
+
+Rule: RemoveSeizure
+ (
+     ({Lookup3.minorType == generic}):umls
+     ({Token.string == free}|{Token.string == clinic})
+ 
+):matches
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+}
+
+Rule: RemoveSeizure
+ (
+     ({Lookup3.minorType == Disease}):umls
+     {Token.string =~ type}
+ 
+):matches
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+}
