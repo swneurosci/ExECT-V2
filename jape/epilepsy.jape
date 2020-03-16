@@ -34,6 +34,7 @@ DiagnosisB
 DiagnosisB2
 DiagfromSeizureLookup3
 RemoveSeizure
+RemoveSeizureLookups
 DiagnosisFilter
 /*DiseaseCause */ /* this has been replaced by more detailed epilepsy cause rules and Symptomatic attribute to Diagnosis*/
 Lookup2Annotation
