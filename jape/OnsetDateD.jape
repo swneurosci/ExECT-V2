@@ -1,0 +1,22 @@
+Phase: OnsetDateD
+Input: Lookup2 Sentence PointInTime Lookup Pronouns 
+Options: control=appelt
+
+/* Picks up points in time and refs to patients as "who"*/
+
+Rule: OnsetDateD1
+Priority: 100
+
+(   
+    {Pronouns.type == relative}
+	{Lookup2.language == onset, Lookup2.type == suffered}
+	({Lookup.minorType == Disease, Lookup.majorType == umls, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed}):item
+	{PointInTime}
+	
+	
+ ):match  
+ -->
+:item.Onset = {rule = OnsetDateD1, OnsetType = "date_of_onset", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, Certainty = :item.Lookup.Certainty,
+PointInTime = :match.PointInTime.Since}
