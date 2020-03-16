@@ -13,10 +13,6 @@ blank spell:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral D
 blank spells:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Slang
 Blank episode:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Slang
 blank episodes:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Slang
-Episode:CUI=C0332189:PREF=Episode:TUI=T079:STY=Temporal Concept:CAT=Slang
-episode:CUI=C0332189:PREF=Episode:TUI=T079:STY=Temporal Concept:CAT=Slang
-Episodes:CUI=C0332189:PREF=Episode:TUI=T079:STY=Temporal Concept:CAT=Slang
-episodes:CUI=C0332189:PREF=Episode:TUI=T079:STY=Temporal Concept:CAT=Slang
 Convulsion:CUI=C4048158:PREF=Convulsion:TUI=T184:STY=Sign or Symptom:CAT=Seizures
 convulsion:CUI=C4048158:PREF=Convulsion:TUI=T184:STY=Sign or Symptom:CAT=Seizures
 Convulsions:CUI=C4048158:PREF=Convulsion:TUI=T184:STY=Sign or Symptom:CAT=Seizures
