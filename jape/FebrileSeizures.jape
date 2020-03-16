@@ -1,5 +1,5 @@
 Phase: FebrileSeizures
-Input: Lookup3 Lookup2 Person  Sentence Numeric timePeriod MedicalHistory
+Input: Lookup3 Lookup2 Person  Sentence Numeric timePeriod MedicalHistory 
 
 
 Options: control=appelt
