@@ -122,7 +122,7 @@ Context = :match.ContextPrescription.context}
 
 /*
 " should be increased by 200mg so that he takes Tegretol 400mg in the morning and 600mg nocte"
-if i changed the area picked up to match1 not match, then it would pick up the tegretol 400mg and 660mg
+if i changed the area picked up to match1 not match, then it would pick up the tegretol 400mg and 600mg
 currently would not pick them up, but need to check out how mwould interact with other rules, and would move opening of match1 bracket up one line to ContextPrescription
 */
 
@@ -139,7 +139,7 @@ Priority: 100
     {DoseFrequency}):match1
 ):match
 -->
-:match.Prescription0 = { rule = doseMatch0, string = :match1.Drug@string,
+:match1.Prescription0 = { rule = doseMatch0, string = :match1.Drug@string,
 DrugName = :match1.Drug@string, 
 CUI = :match1.Drug.CUI,
 DrugDose = :match1.Measurement.quantity,
@@ -160,7 +160,8 @@ Priority: 100
     ({Drug.CUI == C0026056}):match1
 ):match
 -->
-:match.Prescription0 = { rule = doseMatch0, string = :match1.Drug@string,
+:match.Prescription0 = { rule = doseMatch0, rule1 = midazolam
+string = :match1.Drug@string,
 DrugName = :match1.Drug@string, 
 CUI = :match1.Drug.CUI,
 DrugDose = :match1.Measurement.quantity,

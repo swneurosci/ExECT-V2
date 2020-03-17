@@ -1,0 +1,12 @@
+Phase: DrugFilter1
+Input: Prescription0 Sentence Prescription2
+Options: control=all
+
+Rule: PrescriptionFilter1
+(
+    ({Prescription0 within Prescription2}):pres2
+):match
+-->
+:pres2.PrescriptionNot = { rule2 = PrescriptionNotFilter,
+rule = :pres2.Prescription0.rule,
+string = :match@string}

@@ -1,0 +1,18 @@
+Imports: {import static gate.Utils.*; }
+Phase: DrugFilter2
+Input:   PrescriptionNot Split
+Options: control=appelt
+
+/* rule1 = midazolam to block when only midazolam mentioned with no dose or Frequency */ 
+
+Rule: PrescriptionCSVFilter
+(
+    ({Split})
+    ({PrescriptionNot})*
+    ({PrescriptionNot}):match
+    ({PrescriptionNot})*
+    ({Split})
+):match1
+-->
+:match1.PrescriptionCSV = { rule = PrescriptionNotCSVFilter
+string = :match1@string}

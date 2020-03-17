@@ -9,6 +9,7 @@ Rule: PrescriptionFilter1
 -->
 :pres2.Prescription4 = { rule2 = PrescriptionFilter1,
 rule = :pres2.Prescription0.rule,
+rule1 = :pres2.Prescription0.rule1,
 DrugName = :pres2.Prescription0.DrugName,  
 CUI = :pres2.Prescription0.CUI,
 DrugDose = :pres2.Prescription0.DrugDose, 
