@@ -1,0 +1,17 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: ModifyLookup
+Input: PrescriptionCSV
+Options: control=all
+
+Rule: PrescriptionCSV
+Priority: 100
+(
+    ({PrescriptionCSV}):CT
+):match
+-->
+:match{
+    Annotation match = matchAnnots.iterator().next();
+    String string = match.getFeatures().get("string").toString();
+  getOnlyAnn(matchAnnots).getFeatures().put("String1", string.substring(1, string.length()-1));
+}

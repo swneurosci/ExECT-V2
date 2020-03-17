@@ -1,0 +1,13 @@
+Phase: DrugFilter2
+Input: ContextPrescription Sentence Prescription4
+Options: control=all
+
+Rule: PrescriptionFilter2
+(
+    ({Prescription4 contains ContextPrescription}):pres2
+):match
+-->
+:pres2.PrescriptionNot = { rule3 = PrescriptionNotFilter2,
+rule2 = :pres2.Prescription4.rule2,
+rule = :pres2.Prescription4.rule,
+string = :match@string}

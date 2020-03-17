@@ -9,6 +9,7 @@ Rule: PrescriptionFilter2
 -->
 :pres2.Prescription = { rule3 = PrescriptionFilter2,
 rule2 = :pres2.Prescription4.rule2,
+rule1 = :pres2.Prescription4.rule1,
 rule = :pres2.Prescription4.rule,
 DrugName = :pres2.Prescription4.DrugName,  
 CUI = :pres2.Prescription4.CUI,
@@ -17,4 +18,5 @@ DoseUnit =:pres2.Prescription4.DoseUnit,
 Frequency = :pres2.Prescription4.Frequency, 
 time-unit = :pres2.Prescription4.time-unit, 
 dose-interval = :pres2.Prescription4.dose-interval, 
-Context = :match.Prescription4.Context}
+Context = :match.Prescription4.Context,
+string = :match@string}
