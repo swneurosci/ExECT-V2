@@ -1,3 +1,5 @@
+Imports: {import static gate.Utils.*; }
+
 Phase: LookupWithin
 Input: Lookup3 
 Options: control=brill
@@ -6,9 +8,11 @@ Options: control=brill
 Rule: LookupWithin
 
 (
-  ({Lookup3 within {Lookup3}}):a
-  
+  ({Lookup3 within {Lookup3.CUI != "C0036572"}, Lookup3.CAT == "Seizures"}):a
 ):match
 -->
-:a.Lookup3 = {rule = LookupWithin} 
+:match {
+  getOnlyAnn(matchAnnots).getFeatures().put("rule", "LookupWithin");
+}
+
   
