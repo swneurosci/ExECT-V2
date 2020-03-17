@@ -212,6 +212,7 @@ anoxic brain damage	CUI=C0003132	PREF=brain damage, anoxic	TUI=T046	STY=Patholog
 cerebral brain hemorrhage	CUI=C2937358	PREF=brain hemorrhage, cerebral	TUI=T046	STY=Pathologic Function
 brain hemorrhages - cerebral	CUI=C2937358	PREF=brain hemorrhages, cerebral	TUI=T046	STY=Pathologic Function
 brain infarct	CUI=C0751955	PREF=brain infarct	TUI=T047	STY=Disease or Syndrome
+
 brain infarction	CUI=C0751955	PREF=brain infarction	TUI=T047	STY=Disease or Syndrome
 brain infarctions	CUI=C0751955	PREF=brain infarctions	TUI=T047	STY=Disease or Syndrome
 brain injuries	CUI=C0270611	PREF=brain injuries	TUI=T037	STY=Injury or Poisoning
@@ -1195,3 +1196,4 @@ mental health disorder	CUI=C0004936	PREF=Mental disorders	TUI=T048	STY=Mental or
 psychiatric illness	CUI=C0004936	PREF=Mental disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
 schizophrenia	CUI=C0036341	PREF=Schizaphrenia	TUI=T048	STY=Mental or Behavioral Dysfunction
 drug abuse	CUI=C0013146	PREF=Drug abuse	TUI=T048	STY=Mental or Behavioral Dysfunction
+infarct	CUI=C0751955	PREF=brain infarct	TUI=T047	STY=Disease or Syndrome

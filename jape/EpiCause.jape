@@ -84,3 +84,21 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
+Rule: Cause5
+Priority: 99
+
+(   
+	
+    {DiagnosisTriggers}
+    {Lookup}
+    {Lookup2.minorType == causality}
+    ({Lookup2})?
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+    Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.EpilepsyCause = {rule = Cause4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
