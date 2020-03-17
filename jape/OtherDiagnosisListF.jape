@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisListF
-Input: Lookup3 DiagnosisTriggers Sentence Conj
+Input: Lookup3 DiagnosisTriggers Conj Sentence
 
 Options: control=brill
 
@@ -11,8 +11,8 @@ Priority: 100
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
 	{Conj.type == list}
-	({Lookup3.minorType == generic, Lookup3.Negation == Affirmed, 
-	Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     
  ):match  
  -->
@@ -27,9 +27,10 @@ Priority: 99
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
 	{Conj.type == list}
-	{Conj.type == list}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, 
-	Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+	{Lookup3}
+	({Conj.type == list}|{Conj.type == with})
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     
  ):match  
  -->
@@ -47,8 +48,8 @@ Priority: 98
 	{Conj.type == list}
 	{Lookup3}
 	{Conj.type == list}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, 
-	Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     
  ):match  
  -->
@@ -68,8 +69,8 @@ Priority: 97
 	{Conj.type == list}
 	{Lookup3}
 	{Conj.type == list}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, 
-	Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     
  ):match  
  -->

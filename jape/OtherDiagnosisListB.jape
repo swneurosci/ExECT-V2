@@ -54,7 +54,8 @@ Priority: 100
 	{Lookup3}
     ({PartialDate})?
     {listPoint}
-    ({Lookup3.minorType == Disease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient , Lookup3.TUI == T184}):item
+    ({Lookup3.minorType == Disease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient }|
+    {Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
    ({Numeric})?
 	
 
@@ -77,7 +78,8 @@ Priority: 100
 	{Lookup3}
     ({PartialDate})?
     {listPoint}
-    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+    {Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed } ):item
     ({Numeric})?
 	
 
@@ -87,4 +89,4 @@ Priority: 100
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
-YearDate = :match.Numeric.value}
+YearDate = :match.Numeric.value} 

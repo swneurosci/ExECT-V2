@@ -12,8 +12,8 @@ Priority: 100
 	{DiagnosisTriggers.majorType == diagnosis}
 	({Lookup3})?
 	{listPoint}
-	(({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient})
-     |({Lookup3.minorType == Disease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient , Lookup3.TUI == T184 })):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}
+     |{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     ({PartialDate})?
     ({PointInTime})?
 	
@@ -38,8 +38,8 @@ Priority: 100
    {listPoint}
 	({Lookup3})?
 	{listPoint}
-	(({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient})
-     |({Lookup3.minorType == Disease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient , Lookup3.TUI == T184})):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}
+     |{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
      {PointInTime}
      ({PartialDate})?
 
@@ -61,7 +61,8 @@ Priority: 100
 	{DiagnosisTriggers.majorType == diagnosis}
 	({Lookup3})?
 	{listPoint}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     ({PartialDate})?
 	
 
@@ -82,7 +83,8 @@ Priority: 100
 	{DiagnosisTriggers.majorType == diagnosis}
     {listPoint}
 	{listPoint}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     ({PartialDate})?
 	
 
@@ -103,7 +105,8 @@ Priority: 100
 	{DiagnosisTriggers.majorType == diagnosis}
     {listPoint}
     ({Numeric})?
-	({Lookup3.minorType == Disease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient, Lookup3.TUI == T184}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     ({PartialDate})?
 	
 
@@ -124,7 +127,8 @@ Priority: 100
 	{DiagnosisTriggers.majorType == diagnosis}
     {listPoint}
     ({Numeric})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     ({Range})
 	
 

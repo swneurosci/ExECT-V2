@@ -2,12 +2,7 @@ Phase: OtherDiagnosisB
 Input: Lookup3 Lookup2 Sentence Lookup
 
 
-
 Options: control=brill
-
-
-
-
 
 Rule: OtherDiagB1
 Priority: 100
@@ -16,7 +11,8 @@ Priority: 100
 
 	{Lookup2.minorType == opinion}
 	({Lookup2.minorType == probability})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     
  ):match  
  -->
@@ -33,7 +29,8 @@ Priority: 100
 	{Lookup2.minorType == opinion}
 	({Lookup2.minorType == probability})?
     {Lookup3}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     
  ):match  
  -->
@@ -51,7 +48,8 @@ Priority: 100
 	({Lookup2.minorType == probability})?
     {Lookup3}
 	{Lookup3}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     
  ):match  
  -->

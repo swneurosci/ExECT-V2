@@ -12,7 +12,7 @@ Rule: PtHistoryD1
 Priority: 100
 
 (   
-	{Person}
+	({Person})?
 	{Lookup2.type == past}
     {Lookup3}
 	{Number}
@@ -20,8 +20,8 @@ Priority: 100
     {Split}
     {Lookup2.minorType == causality}
     ({Lookup3})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-	Lookup3.Experiencer == Patient}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     
  ):match  
  -->
@@ -40,8 +40,8 @@ Priority: 100
 	{Lookup2.minorType == probability}
     {Lookup2.type == recent}
     ({Lookup3})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-	Lookup3.Experiencer == Patient}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     
  ):match  
  -->

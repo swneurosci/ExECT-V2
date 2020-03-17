@@ -2,12 +2,7 @@ Phase: OtherDiagnosisC
 Input: Investigation  Lookup3 Sentence
 
 
-
 Options: control=brill
-
-
-
-
 
 Rule: OtherDiagC1
 Priority: 100

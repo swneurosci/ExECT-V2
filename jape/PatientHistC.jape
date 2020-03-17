@@ -14,8 +14,8 @@ Priority: 100
 (   
 	{Person}
     {Lookup2.majorType == historic}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-	Lookup3.Experiencer == Patient}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+    {Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     {Person}
     {Lookup2.majorType == historic}
     {timeElapsed.time == in}
@@ -54,8 +54,6 @@ Priority: 100
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
 	Lookup3.Experiencer == Patient}):item
    
-
-
  ):match  
  -->
 :item.PatientHistory = {rule = PtHistoryC2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
@@ -79,7 +77,6 @@ Priority: 80
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
 	Lookup3.Experiencer == Patient}):item
    
-
 
  ):match  
  -->

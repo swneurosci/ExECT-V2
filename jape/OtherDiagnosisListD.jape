@@ -16,8 +16,8 @@ Priority: 100
     {listPoint}
     {Lookup3}
     {listPoint}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, 
-    Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+    {Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagListD1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
