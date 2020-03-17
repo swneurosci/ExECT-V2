@@ -1,0 +1,24 @@
+Phase: DrugStatus
+Input: Prescription0 Split
+Options: control=all
+
+
+Rule: PrescriptionSentence
+Priority: 100
+(   
+    ({Split})
+    ({Prescription0})*
+    ({Prescription0}):match1
+    ({Prescription0})*
+    ({Split})
+):match
+-->
+:match.PrescriptionSentence = { rule = PrescriptionSentence, rule1 = :match1.Prescription0.rule1,
+string = :match@string,
+DrugName = :match1.Prescription0.DrugName, 
+CUI = :match1.Prescription0.CUI,
+DrugDose = :match1.Prescription0.DrugDose,
+DoseUnit  =:match1.Prescription0.DoseUnit, 
+Frequency = :match1.Prescription0.Frequency,
+time-unit = :match1.Prescription0.time-unit, 
+dose-interval = :match1.Prescription0.dose-interval}
