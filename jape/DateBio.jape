@@ -69,3 +69,15 @@ Rule: DateBio3
 ):match
 -->
 :match.DateBio = {rule = "DateBio3" , DateBio =  :match@string, DayDate = :match.DayDate.value, MonthDate = :match.Month.month, YearDate = :match.Numeric.value, string = :match@string}
+
+Rule: DateBio4
+
+(
+	({Lookup2.majorType == "time" , Lookup2.minorType == "date"}):month
+	({Lookup2.majorType == "Numerals" , Lookup2.minorType == Ordinals}):day
+	({Numeric.rule == "Numerals"}):year			
+):match
+-->
+:match.DateBio = {rule = "DateBio4" ,
+ DateBio =  :match@string, DayDate = :day.Lookup2.Ordinals, 
+ MonthDate = :month.Lookup2.month, YearDate = :year.Numeric.value}
