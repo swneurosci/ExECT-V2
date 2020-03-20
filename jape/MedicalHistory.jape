@@ -1,7 +1,7 @@
 Phase: MedicalHistory
-Input: Lookup3 MedicalHistory listSent listPoint 
+Input: Lookup3 MedicalHistory listSent listPoint Sentence Lookup2
 
-/* Simple rules to annotate events without Person e.g., history of convulsions - could be too sensitive  */
+ //Simple rules to annotate events without Person e.g., history of convulsions - could be too sensitive  */
 
 
 Options: control=appelt
@@ -20,7 +20,7 @@ Priority: 100
 :item.PatientHistory = {rule = MedicalHistory1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
+Certainty = :item.Lookup3.Certainty} 
 
 Rule: MedicalHistory2
 Priority: 100
