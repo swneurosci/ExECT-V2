@@ -551,10 +551,12 @@ Priority: 99
 -->
 :match.SeizureFrequencyDriving = { rule = HseizureFree3a, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = :match.Lookup3.Negation, TimePeriod = :match.SeizFrequency1.TimePeriod, NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods }
 
+/* Seizure Free since DATE */
+
 Rule: HseizureFree3b
 Priority: 99
 (
-     ({Person})
+     ({Person})?
      ({Lookup3.PREF == "seizure free",Lookup3.Temporality != "hypothetical", !Lookup3.CAT == "Slang"})
     ({timeElapsed})?
     ({PartialDate})
