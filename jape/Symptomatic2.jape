@@ -4,7 +4,7 @@ Input:   Lookup2 Diagnosis
 
   /*These rules add "symptomatic" feature to epilepsy diagnosis if the diagnosis is symptomatic (with its own CUI)
   or the word symptomatic precedes diagnosis and "lateralisation" feature to epilepsy diagnosis if 
-  the lateralisation is specified in the diagnosis as there are no specific CUIs for these types of focal epilepsied */ 
+  the lateralisation is specified in the diagnosis as there are no specific CUIs for these types of focal epilepsie*/ 
 
   
 

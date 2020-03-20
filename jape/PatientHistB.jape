@@ -1,5 +1,5 @@
 Phase: PatientHistB
-Input: Lookup3 Lookup2 Person Numeric Sentence timeElapsed timePeriod Range PartialDate PointInTime Age
+Input: Lookup3 Lookup2 Person Numeric Sentence timeElapsed timePeriod Range PartialDate PointInTime Age DateBio
 
 
 /*additional rules to annotate items in patient history when they are stated one after another in longer sentences
