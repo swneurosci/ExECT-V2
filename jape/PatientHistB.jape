@@ -266,3 +266,22 @@ AgeLower =:match.Range.N1,
 AgeUpper = :match.Range.N2,
 Age = ""}
 
+Rule: PtHistoryB12
+Priority: 98
+
+(   
+	{Person}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
+   	{Lookup2.type == suffered}
+   {DateBio}
+
+
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryB12, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty,
+DayDate =:match.DateBio.DayDate,
+MonthDate =:match.DateBio.MonthDate,
+YearDate =:match.DateBio.YearDate}
