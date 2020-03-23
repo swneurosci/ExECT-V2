@@ -30,8 +30,8 @@ no significant findings:CUI=C0560017:Results=Normal:Ignore=Yes
 non-epileptic:CUI=C0560017:Results=Normal:Ignore=Yes
 normal:CUI=C0560017:Results=Normal
 Normal:CUI=C0560017:Results=Normal
-not available:Results=Unknown:Ignore=Yes
-not have the results:Results=Unknown:Ignore=Yes
+not available:CUI=C0013819:Results=Unknown:Ignore=Yes
+not have the results:CUI=C0013819:Results=Unknown:Ignore=Yes
 paroxysmal fast activity:CUI=C0151611:Results=Abnormal
 photoparoxysmal response:CUI=C0151611:Results=Abnormal
 photosensitive:CUI=C0151611:Results=Abnormal

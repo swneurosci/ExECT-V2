@@ -35,10 +35,10 @@ glioma:CUI=C1319851:Results=Abnormal
 mass effect:CUI=C1319851:Results=Abnormal
 normal:CUI=C0436481:Results=Normal
 abnormal:CUI=C1319851:Results=Abnormal
-not available:Results=Unknown:Ignore=Yes
+not available:CUI=C0412675:Results=Unknown:Ignore=Yes
 Abnormal:CUI=C1319851:Results=Abnormal
 Normal:CUI=C0436481:Results=Normal
-not have the results:Results=Unknown:Ignore=Yes
+not have the results:CUI=C0412675:Results=Unknown:Ignore=Yes
 non-epileptic:CUI=C0436481:Results=Normal:Ignore=Yes
 high intensity signal:CUI=C1319851:Results=Abnormal
 white-matter hyperintensities:CUI=C1319851:Results=Abnormal

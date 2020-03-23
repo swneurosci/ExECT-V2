@@ -35,10 +35,10 @@ glioma:CUI=C0436539:Results=Abnormal
 mass effect:CUI=C0436539:Results=Abnormal
 normal:CUI=C0744602:Results=Normal
 abnormal:CUI=C0436539:Results=Abnormal
-not available:Results=Unknown:Ignore=Yes
+not available:CUI=C3515741:Results=Unknown:Ignore=Yes
 Abnormal:CUI=C0436539:Results=Abnormal
 Normal:CUI=C0744602:Results=Normal
-not have the results:Results=Unknown:Ignore=Yes
+not have the results:CUI=C3515741:Results=Unknown:Ignore=Yes
 non-epileptic:CUI=C0744602:Results=Normal:Ignore=Yes
 infarct:CUI=C0436539:Results=Abnormal
 no significant findings:CUI=C0744602:Results=Normal:Ignore=Yes
