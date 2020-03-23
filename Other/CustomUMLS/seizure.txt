@@ -1,66 +1,35 @@
-C4316903	absence seizure
-C0422872	absence seizure with atonic components 
-C0422874	absence seizure with automatisms
-C0422875	absence seizure with autonomic components
-C0422875	absence seizure with autonomic components
-C4023513	Absence seizure with eyelid myoclonia
-C0422870	absence seizure with impairment of consciousness only
-C0422873	absence seizure with tonic components
-C0422874	absence seizure, automatisms
-C4316903	absence seizures
-C0422872	absence seizures with atonic components
-C0422874	absence seizures with automatisms
-C4023513	Absence seizures with eyelid myoclonia
-C0422871	absence seizures with mild clonic components
-C0422873	absence seizures with tonic components
-C0270823	absence status
-C0422872	absences, atonic
-C4275141	adolescent benign focal crisis
-C0863106	afebrile seizure
-C0347869	akinetic epileptic seizures
-C0278187	Akinetic seizure without atonia
-C0347869	akinetic seizures
-C0347869	akinetic seizures
-C0270846	atonic epileptic seizures  
-C0270846	atonic seizure
-C0270846	atonic seizures
-C0270846	atonic seizures
-C0270846	atonic seizures
-C4317109	attack - epileptic
-C0595948	atypical absence seizure
-C0595948	atypical absence seizures
-C0422852	auditory partial seizure
-C0422852	auditory partial seizure
-C0422852	auditory seizure
-C0422852	auditory seizures
-C0422852	Auditory uncinate fit
-C0270837	automatism absence
-C0270837	automatism petit mal
-C4275141	benign focal seizure of adolescence
-C4275141	benign focal seizures of adolescence
-C0270851	benign neonatal convulsion
-C0270851	benign neonatal convulsion
-C0270851	benign neonatal seizures
-C0270851	benign neonatal seizures
-C0270851	benign neonatal seizures disorder
-C0751946	Benign neonatal sleep myoclonus
-C0877017	bilateral convulsive seizure
-C0877017	bilateral convulsive seizures
-C3698072	brainstem myoclonus
-C0270822	centrencephalic absence
-C3698239	cerebral cortex myoclonus
-C0234535	Clonic convulsion
-C0234535	Clonic convulsions
-C0347870	clonic epileptic seizures   
-C0234535	Clonic Seizure
-C0234535	Clonic Seizures
-C0270834	complex focal seizures
+C0014549	major motor seizure
+C0014549	tonic-clonic epileptic seizures 
+C0014556	temporal lobe seizure
+C0014556	temporal lobe seizures
+C0016399	focal motor
+C0016399	focal motor seizure
+C0016399	focal motor seizures
+C0016399	motor seizure
+C0016399	motor seizures
+C0016399	partial motor attacks
+C0016399	partial motor seizure 
+C0016399	partial motor seizures   
+C0016399	simple partial seizure with motor dysfunction
+C0016399	simple partial seizures with motor signs
+C0021712	"myoclonus, intention"
+C0022333	Jacksonian seizure
+C0022333	Jacksonian seizures
+C0030214	"myoclonus, palatal"
+C0030214	palatal nystagmus
+C0030463	paramyoclonus multiplex
+C0036572	seizure
+C0036572	seizures
+C0038220	generalized status epilepticus
+C0038220	status epilepticus 
+C0038220	"status epilepticus, generalized"
+C0038220	"status epilepticus, unspecified"
+C0085541	frontal lobe seizure
+C0085541	frontal lobe seizures
+C0085543	motor simple partial status
 C0149958	complex partial epileptic seizure
 C0149958	Complex partial seizure
-C0149958	Complex partial Seizures
 C0149958	complex partial seizures
-C0149958	Complex partial seizures
-C0149958	Complex Partial Seizures
 C0149958	Partial complex seizure
 C0149958	Partial complex seizures
 C0149958	"partial epilepsy, complex"
@@ -69,8 +38,33 @@ C0159020	convulsions in newborn
 C0159020	convulsions in the newborn 
 C0159020	convulsions neonatal
 C0159020	convulsions of newborn
-C0270851	convulsions, benign neonatal
-C3698239	cortical myoclonus
+C0159020	fits in newborn
+C0159020	fits in the newborn
+C0159020	neonatal convulsions
+C0159020	neonatal seizures
+C0159020	seizures in newborn
+C0159020	seizures in the newborn
+C0234533	generalised convulsions
+C0234533	generalised fit
+C0234533	generalised fits
+C0234533	generalised seizure
+C0234533	generalised seizures
+C0234533	Generalized-onset seizure
+C0234533	"seizure, generalized"
+C0234535	Clonic convulsion
+C0234535	Clonic convulsions
+C0234535	Clonic Seizure
+C0234535	Clonic Seizures
+C0234542	epileptic aura
+C0234974	"partial seizures, simple"
+C0234974	"partial seizures, simple, consciousness preserved"
+C0234974	simple partial seizure
+C0234974	"simple partial seizure, consciousness not impaired"
+C0234974	simple partial seizures
+C0234974	simple partial seizures with consciousness preserved
+C0264608	dysphonia of palatopharyngolaryngeal myoclonus
+C0270737	essential myoclonus
+C0270737	familial essential myoclonus
 C0270819	cursive seizure
 C0270819	cursive seizures
 C0270820	gelastic seizure
@@ -168,34 +162,44 @@ C0347869	epileptic seizures - akinetic
 C0347869	"seizures, akinetic"
 C0347870	clonic epileptic seizures   
 C0347870	epileptic seizures - clonic
-C0270844	epileptic seizures - tonic
-C0347870	epileptic seizures, clonic
-C0270844	epileptic seizures, tonic
-C1527366	epileptic spasms
-C0270737	essential myoclonus
+C0347870	"epileptic seizures, clonic"
+C0393618	other specified myoclonus
+C0393619	symptomatic myoclonus
+C0393622	drug-induced myoclonus
+C0393623	segmental cord myoclonus
+C0393624	palatal-tympanic myoclonus
+C0393625	hyoid myoclonus
+C0393690	parietal lobe seizure
+C0393690	parietal lobe seizures
+C0393690	seizures of parietal lobe
+C0393691	occipital lobe seizure
+C0393691	occipital lobe seizures
+C0393702	myoclonic atonic seizure
+C0393702	myoclonic atonic seizures
+C0393702	myoclonic-atonic seizure
+C0393702	myoclonic-atonic seizures
+C0393703	myoclonic absence seizure
+C0393703	myoclonic absence seizures
+C0393707	situation related seizures
+C0393707	situation-related seizures
 C0393722	eyelid myoclonus with absences
-C0270737	familial essential myoclonus
-C2711743	febrile myoclonus
-C0009952	febrile seizure
-C0009952	febrile seizures
-C0159020	fits in newborn
-C0159020	fits in the newborn
-C0752323	focal clonic seizures
-C4732752	Focal emotional seizure
-C0270834	Focal impaired awareness seizures
-C0016399	focal motor
-C0016399	focal motor seizure
-C0016399	focal motor seizures
-C4511434	focal myoclonus
-C0751495	focal seizure 
-C3164682	focal seizure with experiential sensory symptoms
-C3164682	focal seizure with experiential sensory symptoms
-C0877017	focal seizure with secondary generalisation
-C0751495	focal seizures
-C0270834	Focal seizures with impairment of consciousness or awareness
-C0877017	focal seizures with secondary generalisation
-C0544645	focal Sensory Seizure
-C0544645	focal sensory seizures
+C0393722	photomyoclonus
+C0393733	non-convulsive simple partial status epilepticus
+C0393734	complex partial status epilepticus 
+C0393734	psychomotor status
+C0393734	"status epilepticus, complex partial"
+C0422852	auditory partial seizure
+C0422852	auditory partial seizure
+C0422852	auditory seizure
+C0422852	auditory seizures
+C0422852	Auditory uncinate fit
+C0422852	"seizure, auditory"
+C0422852	"seizures, auditory"
+C0422853	olfactory seizure
+C0422853	olfactory seizures
+C0422853	olfactory uncinate fit
+C0422853	"seizure, olfactory"
+C0422853	"seizures, olfactory"
 C0422855	Focal sensory vestibular seizure
 C0422855	"seizure, vertiginous"
 C0422855	"seizure, vestibular"
@@ -215,16 +219,6 @@ C0422874	absence seizure with automatisms
 C0422874	"absence seizure, automatisms"
 C0422874	absence seizures with automatisms
 C0422875	absence seizure with autonomic components
-C0474327	focal to bilateral convulsive seizures
-C0474327	focal to bilateral tonic-clonic seizure
-C0474327	partial seizure evolving to  generalised seizure
-C0474327	partial seizure evolving to  generalised seizures
-C0474327	partial seizure evolving to secondary generalised seizure
-C0474327	partial seizure evolving to secondary generalised seizures
-C0474327	partial seizures evolving to  generalized seizures
-C0474327	partial seizures evolving to  generalized seizures
-C0474327	partial seizures evolving to secondary generalised seizure   
-C0474327	partial seizures evolving to secondary generalised seizures
 C0477372	other status epilepticus
 C0494475	convulsions grand mal
 C0494475	generalised tonic clonic seizure
@@ -234,260 +228,168 @@ C0494475	generalised tonic-clonic seizures
 C0494475	generalized tonic clonic seizure
 C0494475	generalized tonic clonic seizures
 C0494475	generalized tonic-clonic seizures
-C0877017	Generalized tonic-clonic seizures, secondary
-C0234533	Generalized-onset seizure
 C0494475	grand mal
 C0494475	grand mal convulsion
 C0494475	grand mal convulsions
-C0278192	gustatory partial seizure
-C0278192	gustatory partial seizurse   
-C0278192	gustatory seizure
-C0278188	hallucination seizure
-C1846620	hemiclonic seizures
-C0393625	hyoid myoclonus
-C2732862	hypnic jerk
-C2732862	hypnic twitch
-C3662031	intractable absence seizures
-C3662031	intractable absence seizures
-C3495021	intractable atonic seizures
-C1836402	intractable myoclonic seizure   
-C3495025	intractable typical absence seizure
-C0022333	Jacksonian seizures
-C0022333	Jacksonian seizure
-C0027066	jerk, myoclonic
-C0027066	jerking, myoclonic
-C0027066	jerks - myoclonic
-C0027066	jerks, myoclonic
+C0494475	tonic clonic convulsion
+C0494475	tonic clonic convulsions
+C0494475	tonic clonic seizure
+C0494475	tonic clonic seizures
+C0494475	tonic/clonic convulsions
+C0494475	tonic-clonic convulsion
+C0494475	tonic-clonic seizures
+C0494475	tonic-clonic seizure
+C0544645	focal Sensory Seizure
+C0544645	focal sensory seizures
+C0546878	salaam spasm
+C0595948	atypical absence seizure
+C0595948	atypical absence seizures
+C0595948	"seizures, atypical absence"
+C0751351	"myoclonus, segmental"
+C0751352	"myoclonus, nocturnal"
+C0751352	"myoclonus, sleep"
+C0751352	sleep myoclonus
+C0751495	focal seizure 
+C0751495	focal seizures
 C0751495	local convulsion
 C0751495	local seizure
 C0751495	local seizures
 C0751495	localisation related seizures
-C0751495	localization related seizures
-C0752323	localized clonic seizures
-C0014549	major motor seizure
-C3494976	migrating partial seizures in infancy
-C3494976	migrating partial seizures in infancy
-C0016399	motor seizure
-C0016399	motor seizures
-C0085543	motor simple partial status
-C0393703	myoclonic absence seizure
-C0393703	myoclonic absence seizures
-C0393703	myoclonic absences
-C0393702	myoclonic atonic seizure
-C0393702	myoclonic atonic seizures
-C4317123	myoclonic epileptic seizure
-C4317123	myoclonic epileptic seizures    
-C0027066	myoclonic jerks
-C0027066	myoclonic jerk
-C0027066	myoclonic jerking
-C4317123	myoclonic seizure
-C1836402	myoclonic seizure, intractable
-C3494990	myoclonic seizure, non-refractory
-C1836402	myoclonic seizure, refractory
-C4317123	myoclonic seizures
-C1836402	myoclonic seizures, intractable
-C3494990	myoclonic seizures, non-intractable
-C0393702	myoclonic-atonic seizures
-C0393702	myoclonic-atonic seizure
-C2711743	myoclonus associated with fever
-C1960877	myoclonus of stapedius muscle
-C1998254	myoclonus of tensor tympani muscle
-C1998254	myoclonus tensor tympani muscle
-C0751946	myoclonus, benign neonatal sleep"
-C0021712	myoclonus, intention
-C0751352	myoclonus, nocturnal
-C0030214	myoclonus, palatal
-C0751351	myoclonus, segmental
-C0751352	myoclonus, sleep
-C0270851	benign neonatal convulsions
-C0159020	neonatal convulsions
-C0270851	neonatal convulsions, benign
-C0159020	neonatal seizures
-C0393733	non-convulsive simple partial status epilepticus
-C0393733	non-convulsive simple partial status epilepticus (disorder)
-C0270823	non-convulsive status epilepticus wth impaired consciousness
-C1960676	non-epileptic myoclonus
-C3495022	non-intractable atonic seizures
-C3495024	non-intractable typical absence seizure
-C3495022	non-refractory atonic seizure 
-C3495024	non-refractory typical absence seizures 
-C0393691	occipital lobe seizure
-C0393691	occipital lobe seizures
-C0422853	olfactory seizure
-C0422853	olfactory seizures
-C0422853	olfactory uncinate fit
-C0393618	other specified myoclonus
-C0477372	other status epilepticus
-C0030214	palatal nystagmus
-C0393624	palatal-tympanic myoclonus
-C0030463	paramyoclonus multiplex
-C4039814	parietal lobe complex partial seizure
-C0393690	parietal lobe seizure
-C0393690	parietal lobe seizures
+C0751495	localization related seizure
 C0751495	partial afebrile seizures
+C0751495	partial seizure
+C0751495	partial seizures
+C0751495	partial seizure    
+C0751495	"seizure, focal"
+C0751495	"seizure, partial"
+C0751495	"seizures, partial, afebrile"
+C0751496	sensory seizure 
+C0751496	sensory seizures
+C0751524	"status epilepticus, simple partial"
+C0751946	Benign neonatal sleep myoclonus
+C0751946	"myoclonus, benign neonatal sleep"
+C0752323	focal clonic seizures
+C0752323	localized clonic seizures
 C0752323	Partial clonic seizures
-C0149958	Partial complex seizures
-C0149958	Partial complex seizure
-C0149958	partial epilepsy, complex
-C4039814	Partial epileptic seizures of parietal lobe with impairment of consciousness
-C3661551	Partial epileptic seizures of temporal lobe with impairment of consciousness
-C0016399	partial motor attacks
-C0016399	partial motor seizures   
-C0016399	partial motor seizure 
-C0751495	partial seizure
-C0474327	partial seizure evolving to  generalised seizure
-C0474327	partial seizures evolving to  generalized seizures
-C0474327	partial seizures evolving to secondary generalised seizures
-C0474327	partial seizure evolving to secondary generalised seizure
-C0278202	partial seizures with illusions and hallucinations
-C0278199	partial seizures with impaired consciousness
-C0278203	partial seizures with multiple symptoms
-C0278192	partial seizure, gustatory
-C0278188	partial seizure, visual
-C0751495	partial seizure
-C0751495	partial seizures    
-C0474327	partial seizure evolving to  generalised seizures
-C0474327	partial seizures evolving to  generalized seizures
-C0474327	partial seizures evolving to secondary generalised seizure   
-C0474327	partial seizure evolving to secondary generalised seizures
-C3661551	Partial seizures of the temporal lobe with impairment of conciousness
-C3661551	Partial seizure of the temporal lobe with impairment of conciousness
-C0278202	partial seizures with illusions and hallucinations
-C0278199	partial seizures with impaired consciousness
-C0278203	partial seizures with multiple symptoms
-C0877017	Partial seizures with secondary generalization
-C0278192	partial seizures, gustatory
-C0234974	partial seizures, simple
-C0234974	partial seizures, simple, consciousness preserved
+C0752324	focal tonic seizures
+C0752324	Local tonic seizures
 C0752324	Partial tonic seizures
-C0270823	petit mal status epilepticus
-C0270823	petit mal status, epileptic
-C4316903	petit mal seizure
-C4316903	petit-mal seizure
-C0270823	petit-mal status
-C0393722	photomyoclonus
-C2080645	photosensitive seizures
-C2921125	Post traumatic seizures
-C3697594	post-cerebrovascular accident epilepsy
-C2921125	post-traumatic seizure
-C2921125	post traumatic seizure
-C2921125	post-traumatic seizures
-C0270823	prolonged epileptic twilight state
-C0149958	Psychomotor fit
-C0393734	psychomotor status
-C1864723	pyridoxal phosphate-responsive seizures
-C1849508	pyridoxine dependent seizures
-C1864723	pyridoxine-5'-phosphate oxidase deficiency
-C1849508	pyridoxine-dependent seizures
-C0278193	Reading seizure
-C3495021	refractory atonic seizures 
-C3495025	refractory typical absence seizure 
-C0270821	retropulsion absence
-C0270821	retropulsion petit mal
-C3662441	rolandic seizures with status epilepticus
-C3662441	rolandic seizures with status epilepticus
+C0863106	afebrile seizure
+C0863106	afebrile seizures
+C0877017	bilateral convulsive seizure
+C0877017	bilateral convulsive seizures
+C0877017	"Generalized tonic-clonic seizures, secondary"
+C0877017	Secondarily generalised tonic-clonic seizures
+C0877017	Secondary generalised tonic clonic seizure
+C0877017	Secondary generalised tonic clonic seizures
+C0877017	Secondary generalized tonic clonic seizure
+C0877017	Secondary generalized tonic clonic seizures
+C1299590	seizure free
+C1299598	seizure due to metabolic disorder
+C1299598	seizures due to metabolic disorder
+C1527366	epileptic spasms
 C1527366	salaam attack
 C1527366	salaam attacks
 C1527366	salaam seizure
 C1527366	salaam seizures
-C0546878	salaam spasm
-C0270838	Secondarily generalised seizures
-C0877017	Secondarily generalised tonic-clonic seizures
-C0877017	Secondary generalised tonic clonic seizures
-C0877017	Secondary generalised tonic clonic seizures
-C0877017	Secondary generalized tonic clonic seizures
-C0877017	Secondary generalized tonic clonic seizures
-C1299590	seizure free
-C0422852	seizure, auditory
-C0751495	seizure, focal
-C0234533	seizure, generalized
-C0278192	seizure, gustatory partial
-C0422853	seizure, olfactory
-C0751495	seizure, partial
-C0422855	seizure, vertiginous
-C0422855	seizure, vestibular
-C0270824	seizure, visual
-C0278188	seizure, visual partial
-C0036572	seizures
-C1299598	seizure due to metabolic disorder
-C1299598	seizures due to metabolic disorder
-C0159020	seizures in newborn
-C0159020	seizures in the newborn
-C0393690	seizures of parietal lobe
-C0347869	seizures, akinetic
-C0595948	seizures, atypical absence
-C0422852	seizures, auditory
-C0422853	seizures, olfactory
-C0751495	seizures, partial, afebrile
-C0422855	seizures, vertiginous
-C0422855	seizures, vestibular
-C0751496	sensory seizure 
-C0751496	sensory seizures
-C0234974	simple partial seizure
-C0016399	simple partial seizure with motor dysfunction
-C0234974	simple partial seizure, consciousness not impaired
-C0234974	simple partial seizures
-C0234974	simple partial seizures with consciousness preserved
-C0016399	simple partial seizures with motor signs
-C0270830	Simple partial seizures with somatosensory or special sensory dysfunction
-C0393707	situation related seizures
-C0393707	situation-related seizures
-C0751352	sleep myoclonus
-C0270823	spike wave stupor
+C1836402	intractable myoclonic seizure   
+C1836402	"myoclonic seizure, intractable"
+C1836402	"myoclonic seizure, refractory"
+C1836402	"myoclonic seizures, intractable"
+C1846620	hemiclonic seizures
+C1846620	Unilateral clonic seizures
+C1849508	pyridoxine dependent seizures
+C1849508	pyridoxine-dependent seizures
+C1864723	pyridoxal phosphate-responsive seizures
+C1864723	pyridoxine-5'-phosphate oxidase deficiency
+C1864723	vitamine B6 dependent seizures
+C1960676	non-epileptic myoclonus
+C1960877	myoclonus of stapedius muscle
+C1960877	stapedial myoclonus
+C1998254	myoclonus of tensor tympani muscle
+C1998254	myoclonus tensor tympani muscle
+C1998254	tensor tympani myoclonus
+C2080645	photosensitive seizures
+C2711743	febrile myoclonus
+C2711743	myoclonus associated with fever
+C2732862	hypnic jerk
+C2732862	hypnic twitch
+C2921125	post traumatic seizure
+C2921125	Post traumatic seizures
+C2921125	post-traumatic seizure
+C2921125	post-traumatic seizures
+C3164682	focal seizure with experiential sensory symptoms
+C3164682	focal seizure with experiential sensory symptoms
+C3164682	temporo-parieto-occipital junction seizure
+C3164682	temporo-parieto-occipital junction seizure
+C3494976	migrating partial seizures in infancy
+C3494976	migrating partial seizures in infancy
+C3494990	"myoclonic seizure, non-refractory"
+C3494990	"myoclonic seizures, non-intractable"
+C3495021	intractable atonic seizures
+C3495021	refractory atonic seizures 
+C3495022	non-intractable atonic seizures
+C3495022	non-refractory atonic seizure 
+C3495024	non-intractable typical absence seizure
+C3495024	non-refractory typical absence seizures 
+C3495024	"typical absence seizures, non-intractable"
+C3495024	"typical absence seizures, non-refractory"
+C3495025	intractable typical absence seizure
+C3495025	refractory typical absence seizure 
+C3495025	typical absence seizures intractable
+C3495025	typical absence seizures refractory
+C3661551	Complex partial epileptic seizure of temporal lobe
+C3661551	Complex partial seizure of temporal lobe
+C3661551	Partial epileptic seizures of temporal lobe with impairment of consciousness
+C3661551	Partial seizure of the temporal lobe with impairment of conciousness
+C3661551	Partial seizures of the temporal lobe with impairment of conciousness
+C3661551	temporal lobe complex partial seizures
+C3662031	intractable absence seizures
+C3662031	intractable absence seizures
+C3662042	seizure disorder as sequela of stroke
+C3662042	seizure disorder as sequela of stroke
+C3662441	rolandic seizures with status epilepticus
+C3662441	rolandic seizures with status epilepticus
+C3662441	status epilepticus in benign rolandic epilepsy
+C3697594	post-cerebrovascular accident epilepsy
 C3697670	spinal cord myoclonus
 C3697670	spinal myoclonus
-C1960877	stapedial myoclonus
-C0038220	status epilepticus 
-C3662441	status epilepticus in benign rolandic epilepsy
-C0393734	status epilepticus, complex partial
-C0038220	status epilepticus, generalized
-C0751524	status epilepticus, simple partial
-C0038220	status epilepticus, unspecified
-C0270823	status pyknolepticus
-C0270823	status, absence
-C0270823	status, petit mal
-C0393619	symptomatic myoclonus
+C3698072	brainstem myoclonus
+C3698239	cerebral cortex myoclonus
+C3698239	cortical myoclonus
+C4023513	Absence seizure with eyelid myoclonia
+C4023513	Absence seizures with eyelid myoclonia
 C4023516	symptomatic seizure
 C4023516	symptomatic seizures
-C3661551	temporal lobe complex partial seizures
-C0014556	temporal lobe seizure
-C0014556	temporal lobe seizure
-C0014556	temporal lobe seizures
-C0014556	temporal lobe seizures
-C3164682	temporo-parieto-occipital junction seizure
-C3164682	temporo-parieto-occipital junction seizure
-C1998254	tensor tympani myoclonus
-C0494475	tonic clonic convulsion
-C0494475	tonic clonic convulsions
-C0494475	tonic clonic seizure
-C0494475	tonic clonic seizure
-C0270844	tonic epileptic seizure 
-C0270844	tonic seizure
-C0270844	tonic seizures
-C0494475	tonic/clonic convulsions
-C0494475	tonic-clonic convulsion
-C0014549	tonic-clonic epileptic seizures 
-C0494475	tonic-clonic seizures
-C0494475	tonic-clonic seizures
-C0014553	typical absence seizure
-C0014553	typical absence seizures 
-C3495025	typical absence seizures, intractable
-C3495024	typical absence seizures, non-intractable
-C3495024	typical absence seizures, non-refractory
-C3495025	typical absence seizures, refractory
-C0014553	typical absences
-C0270826	unclassified epileptic seizures
-C0270826	unclassified epileptic seizures
-C1846620	Unilateral clonic seizures
-C0422855	vertiginous seizure
-C0422855	vertiginous seizures
-C0422855	vestibular seizures
-C0278188	visual partial seizure 
-C0278188	visual partial seizures
-C0270824	visual seizure
-C0270824	visual seizures
-C1864723	vitamine B6 dependent seizures
-C0270844	Generalised tonic seizures
+C4039464	Complex partial seizure of frontal lobe 
+C4039464	frontal lobe complex partial seizure
+C4039464	frontal lobe complex partial seizures
+C4039814	Complex partial seizure of parietal lobe
+C4039814	parietal lobe complex partial seizure
+C4039814	Partial epileptic seizures of parietal lobe with impairment of consciousness
+C4040133	Complex partial seizure of occipital lobe
+C4040133	Complex partial seizures of occipital lobe
+C4275141	adolescent benign focal crisis
+C4275141	benign focal seizure of adolescence
+C4275141	benign focal seizures of adolescence
+C4316903	absence seizure
+C4316903	absence seizures
+C4316903	petit-mal seizure
+C4316903	petit mal
+C4316903	petit-mal seizures
+C4317109	attack - epileptic
+C4317109	epileptic attacks
+C4317109	epileptic convulsions
+C4317109	epileptic fit
+C4317109	epileptic fits
+C4317109	epileptic seizure
+C4317109	epileptic seizures
+C4317123	myoclonic epileptic seizure
+C4317123	myoclonic epileptic seizures    
+C4317123	myoclonic seizure
+C4317123	myoclonic seizures
+C4511434	focal myoclonus
+C4732752	Focal emotional seizure
 C0270844	Generalised tonic seizure
 C0270844	Generalised tonic seizures
 C0085541	frontal lobe onset seizure
@@ -496,5 +398,3 @@ C4023512	myoclonic absences
 C4316903	typical absence seizure
 C4316903	typical absence seizures 
 C4316903	typical absences
-C4316903	absence type seizure
-C4316903	absence type seizures

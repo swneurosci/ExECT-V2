@@ -17,20 +17,17 @@ C0007761	dentate cerebellar atrophy
 C0007761	"dentate nucleus syndrome, ramsay hunt"
 C0007761	dentato-rubral atrophy syndrome
 C0007761	dyssynerg cerebellar myoclon
-C0007761	dyssynergia cerebellaris myoclonica (disorder)
 C0007761	"dyssynergia, cerebellar"
 C0007761	"dyssynergia, myoclonic cerebellar"
 C0007761	"dyssynergias, cerebellar"
 C0007761	"dyssynergias, myoclonic cerebellar"
 C0007761	early cerebl atax & myoclonus
 C0007761	early onset cerebellar ataxia with myoclonus
-C0007761	early onset cerebellar ataxia with myoclonus (disorder)
 C0007761	early-onset cerebellar ataxia with myoclonus [hunt's ataxia]
 C0007761	hunt's disease
 C0007761	myoclonic cerebellar dyssynergia
 C0007761	myoclonic cerebellar dyssynergias
 C0007761	progressive cerebellar tremor
-C0007761	progressive cerebellar tremor (disorder)
 C0007761	ramsay hunt cerebellar syndrome
 C0007761	ramsay hunt dentate syndrome
 C0007761	ramsay hunt syndrome - ataxia
@@ -40,7 +37,6 @@ C0014544	attack - epileptic
 C0014544	"epilectic attack, nos"
 C0014544	epilepsies
 C0014544	epilepsy
-C0014544	epilepsy (disorder)
 C0014544	"epilepsy, unspecified"
 C0014544	epileptic
 C0014544	epileptic attack
@@ -51,8 +47,6 @@ C0014544	epileptic fits
 C4317109	epileptic seizure
 C4317109	epileptic seizures
 C0014544	seizure disorders
-C0014547	"disorders, focal seizure"
-C0014547	"disorders, partial seizure"
 C0014547	"epilepsies, focal"
 C0014547	"epilepsies, localization-related"
 C0014547	"epilepsies, partial"
@@ -60,41 +54,23 @@ C0014547	"epilepsy, localization-related"
 C0014547	"epilepsy, partial"
 C0014547	focal epilepsies
 C0014547	focal epilepsy
-C0014547	focal seizure disorder
-C0014547	focal seizure disorders
 C0014547	local epilepsy
 C0014547	localisation related epilepsy
 C0014547	localisation-related epilepsy
 C0014547	localisation-related epilepsy
 C0014547	localization-related epilepsies
 C0014547	partial epilepsy
-C0014547	partial seizure disorders
-C0014547	"seizure disorder, focal"
-C0014547	"seizure disorder, partial"
-C0014547	"seizure disorders, focal"
-C0014547	"seizure disorders, partial"
 C0014548	"epilepsy, generalized"
 C0014548	generalised epilepsy
 C0014548	generalised seizure disorder
 C0014548	generalized epilepsies
-C0014548	generalized epilepsy (disorder)
-C0014548	"seizure disorder, generalized"
-C0014548	"seizure disorders, generalized"
 C0014549	grand mal epilepsy 
-C0014549	grand mal seizure disorder
-C0014549	grand mal seizure disorder
 C0014549	major epilepsies
 C0014549	major motor seizure disorder
 C0014549	major motor seizure disorder
 C0014549	"syndromes, tonic-clonic seizure"
-C0014549	tonic clonic convulsion disorder
 C0014549	tonic clonic convulsion syndrome
-C0014549	tonic clonic seizure disorder
 C0014549	tonic clonic seizure syndrome
-C0014549	tonic-clonic convulsion disorder
-C0014549	tonic-clonic convulsion disorder
-C0014549	tonic-clonic convulsion disorders
-C0014549	tonic-clonic convulsion disorders
 C0014549	tonic-clonic convulsion syndrome
 C0014549	tonic-clonic convulsion syndrome
 C0014549	tonic-clonic convulsion syndrome
@@ -106,29 +82,21 @@ C0014549	tonic-clonic epilepsy
 C0014549	tonic-clonic epileptic seizures
 C0014549	tonic-clonic seizure disorder
 C0014549	tonic-clonic seizure disorder
-C0014549	tonic-clonic seizure disorders
-C0014549	tonic-clonic seizure disorders
 C0014549	tonic-clonic seizure syndrome
 C0014549	tonic-clonic seizure syndrome
 C0014549	tonic-clonic seizure syndrome
 C0014549	tonic-clonic seizure syndromes
 C0014553	absence epilepsy
 C0014553	absence seizure disorder
-C0014553	absence seizure disorders
 C0014553	"epilepsy, absence"
-C0014553	petit mal (disorder)
 C0014553	petit mal epilepsies
 C0014553	petit mal epilepsy
 C0014553	petit mal epilepsy
 C0014553	petit-mal seizure
-C0014553	"seizure disorder, absence"
-C0014553	"seizure disorders, absence"
 C0014556	focal epilepsy - temporal
 C0014556	temporal lobe epilepsy
 C0014556	temporal lobe seizure
 C0014556	temporal lobe seizures
-C0014557	"disorder, post-traumatic seizure"
-C0014557	"disorders, post-traumatic seizure"
 C0014557	"epilepsy, post-traumatic"
 C0014557	"epilepsy, traumatic"
 C0014557	post traumatic epilepsy
@@ -136,30 +104,21 @@ C0014557	post traumatic epilepsytraumatic
 C0014557	post traumatic seizure dis
 C0014557	post traumatic seizure disorder
 C0014557	post-traumatic epilepsies
-C0014557	post-traumatic epilepsy (disorder)
 C0014557	post-traumatic seizure disorder
-C0014557	post-traumatic seizure disorders
 C0014557	"seizure disorders, post-traumatic"
 C0014557	traumatic epilepsies
 C0014557	traumatic epilepsies
-C0014557	traumatic epilepsy (disorder)
 C0016399	focal motor
 C0016399	focal motor epilepsy
-C0016399	focal motor epilepsy
-C0016399	focal motor epilepsy
 C0016399	focal motor seizure
-C0016399	focal motor seizure
+C0016399	focal motor seizures
 C0016399	motor partial seizure disorder
 C0016399	motor seizure disorder
-C0016399	motor seizure disorders
 C0016399	partial motor attacks
 C0016399	partial motor epilepsy
 C0016399	partial motor epilepsy
-C0016399	"partial seizure disorder, motor"
 C0016399	simple partial seizure with motor dysfunction
-C0016399	simple partial seizure with motor dysfunction (disorder)
 C0016399	simple partial seizures with motor signs
-C0021712	intention myoclonus (finding)
 C0021712	"myoclonus, intention"
 C0022333	Jacksonian seizure
 C0027066	disorder characterised by myoclonus
@@ -169,16 +128,11 @@ C0027066	"jerking, myoclonic"
 C0027066	jerks - myoclonic
 C0027066	"jerks, myoclonic"
 C0027066	myoclonic disorder
-C0027066	myoclonic disorder (disorder)
-C0027066	myoclonus (finding)
 C0027066	myoclonus disorder
 C0027066	myoclonus nos
-C0027066	myoclonus nos (disorder)
 C0030214	"myoclonus, palatal"
-C0030214	palatal myoclonus (disorder)
 C0030214	palatal nystagmus
 C0030463	paramyoclonus multiplex
-C0030463	paramyoclonus multiplex (disorder)
 C0035372	Cerebroatrophic hyperammonaemia
 C0035372	Cerebroatrophic hyperammonemia
 C0035372	rett syndrome
@@ -195,7 +149,6 @@ C0037769	lightning spasms
 C0037769	"spasms, infantile"
 C0037769	"syndrome, west"
 C0037769	west syndrome
-C0037769	West syndrome (disorder)
 C0037769	West's syndrome
 C0038220	generalized status epilepticus
 C0038220	status epilepticus 
@@ -205,25 +158,19 @@ C0038505	sturge-weber syndrome
 C0085417	complex partial epilepsy
 C0085417	complex partial epileptic seizure
 C0085417	complex partial seizure disorder
-C0085417	"disorder, complex partial seizures"
 C0085417	"epilepsy, complex partial"
 C0085417	"partial epilepsy, complex"
-C0085417	psychomotor epilepsy (disorder)
-C0085417	"seizure disorder, complex partial"
 C0085541	"Epilepsy, Frontal Lobe"
 C0085541	Frontal Lobe Epilepsies
 C0085541	frontal lobe epilepsy
-C0085541	Frontal lobe epilepsy (disorder)
 C0085541	frontal lobe seizure
 C0085541	frontal lobe seizures
-C0085543	epilepsia partialis continua (disorder)
 C0085543	epilepsia partialis continua [kozhevnikof]
 C0085543	"epilepsies, kojevnikov's"
 C0085543	"epilepsy, kojevnikov's"
 C0085543	"epilepsy, kojewnikov's"
 C0085543	focal status epilepticus
 C0085543	kojevnikov's epilepsies
-C0085543	kojevnikov's epilepsy (disorder)
 C0085543	kojewnikov epilepsy
 C0085543	kojewnikow syndrome
 C0085543	kojewnikow's syndrome
@@ -243,11 +190,9 @@ C0086241	epileptic seizures - tonic (finding)
 C0086241	"epileptic seizures, tonic"
 C0086241	tonic epilepsies
 C0086241	tonic epilepsy
-C0149958	Complex Partial
 C0149958	Complex Partial Seizure
 C0149958	Complex Partial Seizures
 C0149958	Partial complex seizure
-C0149958	Partial complex seizure (disorder)
 C0149958	Psychomotor fit
 C0159020	convulsions in newborn
 C0159020	convulsions in the newborn 
@@ -298,9 +243,7 @@ C0238111	lennox gastaut syndrome
 C0238111	lennox gastaut syndromes
 C0238111	lennox-gastat syndrome
 C0238111	Lennox-Gastaut syndrome
-C0238111	Lennox-Gastaut syndrome (disorder)
 C0264608	dysphonia of palatopharyngolaryngeal myoclonus
-C0264608	dysphonia of palatopharyngolaryngeal myoclonus (disorder)
 C0265482	ring chromosome 20
 C0268226	cherry red spot myoclonus syndrome
 C0268226	cherry red spot-myoclonus syndrome
@@ -320,11 +263,9 @@ C0268226	type I mucolipidoses
 C0268226	type i mucolipidosis
 C0270737	essential myoclonus
 C0270737	familial essential myoclonus
-C0270737	familial essential myoclonus (disorder)
 C0270819	cursive (running) epilepsy
 C0270819	cursive reflex epilepsy - running
 C0270819	cursive seizure
-C0270819	cursive seizure (disorder)
 C0270819	"epilepsies, cursive"
 C0270819	"epilepsy, cursive reflex (running)"
 C0270819	"epilepsy, running"
@@ -334,19 +275,15 @@ C0270820	"epilepsies, gelastic"
 C0270820	"epilepsy, gelastic"
 C0270820	gelastic epilepsies
 C0270820	gelastic seizure
-C0270820	gelastic seizure (disorder)
 C0270821	retropulsion absence
 C0270821	retropulsion petit mal
-C0270821	retropulsion petit mal (disorder)
 C0270822	centrencephalic absence
 C0270822	centrencephalic epilepsy
-C0270822	centrencephalic epilepsy disorder
 C0270823	absence status
 C0270823	epilepsia minoris continua
 C0270823	epileptic absence status
 C0270823	epileptic confusional state
 C0270823	non-convulsive status epilepticus wth impaired consciousness
-C0270823	petit mal status (disorder)
 C0270823	petit mal status epilepticus
 C0270823	"petit mal status, epileptic"
 C0270823	petit-mal status
@@ -358,28 +295,20 @@ C0270823	"status, petit mal"
 C0270824	"epilepsy, visual"
 C0270824	"seizure, visual"
 C0270824	visual epilepsy
-C0270824	visual epilepsy (disorder)
 C0270824	visual seizures
 C0270824	visual seizures 
 C0270825	"epilepsy, visceral"
 C0270825	visceral epilepsy
-C0270825	visceral epilepsy (disorder)
 C0270826	unclassified epileptic seizures
-C0270826	unclassified epileptic seizures (disorder)
 C0270830	Simple partial seizures with somatosensory or special sensory dysfunction
 C0270834	complex focal seizures
 C0270834	complex partial seizure with impairment of consciousness
-C0270834	complex partial seizure with impairment of consciousness (disorder)
-C0270834	complex partial seizure with impairment of consciousness (finding)
 C0270834	complex partial seizures with consciousness impaired
 C0270837	automatism absence
 C0270837	automatism petit mal
 C0270837	complex partial seizure with automatisms
-C0270837	complex partial seizure with automatisms (disorder)
 C0270837	complex partial seizures with automatisms
-C0270837	complex partial seizures with automatisms (finding)
 C0270837	epileptic automatism
-C0270837	epileptic automatism (disorder)
 C0270837	epileptic complex partial seizures with automatisms
 C0270838	Secondarily generalised seizures
 C0270838	secondary generalisation
@@ -394,15 +323,12 @@ C0270846	atonic seizure
 C0270846	atonic seizures
 C0270846	epileptic drop attack
 C0270847	benign focal epilepsy of childhood
-C0270847	benign focal epilepsy of childhood (disorder)
 C0270847	childhood benign focal epilepsy
 C0270847	childhood benign focal epilepsy
 C0270849	extratemporal epilepsy
-C0270849	extratemporal epilepsy (disorder)
 C0270850	generalised idiopathic epilepsy and epileptic syndromes
 C0270850	generalized idiopathic epilepsy and epileptic syndromes nos
 C0270850	idiopathic generalised epilepsy
-C0270850	idiopathic generalized epilepsy (disorder)
 C0270850	IGE
 C0270850	ige
 C0270850	primary generalised epilepsy
@@ -411,7 +337,6 @@ C0270851	benign neonatal convulsion
 C0270851	benign neonatal convulsion
 C0270851	benign neonatal seizures
 C0270851	benign neonatal seizures [ambiguous]
-C0270851	benign neonatal seizures disorder
 C0270851	"convulsions, benign neonatal"
 C0270851	"epilepsy, benign neonatal"
 C0270851	"neonatal convulsion, benign"
@@ -437,14 +362,12 @@ C0270853	"juvenile epilepsy, myoclonic"
 C0270853	juvenile myoclonic epilepsies
 C0270853	juvenile myoclonic epilepsy
 C0270853	juvenile myoclonic epilepsy
-C0270853	juvenile myoclonic epilepsy (disorder)
 C0270853	"myoclonic epilepsies, adolescent"
 C0270853	"myoclonic epilepsies, juvenile"
 C0270853	myoclonic juvenile epilepsies
 C0270853	myoclonic juvenile epilepsy
 C0270854	Symptomatic generalised epilepsy
 C0270855	Early Myoclonic Encephalopathy
-C0270855	early myoclonic encephalopathy (disorder)
 C0270855	"myoclonic epilepsy, neonatal, with suppression-burst pattern"
 C0270855	"Myoclonic Epilepsy, Neonatal, With Suppression-Burst Pattern"
 C0270855	symptomatic early myoclonic encephalopathy
@@ -454,20 +377,16 @@ C0270857	epilepsy associated with specific stimuli
 C0270857	"epilepsy, reflex"
 C0270857	"epilepsy, sensory-induced"
 C0270857	reflex epilepsies
-C0270857	reflex epilepsy (disorder)
 C0270857	sensory-induced epilepsy
-C0270977	juvenile cerebellar degeneration and myoclonus (disorder)
 C0278188	hallucination seizure
 C0278188	"partial seizure, visual"
 C0278188	"partial seizures, visual"
 C0278188	"seizure, visual partial"
 C0278188	visual partial seizures
 C0278188	visual seizure
-C0278188	visual seizure (disorder)
 C0278188	visual seizure (finding)
 C0278192	gustatory partial seizures
 C0278192	gustatory seizure
-C0278192	gustatory seizure (disorder)
 C0278192	gustatory seizure (finding)
 C0278192	"partial seizure, gustatory"
 C0278192	"partial seizures, gustatory"
@@ -475,21 +394,15 @@ C0278192	"seizure, gustatory partial"
 C0278193	reading epilepsy
 C0278193	Reading seizure
 C0278199	partial seizure with impaired consciousness
-C0278199	partial seizure with impaired consciousness (disorder)
 C0278199	partial seizure with impaired consciousness (finding)
 C0278202	partial seizure with illusions and hallucinations
-C0278202	partial seizure with illusions and hallucinations (disorder)
 C0278202	partial seizure with illusions and hallucinations (finding)
 C0278203	partial seizure with multiple symptoms
-C0278203	partial seizure with multiple symptoms (disorder)
 C0278203	partial seizure with multiple symptoms (finding)
 C0282512	Landau-Kleffner syndrome
 C0282512	Acquired aphasia with epilepsy
 C0282512	Acquired epileptic aphasia
-C0282512	Acquired Aphasia with Convulsive Disorder
 C0282512	Acquired aphasia with epilepsy
-C0311334	convulsive generalized seizure disorder
-C0311334	"convulsive seizure disorder, generalized"
 C0311334	"epilepsies, generalized convulsive"
 C0311334	"epilepsy, generalized convulsive"
 C0311334	generalised convulsive epilepsy
@@ -499,16 +412,11 @@ C0311334	generalised-onset seizures
 C0311334	generalized convulsive epilepsies
 C0311334	generalized convulsive epilepsies
 C0311334	generalized convulsive epilepsy
-C0311334	generalized convulsive epilepsy (disorder)
 C0311334	generalized onset seizure disorder
 C0311334	generalized seizure dis convulsive
-C0311334	"generalized seizure disorder, convulsive"
-C0311334	"seizure disorder, convulsive, generalized"
 C0338464	epilepsy co-occurrent and due to dementia
-C0338464	epilepsy co-occurrent and due to dementia (disorder)
 C0338464	epilepsy with dementia
 C0338464	epileptic dementia
-C0338464	epileptic dementia (disorder)
 C0338479	Symptomatic Myoclonic Epilepsies
 C0338479	Symptomatic Myoclonic Epilepsy
 C0347869	akinetic epilepsies
@@ -523,53 +431,39 @@ C0347870	epileptic seizures - clonic (finding)
 C0347870	"epileptic seizures, clonic"
 C0347873	"epilepsy, psychosensory"
 C0347873	psychosensory epilepsy
-C0347873	psychosensory epilepsy (disorder)
 C0347874	"epilepsy, somatosensory"
 C0347874	somatosensory epilepsy
-C0347874	somatosensory epilepsy (disorder)
 C0376532	rolandic epilepsy
 C0393482	focal encephalitis
-C0393482	focal encephalitis (disorder)
 C0393484	rasmussen syndrome
 C0393484	Rasmussen encephalitis
 C0393618	other specified myoclonus
-C0393618	other specified myoclonus (disorder)
 C0393619	symptomatic myoclonus
-C0393619	symptomatic myoclonus (disorder)
 C0393622	drug-induced myoclonus
-C0393622	drug-induced myoclonus (disorder)
 C0393623	segmental cord myoclonus
-C0393623	segmental cord myoclonus (disorder)
 C0393624	palatal-tympanic myoclonus
-C0393624	palatal-tympanic myoclonus (disorder)
 C0393625	hyoid myoclonus
-C0393625	hyoid myoclonus (disorder)
 C0393626	dancing eyes dancing feet syndrome
 C0393626	"dancing eyes, dancing feet syndrome"
 C0393626	dancing eyes-dancing feet syndrome
 C0393626	opsoclonus myoclonus ataxia
 C0393626	opsoclonus myoclonus syndrome
-C0393626	opsoclonus-myoclonus syndrome (disorder)
 C0393673	Benign atypical partial epilepsy in childhood
 C0393675	BCEOP - benign childhood epilepsy with occipital paroxysms
 C0393675	benign occipital epilepsy of childhood
 C0393675	childhood benign occipital epilepsy
 C0393675	childhood benign occipital epilepsy
 C0393675	childhood epilepsy with occipital paroxysms
-C0393675	childhood epilepsy with occipital paroxysms (disorder)
 C0393676	panayiotopoulos syndrome
 C0393676	Early-onset benign childhood occipital epilepsy
 C0393676	Benign childhood occipital epilepsy Panayiotopoulos type
 C0393690	Parietal lobe epilepsy
 C0393690	parietal lobe epilepsy
-C0393690	Parietal lobe epilepsy (disorder)
 C0393691	"Lobe Epilepsy, Occipital"
 C0393691	occipital lobe epilepsiy
 C0393691	Occipital lobe epilepsy
-C0393691	Occipital lobe epilepsy (disorder)
 C0393691	occipital lobe seizure
 C0393691	occipital lobe seizures
-C0393697	epilepsy with generalised tonic clonic seizures alone
 C0393697	epilepsy with generalised tonic clonic seizures on awakening
 C0393697	epilepsy with grand mal seizures on awakening
 C0393702	doose syndrome
@@ -582,24 +476,21 @@ C0393702	myoclonic astatic epilepsies
 C0393702	myoclonic astatic epilepsies
 C0393702	myoclonic astatic epilepsy
 C0393702	myoclonic astatic epilepsy 
-C0393702	myoclonic astatic epilepsy (disorder)
 C0393702	myoclonic atonic seizure
 C0393702	myoclonic-atonic seizures
 C0393703	myoclonic absence seizure
-C0393703	myoclonic absence seizure
+C0393703	myoclonic absence seizures
 C0393706	Early infant epileptic encephalopathy wth suppression bursts
 C0393706	Early infantile epileptic encephalopathy with suppression bursts
 C0393706	Early infantile epileptic encephalopathy with suppression bursts
 C0393706	Ohtahara syndrome
 C0393715	drug-induced epilepsy
-C0393715	drug-induced epilepsy (disorder)
 C0393720	"epilepsies, photosensitive reflex"
 C0393720	"epilepsy, photogenic"
 C0393720	"epilepsy, photosensitive"
 C0393720	"epilepsy, photosensitive reflex"
 C0393720	photic epilepsy
 C0393720	photogenic epilepsy
-C0393720	photogenic epilepsy (disorder)
 C0393720	photosensitive epilepsies
 C0393720	photosensitive epilepsy
 C0393720	photosensitive reflex epilepsies
@@ -608,14 +499,11 @@ C0393720	"reflex epilepsies, photosensitive"
 C0393720	"reflex epilepsy, photosensitive"
 C0393720	television epilepsy
 C0393721	epilepsy only in relation to photic stimulation
-C0393721	epilepsy only in relation to photic stimulation (disorder)
 C0393721	epilepsy only to photic stimul
 C0393721	pure photosensitive epilepsy
 C0393722	eyelid myoclonus with absences
-C0393722	eyelid myoclonus with absences (disorder)
 C0393722	photomyoclonus
 C0393733	non-convulsive simple partial status epilepticus
-C0393733	non-convulsive simple partial status epilepticus (disorder)
 C0393734	complex partial status epilepticus 
 C0393734	psychomotor status
 C0393734	"status epilepticus, complex partial"
@@ -624,60 +512,42 @@ C0406740	"epilepsy, dementia and amelogenesis imperfecta"
 C0406740	"epilepsy, mental deterioration and yellow teeth"
 C0406740	kohlschutter tonz syndrome
 C0406740	kohlschutter's syndrome
-C0406740	kohlschutter's syndrome (disorder)
 C0406740	ktzs
 C0422852	auditory partial seizure
-C0422852	auditory seizure (disorder)
-C0422852	auditory seizure (finding)
 C0422852	auditory seizures
 C0422852	Auditory uncinate fit
 C0422852	"seizure, auditory"
 C0422852	"seizures, auditory"
-C0422853	olfactory seizure (disorder)
-C0422853	olfactory seizure (finding)
 C0422853	olfactory seizures
 C0422853	olfactory uncinate fit
 C0422853	"seizure, olfactory"
 C0422853	"seizures, olfactory"
 C0422855	epileptic vertigo
-C0422855	epileptic vertigo (disorder)
 C0422855	Focal sensory vestibular seizure
 C0422855	"seizure, vertiginous"
 C0422855	"seizure, vestibular"
 C0422855	"seizures, vertiginous"
 C0422855	"seizures, vestibular"
 C0422855	vertiginous epilepsy
-C0422855	vertiginous seizure (disorder)
-C0422855	vertiginous seizure (finding)
 C0422855	vertiginous seizures
 C0422855	vestibular seizure
 C0422855	vestibular seizures
 C0422846	Versive Seizures
 C0422870	absence seizure with impairment of consciousness only
-C0422870	absence seizure with impairment of consciousness only (disorder)
 C0422871	absence seizure with mild clonic components
-C0422871	absence seizure with mild clonic components (disorder)
 C0422872	absence seizure with atonic components
-C0422872	absence seizure with atonic components (disorder)
 C0422872	"absences, atonic"
 C0422873	absence seizure with tonic components
-C0422873	absence seizure with tonic components (disorder)
 C0422874	absence seizure with automatisms
-C0422874	absence seizure with automatisms (disorder)
 C0422874	"absence seizure, automatisms"
 C0422875	absence seizure with autonomic components
-C0422875	absence seizure with autonomic components (disorder)
 C0438414	Myoclonic Encephalopathies
 C0438414	Myoclonic Encephalopathy
 C0438418	visual reflex epilepsy
-C0438418	visual reflex epilepsy (disorder)
 C0438419	unilateral epilepsy
-C0438419	unilateral epilepsy (disorder)
-C0438419	unilateral epilepsy (situation)
 C0472348	localisation-related idiopathic epilepsy
 C0472348	localis-relatd idiopath epilep
 C0472348	localization-related idiopathic epilepsy
-C0472348	localization-related idiopathic epilepsy (disorder)
 C0472349	lesional epilepsy
 C0472349	localisation based symptomatic epilepsy
 C0472349	localisation-related symptomatic epilepsy
@@ -692,25 +562,15 @@ C0472355	epilepsy undeterm focal/gener
 C0472355	epilepsy undetermined whether focal or generalised
 C0472355	epilepsy undetermined whether focal or generalized
 C0472355	epilepsy undetermined whether focal or generalized (disorder)
-C0474327	focal seizures with secondary generalisation
-C0474327	part seiz evolv 2ry gen seiz
-C0474327	partial seizure evolving to  generalized seizure
-C0474327	partial seizure evolving to secondary generalised seizure
-C0474327	partial seizure evolving to secondary generalised seizure
-C0474327	partial seizure evolving to secondary generalized seizure (disorder)
-C0474327	partial seizure evolving to secondary generalized seizure (finding)
 C0475521	localisation related idiopathic epilepsy and epileptic syndromes with seizures of localized onset
 C0475521	localisation-related idiopathic epilepsy and epileptic syndromes with seizures of localized onset nos
 C0475521	localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localised onset
 C0475521	localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset
-C0475521	localization-related(focal)(partial)idiopathic epilepsy and epileptic syndromes with seizures of localized onset (disorder)
 C0477370	other generalized epilepsy and epileptic syndromes
 C0477370	other generalized epilepsy and epileptic syndromes nos
 C0477371	other epilepsy
 C0477371	other forms of epilepsy
-C0477371	other forms of epilepsy (disorder)
 C0477371	other forms of epilepsy nos
-C0477371	other forms of epilepsy nos (disorder)
 C0477372	other status epilepticus
 C0494471	localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with simple partial seizures
 C0494471	localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with simple partial seizures nos
@@ -740,7 +600,6 @@ C0544645	focal sensory seizures
 C0544645	sensory seizures
 C0546878	salaam spasm
 C0553754	fit (in known epileptic) nos
-C0553754	fit (in known epileptic) nos (disorder)
 C0585108	recurrent febrile convulsion
 C0585108	recurrent febrile convulsion (finding)
 C0585108	recurrent febrile fit
@@ -754,18 +613,14 @@ C0586323	"seizures, alcohol withdrawal-induced"
 C0586323	"seizures, alcoholic"
 C0586323	"seizures, alcohol-related"
 C0595948	atypical absence seizure
-C0595948	atypical absence seizure (disorder)
 C0595948	atypical absence seizures
 C0595948	"seizures, atypical absence"
 C0751122	dravet syndrome
 C0751124	atypical absence epilepsy
-C0751124	atypical absence epilepsy (disorder)
 C0751124	"epilepsy, absence, atypical"
 C0751351	"myoclonus, segmental"
-C0751351	segmental myoclonus (disorder)
 C0751352	"myoclonus, nocturnal"
 C0751352	"myoclonus, sleep"
-C0751352	nocturnal myoclonus (disorder)
 C0751352	sleep myoclonus
 C0751383	amaurotic idiocy juvenile type
 C0751383	"amaurotic idiocy, juvenile type"
@@ -806,10 +661,7 @@ C0751495	partial seizures
 C0751495	"seizure, focal"
 C0751495	"seizure, partial"
 C0751495	"seizures, partial, afebrile"
-C0751524	simple partial status epilepticus (disorder)
 C0751524	"status epilepticus, simple partial"
-C0751651	"disease, mitochondrial"
-C0751651	"disorder, mitochondrial"
 C0751651	mitochondrial diseases
 C0751651	mitochondrial disorder
 C0751651	mitochondrial disorders
@@ -826,7 +678,6 @@ C0877017	"Generalized tonic-clonic seizures, secondary"
 C0877017	focal to bilateral tonic-clonic seizure
 C0877017	Secondary generalised tonic clonic seizures
 C0877017	Secondary generalized tonic clonic seizures
-C0877017	Partial seizures with secondary generalization
 C0877017	"Generalized tonic-clonic seizures, secondary"
 C0877017	Secondarily generalised tonic-clonic seizures
 C1096063	drug refractory epilepsies
@@ -841,11 +692,9 @@ C1096063	medication resistant epilepsies
 C1096063	medication resistant epilepsy
 C1096063	refractory epilepsies
 C1299598	seizures due to metabolic disorder
-C1299598	seizures due to metabolic disorder (disorder)
 C1406659	symptomatic epilepsy
 C1446648	brain syndrome
 C1446648	non-specific brain syndrome
-C1446648	non-specific brain syndrome (disorder)
 C1446648	"non-specific brain syndrome, nos"
 C1527366	epileptic spasms
 C1527366	salaam attack
@@ -855,14 +704,12 @@ C1527366	salaam seizures
 C1719410	epilepsy and recurrent seizures
 C1827389	"epilepsy, not intractable"
 C1827389	"epilepsy, not refractory"
-C1827389	"epilepsy, not refractory (disorder)"
 C1835614	congenital stiff man syndrome
 C1835614	congenital stiff person syndrome
 C1835614	exagerrated startle reflex
 C1835614	exaggerated startle reaction
 C1835614	familial startle disease
 C1835614	hereditary hyperekplexia
-C1835614	hereditary hyperekplexia (disorder)
 C1835614	hkpx1
 C1835614	"hyperekplexia, hereditary 1"
 C1835614	hyperexplexia hereditary
@@ -875,10 +722,8 @@ C1835614	"stiff-man syndrome, congenital"
 C1835614	"stiff-person syndrome, congenital"
 C1836402	"myoclonic seizure, intractable"
 C1836402	"myoclonic seizure, refractory"
-C1836402	"myoclonic seizure, refractory (disorder)"
 C1836402	"myoclonic seizures, intractable"
 C1836824	ganglioside gm3 synthase deficiency
-C1836824	ganglioside gm3 synthase deficiency (disorder)
 C1836824	infantile-onset symptomatic epilepsy syndrome
 C1836824	salt and pepper developmental regression syndrome
 C1836824	salt and pepper mental retardation syndrome
@@ -890,21 +735,16 @@ C1849508	antiquitin deficiency
 C1849508	epd
 C1849508	pde
 C1849508	pyridoxine dependency
-C1849508	pyridoxine-dependent epilepsy (disorder)
 C1849508	pyridoxine-dependent seizures
 C1864723	pnpod
 C1864723	pyridoxal 5-phosphate dependent epilepsy
-C1864723	pyridoxal 5-phosphate dependent epilepsy (disorder)
 C1864723	pyridoxal 5'-phosphate-dependent epilepsy
 C1864723	pyridoxal phosphate-responsive seizures
 C1864723	pyridoxine-5'-phosphate oxidase deficiency
 C1960676	non-epileptic myoclonus
-C1960676	non-epileptic myoclonus (disorder)
 C1960877	myoclonus of stapedius muscle
-C1960877	myoclonus of stapedius muscle (disorder)
 C1960877	stapedial myoclonus
 C1998254	myoclonus of tensor tympani muscle
-C1998254	myoclonus of tensor tympani muscle (disorder)
 C1998254	myoclonus tensor tympani muscle
 C1998254	tensor tympani myoclonus
 C2363129	benigh rolandic epilepsy 
@@ -917,125 +757,92 @@ C2363129	Childhood epilepsy with centro-temporal spikes
 C2363129	CECTS
 C2711743	febrile myoclonus
 C2711743	myoclonus associated with fever
-C2711743	myoclonus associated with fever (disorder)
 C2748572	"epilepsy, ataxia, sensorineural deafness and tubulopathy"
 C2748572	"seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome"
-C2748572	"seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome (disorder)"
 C2748572	"seizures, sensorineural deafness, ataxia, mental retardation and electrolyte imbalance"
 C2748572	"sesame (seizures, sensorineural deafness, ataxia, mental retardation, electrolyte imbalance) syndrome"
 C2748572	sesames syndrome
 C2875138	"epilepsy, unspecified, not intractable"
 C2875141	"epilepsy, unspecified, intractable"
 C2931125	"atherosclerosis, deafness, diabetes, epilepsy, nephropathy syndrome"
-C2931125	"atherosclerosis, deafness, diabetes, epilepsy, nephropathy syndrome (disorder)"
 C2931125	feigenbaum bergeron richardson syndrome
 C2931381	"mental retardation x-linked, tranebjaerg type seizures and psoriasis"
 C2931381	tranebjaerg svejgaard syndrome
 C2931381	x-linked intellectual disability with seizure and psoriasis syndrome
-C2931381	x-linked intellectual disability with seizure and psoriasis syndrome (disorder)
 C2931381	x-linked mental retardation associated with psoriasis
 C2931579	battaglia neri syndrome
 C2931579	"epilepsy, microcephaly, skeletal dysplasia syndrome"
-C2931579	"epilepsy, microcephaly, skeletal dysplasia syndrome (disorder)"
 C3164682	focal seizure with experiential sensory symptoms
-C3164682	focal seizure with experiential sensory symptoms (disorder)
 C3164682	temporo-parieto-occipital junction seizure
 C3494976	migrating partial seizures in infancy
-C3494976	migrating partial seizures in infancy (disorder)
 C3494990	"myoclonic seizure, non-intractable"
 C3494990	"myoclonic seizure, non-refractory"
-C3494990	"myoclonic seizure, non-refractory (disorder)"
 C3494991	"dravet syndrome, non-intractable"
 C3494991	"dravet syndrome, non-refractory"
 C3494991	"severe myoclonic epilepsy in infancy, non-intractable"
 C3494991	"severe myoclonic epilepsy in infancy, non-refractory"
-C3494991	"severe myoclonic epilepsy in infancy, non-refractory (disorder)"
 C3494992	"dravet syndrome, refractory"
 C3494992	intractable dravet syndrome 
 C3494992	"severe myoclonic epilepsy in infancy, intractable"
 C3494992	"severe myoclonic epilepsy in infancy, refractory"
-C3494992	"severe myoclonic epilepsy in infancy, refractory (disorder)"
 C3495024	"typical absence seizure, non-intractable"
 C3495024	"typical absence seizure, non-refractory"
-C3495024	"typical absence seizure, non-refractory (disorder)"
 C3495025	"typical absence seizure, intractable"
 C3495025	"typical absence seizure, refractory"
-C3495025	"typical absence seizure, refractory (disorder)"
 C3536561	"benign childhood epilepsy with centrotemporal spikes, non-intractable"
 C3536561	"benign childhood epilepsy with centrotemporal spikes, non-refractory"
-C3536561	"benign childhood epilepsy with centrotemporal spikes, non-refractory (disorder)"
 C3536561	"benign rolandic epilepsy, non-refractory"
 C3536562	"benign childhood epilepsy with centrotemporal spikes, intractable"
 C3536562	"benign childhood epilepsy with centrotemporal spikes, refractory"
-C3536562	"benign childhood epilepsy with centrotemporal spikes, refractory (disorder)"
 C3536562	"benign rolandic epilepsy, refractory"
 C3661551	Complex partial epileptic seizure of temporal lobe
 C3661551	Complex partial seizure of temporal lobe
 C3661551	Partial epileptic seizure of temporal lobe with impairment of consciousness
-C3661551	Partial epileptic seizure of temporal lobe with impairment of consciousness (disorder)
 C3661551	Partial seizures of the temporal lobe with impairment of conciousness
-C3661551	Partial seizures of the temporal lobe with impairment of conciousness (disorder)
 C3661860	"rasmussen syndrome, intractable"
 C3661860	"rasmussen syndrome, refractory"
-C3661860	"rasmussen syndrome, refractory (disorder)"
 C3661861	"acquired aphasia with epilepsy, refractory"
 C3661861	"acquired epileptic aphasia, intractable"
 C3661861	"acquired epileptic aphasia, refractory"
-C3661861	"acquired epileptic aphasia, refractory (disorder)"
 C3661861	"Landau-Kleffner syndrome, refractory"
 C3661862	"acquired aphasia with epilepsy, non-refractory"
 C3661862	"acquired epileptic aphasia, non-intractable"
 C3661862	"acquired epileptic aphasia, non-refractory"
-C3661862	"acquired epileptic aphasia, non-refractory (disorder)"
 C3661862	"Landau-Kleffner syndrome, non-refractory"
 C3662031	intractable absence seizures
-C3662031	intractable absence seizures (disorder)
 C3662042	seizure disorder as sequela of stroke
-C3662042	seizure disorder as sequela of stroke (disorder)
 C3662441	rolandic seizures with status epilepticus
 C3662441	status epilepticus in benign rolandic epilepsy
-C3662441	status epilepticus in benign rolandic epilepsy (disorder)
 C3697594	post-cerebrovascular accident epilepsy
-C3697594	post-cerebrovascular accident epilepsy (disorder)
 C3697670	spinal cord myoclonus
-C3697670	spinal cord myoclonus (disorder)
 C3697670	spinal myoclonus
 C3698072	brainstem myoclonus
-C3698072	brainstem myoclonus (disorder)
 C3698239	cerebral cortex myoclonus
-C3698239	cerebral cortex myoclonus (disorder)
 C3698239	cortical myoclonus
 C3826393	epilepsy in mother complicating pregnancy
-C3826393	epilepsy in mother complicating pregnancy (disorder)
 C3826393	epilepsy in pregnancy
 C3840267	epilepsy in childbirth
 C3840267	epilepsy in mother complicating childbirth
-C3840267	epilepsy in mother complicating childbirth (disorder)
 C4023513	Absence seizure with eyelid myoclonia
 C4023513	Absence seizures with eyelid myoclonia
 C4039464	Complex partial seizure of frontal lobe 
 C4039814	Complex partial seizures of parietal lobe
 C4039814	Partial epileptic seizures of parietal lobe with impairment of consciousness
 C4075972	epileptic dementia with behavioral disturbance
-C4075972	epileptic dementia with behavioral disturbance (disorder)
 C4075972	epileptic dementia with behavioural disturbance
 C4273988	autosomal dominant cortical myoclonus and epilepsy
 C4273988	bafme - benign adult familial myoclonic epilepsy
 C4273988	benign adult familial myoclonic epilepsy
-C4273988	benign adult familial myoclonic epilepsy (disorder)
 C4273988	benign adult familial myoclonus epilepsy
 C4273990	x-linked epilepsy with learning disability and behavior disorder syndrome
-C4273990	x-linked epilepsy with learning disability and behavior disorder syndrome (disorder)
 C4273990	x-linked epilepsy with learning disability and behaviour disorder syndrome
 C4274335	female restricted epilepsy with intellectual disability syndrome
-C4274335	female restricted epilepsy with intellectual disability syndrome (disorder)
 C4274731	epilepsy with eyelid myoclonia
 C4274731	generalised epilepsy with eyelid myoclonia
 C4274731	jeavons syndrome
 C4274731	jeavons' syndrome
 C4275141	adolescent benign focal crisis
 C4275141	benign focal seizure of adolescence
-C4275141	benign focal seizure of adolescence (disorder)
 C4281785	CAE
 C4281785	childhood absence epilepsy
 C4281785	Petit-mal epilepsy
@@ -1043,14 +850,11 @@ C4281785	Pyknolepsy
 C4302597	celiac disease with epilepsy and cerebral calcification syndrome
 C4302597	coeliac disease with epilepsy and cerebral calcification syndrome
 C4302729	aphasia co-occurrent with epilepsy
-C4302729	aphasia co-occurrent with epilepsy (disorder)
 C4302824	al gazali nair syndrome
 C4302824	"osteogenesis imperfecta, retinopathy, seizures, intellectual disability syndrome"
-C4302824	"osteogenesis imperfecta, retinopathy, seizures, intellectual disability syndrome (disorder)"
 C4303593	"dend (developmental delay, epilepsy, neonatal diabetes) syndrome"
 C4303593	dend syndrome
 C4303593	"developmental delay, epilepsy, neonatal diabetes syndrome"
-C4303593	"developmental delay, epilepsy, neonatal diabetes syndrome (disorder)"
 C4304727	sudden unexpected death in epilepsy
 C4304727	SUDEP
 C4317123	myoclonic epileptic seizures
@@ -1061,47 +865,32 @@ C4317123	myoclonic seizures
 C4317339	JAE
 C4317339	juvenile absence epilepsy
 C4509817	"microcephaly, seizure, intellectual disability, heart disease syndrome"
-C4509817	"microcephaly, seizure, intellectual disability, heart disease syndrome (disorder)"
 C4510007	"severe intellectual disability, epilepsy, anal anomaly, distal phalangeal hypoplasia syndrome"
-C4510007	"severe intellectual disability, epilepsy, anal anomaly, distal phalangeal hypoplasia syndrome (disorder)"
 C4510564	infant epilepsy with migrant focal crisis
-C4510564	infant epilepsy with migrant focal crisis (disorder)
 C4510729	epilepsy due to immune disorder
-C4510729	epilepsy due to immune disorder (disorder)
 C4510970	epilepsy due to infectious disease of central nervous system
-C4510970	epilepsy due to infectious disease of central nervous system (disorder)
 C4511049	epilepsy co-occurrent and due to degenerative brain disorder
-C4511049	epilepsy co-occurrent and due to degenerative brain disorder (disorder)
 C4511049	epilepsy with degenerative brain disorder
 C4511050	epilepsy co-occurrent and due to demyelinating disorder
-C4511050	epilepsy co-occurrent and due to demyelinating disorder (disorder)
 C4511050	epilepsy with demyelinating disorder
 C4511434	focal myoclonus
 C4511434	focal myoclonus (finding)
 C4511576	epilepsy due to intracranial neoplasm
 C4511576	epilepsy due to intracranial tumor
-C4511576	epilepsy due to intracranial tumor (disorder)
 C4511576	epilepsy due to intracranial tumour
 C4511577	epilepsy due to perinatal anoxic-ischaemic brain injury
 C4511577	epilepsy due to perinatal anoxic-ischemic brain injury
-C4511577	epilepsy due to perinatal anoxic-ischemic brain injury (disorder)
 C4511577	epilepsy due to perinatal hypoxic ischaemic encephalopathy
 C4511577	epilepsy due to perinatal hypoxic ischemic encephalopathy
 C4511904	epilepsy co-occurrent and due to mesial temporal sclerosis
-C4511904	epilepsy co-occurrent and due to mesial temporal sclerosis (disorder)
 C4511904	epilepsy with mesial temporal sclerosis
 C4518080	"autism spectrum disorder, epilepsy, arthrogryposis syndrome"
-C4518080	"autism spectrum disorder, epilepsy, arthrogryposis syndrome (disorder)"
 C4518080	slc35a3-cdg - solute carrier family 35 member a3 congenital disorder of glycosylation
 C4518323	epilepsy due to cerebrovascular accident
-C4518323	epilepsy due to cerebrovascular accident (disorder)
 C4518323	epilepsy due to stroke
 C4518554	epilepsy telangiectasia syndrome
-C4518554	epilepsy telangiectasia syndrome (disorder)
 C4518566	"myoclonus, cerebellar ataxia, deafness syndrome"
-C4518566	"myoclonus, cerebellar ataxia, deafness syndrome (disorder)"
 C4518639	epilepsy of infancy with migrating focal seizures
-C4518639	epilepsy of infancy with migrating focal seizures (disorder)
 C4732752	Focal emotional seizure
 C0270844	Generalised tonic seizure
 C0270844	Generalised tonic seizures
@@ -1118,9 +907,15 @@ C0234533	generalised seizures
 C0014547	sub-cortical epilepsy
 C0270850	"idiopathic, generalised epilepsy"
 C4316903	absence seizure
-C4316903	absence seizures
 C4316903	typical absence seizure
 C4316903	typical absence seizures 
 C4316903	typical absences
 C4316903	absence type seizure
 C4316903	absence type seizures
+C4316903	absence seizures
+C0014544	seizure disorder
+C0270850	gge
+C0270850	genetic generalised epilepsy
+C0270850	genetic generalized epilepsy
+C0877017	focal onset generalised tonic-clonic seizures
+C0877017	focal onset tonic-clonic seizures

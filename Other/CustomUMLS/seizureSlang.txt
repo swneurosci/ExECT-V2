@@ -13,10 +13,6 @@ C0563606	blank spell
 C0563606	blank spells
 C0563606	Blank episode
 C0563606	blank episodes
-C0332189	Episode
-C0332189	episode
-C0332189	Episodes
-C0332189	episodes
 C4048158	Convulsion
 C4048158	convulsion
 C4048158	Convulsions
@@ -24,8 +20,6 @@ C4048158	convulsions
 C0041657	Loss of consciousness
 C0041657	loss of consciousness
 C0041657	episodes of loss of consciousness
-C0441471	event
-C0441471	events
 C0344329	Collapse
 C0424531	funny do
 C0424531	funny dos
@@ -46,6 +40,7 @@ C0563606	absence
 C0563606	Absences
 C0563606	Absence
 C0563606	absences
+C0563606	absence type seizures
 C0027066	myoclonic jerks
 C0027066	myoclonus
 C0027066	Myoclonic jerks
@@ -54,3 +49,14 @@ C0424531	Turn
 C0424531	Turns
 C0231530	episodes of jerks
 C0231530	jerking episodes
+C2732862	hypnic jerk
+C2732862	hypnic twitch
+C0027066	myoclonic jerk
+C0027066	myoclonic jerking
+C0036572	seizure
+C0036572	seizures
+C0748601	seizure like event
+C0748601	seizure like events
+C0748601	seizure-like event
+C0748601	seizure-like events
+C0748601	seizure markers

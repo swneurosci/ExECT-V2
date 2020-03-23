@@ -1,2 +1,0 @@
-C0560017	EEG normal
-C0151611	EEG abnormal
