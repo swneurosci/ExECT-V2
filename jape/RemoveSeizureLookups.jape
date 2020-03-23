@@ -3,7 +3,8 @@ Input: Lookup3 Token
 
 Options: contral=all
 
-//removes seizure mentions from Lookup3 = generic,  if followed by certain tokens//
+//removes seizure mentions from Lookup3 = generic,  if followed by certain tokens
+//It is also used to emove Otherdiseases if the context means a service and not a diagnosis //
 
 Rule: RemoveSeizure
  (
