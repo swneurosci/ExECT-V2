@@ -60,7 +60,7 @@ ms	CUI=C0026769	PREF=ms	TUI=T047	STY=Disease or Syndrome
 multiple sclerosis	CUI=C0026769	PREF=multiple sclerosis	TUI=T047	STY=Disease or Syndrome
 no psychomotor development	CUI=C0557874	PREF=no psychomotor development	TUI=T048	STY=Mental or Behavioral Dysfunction
 obesity, colitis, hypothyroidism, cardiac hypertrophy, developmental delay syndrome	CUI=C4302879	PREF=obesity, colitis, hypothyroidism, cardiac hypertrophy, developmental delay syndrome	TUI=T047	STY=Disease or Syndrome
-parkinson disease	CUI=C0030567	PREF=idiopathic parkinson disease	TUI=T047	STY=Disease or Syndrome
+parkinson's disease	CUI=C0030567	PREF=idiopathic parkinson disease	TUI=T047	STY=Disease or Syndrome
 parkinson's disease idiopathic	CUI=C0030567	PREF=parkinson's disease, idiopathic	TUI=T047	STY=Disease or Syndrome
 parkinson's disease, lewy body	CUI=C0030567	PREF=parkinson's disease, lewy body	TUI=T047	STY=Disease or Syndrome
 parkinson's syndrome	CUI=C0030567	PREF=parkinson's syndrome	TUI=T047	STY=Disease or Syndrome
@@ -106,6 +106,7 @@ non-epileptic seizure	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disea
 non-epileptic seizures	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
 non-epileptic attack	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
 non-epileptic attacks	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+non epileptic attacks	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
 psychogenic seizure	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
 psychogenic seizures	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
 abnormal connection of hepatic vein to atrium	CUI=C0344690	PREF=abnormal connection of hepatic vein to atrium	TUI=T019	STY=Congenital Abnormality
