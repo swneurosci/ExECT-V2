@@ -42,3 +42,4 @@ Priority: 100
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
   umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
 }
+
