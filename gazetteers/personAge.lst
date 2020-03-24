@@ -9,12 +9,14 @@ nineties:lowerAge=90:upperAge=99:timeUnit=Year
 child:lowerAge=2:upperAge=12:timeUnit=Year
 teenager:lowerAge=13:upperAge=19:timeUnit=Year
 teenage:lowerAge=13:upperAge=19:timeUnit=Year
+early adolescent:lowerAge=10:upperAge=14:timeUnit=Year
+puberty:lowerAge=10:upperAge=17:timeUnit=Year
 teens:lowerAge=13:upperAge=19:timeUnit=Year
-baby:lowerAge=0:upperAge=1:timeUnit=Year
+baby:lowerAge=0:upperAge=12:timeUnit=Month
 toddler:loweAge=1: upperAge=3:timeUnit=Year
 primary school:lowerAge=5: upperAge=11:timeUnit=Year
 secondary school:lowerAge=12:upperAge=16:timeUnit=Year
-infant:lowerAge=0:upperAge=1:timeUnit=Year
+infant:lowerAge=0:upperAge=12:timeUnit=Month
 adolescence:lowerAge=10:upperAge=19:timeUnit=Year
 adolescent:lowerAge=10:upperAge=19:timeUnit=Year
 neonate:lowerAge=0:upperAge=28:timeUnit=Day
