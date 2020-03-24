@@ -13,7 +13,8 @@ minorType = :match.Seizures.minorType,
 TUI= :match.Seizures.TUI, 
 PREF = :match.Seizures.PREF,
 CUI = :match.Seizures.CUI, 
-STY = :match.Seizures.STY}
+STY = :match.Seizures.STY,
+CAT = :match.Seizures.CAT}
 
 
 Rule: Comorb2Lookup3  /* rule - creates an appelt Lookup3 from comorbidities annotation (based on comorbidities.lst) */
