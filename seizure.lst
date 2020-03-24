@@ -18,8 +18,6 @@ Jacksonian seizures	CUI=C0022333	PREF=Jacksonian seizure	TUI=T047	STY=Disease or
 myoclonus, palatal	CUI=C0030214	PREF=Myoclonus, Palatal	TUI=T184	STY=sign or symptom
 palatal nystagmus	CUI=C0030214	PREF=Myoclonus, Palatal	TUI=T184	STY=sign or symptom
 paramyoclonus multiplex	CUI=C0030463	PREF=paramyoclonus multiplex	TUI=T047	STY=Disease or Syndrome
-seizure	CUI=C0036572	PREF=seizures	TUI=T184	STY=Sign or Symptom
-seizures	CUI=C0036572	PREF=seizures	TUI=T184	STY=Sign or Symptom
 generalized status epilepticus	CUI=C0038220	PREF=Status Epilepticus	TUI=T047	STY=Disease or Syndrome
 status epilepticus 	CUI=C0038220	PREF=Status Epilepticus	TUI=T047	STY=Disease or Syndrome
 status epilepticus, generalized	CUI=C0038220	PREF=Status Epilepticus	TUI=T047	STY=Disease or Syndrome
@@ -312,8 +310,6 @@ tensor tympani myoclonus	CUI=C1998254	PREF=Myoclonus of tensor tympani muscle	TU
 photosensitive seizures	CUI=C2080645	PREF=photosensitive seizures	TUI=T047	STY=Disease or Syndrome
 febrile myoclonus	CUI=C2711743	PREF=febrile myoclonus	TUI=T047	STY=Disease or Syndrome
 myoclonus associated with fever	CUI=C2711743	PREF=febrile myoclonus	TUI=T047	STY=Disease or Syndrome
-hypnic jerk	CUI=C2732862	PREF=Hypnic jerk	TUI=T033	STY=Finding
-hypnic twitch	CUI=C2732862	PREF=Hypnic jerk	TUI=T033	STY=Finding
 post traumatic seizure	CUI=C2921125	PREF=Post traumatic seizures	TUI=T047	STY=Disease or Syndrome
 Post traumatic seizures	CUI=C2921125	PREF=Post traumatic seizures	TUI=T047	STY=Disease or Syndrome
 post-traumatic seizure	CUI=C2921125	PREF=Post traumatic seizures	TUI=T047	STY=Disease or Syndrome
