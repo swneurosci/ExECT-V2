@@ -54,3 +54,21 @@ Certainty = :item.Lookup3.Certainty,
 AgeUnit = :match.timePeriod.time-unit,
 Age =:match.Numeric.value}	
 
+Rule: onsetAgeA3
+Priority: 99
+
+(   
+	{Lookup2.language == onset}
+	{Person}
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient , Lookup3.minorType == Disease}):item
+	{History}
+	{Numeric}
+	{timePeriod}
+):match   
+ -->
+:item.Onset = {rule = onsetAgeA3, OnsetType = "age_episodes_started", 
+PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+STY = :item.Lookup3.STY, 
+Certainty = :item.Lookup3.Certainty,
+AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value}	
