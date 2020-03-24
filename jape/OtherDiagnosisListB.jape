@@ -52,9 +52,10 @@ Priority: 100
     {listPoint}
     ({listPoint})?
 	{Lookup3}
+    ({Numeric})?
     ({PartialDate})?
     {listPoint}
-    ({Lookup3.minorType == Disease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient }|
+    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient }|
     {Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
    ({Numeric})?
 	
