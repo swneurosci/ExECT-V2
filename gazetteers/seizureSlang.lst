@@ -55,6 +55,7 @@ myoclonic jerk:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Seiz
 myoclonic jerking:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Seizures
 seizure:CUI=C0036572:PREF=seizures:TUI=T184:STY=Sign or Symptom:CAT=Seizures
 seizures:CUI=C0036572:PREF=seizures:TUI=T184:STY=Sign or Symptom:CAT=Seizures
+daytime seizures:CUI=C0036572:PREF=seizures:TUI=T184:STY=Sign or Symptom:CAT=Seizures
 seizure like event:CUI=C0748601:PREF=seizure like event:TUI=T033:STY=Finding:CAT=Slang
 seizure like events:CUI=C0748601:PREF=seizure like event:TUI=T033:STY=Finding:CAT=Slang
 seizure-like event:CUI=C0748601:PREF=seizure like event:TUI=T033:STY=Finding:CAT=Slang

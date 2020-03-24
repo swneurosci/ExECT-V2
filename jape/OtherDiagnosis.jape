@@ -3,13 +3,13 @@ Input: Lookup3 DiagnosisTriggers Sentence Lookup listPoint  Lookup2
 
 
 
-Options: control=brill
+Options: control=appelt
 
 Rule: OtherDiag1
 Priority: 100
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
+	{DiagnosisTriggers.majorType == diagnosis, DiagnosisTriggers.type == diagnosis }
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
 	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
 	{Lookup2.type != past}
@@ -26,7 +26,7 @@ Rule: OtherDiag2
 Priority: 99
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
+	{DiagnosisTriggers.majorType == diagnosis, DiagnosisTriggers.type == diagnosis}
 	{Lookup3}
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient }
 	|{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
@@ -42,8 +42,8 @@ Rule: OtherDiag3
 Priority: 100
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
-	{Lookup.minorType == Disease}
+	{DiagnosisTriggers.majorType == diagnosis, DiagnosisTriggers.type == diagnosis}
+	({Lookup.minorType == Disease})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
 	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     
@@ -59,7 +59,7 @@ Rule: OtherDiag4
 Priority: 100
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
+	{DiagnosisTriggers.majorType == diagnosis, DiagnosisTriggers.type == diagnosis}
 	{Lookup3}
 	({Lookup3})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
@@ -77,9 +77,10 @@ Rule: OtherDiag5
 Priority: 100
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
+	{DiagnosisTriggers.majorType == diagnosis, DiagnosisTriggers.type == diagnosis }
+	({Lookup2.minorType == probability})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     
  ):match  
  -->

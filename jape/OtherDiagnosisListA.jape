@@ -12,11 +12,13 @@ Priority: 100
 	{DiagnosisTriggers.majorType == diagnosis}
 	({Lookup3})?
 	{listPoint}
+	({DiagnosisTriggers.majorType == diagnosis})?
+	({Numeric})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}
      |{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     ({PartialDate})?
     ({PointInTime})?
-	
+	(({Numeric}):a)?
 
  ):match  
  -->
@@ -25,6 +27,7 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 YearDate = :match.PartialDate.year,
+YearDate = :a.Numeric.value,
 MonthDate =:match.PartialDate.month,
 PointInTime =:match.PointInTime.Since}
 

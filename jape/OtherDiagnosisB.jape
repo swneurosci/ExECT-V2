@@ -1,14 +1,14 @@
 Phase: OtherDiagnosisB
-Input: Lookup3 Lookup2 Sentence Lookup
+Input: Lookup3 Lookup2 Sentence Lookup listPoint
+//listPoint is used here as a blocker, as the listed items are annotated by otherDiagList//
 
-
-Options: control=brill
+Options: control=appelt
 
 Rule: OtherDiagB1
 Priority: 100
 
 (   
-
+	{!listPoint}
 	{Lookup2.minorType == opinion}
 	({Lookup2.minorType == probability})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|

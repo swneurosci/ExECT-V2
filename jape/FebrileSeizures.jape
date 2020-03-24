@@ -1,5 +1,5 @@
 Phase: FebrileSeizures
-Input: Lookup3 Lookup2 Person  Sentence Numeric timePeriod MedicalHistory 
+Input: Lookup3 Lookup2 Person Sentence Numeric timePeriod MedicalHistory 
 
 
 Options: control=appelt
@@ -58,7 +58,6 @@ Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality
 Certainty = :item.Lookup3.Certainty}
 
 
-
 Rule: NoFebSeizures3
 Priority: 100
 
@@ -69,8 +68,7 @@ Priority: 100
 	({Lookup3})?
 	({Lookup3.Negation == Negated, Lookup3.PREF =~ "febrile" , 
 	Lookup3.Experiencer == Patient}):item
-	
-	
+		
     
  ):match  
  -->
@@ -79,13 +77,34 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
+Rule: NoFebSeizures3a
+Priority: 100
+//this rule reverses the experiences from other to patient as for saome reson - other follewe just after, it applied it to the patient//
+(   
+	{Person}
+    {Lookup2.majorType == historic}
+	({Lookup2})?
+	{MedicalHistory}
+	({Lookup3.Negation == Negated, Lookup3.PREF =~ "febrile" , 
+	Lookup3.Experiencer == Other}):item
+	
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = NoFebSeizures3a, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = "Patient", Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+
 Rule: NoFebSeizures4
 Priority: 100
 
 //This rule could be a bit sensitive//
 (   
-	{MedicalHistory}
-	({Lookup3.Negation == Negated, Lookup3.PREF =~ "febrile" , 
+	{MedicalHistory.minorType == past}
+	({Lookup3})?
+	({Lookup3.Negation == Negated, Lookup3.PREF =~ "febrile", 
 	Lookup3.Experiencer == Patient}):item
 	  
  ):match  
