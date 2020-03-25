@@ -27,3 +27,16 @@ Rule: RemoveSeizure
 :umls { 
   inputAS.removeAll(umlsAnnots);
 }
+
+
+Rule: RemoveSeizure
+ (
+     ({Lookup3.minorType == OtherDisease}):umls
+     {Token.string =~ team}
+ 
+
+):matches
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+}

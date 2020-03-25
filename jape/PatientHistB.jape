@@ -117,7 +117,8 @@ Priority: 100
 
 (  
 	{Person}
-	{Lookup2.majorType == historic , Lookup2.type == history}
+	({Lookup2.majorType == historic , Lookup2.type == history}|{Lookup2.type == has})
+	({Lookup2})
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
 	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item	
     
@@ -285,3 +286,46 @@ Certainty = :item.Lookup3.Certainty,
 DayDate =:match.DateBio.DayDate,
 MonthDate =:match.DateBio.MonthDate,
 YearDate =:match.DateBio.YearDate}
+
+Rule: PtHistoryB13
+Priority: 100
+
+(   
+	{PartialDate}
+	{Person}
+    {Lookup2.type == suffered}
+	({timeElapsed})?
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryB13, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty,
+MonthDate = :match.PartialDate.month}
+
+Rule: PtHistoryB12
+Priority: 98
+
+(   
+	
+    ({Person})
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+	{Lookup2.majorType == historic, Lookup2.type == began}
+	{Age}
+	({Numeric})?
+	{Range}
+	
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryB12, OnsetType = "age_episodes_started", 
+PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+STY = :item.Lookup3.STY, 
+Certainty = :item.Lookup3.Certainty,
+AgeUnit = "Year",
+AgeLower =:match.Range.N1,
+AgeUpper = :match.Range.N2,
+Age = :match.Numeric.value}

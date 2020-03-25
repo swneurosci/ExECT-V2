@@ -1184,6 +1184,7 @@ cardiac infarction	CUI=C0027051	PREF=Myocardial Infarction	TUI=T047	STY=Disease 
 dissociative convulsions	CUI=C0349245	PREF=dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
 pseudoseizures	CUI=C0349245	PREF=dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
 chronic headache	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease or Syndrome
+chronic headaches	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease or Syndrome
 alcohol abuse	CUI=C0085762	PREF=alcohol abuse	TUI=T048	STY=Mental or Behavioral Dysfunction
 history of alcohol abuse	CUI=C0221628	PREF=history of alcohol abuse	TUI=T033	STY=Finding
 diabetes	CUI=C0011847	PREF=Diabetes	TUI=T047	STY=Disease or Syndrome
