@@ -919,3 +919,5 @@ genetic generalised epilepsy	CUI=C0270850	PREF=Idiopathic generalized epilepsy	T
 genetic generalized epilepsy	CUI=C0270850	PREF=Idiopathic generalized epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 focal onset generalised tonic-clonic seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 focal onset tonic-clonic seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+frontal lobe onset seizures	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
+frontal lobe onset seizure	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome

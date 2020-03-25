@@ -4112,3 +4112,5 @@ C1699861	Brivaracetam
 C1699861	Brivaracetam
 C1699861	Brivaracetam
 C1699861	Brivaracetam
+C0751495	frontal lobe onset seizures
+C0751495	frontal lobe onset seizure

@@ -398,3 +398,5 @@ C4023512	myoclonic absences
 C4316903	typical absence seizure
 C4316903	typical absence seizures 
 C4316903	typical absences
+C0751495	frontal lobe onset seizures
+C0751495	frontal lobe onset seizure

@@ -919,3 +919,5 @@ C0270850	genetic generalised epilepsy
 C0270850	genetic generalized epilepsy
 C0877017	focal onset generalised tonic-clonic seizures
 C0877017	focal onset tonic-clonic seizures
+C0751495	frontal lobe onset seizures
+C0751495	frontal lobe onset seizure
