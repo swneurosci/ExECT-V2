@@ -250,9 +250,10 @@ Priority: 98
 (   
 	
     ({Person})
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
+	({Lookup2.majorType == historic, Lookup2.minorType == symptoms}|{Lookup2.type == suffered})
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
 	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+	({Person})?
 	{Age}
 	{Range}
 	
@@ -329,3 +330,4 @@ AgeUnit = "Year",
 AgeLower =:match.Range.N1,
 AgeUpper = :match.Range.N2,
 Age = :match.Numeric.value}
+

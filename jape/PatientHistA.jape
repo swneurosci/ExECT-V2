@@ -102,13 +102,13 @@ Rule: PtHistoryA3
 Priority: 99
 
 (   
-	{Person.minorType == pronoun}
-	{Lookup2.minorType ==  symptoms}
+	({Person})?
+	({Lookup2.minorType ==  symptoms}|{Lookup2.majorType == historic})
 	({Lookup2})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.rule != LookupWithin, Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-	({Age})
-	({Numeric})
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+	{Age}
+	{Numeric}
     
  ):match  
  -->
@@ -125,10 +125,11 @@ Priority: 99
 (   
 	{Person}
     {Lookup2.majorType == historic}
-	({Numeric})
-	({Lookup2})
-	({Lookup2})
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}
+	{Numeric}
+	{timePeriod}
+	{Lookup2}
+	({Lookup2})?
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
 	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
 	
     
@@ -138,12 +139,6 @@ Priority: 99
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty, 
-YearDate = "",
-MonthDate = "",
-Age = "",
-AgeUnit = "",
-AgeLower = "",
-AgeUpper = "",
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value,
 PointInTime = "" }
@@ -248,7 +243,7 @@ Priority: 100
 (   
 	{Person}
     {Lookup2.majorType == historic}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
 	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
 	{timeElapsed}
 	{Lookup2.minorType == time}
