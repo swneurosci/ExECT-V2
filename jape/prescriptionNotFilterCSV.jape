@@ -1,7 +1,7 @@
 Imports: {import static gate.Utils.*; }
 Phase: DrugFilter2
 Input:   PrescriptionNot Split
-Options: control=appelt
+Options: control=all
 
 /* rule1 = midazolam to block when only midazolam mentioned with no dose or Frequency */ 
 

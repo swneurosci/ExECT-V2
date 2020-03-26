@@ -261,7 +261,8 @@ NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :matc
 TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, NumberOfSeizures = "0" , Certainty = "5", Negation = :match.Lookup3.Negation
 } 
  
-
+/* rule more specific in Seizure-frequency2 rule=NoSeizure6 */
+/*
 Rule: seizureFree1d2b 
 Priority: 100 
 ( 
@@ -276,7 +277,7 @@ sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, 
 NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
 TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, NumberOfSeizures = "0" , Certainty = "5", Negation = :match.Lookup3.Negation
 } 
-
+*/
  
 Rule: seizureFree1d3a 
 Priority: 100 
@@ -343,7 +344,8 @@ NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :matc
 TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, NumberOfSeizures = "0" , Certainty = "5", Negation = :match.Lookup3.Negation
 } 
 
-
+/*Same as Rule = 1d2b */
+/*
 Rule: seizureFree1d5b 
 Priority: 99 
 ( 
@@ -358,7 +360,7 @@ sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, 
 NumberOfTimePeriods = :match.NumberRange.value, NumberOfTimePeriodsLower = :match.NumberRange.N1, NumberOfTimePeriodsUpper = :match.NumberRange.N2, 
 TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, NumberOfSeizures = "0" , Certainty = "5", Negation = :match.Lookup3.Negation
 } 
-
+*/
  
 /* 
 Rule: seizureFree1d 

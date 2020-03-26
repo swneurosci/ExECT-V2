@@ -1,0 +1,22 @@
+Imports: {import static gate.Utils.*; }
+Phase: ChangeStartPrescML
+Input: PrescriptionML
+Options: control=all
+
+Rule: RemoveOldPrescrpitionML
+(
+    ({PrescriptionML.rule == "secondDose", !PrescriptionML.ruleML == "keep"})
+):match
+-->
+:match { 
+  inputAS.removeAll(matchAnnots);
+}
+
+Rule: RemoveOldPrescrpitionML
+(
+    ({PrescriptionML.rule == "ThirdDose", !PrescriptionML.ruleML == "keep"})
+):match
+-->
+:match { 
+  inputAS.removeAll(matchAnnots);
+}

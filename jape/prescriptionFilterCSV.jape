@@ -1,5 +1,5 @@
 Phase: DrugFilter2
-Input:   Prescription Split
+Input:   PrescriptionML Split
 Options: control=all
 
 /* rule1 = midazolam to block when only midazolam mentioned with no dose or Frequency */ 
@@ -8,20 +8,20 @@ Rule: PrescriptionCSVFilter
 Priority: 100
 (
     ({Split})
-    ({Prescription})*
-    ({Prescription, !Prescription.rule1 == "midazolam"}):match
-    ({Prescription})*
+    ({PrescriptionML})*
+    ({PrescriptionML, !PrescriptionML.rule1 == "midazolam"}):match
+    ({PrescriptionML})*
     ({Split})
 ):match1
 -->
 :match1.PrescriptionCSV = { rule = PrescriptionCSVFilter
-DrugName = :match.Prescription.DrugName,  
-CUI = :match.Prescription.CUI,
-DrugDose = :match.Prescription.DrugDose, 
-DoseUnit =:match.Prescription.DoseUnit, 
-Frequency = :match.Prescription.Frequency, 
-time-unit = :match.Prescription.time-unit, 
-dose-interval = :match.Prescription.dose-interval, 
-Context = :match.Prescription.Context,
+DrugName = :match.PrescriptionML.DrugName,  
+CUI = :match.PrescriptionML.CUI,
+DrugDose = :match.PrescriptionML.DrugDose, 
+DoseUnit =:match.PrescriptionML.DoseUnit, 
+Frequency = :match.PrescriptionML.Frequency, 
+time-unit = :match.PrescriptionML.time-unit, 
+dose-interval = :match.PrescriptionML.dose-interval, 
+Context = :match.PrescriptionML.Context,
 string = :match1@string}
 

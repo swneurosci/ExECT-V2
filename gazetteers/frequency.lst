@@ -31,7 +31,7 @@ prn:time-unit=as required:frequency=As_Required
 p.r.n.:time-unit=as required:frequency=As_Required
 in the evening:frequency=1:time-unit=day:when=night
 b.d.:frequency=2:time-unit=day:interval=1
-per week:frequency=1:time-unit=week:interval=1:=
+per week:frequency=1:time-unit=week:interval=1
 per year:frequency=1:time-unit=year:interval=1
 in a week:frequency=1:time-unit=week:interval=1
 in a day:frequency=1:time-unit=day:interval=1
@@ -50,7 +50,7 @@ afternoon:frequency=1:time-unit=day:when=day
 evening:frequency=1:time-unit=day:when=night
 night:frequency=1:time-unit=day:when=night
 per month:time-unit=month:interval=1
-per day:time-unit=day:interval=1:frequency=1:=
+per day:time-unit=day:interval=1:frequency=1
 a day:time-unit=day
 a month:time-unit=month:interval=1
 once a day:frequency=1:time-unit=day:interval=1:when=day
@@ -73,4 +73,4 @@ morning and afternoon:frequency=2
 morning and lunchtime:frequency=2
 bd around menstruation:frequency=As_Required
 alternate days:frequency=0.5
-
+alternate nights:frequency=0.5:=

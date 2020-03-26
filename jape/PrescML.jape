@@ -1,0 +1,44 @@
+Imports: {import static gate.Utils.*; }
+Phase: ChangeStartPrescML
+Input: PrescriptionML
+Options: control=all
+
+Rule: doseMatch2
+(
+    ({PrescriptionML.rule == "secondDose"})
+):match
+-->
+:match{
+Long start = getOnlyAnn(matchAnnots).getStartNode().getOffset();
+Long end = getOnlyAnn(matchAnnots).getEndNode().getOffset();
+Long difference = end - start;
+Long startplus = start + difference - 2;
+Long endplus = end -1;
+AnnotationSet defaultSet = doc.getAnnotations("Bio");
+FeatureMap features = Factory.newFeatureMap();
+features.putAll(getOnlyAnn(matchAnnots).getFeatures());
+features.put("ruleML", "keep");
+gate.Utils.addAnn(defaultSet, startplus, endplus, "PrescriptionML", features);
+}
+
+
+Rule: doseMatch3
+(
+    ({PrescriptionML.rule == "ThirdDose"})
+):match
+-->
+:match{
+Long start = getOnlyAnn(matchAnnots).getStartNode().getOffset();
+Long end = getOnlyAnn(matchAnnots).getEndNode().getOffset();
+Long difference = end - start;
+Long startplus = start + difference - 1;
+Long endplus = end;
+AnnotationSet defaultSet = doc.getAnnotations("Bio");
+FeatureMap features = Factory.newFeatureMap();
+features.putAll(getOnlyAnn(matchAnnots).getFeatures());
+features.put("ruleML", "keep");
+gate.Utils.addAnn(defaultSet, startplus, endplus, "PrescriptionML", features);
+}
+
+
+

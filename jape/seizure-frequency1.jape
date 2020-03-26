@@ -144,7 +144,8 @@ Priority: 100
 :match.SeizureFrequency11 = { rule = hSeizureFreq3d, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
  NumberOfSeizures = :a.NumberRange.value, LowerNumberOfSeizures  = :a.NumberRange.N1, UpperNumberOfSeizures  = :a.NumberRange.N2
  TimePeriod = :match.SeizFrequency1.TimePeriod, NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods,
-LowerNumberOfTimePeriods = :match.SeizFrequency1.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency1.UpperNumberOfTimePeriods}
+LowerNumberOfTimePeriods = :match.SeizFrequency1.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency1.UpperNumberOfTimePeriods,
+CAT = :match.Lookup3.CAT}
 
 /* 
 *  seizures may be once every two to three weeks - doesnt work as seizure here is hypothetical
@@ -294,6 +295,23 @@ Priority: 95
 :match.SeizureFrequency11 = { rule = hSeizureFreqPointInTime2, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, 
 NumberOfSeizures = :match.NumberRange.value, PointInTime = :match.PointInTime.Since, SinceOrDuration = "Date"}
 
+/* GTCS. she has only had two during this year. */
+ 
+Rule: hSeizureFreqPointInTime3 
+Priority: 95 
+( 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Split})?
+    ({NumberRange})
+    ({timeElapsed}) 
+    ({PointInTime}) 
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = hSeizureFreqPointInTime3, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, 
+NumberOfSeizures = :match.NumberRange.value, PointInTime = :match.PointInTime.Since, SinceOrDuration = "Date"}
+
+
+
 Rule: hSeizurePartialDate3
 Priority: 99 
 ( 
@@ -353,6 +371,19 @@ Priority: 95
 :match.SeizureFrequency11 = { rule = hSeizurePartialDate2b, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2,
 YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.Day}
+
+/* recent seizure in Date */
+
+Rule: hSeizurePartialDate2c
+Priority: 95 
+( 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({timeElapsed.time == "in"}) 
+    ({PartialDate})
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = hSeizurePartialDate2c, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+NumberOfSeizures = "1", YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.Day}
 
 
 /* He reports his last seizure was in [DATE] */
