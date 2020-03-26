@@ -8,8 +8,7 @@ Priority: 99
 
 (   
 	{Person}
-	(({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient , Lookup3.CAT == seizures})|
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,  Lookup3.Experiencer == Patient , Lookup3.minorType == Disease})):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,  Lookup3.Experiencer == Patient , Lookup3.minorType == Disease}):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	{Person.majorType == person}
 	({Lookup2.majorType == historic})?
@@ -32,8 +31,7 @@ Priority: 98
 
 (   
 	{Person}
-	(({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,   Lookup3.Experiencer == Patient ,Lookup3.CAT == seizures})|
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.minorType == Disease})):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.minorType == Disease}):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	{Person.majorType == person}
 	{Lookup2.majorType == historic}
@@ -76,8 +74,7 @@ Priority: 9
 
 (   
 	{Person}
-	(({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,   Lookup3.Experiencer == Patient, Lookup3.CAT == Seizures})|
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.minorType == Disease})):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.minorType == Disease}):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	{History.majorType == person}
 	{Range}
@@ -100,8 +97,7 @@ Priority: 98
 	({Lookup2.minorType == probability})
 	({Lookup2.majorType == historic, Lookup2.minorType == symptoms})?
 	({Lookup2})?
-	(({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient, Lookup3.CAT == Seizures})|
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.minorType == Disease})):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.minorType == Disease}):item
 	{History.majorType == person}
 	{Numeric}
 	
@@ -189,8 +185,7 @@ Priority: 99
 
 (   
 	{Person}
-	(({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,  Lookup3.CAT == Seizures})|
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,  Lookup3.Experiencer == Patient  ,Lookup3.minorType == Disease})):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,  Lookup3.Experiencer == Patient  ,Lookup3.minorType == Disease}):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	({timeElapsed})
 	({Numeric})
