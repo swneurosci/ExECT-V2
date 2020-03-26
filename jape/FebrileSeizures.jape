@@ -100,7 +100,7 @@ Certainty = :item.Lookup3.Certainty}
 Rule: NoFebSeizures4
 Priority: 100
 
-//This rule could be a bit sensitive//
+//This 2 rulef could be a bit sensitive//
 (   
 	{MedicalHistory.minorType == past}
 	({Lookup3})?
