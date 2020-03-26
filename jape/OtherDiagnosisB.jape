@@ -1,10 +1,25 @@
 Phase: OtherDiagnosisB
-Input: Lookup3 Lookup2 Sentence Lookup
+Input: Lookup3 Lookup2 Sentence Lookup Investigation
 
 
 Options: control=appelt
 
 Rule: OtherDiagB1
+Priority: 100
+
+(   
+
+	{Investigation.Investigation != EEG}
+	({Lookup3.minorType == OtherDisease, Lookup3.majorType == umls}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagB1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: OtherDiagB1a
 Priority: 100
 
 (   
@@ -17,7 +32,7 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagB1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = OtherDiagB1a, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
