@@ -15,9 +15,10 @@ Priority: 99
     {Lookup2.majorType == historic}
     {DiagnosisTriggers}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,Lookup.Experiencer == Patient }):item
-	({History})?
+	({Person})?
+	({Lookup2})?
 	{Numeric}
-	{timePeriod}
+	
 	
  ):match  
  -->
@@ -25,18 +26,8 @@ Priority: 99
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
-/*DateYear = "",
-MonthDate ="",
-DayDate = "",
-PointInTime = "",
-TimePeriod = "",
-NumberOfTimePeriods ="",
-LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = "",
-AgeUnit = "",
-AgeLower ="",
-AgeUpper = "",
-Age = ""*/}
+AgeUnit = "Year",
+Age = :match.Numeric.value}
 
 
 
@@ -57,14 +48,6 @@ Priority: 99
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
-/*DateYear = "",
-MonthDate ="",
-DayDate = "",
-PointInTime = "",
-TimePeriod = "",
-NumberOfTimePeriods ="",
-LowerNumberOfTimePeriods = "",
-UpperNumberOfTimePeriods = "",*/
 AgeUnit = :match.Lookup2.timeUnit,
 AgeLower =:match.Lookup2.lowerAge,
 AgeUpper = :match.Lookup2.upperAge,

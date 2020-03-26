@@ -51,5 +51,25 @@ Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality
 Certainty = :match.Lookup2.Level}
 
 
+//This one could be too broad, it also shifts probability directly from Lookup2.probability//
+
+Rule: PtHistoryD3
+Priority: 100
+
+(   
+	
+	({Lookup2.minorType == probability}):a
+	({Person})?
+	{Lookup3.minorType == Disease}
+    {Lookup2}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryD3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :a.Lookup2.Level}
 
 

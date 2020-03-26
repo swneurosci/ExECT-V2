@@ -389,10 +389,15 @@ Focal emotional seizure	CUI=C4732752	PREF=Focal emotional seizure	TUI=T047	STY=D
 Generalised tonic seizure	CUI=C0270844	PREF=Tonic seizures	TUI=T047	STY=Disease or Syndrome
 Generalised tonic seizures	CUI=C0270844	PREF=Tonic seizures	TUI=T047	STY=Disease or Syndrome
 frontal lobe onset seizure	CUI=C0085541	PREF=Epilepsy, Frontal Lobe	TUI=T047	STY=Disease or Syndrome
+frontal lobe onset seizurs	CUI=C0085541	PREF=Epilepsy, Frontal Lobe	TUI=T047	STY=Disease or Syndrome
 myoclonic absence	CUI=C4023512	PREF=Myoclonic Absence	TUI=T047	STY=Disease or Syndrome
 myoclonic absences	CUI=C4023512	PREF=Myoclonic Absence	TUI=T047	STY=Disease or Syndrome
 typical absence seizure	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 typical absence seizures 	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 typical absences	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
-frontal lobe onset seizures	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
-frontal lobe onset seizure	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
+temporal lobe onset seizures	CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
+temporal lobe onset seizure	CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
+parietal lobe onse seizures	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
+parietal lobe onset seizures	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
+occipital lobe onset seizures	CUI=C0393691	PREF=Occipital Lobe Epilepsy	TUI=T047	STY=Disease or Syndrome
+occipital lobe onset seizure	CUI=C0393691	PREF=Occipital Lobe Epilepsy	TUI=T047	STY=Disease or Syndrome

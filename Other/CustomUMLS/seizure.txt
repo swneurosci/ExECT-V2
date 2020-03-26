@@ -2,6 +2,8 @@ C0014549	major motor seizure
 C0014549	tonic-clonic epileptic seizures 
 C0014556	temporal lobe seizure
 C0014556	temporal lobe seizures
+C0014556	temporal lobe onset seizures
+C0014556	temporal lobe onset seizure
 C0016399	focal motor
 C0016399	focal motor seizure
 C0016399	focal motor seizures
@@ -12,18 +14,18 @@ C0016399	partial motor seizure
 C0016399	partial motor seizures   
 C0016399	simple partial seizure with motor dysfunction
 C0016399	simple partial seizures with motor signs
-C0021712	"myoclonus, intention"
+C0021712	myoclonus, intention
 C0022333	Jacksonian seizure
 C0022333	Jacksonian seizures
-C0030214	"myoclonus, palatal"
+C0030214	myoclonus, palatal
 C0030214	palatal nystagmus
 C0030463	paramyoclonus multiplex
 C0036572	seizure
 C0036572	seizures
 C0038220	generalized status epilepticus
 C0038220	status epilepticus 
-C0038220	"status epilepticus, generalized"
-C0038220	"status epilepticus, unspecified"
+C0038220	status epilepticus, generalized
+C0038220	status epilepticus, unspecified
 C0085541	frontal lobe seizure
 C0085541	frontal lobe seizures
 C0085543	motor simple partial status
@@ -78,14 +80,14 @@ C0270823	epileptic absence status
 C0270823	epileptic confusional state
 C0270823	non-convulsive status epilepticus wth impaired consciousness
 C0270823	petit mal status epilepticus
-C0270823	"petit mal status, epileptic"
+C0270823	petit mal status, epileptic
 C0270823	petit-mal status
 C0270823	prolonged epileptic twilight state
 C0270823	spike wave stupor
 C0270823	status pyknolepticus
-C0270823	"status, absence"
-C0270823	"status, petit mal"
-C0270824	"seizure, visual"
+C0270823	status, absence
+C0270823	status, petit mal
+C0270824	seizure, visual
 C0270824	visual seizure
 C0270824	visual seizures
 C0270826	unclassified epileptic seizures
@@ -171,9 +173,13 @@ C0393624	palatal-tympanic myoclonus
 C0393625	hyoid myoclonus
 C0393690	parietal lobe seizure
 C0393690	parietal lobe seizures
+C0393690	parietal lobe onset seizure
+C0393690	parietal lobe onset seizures
 C0393690	seizures of parietal lobe
 C0393691	occipital lobe seizure
 C0393691	occipital lobe seizures
+C0393691	occipital lobe onset seizures
+C0393691	occipital lobe onset seizures
 C0393702	myoclonic atonic seizure
 C0393702	myoclonic atonic seizures
 C0393702	myoclonic-atonic seizure
@@ -259,7 +265,8 @@ C0751495	localization related seizure
 C0751495	partial afebrile seizures
 C0751495	partial seizure
 C0751495	partial seizures
-C0751495	partial seizure    
+C0085541	frontal lobe onset seizure    
+C0085541	frontal lobe onset seizures
 C0751495	"seizure, focal"
 C0751495	"seizure, partial"
 C0751495	"seizures, partial, afebrile"

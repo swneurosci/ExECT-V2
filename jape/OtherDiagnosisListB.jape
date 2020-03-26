@@ -30,7 +30,7 @@ Priority: 100
 	{DiagnosisTriggers.majorType == diagnosis}
     ({listPoint})?
 	({Lookup3})
-    ({Lookup3.minorType == Disease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient , Lookup3.TUI == T184}):item
+    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient , Lookup3.TUI == T184}):item
     ({PartialDate})?
 	
 
