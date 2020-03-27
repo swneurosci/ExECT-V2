@@ -61,3 +61,4 @@ seizure-like events:CUI=C0748601:PREF=seizure like event:TUI=T033:STY=Finding:CA
 seizure markers:CUI=C0748601:PREF=seizure like event:TUI=T033:STY=Finding:CAT=Slang
 Seizure:CUI=C0036572:PREF=seizures:TUI=T184:STY=Sign or Symptom:CAT=Seizure
 Seizures:CUI=C0036572:PREF=seizures:TUI=T184:STY=Sign or Symptom:CAT=Seizure
+nocturnal seizures:CUI=C0748605:PREF=nocturnal seizures:TUI=T033:STY=Finding:CAT=Seizure
