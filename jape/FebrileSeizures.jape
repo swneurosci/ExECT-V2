@@ -100,7 +100,7 @@ Certainty = :item.Lookup3.Certainty}
 Rule: NoFebSeizures4
 Priority: 100
 
-//This rule could be a bit sensitive//
+//This 2 rulef could be a bit sensitive//
 (   
 	{MedicalHistory.minorType == past}
 	({Lookup3})?
@@ -113,6 +113,23 @@ Priority: 100
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
+
+Rule: NoFebSeizures4a
+Priority: 100
+
+(   
+	{Lookup2.type == suffered}
+	({Lookup3})?
+	({Lookup3.Negation == Negated, Lookup3.PREF =~ "febrile", 
+	Lookup3.Experiencer == Patient}):item
+	  
+ ):match  
+ -->
+:item.PatientHistory = {rule = NoFebSeizures4a, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
 
 Rule: FebSeizures1
 Priority: 100
