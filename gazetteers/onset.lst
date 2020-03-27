@@ -17,6 +17,7 @@ first:type=began
 suffering:type=experiencing
 has been symptomatic:type=experiencing
 suffering from:type=experiencing
+suffers:type=experiencing
 sustained:type=suffered
 history is of:type=suffered
 history of:type=suffered
