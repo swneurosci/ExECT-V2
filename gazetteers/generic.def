@@ -68,3 +68,4 @@ DrugPointInTime.lst::::DrugPointInTime
 Pronouns.lst::grammer::Pronouns
 MedicalHistory.lst:diagnosis:past::MedicalHistory
 SeizureSlang2.lst:umls:generic:undefinedSeizure:Seizures
+eventModifiers.lst::::Lookup2
