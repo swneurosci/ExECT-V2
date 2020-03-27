@@ -1,5 +1,5 @@
 Phase: Onset
-Input: Lookup Lookup3 Pronouns Lookup2 Sentence Numeric timePeriod Age timeElapsed
+Input: Lookup  Pronouns Lookup2 Sentence Numeric Age timeElapsed
 
 Options: control=appelt
 
