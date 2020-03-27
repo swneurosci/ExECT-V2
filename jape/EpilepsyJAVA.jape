@@ -1,0 +1,58 @@
+Imports: {import static gate.Utils.*; }
+Phase: Plurals
+Input: Lookup
+Options: control=brill
+
+Rule:GetEpilepsy
+Priority: 100
+(
+{Lookup, !Lookup.SingleSeizure == "Yes", !Lookup.PluralSeizures == "Yes"}
+):tag
+-->
+:tag{
+Annotation lookup = bindings.get("tag").iterator().next();
+Long tokenStart = tagAnnots.firstNode().getOffset();
+Long tokenEnd = tagAnnots.lastNode().getOffset();
+// check the token is longer 3 characters i.e. don't call "is", "was" a plural
+if(tokenEnd - tokenStart > 3) {
+   try{
+       String string = doc.getContent().getContent(tagAnnots.firstNode().getOffset(),
+                    tagAnnots.lastNode().getOffset()).toString().toLowerCase();
+        String pref = lookup.getFeatures().get("PREF").toString().toLowerCase();
+      if(string.contains("epilepsy")){
+       getOnlyAnn(tagAnnots).getFeatures().put("Epilepsy1","Yes");
+       }
+   }
+   catch(InvalidOffsetException e) {
+    // not possible
+    throw new LuckyException("Invalid offset from annotation");
+   }
+}
+}
+
+Rule:GetEpilepsy
+Priority: 100
+(
+{Lookup, !Lookup.SingleSeizure == "Yes", !Lookup.PluralSeizures == "Yes"}
+):tag
+-->
+:tag{
+Annotation lookup = bindings.get("tag").iterator().next();
+Long tokenStart = tagAnnots.firstNode().getOffset();
+Long tokenEnd = tagAnnots.lastNode().getOffset();
+// check the token is longer 3 characters i.e. don't call "is", "was" a plural
+if(tokenEnd - tokenStart > 1) {
+   try{
+       String string = doc.getContent().getContent(tagAnnots.firstNode().getOffset(),
+                    tagAnnots.lastNode().getOffset()).toString().toLowerCase();
+        String pref = lookup.getFeatures().get("PREF").toString().toLowerCase();
+      if(pref.contains("epilepsy")){
+       getOnlyAnn(tagAnnots).getFeatures().put("Epilepsy1","Yes");
+       }
+   }
+   catch(InvalidOffsetException e) {
+    // not possible
+    throw new LuckyException("Invalid offset from annotation");
+   }
+}
+}
