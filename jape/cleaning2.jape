@@ -74,7 +74,7 @@ Rule: cleanDiagnosis
 
  //this one removes Lookup3 generic, such as absences, seizures if they are within lookup//
  //I could be that it makes the earlir rule lookup3 within unnecessary//
-Rule: cleangenericseizurefromLookup
+/*Rule: cleangenericseizurefromLookup
 
 (
    {Lookup3.minorType == generic, Lookup3 within {Lookup.minorType == Disease}}
@@ -83,6 +83,6 @@ Rule: cleangenericseizurefromLookup
 :umls { 
   inputAS.removeAll(umlsAnnots);
 }
-
+*/
 
 

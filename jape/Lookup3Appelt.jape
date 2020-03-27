@@ -1,5 +1,5 @@
 Phase: Lookup3Appelt
-Input:  Seizures Comorbidities
+Input:  Seizures
 Options: control=appelt
 
 Rule: Seizures2Lookup3   /* rule - creates an appelt Lookup3 from seizures annotation (based on seizure.lst) */
@@ -15,16 +15,3 @@ PREF = :match.Seizures.PREF,
 CUI = :match.Seizures.CUI, 
 STY = :match.Seizures.STY,
 CAT = :match.Seizures.CAT}
-
-
-Rule: Comorb2Lookup3  /* rule - creates an appelt Lookup3 from comorbidities annotation (based on comorbidities.lst) */
-(
-    ({Comorbidities})
-):match
--->
-:match.Lookup3 = { majorType = :match.Comorbidities.majorType,
-minorType = :match.Comorbidities.minorType,
-TUI= :match.Comorbidities.TUI, 
-PREF = :match.Comorbidities.PREF,
-CUI = :match.Comorbidities.CUI, 
-STY = :match.Comorbidities.STY}
