@@ -9,13 +9,17 @@ atrophy:CUI=C0436539:Results=Abnormal
 CVA:CUI=C0436539:Results=Abnormal
 cerebral artery occlusion:CUI=C0436539:Results=Abnormal
 hemorrhage:CUI=C0436539:Results=Abnormal
+haemorrhage:CUI=C0436539:Results=Abnormal
 sclerosis:CUI=C0436539:Results=Abnormal
 cerebral edema:CUI=C0436539:Results=Abnormal
+cerebral eodema:CUI=C0436539:Results=Abnormal
 cerebral ischemia:CUI=C0436539:Results=Abnormal
+cerebral ischaemia:CUI=C0436539:Results=Abnormal
 glioma:CUI=C0436539:Results=Abnormal
 astrocytoma:CUI=C0436539:Results=Abnormal
 DNET:CUI=C0436539:Results=Abnormal
 tumor:CUI=C0436539:Results=Abnormal
+tumour:CUI=C0436539:Results=Abnormal
 cavernoma:CUI=C0436539:Results=Abnormal
 hemangioma:CUI=C0436539:Results=Abnormal
 gliosis:CUI=C0436539:Results=Abnormal
@@ -29,7 +33,7 @@ abnormalities:CUI=C0436539:Results=Abnormal
 brain asymmetry:CUI=C0436539:Results=Abnormal
 signal abnormality:CUI=C0436539:Results=Abnormal
 signal intensity:CUI=C0436539:Results=Abnormal
-atrophyc changes:CUI=C0436539:Results=Abnormal
+atrophic changes:CUI=C0436539:Results=Abnormal
 abnormality:CUI=C0436539:Results=Abnormal
 glioma:CUI=C0436539:Results=Abnormal
 mass effect:CUI=C0436539:Results=Abnormal
