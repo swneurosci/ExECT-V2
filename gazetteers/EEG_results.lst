@@ -20,9 +20,9 @@ generalised slowing:CUI=C0151611:Results=Abnormal
 hypsarrhythmia:CUI=C0151611:Results=Abnormal
 irregular:CUI=C0151611:Results=Abnormal
 left side slowing:CUI=C0151611:Results=Abnormal
-localised diacharge:CUI=C0151611:Results=Abnormal
-localised diacharges:CUI=C0151611:Results=Abnormal
-localised repetitive diacharges:CUI=C0151611:Results=Abnormal
+localised discharge:CUI=C0151611:Results=Abnormal
+localised discharges:CUI=C0151611:Results=Abnormal
+localised repetitive discharges:CUI=C0151611:Results=Abnormal
 low amplitude fast activity:CUI=C0151611:Results=Abnormal
 low voltage fast activity:CUI=C0151611:Results=Abnormal
 multifocal discharges:CUI=C0151611:Results=Abnormal
