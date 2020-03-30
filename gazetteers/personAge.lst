@@ -3,7 +3,7 @@ thirties:lowerAge=30:upperAge=39:timeUnit=Year
 forities:lowerAge=40:upperAge=49:timeUnit=Year
 fifties:lowerAge=50:upperAge=59:timeUnit=Year
 sixties:lowerAge=60:upperAge=69:timeUnit=Year
-senventies:lowerAge=70:upperAge=79:timeUnit=Year
+seventies:lowerAge=70:upperAge=79:timeUnit=Year
 eighties:lowerAge=80:upperAge=89:timeUnit=Year
 nineties:lowerAge=90:upperAge=99:timeUnit=Year
 child:lowerAge=2:upperAge=12:timeUnit=Year
@@ -39,9 +39,9 @@ late twenties:lowerAge=27:upperAge=29:timeUnit=Year
 early thirties:lowerAge=30:upperAge=33:timeUnit=Year
 mid thirties:lowerAge=34:upperAge=36:timeUnit=Year
 late thirties:lowerAge=37:upperAge=39:timeUnit=Year
-early forities:lowerAge=40:upperAge=43:timeUnit=Year
-mid forities:lowerAge=44:upperAge=46:timeUnit=Year
-late forities:lowerAge=47:upperAge=49:timeUnit=Year
+early forties:lowerAge=40:upperAge=43:timeUnit=Year
+mid forties:lowerAge=44:upperAge=46:timeUnit=Year
+late forties:lowerAge=47:upperAge=49:timeUnit=Year
 early fifties:lowerAge=50:upperAge=53:timeUnit=Year
 mid fifties:lowerAge=54:upperAge=56:timeUnit=Year
 late fifties:lowerAge=57:upperAge=59:timeUnit=Year
@@ -51,9 +51,9 @@ late sixties:lowerAge=67:upperAge=69:timeUnit=Year
 early sixties:lowerAge=60:upperAge=63:timeUnit=Year
 mid sixties:lowerAge=64:upperAge=66:timeUnit=Year
 late sixties:lowerAge=67:upperAge=69:timeUnit=Year
-early senventies:lowerAge=70:upperAge=73:timeUnit=Year
-mid senventies:lowerAge=74:upperAge=76:timeUnit=Year
-late senventies:lowerAge=77:upperAge=79:timeUnit=Year
+early seventies:lowerAge=70:upperAge=73:timeUnit=Year
+mid seventies:lowerAge=74:upperAge=76:timeUnit=Year
+late seventies:lowerAge=77:upperAge=79:timeUnit=Year
 early eighties:lowerAge=80:upperAge=83:timeUnit=Year
 mid eighties:lowerAge=84:upperAge=86:timeUnit=Year
 late eighties:lowerAge=87:upperAge=89:timeUnit=Year
