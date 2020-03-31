@@ -530,7 +530,7 @@ Priority: 98
 
 (   
 	{Person}
-	({Lookup2.language == onset})
+	({Lookup2.language == onset}|{Lookup2.minorType == causality})
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
 	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
 	{Numeric}
