@@ -99,6 +99,15 @@ Rule: cleanLookup3gen
 }
 
 
+Rule: cleanHealthCareTerms3
+
+(
+   {Lookup3.minorType == generic,  Lookup3 within {Lookup2.minorType == health_term}}
+):umls
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+}
 
 
   
