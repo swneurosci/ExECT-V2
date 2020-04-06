@@ -43,3 +43,21 @@ Priority: 100
   umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
 }
 
+Rule: ExperiencerReversal
+Priority: 100
+(
+	{OtherPerson.majorType == family}
+    ({Lookup2})?
+    {Lookup2.language == onset}
+    {Person.kind == firstName}
+    {Lookup}
+    ({Lookup3})?
+	({Lookup.majorType == umls, Lookup.minorType == Disease, 
+    Lookup.Experiencer == Other}):umls
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
+}
+
