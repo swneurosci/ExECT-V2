@@ -119,25 +119,10 @@ partial motor epilepsy	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=D
 partial motor epilepsy	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 simple partial seizure with motor dysfunction	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
 simple partial seizures with motor signs	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
-myoclonus, intention	CUI=C0021712	PREF=Myoclonus, Intention	TUI=T184	STY=sign or symptom
 Jacksonian seizure	CUI=C0022333	PREF=Jacksonian seizure	TUI=T047	STY=Disease or Syndrome
-disorder characterised by myoclonus	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-disorder characterized by myoclonus	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-jerk, myoclonic	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-jerking, myoclonic	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-jerks - myoclonic	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-jerks, myoclonic	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-myoclonic disorder	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-myoclonus disorder	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-myoclonus nos	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=sign or symptom
-myoclonus, palatal	CUI=C0030214	PREF=Myoclonus, Palatal	TUI=T184	STY=sign or symptom
-palatal nystagmus	CUI=C0030214	PREF=Myoclonus, Palatal	TUI=T184	STY=sign or symptom
-paramyoclonus multiplex	CUI=C0030463	PREF=paramyoclonus multiplex	TUI=T047	STY=Disease or Syndrome
 Cerebroatrophic hyperammonaemia	CUI=C0035372	PREF=Rett Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Cerebroatrophic hyperammonemia	CUI=C0035372	PREF=Rett Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 rett syndrome	CUI=C0035372	PREF=Rett Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-seizure	CUI=C0036572	PREF=seizure	TUI=T184	STY=Sign or Symptom
-seizures	CUI=C0036572	PREF=seizures	TUI=T184	STY=Sign or Symptom
 hypsarrhythmia	CUI=C0037769	PREF=West Syndrome	TUI=T047	STY=Disease or Syndrome
 infant spasms - hypsarrythmia	CUI=C0037769	PREF=West Syndrome	TUI=T047	STY=Disease or Syndrome
 infantile spasm	CUI=C0037769	PREF=West Syndrome	TUI=T047	STY=Disease or Syndrome
