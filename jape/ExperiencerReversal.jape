@@ -17,8 +17,8 @@ Priority: 100
     ({Lookup2})?
     {Lookup2.language == onset}
     {Person.kind == firstName}
-	({Lookup3.majorType == umls, Lookup3.minorType == Disease, 
-    Lookup3.Experiencer == Other}):umls
+	({Lookup.majorType == umls, Lookup.minorType == Disease, 
+    Lookup.Experiencer == Other}):umls
 ):match
 -->
 :umls {
