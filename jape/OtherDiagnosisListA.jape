@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisListA
-Input: Lookup3 DiagnosisTriggers listSent listPoint PartialDate Numeric PointInTime Range
+Input: Lookup3 DiagnosisTriggers listSent listPoint PartialDate Numeric PointInTime Range Lookup
 
 Options: control=appelt
 
@@ -125,6 +125,7 @@ Priority: 100
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
     {listPoint}
+	({Lookup})
 	{listPoint}
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
 	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
@@ -183,6 +184,22 @@ Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality
 Certainty = :item.Lookup3.Certainty,
 YearDate = :match.Range.N2}
 
+Rule: OtherDiagListA7
+Priority: 100
 
+(   
+	{DiagnosisTriggers.majorType == diagnosis}
+    {listPoint}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+   
+	
+
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagListA7, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
 
 

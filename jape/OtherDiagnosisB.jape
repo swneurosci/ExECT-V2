@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisB
-Input: Lookup3 Lookup2 Sentence Lookup Investigation timeElapsed timePeriod DiagnosisTriggers
+Input: Lookup3 Lookup2 Sentence Lookup Investigation timeElapsed timePeriod DiagnosisTriggers listSent listPoint
 
 
 Options: control=appelt
@@ -114,7 +114,7 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
-Rule: OtherDiagB4
+Rule: OtherDiagB4a
 Priority: 100
 
 (   
@@ -125,12 +125,12 @@ Priority: 100
 	
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagB4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = OtherDiagB4a, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
-Rule: OtherDiagB1
+Rule: OtherDiagB5
 Priority: 100
 
 (   
@@ -142,7 +142,39 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagB1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = OtherDiagB5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: OtherDiagB5
+Priority: 100
+
+(   
+	{Lookup2.minorType == probability}
+	{DiagnosisTriggers}
+	({Lookup2})?
+	({Lookup3.minorType == OtherDisease, Lookup3.majorType == umls}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagB5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: OtherDiagB6
+Priority: 99
+
+(   
+	{Lookup2.minorType == opinion}
+	({Lookop2})?
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagB6, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}

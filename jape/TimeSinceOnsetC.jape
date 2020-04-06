@@ -1,5 +1,5 @@
 Phase: TimeSinceOnsetC
-Input: Diagnosis Lookup2 Split timeElapsed timePeriod Numeric
+Input: Lookup Lookup2 Split timeElapsed timePeriod Numeric Pronouns
 
 Options: control=appelt		
 
@@ -7,10 +7,31 @@ Rule: TimeSinceOnsetC1
 Priority: 100
 
 (   
-    ({Diagnosis}):item
+    ({Lookup}):item
     {Split}
     {Lookup2.language == onset , Lookup2.minorType == symptoms ,  Lookup2.type == suffered}
 	{timeElapsed.majorType == context}
+    {Numeric}
+	{timePeriod}
+	
+	
+	
+ ):match  
+ -->
+:item.Onset = {rule = TimeSinceOnsetC1, OnsetType = "time_since_episodes_started", 
+PREF =:item.Diagnosis.PREF, CUI = :item.Diagnosis.CUI, 
+Certainty = :item.Diagnosis.Certainty,
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods = :match.Numeric.value}
+
+Rule: TimeSinceOnsetC1
+Priority: 100
+
+(   {Pronouns.type == relative}
+    {Lookup2} 
+    {Lookup2.language == onset , Lookup2.minorType == symptoms , Lookup2.type == experiencing}
+    ({Lookup.PREF != seizures}):item
+   {timeElapsed.time == during}
     {Numeric}
 	{timePeriod}
 	

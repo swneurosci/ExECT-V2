@@ -9,7 +9,7 @@ Priority: 100
 
 (   
     
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient , Lookup3.CAT == seizures}):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient , Lookup3.minorType == Disease }):item
 	{Split}
 	{Person}
     ({Person})?
@@ -35,7 +35,7 @@ Priority: 99
 (   
 
 	{Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient , Lookup3.CAT == seizures }):item
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient , Lookup3.minorType == Disease }):item
 	{Lookup2.language == onset}
 	{Range}
     {timePeriod}

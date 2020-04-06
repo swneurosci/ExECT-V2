@@ -20,8 +20,7 @@ Priority: 100
     {Lookup3.minorType == generic}
 	{timeElapsed}
 	{PartialDate}
-	
-	
+		
 	
  ):match  
  -->
@@ -46,9 +45,7 @@ Priority: 100
     ({Lookup3.minorType == generic})?
 	{timeElapsed}
 	{PartialDate}
-	
-	
-	
+		
  ):match  
  -->
 :item.Onset = {rule = OnsetDateB2, OnsetType = "date_of_onset", 
@@ -83,3 +80,23 @@ YearDate = :match.Numeric.value,
 MonthDate ="",
 DayDate = ""}
 
+Rule: OnsetDateB4
+Priority: 100
+
+(   
+	
+	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.minorType == Disease , Lookup3.Experiencer == Patient}):item
+    {Split}
+    {Lookup2.language == onset , Lookup2.type == began}
+	{Lookup2}
+	({timeElapsed})?
+	{timeElapsed.time == in}
+	{Numeric}
+		
+ ):match  
+ -->
+:item.Onset = {rule = OnsetDateB4, OnsetType = "date_of_onset", 
+PREF = :item.Looup3.PREF, CUI = :item.Lookup3.CUI, STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality,
+Certainty = :item.Lookup3.Certainty,
+YearDate = :match.Numeric.value}

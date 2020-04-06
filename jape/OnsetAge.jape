@@ -8,7 +8,7 @@ Priority: 99
 
 (   
 	{Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,  Lookup3.Experiencer == Patient , Lookup3.minorType == Disease}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	{Person.majorType == person}
 	({Lookup2.majorType == historic})?
@@ -20,9 +20,9 @@ Priority: 99
  ):match  
  -->
 :item.Onset = {rule = onsetAge1, OnsetType = "age_episodes_started", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
-Certainty = :item.Lookup3.Certainty,
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
 AgeUnit = :match.timePeriod.time-unit,
 Age =:match.Numeric.value}
 
@@ -31,7 +31,7 @@ Priority: 98
 
 (   
 	{Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.minorType == Disease}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient ,Lookup.minorType == Disease}):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	{Person.majorType == person}
 	{Lookup2.majorType == historic}
@@ -42,9 +42,9 @@ Priority: 98
  ):match  
  -->
 :item.Onset = {rule = onsetAge2, OnsetType = "age_episodes_started", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY,
-Certainty = :item.Lookup3.Certainty,
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY,
+Certainty = :item.Lookup.Certainty,
 AgeUnit = "Year",
 Age =:match.Numeric.value}
 
@@ -54,7 +54,7 @@ Priority: 98
 (   
 	{Person}
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,  Lookup3.Experiencer == Patient , Lookup3.minorType == Disease}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
 	{History.majorType == person}
 	{Numeric}
 	{timePeriod}
@@ -62,9 +62,9 @@ Priority: 98
  ):match  
  -->
 :item.Onset= {rule = onsetAge3, OnsetType = "age_episodes_started", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
-Certainty = :item.Lookup3.Certainty,
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
 AgeUnit = :match.timePeriod.time-unit,
 Age =:match.Numeric.value}
  
@@ -74,7 +74,7 @@ Priority: 9
 
 (   
 	{Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.minorType == Disease}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient ,Lookup.minorType == Disease}):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	{History.majorType == person}
 	{Range}
@@ -83,9 +83,9 @@ Priority: 9
  ):match  
  -->
 :match.Onset = {rule = onsetAge4, OnsetType = "age_episodes_started", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
-Certainty = :item.Lookup3.Certainty,
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
 AgeUnit = "Year",
 Age = :match.Range.value}
  
@@ -97,7 +97,7 @@ Priority: 98
 	({Lookup2.minorType == probability})
 	({Lookup2.majorType == historic, Lookup2.minorType == symptoms})?
 	({Lookup2})?
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.minorType == Disease}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient ,Lookup.minorType == Disease}):item
 	{History.majorType == person}
 	{Numeric}
 	
@@ -105,9 +105,9 @@ Priority: 98
  ):match  
  -->
 :item.Onset = {rule = onsetAge5, OnsetType = "age_episodes_started", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
-Certainty = :item.Lookup3.Certainty,
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
 AgeUnit = "Year",
 Age =:match.Numeric.value}
 
@@ -185,7 +185,7 @@ Priority: 99
 
 (   
 	{Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed ,  Lookup3.Experiencer == Patient  ,Lookup3.minorType == Disease}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient  ,Lookup.minorType == Disease}):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	({timeElapsed})
 	({Numeric})
@@ -197,9 +197,9 @@ Priority: 99
  ):match  
  -->
 :item.Onset = {rule = onsetAge9, OnsetType = "age_episodes_started", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
-Certainty = :item.Lookup3.Certainty,
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
 AgeUnit = "Year",
 Age =:a.Numeric.value}
  
@@ -210,21 +210,21 @@ Priority: 98
 (   
 	{Person}
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
-	{Lookup3}
-	{History.majorType == person}
+	{Lookup3.minorType == generic}
+	{History}
 	{Numeric}
 	{timePeriod}
 	{Lookup2.language == onset}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient , Lookup3.minorType == Disease}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
 
 	
 	
  ):match  
  -->
 :item.Onset= {rule = onsetAge10, OnsetType = "age_episodes_started", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
-Certainty = :item.Lookup3.Certainty,
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
 AgeUnit = :match.timePeriod.time-unit,
 Age =:match.Numeric.value}
 
