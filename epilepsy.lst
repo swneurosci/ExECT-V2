@@ -884,7 +884,6 @@ Symptomatic seizures	CUI=C4023516	PREF=Symptomatic seizures	TUI=T184	STY=sign or
 focal onset epilepsy	CUI=C0014547	PREF=Epilepsies, Partial	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Focal symptomatic epilepsy	CUI=C0472349	PREF=Localization-related symptomatic epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 frontal lobe onset seizure	CUI=C0085541	PREF=Epilepsy, Frontal Lobe	TUI=T047	STY=Disease or Syndrome
-myoclonus	CUI=C0027066	PREF=Myoclonus	TUI=T184	STY=Sign or Symptom
 myoclonic absence	CUI=C4023512	PREF=Myoclonic Absence	TUI=T047	STY=Disease or Syndrome
 myoclonic absences	CUI=C4023512	PREF=Myoclonic Absence	TUI=T047	STY=Disease or Syndrome
 myoclonic absence epilepsy	CUI=C0393703	PREF=Myoclonic Absence Epilepsy	TUI=T047	STY=Disease or Syndrome
@@ -912,3 +911,5 @@ occipital lobe onset seizures	CUI=C0393691	PREF=Occipital Lobe Epilepsy	TUI=T047
 occipital lobe onset seizure	CUI=C0393691	PREF=Occipital Lobe Epilepsy	TUI=T047	STY=Disease or Syndrome
 frontal lobe onset seizures	CUI=C0085541	PREF=Epilepsy, Frontal Lobe	TUI=T047	STY=Disease or Syndrome
 frontal lobe onset seizure	CUI=C0085541	PREF=Epilepsy, Frontal Lobe	TUI=T047	STY=Disease or Syndrome
+petit mal	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
+petit-mal	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
