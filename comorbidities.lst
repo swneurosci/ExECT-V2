@@ -1201,3 +1201,4 @@ infarct	CUI=C0751955	PREF=brain infarct	TUI=T047	STY=Disease or Syndrome
 ASD	CUI=C1510586	PREF=Autism Spectrum Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
 blind	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
 episodes of psychosis	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
+non-epileptic	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
