@@ -20,3 +20,21 @@ Priority: 99
     getOnlyAnn(umlsAnnots).getFeatures().put("Rule","probdrift");
 }
 
+Rule: probdrift1
+Priority: 99
+(
+	({Lookup2.minorType == probability}):prob
+  ({NegConj})?
+  ({Lookup3})?
+	({Lookup.majorType == umls})
+  {NegConj}
+  ({Lookup2})?
+  ({NegConj})?
+  ({Lookup3.majorType == umls}):umls
+):match
+-->
+:umls {
+  getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
+    getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
+    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","probdrift");
+}
