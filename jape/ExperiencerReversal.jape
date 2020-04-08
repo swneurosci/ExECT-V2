@@ -18,7 +18,8 @@ Priority: 100
     {Lookup2.language == onset}
     {Person.kind == firstName}
 	({Lookup.majorType == umls, Lookup.minorType == Disease, 
-    Lookup.Experiencer == Other}):umls
+    Lookup.Experiencer == Other}|{Lookup3.majorType == umls, Lookup3.minorType == Disease, 
+    Lookup3.Experiencer == Other}):umls
 ):match
 -->
 :umls {
@@ -26,22 +27,7 @@ Priority: 100
   umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
 
 }
-Rule: ExperiencerReversal
-Priority: 100
-(
-	{OtherPerson.majorType == family}
-    ({Lookup2})?
-    {Lookup2.language == onset}
-    {Person.kind == firstName}
-    {Lookup3}
-	({Lookup3.majorType == umls, Lookup3.minorType == Disease, 
-    Lookup3.Experiencer == Other}):umls
-):match
--->
-:umls {
-  umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
-  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
-}
+
 
 Rule: ExperiencerReversal
 Priority: 100
@@ -53,7 +39,8 @@ Priority: 100
     {Lookup}
     ({Lookup3})?
 	({Lookup.majorType == umls, Lookup.minorType == Disease, 
-    Lookup.Experiencer == Other}):umls
+    Lookup.Experiencer == Other}|{Lookup3.majorType == umls, Lookup3.minorType == Disease, 
+    Lookup3.Experiencer == Other}):umls
 ):match
 -->
 :umls {
@@ -61,3 +48,17 @@ Priority: 100
   umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
 }
 
+Rule: ExperiencerReversal
+Priority: 100
+(
+  {Lookup2.minorType == opinion}
+	{Person.majorType == person, Person.minorType == pronoun}
+  {OtherPerson.majorType == family}
+	({Lookup3.majorType == umls, Lookup3.minorType == OtherDisease, 
+    Lookup3.Experiencer == Other}):umls
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
+}
