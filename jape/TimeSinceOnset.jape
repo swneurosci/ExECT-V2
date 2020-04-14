@@ -1,5 +1,5 @@
 Phase: TimeSinceOnset
-Input: Lookup3 Lookup Person Sentence Numeric timePeriod timeElapsed Lookup2 Split Age DiagnosisTriggers
+Input: Lookup3 Lookup Person Sentence Numeric timePeriod timeElapsed Lookup2 Split Age DiagnosisTriggers listPoint
 
 
 Options: control=appelt		
@@ -65,7 +65,6 @@ Priority: 99
     {timePeriod}
 	
 	
-
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset3 , OnsetType = "time_since_episodes_started",
@@ -109,9 +108,7 @@ Priority: 98
 	{timePeriod}
 	{Person}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.minorType == Disease  }):item
-	
-	
-	
+		
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset5, OnsetType = "time_since_episodes_started", 
@@ -130,8 +127,7 @@ Priority: 98
 	{Lookup2}
 	{Numeric}
 	{timePeriod}
-	{timeElapsed.majorType == context}
-	
+	{timeElapsed.majorType == context}	
 	
  ):match  
  -->
@@ -151,8 +147,7 @@ Priority: 99
 	{Person}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.minorType == Disease }):item
 	{Lookup3}
-	
-	
+		
 ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset7, OnsetType = "time_since_episodes_started", 
@@ -167,14 +162,12 @@ Rule: TimeSinceOnset8
 Priority: 98
 
 (   
-	
 	{Lookup2.majorType == person}
 	{timeElapsed.majorType == context}
 	{Numeric}
 	{timePeriod}
 	{Lookup2.language == onset}
-	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
-	
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item	
 	
  ):match  
  -->
@@ -198,8 +191,7 @@ Priority: 98
     {timeElapsed.time == during}
     {Numeric}
     {timePeriod}
-	
-	
+		
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset9, OnsetType = "time_since_episodes_started", 
@@ -228,5 +220,23 @@ Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value}
 
+Rule: TimeSinceOnset10
+Priority: 100
+
+(   
+    {DiagnosisTriggers}
+	{listPoint}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
+	{Numeric} 
+    {timePeriod}
 	
+	
+ ):match  
+ -->
+:item.Onset = {rule = TimeSinceOnset3 , OnsetType = "time_since_episodes_started",
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, 
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
+TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value}	
     

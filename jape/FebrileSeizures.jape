@@ -81,10 +81,10 @@ Rule: NoFebSeizures3a
 Priority: 100
 //this rule reverses the experiences from other to patient as for saome reson - other follewe just after, it applied it to the patient//
 (   
-	{Person}
+	({Person})?
     {Lookup2.majorType == historic}
 	({Lookup2})?
-	{MedicalHistory}
+	({MedicalHistory})?
 	({Lookup3.Negation == Negated, Lookup3.PREF =~ "febrile" , 
 	Lookup3.Experiencer == Other}):item
 	
@@ -100,7 +100,7 @@ Certainty = :item.Lookup3.Certainty}
 Rule: NoFebSeizures4
 Priority: 100
 
-//This 2 rulef could be a bit sensitive//
+//These 2 rules could be a bit sensitive//
 (   
 	{MedicalHistory.minorType == past}
 	({Lookup3})?

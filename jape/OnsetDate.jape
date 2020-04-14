@@ -1,74 +1,51 @@
 Phase: OnsetDate
-Input: Lookup3 Person Lookup2 Sentence Numeric timeElapsed  PointInTime Lookup PartialDate timePeriod
+Input: Lookup3 Person Lookup2 Sentence Numeric timeElapsed  PointInTime Lookup PartialDate timePeriod Age DiagnosisTriggers
 Options: control=appelt
-
-
+//Age is here to stop th e rules picking yp Age of onset//
+//DiagnosisTriggers is to stop the rules from picking up diagnosis//
 Rule: OnsetDate1
-Priority: 98
-
-(   
-	{Person}
-	({Lookup2.majorType == historic})
-	({Person})?
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.CAT == seizures}):item
-	{timeElapsed}
-	{PartialDate}
-	{PointInTime}
-	
-	
- ):match  
- -->
-:item.Onset = {rule = OnsetDate1, OnsetType = "date_of_onset", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
-YearDate = "",
-MonthDate =:match.PartialDate.month,
-DayDate = "",
-PointInTime =:match.PointInTime.Since}
-
-Rule: OnsetDate2
-Priority: 98
+Priority: 100
 
 (   
 	{Person}
     ({Lookup2})?
 	{Lookup2.majorType == historic, Lookup2.language == onset}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.CAT == seizures }):item
+	({Lookup.majorType == umls , Lookup.Experiencer == Patient , Lookup.Negation == Affirmed}):item
 	{timeElapsed.time == during}
 	{PartialDate}
 	
 	
  ):match  
  -->
-:item.Onset= {rule = OnsetDate2, OnsetType = "date_of_onset", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.Onset= {rule = OnsetDate1, OnsetType = "date_of_onset", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup3.STY, 
 YearDate = :match.PartialDate.year,
 MonthDate = "",
 DayDate = ""} 
 
-Rule: OnsetDate3
+Rule: OnsetDate2
 Priority: 98
 
 (   
 	{Person}
 	({Lookup2.majorType == historic , Lookup2.language == onset})
 	({Person})?
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.minorType == Disease}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.minorType == Disease}):item
 	{timeElapsed}
 	{PartialDate}
 	
 	
  ):match  
  -->
-:item.Onset = {rule = OnsetDate3, OnsetType = "date_of_onset", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
+:item.Onset = {rule = OnsetDate2, OnsetType = "date_of_onset", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
 YearDate = :match.PartialDate.year,
 MonthDate =:match.PartialDate.month,
 DayDate = ""}
 
-Rule: onsetDate4
+Rule: onsetDate3
 Priority: 98
 
 (   
@@ -83,17 +60,17 @@ Priority: 98
 	
  ):match  
  -->
-:item.Onset = {rule = OnsetDate4, OnsetType = "date_of_onset", 
+:item.Onset = {rule = OnsetDate3, OnsetType = "date_of_onset", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY,
 PointInTime =:match.PointInTime.Since}
 
-Rule: onsetDate5
+Rule: onsetDate4
 Priority: 98
 
 (   
 	{Lookup2.majorType == historic}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.minorType == Disease, Lookup3.CUI != C0036572}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.minorType == Disease}):item
 	{Lookup2.language == onset }
 	{timeElapsed}
 	{PartialDate}
@@ -102,54 +79,53 @@ Priority: 98
 	
  ):match  
  -->
-:item.Onset = {rule = OnsetDate5, OnsetType = "date_of_onset", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
+:item.Onset = {rule = OnsetDate4, OnsetType = "date_of_onset", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
 YearDate = :match.PartialDate.year,
 MonthDate ="",
-DayDate = ""
-/*PointInTime = ""*/}
+DayDate = ""}
 
-Rule: onsetDate6
+Rule: onsetDate5
 Priority: 98
 
 (   
+	({Person})
+	({Lookup2})
 	{Lookup2.majorType == historic, Lookup2.language == onset}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient , Lookup3.CAT == seizures }):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient }):item
 	({Lookup2.language == onset})?
-	{timeElapsed.time == in}
+	({timeElapsed.time == in}|{timeElapsed.time == since})
 	{Numeric}
 	
 	
 	
  ):match  
  -->
-:item.Onset = {rule = OnsetDate6, OnsetType = "date_of_onset", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
+:item.Onset = {rule = OnsetDate5, OnsetType = "date_of_onset", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
 YearDate = :match.Numeric.value,
 MonthDate ="",
 DayDate = ""}
 
 
-Rule: onsetDate7
+Rule: onsetDate6
 Priority: 100
 
 (   
 	{Person}
-	(({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.CAT == seizures }) |
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.minorType == Disease }) ):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient ,Lookup.minorType == Disease }):item
 	{Lookup2.language == onset}
 	{timeElapsed.time == in}
 	{Numeric}
-	
-	
+		
 	
  ):match  
  -->
-:item.Onset = {rule = onsetDate7, OnsetType = "date_of_onset", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
+:item.Onset = {rule = onsetDate6, OnsetType = "date_of_onset", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
 YearDate = :match.Numeric.value,
 MonthDate ="",
 DayDate = ""}
@@ -161,7 +137,7 @@ Priority: 98
 (   
 	{Person}
 	{Lookup2.majorType == historic , Lookup2.language == onset}
-	({Lookup3.majorType == umls , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed , Lookup3.minorType == Disease }):item
+	({Lookup.majorType == umls , Lookup.Experiencer == Patient , Lookup.Negation == Affirmed , Lookup.minorType == Disease }):item
 	{timeElapsed}
 	{Numeric}
 	{timePeriod}
@@ -173,8 +149,8 @@ Priority: 98
  ):match  
  -->
 :item.Onset = {rule = OnsetDate8, OnsetType = "TimeFromPointInTime", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
 PointInTime =:match.PointInTime.Since,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value}

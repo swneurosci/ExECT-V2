@@ -3,7 +3,6 @@ Input: Lookup Person Sentence Numeric timePeriod timeElapsed Lookup2 Split Diagn
 
 Options: control=appelt
 
-
 Rule: TimeSinceDiagnosis1
 Priority: 99
 
@@ -24,7 +23,6 @@ STY = :item.Lookup.STY,
 Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value}
-
 
 Rule: TimeSinceDiagnosis2
 Priority: 99

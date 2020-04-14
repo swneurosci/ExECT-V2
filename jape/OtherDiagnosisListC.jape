@@ -75,13 +75,14 @@ Rule: OtherDiagListC4
 Priority: 100
 
 (   
-    {MedicalHistory}
+    ({DiagnosisTriggers})?
+    ({MedicalHistory})?
     {listPoint}
     {Lookup3}
     ({Numeric})?
     {listPoint}
+    ({Lookup3})?
 	{listPoint}
-    {listPoint}
     ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
     {Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
    

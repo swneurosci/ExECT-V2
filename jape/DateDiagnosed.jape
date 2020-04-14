@@ -39,9 +39,6 @@ Priority: 100
 	({Person})?
 	{PointInTime}
 	
-
- 
-	
  ):match  
  -->
 :item.WhenDiagnosed = {rule = DateDiagnosed2, OnsetType = "When_Diagnosed", 
@@ -60,8 +57,6 @@ Priority: 100
 	{PointInTime}
     {DiagnosisTriggers.majorType == diagnosis}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient}):item
-
- 
 	
  ):match  
  -->
@@ -98,16 +93,14 @@ Rule: DateDiagnosed5
 Priority: 100
 
 (   
-	{Person}
-	{Lookup2.majorType == historic}
+	({Person})?
+	({Lookup2.majorType == historic})?
 	({Lookup2})?
     {DiagnosisTriggers.majorType == diagnosis}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient}):item
+	({Lookup2})?
 	{timeElapsed.time == in}
 	{Numeric}
-
-
- 
 	
  ):match  
  -->

@@ -59,27 +59,6 @@ Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality
 Certainty = :item.Lookup3.Certainty, YearDate = "",
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value} 
-/*Rule: PtHistoryC1a
-Priority: 100
-
-(   
-	{Person}
-    (({Lookup2.type == has}|{Lookup2.type == past}))?
-    {Lookup2.language == onset}
-	({timeElapsed})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-   
- ):match  
- -->
-:item.PatientHistory = {rule = PtHistoryC1a, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}*/
-
-
-
-
 
 Rule: PtHistoryC2
 Priority: 100
@@ -207,9 +186,11 @@ Priority: 90
 
 (    
    {Person}
+   ({Lookup2})?
    ({Lookup2.majorType == historic})  
+   ({Lookup3})?
    ({timeElapsed})?
-    {Lookup2.type  == began}
+    ({Lookup2.type  == began})?
     ({Lookup2.minorType == probability})
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
     {Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item

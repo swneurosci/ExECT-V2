@@ -1,5 +1,5 @@
 Phase: EpiCause4
-Input: Diagnosis Lookup3 Lookup2 Split
+Input: Lookup Lookup3 Lookup2 Split
 
 
   /*These rules are set to select causes and suspected causes of epilepsy, when they are shown 
@@ -10,12 +10,12 @@ Input: Diagnosis Lookup3 Lookup2 Split
 Options: control=appelt
 
 
-Rule: Cause2c
+Rule: Cause4a
 Priority: 99
 
 (   
 	
-    {Diagnosis.Negation == Affirmed}
+    {Lookup.Negation == Affirmed}
     {Split}
     ({Lookup2.minorType == probability})?
     {Lookup2.minorType == causality}
@@ -27,7 +27,7 @@ Priority: 99
 
  ):match  
  -->
-:item.EpilepsyCause = {rule = Cause2c, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.EpilepsyCause = {rule = Cause4a, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}

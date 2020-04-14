@@ -13,48 +13,51 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic , Lookup2.type == birth}
-    {History.majorType == person}
+    ({Lookup2.majorType == historic , Lookup2.type == birth}):item
+    ({History.majorType == person})?
 	{Numeric.value  <28}
     {timePeriod.time-unit == Week}
     
     
  ):match  
  -->
-:match.BirthHistory = {rule = Prem1, PREF = "extremely preterm", CUI = C4055046, 
+:item.BirthHistory = {rule = Prem1, PREF = "extremely preterm", CUI = C4055046, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "under 28 weeks"}
+
+
 
 Rule: Prem2
 Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic ,Lookup2.type == birth }
-    {History.majorType == person}
+    ({Lookup2.majorType == historic ,Lookup2.type == birth }):item
+    ({History.majorType == person})?
 	{Numeric.value  >=28 , Numeric.value <32} 
     {timePeriod.time-unit == Week}
     
     
  ):match  
  -->
-:match.BirthHistory = {rule = Prem2, PREF = "very preterm", CUI = C4053870, 
+:item.BirthHistory = {rule = Prem2, PREF = "very preterm", CUI = C4053870, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "28 to 32 weeks"}
 
-
+//to catch the 32 to 37, (def of moderate to late preterm()  
+//separately from 34 to 37 I used 32 to 34 in this rule, I hope this is correct//
 Rule: Prem3
 Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic ,Lookup2.type == birth }
-    {History.majorType == person}
+    ({Lookup2.majorType == historic ,Lookup2.type == birth }):item
+    ({History.majorType == person})?
 	{Numeric.value  >=32 , Numeric.value <34} 
     {timePeriod.time-unit == Week}
     
     
  ):match  
  -->
-:match.BirthHistory = {rule = Prem3, PREF = "moderate to late preterm", CUI = C4054482, 
+:item.BirthHistory = {rule = Prem3, PREF = "moderate to late preterm", CUI = C4054482, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "32 to 34 weeks"}
 
 Rule: Prem4
@@ -62,43 +65,71 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic ,Lookup2.type == birth }
-    {History.majorType == person}
+    ({Lookup2.majorType == historic ,Lookup2.type == birth }):item
+    ({History.majorType == person})?
 	{Numeric.value  >=34 , Numeric.value <37} 
     {timePeriod.time-unit == Week}
     
     
  ):match  
  -->
-:match.BirthHistory = {rule = Prem4, PREF = "late preterm", CUI = C3829315, 
+:item.BirthHistory = {rule = Prem4, PREF = "late preterm", CUI = C3829315, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "34 to 37 weeks"}
 
 Rule: Prem5
-Priority: 100
+Priority: 90
 
 (   
 	{Person}
-    {Lookup2.majorType == historic ,Lookup2.type == birth }
-    
+    ({Lookup2.majorType == historic ,Lookup2.type == birth }):item
 	{Numeric.value <37} 
     {timePeriod.time-unit == Week}
     
     
  ):match  
  -->
-:match.BirthHistory = {rule = Prem5, PREF = "preterm birth", CUI = C0151526, 
+:item.BirthHistory = {rule = Prem5, PREF = "preterm birth", CUI = C0151526, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "under 37 weeks"}
 
+Rule: Term1
+Priority: 100
 
+(   
+	{Person}
+    ({Lookup2.majorType == historic ,Lookup2.type == birth }):item 
+    ({History})?
+    ({Lookup2})?
+    ({History})?
+    {Lookup2.minorType == gestation, Lookup2.CUI == C0233324}
+    
+    
+    
+ ):match  
+ -->
+:item.BirthHistory = {rule = Term1, PREF = "Term_Birth", CUI = C0233324, 
+STY = Finding, Negation = Affirmed, Experiencer = Patient}
 
+Rule: Term2
+Priority: 100
 
+(   
+	{Person}
+    ({Lookup2})
+    {Lookup2.minorType == gestation, Lookup2.CUI == C0233324}
+    ({Lookup2.majorType == historic ,Lookup2.type == birth }):item 
+     
+    
+ ):match  
+ -->
+:item.BirthHistory = {rule = Term2, PREF = "Term_Birth", CUI = C0233324, 
+STY = Finding, Negation = Affirmed, Experiencer = Patient}
 
 Rule: Prem6
 Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic ,Lookup2.type == birth }
+    ({Lookup2.majorType == historic ,Lookup2.type == birth }):item
 	{Numeric.value  >12}
     {timePeriod.time-unit == Week}
     {Lookup2.minorType == prematurebirth}
@@ -106,7 +137,7 @@ Priority: 100
     
  ):match  
  -->
-:match.BirthHistory = {rule = Prem6, PREF = "extremely preterm", CUI = C4055046, 
+:item.BirthHistory = {rule = Prem6, PREF = "extremely preterm", CUI = C4055046, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "under 28 weeks"}
 
 Rule: Prem7
@@ -114,14 +145,14 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic ,Lookup2.type == birth }
+    ({Lookup2.majorType == historic ,Lookup2.type == birth }):item
 	{Numeric.value  >8 , Numeric.value <=12} 
     {timePeriod.time-unit == Week}
     {Lookup2.minorType == prematurebirth}
     
  ):match  
  -->
-:match.BirthHistory = {rule = Prem7, PREF = "very preterm", CUI = C4053870, 
+:item.BirthHistory = {rule = Prem7, PREF = "very preterm", CUI = C4053870, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "28 to 32 weeks"}
 
 
@@ -130,7 +161,7 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic , Lookup2.type == birth}
+    ({Lookup2.majorType == historic , Lookup2.type == birth}):item
 	{Numeric.value >3 , Numeric.value <=8} 
     {timePeriod.time-unit == Week}
     {Lookup2.minorType == prematurebirth}
@@ -138,7 +169,7 @@ Priority: 100
     
  ):match  
  -->
-:match.BirthHistory = {rule = Prem8, PREF = "moderate to late preterm", CUI = C4054482, 
+:item.BirthHistory = {rule = Prem8, PREF = "moderate to late preterm", CUI = C4054482, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "32 to 37 weeks"}
 
 Rule: Prem9
@@ -146,7 +177,7 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic ,Lookup2.type == birth }
+    ({Lookup2.majorType == historic ,Lookup2.type == birth }):item
 	{Numeric.value  >3}
     {timePeriod.time-unit == Week}
     {Lookup2.minorType == prematurebirth}
@@ -154,7 +185,7 @@ Priority: 100
     
  ):match  
  -->
-:match.BirthHistory = {rule = Prem9, PREF = "preterm birth", CUI = C0151526, 
+:item.BirthHistory = {rule = Prem9, PREF = "preterm birth", CUI = C0151526, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "under 37 weeks"}
 
 Rule: Prem10
@@ -162,14 +193,14 @@ Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic , Lookup2.type == birth}
+    ({Lookup2.majorType == historic , Lookup2.type == birth}):item
     ({Lookup2.majorType == historic})?
-    ({Lookup2.minorType == prematurebirth}):item
+    ({Lookup2.minorType == prematurebirth}):a
     
     
  ):match  
  -->
-:item.BirthHistory = {rule = Prem10, PREF = :item.Lookup2.value, CUI = :item.Lookup2.CUI, 
+:item.BirthHistory = {rule = Prem10, PREF = :a.Lookup2.value, CUI = :a.Lookup2.CUI, 
 Negation = Affirmed, Experiencer = Patient}
 
 

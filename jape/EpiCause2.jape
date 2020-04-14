@@ -1,5 +1,5 @@
 Phase: EpiCause2
-Input: Diagnosis Lookup3 Lookup2 Split
+Input: Lookup Lookup3 Lookup2 Split
 
 
   /*These rules are set to select causes and suspected causes of epilepsy, when they are shown 
@@ -10,15 +10,15 @@ Input: Diagnosis Lookup3 Lookup2 Split
 Options: control=appelt
 
 
-
-
 Rule: Cause2a
-Priority: 99
+Priority: 100
 
 (   
 	
-    {Diagnosis.Negation == Affirmed}
-    ({Lookup2.minorType == probability})
+    {Lookup.Negation == Affirmed}
+    {Split}
+    ({Lookup2.minorType == probability})?
+    {Lookup2.minorType == causality}
     ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
     Lookup3.Experiencer == Patient}):item
   
@@ -32,15 +32,16 @@ Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality
 Certainty = :item.Lookup3.Certainty}
 
 
-Rule: Cause2b
+Rule: Cause2a
 Priority: 100
 
 (   
 	
-    {Diagnosis.Negation == Affirmed}
-    {Split}
+    {Lookup.Negation == Affirmed}
     ({Lookup2.minorType == probability})?
     {Lookup2.minorType == causality}
+    ({Lookup3})
+    ({Lookup2})?
     ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
     Lookup3.Experiencer == Patient}):item
   
@@ -48,9 +49,8 @@ Priority: 100
 
  ):match  
  -->
-:item.EpilepsyCause = {rule = Cause2b, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.EpilepsyCause = {rule = Cause2a, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
-
 

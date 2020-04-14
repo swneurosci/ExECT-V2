@@ -1,5 +1,5 @@
 Phase: EpiCause
-Input: Lookup Lookup3 DiagnosisTriggers Lookup2
+Input: Lookup Lookup3 DiagnosisTriggers Lookup2 listPoint
 
 
   /*These rules are set to select causes and suspected causes of epilepsy, the UMLS CUI that is returned relates to the cause, 
@@ -54,8 +54,10 @@ Priority: 99
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
-    {Lookup3.majorType == umls , Lookup3.minorType == Disease , Lookup3.Experiencer == Patient}
+    ({listPoint})?
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
     {Lookup2.minorType == causality}
+    ({Lookup2})*
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
     Lookup3.Experiencer == Patient}):item
     
@@ -71,9 +73,10 @@ Priority: 99
 
 (   
 	
-    ({Lookup2.type == suffered})
-    {Lookup3.majorType == umls , Lookup3.minorType == Disease , Lookup3.Experiencer == Patient}
+    ({Lookup2.type == suffered}|{Lookup2.type == began})
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
     {Lookup2.minorType == causality}
+    ({Lookup2})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
     Lookup3.Experiencer == Patient}):item
     
@@ -90,15 +93,33 @@ Priority: 99
 (   
 	
     {DiagnosisTriggers}
-    {Lookup}
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
     {Lookup2.minorType == causality}
+    ({Lookup2})?
     ({Lookup2})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
     Lookup3.Experiencer == Patient}):item
     
  ):match  
  -->
-:item.EpilepsyCause = {rule = Cause4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.EpilepsyCause = {rule = Cause5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: Cause6
+Priority: 99
+
+(   
+	
+    {DiagnosisTriggers}
+    {Lookup2.minorType == causality}
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+    Lookup3.Experiencer == Patient}):item
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+ ):match  
+ -->
+:item.EpilepsyCause = {rule = Cause6, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}

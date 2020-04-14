@@ -291,7 +291,7 @@ Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality
 Certainty = :item.Lookup3.Certainty,
 MonthDate = :match.PartialDate.month}
 
-Rule: PtHistoryB12
+Rule: PtHistoryB14
 Priority: 98
 
 (   
@@ -306,7 +306,7 @@ Priority: 98
 	
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryB12, OnsetType = "age_episodes_started", 
+:item.PatientHistory = {rule = PtHistoryB14, OnsetType = "age_episodes_started", 
 PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :item.Lookup3.Certainty,
@@ -315,22 +315,22 @@ AgeLower =:match.Range.N1,
 AgeUpper = :match.Range.N2,
 Age = :match.Numeric.value}
 
-Rule: PtHistoryB13
+Rule: PtHistoryB15
 Priority: 98
 
 (   
 	{Person}
+	({Lookup2})?
     ({Lookup2.type == experiencing})
 	({timeElapsed})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
     ({timeElapsed})?
    ({PartialDate})?
 
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryB13, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = PtHistoryB15, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -338,7 +338,7 @@ MonthDate =:match.PartialDate.month,
 YearDate =:match.PartialDate.year}
 
 
-Rule: PtHistoryB14
+Rule: PtHistoryB16
 Priority: 98
 
 (   
@@ -353,7 +353,7 @@ Priority: 98
 	
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryB14, OnsetType = "age_episodes_started", 
+:item.PatientHistory = {rule = PtHistoryB16, OnsetType = "age_episodes_started", 
 PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :item.Lookup3.Certainty,

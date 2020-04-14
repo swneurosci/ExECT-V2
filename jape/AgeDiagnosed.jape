@@ -17,6 +17,7 @@ Priority: 99
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,Lookup.Experiencer == Patient }):item
 	({Person})?
 	({Lookup2})?
+	({History})?
 	{Numeric}
 	
 	
