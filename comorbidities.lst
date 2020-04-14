@@ -46,7 +46,7 @@ idiopathic parkinson disease	CUI=C0030567	PREF=idiopathic parkinson disease	TUI=
 koolen de vries syndrome	CUI=C1864871	PREF=koolen de vries syndrome	TUI=T047	STY=Disease or Syndrome
 koolen syndrome	CUI=C1864871	PREF=koolen syndrome	TUI=T047	STY=Disease or Syndrome
 lack of psychomotor development	CUI=C0557874	PREF=lack of psychomotor development	TUI=T048	STY=Mental or Behavioral Dysfunction
-learning difficulties	CUI=C0424939	PREF=learning difficulties	TUI=T033	STY=finding
+learning difficulty	CUI=C0424939	PREF=learning difficulties	TUI=T033	STY=finding
 learning disability	CUI=C0751265	PREF=learning disability	TUI=T048	STY=Mental or Behavioral Dysfunction
 learning disabilities	CUI=C0751265	PREF=learning disability	TUI=T048	STY=Mental or Behavioral Dysfunction
 lewy body parkinson disease	CUI=C0030567	PREF=lewy body parkinson disease	TUI=T047	STY=Disease or Syndrome
@@ -1202,3 +1202,5 @@ ASD	CUI=C1510586	PREF=Autism Spectrum Disorders	TUI=T048	STY=Mental or Behaviora
 blind	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
 episodes of psychosis	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
 non-epileptic	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+cerebral vascular incident	CUI=C0038454	PREF=cerebrovascular stroke	TUI=T047	STY=Disease or Syndrome
+meningitic	CUI=C0025289	PREF=meningitis	TUI=T047	STY=Disease or Syndrome
