@@ -1,0 +1,60 @@
+Phase: Age
+Input: age Numeric timePeriod Lookup2 Person timeElapsed
+Options: control=appelt
+
+
+Rule: Age1
+Priority: 100
+
+(   
+	{age}
+	{Numeric}
+	{timePeriod}
+	
+ ):match  
+ -->
+:match.Age = {rule =Age1, AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value}
+ 	
+
+   Rule: Age1a
+Priority: 100
+
+(   
+	{age.value == aged}
+	{Numeric}
+	
+	
+ ):match  
+ -->
+:match.Age = {rule =Age1a, AgeUnit = "Year",
+Age =:match.Numeric.value}  
+
+Rule: Age1_since
+Priority: 100
+
+(   
+    {timeElapsed}
+	{age.value == aged}
+	{Numeric}
+	
+	
+ ):match  
+ -->
+:match.Age = {rule =Age1_since, AgeUnit = "Year",
+Age =:match.Numeric.value}  
+
+
+Rule: Age2
+Priority: 100
+
+(   
+	
+	{Numeric}
+    {timePeriod}
+	{age}
+	
+ ):match  
+ -->
+:match.Age = {rule =Age2, AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value}  
