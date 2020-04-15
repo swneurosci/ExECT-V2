@@ -1204,3 +1204,7 @@ episodes of psychosis	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental o
 non-epileptic	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
 cerebral vascular incident	CUI=C0038454	PREF=cerebrovascular stroke	TUI=T047	STY=Disease or Syndrome
 meningitic	CUI=C0025289	PREF=meningitis	TUI=T047	STY=Disease or Syndrome
+Infectious disease of brain	CUI=C1264609	PREF=Infectious disease of brain	TUI=T047	STY=Disease or Syndrome
+brain infection	CUI=C1264609	PREF=Infectious disease of brain	TUI=T047	STY=Disease or Syndrome
+intracranial infection	CUI=C4761018	PREF=Intracranial infection	TUI=T047	STY=Disease or Syndrome
+intracranial infections	CUI=C4761018	PREF=Intracranial infection	TUI=T047	STY=Disease or Syndrome
