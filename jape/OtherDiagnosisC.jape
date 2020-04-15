@@ -10,7 +10,7 @@ Priority: 100
 (   
 
 	{Investigation.Investigation != EEG}
-	({Lookup3.minorType == OtherDisease, Lookup3.majorType == umls}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.majorType == umls, Lookup3.Negation == Affirmed}):item
     
  ):match  
  -->

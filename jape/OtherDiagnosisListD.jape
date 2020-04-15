@@ -25,7 +25,7 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
-Rule: OtherDiagListD1
+Rule: OtherDiagListD2
 Priority: 100
 
 (   
@@ -34,24 +34,22 @@ Priority: 100
     {listPoint}
 	({Lookup2.language == onset})
 	{Age}
-    {Numeric}
     ({Lookup2})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
     {Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListD1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = OtherDiagListD2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
-Age =:match.Numeric.value,
-AgeUnit = "Year"}
+Age =:match.Age.Age,
+AgeUnit =:match.Age.AgeUnit}
 
-Rule: OtherDiagListD1
+Rule: OtherDiagListD3
 Priority: 100
 
 (   
-	
 	{DiagnosisTriggers}
     {listPoint}
     ({Lookup2})?
@@ -65,7 +63,56 @@ Priority: 100
     {Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListD1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = OtherDiagListD3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
+
+Rule: OtherDiagListD4
+Priority: 100
+
+(
+    {DiagnosisTriggers}
+    {listPoint}
+    ({Lookup2})?
+    {Lookup3}
+	{listPoint}
+    ({Lookup2})?
+    ({Lookup2})?
+    ({Lookup3})*
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+    {Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+    ({Lookup2.minorType == time})?
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagListD4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty,
+AgeUnit = :match.Lookup2.timeUnit,
+AgeLower =:match.Lookup2.lowerAge,
+AgeUpper = :match.Lookup2.upperAge,
+Age = ""}
+
+Rule: OtherDiagListD5
+Priority: 100
+
+(
+    {DiagnosisTriggers}
+    {listPoint}
+    ({Lookup2})?
+    ({Lookup3})*
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
+    {Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+    ({Age})?
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagListD5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty,
+AgeUnit = :match.Age.AgeUnit,
+Age = :match.Age.Age}
+

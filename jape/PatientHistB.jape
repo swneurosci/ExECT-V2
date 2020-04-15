@@ -1,5 +1,5 @@
 Phase: PatientHistB
-Input: Lookup3 Lookup2 Person Numeric Sentence timeElapsed timePeriod Range PartialDate PointInTime Age DateBio
+Input: Lookup3 Lookup2 Person Numeric Age Sentence timeElapsed timePeriod Range PartialDate PointInTime age DateBio
 
 
 /*additional rules to annotate items in patient history when they are stated one after another in longer sentences
@@ -112,8 +112,6 @@ Certainty = :item.Lookup3.Certainty,
 YearDate = :match.Numeric.value}
 
 
-
-
 Rule: PtHistoryB6
 Priority: 100
 
@@ -171,7 +169,6 @@ Priority: 80
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
 	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }	):item
    
-
 
  ):match  
  -->
@@ -238,7 +235,7 @@ Priority: 98
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
 	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
 	({Person})?
-	{Age}
+	{age}
 	{Range}
 	
  ):match  
@@ -300,7 +297,7 @@ Priority: 98
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
 	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
 	{Lookup2.majorType == historic, Lookup2.type == began}
-	{Age}
+	{age}
 	({Numeric})?
 	{Range}
 	
@@ -348,7 +345,6 @@ Priority: 98
 	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
 	{Lookup2.majorType == historic, Lookup2.type == began}
 	{Age}
-	({Numeric})
 	
 	
  ):match  
@@ -357,5 +353,5 @@ Priority: 98
 PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, 
 Certainty = :item.Lookup3.Certainty,
-AgeUnit = "Year",
-Age = :match.Numeric.value}
+AgeUnit = :match.Age.AgeUnit,
+Age = :match.Age.Age}

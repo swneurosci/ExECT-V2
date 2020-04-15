@@ -17,3 +17,51 @@ Rule: PutNegation
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
 umlsAnnots.iterator().next().getFeatures().put("rule","PutNegation");
 }
+
+Rule: PutNegation
+
+(
+{Trigger.majorType == negation} 
+{Trigger.majorType == temporality} 
+{NegConj}
+({Lookup3.Negation == Affirmed}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
+umlsAnnots.iterator().next().getFeatures().put("rule","PutNegation");
+}
+
+Rule: PutNegation
+
+(
+{Trigger.majorType == negation} 
+{Trigger.majorType == temporality} 
+{NegConj.majorType == negation}
+{Lookup3}
+({NegConj.majorType == negation})?
+({Lookup3.Negation == Affirmed}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
+umlsAnnots.iterator().next().getFeatures().put("rule","PutNegation");
+}
+
+Rule: PutNegation
+
+(
+{Trigger.majorType == negation} 
+{Trigger.majorType == temporality} 
+{NegConj.majorType == negation}
+{Lookup3}
+({NegConj.majorType == negation})?
+{Lookup3}
+({NegConj.majorType == negation})
+({Lookup3.Negation == Affirmed}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
+umlsAnnots.iterator().next().getFeatures().put("rule","PutNegation");
+}
