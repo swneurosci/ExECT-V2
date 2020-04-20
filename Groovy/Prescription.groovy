@@ -1,3 +1,4 @@
+import groovy.json.JsonOutput
 new File(scriptParams.outputFile).withWriterAppend{ out ->
   doc.getAnnotations("Bio").get("PrescriptionCSV").each{
     anno ->
