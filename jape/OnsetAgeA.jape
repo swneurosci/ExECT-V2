@@ -1,5 +1,5 @@
 Phase: OnsetAgeA
-Input: Lookup Person Lookup2 Numeric timePeriod Age Lookup3 age Pronouns
+Input: Lookup Person Lookup2 Numeric timePeriod Age Lookup3 age Pronouns Split
 Options: control=appelt
 
 
@@ -93,7 +93,7 @@ Priority: 99
 	({Lookup2})?
 	({Person})?
 	({Lookup2})?
-	({Lookup2.language == onset})
+	({Lookup2.language == onset, Lookup2.type != diagnosed})
 	({Lookup.majorType == umls ,Lookup.minorType == Disease, Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient}):item
 
 ):match  

@@ -49,7 +49,7 @@ Priority: 98
 (   
 	{Person}
 	({Lookup2})?
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
+	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.type != diagnosed }
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
 	{Age}
 	
@@ -70,7 +70,7 @@ Priority: 9
 	{Person}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient ,Lookup.minorType == Disease}):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
-	{History.majorType == person}
+	{age}
 	{Range}
 	
 	
@@ -173,7 +173,7 @@ Priority: 99
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	({timeElapsed})
 	({Numeric})
-	{History}
+	{age}
 	({Numeric}):a	
 	
  ):match  
@@ -208,13 +208,13 @@ AgeUnit = :match.Age.AgeUnit,
 Age =:match.Age.Age}
 
 Rule: onsetAge11
-Priority: 99
+Priority: 90
 
 (   
-	{History.minorType == history}
+	({age})?
 	{Age}
 	({Person})?
-	({Lookup2.majorType == historic, Lookup2.minorType == symptoms}|{Lookup2.majorType == historic, Lookup2.type == past})
+	({Lookup2.majorType == historic,Lookup2.type != diagnosed, Lookup2.minorType == symptoms}|{Lookup2.majorType == historic, Lookup2.type == past})
 	({Lookup.majorType == umls , Lookup.Experiencer == Patient , Lookup.Negation == Affirmed}):item
 
  ):match  

@@ -1,5 +1,5 @@
 Phase: OnsetDate
-Input: Lookup3 Person Lookup2 Sentence Numeric timeElapsed  PointInTime Lookup PartialDate timePeriod Age DiagnosisTriggers
+Input: Lookup3 Person Lookup2 Sentence Numeric timeElapsed  PointInTime Lookup PartialDate timePeriod Age DiagnosisTriggers age
 Options: control=appelt
 //Age is here to stop th e rules picking yp Age of onset//
 //DiagnosisTriggers is to stop the rules from picking up diagnosis//

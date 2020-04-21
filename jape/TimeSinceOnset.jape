@@ -1,5 +1,5 @@
 Phase: TimeSinceOnset
-Input: Lookup3 Lookup Person Sentence Numeric timePeriod timeElapsed Lookup2 Split Age DiagnosisTriggers listPoint
+Input: Lookup3 Lookup Person Sentence Numeric timePeriod timeElapsed Lookup2 Split age DiagnosisTriggers listPoint
 
 
 Options: control=appelt		
