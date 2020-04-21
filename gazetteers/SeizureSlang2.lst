@@ -59,8 +59,8 @@ seizure like events:CUI=C0748601:PREF=seizure like event:TUI=T033:STY=Finding:CA
 seizure-like event:CUI=C0748601:PREF=seizure like event:TUI=T033:STY=Finding:CAT=Slang
 seizure-like events:CUI=C0748601:PREF=seizure like event:TUI=T033:STY=Finding:CAT=Slang
 seizure markers:CUI=C0748601:PREF=seizure like event:TUI=T033:STY=Finding:CAT=Slang
-Seizure:CUI=C0036572:PREF=seizures:TUI=T184:STY=Sign or Symptom:CAT=Seizure
-Seizures:CUI=C0036572:PREF=seizures:TUI=T184:STY=Sign or Symptom:CAT=Seizure
-nocturnal seizures:CUI=C0748605:PREF=nocturnal seizures:TUI=T033:STY=Finding:CAT=Seizure
-fit:CUI=C0036572:PREF=seizures:TUI=T184:STY=Sign or Symptom:CAT=Seizure
-fits:CUI=C0036572:PREF=seizures:TUI=T184:STY=Sign or Symptom:CAT=Seizure
+Seizure:CUI=C0036572:PREF=seizures:TUI=T184:STY=Sign or Symptom:CAT=Seizures
+Seizures:CUI=C0036572:PREF=seizures:TUI=T184:STY=Sign or Symptom:CAT=Seizures
+nocturnal seizures:CUI=C0748605:PREF=nocturnal seizures:TUI=T033:STY=Finding:CAT=Seizures
+fit:CUI=C0036572:PREF=seizures:TUI=T184:STY=Sign or Symptom:CAT=Seizures
+fits:CUI=C0036572:PREF=seizures:TUI=T184:STY=Sign or Symptom:CAT=Seizures
