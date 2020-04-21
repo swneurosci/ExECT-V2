@@ -18,7 +18,7 @@ if(tokenEnd - tokenStart > 3) {
        String string = doc.getContent().getContent(tagAnnots.firstNode().getOffset(),
                     tagAnnots.lastNode().getOffset()).toString().toLowerCase();
       if(string.contains("seizures")) {
-       getOnlyAnn(tagAnnots).getFeatures().put("PluralSeizures","Yes");
+       getOnlyAnn(tagAnnots).getFeatures().put("DiagCategory","MultipleSeizures");
        }
    }
    catch(InvalidOffsetException e) {
@@ -44,7 +44,7 @@ if(tokenEnd - tokenStart > 3) {
        String string = doc.getContent().getContent(tagAnnots.firstNode().getOffset(),
                     tagAnnots.lastNode().getOffset()).toString().toLowerCase();
       if(string.contains("convulsions")) {
-       getOnlyAnn(tagAnnots).getFeatures().put("PluralSeizures","Yes");
+       getOnlyAnn(tagAnnots).getFeatures().put("DiagCategory","MultipleSeizures");
        }
    }
    catch(InvalidOffsetException e) {

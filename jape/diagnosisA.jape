@@ -11,122 +11,64 @@ Options: control=all
 
 /* STY now != 'Sign or Symptom' to match DiagFromSeizure, this will also now pick up post-traumatic seizures */
 
-Rule: getDiagnosisSeizures
+Rule: DiagDiagnosisTrigger1
 (
     ({DiagnosisTriggers.majorType == "diagnosis"})
 	(
-	{Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}
+	{Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}
 	):item
 ):label
 -->
-:item.DiagnosisA = { rule = "getDiagnosisSeizures", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
-Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
-
-Rule: getDiagnosisEpilepsy
-(
-    ({DiagnosisTriggers.majorType == "diagnosis"})
-	(
-	({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})
-	):item
-):label
--->
-:item.DiagnosisA = { rule = "getDiagnosisEpilepsy", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
-Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
+:item.DiagnosisA = { rule = "DiagDiagnosisTrigger1", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty, DiagCategory = :item.Lookup.DiagCategory}
 
 
-Rule: getDiagnosisEpilepsy2
+Rule: DiagDiagnosisTrigger2
 (
 	({DiagnosisTriggers})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
+	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
-:item.DiagnosisA = { rule = "getDiagnosisEpilepsy2", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
-Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
+:item.DiagnosisA = { rule = "DiagDiagnosisTrigger2", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty, DiagCategory = :item.Lookup.DiagCategory}
 
 
-Rule: getDiagnosisSeizures2
-(
-	({DiagnosisTriggers})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
-):match1
--->
-:item.DiagnosisA = { rule = "getDiagnosisSeizures2", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
-Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
-
-Rule: getDiagnosisSeizures3
+Rule: DiagDiagnosisTrigger3
 (
 	({DiagnosisTriggers})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
+	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
-:item.DiagnosisA = { rule = "getDiagnosisSeizures3", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
-Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
+:item.DiagnosisA = { rule = "DiagDiagnosisTrigger3", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty, DiagCategory = :item.Lookup.DiagCategory}
 
 
-Rule: getDiagnosisSeizures3
-(
-	({DiagnosisTriggers})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
-):match1
--->
-:item.DiagnosisA = { rule = "getDiagnosisEpilepsy3", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
-Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
-
-
-Rule: getDiagnosisSeizures4
+Rule: DiagDiagnosisTrigger4
 (
 	({DiagnosisTriggers})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
+	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
-:item.DiagnosisA = { rule = "getDiagnosisEpilepsy4", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
-Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
+:item.DiagnosisA = { rule = "DiagDiagnosisTrigger4", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty, DiagCategory = :item.Lookup.DiagCategory}
 
 
-Rule: getDiagnosisSeizures5
+Rule: DiagDiagnosisTrigger5
 (
 	({DiagnosisTriggers})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Epilepsy == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
+	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
-:item.DiagnosisA = { rule = "getDiagnosisEpilepsy5", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
-Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
+:item.DiagnosisA = { rule = "DiagDiagnosisTrigger5", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty, DiagCategory = :item.Lookup.DiagCategory}
 
-Rule: getDiagnosisSeizures3
-(
-	({DiagnosisTriggers})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
-):match1
--->
-:item.DiagnosisA = { rule = "getDiagnosisSeizures4", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
-Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
-
-
-Rule: getDiagnosisSeizures3
-(
-	({DiagnosisTriggers})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Plural == Yes, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
-):match1
--->
-:item.DiagnosisA = { rule = "getDiagnosisSeizures5", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
-Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}

@@ -20,7 +20,7 @@ if(tokenEnd - tokenStart > 3) {
                     tagAnnots.lastNode().getOffset()).toString().toLowerCase();
         String pref = lookup.getFeatures().get("PREF").toString().toLowerCase();
       if(string.contains("epilepsy")){
-       getOnlyAnn(tagAnnots).getFeatures().put("Epilepsy1","Yes");
+       getOnlyAnn(tagAnnots).getFeatures().put("DiagCategory","Epilepsy");
        }
    }
    catch(InvalidOffsetException e) {
@@ -47,7 +47,7 @@ if(tokenEnd - tokenStart > 1) {
                     tagAnnots.lastNode().getOffset()).toString().toLowerCase();
         String pref = lookup.getFeatures().get("PREF").toString().toLowerCase();
       if(pref.contains("epilepsy")){
-       getOnlyAnn(tagAnnots).getFeatures().put("Epilepsy1","Yes");
+       getOnlyAnn(tagAnnots).getFeatures().put("DiagCategory","Epilepsy");
        }
    }
    catch(InvalidOffsetException e) {

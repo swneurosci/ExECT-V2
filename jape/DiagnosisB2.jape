@@ -15,7 +15,7 @@ Priority: 100
 ):match  
  -->
 :DiagB.DiagnosisB = {rule = HDiagnosisB1, PREF = :DiagB.DiagBFiltered.PREF, CUI = :DiagB.DiagBFiltered.CUI, 
-Negation = :match.DiagnosisA.Negation, Certainty = :match.DiagnosisA.Certainty}
+Negation = :DiagB.DiagBFiltered.Negation, Certainty = :DiagB.DiagBFiltered.Certainty, DiagCategory = :DiagA.DiagnosisA.DiagCategory}
 
 Rule: HDiagnosisB2
 Priority: 100
@@ -26,4 +26,4 @@ Priority: 100
 ):match  
  -->
 :DiagB.DiagnosisB = {rule = HDiagnosisB2, PREF = :DiagB.DiagBFiltered.PREF, CUI = :DiagB.DiagBFiltered.CUI, 
-Negation = :match.DiagnosisA.Negation, Certainty = :match.DiagnosisA.Certainty}
+Negation = :DiagB.DiagBFiltered.Negation, Certainty = :DiagB.DiagBFiltered.Certainty, DiagCategory = :DiagA.DiagnosisA.DiagCategory}
