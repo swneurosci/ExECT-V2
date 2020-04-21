@@ -3,7 +3,7 @@ Input: Investigation p startList InvestigationFinding Mentions
 Options: control=brill
 
 /* 
-  * get EEG, CT and MRI scans and their outcomes 
+  * get EEG, CT and MRI scans and their outcomes -- Wont work as InvestFinding Spilt up into 3 - one for each type of investigation 
 */
 
 

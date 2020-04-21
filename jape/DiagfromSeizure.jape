@@ -2,79 +2,36 @@ Phase: DiagnosisfromSeziure
 Input:  Person Sentence Lookup Investigation DiagnosisTriggers
 Options: control=all
 
-Rule: DiagnosisFromSeizure2a
+Rule: DiagPersonTrigger1
 Priority: 100
 (
 
 	(
 	{Person}
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed, Lookup.Plural == Yes, Lookup.Temporality != "hypothetical", Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical", Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
 	)
 
 ):match1
 -->
-:match.DiagnosisA = {rule = DiagFromSeizure2a, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
+:match.DiagnosisA = {rule = DiagPersonTrigger1, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty, DiagCategory = :match.Lookup.DiagCategory}
 
 
-Rule: DiagnosisFromSeizure2b
+Rule: DiagPersonTrigger2
 Priority: 99
 (
 
 	(
 	{Person}
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical", Lookup.Plural == Yes, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.DiagCategory != "test", Lookup.Temporality != "hypothetical", Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
 	)
 
 ):match1
 -->
-:match.DiagnosisA = {rule = DiagFromSeizure2b, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
+:match.DiagnosisA = {rule = DiagPersonTrigger2, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty, DiagCategory = :match.Lookup.DiagCategory}
 
 
-Rule: DiagnosisFromSeizure2c
-Priority: 99
-(
-
-	(
-	{Person}
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical", Lookup.Plural == Yes, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
-	)
-
-):match1
--->
-:match.DiagnosisA = {rule = DiagFromSeizure2b, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
-
-Rule: DiagnosisFromEpilepsyYes2a
-Priority: 100
-(
-
-	(
-	{Person}
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical", Lookup.Epilepsy == Yes, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
-	)
-
-):match1
--->
-:match.DiagnosisA = {rule = DiagFromEpiYes2a, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
-
-
-Rule: DiagnosisFromEpilepsyYes2b
-Priority: 99
-(
-
-	(
-	{Person}
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Temporality != "hypothetical", Lookup.Negation == Affirmed, Lookup.Epilepsy == Yes, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
-	)
-
-):match1
--->
-:match.DiagnosisA = {rule = DiagFromEpiYes2b, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
-
-Rule: DiagnosisFromEpilepsyYes2c
+Rule: DiagPersonTrigger3
 Priority: 99
 (
 
@@ -82,9 +39,44 @@ Priority: 99
 	{Person}
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.singleSeizure!=true, Lookup.Temporality != "hypothetical", Lookup.Negation == Affirmed, Lookup.Epilepsy == Yes, Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.DiagCategory != "test", Lookup.Temporality != "hypothetical", Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
 	)
 
 ):match1
 -->
-:match.DiagnosisA = {rule = DiagFromEpiYes2b, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
+:match.DiagnosisA = {rule = DiagPersonTrigger3, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty, DiagCategory = :match.Lookup.DiagCategory}
+
+
+Rule: DiagPersonTrigger4
+Priority: 99
+(
+
+	(
+	{Person}
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.DiagCategory != "test", Lookup.Temporality != "hypothetical", Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
+	)
+
+):match1
+-->
+:match.DiagnosisA = {rule = DiagPersonTrigger4, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty, DiagCategory = :match.Lookup.DiagCategory}
+
+
+Rule: DiagPersonTrigger5
+Priority: 99
+(
+
+	(
+	{Person}
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.DiagCategory != "test", Lookup.Temporality != "hypothetical", Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
+	)
+
+):match1
+-->
+:match.DiagnosisA = {rule = DiagPersonTrigger5, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty, DiagCategory = :match.Lookup.DiagCategory}
