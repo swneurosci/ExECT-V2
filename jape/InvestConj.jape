@@ -5,6 +5,7 @@ Options: control=brill
 /* 
   * sometimes two types of scans share the same outcome
   * i.e. "EEG and MRI both normal"
+  * Wont work as InvestFinding Spilt up into 3 - one for each type of investigation
 */
 
 
