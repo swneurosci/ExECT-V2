@@ -1,0 +1,14 @@
+MultiPhase: Stage1
+Phases:
+
+newLine
+newParagraph
+listPoint
+listSent
+LookupAppelt
+DiagBFilter
+Lookup3Appelt
+Lookup3AppeltComorbs
+SingleSeizureJAVA
+PluralSeizuresJAVA
+EpilepsyJAVA
