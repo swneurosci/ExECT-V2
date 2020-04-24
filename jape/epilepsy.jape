@@ -20,7 +20,7 @@ SeizFreeFilter
 SeizFreeFilter2
 SeizChangeFilter
 SeizChangeFilter2
-TwoSeizureFreqOneTimePeriod
+//TwoSeizureFreqOneTimePeriod
 EpilepsyMentions
 SeizureSince
 Investigations
@@ -45,4 +45,5 @@ InvestigationsEEG
 InvestigationsCT
 InvestigationsMRI
 InvestigationsLookup
+//InvestigationWithin /* Need to work on this rule, deletes too much*/
 Age

@@ -1,0 +1,15 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: Investigations
+Input: Investigations
+Options: control=all
+
+Rule: InvestWithinInvest
+Priority: 100
+(   
+    ({Investigations.rule =~ "Lookup", Investigations within Investigations.rule !=~ "lookup"}):invest
+):match
+-->
+:match { 
+  inputAS.removeAll(investAnnots);
+}
