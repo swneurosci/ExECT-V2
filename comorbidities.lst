@@ -1208,4 +1208,5 @@ Infectious disease of brain	CUI=C1264609	PREF=Infectious disease of brain	TUI=T0
 brain infection	CUI=C1264609	PREF=Infectious disease of brain	TUI=T047	STY=Disease or Syndrome
 intracranial infection	CUI=C4761018	PREF=Intracranial infection	TUI=T047	STY=Disease or Syndrome
 intracranial infections	CUI=C4761018	PREF=Intracranial infection	TUI=T047	STY=Disease or Syndrome
-
+migrainous headache	CUI=C0149931	PREF=migraine	TUI=T047	STY=Disease or Syndrome
+migrainous headaches	CUI=C0149931	PREF=migraine	TUI=T047	STY=Disease or Syndrome

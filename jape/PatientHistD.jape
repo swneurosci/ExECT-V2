@@ -1,5 +1,5 @@
 Phase: PatientHistD
-Input: Lookup3 Lookup2 Person Number timePeriod Split
+Input: Lookup3 Lookup2 Person Number timePeriod Split Range
 
 
 /* These rules annotate events in patient history - type of event with an UMLS CUI, age (precise and as a range), 

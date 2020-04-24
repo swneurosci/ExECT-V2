@@ -1,5 +1,5 @@
 Phase: TimeSinceOnsetA
-Input: Lookup3 Lookup Person Sentence Numeric timePeriod timeElapsed Lookup2 Age 
+Input: Lookup3 Lookup Person Sentence Numeric timePeriod timeElapsed Lookup2 age 
 
 
 Options: control=appelt		

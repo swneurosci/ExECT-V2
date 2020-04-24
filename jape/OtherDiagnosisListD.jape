@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisListD
-Input: Lookup3 DiagnosisTriggers listSent listPoint PartialDate Numeric Lookup2 Age
+Input: Lookup3 DiagnosisTriggers listSent listPoint PartialDate Numeric Lookup2 age Age
 
 Options: control=appelt
 

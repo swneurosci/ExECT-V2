@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisB
-Input: Lookup3 Lookup2 Sentence Lookup Investigation timeElapsed timePeriod DiagnosisTriggers listSent listPoint
+Input: Lookup3 Lookup2 Sentence Lookup Investigation timeElapsed timePeriod DiagnosisTriggers listSent listPoint 
 
 
 Options: control=appelt
@@ -65,7 +65,7 @@ Rule: OtherDiagB2
 Priority: 100
 
 (   
-
+	
 	{Lookup2.minorType == opinion}
 	({Lookup2.minorType == probability})?
     ({Lookup3})?

@@ -1,5 +1,5 @@
 Phase: TimeSinceOnsetB
-Input: Lookup3 Lookup Person  Numeric timePeriod timeElapsed Lookup2 Split Age Frequency
+Input: Lookup3 Lookup Person  Numeric timePeriod timeElapsed Lookup2 Split age Frequency
 //frequency is here to stop the phrases relating to frequency rather than an onset being annotated//
 
 Options: control=appelt		
