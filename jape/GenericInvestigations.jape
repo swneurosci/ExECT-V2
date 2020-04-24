@@ -1,0 +1,10 @@
+MultiPhase: Stage1
+Phases:
+
+newLine
+newParagraph
+listPoint
+listSent
+LookupAppelt
+Lookup3Appelt
+Lookup3AppeltComorbs
