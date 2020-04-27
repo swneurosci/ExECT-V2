@@ -1,0 +1,13 @@
+MultiPhase: Stage1
+Phases:
+
+numbers
+times
+measurement
+numberRange
+rangeOrNumber
+LookupSplit
+newLine
+newParagraph
+listPoint
+listSent
