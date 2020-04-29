@@ -1,0 +1,12 @@
+Multiphase:Epilepsy
+
+Phases:
+
+NegatedFindingCT
+NegatedFindingMRI
+NegatedFindingEEG
+InvestigationsEEG
+InvestigationsCT
+InvestigationsMRI
+InvestigationsLookup
+//InvestigationWithin /* Need to work on this rule, deletes too much*/

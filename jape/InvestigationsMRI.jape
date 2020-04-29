@@ -1,5 +1,5 @@
 Phase: Investigations
-Input: Investigation p startList Mentions InvestigationFindingMRI Diagnosis ContextInvestigations Split Conj
+Input: Investigation p startList Mentions InvestigationFindingMRI ContextInvestigations Split Conj
 Options: control=appelt
 
 /* 
