@@ -1210,3 +1210,12 @@ intracranial infection	CUI=C4761018	PREF=Intracranial infection	TUI=T047	STY=Dis
 intracranial infections	CUI=C4761018	PREF=Intracranial infection	TUI=T047	STY=Disease or Syndrome
 migrainous headache	CUI=C0149931	PREF=migraine	TUI=T047	STY=Disease or Syndrome
 migrainous headaches	CUI=C0149931	PREF=migraine	TUI=T047	STY=Disease or Syndrome
+normal birth	CUI=C3665337	PREF=normal birth	TUI=T033	STY=Finding
+birth was normal	CUI=C3665337	PREF=normal birth	TUI=T033	STY=Finding 
+angina	CUI=C0002962	PREF=Angina Pectoris	TUI=T184	STY=Sign or Symptom	
+ischaemic heart disease	CUI=C0002962	PREF=Angina Pectoris	TUI=T184	STY=Sign or Symptom
+angina pectoris	CUI=C0002962	PREF=Angina Pectoris	TUI=T184	STY=Sign or Symptom
+coronary heart disease	CUI=C0010068	PREF=coronary heart disease	TUI=T047	STY=Disease or Syndrome
+CHD	CUI=C0010068	PREF=coronary heart disease	TUI=T047	STY=Disease or Syndrome
+arteriosclerosis	CUI=C0003850	PREF=Arteriosclerosis	TUI=T047	STY=Disease or Syndrome
+arteriosclerotic vascular disease	CUI=C0003850	PREF=Arteriosclerosis	TUI=T047	STY=Disease or Syndrome
