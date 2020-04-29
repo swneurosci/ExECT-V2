@@ -1,0 +1,35 @@
+Phase: TimeSince
+Input: Numeric timePeriod timeElapsed Age Sentence Token
+Options: control=appelt
+
+//Age is there to stop annotating Age as time since, so is the Token//
+
+Rule: TimeSince1
+Priority: 100
+
+(   
+	({timeElapsed.time == during}|{timeElapsed.time == since })
+    ({!Age})?
+	{Numeric}
+	{timePeriod}
+	
+ ):match  
+ -->
+:match.TimeSince = {rule =TimeSince1, TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value}
+
+
+Rule: TimeSince1
+Priority: 100
+
+(   {Numeric}
+    {timePeriod}
+    ({!Age})?
+	{timeElapsed.time == since}
+	
+	
+	
+ ):match  
+ -->
+:match.TimeSince = {rule =TimeSince1, TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value}

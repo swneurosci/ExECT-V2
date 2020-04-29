@@ -1,5 +1,5 @@
 Phase: MedicalHistory
-Input: Lookup3 MedicalHistory listSent listPoint Sentence 
+Input: OtherDiag Lookup3 MedicalHistory listSent listPoint Sentence timeElapsed Numeric
 
  //Simple rules to annotate events without Person e.g., history of convulsions - could be too sensitive  */
 
@@ -11,33 +11,44 @@ Rule: MedicalHistory1
 
 (   
 	{MedicalHistory}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-	
-    
+	({OtherDiag}):item
+	   
  ):match  
  -->
-:item.PatientHistory = {rule = MedicalHistory1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = "Past", 
-Certainty = :item.Lookup3.Certainty} 
+:item.PatientHistory = {rule = MedicalHistory1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+YearDate = :match.OtherDiag.YearDate} 
+
+Rule: MedicalHistory1b
+
+(   
+	{MedicalHistory}
+	({OtherDiag}):item
+	{Numeric}
+	   
+ ):match  
+ -->
+:item.PatientHistory = {rule = MedicalHistory1b, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+YearDate = :match.Numeric.value} 
 
 Rule: MedicalHistory2
-
 
 (   
 	{MedicalHistory}
 	({Lookup3})
-    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-	
-    
+    ({OtherDiag}):item
+	   
  ):match  
  -->
-:item.PatientHistory = {rule = MedicalHistory2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = "Past", 
-Certainty = :item.Lookup3.Certainty}
+:item.PatientHistory = {rule = MedicalHistory2, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = "Past", 
+Certainty = :item.OtherDiag.Certainty}
 
 Rule: MedicalHistory3
 
@@ -46,33 +57,28 @@ Rule: MedicalHistory3
 	{MedicalHistory}
 	({Lookup3})
 	({Lookup3})
-    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-	
+    ({OtherDiag}):item
     
  ):match  
  -->
-:item.PatientHistory = {rule = MedicalHistory3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = "Past", 
-Certainty = :item.Lookup3.Certainty}
+:item.PatientHistory = {rule = MedicalHistory3, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = "Past", 
+Certainty = :item.OtherDiag.Certainty}
 
 Rule: MedicalHistory4
-
 
 (   
 	{MedicalHistory}
 	({Lookup3})
 	({Lookup3})
 	({Lookup3})
-    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-	
+     ({OtherDiag}):item
     
  ):match  
  -->
-:item.PatientHistory = {rule = MedicalHistory4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = "Past", 
-Certainty = :item.Lookup3.Certainty}
+:item.PatientHistory = {rule = MedicalHistory4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = "Past", 
+Certainty = :item.OtherDiag.Certainty}
 
