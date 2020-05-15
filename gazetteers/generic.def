@@ -69,3 +69,5 @@ Pronouns.lst::grammer::Pronouns
 MedicalHistory.lst:diagnosis:past::MedicalHistory
 SeizureSlang2.lst:umls:generic:undefinedSeizure:Seizures
 eventModifiers.lst::::Lookup2
+Health_Condition.lst:health_condition:symptoms::Lookup2
+PHistBlock.lst::::PHistBlock
