@@ -1,8 +1,8 @@
 Phase: PatientHistD
-Input: Lookup3 Lookup2 Person Number timePeriod Split Range
+Input: Lookup3 Lookup2 Person Number timePeriod Split OtherDiag TimeSince
 
 
-/* These rules annotate events in patient history - type of event with an UMLS CUI, age (precise and as a range), 
+/* These rules spill over more than one sentence,  annotate events in patient history - type of event with an UMLS CUI, age (precise and as a range), 
 date as year/month, and time since the event, as TimePeriod / NumberOfTimePeriods) - RuleD2 overides the level of certainty of Lookup3*/
 
 
@@ -72,4 +72,24 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :a.Lookup2.Level}
 
+Rule: PtHistoryD4  /*condition of interest then time of onset in the next sentence*/
+Priority: 100
+
+(   
+	
+	({OtherDiag}):item
+	{Split}
+	({Person})
+	({Person})?
+    {Lookup2.type == experiencing}
+	{TimeSince}
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryD4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+TimePeriod = :match.TimeSince.TimePeriod,
+LowerNumberOfTimePeriods = :match.TimeSince.LowerNumberOfTimePeriods,
+UpperNumberOfTimePeriods = :match.TimeSince.UpperNumberOfTimePeriods}
 

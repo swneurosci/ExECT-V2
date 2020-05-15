@@ -1,226 +1,152 @@
 Phase: OtherDiagnosisListA
-Input: Lookup3 DiagnosisTriggers listSent listPoint PartialDate Numeric PointInTime Range Lookup
+Input: DiagnosisTriggers OtherDiag listSent listPoint PartialDate Range MedicalHistory PHistBlock endList
 
 Options: control=appelt
-
-
 
 Rule: OtherDiagListA1
 Priority: 100
 
-(   
-	{DiagnosisTriggers.majorType == diagnosis}
-	({Lookup3})?
-	{listPoint}
-	({DiagnosisTriggers.majorType == diagnosis})?
-	({Numeric})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}
-     |{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-    ({PointInTime})
-	({Numeric}):a
-
+(   ({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+    {listPoint}
+	({OtherDiag.rule == OtherDiagPartialDate}):item  
+	
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListA1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty,
-YearDate = :a.Numeric.value,
-MonthDate =:match.PartialDate.month,
-PointInTime =:match.PointInTime.Since}
-
-Rule: OtherDiagListA1a
-Priority: 100
-
-(   
-	{DiagnosisTriggers.majorType == diagnosis}
-	({Lookup3})?
-	{listPoint}
-	({DiagnosisTriggers.majorType == diagnosis})?
-	({Numeric})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}
-     |{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-    ({PartialDate})
-    ({PointInTime})
-
- ):match  
- -->
-:item.PatientHistory = {rule = OtherDiagListA1a, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty,
-YearDate = :match.PartialDate.year,
-MonthDate =:match.PartialDate.month,
-PointInTime =:match.PointInTime.Since}
-
+:item.PatientHistory = {rule = OtherDiagListA1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+YearDate = :match.OtherDiag.YearDate,
+MonthDate =:match.OtherDiag.MonthDate}
 
 Rule: OtherDiagListA2
 Priority: 100
 
-(   
-	{DiagnosisTriggers.majorType == diagnosis}
-   {listPoint}
-	({Lookup3})?
+(   ({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+    {listPoint}
 	{listPoint}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}
-     |{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-     {PointInTime}
-     ({PartialDate})?
-
+	({OtherDiag.rule == OtherDiagAge}):item  
+	
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListA2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-PointinTime =:match.PointInTime.Since,
-Certainty = :item.Lookup3.Certainty,
-YearDate = :match.PartialDate.year,
-MonthDate =:match.PartialDate.month}
-
+:item.PatientHistory = {rule = OtherDiagListA2, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+Age = :match.OtherDiag.Age,
+AgeUnit = :match.OtherDiag.AgeUnit,
+YearDate = :match.OtherDiag.YearDate,
+MonthDate =:match.OtherDiag.MonthDate}
 
 Rule: OtherDiagListA3
-Priority: 100
+Priority: 90
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
-	({Lookup3})?
+	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
 	{listPoint}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-    ({PartialDate})
-	
-
+	({DiagnosisTriggers.majorType == diagnosis})
+	({OtherDiag}):item
+   	
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListA3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty,
-YearDate = :match.PartialDate.year,
-MonthDate =:match.PartialDate.month}
-
-Rule: OtherDiagListAa
-Priority: 100
-
-(   
-	{DiagnosisTriggers.majorType == diagnosis}
-	({Lookup3})?
-	{listPoint}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-    ({Numeric})
-	
-
- ):match  
- -->
-:item.PatientHistory = {rule = OtherDiagListA3a, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty,
-YearDate = :match.Numeric.value}
+:item.PatientHistory = {rule = OtherDiagListA3, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+YearDate = :match.OtherDiag.YearDate,
+MonthDate =:match.OtherDiag.MonthDate}
 
 Rule: OtherDiagListA4
-Priority: 100
+Priority: 90
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
-    {listPoint}
-	({Lookup})?
-	({Numeric})?
+	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+	{listPoint}
+	({DiagnosisTriggers}|{MedicalHistory})?
 	({listPoint})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-    ({PartialDate})?
-	
-
+     ({OtherDiag}):item
+    
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListA4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty,
-YearDate = :match.PartialDate.year,
-MonthDate =:match.PartialDate.month}
-
+:item.PatientHistory = {rule = OtherDiagListA4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+YearDate = :match.OtherDiag.YearDate,
+MonthDate =:match.OtherDiag.MonthDate}
 
 Rule: OtherDiagListA5
-Priority: 100
+Priority: 90
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
-    {listPoint}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-    ({PartialDate})
-	
-
+	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+   {listPoint}
+	{listPoint}
+	({OtherDiag.rule == OtherDiagDate}):item
+    
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListA5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty,
-YearDate = :match.PartialDate.year,
-MonthDate =:match.PartialDate.month}
+:item.PatientHistory = {rule = OtherDiagListA5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+YearDate = :match.OtherDiag.YearDate,
+MonthDate =:match.OtherDiag.MonthDate}
 
 
-Rule: OtherDiagListA6
-Priority: 100
-
-(   
-	{DiagnosisTriggers.majorType == diagnosis}
-    {listPoint}
-    ({Numeric})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-    ({Range})
-	
-
- ):match  
- -->
-:item.PatientHistory = {rule = OtherDiagListA6, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty,
-YearDate = :match.Range.N2}
 
 Rule: OtherDiagListA7
 Priority: 100
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
-	({Lookup})
-    ({listPoint})?
-	({Lookup})?
-	({Numeric})?
-	({listPoint})
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-   
+	({DiagnosisTriggers.majorType == diagnosis}|{MedicalHistory})
+    {listPoint}
+	({listPoint})*
+	({OtherDiag}):item
+   	
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListA7, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
+:item.PatientHistory = {rule = OtherDiagListA7, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+YearDate = :match.OtherDiag.YearDate,
+MonthDate =:match.OtherDiag.MonthDate,
+TimePeriod = :match.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods}
 
 Rule: OtherDiagListA8
 Priority: 100
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
-	{listPoint}
-	({Lookup})?
-	({DiagnosisTriggers})?
-	({Numeric})?
-	{Lookup3}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-    	
-
+	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+    {listPoint}
+	({OtherDiag}):item
+    ({Range})
+	
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListA8, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
+:item.PatientHistory = {rule = OtherDiagListA8, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+YearDate = :match.Range.N2}
+
+Rule: OtherDiagListA9
+Priority: 90
+
+(   
+	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+    {listPoint}
+	({OtherDiag}):item
+   
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagListA9, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}
+
+
+
+

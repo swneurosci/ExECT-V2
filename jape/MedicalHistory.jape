@@ -1,5 +1,5 @@
 Phase: MedicalHistory
-Input: OtherDiag Lookup3 MedicalHistory listSent listPoint Sentence timeElapsed Numeric
+Input: OtherDiag Lookup3 MedicalHistory listSent listPoint Sentence PHistBlock
 
  //Simple rules to annotate events without Person e.g., history of convulsions - could be too sensitive  */
 
@@ -11,7 +11,7 @@ Rule: MedicalHistory1
 
 (   
 	{MedicalHistory}
-	({OtherDiag}):item
+	({OtherDiag.rule == OtherDiagYear}):item
 	   
  ):match  
  -->
@@ -21,26 +21,13 @@ Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Tempora
 Certainty = :item.OtherDiag.Certainty,
 YearDate = :match.OtherDiag.YearDate} 
 
-Rule: MedicalHistory1b
 
-(   
-	{MedicalHistory}
-	({OtherDiag}):item
-	{Numeric}
-	   
- ):match  
- -->
-:item.PatientHistory = {rule = MedicalHistory1b, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
-YearDate = :match.Numeric.value} 
 
 Rule: MedicalHistory2
 
 (   
 	{MedicalHistory}
-	({Lookup3})
+	({Lookup3})?
     ({OtherDiag}):item
 	   
  ):match  

@@ -1,5 +1,5 @@
 Phase: FebrileSeizures
-Input: Lookup3 MedicalHistory Pronouns Split Age Numeric
+Input: Lookup3 Pronouns Age
 
 
 
@@ -10,15 +10,10 @@ Rule: FebSeizures1
 Priority: 100
 
 (   
- 	{Age.value == topAge}
-    {Numeric}
-    {Pronouns}
-    {Pronouns.type == demonstrative}
-	({Lookup3.Negation == Affirmed, Lookup3.PREF  =~ "febrile", 
+    {Age}
+ 	{Pronouns}
+	({Lookup3.Negation == Affirmed, Lookup3.CUI == C0009952, 
 	Lookup3.Experiencer == Patient}):item
-	
-	
-	
     
  ):match  
  -->
@@ -26,6 +21,5 @@ Priority: 100
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
-AgeUnit = "Year",
-AgeLower = "",
-AgeUpper =:match.Numeric.value}
+AgeUnit =:match.Age.AgeUnit,
+AgeUpper =:match.Age.AgeUpper}

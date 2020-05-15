@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisC
-Input: Investigation  Lookup3 Sentence Lookup2
+Input: Investigation  Lookup3 Sentence
 
 
 Options: control=appelt
@@ -10,8 +10,6 @@ Priority: 100
 (   
 
 	{Investigation.Investigation != EEG}
-	({Lookup2.minorType == opinion, Lookup2.Negation != Negated})
-	({Lookup2})?
 	({Lookup3.minorType == OtherDisease, Lookup3.majorType == umls, Lookup3.Negation == Affirmed}):item
     
  ):match  
@@ -20,3 +18,5 @@ Priority: 100
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
+
+

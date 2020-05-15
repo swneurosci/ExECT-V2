@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisListF
-Input: Lookup3 DiagnosisTriggers Conj Sentence
+Input: OtherDiag DiagnosisTriggers Conj Sentence
 
 Options: control=brill
 
@@ -9,73 +9,73 @@ Rule: OtherDiagListF1
 Priority: 100
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
+({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
 	{Conj.type == list}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+	({OtherDiag}):item
     
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListF1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
+:item.PatientHistory = {rule = OtherDiagListF1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}
 
 Rule: OtherDiagListF2
 Priority: 99
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
+	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
 	{Conj.type == list}
-	{Lookup3}
+	{OtherDiag}
 	({Conj.type == list}|{Conj.type == with})
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+	({OtherDiag}):item
+	
     
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListF2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
+:item.PatientHistory = {rule = OtherDiagListF1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}
+
 
 Rule: OtherDiagListF3
 Priority: 98
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
+	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
 	{Conj.type == list}
 	{Conj.type == list}
-	{Lookup3}
+	{OtherDiag}
 	{Conj.type == list}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+	({OtherDiag}):item
+	
     
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListF3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
+:item.PatientHistory = {rule = OtherDiagListF1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}
+
 
 Rule: OtherDiagListF4
 Priority: 97
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
+	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
 	{Conj.type == list}
 	{Conj.type == list}
-	{Lookup3}
+	{OtherDiag}
 	{Conj.type == list}
-	{Lookup3}
+	{OtherDiag}
 	{Conj.type == list}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-    
+	({OtherDiag}):item
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListF4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
+:item.PatientHistory = {rule = OtherDiagListF1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}
+
 

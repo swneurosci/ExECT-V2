@@ -1,5 +1,5 @@
 Phase: PatientHistC
-Input: Person Lookup2 Lookup3 timeElapsed DiagnosisTriggers Sentence PartialDate Numeric timePeriod
+Input: Person Lookup2 Lookup3  PHistBlock timeElapsed DiagnosisTriggers Sentence PartialDate Numeric timePeriod
 Options: control=appelt
 
 
@@ -38,7 +38,8 @@ TimePeriod = "",
 NumberOfTimePeriods = "",
 PointInTime = ""} 
 
-Rule: PtHistoryC1a
+
+/*Rule: PtHistoryC1a
 Priority: 90
 
 (   
@@ -58,7 +59,7 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty, YearDate = "",
 TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods =:match.Numeric.value} 
+NumberOfTimePeriods =:match.Numeric.value} */
 
 Rule: PtHistoryC2
 Priority: 100
@@ -143,7 +144,7 @@ Certainty = :item.Lookup3.Certainty,
 YearDate =:match.Numeric.value}
 
 
-Rule: PtHistoryC8
+/*Rule: PtHistoryC8
 Priority: 90
 
 (    
@@ -160,9 +161,9 @@ Priority: 90
 :item.PatientHistory = {rule = PtHistoryC8, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = "Past", 
-Certainty = :item.Lookup3.Certainty} 
+Certainty = :item.Lookup3.Certainty} */
 
-Rule: PtHistoryC9
+/*Rule: PtHistoryC9
 Priority: 90
 
 (    
@@ -182,5 +183,5 @@ Priority: 90
 :item.PatientHistory = {rule = PtHistoryC9, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = "Past", 
-Certainty = :item.Lookup3.Certainty} 
+Certainty = :item.Lookup3.Certainty} */
 
