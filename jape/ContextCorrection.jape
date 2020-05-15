@@ -1,0 +1,24 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: ModifyLookups
+Input: Context Lookup3 Sentence
+Options: control=brill
+
+/*
+ * If for some reason context is not applied , i.e. future or hypothetical 
+ lookup gets recent Temporality, this rule tries to correct it.
+*/
+
+
+Rule: ContextCorrection
+Priority: 100
+(
+	{Context.minorType == future}
+	({Lookup3.majorType == umls, Lookup3.Temporality == Recent}):umls
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Temporality","Hypothetical");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ContextCorrection");
+
+}
