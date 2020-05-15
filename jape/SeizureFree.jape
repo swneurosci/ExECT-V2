@@ -583,7 +583,9 @@ Priority: 99
 ):match
 -->
 :match.SeizureFrequencyDriving = { rule = HseizureFree4a, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negated = "Affirmed",
-DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, PointInTime = "Last_Year"}
+DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month
+//, PointInTime = "Last_Year"
+}
 
 /* he has been SeizureFree since YEAR */
 
