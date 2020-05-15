@@ -1,7 +1,7 @@
 Imports: {import static gate.Utils.*; }
 
 Phase: ModifyLookup
-Input: OtherPerson Lookup2 Person Lookup3 Lookup
+Input: OtherPerson Lookup2 Person Lookup3 Lookup Conj Sentence
 Options: control=brill
 
 /*
@@ -11,7 +11,7 @@ Options: control=brill
 
 
 Rule: ExperiencerReversal
-Priority: 100
+
 (
 	{OtherPerson.majorType == family}
     ({Lookup2})?
@@ -30,7 +30,7 @@ Priority: 100
 
 
 Rule: ExperiencerReversal
-Priority: 100
+
 (
 	{OtherPerson.majorType == family}
     ({Lookup2})?
@@ -49,7 +49,7 @@ Priority: 100
 }
 
 Rule: ExperiencerReversal
-Priority: 100
+
 (
   {Lookup2.minorType == opinion}
 	{Person.majorType == person, Person.minorType == pronoun}
@@ -62,3 +62,54 @@ Priority: 100
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
   umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
 }
+
+/* example: no febrile seizures and no family history of epilepsy - experiencer is a patient but GATE gives "other" so we revers it */
+
+Rule: ExperiencerReversal
+
+(
+	({Lookup3.majorType == umls, Lookup3.minorType == OtherDisease, 
+    Lookup3.Experiencer == Other}):umls
+    {Conj.majorType == grammar}
+    {OtherPerson.majorType == family}
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
+  }
+
+  Rule: ExperiencerReversal  /*from her father in childchood and she has a history of depression - assignig sufferes to patient not father*/
+
+(
+  {Person.minorType == pronoun}
+  {OtherPerson}
+  ({Lookup2.majorType == person})
+  {Conj}
+  {Person}
+  {Lookup2.majorType == historic}
+	({Lookup3.majorType == umls, Lookup3.minorType == OtherDisease, 
+    Lookup3.Experiencer == Other}):umls
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
+}
+
+Rule: ExperiencerReversal  /*explain to Patient and his father that the ongoing episodes are non-epileptic*/
+( 
+  ({Person})?
+  ({Conj})?
+  {Person.minorType == pronoun}
+  {OtherPerson.majorType == family}
+  ({Lookup2.minorType == opinion})
+	({Lookup3.majorType == umls, Lookup3.minorType == OtherDisease, 
+    Lookup3.Experiencer == Other}):umls
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
+}
+
