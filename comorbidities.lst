@@ -107,6 +107,7 @@ non-epileptic seizures	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Dise
 non-epileptic attack	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
 non-epileptic attacks	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
 non epileptic attacks	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+not epileptic in nature	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
 psychogenic seizure	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
 psychogenic seizures	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
 abnormal connection of hepatic vein to atrium	CUI=C0344690	PREF=abnormal connection of hepatic vein to atrium	TUI=T019	STY=Congenital Abnormality
@@ -757,6 +758,7 @@ meningioma of optic nerve sheath	CUI=C0346328	PREF=meningioma of optic nerve she
 meningioma optic nerve sheath	CUI=C0346328	PREF=meningioma optic nerve sheath	TUI=T191	STY=Neoplastic Process
 meningioma, intracranial	CUI=C0349604	PREF=meningioma, intracranial	TUI=T191	STY=Neoplastic Process
 meningiomas, intracranial	CUI=C0349604	PREF=meningiomas, intracranial	TUI=T191	STY=Neoplastic Process
+meningioma	CUI=C0349604	PREF=meningioma, intracranial	TUI=T191	STY=Neoplastic Process
 meningitis	CUI=C0025289	PREF=meningitis	TUI=T047	STY=Disease or Syndrome
 meningo oculo facial angiomatosis	CUI=C0038505	PREF=meningo oculo facial angiomatosis	TUI=T019	STY=Congenital Abnormality
 meningo-oculo-facial angiomatosis	CUI=C0038505	PREF=meningo-oculo-facial angiomatosis	TUI=T019	STY=Congenital Abnormality
@@ -1219,3 +1221,10 @@ coronary heart disease	CUI=C0010068	PREF=coronary heart disease	TUI=T047	STY=Dis
 CHD	CUI=C0010068	PREF=coronary heart disease	TUI=T047	STY=Disease or Syndrome
 arteriosclerosis	CUI=C0003850	PREF=Arteriosclerosis	TUI=T047	STY=Disease or Syndrome
 arteriosclerotic vascular disease	CUI=C0003850	PREF=Arteriosclerosis	TUI=T047	STY=Disease or Syndrome
+myoclonus, segmental	CUI=C0751351	PREF=myoclonus, segmental	TUI=T184	STY=sign or symptom
+myoclonus, nocturnal	CUI=C0751352	PREF=myoclonus, nocturnal	TUI=T184	STY=sign or symptom
+myoclonus, sleep	CUI=C0751352	PREF=myoclonus, sleep	TUI=T184	STY=sign or symptom
+sleep myoclonus	CUI=C0751352	PREF=sleep myoclonus	TUI=T184	STY=sign or symptom
+loss of consciousness	CUI=C0041657	PREF=Loss of consciousness	TUI=T033	STY=Finding
+subdural empyema	CUI=C0038539	PREF=Empyema, Subdural	TUI=T047	STY=Disease or Syndrome
+subdural abscess	CUI=C0038539	PREF=Empyema, Subdural	TUI=T047	STY=Disease or Syndrome
