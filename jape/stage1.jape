@@ -11,6 +11,7 @@ newLine
 newParagraph
 listPoint
 listSent
+endList
 Token2Verbs
 partialDate
 longestTimePeriod

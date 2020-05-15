@@ -1,0 +1,15 @@
+Phase: endList
+Input:  SpaceToken NewLine
+Options: control=appelt
+
+
+Rule: endList 
+(
+{SpaceToken.kind == control}
+{NewLine}
+):match
+-->
+:match.endList = {rule = "endList"}
+
+
+
