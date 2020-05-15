@@ -18,4 +18,29 @@ umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation2");
 
 
 
+Rule: reverseNegation
+
+(
+{Lookup3.PREF =~ non, Lookup3.Negation == Affirmed }
+({Lookup3.Negation =="Negated"}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation2");
+}
+
+Rule: reverseNegation
+
+(
+{Lookup3.PREF =~ non, Lookup3.Negation == Affirmed }
+{Lookup3}
+({Lookup3.Negation =="Negated"}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation2");
+}
+
 
