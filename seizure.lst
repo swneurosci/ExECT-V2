@@ -243,10 +243,6 @@ salaam spasm	CUI=C0546878	PREF=salaam spasm	TUI=T047	STY=Disease or Syndrome
 atypical absence seizure	CUI=C0595948	PREF=Atypical absence seizure	TUI=T047	STY=Disease or Syndrome
 atypical absence seizures	CUI=C0595948	PREF=Atypical absence seizure	TUI=T047	STY=Disease or Syndrome
 seizures, atypical absence	CUI=C0595948	PREF=Atypical absence seizure	TUI=T047	STY=Disease or Syndrome
-myoclonus, segmental	CUI=C0751351	PREF=myoclonus, segmental	TUI=T184	STY=sign or symptom
-myoclonus, nocturnal	CUI=C0751352	PREF=myoclonus, nocturnal	TUI=T184	STY=sign or symptom
-myoclonus, sleep	CUI=C0751352	PREF=myoclonus, sleep	TUI=T184	STY=sign or symptom
-sleep myoclonus	CUI=C0751352	PREF=sleep myoclonus	TUI=T184	STY=sign or symptom
 focal seizure 	CUI=C0751495	PREF=seizure, focal	TUI=T047	STY=Disease or Syndrome
 focal seizures	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
 local convulsion	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
