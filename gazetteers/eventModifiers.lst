@@ -1,7 +1,7 @@
 another:type=another
 further:type=another
-subsequent:type=another
+subsequent:type=following
 last:type=another
 previous:type=another
-following:type=another
+following:type=following
 next:type=another
