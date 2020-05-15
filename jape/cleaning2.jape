@@ -109,5 +109,19 @@ Rule: cleanHealthCareTerms3
   inputAS.removeAll(umlsAnnots);
 }
 
+Rule: RemoveLookupWithin
 
-  
+(
+   {Lookup3.minorType == generic,  Lookup3 within {Lookup2.minorType == health_condition}}
+):umls
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+}
+
+
+
+
+
+
+
