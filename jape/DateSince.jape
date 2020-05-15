@@ -1,0 +1,38 @@
+Phase: DateSince
+Input: Numeric timePeriod timeElapsed Sentence  age  PartialDate 
+Options: control=appelt
+
+//Age is there to stop annotating Age as date, so is the Token//
+
+Rule: DateSince1
+Priority: 100
+
+(   
+	({timeElapsed.time == since}|{timeElapsed.time == in})
+    ({!age})?
+	{PartialDate}
+	
+	
+ ):match  
+ -->
+:match.DateSince = {rule =DateSince1, TimePeriod = "Year",
+NumberOfTimePeriods =:match.Numeric.value,
+YearDate = :match.PartialDate.year,
+MonthDate =:match.PartialDate.month}
+
+
+Rule: DateSince2
+Priority: 100
+
+(   
+	({timeElapsed.time == since}|{timeElapsed.time == in})
+    ({!age})?
+	{Numeric}
+	
+	
+	
+ ):match  
+ -->
+:match.DateSince = {rule =DateSince2, YearDate =:match.Numeric.value}
+
+
