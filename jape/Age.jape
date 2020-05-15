@@ -1,5 +1,5 @@
 Phase: Age
-Input: age Numeric timePeriod Lookup2 Person timeElapsed
+Input: age Numeric timePeriod Lookup2 Person timeElapsed Range
 Options: control=appelt
 
 
@@ -107,3 +107,42 @@ Priority: 90
  -->
 :match.Age = {rule =Age_Range, AgeLower =:match.Lookup2.lowerAge,
 AgeUpper = :match.Lookup2.upperAge, AgeUnit = :match.Lookup2.timeUnit}  
+
+Rule: Age_Range
+Priority: 90
+
+(   
+	{age}
+	{Range}	
+	({timePeriod})
+ ):match  
+ -->
+:match.Age = {rule =Age_Range, AgeLower =:match.Range.N1,
+AgeUpper = :match.Range.N2, AgeUnit =:match.timePeriod.time-Unit}  
+
+Rule: Age_Range
+Priority: 90
+
+(   
+	{age}
+	{Range}	
+	
+ ):match  
+ -->
+:match.Age = {rule =Age_Range, AgeLower =:match.Range.N1,
+AgeUpper = :match.Range.N2, AgeUnit = Year}  
+
+
+Rule: Age_Range
+Priority: 90
+
+(   
+	{Person}
+	({Lookup2})?
+	{Lookup2.minorType == time}	
+	({timePeriod})?
+	
+ ):match  
+ -->
+:match.Age = {rule =Age_Range, AgeLower =:match.Lookup2.lowerAge,
+AgeUpper = :match.Lookup2.upperAge, AgeUnit =:match.Lookup2.timeUnit}  
