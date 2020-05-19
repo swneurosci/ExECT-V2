@@ -13,7 +13,7 @@ Options: control=brill
 Rule: ContextCorrection
 Priority: 100
 (
-	{Context.minorType == future}
+	{Context.context == hypothetical}
 	({Lookup3.majorType == umls, Lookup3.Temporality == Recent}):umls
 ):match
 -->
