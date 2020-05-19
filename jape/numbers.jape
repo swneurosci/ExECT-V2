@@ -2,7 +2,10 @@ Phase: Numbers
 Input: Number Token Split Lookup Time
 Options: control=appelt
 
+
 Rule: Numerals
+Priority: 100
+
 (
 	{Token.kind == number}
 ):match
@@ -11,9 +14,21 @@ Rule: Numerals
 
 
 Rule: Numerals
+Priority: 99
+
 (
 	{Token.kind == number}
 	{Token.string == "."}
+	{Token.kind == number}
+):match
+-->
+:match.Numeric = { rule = Numerals, value = :match@string}
+
+Rule: Numerals
+Priority: 99
+
+(
+	{Token.kind == number}
 	{Token.kind == number}
 ):match
 -->

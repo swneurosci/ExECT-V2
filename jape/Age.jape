@@ -1,10 +1,10 @@
 Phase: Age
-Input: age Numeric timePeriod Lookup2 Person timeElapsed Range
+Input: age Numeric timePeriod Lookup2 Person timeElapsed Range Sentence
 Options: control=appelt
 
 
-Rule: Age1
-Priority: 100
+Rule: Age1   
+Priority: 99
 
 (   
 	{age}
@@ -21,7 +21,7 @@ Priority: 100
 
 (   
 	{Numeric}
-    {timePeriod}
+    	{timePeriod}
 	{age}
 	
  ):match  
@@ -29,8 +29,8 @@ Priority: 100
 :match.Age = {rule =Age1, AgeUnit = :match.timePeriod.time-unit,
 Age =:match.Numeric.value}  
 
-Rule: Age_since
-Priority: 100
+Rule: Age_since1
+Priority: 99
 
 (   
     {timeElapsed}
@@ -40,21 +40,21 @@ Priority: 100
 		
  ):match  
  -->
-:match.Age = {rule =Age_since, AgeUnit = :match.timePeriod.time-unit,
+:match.Age = {rule =Age_since1, AgeUnit = :match.timePeriod.time-unit,
 Age =:match.Numeric.value}  
 
 
-Rule: Age_since
-Priority:80
+Rule: Age_since2
+Priority:60
 
 (   
-    {timeElapsed}
+    	{timeElapsed}
 	{age.value == aged}
 	{Numeric}
 	
  ):match  
  -->
-:match.Age = {rule =Age_since, AgeUnit = "Year",
+:match.Age = {rule =Age_since2, AgeUnit = "Year",
 Age =:match.Numeric.value}  
 
 
@@ -97,7 +97,7 @@ AgeUnit = "Year"}
 
 
  Rule: Age_Range
-Priority: 90
+Priority: 100
 
 (   
 	{timeElapsed}
@@ -109,7 +109,7 @@ Priority: 90
 AgeUpper = :match.Lookup2.upperAge, AgeUnit = :match.Lookup2.timeUnit}  
 
 Rule: Age_Range
-Priority: 90
+Priority: 100
 
 (   
 	{age}
@@ -121,9 +121,10 @@ Priority: 90
 AgeUpper = :match.Range.N2, AgeUnit =:match.timePeriod.time-Unit}  
 
 Rule: Age_Range
-Priority: 90
+Priority: 100
 
 (   
+	({timeElapsed})?
 	{age}
 	{Range}	
 	
@@ -134,7 +135,7 @@ AgeUpper = :match.Range.N2, AgeUnit = Year}
 
 
 Rule: Age_Range
-Priority: 90
+Priority: 100
 
 (   
 	{Person}
