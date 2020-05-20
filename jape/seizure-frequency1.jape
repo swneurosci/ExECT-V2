@@ -318,7 +318,7 @@ Priority: 95
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({Split})?
     ({NumberRange})
-    ({timeElapsed.time =! "during"}) 
+    ({timeElapsed.time != "during"}) 
     ({PointInTime}) 
 ):match 
 --> 
@@ -414,6 +414,7 @@ Priority: 95
 --> 
 :match.SeizureFrequency11 = { rule = hSeizurePartialDate2c, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 NumberOfSeizures = "1", YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.Day, TimeSince_or_TimeOfEvent = "During"}
+
 
 
 /* He reports his last seizure was in [DATE] */
