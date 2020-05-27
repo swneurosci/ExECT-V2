@@ -1,7 +1,7 @@
 Phase: YearToMonth
-Input: Numeric timePeriod Age
+Input: Numeric timePeriod Age Token
 
-
+/*Token is here to prevent other phrases to be annotated as the rule is very simple*/
 Options: control=brill
 
 Rule: YearToMonths1

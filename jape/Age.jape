@@ -1,10 +1,11 @@
 Phase: Age
-Input: age Numeric timePeriod Lookup2 Person timeElapsed Range Sentence
+Input: age Numeric YearToMonths timePeriod Lookup2 Person Split timeElapsed Range Sentence YearToMonths
 Options: control=appelt
 
 
+
 Rule: Age1   
-Priority: 99
+Priority: 80
 
 (   
 	{age}
@@ -21,7 +22,7 @@ Priority: 100
 
 (   
 	{Numeric}
-    	{timePeriod}
+    {timePeriod}
 	{age}
 	
  ):match  
@@ -48,7 +49,7 @@ Rule: Age_since2
 Priority:60
 
 (   
-    	{timeElapsed}
+    {timeElapsed}
 	{age.value == aged}
 	{Numeric}
 	
@@ -70,7 +71,8 @@ Priority: 90
 :match.Age = {rule =Age2, AgeUnit = "Year",
 Age =:match.Numeric.value}  
 
- Rule: Age_max
+/*the first two rule in AgeRange are for the " by the age of x" where only the upper age is givem*/
+ Rule: Age_Range1
 Priority: 90
 
 (   
@@ -80,10 +82,10 @@ Priority: 90
 	
  ):match  
  -->
-:match.Age = {rule =Age_max, AgeUpper =:match.Numeric.value, 
+:match.Age = {rule =Age_Range1, AgeUpper =:match.Numeric.value, AgeLower =:match.Lookup2.lowerAge,
 AgeUnit =:match.timePeriod.time-unit}  
 
-  Rule: Age_max
+  Rule: Age_Range1b
 Priority: 90
 
 (   
@@ -92,24 +94,24 @@ Priority: 90
 	
  ):match  
  -->
-:match.Age = {rule =Age_max, AgeUpper =:match.Numeric.value,
+:match.Age = {rule =Age_Range1b, AgeUpper =:match.Numeric.value, AgeLower =:match.Lookup2.lowerAge,
 AgeUnit = "Year"}  
 
-
- Rule: Age_Range
-Priority: 100
+/*lookup2.minorType == time captures age groups e.g. teenager , timeElapsed is not always used in such phrases*/
+ Rule: Age_Range2
+Priority: 90
 
 (   
-	{timeElapsed}
+	({timeElapsed})?
 	{Lookup2.minorType == time}	
 	
  ):match  
  -->
-:match.Age = {rule =Age_Range, AgeLower =:match.Lookup2.lowerAge,
+:match.Age = {rule =Age_Range2, AgeLower =:match.Lookup2.lowerAge,
 AgeUpper = :match.Lookup2.upperAge, AgeUnit = :match.Lookup2.timeUnit}  
 
-Rule: Age_Range
-Priority: 100
+Rule: Age_Range3
+Priority: 90
 
 (   
 	{age}
@@ -117,10 +119,10 @@ Priority: 100
 	({timePeriod})
  ):match  
  -->
-:match.Age = {rule =Age_Range, AgeLower =:match.Range.N1,
+:match.Age = {rule =Age_Range3, AgeLower =:match.Range.N1,
 AgeUpper = :match.Range.N2, AgeUnit =:match.timePeriod.time-Unit}  
 
-Rule: Age_Range
+Rule: Age_Range4
 Priority: 100
 
 (   
@@ -130,11 +132,11 @@ Priority: 100
 	
  ):match  
  -->
-:match.Age = {rule =Age_Range, AgeLower =:match.Range.N1,
+:match.Age = {rule =Age_Range4, AgeLower =:match.Range.N1,
 AgeUpper = :match.Range.N2, AgeUnit = Year}  
 
 
-Rule: Age_Range
+Rule: Age_Range5
 Priority: 100
 
 (   
@@ -145,5 +147,21 @@ Priority: 100
 	
  ):match  
  -->
-:match.Age = {rule =Age_Range, AgeLower =:match.Lookup2.lowerAge,
+:match.Age = {rule =Age_Range5, AgeLower =:match.Lookup2.lowerAge,
 AgeUpper = :match.Lookup2.upperAge, AgeUnit =:match.Lookup2.timeUnit}  
+
+
+/*when years are converted to months if the upper age is given in months, up to 2 years*/
+Rule: Age_Range6  
+Priority: 100
+
+(   
+	{age}
+	{YearToMonths}	
+	{Numeric}
+	{timePeriod.time-unit == Month}
+	
+ ):match  
+ -->
+:match.Age = {rule =Age_Range6, AgeLower =:match.YearToMonths.value, AgeUnit = :match.timePeriod.time-unit,
+AgeUpper =:match.Numeric.value} 
