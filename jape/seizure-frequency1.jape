@@ -481,3 +481,19 @@ Priority: 95
  NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods  = :match.NumberRange.N1, TimeSince_or_TimeOfEvent = "During"}
 
 */
+
+Rule: hSeizureAge
+Priority: 95 
+(
+    ({NumberRange})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
+    ({timeElapsed.time == "since"})
+    ({Age})
+):match
+-->
+:match.SeizureFrequency11 = { rule = "hSeizureAge", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2,
+Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeLower = :match.Age.AgeLower, AgeUpper = :match.Age.AgeUpper}
+
+
+

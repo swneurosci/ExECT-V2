@@ -663,3 +663,15 @@ Priority: 10
 ):match
 -->
 :match.SeizureFrequencyDriving = { rule = HseizureFreeNoTime, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = :match.Lookup3.Negation }
+
+Rule: HseizureFree7
+Priority: 99
+(
+    ({Person})?
+    ({Lookup3.PREF == "seizure free",Lookup3.Temporality != "hypothetical", Lookup3.Negation == "Affirmed"})
+    ({timeElapsed.time == "since"})
+    ({Age})
+):match
+-->
+:match.SeizureFrequencyDriving = { rule = HseizureFree4b, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negated = "Affirmed",
+YearDate = :match.NumberRange.value, Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeUpper = :match.Age.AgeUpper, AgeLower = :match.Age.AgeLower}

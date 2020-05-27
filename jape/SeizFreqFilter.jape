@@ -14,7 +14,8 @@ YearDate = :match.SeizureFrequency11.YearDate, DayDate = :match.SeizureFrequency
 SinceOrDuration = :match.SeizureFrequency11.SinceOrDuration, Certainty = :match.SeizureFrequency11.Certainty, Negation = :match.SeizureFrequency11.Negation,
 PointInTime = :match.SeizureFrequency11.PointInTime, LowerNumberOfTimePeriods = :match.SeizureFrequency11.LowerNumberOfTimePeriods, 
 UpperNumberOfTimePeriods = :match.SeizureFrequency11.UpperNumberOfTimePeriods, FrequencyChange = :match.SeizureFrequency11.FrequencyChange,
-TimeSince_or_TimeOfEvent = :match.SeizureFrequency11.TimeSince_or_TimeOfEvent}
+TimeSince_or_TimeOfEvent = :match.SeizureFrequency11.TimeSince_or_TimeOfEvent,
+Age = :match.SeizureFrequency11.Age, AgeUnit = :match.SeizureFrequency11.AgeUnit, AgeUpper = :match.SeizureFrequency11.AgeUpper, AgeLower = :match.SeizureFrequency11.AgeLower}
 
 
 /* Maybe should put some triggers from ContextPrescription into SFBlock to skip this step and put SFreq11 into SeizFreqFilter2 */
