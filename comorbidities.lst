@@ -107,7 +107,8 @@ non-epileptic seizures	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Dise
 non-epileptic attack	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
 non-epileptic attacks	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
 non epileptic attacks	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
-not epileptic in nature	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+non epileptic attack	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+non-epileptic psychogenic seizures	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
 psychogenic seizure	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
 psychogenic seizures	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
 abnormal connection of hepatic vein to atrium	CUI=C0344690	PREF=abnormal connection of hepatic vein to atrium	TUI=T019	STY=Congenital Abnormality
