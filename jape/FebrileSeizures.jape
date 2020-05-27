@@ -1,5 +1,5 @@
 Phase: FebrileSeizures
-Input: Lookup3 Lookup2 Person Sentence Numeric timePeriod MedicalHistory 
+Input: Lookup3 Lookup2 Person Sentence MedicalHistory Age Pronouns
 
 
 Options: control=appelt
@@ -80,15 +80,15 @@ Certainty = :item.Lookup3.Certainty}
 
 Rule: NoFebSeizures3a
 Priority: 100
-//this rule reverses the experiences from other to patient as for saome reson - other follewe just after, it applied it to the patient//
+//this rule reverses the experiences from other to patient as for saome reason - other follewe just after, it applied it to the patient//
 (   
 	({Person})?
     {Lookup2.majorType == historic}
 	({Lookup3})?
 	({Lookup2})?
+	({Age})?
 	({MedicalHistory})?
-	({Lookup3.Negation == Negated, Lookup3.PREF =~ "febrile" , 
-	Lookup3.Experiencer == Other}):item
+	({Lookup3.Negation == Negated, Lookup3.PREF =~ "febrile"}):item
 	
     
  ):match  
@@ -149,7 +149,7 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
-Rule: FebSeizures1
+Rule: FebSeizures5
 Priority: 100
 
 (   
@@ -157,24 +157,22 @@ Priority: 100
     {Lookup2.majorType == historic , Lookup2.type == past}
 	({Lookup3.Negation == Affirmed, Lookup3.PREF =~ "febrile ", 
 	Lookup3.Experiencer == Patient}):item
-	({Numeric})?
-	({timePeriod})?
-	
-	
+	({Age})?
+		
     
  ):match  
  -->
-:item.PatientHistory = {rule = FebSeizures1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = FebSeizures5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
-AgeUnit =:match.timePeriod.time-unit,
-Age =:match.Numeric.value}
+AgeUnit =:match.Age.AgeUnit,
+Age =:match.Age.Age,
+AgeUnit =:match.Age.AgeUnit,
+AgeUpper =:match.Age.AgeUpper}
 
 
-
-
-Rule: FebSeizures2
+Rule: FebSeizures7
 Priority: 100
 
 (   
@@ -182,18 +180,39 @@ Priority: 100
     {Lookup2.majorType == historic , Lookup2.type == past}
 	({Lookup3.Negation == Affirmed, Lookup3.PREF  =~ "febrile", 
 	Lookup3.Experiencer == Patient}):item
-	({Lookup2.majorType == person})?
+	({Age})?
 	
 	
     
  ):match  
  -->
-:item.PatientHistory = {rule = FebSeizures2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = FebSeizures7, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
-AgeUnit =:match.Lookup2.timeUnit,
-AgeLower =:match.Lookup2.lowerAge,
-AgeUpper =:match.Lookup2.upperAge}
+AgeUnit =:match.Age.AgeUnit,
+AgeUpper =:match.Age.AgeUpper}
 
 
+
+Rule: FebSeizures8
+Priority: 100
+
+(   
+    {Age}
+	({Lookup2})?
+ 	({Pronouns})?
+	({Lookup2})?
+	({Lookup3.Negation == Affirmed, Lookup3.CUI == C0009952, 
+	Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = FebSeizures8, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty,
+AgeUnit = :match.Age.AgeUnit,
+AgeUpper = :match.Age.AgeUpper,
+Age = :match.Age.Age,
+AgeLower = :match.Age.AgeLower}

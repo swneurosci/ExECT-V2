@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisListD
-Input: DiagnosisTriggers OtherDiag listSent listPoint PartialDate Numeric Lookup2 age Age
+Input: DiagnosisTriggers OtherDiag listSent listPoint DateSince Age NewLine
 
 Options: control=appelt
 
@@ -8,6 +8,7 @@ Priority: 100
 
 ( 
 	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+    ({listPoint})?
 	({OtherDiag})
 	{listPoint}
     ({OtherDiag})
@@ -23,25 +24,28 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
 
-/*Rule: OtherDiagListD2
+
+Rule: OtherDiagListD2   /*This captures the 3rd otherdiag when the 1st one had 2 dates*/
 Priority: 100
 
 (   
-	
 	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
     {listPoint}
-	({Lookup2.language == onset})
-	{Age}
-    ({Lookup2})?
-	({OtherDiag}):item
+    {OtherDiag}
+    ({DateSince})?
+    ({DateSince})?
+    {OtherDiag}
+    ({listPoint})?
+    ({OtherDiag}):item
+	
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagListD2, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
-Age =:match.Age.Age,
-AgeUnit =:match.Age.AgeUnit} */
+YearDate = :item.OtherDiag.YearDate,
+MonthDate =:item.OtherDiag.MonthDate}
 
 Rule: OtherDiagListD3
 Priority: 100
@@ -49,13 +53,10 @@ Priority: 100
 (   
 	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
     {listPoint}
-    ({Lookup2})?
 	({OtherDiag})
     ({OtherDiag})
 	{listPoint}
-    ({Lookup2})*
     {OtherDiag}
-    {Lookup2}
 	({OtherDiag}):item
  ):match  
  -->
@@ -96,9 +97,7 @@ Priority: 100
 (
     {DiagnosisTriggers.type == diagnosis}
     {listPoint}
-    ({Lookup2})?
-    ({DiagnosisTriggers})?
-    ({Lookup2})?
+    ({DiagnosisTriggers})? 
     ({OtherDiag})*
 	({OtherDiag}):item
     ({DiagnosisTriggers})?

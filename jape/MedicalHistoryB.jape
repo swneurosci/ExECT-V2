@@ -1,0 +1,26 @@
+
+Phase: MedicalHistory2
+Input: OtherDiag Lookup3 MedicalHistory listSent listPoint Sentence PHistBlock Numeric DateSince
+
+ //Additional rules to annotate events without Person e.g., history of convulsions - could be too sensitive  */
+//person is here to stop capturing events that are covered by Patient Histoty rules//
+
+Options: control=Brill
+
+/*this is to capture a second date for an event already captured in MedicalHistory1
+e.g. History of MI in 2010 and 2015 - this should capture 2015*/
+
+Rule: MedicalHistoryB
+
+(   
+	{MedicalHistory}
+	({OtherDiag}):item
+    {DateSince}
+	({DateSince}):a
+ ):match  
+ -->
+:item.PatientHistory = {rule = MedicalHistoryB, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+YearDate = :a.DateSince.YearDate} 

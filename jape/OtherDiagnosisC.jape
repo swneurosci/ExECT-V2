@@ -1,22 +1,27 @@
 Phase: OtherDiagnosisC
-Input: Investigation  Lookup3 Sentence
+Input: OtherDiag  NewLine DiagnosisTriggers listPoint
 
+/*For top of the letter diagnosis when there are no listpoints oo other points, listPoint is listed
+to stop the rule from fiering when the regular lists do*/
 
-Options: control=appelt
+Options: control=brill
 
-Rule: OtherDiagC1
+Rule: OtherDiagnosisC
 Priority: 100
 
 (   
 
-	{Investigation.Investigation != EEG}
-	({Lookup3.minorType == OtherDisease, Lookup3.majorType == umls, Lookup3.Negation == Affirmed}):item
-    
+	
+	{DiagnosisTriggers}
+	{NewLine}
+	({OtherDiag}):item
+    {NewLine}
+
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagC1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
+:item.PatientHistory = {rule = OtherDiagnosisC, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}
 
 

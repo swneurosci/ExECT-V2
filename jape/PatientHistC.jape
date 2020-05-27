@@ -103,7 +103,7 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
-Rule: PtHistoryC4
+/*Rule: PtHistoryC4
 Priority: 80
 
 (   
@@ -119,7 +119,7 @@ Priority: 80
 :item.PatientHistory = {rule = PtHistoryC4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
+Certainty = :item.Lookup3.Certainty}*/
 
 Rule: PtHistoryC5
 Priority: 80
