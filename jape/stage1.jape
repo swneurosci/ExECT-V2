@@ -27,4 +27,5 @@ EpilepsyJAVA
 DrugPointInTime
 YearToMonths
 Age
-RemoveSeizFreeBlock
+RemoveSeizFreeBlock
+RemoveTimePeriodFromAge

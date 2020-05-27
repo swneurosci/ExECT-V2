@@ -1,0 +1,24 @@
+Phase: RemoveTimePeriodFromAge
+Input:  Age timePeriods timePeriod
+Options: control=all
+
+
+
+
+Rule: RemoveTimePeriodsFromAge
+(   
+    ({timePeriods within Age}):umls
+):match
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+}
+
+Rule: RemoveTimePeriodFromAge
+(   
+    ({timePeriod within Age}):umls
+):match
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+}
