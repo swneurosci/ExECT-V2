@@ -1,0 +1,14 @@
+Phase: RemoveSeizFreeBlock
+Input:  Age SFreeBlock
+Options: control=all
+
+
+
+Rule: RemoveSeizFreeBlock
+(   
+    ({SFreeBlock within Age}):umls
+):match
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+}
