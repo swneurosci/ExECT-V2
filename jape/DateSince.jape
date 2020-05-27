@@ -1,15 +1,14 @@
 Phase: DateSince
-Input: Numeric timePeriod timeElapsed Sentence  age  PartialDate 
+Input: Numeric timePeriod timeElapsed Sentence  age Conj  PartialDate Lookup2 Person Split Lookup3 
 Options: control=appelt
 
-//Age is there to stop annotating Age as date, so is the Token//
+// Lookup2, Person are there to stop annotating the whole sentence,  to prevent picking up Age as date, so is the Token//
 
 Rule: DateSince1
 Priority: 100
 
 (   
-	({timeElapsed.time == since}|{timeElapsed.time == in})
-    ({!age})?
+	({timeElapsed.time == since}|{timeElapsed.time == in})?
 	{PartialDate}
 	
 	
@@ -26,13 +25,24 @@ Priority: 100
 
 (   
 	({timeElapsed.time == since}|{timeElapsed.time == in})
-    ({!age})?
-	{Numeric}
-	
-	
+	{Numeric.value > 1940}
+
 	
  ):match  
  -->
 :match.DateSince = {rule =DateSince2, YearDate =:match.Numeric.value}
+
+
+Rule: DateSince3  /*When the year of event is written without a preposition e.g. '2005' instead of  'in 2005', dengerous rule  as could capture many numbers noy just years,  - to be used in PH*/
+Priority: 100
+
+(   
+	({timeElapsed.time == since}|{timeElapsed.time == in})?
+	{Numeric.value > 1940}
+	
+	
+ ):match  
+ -->
+:match.DateSince = {rule =DateSince3, YearDate =:match.Numeric.value}
 
 

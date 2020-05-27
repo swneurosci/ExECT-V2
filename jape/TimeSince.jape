@@ -35,12 +35,11 @@ LowerNumberOfTimePeriods =:match.Range.N1,
 UpperNumberOfTimePeriods =:match.Range.N2}
 
 
-Rule: TimeSince3
+Rule: TimeSince3  /*with the exclusion of a day, a week etc I'm trying to exclude a frequency phrase*/
 Priority: 100
 
 (   {Numeric}
-    {timePeriod}
-    ({!age})?
+    ({timePeriod.string !="a month"}{timePeriod.string !="a week"}{timePeriod.string !="a day"}{timePeriod.string !="a year"})
 	({Token.string == ago}|{Token.string == since})?
 	
 	
@@ -50,7 +49,21 @@ Priority: 100
 :match.TimeSince = {rule =TimeSince3, TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value}
 
-Rule: TimeSince1
+Rule: TimeSince3a  /*the one above didnt fire on 4 years ago so I'm testing another version of it belo*/
+Priority: 100
+
+(   {Numeric}
+    ({timePeriod})
+	({Token.string == ago})
+	
+	
+	
+ ):match  
+ -->
+:match.TimeSince = {rule =TimeSince3a, TimePeriod = :match.timePeriod.time-unit,
+NumberOfTimePeriods =:match.Numeric.value}
+
+Rule: TimeSince4
 Priority: 100
 
 (   
