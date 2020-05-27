@@ -14,7 +14,7 @@ prescriptionFilter2
 /*KeepPrescriptionInText*/
 prescription-indicator
 LazyPrescription
-dates
+/*dates*/
 routes
 status
 prescription-coref
