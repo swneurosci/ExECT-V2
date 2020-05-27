@@ -4,7 +4,7 @@ Options: control=appelt
 
 
 
-Rule: Age1   
+Rule: Age1a   
 Priority: 80
 
 (   
@@ -14,10 +14,10 @@ Priority: 80
 	
  ):match  
  -->
-:match.Age = {rule =Age1, AgeUnit = :match.timePeriod.time-unit,
+:match.Age = {rule =Age1a, AgeUnit = :match.timePeriod.time-unit,
 Age =:match.Numeric.value}
  	
-Rule: Age1
+Rule: Age1b
 Priority: 100
 
 (   
@@ -27,7 +27,32 @@ Priority: 100
 	
  ):match  
  -->
-:match.Age = {rule =Age1, AgeUnit = :match.timePeriod.time-unit,
+:match.Age = {rule =Age1b, AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value}  
+
+
+Rule: Age1c   
+Priority: 80
+
+(   
+	{age}
+	{Numeric}
+	
+ ):match  
+ -->
+:match.Age = {rule =Age1c, AgeUnit = :match.age.AgeUnit,
+Age =:match.Numeric.value}
+ 	
+Rule: Age1d
+Priority: 100
+
+(   
+	{Numeric}
+	{age}
+	
+ ):match  
+ -->
+:match.Age = {rule =Age1d, AgeUnit = :match.age.AgeUnit,
 Age =:match.Numeric.value}  
 
 Rule: Age_since1
