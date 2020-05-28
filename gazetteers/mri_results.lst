@@ -23,7 +23,7 @@ tumour:CUI=C1319851:Results=Abnormal
 cavernoma:CUI=C1319851:Results=Abnormal
 hemangioma:CUI=C1319851:Results=Abnormal
 gliosis:CUI=C1319851:Results=Abnormal
-encephalomalacia:CUI=C1319851:Results=Abnormal:=
+encephalomalacia:CUI=C1319851:Results=Abnormal
 cortical dysplasia:CUI=C1319851:Results=Abnormal
 abnormal signal:CUI=C1319851:Results=Abnormal
 signal intensity:CUI=C1319851:Results=Abnormal
@@ -50,7 +50,5 @@ Heterotopic grey matter:CUI=C1319851:Results=Abnormal
 no significant findings:CUI=C0436481:Results=Normal:Ignore=Yes
 clear:CUI=C0436481:Results=Normal
 unremarkable:CUI=C0436481:Results=Normal
-epileptic activity was not seen:CUI=C0436481:Results=Normal:Ignore=Yes
 both normal:CUI=C0436481:Results=Normal
 non-specific lesion:CUI=C1319851:Results=Abnormal:Ignore=Yes
-epileptic:CUI=C1319851:Results=Abnormal:=
