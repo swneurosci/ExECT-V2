@@ -1,9 +1,9 @@
 Phase: OtherDiagnosisListF
-Input: OtherDiag DiagnosisTriggers Conj Sentence
+Input: OtherDiag DiagnosisTriggers Conj 
 
 Options: control=brill
 
-
+/*These are for list with "alternative" list points */
 
 Rule: OtherDiagListF1
 Priority: 100

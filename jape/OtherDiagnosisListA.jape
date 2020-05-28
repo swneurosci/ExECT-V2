@@ -1,6 +1,9 @@
 Phase: OtherDiagnosisListA
 Input: DiagnosisTriggers OtherDiag listSent listPoint PartialDate Range MedicalHistory PHistBlock endList
 
+/*these capture the 1st item of other diagnosis (OtherDIag) in the list of diagnosis at the top of the letter
+OtherDiag may already contain  age/date/time ref if not this will be picked up from a separate phrase*/
+
 Options: control=appelt
 
 Rule: OtherDiagListA1
@@ -25,7 +28,7 @@ Priority: 100
 (   ({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
     {listPoint}
 	{listPoint}
-	({OtherDiag.rule == OtherDiagAge}):item  
+	({OtherDiag}):item  
 	
  ):match  
  -->
@@ -35,8 +38,8 @@ Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Tempora
 Certainty = :item.OtherDiag.Certainty,
 Age = :match.OtherDiag.Age,
 AgeUnit = :match.OtherDiag.AgeUnit,
-YearDate = :match.OtherDiag.YearDate,
-MonthDate =:match.OtherDiag.MonthDate}
+AgeLower = :match.OtherDiag.AgeLower,
+AgeUpper =:match.OtherDiag.AgeUpper}
 
 Rule: OtherDiagListA3
 Priority: 90
@@ -93,8 +96,6 @@ Certainty = :item.OtherDiag.Certainty,
 YearDate = :match.OtherDiag.YearDate,
 MonthDate =:match.OtherDiag.MonthDate}
 
-
-
 Rule: OtherDiagListA7
 Priority: 100
 
@@ -139,6 +140,8 @@ Priority: 90
 	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
     {listPoint}
 	({OtherDiag}):item
+
+
    
  ):match  
  -->

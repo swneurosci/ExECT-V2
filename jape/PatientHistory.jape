@@ -1,13 +1,12 @@
 Multiphase:PatientHistory
 
 Phases:
-
 TimeSince
 DateSince
 OtherDiagPhrase
 OtherDiagnosis
 OtherDiagnosisB
-/*OtherDiagnosisC*/
+OtherDiagnosisC
 OtherDiagnosisListA
 OtherDiagnosisListB
 OtherDiagnosisListC
@@ -24,5 +23,6 @@ BirthHistoryB
 BirthHistoryC
 BirthHistoryD
 MedicalHistory
+MedicalHistoryB
+/*FebrileSeizuresB*/
 FebrileSeizures
-FebrileSeizuresB

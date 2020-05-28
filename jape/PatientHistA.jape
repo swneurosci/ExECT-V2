@@ -6,18 +6,18 @@ date as year/month, and time since the event, as TimePeriod / NumberOfTimePeriod
 OtherDiag Lookup2 Lookup3 Person Investigation  DateSince TimeSince
  Sentence   DiagnosisTriggers PointInTime Age Pronouns YearToMonths 
  PHistBlock  Number MedicalHistory*/
-
+/*may be able to remove some of these lookups once the conversion to chunks is finished*/
 
 Options: control=appelt
 
 
-Rule: PtHistoryA1
+Rule: PtHistoryA1  /* To capture otherdiagnosis which is combined with age range in OtherDiag*/
 Priority: 100
 
 (   
 	{Person}
-    {Lookup2.majorType == historic}
-	({OtherDiag.rule == OtherDiagAgeRange }):item
+    {Lookup2.majorType == historic, Lookup2.minorType == symptoms}
+	({OtherDiag}):item
     
  ):match  
  -->
@@ -27,15 +27,20 @@ Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Tempora
 Certainty = :item.OtherDiag.Certainty, 
 AgeUnit = :match.OtherDiag.AgeUnit,
 AgeLower = :match.OtherDiag.AgeLower,
-AgeUpper = :match.OtherDiag.AgeUpper}
+AgeUpper = :match.OtherDiag.AgeUpper,
+Age = :match.OtherDiag.Age}
 
-Rule: PtHistoryA1a
+/*other diagnosis with Date combined in OtherDiag 'he sufferd a strake in 2010' without Person 
+this could be too general but Person was made optional as for some reason GATE wasn't picking up 'He' in the text*/
+
+Rule: PtHistoryA1a  
+
 Priority: 100
 
 (   
-	({Person})
-	({Lookup2.type == suffered})
-	({OtherDiag.rule == DateSince}):item	
+	({Person})?
+	({Lookup2.type == suffered}|{Lookup2.majorType == historic})
+	({OtherDiag.rule == OtherDiagDate}):item	
 
  ):match  
  -->
@@ -43,8 +48,8 @@ Priority: 100
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
-MonthDate = :match.DateSince.MonthDate,
-YearDate = :match.DateSince.YearDate}
+MonthDate = :match.OtherDiag.MonthDate,
+YearDate = :match.OtherDiag.YearDate}
 
 
 Rule: PtHistoryA2
@@ -66,12 +71,13 @@ Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Tempora
 Certainty = :item.OtherDiag.Certainty, 
 YearDate = :match.DateSince.YearDate}
 
-Rule: PtHistoryA3
+Rule: PtHistoryA3 /*person  (who) onset OtherDiag from age of*/
 Priority: 99
 
 (   
 	({Person})?
-	({Lookup2.minorType ==  symptoms}|{Lookup2.majorType == historic})
+	({Pronouns})?
+	({Lookup2.minorType == symptoms}|{Lookup2.majorType == historic})
 	({Lookup2})?
 	({OtherDiag.rule == OtherDiagAge}):item	
     
@@ -103,12 +109,12 @@ Age = :match.OtherDiag.Age,
 AgeUnit = :match.OtherDiag.AgeUnit}
 
 Rule: PtHistoryA4
-Priority: 99
+Priority: 100
 
 (   
-	({Person})?
+	({Person})
 	({Lookup2.minorType ==  symptoms}|{Lookup2.majorType == historic})
-	({OtherDiag.rule == OtherDiagYear}):item	
+	({OtherDiag.rule == OtherDiagDate}):item	
     
  ):match  
  -->
@@ -220,7 +226,7 @@ TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods =:match.TimeSince.NumberOfTimePeriods}
 
 /* When age is expressed as a time period e.g.teenage years - lookup2.mt=time, but is not
-that close of the concept to use OtherDiagAgeRange ruke */
+that close to the concept to use OtherDiagAgeRange ruke */
 Rule: PtHistoryA8a
 Priority: 100
 
@@ -242,27 +248,26 @@ AgeUnit = :a.Lookup2.timeUnit,
 AgeLower =:a.Lookup2.lowerAge,
 AgeUpper =:a.Lookup2.upperAge} 
 
-/*Rule: PtHistoryA8b
+Rule: PtHistoryA8b   /*when history is of episodes that started in x year  but too far to be captured by OtherDiag with partial date */
 Priority: 90
 
 (   
 	({Person})?
     {Lookup2.majorType == historic , Lookup2.minorType == symptoms}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Temporality != hypothetical,Lookup3.Experiencer == Patient }):item
-	({Lookup2})
-	({timeElapsed.time == in})
-	({PartialDate})
+	({OtherDiag.rule == OtherDiagPhrase}):item
+	({Lookup2})?
+	({DateSince})
 	
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA8b, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty , 
-MonthDate = :match.PartialDate.month,
-YearDate = :match.PartialDate.year}*/
+:item.PatientHistory = {rule = PtHistoryA8b, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, 
+YearDate = :match.DateSince.year}
 
+/*Lady who had Lookup3 (such as normal birth)and had OtherDiag  with age range*/
 Rule: PtHistoryA9
 Priority: 100
 
@@ -270,6 +275,8 @@ Priority: 100
 	{Person}
 	({Pronouns.type == relative})?
     {Lookup2.majorType == historic}
+	({Lookup3})?
+	({Lookup2.majorType == historic})?
 	({OtherDiag.rule == OtherDiagAgeRange}):item
  ):match  
  -->
@@ -382,15 +389,15 @@ Certainty = :item.OtherDiag.Certainty,
 AgeUnit = :match.OtherDiag.AgeUnit,
 AgeUpper =:match.OtherDiag.AgeUpper}
 
-
-Rule: PtHistoryA13
+/*covers OtherDiag with TimeSince but also the simple phrases: he has OtherDiag */
+Rule: PtHistoryA13  
 Priority: 100
 
 (   
 	{Person}
-    {Lookup2.type == has}
-    ({Lookup2.type == suffered})?
+    ({Lookup2.type == has})
 	({Lookup2})?
+    ({TimeSince})?
 	({OtherDiag}):item
  
  ):match  
@@ -402,6 +409,23 @@ Certainty = :item.OtherDiag.Certainty,
 TimePeriod = :match.OtherDiag.TimePeriod,
 NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods}
 
+/*As above but picks up specific type Otherdiag with built in 'onset time since'  as no separate onset phrase 
+His seizures started 4 years ago*/
+Rule: PtHistoryA13  
+Priority: 100
+
+(   
+	{Person}
+	({OtherDiag.rule == OtherDiagTime}):item
+ 
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryA13, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+TimePeriod = :match.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods}
 
 Rule: PtHistoryA13b
 Priority: 100
@@ -486,14 +510,14 @@ Certainty = :item.OtherDiag.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods = :match.Numeric.value}
 
-Rule: PtHistoryA17
+Rule: PtHistoryA17  /*sometimes Person doesn't get picked up by GATE that'swhy is is optional here, although this is not that safe */
 Priority: 100
 
 (   
-	({!PHistBlock})
-	({Person})
+	
+	({Person})?
 	{Lookup2.type == past}
-	({OtherDiag.rule == OtherDiagAge}):item
+	({OtherDiag}):item
 	  
  ):match  
  -->
@@ -502,13 +526,15 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, 
 AgeUnit =:match.OtherDiag.AgeUnit,
-Age =:match.OtherDiag.Age}
+Age =:match.OtherDiag.Age,
+AgeUnit = :match.OtherDiag.AgeUnit,
+AgeUpper =:match.OtherDiag.AgeUpper}
 
 Rule: PtHistoryA19
 Priority: 98
 
 (   
-	{Person}
+	({Person})
 	({Lookup2})?
 	({timeElapsed})?
 	({Lookup2.language == onset}|{Lookup2.minorType == causality})
@@ -530,7 +556,7 @@ Priority: 90
 
 (  
 	{Investigation.Investigation != EEG}
-	({Lookup2})*
+	({Lookup2.type != following})
 	({OtherDiag}):item
     
  ):match  
@@ -567,6 +593,7 @@ Priority: 99
 	({Lookup2})?
 	{Lookup2.minorType == opinion}
 	({Lookup2})?
+	({Lookup2})?
 	({OtherDiag}):item
     
  ):match  
@@ -592,7 +619,7 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}*/
 
-Rule: PtHistoryA24  /*added time elapsed as "for" is used in some pgrases*/
+Rule: PtHistoryA24  /*added time elapsed as "for" is used in some phrases*/
 Priority: 90
 
 (  

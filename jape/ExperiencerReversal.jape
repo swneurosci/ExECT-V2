@@ -10,7 +10,7 @@ Options: control=brill
 */
 
 
-Rule: ExperiencerReversal
+Rule: ExperiencerReversal1
 
 (
 	{OtherPerson.majorType == family}
@@ -24,12 +24,12 @@ Rule: ExperiencerReversal
 -->
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
-  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal1");
 
 }
 
 
-Rule: ExperiencerReversal
+Rule: ExperiencerReversal2
 
 (
 	{OtherPerson.majorType == family}
@@ -45,10 +45,10 @@ Rule: ExperiencerReversal
 -->
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
-  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal2");
 }
 
-Rule: ExperiencerReversal
+Rule: ExperiencerReversal3
 
 (
   {Lookup2.minorType == opinion}
@@ -60,12 +60,12 @@ Rule: ExperiencerReversal
 -->
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
-  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal3");
 }
 
 /* example: no febrile seizures and no family history of epilepsy - experiencer is a patient but GATE gives "other" so we revers it */
 
-Rule: ExperiencerReversal
+Rule: ExperiencerReversal4
 
 (
 	({Lookup3.majorType == umls, Lookup3.minorType == OtherDisease, 
@@ -76,10 +76,10 @@ Rule: ExperiencerReversal
 -->
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
-  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal4");
   }
 
-  Rule: ExperiencerReversal  /*from her father in childchood and she has a history of depression - assignig sufferes to patient not father*/
+  Rule: ExperiencerReversal5  /*from her father in childchood and she has a history of depression - assignig sufferes to patient not father*/
 
 (
   {Person.minorType == pronoun}
@@ -94,13 +94,13 @@ Rule: ExperiencerReversal
 -->
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
-  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal5");
 }
 
-Rule: ExperiencerReversal  /*explain to Patient and his father that the ongoing episodes are non-epileptic*/
+Rule: ExperiencerReversal6  /*explain to Patient and his father that the ongoing episodes are non-epileptic*/
 ( 
-  ({Person})?
-  ({Conj})?
+  ({Person})
+  ({Conj})
   {Person.minorType == pronoun}
   {OtherPerson.majorType == family}
   ({Lookup2.minorType == opinion})
@@ -110,6 +110,6 @@ Rule: ExperiencerReversal  /*explain to Patient and his father that the ongoing 
 -->
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
-  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal6");
 }
 

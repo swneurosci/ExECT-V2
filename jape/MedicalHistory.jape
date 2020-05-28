@@ -2,7 +2,7 @@ Phase: MedicalHistory
 Input: OtherDiag Lookup3 MedicalHistory listSent listPoint Sentence PHistBlock
 
  //Simple rules to annotate events without Person e.g., history of convulsions - could be too sensitive  */
-
+//person is here to stop capturing events that are covered by Patient Histoty rules//
 
 Options: control=Brill
 
@@ -11,7 +11,7 @@ Rule: MedicalHistory1
 
 (   
 	{MedicalHistory}
-	({OtherDiag.rule == OtherDiagYear}):item
+	({OtherDiag}):item
 	   
  ):match  
  -->
@@ -22,12 +22,11 @@ Certainty = :item.OtherDiag.Certainty,
 YearDate = :match.OtherDiag.YearDate} 
 
 
-
 Rule: MedicalHistory2
 
 (   
 	{MedicalHistory}
-	({Lookup3})?
+	({Lookup3})
     ({OtherDiag}):item
 	   
  ):match  

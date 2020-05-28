@@ -1,6 +1,8 @@
 Phase: OtherDiagnosisB
-Input: OtherDiag Lookup3 Lookup2 Sentence Lookup Investigation timeElapsed timePeriod DiagnosisTriggers listSent listPoint 
+Input: OtherDiag Lookup3 Lookup2 Lookup Split Investigation timeElapsed timePeriod DiagnosisTriggers listPoint 
 
+/*Removed Sentence from these rules as some items are within list without listPoints, may have to
+use some other means of stopping the rules from picking up everything from the text*/
 
 Options: control=appelt
 
@@ -19,17 +21,18 @@ Priority: 100
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
-TimePeriod = :match.TimeSince.TimePeriod,
-NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
+TimePeriod = :item.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
 
 
 Rule: OtherDiagB1
 Priority: 100
 
 (   
-	{Lookup2.minorType == opinion}
-	({Lookup2.minorType == probability})
-	({Lookup2})*
+	{DiagnosisTriggers.majorType == diagnosis}
+	({Lookup2.minorType == probability})?
+	({OtherDiag})
+	({Lookup2})?
 	({OtherDiag}):item
     
  ):match  
@@ -72,24 +75,25 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
 
-Rule: OtherDiagB5
+Rule: OtherDiagB5  /*trying to stop this fiering when it is a top list*/
 Priority: 100
 
 (  
+	
 	{Lookup2.minorType == probability} 
-	({Lookup3})?
+	({Lookup3})
 	{Lookup}
 	({Lookup2})?
 	({OtherDiag}):item
     
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiag5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+:item.PatientHistory = {rule = OtherDiagB5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
 
-Rule: OtherDiagB6
+/*Rule: OtherDiagB6
 Priority: 100
 
 (   
@@ -99,10 +103,10 @@ Priority: 100
 	
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiag6, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+:item.PatientHistory = {rule = OtherDiagB6, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty}*/
 
 Rule: OtherDiagB7
 Priority: 100
@@ -120,3 +124,19 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
 
+Rule: OtherDiagB8 /*2nd item in a list without any points*/
+Priority: 100
+
+(   
+	
+	{DiagnosisTriggers}
+	({OtherDiag})
+	({Split})
+	({OtherDiag}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagB8, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}

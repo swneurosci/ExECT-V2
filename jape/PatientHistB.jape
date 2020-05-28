@@ -1,5 +1,5 @@
 Phase: PatientHistB
-Input: Lookup3 Lookup2 OtherDiag DateSince PHstBlack TimeSince Person Numeric Age Sentence timeElapsed timePeriod Range PartialDate PointInTime age DateBio
+Input:  Lookup3 Lookup2 OtherDiag DateSince PHistBlock TimeSince Person Numeric Age Sentence timeElapsed timePeriod Range PartialDate PointInTime age DateBio
 
 
 /*additional rules to annotate items in patient history when they are stated one after another in longer sentences
@@ -9,16 +9,17 @@ age (precise and as a range), date as year/month, and time since the event, as T
 
 Options: control=appelt
 
-Rule: PtHistoryB1
+/*2nd mention of OtherDiag in a sentence which needs to be picked up*/
+Rule: PtHistoryB1 
 Priority: 100
 
 (  
 	{Person}
     {Lookup2.majorType == historic}
-	{Lookup3}
+	{OtherDiag}
 	({timeElapsed})?
 	({Lookup2})?
-	({timeElapsed})?
+	({timeElapsed})? 
 	({Lookup2})?
 	({timePeriod})?
 	({OtherDiag }):item
@@ -100,7 +101,7 @@ Rule: PtHistoryB5
 Priority: 100
 
 (   
-	
+	{Person}
 	{Lookup2.type == has}
 	({OtherDiag}):item
 	({timeElapsed})?
@@ -124,15 +125,13 @@ Priority: 100
 	{Person}
     {Lookup2.type == past}
     ({Lookup2})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-    
+	({OtherDiag}):item
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryB7, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty,
+:item.PatientHistory = {rule = PtHistoryB7, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
 YearDate = :match.Numeric.value}
 
 
