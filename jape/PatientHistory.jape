@@ -1,8 +1,6 @@
 Multiphase:PatientHistory
 
 Phases:
-TimeSince
-DateSince
 OtherDiagPhrase
 OtherDiagnosis
 OtherDiagnosisB

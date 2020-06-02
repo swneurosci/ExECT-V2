@@ -29,7 +29,7 @@ Rule: url1
 Rule: cleanHealthCareTerms
 
 (
-  ({Lookup3.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup3.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup3.STY ==~ "[Dd]isease"})
+  ({Lookup3.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup3.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup3.STY ==~ "[Dd]isease"}|{Lookup3.STY ==~ "[Ii]njury or [Pp]oisoning"})
   ({Lookup2.majorType == organization} | {Location})
 ):umls
 -->
@@ -41,7 +41,7 @@ Rule: cleanHealthCareTerms
 
 (
    ({Lookup2.majorType == organization} | {Location})
-   ({Lookup3.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup3.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup3.STY ==~ "[Dd]isease"})
+   ({Lookup3.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup3.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup3.STY ==~ "[Dd]isease"}|{Lookup3.STY ==~ "[Ii]njury or [Pp]oisoning"})
   
 ):umls
 -->
@@ -64,7 +64,7 @@ Rule: cleanHealthCareTermsWithin
 Rule: cleanDiagnosis
 
 (
-   ({Lookup3.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup3.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup3.STY ==~ "[Dd]isease"}):umls
+   ({Lookup3.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup3.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup3.STY ==~ "[Dd]isease"}|{Lookup3.STY ==~ "[Ii]njury or [Pp]oisoning"}):umls
 	({Lookup.STY ==~ "[Hh]ealth [Cc]are [Aa]ctivity"} | {Lookup.STY ==~ "[Hh]ealth [Cc]are [Rr]elated [Oo]rganization"})
 ):match
 -->
