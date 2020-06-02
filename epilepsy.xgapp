@@ -359,6 +359,10 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
+                  <string>longestMatchOnly</string>
+                  <boolean>false</boolean>
+                </entry>
+                <entry>
                   <string>annotationSetName</string>
                   <string>Bio</string>
                 </entry>
