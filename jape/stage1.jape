@@ -29,3 +29,5 @@ YearToMonths
 Age
 RemoveSeizFreeBlock
 RemoveTimePeriodFromAge
+TimeSince
+DateSince
