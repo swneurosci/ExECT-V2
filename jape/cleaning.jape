@@ -40,7 +40,7 @@ Rule: url1
 Rule: cleanHealthCareTerms
 
 (
-  ({Lookup.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup.STY ==~ "[Dd]isease"})
+  ({Lookup.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup.STY ==~ "[Dd]isease"}|{Lookup.STY ==~ "[Ii]njury or [Pp]oisoning"})
   ({Lookup2.majorType == organization} | {Location})
 ):umls
 -->
@@ -82,8 +82,6 @@ Rule: cleanDiagnosis
 :umls { 
  inputAS.removeAll(umlsAnnots);
 }
-
-
 
 /* Temporal Concepts need to be removed 
 * - they are fequent, useless, and troublesome when relying on JAPE rules that use Lookup as input
