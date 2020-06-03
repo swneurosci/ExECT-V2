@@ -27,7 +27,7 @@ Rule: NotLookupWithin
 :match {
   getOnlyAnn(matchAnnots).getFeatures().put("rule", "NotLookupWithin");
 } 
- /*And this does the same for absences*/
+ /*And this does the same for absences
 
 Rule: NotLookupWithin
 
