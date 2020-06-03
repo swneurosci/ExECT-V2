@@ -1,4 +1,5 @@
 started:type=began
+started in:type=began
 developed:type=began
 occured:type=began
 appeared:type=began
@@ -25,6 +26,7 @@ report him having:type=suffered
 report her having:type=suffered
 background is:type=diagnosed
 presented with:type=suffered
+presenting with:type=suffered
 was admitted:type=suffered
 been experiencing:type=experiencing
 occurred on:type=suffered
@@ -43,3 +45,6 @@ referring:type=considering
 well apart from:type=experiencing
 until he had:type=suffered
 until she had:type=suffered
+is having:type=experiencing
+symptoms are:type=experiencing
+
