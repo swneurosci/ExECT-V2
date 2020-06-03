@@ -38,6 +38,7 @@ Rule: ExperiencerReversal2
     {Person.kind == firstName}
     {Lookup}
     ({Lookup3})?
+    ({Conj})?
 	({Lookup.majorType == umls, Lookup.minorType == Disease, 
     Lookup.Experiencer == Other}|{Lookup3.majorType == umls, Lookup3.minorType == Disease, 
     Lookup3.Experiencer == Other}):umls
