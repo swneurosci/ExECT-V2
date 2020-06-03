@@ -1,0 +1,7 @@
+coincide.lst:coincide:coincide::Coincide
+refractory.lst:treatment:CUI::DiseaseSeverity
+patient_history.lst:person:history::History
+previousInteraction.lst:frequency:time::Interaction
+indicator.lst:indicator:::Lookup2
+eventModifiers.lst:modifier:::Lookup2
+Health_Condition.lst:health_condition:symptoms::Lookup2
