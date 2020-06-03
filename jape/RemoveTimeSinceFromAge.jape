@@ -1,0 +1,14 @@
+Phase: RemoveTimeSinceFromAge
+Input:  Age TimeSince
+Options: control=all
+
+
+Rule: RemoveTimeSinceFromAge
+(   
+    ({TimeSince within Age}):umls
+):match
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+}
+

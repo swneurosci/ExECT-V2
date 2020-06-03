@@ -1,0 +1,14 @@
+Phase: RemoveTimePeriodFromAge
+Input:  TimeSince Lookup2
+Options: control=all
+
+
+Rule: RemoveLookup2FromTimeSince
+(   
+    ({Lookup2 within TimeSince}):umls
+):match
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+}
+

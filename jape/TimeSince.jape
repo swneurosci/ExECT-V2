@@ -1,5 +1,5 @@
 Phase: TimeSince
-Input: Numeric timePeriod timeElapsed age Sentence Trigger Token Range
+Input: Numeric timePeriod timeElapsed age Sentence Trigger Token Range PHistBlock
 Options: control=appelt
 
 //Age is there to stop annotating Age as time since, so is the Token//
@@ -39,7 +39,7 @@ Rule: TimeSince3  /*with the exclusion of a day, a week etc I'm trying to exclud
 Priority: 100
 
 (   {Numeric}
-	{!Token}
+	({!Token})?
     ({timePeriod})
 	{timeElapsed.time == since}
 	
@@ -50,13 +50,14 @@ Priority: 100
 :match.TimeSince = {rule =TimeSince3, TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value}
 
-Rule: TimeSince3a  /*the one above didn't fire on 4 years ago so I'm testing another version of it belo*/
+/* not a safe rule*/
+Rule: TimeSince3a
 Priority: 100
 
 (  
-	{Numeric}
-	{!Token}
-    ({timePeriod})
+	
+	{Numeric.majorType != frequency}
+    ({Token.string =~ month}|{Token.string =~ week}|{Token.string =~ year}|{Token.string =~ week})
 	
 	
 	
