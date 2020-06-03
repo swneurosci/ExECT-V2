@@ -19,8 +19,15 @@ Rule: MedicalHistory1
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
-YearDate = :match.OtherDiag.YearDate} 
-
+DayDate = :match.OtherDiag.DayDate,
+MonthDate =:match.OtherDiag.MonthDate,
+YearDate = :match.OtherDiag.YearDate, 
+TimePeriod = :match.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods,
+AgeUnit =:match.OtherDiag.AgeUnit,
+Age =:match.OtherDiag.Age,
+AgeUnit = :match.OtherDiag.AgeUnit,
+AgeUpper =:match.OtherDiag.AgeUpper}
 
 Rule: MedicalHistory2
 
@@ -34,7 +41,16 @@ Rule: MedicalHistory2
 :item.PatientHistory = {rule = MedicalHistory2, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = "Past", 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty,
+DayDate = :match.OtherDiag.DayDate,
+MonthDate =:match.OtherDiag.MonthDate,
+YearDate = :match.OtherDiag.YearDate, 
+TimePeriod = :match.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods,
+AgeUnit =:match.OtherDiag.AgeUnit,
+Age =:match.OtherDiag.Age,
+AgeUnit = :match.OtherDiag.AgeUnit,
+AgeUpper =:match.OtherDiag.AgeUpper}
 
 Rule: MedicalHistory3
 
@@ -50,7 +66,16 @@ Rule: MedicalHistory3
 :item.PatientHistory = {rule = MedicalHistory3, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = "Past", 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty,
+DayDate = :match.OtherDiag.DayDate,
+MonthDate =:match.OtherDiag.MonthDate,
+YearDate = :match.OtherDiag.YearDate, 
+TimePeriod = :match.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods,
+AgeUnit =:match.OtherDiag.AgeUnit,
+Age =:match.OtherDiag.Age,
+AgeUnit = :match.OtherDiag.AgeUnit,
+AgeUpper =:match.OtherDiag.AgeUpper}
 
 Rule: MedicalHistory4
 
@@ -66,5 +91,14 @@ Rule: MedicalHistory4
 :item.PatientHistory = {rule = MedicalHistory4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = "Past", 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty,
+DayDate = :match.OtherDiag.DayDate,
+MonthDate =:match.OtherDiag.MonthDate,
+YearDate = :match.OtherDiag.YearDate, 
+TimePeriod = :match.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods,
+AgeUnit =:match.OtherDiag.AgeUnit,
+Age =:match.OtherDiag.Age,
+AgeUnit = :match.OtherDiag.AgeUnit,
+AgeUpper =:match.OtherDiag.AgeUpper}
 

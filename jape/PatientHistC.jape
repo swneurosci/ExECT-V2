@@ -4,7 +4,8 @@ Options: control=appelt
 
 
 /*  Additional PtHistory These rules annotate events in patient history - type of event with an UMLS CUI, age (precise and as a range), 
-date as year/month, and time since the event, as TimePeriod / NumberOfTimePeriods) */
+date as year/month, and time since the event, as TimePeriod / NumberOfTimePeriods) And this should be the 3rd event within sentence
+*/
 
 
 Rule: PtHistoryC1

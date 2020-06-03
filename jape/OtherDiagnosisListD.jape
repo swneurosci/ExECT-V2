@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisListD
-Input: DiagnosisTriggers OtherDiag listSent listPoint DateSince Age NewLine
+Input: DiagnosisTriggers OtherDiag listSent listPoint DateSince Age endList
 
 Options: control=appelt
 

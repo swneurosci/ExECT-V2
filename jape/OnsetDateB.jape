@@ -1,8 +1,6 @@
 Phase: OnsetDateB
-Input: Lookup3 Person Lookup2 timeElapsed  PointInTime Lookup PartialDate Split  Numeric timePeriod
+Input: Lookup3 Person Lookup2 PointInTime Lookup DateSince Split
 Options: control=appelt
-
-
 
 /*For when the seizure type is specified in the sentence before the date of onset*/
 
@@ -11,15 +9,13 @@ Priority: 100
 
 (   
 	{Person}
-    {timeElapsed}
 	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.minorType == Disease , Lookup3.Experiencer == Patient}):item
     {Split}
     ({Split})?
     {Person}
     {Lookup2.language == onset , Lookup2.type == began}
     {Lookup3.minorType == generic}
-	{timeElapsed}
-	{PartialDate}
+	{DateSince}
 		
 	
  ):match  
@@ -27,9 +23,9 @@ Priority: 100
 :item.Onset = {rule = OnsetDateB1, OnsetType = "date_of_onset", 
 PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 STY = :item.Lookup3.STY, Certainty = :item.Lookup3.Certainty,
-YearDate = :match.PartialDate.year,
-MonthDate =:match.PartialDate.month,
-DayDate = ""}
+YearDate = :match.DateSince.YearDate,
+MonthDate =:match.DateSince.MonthDate,
+DayDate = :match.DateSince.DayDate}
 
 Rule: OnsetDateB2
 Priority: 100
@@ -43,44 +39,22 @@ Priority: 100
     {Person}
     {Lookup2.language == onset , Lookup2.type == began}
     ({Lookup3.minorType == generic})?
-	{timeElapsed}
-	{PartialDate}
+	{DateSince}
 		
  ):match  
  -->
 :item.Onset = {rule = OnsetDateB2, OnsetType = "date_of_onset", 
 PREF = :item.Diagnosis.PREF, CUI = :item.Diagnosis.CUI, 
 Certainty = :item.Lookup3.Certainty,
-YearDate = :match.PartialDate.year,
-MonthDate =:match.PartialDate.month,
-DayDate = ""}
+YearDate = :match.DateSince.YearDate,
+MonthDate =:match.DateSince.MonthDate,
+DayDate = :match.DateSince.DayDate}
 
 
-Rule: onsetDateB3
-Priority: 98
 
-(   
-	{Person}
-	{Lookup3}
-	{Lookup2.language == onset}
-	{timeElapsed.time == in}
-	{Numeric}
-	{Person}
-	{Lookup2.type == suffered}
-	(({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.CAT == seizures }) |
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed , Lookup3.Experiencer == Patient ,Lookup3.minorType == Disease }) ):item
-	
-	
- ):match  
- -->
-:item.Onset = {rule = onsetDateB3, OnsetType = "date_of_onset", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
-YearDate = :match.Numeric.value,
-MonthDate ="",
-DayDate = ""}
 
-Rule: OnsetDateB4
+/*  As in: ...GTCS. The first one was in 2013...*/
+Rule: OnsetDateB4  
 Priority: 100
 
 (   
@@ -89,9 +63,7 @@ Priority: 100
     {Split}
     {Lookup2.language == onset , Lookup2.type == began}
 	{Lookup2}
-	({timeElapsed})?
-	{timeElapsed.time == in}
-	{Numeric}
+	{DateSince}
 		
  ):match  
  -->
@@ -99,4 +71,6 @@ Priority: 100
 PREF = :item.Looup3.PREF, CUI = :item.Lookup3.CUI, STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality,
 Certainty = :item.Lookup3.Certainty,
-YearDate = :match.Numeric.value}
+YearDate = :match.DateSince.YearDate,
+MonthDate =:match.DateSince.MonthDate,
+DayDate = :match.DateSince.DayDate}

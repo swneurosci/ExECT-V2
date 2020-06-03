@@ -2,12 +2,13 @@ Phase: PatientHistE
 Input: Lookup3 OtherDiag Lookup2 Person Age Split
 
 
-/* when the the  age of event is saparated from the event with a split i.e. in a new sentence-*/
+/* when the the  age of event is saparated from the event with a split i.e. in a new sentence and 
+there is a list of other diagnoses*/
 
 
-Options: control=appelt
+Options: control=brill
 
-Rule: PtHistoryE1
+Rule: PtHistoryE1  /*He had a head injuty at age 6. It resuletd in skull fructure*/
 Priority: 100
 
 (   
@@ -22,6 +23,28 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = PtHistoryE1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, 
+AgeUnit =:match.Age.AgeUnit,
+Age =:match.Age.Age}
+
+Rule: PtHistoryE2  /* as above but a second from the list of resulting injuries. It resulted in... and  brain damege*/
+Priority: 100
+
+(   
+	({Person})?
+	{Lookup2.type == past}
+    {Lookup3}
+	{Age}
+    {Split}
+    {Lookup2.minorType == causality}
+	{OtherDiag}
+	({OtherDiag }):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryE2, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, 

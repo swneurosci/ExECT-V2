@@ -1,14 +1,15 @@
 Phase: OnsetAgeA
-Input: Lookup Person Lookup2 Numeric timePeriod Age Lookup3 age Pronouns Split
+Input: Lookup Person Lookup2 Age Lookup3 Pronouns Split Sentence Conj
 Options: control=appelt
 
+/*Conj should help to stp age of person being cptured as age of onset - as theu are often in one sentence*/
 
 Rule: onsetAgeA1
 Priority: 99
 
 (   
 	{Person}
-    {Lookup2.language == onset}
+    {Lookup2.language == onset, Lookup2.type != diagnosed }
     {Lookup3}
 	{Age}
 	{Lookup2.language == onset}
@@ -30,10 +31,9 @@ Priority: 99
 (   
 	
 	{Person}
-    {Lookup2.language == onset}
+    {Lookup2.language == onset, Lookup2.type != diagnosed}
 	{Lookup3}
 	{Age}
-	{Lookup2.type == time}
 	({Person})?
 	({Lookup2})?
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
@@ -47,13 +47,14 @@ STY = :item.Lookup.STY,
 Certainty = :item.Lookup.Certainty,
 AgeUnit = :match.Age.AgeUnit,
 Age =:match.Age.Age}	
-
+ 
+/* who had epilepsy since age x or onset of his epilepsy age x*/
 Rule: onsetAgeA3
 Priority: 99
 
 (   
-	{Lookup2.language == onset}
-	{Person}
+	{Lookup2.language == onset, Lookup2.type != diagnosed}
+	({Person})?
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
 	({Lookup3})?
 	{Age}
@@ -63,8 +64,10 @@ Priority: 99
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
+Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
-Age =:match.Age.Age}	
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}	
 
 Rule: onsetAgeA4
 Priority: 99
@@ -72,7 +75,7 @@ Priority: 99
 (   
 	{Person}
     {Lookup3.minorType == generic}
-	{Lookup2.language == onset}
+	{Lookup2.language == onset, Lookup2.type != diagnosed }
 	{Age}
 	({Lookup.majorType == umls ,Lookup.minorType == Disease, Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient}):item
 
@@ -80,28 +83,71 @@ Priority: 99
  -->
 :item.Onset = {rule = onsetAgeA4, OnsetType = "age_episodes_started", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
-Certainty = :item.Lookup3.Certainty,
-AgeUnit = :match.Age.Unit,
-Age =:match.Age.Age}
+STY = :item.Lookup.STY, Certainty = :item.Lookup3.Certainty,
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}
 
+/*at the age of she started having spec. seizures*/
 Rule: onsetAgeA5
 Priority: 99
 
 (   
 	{Age}
-	({Lookup2})?
 	({Person})?
-	({Lookup2})?
-	({Lookup2.language == onset, Lookup2.type != diagnosed})
+	({Lookup2.language == onset, Lookup2.type != diagnosed}):item
 	({Lookup.majorType == umls ,Lookup.minorType == Disease, Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient}):item
 
 ):match  
  -->
 :item.Onset = {rule = onsetAgeA5, OnsetType = "age_episodes_started", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
-Certainty = :item.Lookup3.Certainty,
-AgeUnit = :match.Age.Unit,
-Age =:match.Age.Age}
+STY = :item.Lookup.STY, Certainty = :item.Lookup3.Certainty,
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper = :match.Age.AgeUpper}
 
+ Rule: onsetAgeA6
+Priority: 98
+
+(   
+	{Person}
+	({Lookup2})?
+	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.type != diagnosed }
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
+	{Age}
+	
+ ):match  
+ -->
+:item.Onset= {rule = onsetAgeA6, OnsetType = "age_episodes_started", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, Certainty = :item.Lookup.Certainty,
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}
+
+/*as a todler she begun to have absence seizures*/
+
+Rule: onsetAgeA7
+Priority: 98
+
+(  
+	{Age}
+	{Person}
+	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.type != diagnosed }
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
+	
+	
+ ):match  
+ -->
+:item.Onset= {rule = onsetAgeA7, OnsetType = "age_episodes_started", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}

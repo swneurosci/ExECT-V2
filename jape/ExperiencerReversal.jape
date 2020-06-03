@@ -85,8 +85,8 @@ Rule: ExperiencerReversal4
   {Person.minorType == pronoun}
   {OtherPerson}
   ({Lookup2.majorType == person})
-  {Conj}
-  {Person}
+  ({Conj})
+  ({Person})
   {Lookup2.majorType == historic}
 	({Lookup3.majorType == umls, Lookup3.minorType == OtherDisease, 
     Lookup3.Experiencer == Other}):umls
@@ -113,3 +113,19 @@ Rule: ExperiencerReversal6  /*explain to Patient and his father that the ongoing
   umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal6");
 }
 
+Rule: ExperiencerReversal6  /*reversing from patient to other*/
+
+ (
+  {Person.minorType == pronoun}
+  {OtherPerson.majorType == family}
+  {Lookup2.majorType == historic, Lookup2.type == past}
+  ({Lookup2})?
+  ({Lookup2})?
+	({Lookup3.majorType == umls, Lookup3.minorType == OtherDisease, 
+    Lookup3.Experiencer == Patient}):umls
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Experiencer","Other");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal6");
+}

@@ -24,7 +24,7 @@ Rule: DateSince2
 Priority: 100
 
 (   
-	({timeElapsed.time == since}|{timeElapsed.time == in})
+	({timeElapsed.time == since}|{timeElapsed.time == in}|{timeElapsed.time == during})
 	{Numeric.value > 1940}
 
 	

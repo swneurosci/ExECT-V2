@@ -216,3 +216,19 @@ AgeUnit = :match.Age.AgeUnit,
 AgeUpper = :match.Age.AgeUpper,
 Age = :match.Age.Age,
 AgeLower = :match.Age.AgeLower}
+
+Rule: FebSeizures9
+Priority: 100
+
+(   
+   
+	({MedicalHistory})
+	({Lookup3.Negation == Affirmed, Lookup3.CUI == C0009952, 
+	Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = FebSeizures9, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}

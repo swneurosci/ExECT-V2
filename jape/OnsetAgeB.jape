@@ -19,8 +19,10 @@ Priority: 100
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
+Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
-Age =:match.Age.Age}
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}
  
 
  Rule: onsetAgeB2
@@ -30,7 +32,7 @@ Priority: 100
 	{Person}
 	({Lookup.minorType == Disease ,Lookup.Experiencer == Patient , Lookup.Negation == Affirmed}):item
 	{Lookup2.language == onset}
-	({Lookup2.minorType == time}):a
+	{Age}
 		
  ):match  
  -->
@@ -38,10 +40,10 @@ Priority: 100
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
-AgeUnit = :a.Lookup2.timeUnit,
-Age ="",
-AgeLower = :a.Lookup2.lowerAge,
-AgeUpper = :a.Lookup2.upperAge}
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}
  
  Rule: onsetAgeB3
 Priority: 100
@@ -58,10 +60,13 @@ Priority: 100
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :match.Lookup.Certainty,
+Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
-Age =:match.Age.Age}
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}
 
-Rule: onsetAgeB4
+Rule: onsetAgeB4  /*2nd type of seizures with one age of onset in a sentence, 
+This rule was abased on a sentence that needed experience reversal*/
 Priority: 99
 
 (   
@@ -77,5 +82,7 @@ Priority: 99
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
+Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
-Age =:match.Age.Age}	
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}	

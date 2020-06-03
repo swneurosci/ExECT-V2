@@ -18,7 +18,8 @@ Priority: 100
 :item.Onset = {rule = onsetAgeC1, OnsetType = "age_episodes_started", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
-Certainty = :match.Lookup.Certainty,
+Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
-Age =:match.Age.Age}
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}
  
