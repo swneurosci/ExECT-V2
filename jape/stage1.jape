@@ -31,3 +31,5 @@ RemoveSeizFreeBlock
 RemoveTimePeriodFromAge
 TimeSince
 DateSince
+RemoveLookup2FromTimeSince
+RemoveTimeSinceFromAge
