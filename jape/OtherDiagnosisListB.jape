@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisListB
-Input: OtherDiag DiagnosisTriggers listSent listPoint Range MedicalHistory PHistBlock DateSince
+Input: OtherDiag DiagnosisTriggers listSent listPoint Range MedicalHistory DateSince
 /*these rules are to capture the second item of OtherDiag from the top of letter diagnosis list
 they may have age/date/time since given by other diagnosis or separately depending*/
 
@@ -11,6 +11,7 @@ Priority: 100
 (   
 	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
     {listPoint}
+    ({MedicalHistory})?
     ({DiagnosisTriggers})?
     {OtherDiag}
     ({listPoint})?
@@ -23,7 +24,12 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
 YearDate = :match.OtherDiag.YearDate,
-MonthDate =:match.OtherDiag.MonthDate}
+MonthDate =:match.OtherDiag.MonthDate,
+Age = :match.OtherDiag.Age,
+AgeUnit = :match.OtherDiag.AgeUnit,
+AgeLower = :match.OtherDiag.AgeLower,
+AgeUpper =:match.OtherDiag.AgeUpper,
+PointInTime =:match.OtherDiag.PointInTime}
 
 
 Rule: OtherDiagListB2
@@ -43,8 +49,13 @@ Priority: 100
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
-YearDate = :match.OtherDiag.YearDate} 
-
+YearDate = :match.OtherDiag.YearDate,
+MonthDate =:match.OtherDiag.MonthDate,
+Age = :match.OtherDiag.Age,
+AgeUnit = :match.OtherDiag.AgeUnit,
+AgeLower = :match.OtherDiag.AgeLower,
+AgeUpper =:match.OtherDiag.AgeUpper,
+PointInTime =:match.OtherDiag.PointInTime}
 
 Rule: OtherDiagListB3
 Priority: 100
@@ -65,7 +76,13 @@ Priority: 100
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
-YearDate = :match.OtherDiag.YearDate}
+YearDate = :match.OtherDiag.YearDate,
+MonthDate =:match.OtherDiag.MonthDate,
+Age = :match.OtherDiag.Age,
+AgeUnit = :match.OtherDiag.AgeUnit,
+AgeLower = :match.OtherDiag.AgeLower,
+AgeUpper =:match.OtherDiag.AgeUpper,
+PointInTime =:match.OtherDiag.PointInTime}
 
 Rule: OtherDiagListB4
 Priority: 100
@@ -83,7 +100,13 @@ Priority: 100
 :item.PatientHistory = {rule = OtherDiagListB4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty,YearDate = :match.OtherDiag.YearDate,
+MonthDate =:match.OtherDiag.MonthDate,
+Age = :match.OtherDiag.Age,
+AgeUnit = :match.OtherDiag.AgeUnit,
+AgeLower = :match.OtherDiag.AgeLower,
+AgeUpper =:match.OtherDiag.AgeUpper,
+PointInTime =:match.OtherDiag.PointInTime}
 
 Rule: OtherDiagListB5
 Priority: 100
@@ -103,7 +126,14 @@ Priority: 100
 :item.PatientHistory = {rule = OtherDiagListB5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = "Past", 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty,
+YearDate = :match.OtherDiag.YearDate,
+MonthDate =:match.OtherDiag.MonthDate,
+Age = :match.OtherDiag.Age,
+AgeUnit = :match.OtherDiag.AgeUnit,
+AgeLower = :match.OtherDiag.AgeLower,
+AgeUpper =:match.OtherDiag.AgeUpper,
+PointInTime =:match.OtherDiag.PointInTime}
 
 /*this captures a 2nd date for an event already annotated in OtherDiagnosisListA
 e.g stroke in May 2012 and October 2016 - this rule changes the date from OtherDiag to that of DateSince I.E. 2016*/

@@ -1,6 +1,6 @@
 Phase: OtherDiagnosisListD
 Input: DiagnosisTriggers OtherDiag listSent listPoint DateSince Age endList
-
+//in general to capture the 4th item in the tol of letter list//
 Options: control=appelt
 
 Rule: OtherDiagListD1
@@ -9,10 +9,11 @@ Priority: 100
 ( 
 	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
     ({listPoint})?
+    ({DiagnosisTriggers})?
 	({OtherDiag})
 	{listPoint}
     ({OtherDiag})
-    ({OtherDiag})
+    ({OtherDiag})?
     {listPoint}
     ({OtherDiag})
     {listPoint}

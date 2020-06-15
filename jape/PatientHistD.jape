@@ -1,5 +1,5 @@
 Phase: PatientHistD
-Input: Lookup3 Lookup2 Person Number timePeriod Split OtherDiag TimeSince
+Input: OtherDiag Lookup2 Person Number timePeriod Split OtherDiag TimeSince
 
 
 /* These rules spill over more than one sentence,  annotate events in patient history - type of event with an UMLS CUI, age (precise and as a range), 
@@ -14,14 +14,13 @@ Priority: 100
 (   
 	({Person})?
 	{Lookup2.type == past}
-    {Lookup3}
+    {OtherDiag}
 	{Number}
 	{timePeriod}
     {Split}
     {Lookup2.minorType == causality}
-    ({Lookup3})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+    ({OtherDiag})
+	({OtherDiag}):item
     
  ):match  
  -->
@@ -39,16 +38,14 @@ Priority: 100
 	
 	{Lookup2.minorType == probability}
     {Lookup2.type == recent}
-    ({Lookup3})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-    
+    ({OtherDiag})?
+	({OtherDiag}):item
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryD2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :match.Lookup2.Level}
+:item.PatientHistory = {rule = PtHistoryD4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}
 
 
 //This one could be too broad, it also shifts probability directly from Lookup2.probability//
@@ -60,17 +57,16 @@ Priority: 100
 	
 	({Lookup2.minorType == probability}):a
 	({Person})?
-	{Lookup3.minorType == Disease}
+	{OtherDiag}
     {Lookup2}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+	({OtherDiag }):item
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryD3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :a.Lookup2.Level}
+:item.PatientHistory = {rule = PtHistoryD4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}
 
 Rule: PtHistoryD4  /*condition of interest then time of onset in the next sentence*/
 Priority: 100

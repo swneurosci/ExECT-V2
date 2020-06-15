@@ -109,3 +109,37 @@ Priority: 100
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
+
+Rule: BirthB6a
+Priority: 100
+
+(
+    
+    ({Lookup2.minorType == opinion})
+    ({Lookup2})?
+    ({Lookup2})?
+    ({Lookup3.PREF =~ "[Bb]irth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
+   
+
+):match  
+ -->
+:item.BirthHistory = {rule = BirthB6a,  PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: BirthB7  //Normal birth//
+Priority: 100
+
+(
+    
+    
+    ({Lookup3.CUI == C3665337 , Lookup3.Negation == Affirmed}):item
+   
+
+):match  
+ -->
+:item.BirthHistory = {rule = BirthB7,  PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}

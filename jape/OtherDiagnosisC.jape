@@ -22,6 +22,37 @@ Priority: 100
 :item.PatientHistory = {rule = OtherDiagnosisC, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty,
+YearDate = :match.OtherDiag.YearDate,
+MonthDate =:match.OtherDiag.MonthDate,
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUppe}
 
 
+Rule: OtherDiagnosisC1
+Priority: 100
+
+(   
+
+	
+	{DiagnosisTriggers}
+	{OtherDiag}
+	{NewLine}
+	{NewLine}
+	({OtherDiag}):item
+    {NewLine}
+
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagnosisC1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+YearDate = :match.OtherDiag.YearDate,
+MonthDate =:match.OtherDiag.MonthDate,
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUppe}

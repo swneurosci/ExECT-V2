@@ -1,5 +1,5 @@
 Phase: BirthHistoryD
-Input: Lookup3 Split Person Lookup2
+Input: Lookup3 Split Person Lookup2 
 Options: control=appelt
 
 /*these rule are to capture birth injuries and other events in the perinatal period*/
@@ -15,7 +15,7 @@ Priority: 100
     {Split}
     {Person}
     {Lookup2.type == past}
-    ({Lookup3.minorType == OtherDisease , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
+    ({Lookup3.minorType == OtherDisease , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed, Lookup3.CUI != C0009952}):item
    
 
 ):match  
