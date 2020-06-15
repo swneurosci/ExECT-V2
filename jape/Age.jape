@@ -160,7 +160,24 @@ Priority: 90
  ):match  
  -->
 :match.Age = {rule =Age_Range3, AgeLower =:match.Range.N1,
-AgeUpper = :match.Range.N2, AgeUnit =:match.timePeriod.time-Unit}  
+AgeUpper = :match.Range.N2, AgeUnit =:match.timePeriod.time-Unit} 
+
+Rule: Age_Range3a
+Priority: 90
+
+(   {Token.string == between}
+	({Token.string == the})?
+	{age}
+	({Numeric}):N1
+	({Token.string == and})
+	({Numeric}):N2
+	({timePeriod})
+ ):match  
+ -->
+:match.Age = {rule =Age_Range3a, AgeLower =:N1.Numeric.value,
+AgeUpper = :N2.Numeric.value, AgeUnit =:match.timePeriod.time-Unit} 
+
+
 
 Rule: Age_Range4
 Priority: 100
