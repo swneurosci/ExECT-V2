@@ -16,4 +16,4 @@ PHistBlock.lst::::PHistBlock
 SeizureFrequencyBlock.lst::::SFBlock
 SChangeBlock.lst::::SChangeBlock
 driving.lst:driving:driving::SFreeBlock
-opinion.lst:diagnosis:opinion::Lookup2 
+opinion.lst:diagnosis:opinion::Lookup2

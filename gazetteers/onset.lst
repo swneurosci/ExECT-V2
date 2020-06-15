@@ -1,5 +1,4 @@
 started:type=began
-started in:type=began
 developed:type=began
 occured:type=began
 appeared:type=began
@@ -45,6 +44,7 @@ referring:type=considering
 well apart from:type=experiencing
 until he had:type=suffered
 until she had:type=suffered
+did get:type=suffered
 is having:type=experiencing
 symptoms are:type=experiencing
 

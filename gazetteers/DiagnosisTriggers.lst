@@ -20,3 +20,4 @@ possibility of:type=opinion
 symptoms are suggestive of:type=opinion
 my impression is:type=opinion
 we are dealing with:type=diagnosis
+Seizure type:type=seizureType
