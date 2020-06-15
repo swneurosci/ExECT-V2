@@ -1,5 +1,5 @@
 Phase: RemoveSeizureLookups
-Input: Lookup3 Token
+Input: Lookup3 Token Lookup2 DiagnosisTriggers
 
 Options: contral=all
 
@@ -45,7 +45,7 @@ Rule: RemoveSeizure
 Rule: RemoveLookup3Within  /*when disease is the same as title such as Ms*/
 
 (
-  ({Lookup3 within {Person.rule == TitleFirstName}}):umls
+  ({Lookup3 within {Person.ruleFinal == PersonFinal}}):umls
 ):match
 -->
 :umls { 
@@ -57,6 +57,28 @@ Rule: RemoveLookup3Within  /*Removes  generic lookup3 e.g. convulsion when it is
 
 (
   ({Lookup3 within {Lookup3.minorType == OtherDisease}, Lookup3.minorType == generic}):umls
+):match
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+}
+
+
+
+Rule: RemoveLookup3Within  /*Removes  generic lookup3 when it's within health term e.g fit and well*/
+
+(
+  ({Lookup3 within {Lookup2.majorType == health_condition}, Lookup3.minorType == generic}):umls
+):match
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+}
+
+Rule: RemoveLookup3Within  /*Removes  generic lookup3 when it's within Diagnosis trigger Seizure type*/
+
+(
+  ({Lookup3 within {DiagnosisTriggers}, Lookup3.minorType == generic}):umls
 ):match
 -->
 :umls { 
