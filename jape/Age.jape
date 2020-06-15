@@ -1,7 +1,7 @@
 Phase: Age
-Input: age Numeric YearToMonths timePeriod Lookup2 Person Split timeElapsed Range Sentence YearToMonths
+Input: age Numeric YearToMonths timePeriod Lookup2 Person Split timeElapsed Range Sentence YearToMonths Token
 Options: control=appelt
-
+//Token is her to exclude picking up PostCode and other word-number combinations//
 
 
 Rule: Age1a   
@@ -81,6 +81,21 @@ Priority:60
  ):match  
  -->
 :match.Age = {rule =Age_since2, AgeUnit = "Year",
+Age =:match.Numeric.value}  
+
+
+Rule: Age_since3
+Priority:60
+
+(   
+    ({timeElapsed})?
+	{Person}
+	{Token.string == was}
+	{Numeric}
+	
+ ):match  
+ -->
+:match.Age = {rule =Age_since3, AgeUnit = "Year",
 Age =:match.Numeric.value}  
 
 
@@ -183,6 +198,7 @@ Priority: 100
 (   
 	{age}
 	{YearToMonths}	
+	({Token})?
 	{Numeric}
 	{timePeriod.time-unit == Month}
 	
