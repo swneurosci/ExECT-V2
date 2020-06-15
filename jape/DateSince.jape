@@ -14,8 +14,8 @@ Priority: 100
 	
  ):match  
  -->
-:match.DateSince = {rule =DateSince1, TimePeriod = "Year",
-NumberOfTimePeriods =:match.Numeric.value,
+:match.DateSince = {rule =DateSince1,
+DayDate = :match.PartialDate.day,
 YearDate = :match.PartialDate.year,
 MonthDate =:match.PartialDate.month}
 
