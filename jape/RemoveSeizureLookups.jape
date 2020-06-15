@@ -9,7 +9,7 @@ Options: contral=all
 Rule: RemoveSeizure
  (
      ({Lookup3.minorType == generic}):umls
-     ({Token.string == free}|{Token.string == clinic}|{Token.string == frequency}|{Token.string == control})
+     ({Token.string == free}|{Token.string == clinic}|{Token.string == control})
  
 ):matches
 -->
