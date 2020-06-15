@@ -1,5 +1,5 @@
 Phase: TimeSince
-Input: Numeric timePeriod timeElapsed age Sentence Trigger Token Range PHistBlock
+Input: Numeric timeElapsed timePeriod age Sentence Trigger Token Range
 Options: control=appelt
 
 //Age is there to stop annotating Age as time since, so is the Token//
@@ -8,8 +8,7 @@ Rule: TimeSince1
 Priority: 100
 
 (   
-	({timeElapsed.time == during}|{timeElapsed.time == since })
-    ({!age})?
+	({timeElapsed.time == during}|{timeElapsed.time == since})
 	{Numeric}
 	{timePeriod}
 	
@@ -23,7 +22,6 @@ Priority: 100
 
 (   
 	({timeElapsed.time == during}|{timeElapsed.time == since })
-    ({!age})?
 	{Range}
 	{timePeriod}
 	
@@ -50,16 +48,15 @@ Priority: 100
 :match.TimeSince = {rule =TimeSince3, TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value}
 
-/* not a safe rule*/
+
+/* not a safe rule */
 Rule: TimeSince3a
-Priority: 100
+Priority: 90
 
 (  
 	
 	{Numeric.majorType != frequency}
     ({Token.string =~ month}|{Token.string =~ week}|{Token.string =~ year}|{Token.string =~ week})
-	
-	
 	
  ):match  
  -->

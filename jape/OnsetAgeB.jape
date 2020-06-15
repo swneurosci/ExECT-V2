@@ -1,38 +1,19 @@
 Phase: Onset
-Input: Lookup Person Lookup2 Sentence Age 
+Input: Lookup Person Lookup2 Sentence Age Pronouns
 
 Options: control=appelt
 
-
-Rule: onsetAgeB1
+ Rule: onsetAgeB2  //2nd type of seizure mentioned after the  age of onset was associeted with another seizure in OnsetAge//
 Priority: 100
 
 (   
 	{Person}
-	({Lookup.minorType == Disease ,Lookup.Experiencer == Patient , Lookup.Negation == Affirmed}):item
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms , Lookup2.type == began}
-	{Age}
-		
- ):match  
- -->
-:item.Onset = {rule = onsetAgeB1, OnsetType = "age_episodes_started", 
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
-Certainty = :match.Lookup.Certainty,
-Age = :match.Age.Age,
-AgeUnit = :match.Age.AgeUnit,
-AgeLower = :match.Age.AgeLower,
-AgeUpper =:match.Age.AgeUpper}
- 
-
- Rule: onsetAgeB2
-Priority: 100
-
-(   
-	{Person}
-	({Lookup.minorType == Disease ,Lookup.Experiencer == Patient , Lookup.Negation == Affirmed}):item
+	({Lookup})
 	{Lookup2.language == onset}
 	{Age}
+	({Lookup.minorType == Disease ,Lookup.Experiencer == Patient , Lookup.Negation == Affirmed}):item
+	
+	
 		
  ):match  
  -->
@@ -45,25 +26,6 @@ AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
 AgeUpper =:match.Age.AgeUpper}
  
- Rule: onsetAgeB3
-Priority: 100
-
-(   
-	{Person}
-	({Lookup.minorType == Disease ,Lookup.Experiencer == Patient , Lookup.Negation == Affirmed }):item
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms , Lookup2.type == began}
-	{Age}
-		
- ):match  
- -->
-:item.Onset = {rule = onsetAgeB3, OnsetType = "age_episodes_started", 
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
-Certainty = :match.Lookup.Certainty,
-Age = :match.Age.Age,
-AgeUnit = :match.Age.AgeUnit,
-AgeLower = :match.Age.AgeLower,
-AgeUpper =:match.Age.AgeUpper}
 
 Rule: onsetAgeB4  /*2nd type of seizures with one age of onset in a sentence, 
 This rule was abased on a sentence that needed experience reversal*/
@@ -86,3 +48,28 @@ Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
 AgeUpper =:match.Age.AgeUpper}	
+
+
+/*As above: one age, second type of seizures*/
+
+Rule: onsetAgeB5
+Priority: 98
+
+(  
+	{Age}
+	({Lookup2})
+	{Person}
+	({Lookup2})
+	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.type != diagnosed}
+	({Lookup.majorType == umls, Lookup.Negation == Affirmed,  Lookup.Experiencer == Patient, Lookup.minorType == Disease}):item
+		
+ ):match  
+ -->
+:item.Onset= {rule = onsetAgeB5, OnsetType = "age_episodes_started", 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}

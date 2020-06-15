@@ -9,7 +9,7 @@ Priority: 100
 
 (   
 	{Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.minorType == Disease , Lookup3.Experiencer == Patient}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed, Lookup.minorType == Disease , Lookup.Experiencer == Patient}):item
     {Split}
     ({Split})?
     {Person}
@@ -21,18 +21,20 @@ Priority: 100
  ):match  
  -->
 :item.Onset = {rule = OnsetDateB1, OnsetType = "date_of_onset", 
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, Certainty = :item.Lookup3.Certainty,
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, Certainty = :item.Lookup3.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
 
+/* concept of interest is in a previous statement: ...for focal seizures. She started
+ having these episodes in September 2010 - so it links focal seizures to 'these episodes' and the date*/
 Rule: OnsetDateB2
 Priority: 100
 
 (   
 	
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.minorType == Disease , Lookup3.Experiencer == Patient}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed, Lookup.minorType == Disease , Lookup.Experiencer == Patient}):item
     {Split}
     ({Split})?
     ({Split})?
@@ -44,13 +46,11 @@ Priority: 100
  ):match  
  -->
 :item.Onset = {rule = OnsetDateB2, OnsetType = "date_of_onset", 
-PREF = :item.Diagnosis.PREF, CUI = :item.Diagnosis.CUI, 
-Certainty = :item.Lookup3.Certainty,
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, 
+Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
-
-
 
 
 /*  As in: ...GTCS. The first one was in 2013...*/
@@ -68,8 +68,8 @@ Priority: 100
  ):match  
  -->
 :item.Onset = {rule = OnsetDateB4, OnsetType = "date_of_onset", 
-PREF = :item.Looup3.PREF, CUI = :item.Lookup3.CUI, STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality,
+PREF = :item.Looup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup3.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality,
 Certainty = :item.Lookup3.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,

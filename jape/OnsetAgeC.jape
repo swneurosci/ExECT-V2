@@ -1,8 +1,7 @@
 Phase: Onset
-Input: Lookup  Pronouns Lookup2 Sentence Age 
+Input: Lookup Pronouns Lookup2 Sentence Age 
 
 Options: control=appelt
-
 
 Rule: onsetAgeC1
 Priority: 100

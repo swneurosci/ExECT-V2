@@ -1,5 +1,5 @@
 Phase: AgeDiagnosed
-Input: Lookup Person Lookup2 Sentence Numeric timePeriod History DiagnosisTriggers
+Input: Lookup Person Lookup2 Sentence Age DiagnosisTriggers 
 
 
   /*includes AgeDiagnosedRange*/
@@ -17,19 +17,18 @@ Priority: 100
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,Lookup.Experiencer == Patient }):item
 	({Person})?
 	({Lookup2.minorType !=date})?
-	({History})?
-	{Numeric}
-	
-	
+	{Age}
+		
  ):match  
  -->
 :item.WhenDiagnosed = {rule = AgeDiagnosed1, OnsetType = "Age_Diagnosed", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
-AgeUnit = "Year",
-Age = :match.Numeric.value}
-
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}
 
 
 Rule: AgeDiagnosed2
@@ -38,10 +37,9 @@ Priority: 99
 (   
 	{Person}
     {Lookup2.majorType == historic}
-    {Lookup2.majorType == historic, Lookup2.language == onset}
+    {DiagnosisTriggers}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient }):item
-	{Person}
-	({Lookup2.minorType == time, Lookup2.majorType == person}):a
+	{Age}
 
 	
  ):match  
@@ -50,10 +48,10 @@ Priority: 99
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
-AgeUnit = :a.Lookup2.timeUnit,
-AgeLower =:a.Lookup2.lowerAge,
-AgeUpper = :a.Lookup2.upperAge,
-Age = ""}
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}
 
 Rule: AgeDiagnosed2b
 Priority: 99
@@ -63,8 +61,7 @@ Priority: 99
     {Lookup2.majorType == historic}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient }):item
     {DiagnosisTriggers}
-	({Person})?
-	{Lookup2.minorType == time}
+	{Age}
 	
  ):match  
  -->
@@ -72,20 +69,19 @@ Priority: 99
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
-AgeUnit = :match.Lookup2.timeUnit,
-AgeLower =:match.Lookup2.lowerAge,
-AgeUpper = :match.Lookup2.upperAge,
-Age = ""}
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}
 
-Rule: AgeDiagnosed3
+Rule: AgeDiagnosed3		//Epilepsy - diagnosed age 1//
 Priority: 99
 
 (   
 
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient }):item
-    {Lookup2.majorType == historic , Lookup2.type == diagnosed}
-    {History.majorType == person}
-	{Numeric}
+    {DiagnosisTriggers}
+	{Age}
 	
  ):match  
  -->
@@ -93,31 +89,33 @@ Priority: 99
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
-AgeUnit ="Year",
-Age =  :match.Numeric.value}
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}
 
+//A the age of 10 she was diagnosed with epilepsy//
 Rule: AgeDiagnosed4
 Priority: 99
 
 (   
-	{History.majorType == person}
-	{Numeric}
+	({Lookup2.type != began})
+	{Age}
 	({Person})?
 	({Lookup2.majorType == historic})?
-	{Lookup2.majorType == historic , Lookup2.type == diagnosed}
+	{DiagnosisTriggers}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient }):item
-    
-    
-	
-	
+    	
  ):match  
  -->
 :item.WhenDiagnosed = {rule = AgeDiagnosed4, OnsetType = "Age_Diagnosed", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
-AgeUnit ="Year",
-Age =  :match.Numeric.value}
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}
 
 
 

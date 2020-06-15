@@ -3,19 +3,16 @@ Multiphase:Onset
 Phases:
 
 
-OnsetAgeRange
 TimeSinceOnset
-TimeSinceOnsetA
 TimeSinceOnsetB
-TimeSinceOnsetC
 TimeSinceOnsetRange
-OnsetAgeA
+//OnsetAgeA//
 OnsetAge
 OnsetAgeB
 //OnsetAgeC//
 OnsetDate
 OnsetDateB
-OnsetDateC
+//OnsetDateC//
 //OnsetDateD//
 AgeDiagnosed
 DateDiagnosed

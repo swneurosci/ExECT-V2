@@ -1,6 +1,6 @@
 Phase: TimeSinceOnset
-Input: Lookup3 Lookup Person Sentence TimeSince Lookup2 Split PHistBlock DiagnosisTriggers listPoint
-
+Input: Lookup3 Lookup Person Sentence TimeSince Lookup2 Split DiagnosisTriggers listPoint PHistBlock Pronouns
+ /*PHistBlock should stop the rules picking up frequency e.g. once in 3 month - in 3 months is TimeSince */
 
 Options: control=appelt		
 
@@ -10,7 +10,7 @@ Priority: 100
 
 (   
     {Person}
-	{Lookup2.language  == onset , Lookup2.type == began}
+	{Lookup2.language  == onset, Lookup2.type == began}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.minorType == Disease}):item
 	{Person}
 	({Lookup2})?
@@ -26,13 +26,13 @@ Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
-
+ /* as in: She has had epilepsy for the last 12 years*/
 Rule: TimeSinceOnset2
 Priority: 99
 
 (   
     {Person}
-	{Lookup2.language == onset}
+	{Lookup2.language == onset,Lookup2.type != diagnosed }
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.minorType == Disease}):item
 	{TimeSince}
 	
@@ -51,11 +51,10 @@ Priority: 99
 (   
     {Person}
 	({Lookup2.type == historic})?
-	({Lookup2.language == onset})
+	({Lookup2.language == onset,Lookup2.type != diagnosed })
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
 	{TimeSince}
-	
-	
+		
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset3 , OnsetType = "time_since_episodes_started",
@@ -65,7 +64,6 @@ Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
-
 Rule: TimeSinceOnset4
 Priority: 99
 
@@ -74,10 +72,9 @@ Priority: 99
     ({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
     {Split}
     {Person}
-    {Lookup2.minorType == symptoms}
+    {Lookup2.minorType == symptoms,Lookup2.type != diagnosed }
 	{TimeSince}
-	
-	
+		
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset4, OnsetType = "time_since_episodes_started", 
@@ -113,8 +110,7 @@ Priority: 98
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
 	{Lookup2.language  == onset , Lookup2.type == began}
 	{TimeSince}
-	
-	
+		
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset6, OnsetType = "time_since_episodes_started", 
@@ -149,7 +145,7 @@ Priority: 98
 (   
 	{Lookup2.majorType == person}
 	{TimeSince}
-	{Lookup2.language == onset}
+	{Lookup2.language == onset, Lookup2.type != diagnosed}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item	
 	
  ):match  
@@ -162,21 +158,19 @@ TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
 
-/*She(?) had Lookup3 as a child and for the last x years had Lookup (epilepsy or specific seizures)*/
+/*She(?) had Lookup3 (excluding seizure free - with CUI) as a child and for the last x years had Lookup (epilepsy or specific seizures)*/
 Rule: TimeSinceOnset9
 Priority: 98
 
 (   
 	({Person})?
-	{Lookup2.majorType == historic}
-	{Lookup3}
+	{Lookup2.majorType == historic, Lookup2.type != diagnosed }
+	{Lookup3.CUI != C1299590}
 	({Lookup2})?
 	{TimeSince}
 	({Lookup2.language == onset})
 	({Lookup.minorType == Disease, Lookup.majorType == umls}):item
-    
-    
-		
+    		
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset9, OnsetType = "time_since_episodes_started", 
@@ -186,7 +180,7 @@ Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
-
+//Is this rule sefe ?//
 Rule: TimeSinceOnset10
 Priority: 100
 
@@ -204,7 +198,7 @@ TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
 /*Diagnosis 1. Epilepsy - 40 year history*/
-Rule: TimeSinceOnset10
+Rule: TimeSinceOnset11
 Priority: 100
 
 (   
@@ -216,10 +210,50 @@ Priority: 100
 	
  ):match  
  -->
-:item.Onset = {rule = TimeSinceOnset3 , OnsetType = "time_since_episodes_started",
+:item.Onset = {rule = TimeSinceOnset11 , OnsetType = "time_since_episodes_started",
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, 
 STY = :item.Lookup.STY, 
 Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}	
     
+Rule: TimeSinceOnset12 //...who has been suffering from epilepsy for the last 5 years//
+Priority: 100
+
+(   {Pronouns.type == relative}
+    {Lookup2} 
+    {Lookup2.language == onset , Lookup2.minorType == symptoms , Lookup2.type == experiencing}
+    ({Lookup.PREF != seizures, Lookup.majorType == umls , Lookup.Negation == Affirmed }):item
+    {TimeSince}
+			
+ ):match  
+ -->
+:item.Onset = {rule = TimeSinceOnset12, OnsetType = "time_since_episodes_started", 
+PREF =:item.Lookup.PREF, CUI = :item.Lookup.CUI, 
+Certainty = :item.Lookup.Certainty,
+TimePeriod = :match.TimeSince.TimePeriod,
+NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
+
+
+/* she was having focal seizures and developed GTCS for the last 5 years*/ 
+Rule: TimeSinceOnset13
+Priority: 100
+
+(   
+    {Person}
+	{Lookup2}
+    ({Lookup})?
+	{Lookup2.language  == onset , Lookup2.type == began}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.minorType == Disease}):item
+	{TimeSince}
+	
+
+ ):match  
+ -->
+
+:item.Onset = {rule = TimeSinceOnset13 , OnsetType = "time_since_episodes_started",
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
+TimePeriod = :match.TimeSince.TimePeriod,
+NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}

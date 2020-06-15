@@ -30,6 +30,7 @@ Rule: onsetAgeRange3
 Priority: 98
 
 (   
+
 	{Person}
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
 	({Lookup.majorType == umls ,Lookup.Experiencer == Patient , Lookup.Negation == Affirmed}):item

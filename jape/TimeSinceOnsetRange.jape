@@ -1,15 +1,15 @@
 Phase: TimeSinceOnsetRange
-Input: Lookup3 Person timePeriod timeElapsed Lookup2 Split MedCause Range Sentence
+Input: Lookup Person timePeriod timeElapsed Lookup2 Split MedCause Range Sentence
 
 Options: control=appelt
-
+ /*a bit complex rules that spill over to other sentences  - may need to be revised*/
 
 Rule: seizuresForRange1
 Priority: 100
 
 (   
     
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient , Lookup3.minorType == Disease }):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed, Lookup.Experiencer == Patient , Lookup.minorType == Disease }):item
 	{Split}
 	{Person}
     ({Person})?
@@ -20,9 +20,9 @@ Priority: 100
  ):match  
  -->
 :item.Onset = {rule = seizuresForRange1 , OnsetType = "time_since_episodes_started",
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
-Certainty = :item.Lookup3.Certainty,
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods = "",
 LowerNumberOfTimePeriods =:match.NumberRange.N1,
@@ -32,20 +32,20 @@ UpperNumberOfTimePeriods =:match.NumberRange.N2}
 Rule: seizuresForRange2
 Priority: 99
 
-(   
+(  
 
 	{Person}
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient , Lookup3.minorType == Disease }):item
-	{Lookup2.language == onset}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed, Lookup.Experiencer == Patient , Lookup.minorType == Disease }):item
+	{Lookup2.language == onset, Lookup2.type != diagnosed }
 	{Range}
     {timePeriod}
     {timeElapsed.time == since}
  ):match  
  -->
 :item.Onset = {rule = seizuresForRange2 , OnsetType = "time_since_episodes_started",
-PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
-STY = :item.Lookup3.STY, 
-Certainty = :item.Lookup3.Certainty,
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+STY = :item.Lookup.STY, 
+Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods = "",
 LowerNumberOfTimePeriods =:match.NumberRange.N1,
