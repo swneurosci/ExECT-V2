@@ -1,10 +1,13 @@
-import groovy.json.JsonOutput
 new File(scriptParams.outputFile).withWriterAppend{ out ->
-  doc.getAnnotations("Bio").get("PrescriptionCSV").each{
+  doc.getAnnotations("Output").get("Prescription").each{
     anno ->
-      def f = anno.getFeatures()
-      def (A,B,C) =  doc.getFeatures().get("gate.SourceURL").split("_|\\.")
-      String[] id = C.split("/")
-      out.writeLine(/"${id[-1]}","${f.get('String1')}","CUI","${f.get('CUI')}","DrugDose","${f.get('DrugDose')}","DoseUnit","${f.get('DoseUnit')}","Frequency","${f.get('Frequency')}",/)
+       def f = anno.getFeatures()
+      String[] id =  doc.getFeatures().get("gate.SourceURL").split("/")
+      out.writeLine(/${id[-1]},${anno.start()},${anno.end()},/+
+      /${f.get('CUI')},"${f.get('DrugName')}",${f.get('DrugDose')},${f.get('DoseUnit')},/+
+      /${f.get('Frequency')},"${f.get('string')}",${f.get('rule')}/)
   }
 }
+
+//Only kept "" for phrases which are likly to contain "," ; if "" are used for other features then the output is given in "" too
+ 
