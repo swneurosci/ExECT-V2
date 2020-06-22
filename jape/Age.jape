@@ -162,7 +162,7 @@ Priority: 100
 Priority: 90
 
 (   
-	({timeElapsed})?
+	({Token.string == a})
 	{Lookup2.minorType == time}	
 	
  ):match  
