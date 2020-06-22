@@ -139,6 +139,9 @@ Priority: 90
 :match.Age = {rule =Age_Range1b, AgeUpper =:match.Numeric.value, AgeLower =:match.Lookup2.lowerAge,
 AgeUnit = "Year"}  
 
+
+//when a numeric age is followed by a less precise lookup2 age group i.e. 12 year old eenager
+//the numeric value of age should be picked up
  Rule: Age_Range2a
 Priority: 100
 
