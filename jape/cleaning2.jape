@@ -85,6 +85,17 @@ Rule: cleanLookup2
   inputAS.removeAll(umlsAnnots);
 }
 
+//removes things like age group in Lookup2 if the term is contained in a health term, i.e. Child Health
+Rule: cleanLookup2
+
+(
+   {Lookup2.minorType == time, Lookup2 within {Lookup2.minorType == health_term}}
+):umls
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+}
+
 //This rule removes generic seizures in Lookup3 when they are part of epileptic seizure in lookup//
 //e.g., temporal onset lobe seizures - so seizures on theinr own will not be annotated in Lookup3.minorType == generic//
 
