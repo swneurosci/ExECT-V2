@@ -397,3 +397,5 @@ parietal lobe onse seizures	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	ST
 parietal lobe onset seizures	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
 occipital lobe onset seizures	CUI=C0393691	PREF=Occipital Lobe Epilepsy	TUI=T047	STY=Disease or Syndrome
 occipital lobe onset seizure	CUI=C0393691	PREF=Occipital Lobe Epilepsy	TUI=T047	STY=Disease or Syndrome
+absence type seizures	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
+absence type seizure	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
