@@ -4,6 +4,8 @@ Options: control=appelt
 //Token is her to exclude picking up PostCode and other word-number combinations//
 
 
+
+
 Rule: Age1a   
 Priority: 80
 
@@ -137,8 +139,26 @@ Priority: 90
 :match.Age = {rule =Age_Range1b, AgeUpper =:match.Numeric.value, AgeLower =:match.Lookup2.lowerAge,
 AgeUnit = "Year"}  
 
+
+//when a numeric age is followed by a less precise lookup2 age group i.e. 12 year old eenager
+//the numeric value of age should be picked up
+ Rule: Age_Range2a
+Priority: 100
+
+(   
+	({timeElapsed})?
+	({Numeric}
+	{timePeriod}
+	{age}
+	{Lookup2.minorType == time}):item
+	
+ ):match  
+ -->
+:match.Age = {rule =Age_Range2a,Age =:item.Numeric.value}  
+
+
 /*lookup2.minorType == time captures age groups e.g. teenager , timeElapsed is not always used in such phrases*/
- Rule: Age_Range2
+ Rule: Age_Range2b
 Priority: 90
 
 (   
@@ -147,7 +167,7 @@ Priority: 90
 	
  ):match  
  -->
-:match.Age = {rule =Age_Range2, AgeLower =:match.Lookup2.lowerAge,
+:match.Age = {rule =Age_Range2b, AgeLower =:match.Lookup2.lowerAge,
 AgeUpper = :match.Lookup2.upperAge, AgeUnit = :match.Lookup2.timeUnit}  
 
 Rule: Age_Range3
