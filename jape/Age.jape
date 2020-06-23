@@ -158,6 +158,8 @@ Priority: 100
 
 
 /*lookup2.minorType == time captures age groups e.g. teenager , timeElapsed is not always used in such phrases*/
+
+/* THIS RULE PICKS UP TOO MUCH - NEEDS TO BE MORE SPECIFIC */
  Rule: Age_Range2b
 Priority: 90
 
