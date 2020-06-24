@@ -2,7 +2,7 @@ Phase: SeizureChange
 Input: Lookup3 Split SeizureFree SeizureFrequency Frequency timeElapsed NumberRange timePeriods PartialDate Coincide PointInTime Drug
 Options: control=appelt 
 
-
+//ADD TIME SINCE OR TIME DURING TO DATE RULES!!
 /*
 * For the last X time Period
 */
@@ -134,6 +134,22 @@ Priority: 100
 --> 
 :match.SeizureChange = { rule = "SeizureChange2b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
+
+/* She had frequent seizures in the month of August */
+
+Rule: SeizureChange2c
+Priority: 100 
+( 
+    ({Frequency})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({timeElapsed.time == during})
+    ({timePeriods})?
+    ({PartialDate})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange2c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, TimeSince_or_TimeOfEvent = "During" } 
+
 
 
 /* Point in Time seizure change */

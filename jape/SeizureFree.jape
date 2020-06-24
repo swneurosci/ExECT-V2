@@ -202,7 +202,7 @@ Priority: 100
 ):s 
 --> 
 :match.SeizureFrequencyDriving = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1b7, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI,  
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PointInTime.Since, 
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year PointInTime = :match.PointInTime.Since, 
 TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, NumberOfSeizures = "0" , Certainty = "5", Negation = :match.Lookup3.Negation
 } 
  
@@ -570,9 +570,9 @@ DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate
 
 
 
-
+/*Should now be picked up in Seiz-freq2 (no seizure since)*/
 /*he has had No seizure since last april */
-
+/*
 Rule: HseizureFree4a
 Priority: 99
 (
@@ -586,6 +586,7 @@ Priority: 99
 DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month
 //, PointInTime = "Last_Year"
 }
+*/
 
 /* he has been SeizureFree since YEAR */
 
@@ -621,7 +622,7 @@ Rule: HseizureFree4c
 Priority: 99
 (
     ({Lookup3.Negation == "Negated", Lookup3.Temporality != "hypothetical", !Lookup3.CAT == "Slang"})
-    ({timeElapsed.time == "since"})
+    ({timeElapsed.time ==~ "since"})
     ({PointInTime})
 ):match
 -->
@@ -634,10 +635,23 @@ Rule: HseizureFree4d
 Priority: 99
 (
     ({Lookup3.Negation == "Negated", Lookup3.Temporality != "hypothetical", !Lookup3.CAT == "Slang"})
-    ({PointInTime contains Token.string == "since"})
+    ({PointInTime contains Token.string ==~ "[Ss]ince"})
 ):match
 -->
 :match.SeizureFrequencyDriving = { rule = HseizureFree4d, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negated = "Affirmed",
+PointInTime = :match.PointInTime.Since}
+
+/* since starting DRUG she has been seizure Free */
+
+Rule: HseizureFree4e
+Priority: 99
+(
+    ({PointInTime contains Token.string ==~ "[Ss]ince"})
+    ({Person})?
+    ({Lookup3.Negation == "Affirmed", Lookup3.Temporality != "hypothetical", !Lookup3.CAT == "Slang", Lookup3.CUI == "C1299590"})
+):match
+-->
+:match.SeizureFrequencyDriving = { rule = HseizureFree4e, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = :match.Lookup3.Certainty, Negated = "Affirmed",
 PointInTime = :match.PointInTime.Since}
 
 
