@@ -10,4 +10,5 @@ Rule: PrescriptionFilter2
 :pres2.PrescriptionNot = { rule3 = PrescriptionNotFilter2,
 rule2 = :pres2.Prescription4.rule2,
 rule = :pres2.Prescription4.rule,
-string = :match@string}
+string = :match@string,
+isPrescription = "0"}
