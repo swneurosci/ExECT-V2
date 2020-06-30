@@ -49,15 +49,15 @@ morning:frequency=1:time-unit=day:when=morning
 afternoon:frequency=1:time-unit=day:when=day
 evening:frequency=1:time-unit=day:when=night
 night:frequency=1:time-unit=day:when=night
-per month:time-unit=month:interval=1
+per month:time-unit=month:interval=1:frequency=1
 per day:time-unit=day:interval=1:frequency=1
-a day:time-unit=day
-a month:time-unit=month:interval=1
+a day:time-unit=day:frequency=1
+a month:time-unit=month:interval=1:frequency=1
 once a day:frequency=1:time-unit=day:interval=1:when=day
 in a single week:frequency=1:time-unit=week:interval=1
-a week:time-unit=week:interval=1
-a single day:time-unit=day:interval=1
-a single month:time-unit=month:interval=1
+a week:time-unit=week:interval=1:frequency=1
+a single day:time-unit=day:interval=1:frequency=1
+a single month:time-unit=month:interval=1:frequency=1
 PM:frequency=1:time-unit=day:interval=1:when=night
 AM:frequency=1:time-unit=day:when=morning
 Pm:frequency=1:time-unit=day:interval=1:when=night
@@ -67,10 +67,11 @@ day:frequency=1:time-unit=day:interval=1
 twice a day:frequency=2:time-unit=day
 once-a-day:frequency=1:time-unit=day:interval=1:when=day
 twice daily:frequency=2:time-unit=day
-in the morning and lunchtime:frequency=2
-in the morning and afternoon:frequency=2
-morning and afternoon:frequency=2
-morning and lunchtime:frequency=2
+in the morning and lunchtime:frequency=2:time-unit=day
+in the morning and afternoon:frequency=2:time-unit=day
+morning and afternoon:frequency=2:time-unit=day
+morning and lunchtime:frequency=2:time-unit=day
 bd around menstruation:frequency=As_Required
-alternate days:frequency=0.5
-alternate nights:frequency=0.5:=
+alternate days:frequency=0.5:time-unit=day
+alternate nights:frequency=0.5:time-unit=day
+monthly:frequency=1:time-unit=month
