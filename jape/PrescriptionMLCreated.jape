@@ -19,4 +19,5 @@ Frequency = :pres2.Prescription4.Frequency,
 time-unit = :pres2.Prescription4.time-unit, 
 dose-interval = :pres2.Prescription4.dose-interval, 
 Context = :match.Prescription4.Context,
-string = :match@string}
+string = :match@string,
+isPrescription = "1"}

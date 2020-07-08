@@ -23,5 +23,6 @@ Frequency = :match.PrescriptionML.Frequency,
 time-unit = :match.PrescriptionML.time-unit, 
 dose-interval = :match.PrescriptionML.dose-interval, 
 Context = :match.PrescriptionML.Context,
-string = :match1@string}
+string = :match1@string,
+isPrescription = :match.PrescriptionML.isPrescription}
 
