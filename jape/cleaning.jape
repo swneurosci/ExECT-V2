@@ -1,7 +1,7 @@
 Imports: {import static gate.Utils.*; }
 
 Phase: Cleaning
-Input:Lookup Lookup2 Address Location Token Person NounChunk
+Input:Lookup Lookup2 Address Location Token Person NounChunk Sentence
 Options: control=appelt
 
 
