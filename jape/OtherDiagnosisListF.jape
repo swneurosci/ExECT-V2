@@ -10,7 +10,7 @@ Priority: 100
 
 (   
 ({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
-	{Conj.type == list}
+	({Conj.type == list})
 	({OtherDiag}):item
     
  ):match  
@@ -33,7 +33,7 @@ Priority: 99
     
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListF1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+:item.PatientHistory = {rule = OtherDiagListF2, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
@@ -53,7 +53,7 @@ Priority: 98
     
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListF1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+:item.PatientHistory = {rule = OtherDiagListF3, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
@@ -73,7 +73,7 @@ Priority: 97
 	({OtherDiag}):item
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListF1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+:item.PatientHistory = {rule = OtherDiagListF4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}

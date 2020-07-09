@@ -1,0 +1,35 @@
+Phase: OtherDiagnosis
+Input:   Sentence  OtherDiag Investigation
+
+/* Other diagnosis contained in Investigation results in single sentences, Can overlap with other PH rules so will need to check*/
+
+Options: control=brill
+
+Rule: OtherDiagInv1
+
+
+(   
+    {Investigation.Investigation != EEG}
+	({OtherDiag}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagInv1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}
+
+Rule: OtherDiagInv1
+
+
+(   
+    {Investigation.Investigation != EEG}
+    ({OtherDiag})
+	({OtherDiag}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagInv1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}

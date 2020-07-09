@@ -6,16 +6,6 @@ Options: control=brill
 
  
 
-Rule: LookupWithin
-
-(
-  ({Lookup3 within {Lookup3.CUI != "C0036572"}, Lookup3.CAT == "Seizures"}):a
-):match
--->
-:match {
-  getOnlyAnn(matchAnnots).getFeatures().put("rule", "LookupWithin");
-}
-
 /*this removes lookup within rule for myoclonic jerks, as lookupWithin is excluded from OtherDiag rules*/
 
 Rule: NotLookupWithin

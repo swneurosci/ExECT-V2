@@ -1,5 +1,5 @@
 Phase: OtherDiagnosis
-Input:  DiagnosisTriggers Sentence  OtherDiag listPoint Lookup2 Context  TimeSince PHistBlock
+Input:  DiagnosisTriggers Sentence OtherDiag listPoint Lookup2 
 
 /* These are to capture OtherDiag when it is given in a sentence within the body of the letter, 1st in a sentence if ther is more than one, 
 listPoint should prevent these rules from capturing diagnosis within lists at top of letter*/
@@ -11,41 +11,45 @@ Priority: 100
 
 (   
 	
-	{DiagnosisTriggers.majorType == diagnosis, DiagnosisTriggers.type == diagnosis }
-	({OtherDiag}):item
-	{Lookup2.type != past}
+	{DiagnosisTriggers}
+	({Lookup2})?
+	({Lookup2})?
+	({OtherDiag.rule == OtherDiagDate}):item
+	
     
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagnosis1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty,
+DayDate = :item.OtherDiag.DayDate,
+MonthDate =:match.OtherDiag.MonthDate,
+YearDate = :match.OtherDiag.YearDate}
 
-/*when diagnosis is a list without listPoints going over 2 lines with a split* !TimeSince is there to stop this rule from picking up items in PatientHistory with time period/
 Rule: OtherDiagnosis2
-Priority: 99
+Priority: 100
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis, DiagnosisTriggers.type == diagnosis}
+	{Lookup2.minorType == probability}
+	{DiagnosisTriggers}
 	({Lookup2})?
-	({Lookup2.minorType == probability})?
 	({OtherDiag}):item
-    {!TimeSince}
+    
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagnosis2, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
-*/
+
 Rule: OtherDiagnosis3  /*when the top of letter diagnosis has no listpoints and just one item*/
 Priority: 99
 
 (   
 	{!Lookup2}
 	{DiagnosisTriggers.majorType == diagnosis, DiagnosisTriggers.type == diagnosis}
-	({Lookup2.minorType == probability})?
+	({Lookup2.minorType == probability})
 	({OtherDiag}):item
  ):match  
  -->
@@ -53,7 +57,7 @@ Priority: 99
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
-
+/*
 Rule: OtherDiagnosis4
 Priority: 99
 
@@ -66,7 +70,7 @@ Priority: 99
 :item.PatientHistory = {rule = OtherDiagnosis4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty}*/
 
 /*triggered by opinion only,   " the impression is thet the ongoing episodes are..."*/
 
@@ -82,14 +86,14 @@ Priority: 99
 :item.PatientHistory = {rule = OtherDiagnosis5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}*/
+Certainty = :item.OtherDiag.Certainty}*/ 
 
 
 Rule: OtherDiagnosis6  /*as in non-epileptic attacks would seem a most likely explanation*/
 Priority: 90
 
 (  
-	
+	({!Lookup2})
  	({OtherDiag}):item
 	({Lookup2.minorType == opinion})
 	({Lookup2.minorType == opinion})
@@ -105,3 +109,17 @@ Certainty = :item.OtherDiag.Certainty}
 
 
 
+Rule: OtherDiagnosis7 //with an opinion//
+Priority: 100
+
+(   
+	{Lookup2.minorType == opinion}
+	{DiagnosisTriggers}
+	({OtherDiag.rule == OtherDiagPhrase}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagnosis7, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}

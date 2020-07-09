@@ -53,7 +53,8 @@ Rule: RemoveLookup3Within  /*when disease is the same as title such as Ms*/
 }
 
 
-Rule: RemoveLookup3Within  /*Removes  generic lookup3 e.g. convulsion when it is within Lookup3 e.g.Febrile Seizure*/
+Rule: RemoveLookup3Within  /*Removes  generic lookup3 e.g. convulsion when it is within Lookup3 e.g.Febrile Convulsion*/
+
 
 (
   ({Lookup3 within {Lookup3.minorType == OtherDisease}, Lookup3.minorType == generic}):umls
@@ -61,7 +62,7 @@ Rule: RemoveLookup3Within  /*Removes  generic lookup3 e.g. convulsion when it is
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+} 
 
 
 
@@ -75,7 +76,7 @@ Rule: RemoveLookup3Within  /*Removes  generic lookup3 when it's within health te
   inputAS.removeAll(umlsAnnots);
 }
 
-Rule: RemoveLookup3Within  /*Removes  generic lookup3 when it's within Diagnosis trigger Seizure type*/
+Rule: RemoveLookup3Within  /*Removes generic lookup3 when it's within Diagnosis trigger Seizure type*/
 
 (
   ({Lookup3 within {DiagnosisTriggers}, Lookup3.minorType == generic}):umls
@@ -84,3 +85,4 @@ Rule: RemoveLookup3Within  /*Removes  generic lookup3 when it's within Diagnosis
 :umls { 
   inputAS.removeAll(umlsAnnots);
 }
+

@@ -1,10 +1,12 @@
 Phase: DateSince
-Input: Numeric timePeriod timeElapsed Sentence  age Conj  PartialDate Lookup2 Person Split Lookup3 
+Input: Numeric timePeriod timeElapsed Sentence  age Conj  PartialDate Lookup2 Person Split Lookup3  DateBio
 Options: control=appelt
 
 // Lookup2, Person are there to stop annotating the whole sentence,  to prevent picking up Age as date, so is the Token//
 
-Rule: DateSince1
+
+
+Rule: DateSince1a
 Priority: 100
 
 (   
@@ -14,10 +16,10 @@ Priority: 100
 	
  ):match  
  -->
-:match.DateSince = {rule =DateSince1,
+:match.DateSince = {rule =DateSince1a,
 DayDate = :match.PartialDate.day,
-YearDate = :match.PartialDate.year,
-MonthDate =:match.PartialDate.month}
+MonthDate =:match.PartialDate.month,
+YearDate = :match.DateBio.YearDate}
 
 
 Rule: DateSince2

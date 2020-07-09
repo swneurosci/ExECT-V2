@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisListA
-Input: DiagnosisTriggers OtherDiag listSent listPoint DateSince Range MedicalHistory PHistBlock endList
+Input: DiagnosisTriggers OtherDiag listSent listPoint DateSince Range MedicalHistory endList
 
 /*these capture the 1st item of other diagnosis (OtherDIag) in the list of diagnosis at the top of the letter
 OtherDiag may already contain  age/date/time ref if not this will be picked up from a separate phrase*/

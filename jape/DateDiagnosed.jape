@@ -21,9 +21,9 @@ Priority: 100
  -->
 :item.WhenDiagnosed = {rule = DateDiagnosed1, OnsetType = "Year_Diagnosed", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 Certainty = :item.Lookup.Certainty,
-YearDate = :match.DateSnce.YearDate,
+YearDate = :match.DateSince.YearDate,
 MonthDate = :match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
 
@@ -43,7 +43,7 @@ Priority: 100
  -->
 :item.WhenDiagnosed = {rule = DateDiagnosed2, OnsetType = "When_Diagnosed", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 Certainty = :item.Lookup.Certainty,
 PointInTime = :match.PointInTime.Since,
 AgeUnit ="Year"}
@@ -62,7 +62,7 @@ Priority: 100
  -->
 :item.WhenDiagnosed = {rule = DateDiagnosed3, OnsetType = "When_Diagnosed", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 Certainty = :item.Lookup.Certainty,
 PointInTime = :match.PointInTime.Since}
 
@@ -83,9 +83,9 @@ Priority: 100
  -->
 :item.WhenDiagnosed = {rule = DateDiagnosed4, OnsetType = "When_Diagnosed", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 Certainty = :item.Lookup.Certainty,
-YearDate = :match.DateSnce.YearDate,
+YearDate = :match.DateSince.YearDate,
 MonthDate = :match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
 
@@ -105,7 +105,8 @@ Priority: 100
  -->
 :item.WhenDiagnosed = {rule = DateDiagnosed5, OnsetType = "When_Diagnosed", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
-YearDate = :match.DateSnce.YearDate,
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty,
+YearDate = :match.DateSince.YearDate,
 MonthDate = :match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}

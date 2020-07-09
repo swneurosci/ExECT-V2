@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisB
-Input: OtherDiag Lookup3 Lookup2 Lookup Split Investigation timeElapsed timePeriod DiagnosisTriggers listPoint 
+Input: OtherDiag Lookup3 Lookup2 Lookup Split DiagnosisTriggers listPoint 
 
 /*Removed Sentence from these rules as some items are within list without listPoints, may have to
 use some other means of stopping the rules from picking up everything from the text*/
@@ -93,36 +93,21 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
 
-/*Rule: OtherDiagB6
-Priority: 100
+Rule: OtherDiagB6
+Priority: 90
 
 (   
-	({OtherDiag}):item
-	{Lookup2.minorType == opinion} 
-	{Lookup2.minorType == opinion} 
 	
+    {DiagnosisTriggers.type == opinion}
+	({OtherDiag}):item	
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagB6, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}*/
-
-Rule: OtherDiagB7
-Priority: 100
-
-(   
-	{Lookup2.minorType == probability}
-	{DiagnosisTriggers}
-	({Lookup2})?
-	({OtherDiag}):item
-    
- ):match  
- -->
-:item.PatientHistory = {rule = OtherDiagB7, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
+
+
 
 Rule: OtherDiagB8 /*2nd item in a list without any points*/
 Priority: 100

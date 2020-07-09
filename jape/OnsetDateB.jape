@@ -22,7 +22,8 @@ Priority: 100
  -->
 :item.Onset = {rule = OnsetDateB1, OnsetType = "date_of_onset", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, Certainty = :item.Lookup3.Certainty,
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
@@ -46,7 +47,7 @@ Priority: 100
  ):match  
  -->
 :item.Onset = {rule = OnsetDateB2, OnsetType = "date_of_onset", 
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, 
+PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
@@ -59,7 +60,7 @@ Priority: 100
 
 (   
 	
-	({Lookup3.majorType == umls , Lookup3.Negation == Affirmed, Lookup3.minorType == Disease , Lookup3.Experiencer == Patient}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed, Lookup.minorType == Disease , Lookup.Experiencer == Patient}):item
     {Split}
     {Lookup2.language == onset , Lookup2.type == began}
 	{Lookup2}
@@ -68,9 +69,9 @@ Priority: 100
  ):match  
  -->
 :item.Onset = {rule = OnsetDateB4, OnsetType = "date_of_onset", 
-PREF = :item.Looup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup3.Negation,
+PREF = :item.Looup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
 Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality,
-Certainty = :item.Lookup3.Certainty,
+Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}

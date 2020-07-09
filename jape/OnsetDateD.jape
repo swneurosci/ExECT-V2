@@ -18,5 +18,6 @@ Priority: 100
  -->
 :item.Onset = {rule = OnsetDateD1, OnsetType = "date_of_onset", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
+Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 STY = :item.Lookup.STY, Certainty = :item.Lookup.Certainty,
 PointInTime = :match.PointInTime.Since}

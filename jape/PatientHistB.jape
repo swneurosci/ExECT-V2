@@ -50,12 +50,13 @@ TimePeriod = :match.TimeSince.time-unit,
 NumberOfTimePeriods =:match.TimeSince.value}
 
 
-Rule: PtHistoryB3   
+Rule: PtHistoryB3   /*2nd mention of other diag in one sentence*/
 Priority: 100
 
 (  
+	{OtherDiag}
 	{Person}
-	{Lookup2.majorType == historic , Lookup2.type == past}
+	{Lookup2.language == onset}
 	({OtherDiag}):item
 	 
  ):match  
@@ -135,7 +136,7 @@ Rule: PtHistoryB7  //2nd in a list od otherdiag//
 Priority: 80
 
 (   
-	({Person})?
+	({Person})
     ({Lookup2.type == has})?
     {Lookup2.type == suffered}
     {OtherDiag}
@@ -256,7 +257,7 @@ DayDate =:match.DateBio.DayDate,
 MonthDate =:match.DateBio.MonthDate,
 YearDate =:match.DateBio.YearDate}
 
-Rule: PtHistoryB12
+/*Rule: PtHistoryB12
 Priority: 100
 
 (   
@@ -271,22 +272,7 @@ Priority: 100
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, 
-MonthDate = :match.PartialDate.month}
+MonthDate = :match.PartialDate.month}*/
 
-Rule: PtHistoryB13
-Priority: 98
 
-(   
-    ({Person})
-	({OtherDiag.rule == OtherDiagAge}):item
-		
- ):match  
- -->
-:item.PatientHistory = {rule = PtHistoryB13, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
-AgeUnit = :match.OtherDiag.AgeUnit,
-AgeLower =:match.OtherDiag.AgeLower,
-AgeUpper = :match.AtherDiag.AgeUpper}
 

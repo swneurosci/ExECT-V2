@@ -172,6 +172,20 @@ Priority: 90
 :match.Age = {rule =Age_Range2b, AgeLower =:match.Lookup2.lowerAge,
 AgeUpper = :match.Lookup2.upperAge, AgeUnit = :match.Lookup2.timeUnit}  
 
+Rule: Age_Range2c
+Priority: 90
+
+(   
+	({timeElapsed})
+	{Lookup2.minorType == time}	
+	
+ ):match  
+ -->
+:match.Age = {rule =Age_Range2c, AgeLower =:match.Lookup2.lowerAge,
+AgeUpper = :match.Lookup2.upperAge, AgeUnit = :match.Lookup2.timeUnit}  
+
+
+
 Rule: Age_Range3
 Priority: 90
 

@@ -19,7 +19,8 @@ Priority: 100
  -->
 :item.Onset= {rule = OnsetDate1, OnsetType = "date_of_onset", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup3.STY, 
+STY = :item.Lookup3.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate} 
@@ -38,7 +39,8 @@ Priority: 98
  -->
 :item.Onset = {rule = OnsetDate2, OnsetType = "date_of_onset", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
@@ -55,7 +57,8 @@ Priority: 98
  -->
 :item.Onset = {rule = OnsetDate3, OnsetType = "date_of_onset", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY,
+STY = :item.Lookup.STY,Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty,
 PointInTime =:match.PointInTime.Since}
 
 Rule: onsetDate4
@@ -73,7 +76,8 @@ Priority: 98
  -->
 :item.Onset = {rule = OnsetDate4, OnsetType = "date_of_onset", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
@@ -95,7 +99,8 @@ Priority: 98
  -->
 :item.Onset = {rule = OnsetDate5, OnsetType = "date_of_onset", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
@@ -113,9 +118,10 @@ Priority: 100
 	
  ):match  
  -->
-:item.Onset = {rule = onsetDate6, OnsetType = "date_of_onset", 
+:item.Onset = {rule = OnsetDate6, OnsetType = "date_of_onset", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
@@ -136,13 +142,14 @@ Priority: 98
  -->
 :item.Onset = {rule = OnsetDate8, OnsetType = "TimeFromPointInTime", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty,
 PointInTime =:match.PointInTime.Since,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value}
 
 
-Rule: onsetDate9
+Rule: OnsetDate9
 Priority: 98
 
 (   
@@ -156,9 +163,10 @@ Priority: 98
 	
  ):match  
  -->
-:item.Onset = {rule = onsetDate9, OnsetType = "date_of_onset", 
+:item.Onset = {rule = OnsetDate9, OnsetType = "date_of_onset", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}

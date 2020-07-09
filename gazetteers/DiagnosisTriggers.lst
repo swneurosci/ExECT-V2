@@ -1,7 +1,7 @@
-Diagnosis:type=diagnosis
+Diagnosis:type=Diagnosis
 diagnosis:type=diagnosis
 diagnosed:type=diagnosis
-Diagnosed:type=diagnosis
+Diagnosed:type=Diagnosis
 Suffers:type=suffers
 suffers:type=suffers
 in keeping with:type=diagnosis
@@ -21,3 +21,5 @@ symptoms are suggestive of:type=opinion
 my impression is:type=opinion
 we are dealing with:type=diagnosis
 Seizure type:type=seizureType
+Seizure Types:type=seizureType
+Problem:type=Diagnosis

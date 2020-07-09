@@ -21,7 +21,7 @@ Priority: 100
  -->
 :item.WhenDiagnosed = {rule = DateDiagnosedB1, OnsetType = "Year_Diagnosed", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate = :match.DateSince.MonthDate,
@@ -46,7 +46,7 @@ Priority: 100
  -->
 :item.WhenDiagnosed = {rule = DateDiagnosedB2, OnsetType = "Year_Diagnosed", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSnce.YearDate,
 MonthDate = :match.DateSince.MonthDate,
@@ -68,7 +68,7 @@ Priority: 80
  -->
 :item.WhenDiagnosed = {rule = DateDiagnosedB3, OnsetType = "Year_Diagnosed", 
 PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, 
+STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSnce.YearDate,
 MonthDate = :match.DateSince.MonthDate,
