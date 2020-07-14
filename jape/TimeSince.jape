@@ -1,42 +1,29 @@
 Phase: TimeSince
-Input: Numeric timeElapsed timePeriod age Sentence Trigger Token Range
+Input: timeElapsed timePeriod age Sentence Trigger Token NumberRange
 Options: control=appelt
 
 //Age is there to stop annotating Age as time since, so is the Token//
-
+// Combined rules 1 and 2 into one with NumberRange not Numeric and Range
 Rule: TimeSince1
 Priority: 100
 
 (   
-	({timeElapsed.time == during}|{timeElapsed.time == since})
-	{Numeric}
-	{timePeriod}
-	
- ):match  
- -->
-:match.TimeSince = {rule =TimeSince1, TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods =:match.Numeric.value}
-
-Rule: TimeSince2
-Priority: 100
-
-(   
 	({timeElapsed.time == during}|{timeElapsed.time == since })
-	{Range}
+	{NumberRange}
 	{timePeriod}
 	
  ):match  
  -->
 :match.TimeSince = {rule =TimeSince2, TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods =:match.Numeric.value,
-LowerNumberOfTimePeriods =:match.Range.N1,
-UpperNumberOfTimePeriods =:match.Range.N2}
+NumberOfTimePeriods =:match.NumberRange.value,
+LowerNumberOfTimePeriods =:match.NumberRange.N1,
+UpperNumberOfTimePeriods =:match.NumberRange.N2}
 
 
 Rule: TimeSince3  /*with the exclusion of a day, a week etc I'm trying to exclude a frequency phrase*/
 Priority: 100
 
-(   {Numeric}
+(   {NumberRange}
 	({!Token})?
     ({timePeriod})
 	{timeElapsed.time == since}
@@ -46,7 +33,9 @@ Priority: 100
  ):match  
  -->
 :match.TimeSince = {rule =TimeSince3, TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods =:match.Numeric.value}
+NumberOfTimePeriods =:match.NumberRange.value,
+LowerNumberOfTimePeriods =:match.NumberRange.N1,
+UpperNumberOfTimePeriods =:match.NumberRange.N2}
 
 
 /* not a safe rule */
@@ -55,13 +44,16 @@ Priority: 90
 
 (  
 	
-	{Numeric.majorType != frequency}
+	{NumberRange.majorType != frequency}
     ({Token.string =~ month}|{Token.string =~ week}|{Token.string =~ year}|{Token.string =~ week})
 	
  ):match  
  -->
 :match.TimeSince = {rule =TimeSince3a, TimePeriod = :match.timePeriod.time-unit,
-NumberOfTimePeriods =:match.Numeric.value}
+NumberOfTimePeriods =:match.NumberRange.value,
+LowerNumberOfTimePeriods =:match.NumberRange.N1,
+UpperNumberOfTimePeriods =:match.NumberRange.N2}
+
 
 Rule: TimeSince4
 Priority: 100
