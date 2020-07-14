@@ -246,7 +246,7 @@ Priority: 99
 /*  doesn’t feel her seizure frequency has changed over the last few years */
 /* Lookup is contained within the Frequency "doesnt feel her seizure frequency has changed" */
 
-
+//DOESN'T GIVE NEAGTION OR CERT
 Rule: SeizureChange5
 Priority: 99 
 ( 
