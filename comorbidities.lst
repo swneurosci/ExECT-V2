@@ -1050,8 +1050,8 @@ Multiple Head Injuries	CUI=C0451948	PREF=Head Injuries, Multiple	TUI=T037	STY=In
 Superficial Head Injury	CUI=C0347536	PREF=Head Injury, Superficial	TUI=T037	STY=Injury or Poisoning
 Skull Fractures	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning
 Skull Fracture	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning 
-Unspecified brain damage due to birth injury	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	STY=Injury or Poisoning
-brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	STY=Injury or Poisoning
+Unspecified brain damage due to birth injury	CUI=C1536522	PREF=Unspecified brain damage due to Birth injury	TUI=T037	STY=Injury or Poisoning
+brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to Birth injury	TUI=T037	STY=Injury or Poisoning
 traumatic brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	STY=Injury or Poisoning
 hippocampal sclerosis	CUI=C1504404	PREF=Hippocampal sclerosis	TUI=T047	STY=Disease or Syndrome
 mesial temporal lobe sclerosis	CUI=C3164863	PREF=mesial temporal lobe sclerosis	TUI=T047	STY=Disease or Syndrome
@@ -1213,9 +1213,9 @@ intracranial infection	CUI=C4761018	PREF=Intracranial infection	TUI=T047	STY=Dis
 intracranial infections	CUI=C4761018	PREF=Intracranial infection	TUI=T047	STY=Disease or Syndrome
 migrainous headache	CUI=C0149931	PREF=migraine	TUI=T047	STY=Disease or Syndrome
 migrainous headaches	CUI=C0149931	PREF=migraine	TUI=T047	STY=Disease or Syndrome
-normal birth	CUI=C3665337	PREF=normal birth	TUI=T033	STY=Finding
-born normally	CUI=C3665337	PREF=normal birth	TUI=T033	STY=Finding
-birth was normal	CUI=C3665337	PREF=normal birth	TUI=T033	STY=Finding 
+normal birth	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
+born normally	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
+birth was normal	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding 
 angina	CUI=C0002962	PREF=Angina Pectoris	TUI=T184	STY=Sign or Symptom	
 ischaemic heart disease	CUI=C0002962	PREF=Angina Pectoris	TUI=T184	STY=Sign or Symptom
 angina pectoris	CUI=C0002962	PREF=Angina Pectoris	TUI=T184	STY=Sign or Symptom
