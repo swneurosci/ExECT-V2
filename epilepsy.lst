@@ -913,3 +913,4 @@ frontal lobe onset seizures	CUI=C0085541	PREF=Epilepsy, Frontal Lobe	TUI=T047	ST
 frontal lobe onset seizure	CUI=C0085541	PREF=Epilepsy, Frontal Lobe	TUI=T047	STY=Disease or Syndrome
 petit mal	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 petit-mal	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
+epilepsy with generalised tonic clonic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
