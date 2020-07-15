@@ -34,6 +34,7 @@ Priority: 99
     {Person}
 	{Lookup2.language == onset,Lookup2.type != diagnosed }
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.minorType == Disease}):item
+	({Lookup2.type != another})?
 	{TimeSince}
 	
  ):match  
