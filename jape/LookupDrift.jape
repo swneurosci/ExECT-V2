@@ -1,9 +1,9 @@
 Phase: LookupDrift
-Input:  Lookup
+Input:  Lookup Lookup3  conj
 
 Options: control=appelt
 
-/* Not used in the pipline at the moment - to asign Seizures  to lookup when it is slpit as in the phrase "foral motor and sensory seizures" */
+/* Not used in the pipline at the moment - to asign Seizures  to lookup when it is split as in the phrase "focal motor and sensory seizures" */
 
 Rule: LookupDrift
 (
@@ -19,4 +19,7 @@ PREF = :item.Lookup.PREF,
 CUI = :item.Lookup.CUI, 
 STY = :item.Lookup.STY,
 Plural = "Yes",
-CAT = :item.Lookup.CAT}
+CAT = :item.Lookup.CAT}  
+
+
+

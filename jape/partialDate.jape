@@ -15,3 +15,14 @@ Priority: 99
 ):match
 -->
 :match.PartialDate = {rule = partialDate, day=:match.DayDate.value, month=:match.Lookup2.month, year=:match.Numeric.value}
+
+Rule: partialDate2
+Priority: 99
+(
+	
+	({Numeric.value <=31})
+	{Lookup2.minorType == date}
+	
+):match
+-->
+:match.PartialDate = {rule = partialDate2, day=:match.Numeric.value, month=:match.Lookup2.month, year = ""}

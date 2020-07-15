@@ -1,5 +1,5 @@
 Phase: PatientHistD
-Input: OtherDiag Lookup2 Person Number timePeriod Split OtherDiag TimeSince
+Input: OtherDiag Lookup2 Person Number timePeriod Split OtherDiag TimeSince Sentence
 
 
 /* These rules spill over more than one sentence,  annotate events in patient history - type of event with an UMLS CUI, age (precise and as a range), 
@@ -31,7 +31,7 @@ Certainty = :item.Lookup3.Certainty,
 AgeUnit =:match.timePeriod.time-unit,
 Age =:match.Number.value}
 
-Rule: PtHistoryD2
+/*Rule: PtHistoryD2
 Priority: 100
 
 (   
@@ -42,10 +42,10 @@ Priority: 100
 	({OtherDiag}):item
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryD4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+:item.PatientHistory = {rule = PtHistoryD2, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty} */
 
 
 //This one could be too broad, it also shifts probability directly from Lookup2.probability//
@@ -63,7 +63,7 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryD4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+:item.PatientHistory = {rule = PtHistoryD3, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}

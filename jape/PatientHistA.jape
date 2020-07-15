@@ -1,5 +1,5 @@
 Phase: PatientHistA
-Input: OtherDiag Lookup2 TimeSince Person DateSince Investigation PartialDate Split NewLine Sentence DiagnosisTriggers PointInTime Age Pronouns Drug MedicalHistory
+Input: OtherDiag Lookup2 TimeSince Person DateSince PHistBlock Investigation PartialDate Split NewLine Sentence DiagnosisTriggers PointInTime Age Pronouns  MedicalHistory
 
 
 /*These are expected to pick up the 1st of OtherDiag shown in a sentence, deriving age/timesince/datesince from OtherDiag 
@@ -13,7 +13,7 @@ Priority: 100
 
 (   
 	({Person})?
-  	({Lookup2.majorType == historic, Lookup2.minorType == symptoms})
+  	({Lookup2.language == onset})
 	({OtherDiag.rule == OtherDiagAge }):item
     
  ):match  
@@ -32,7 +32,7 @@ Priority: 100
  
 (   
 	({Person})?
-  	({Lookup2.majorType == historic, Lookup2.minorType == symptoms})
+  	({Lookup2.language == onset})
 	({OtherDiag.rule == OtherDiagDate}):item
     
  ):match  
@@ -49,8 +49,9 @@ Rule: PtHistoryA1b  /* To capture otherdiagnosis which is combined with TimeSinc
 Priority: 100
 
 (  
-	 ({Person})?
-  	({Lookup2.majorType == historic, Lookup2.minorType == symptoms})
+	({Person})
+  	({Lookup2.language == onset})
+	({Lookup2})?
 	({OtherDiag.rule == OtherDiagTime}):item
     
  ):match  
@@ -75,7 +76,7 @@ Priority: 100
 
 (   
 	({Person})?
-	({Lookup2.type == suffered}|{Lookup2.majorType == historic})
+	({Lookup2.language == onset})
 	({Lookup2})?
 	({Person})?
 	({OtherDiag.rule == OtherDiagDate}):item	
@@ -86,6 +87,7 @@ Priority: 100
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
+DayDate =:item.OtherDiag.MonthDate,
 MonthDate = :item.OtherDiag.MonthDate,
 YearDate = :item.OtherDiag.YearDate}
 
@@ -114,7 +116,7 @@ Priority: 99
 (   
 	({Person})?
 	({Pronouns})?
-	({Lookup2.minorType == symptoms}|{Lookup2.majorType == historic})
+	({Lookup2.language == onset})
 	({Lookup2})?
 	({OtherDiag.rule == OtherDiagAge}):item	
     
@@ -136,7 +138,7 @@ Priority: 99
 
 (   
 	({Person})
-	({Lookup2.minorType == symptoms}|{Lookup2.majorType == historic})?
+	({Lookup2.majorType == historic})?
 	({Lookup2})?
 	({OtherDiag.rule == OtherDiagAge}):item	
     
@@ -152,10 +154,10 @@ AgeLower = :item.OtherDiag.AgeLower,
 AgeUpper = :item.OtherDiag.AgeUpper}
 
 Rule: PtHistoryA4  /*With otherDiag Date when Person may not be picked up and without a clear onset phrase*/
-Priority: 90
+Priority: 100
 
 (   
-	({Person})?
+	({Person})
 	({Lookup2.majorType == historic})
 	({OtherDiag.rule == OtherDiagDate}):item	
     
@@ -165,6 +167,8 @@ Priority: 90
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
+DayDate =:item.OtherDiag.MonthDate,
+MonthDate = :item.OtherDiag.MonthDate,
 YearDate =:item.OtherDiag.YearDate}
 
 Rule: PtHistoryA4a  /*With otherDiag TimeSince when Onset is within OtherDiag phrase*/
@@ -188,8 +192,8 @@ Rule: PtHistoryA4ab  /*With otherDiag timesince when Onset is within OtherDiag p
 Priority: 100
 
 (   
-	({Person})
-	({OtherDiag.rule == OtherDiagTime}):item	
+	({Person.type == possessive})
+	({OtherDiag.rule == OtherDiagTime}|{OtherDiag.rule == OtherDiagDate}):item	
     
  ):match  
  -->
@@ -198,7 +202,10 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
 TimePeriod = :item.OtherDiag.TimePeriod,
-NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods,
+DayDate =:item.OtherDiag.MonthDate,
+MonthDate = :item.OtherDiag.MonthDate,
+YearDate =:item.OtherDiag.YearDate}
 
 Rule: PtHistoryA4b
 Priority: 99
@@ -226,7 +233,7 @@ Rule: PtHistoryA5
 Priority: 98
 
 (   
-	{DiagnosisTriggers.majorType == diagnosis}
+	({DiagnosisTriggers.type == Diagnosis})
 	({Lookup2})*
 	({OtherDiag}):item
     {TimeSince}
@@ -245,7 +252,7 @@ Priority: 100
 
 (
 	{Age}
-	{Lookup2.minorType == symptoms, Lookup2.type == experiencing}
+	({Lookup2.language == onset})
 	({Person})?
 	({OtherDiag}):item
 	 
@@ -278,7 +285,26 @@ Certainty = :item.OtherDiag.Certainty,
 MonthDate =:match.Lookup2.month,
 PointInTime = :match.PointInTime.Since}
 
-Rule: PtHistoryA7a  // when Date is expressed with Point in Time e.g.  since birth//
+Rule: PtHistoryA7a  // when Date is expressed with Point in Time e.g. May last year or just as since birth//
+Priority: 90
+
+(   
+	{PartialDate}
+	({PointInTime})
+	{Person}
+	{Lookup2.majorType == historic}
+	({OtherDiag}):item
+	
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryA7a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+MonthDate =:match.PartialDate.month,
+PointInTime = :match.PointInTime.Since}
+
+Rule: PtHistoryA7b  // when Date is expressed with Point in Time e.g.  since birth//
 Priority: 90
 
 (   
@@ -288,7 +314,7 @@ Priority: 90
 	{PointInTime}
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA7a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+:item.PatientHistory = {rule = PtHistoryA7b, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
@@ -544,18 +570,20 @@ Priority: 98
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
+DayDate =:item.DateSince.DayDate,
 MonthDate =:match.DateSince.MonthDate,
 YearDate = :match.DateSince.YearDate}
 
-Rule: PtHistoryA14a
-Priority: 98
+Rule: PtHistoryA14a  /* She had an injury due to seizure in  Date*/
+Priority: 50
 
 (   
-    ({Lookup2.minorType == symptoms, Lookup2.type == suffered})
+    ({Lookup2.language == onset})
 	({OtherDiag}):item
+	({Lookup2})
     {Person}
 	({Lookup2})
-	({OtherDiag})?
+	({OtherDiag})
    	{DateSince}
 
  ):match  
@@ -564,8 +592,11 @@ Priority: 98
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
+DayDate =:item.DateSince.DayDate,
 MonthDate =:match.DateSince.MonthDate,
 YearDate = :match.DateSince.YearDate}
+
+
 Rule: PtHistoryA15
 Priority: 98
 
@@ -663,6 +694,24 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
 
+Rule: PtHistoryA20a //Opinion and otherdiag after sone lookups ...//
+Priority: 99
+
+( 
+
+	({Lookup2.minorType == opinion})
+	({Person})?
+	({Lookup2})*
+	({Person})?
+	({OtherDiag}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryA20a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}
+
 Rule: PtHistoryA21
 Priority: 98
 
@@ -687,8 +736,9 @@ Priority: 99
 ( 
 
 	({Lookup2.minorType == opinion})
+	({Lookup2})?
 	({Person})?
-	{Lookup2.majorType == historic}
+	({Lookup2.majorType == historic}|{Lookup2.majorType == status})
 	({Lookup2})?
 	({OtherDiag}):item
     
@@ -710,7 +760,7 @@ Priority: 80
 	({Lookup2})?
 	({Lookup2.language == onset}|{Lookup2.minorType == opinion})
 	({Lookup2})?
-	({OtherDiag.rule == OtherDiagPhrase}):item
+	({OtherDiag}):item
 	
 
  ):match  
@@ -718,25 +768,28 @@ Priority: 80
 :item.PatientHistory = {rule = PtHistoryA23, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty,
+MonthDate =:match.OtherDiag.MonthDate,
+YearDate = :match.OtherDiag.YearDate}
 
 
-Rule: PtHistoryA24  /* simple and dengerous : She has learning difficulties*/
+Rule: PtHistoryA24  /*It is to be a short rule so !Lookup2 stops it from picking up OtherDiag in more complex sentences*/
 Priority: 70
 
 (  
-	({Person})
- 	({Lookup2.type == has}|{Lookup2.type == experiencing}|{Lookup2.type == suffered})
-	 ({Lookup2.type != state})?
+	({Person.type == subject})
+ 	({Lookup2.majorType == historic}|{Lookup2.majorType == modifier})
+	 ({Lookup2})?
+	 ({Lookup2.type != state})
+	 ({Person})?
 	({OtherDiag.rule == OtherDiagPhrase}):item
-	
-
+	({!Lookup2})
  ):match  
  -->
 :item.PatientHistory = {rule = PtHistoryA24, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty}  
 
 Rule: PtHistoryA24b  /*simple and dengerous : Opinion (possible) learning difficulties*/
 Priority: 80
@@ -760,8 +813,9 @@ Rule: PtHistoryA24c  /*her last seizure / his treatment for- for example*/
 Priority: 70
 
 (  
+	
 	({Person.type == possessive})
-	({Lookup2.type != state})?
+	({Lookup2})?
 	({OtherDiag}):item
 	
 
@@ -781,7 +835,7 @@ Priority: 70
 	({Pronouns})?
 	({Person})
 	({Lookup2})?
-	({OtherDiag}):item
+	({OtherDiag.rule == OtherDiagPhrase}):item
 	
 
  ):match  
@@ -790,3 +844,23 @@ Priority: 70
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
+
+
+Rule: PtHistoryA26  /*He has had depression  /  possible seizure*/
+Priority: 70
+
+(  
+	({!OtherDiag})
+	({Person})?
+ 	({Lookup2.majorType == historic})
+	({Lookup2})?
+	({Lookup2})?
+	({OtherDiag.rule == OtherDiagPhrase}):item
+	({!NewLine})
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryA26, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}  
+

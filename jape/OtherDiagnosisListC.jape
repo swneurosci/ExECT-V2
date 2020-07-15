@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisListC
-Input:  DiagnosisTriggers OtherDiag listSent listPoint MedicalHistory endList DateSince
+Input:  DiagnosisTriggers OtherDiag listSent listPoint MedicalHistory DateSince
 
 //for the annotations triggered by Medical History , temporality is changed to Past//
 //in general these are for the 3rd list item at top of the letter//
@@ -10,7 +10,7 @@ Rule: OtherDiagListC   /*this captures a second Other diag when the 1 one had tw
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+	({DiagnosisTriggers.type == Diagnosis})
     {listPoint}
     ({MedicalHistory})?
     ({DiagnosisTriggers})?
@@ -39,8 +39,8 @@ Priority: 100
     {listPoint}
     {OtherDiag}
     {OtherDiag}
-	 {listPoint}
-     ({OtherDiag}):item
+	{listPoint}
+    ({OtherDiag}):item
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagListC1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
@@ -59,7 +59,7 @@ Rule: OtherDiagListC2
 Priority: 90
 
 (   	
-	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+({DiagnosisTriggers.type == Diagnosis})
 	{listPoint}
     ({MedicalHistory})?
     ({DiagnosisTriggers})?
@@ -80,7 +80,7 @@ Rule: OtherDiagListC3
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+	({DiagnosisTriggers.type == Diagnosis})
     {listPoint}
     ({listPoint})?
 	{OtherDiag}
@@ -104,7 +104,7 @@ Rule: OtherDiagListC4
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+	({DiagnosisTriggers.type == Diagnosis})
     {listPoint}
 	({OtherDiag})
     {listPoint}
@@ -123,7 +123,7 @@ Rule: OtherDiagListC5
 Priority: 100
 
 (   
-({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+({DiagnosisTriggers.type == Diagnosis})
     {listPoint}
     ({listPoint})?
 	({OtherDiag})
@@ -134,6 +134,24 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagListC5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}
+
+Rule: OtherDiagListC6
+Priority: 100
+
+(   
+    ({DiagnosisTriggers.type == Diagnosis})
+    {listPoint}
+    {listPoint}
+    {OtherDiag}
+    ({OtherDiag})
+    ({OtherDiag}):item	
+
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagListC6, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}

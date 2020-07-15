@@ -8,7 +8,7 @@ Priority: 100
 
 (   
 	
-	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+	({DiagnosisTriggers.type == Diagnosis})
 	({OtherDiag})?
 	{listPoint}
     {OtherDiag}
@@ -32,7 +32,7 @@ Rule: OtherDiagListE2
 Priority: 100
 
 (
-    ({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+    ({DiagnosisTriggers.type == Diagnosis})
     {listPoint}
     ({OtherDiag})
     ({OtherDiag})

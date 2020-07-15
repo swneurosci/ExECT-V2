@@ -1,6 +1,6 @@
 
 Phase: MedicalHistory2
-Input: OtherDiag Lookup3 MedicalHistory listSent listPoint Sentence PHistBlock Numeric DateSince
+Input: OtherDiag Lookup3 MedicalHistory listSent listPoint Sentence  Numeric DateSince
 
  //Additional rules to annotate events without Person e.g., history of convulsions - could be too sensitive  */
 //person is here to stop capturing events that are covered by Patient Histoty rules//

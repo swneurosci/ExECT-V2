@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisListB
-Input: OtherDiag DiagnosisTriggers listSent listPoint Range MedicalHistory DateSince NewParagraph
+Input: OtherDiag DiagnosisTriggers listSent listPoint MedicalHistory DateSince NewParagraph
 /*these rules are to capture the second item of OtherDiag from the top of letter diagnosis list
 they may have age/date/time since given by other diagnosis or separately depending*/
 
@@ -60,7 +60,7 @@ Rule: OtherDiagListB2b
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+	({DiagnosisTriggers.type == Diagnosis})
     {listPoint}
     {listPoint}
     {OtherDiag}
@@ -85,7 +85,7 @@ Rule: OtherDiagListB3
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+	({DiagnosisTriggers.type == Diagnosis})
 	{listPoint}
     {OtherDiag}
     ({DateSince})?
@@ -112,9 +112,9 @@ Rule: OtherDiagListB4
 Priority: 100
 
 (   
-    ({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+   ({DiagnosisTriggers.type == Diagnosis})
     {listPoint}
-    ({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})?
+    ({DiagnosisTriggers.type == Diagnosis})?
     {OtherDiag}
     ({listPoint})
     ({OtherDiag}):item

@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisListF
-Input: OtherDiag DiagnosisTriggers Conj 
+Input: OtherDiag DiagnosisTriggers Conj NewParagraph
 
 Options: control=brill
 
@@ -9,7 +9,7 @@ Rule: OtherDiagListF1
 Priority: 100
 
 (   
-({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+({DiagnosisTriggers.type == Diagnosis})
 	({Conj.type == list})
 	({OtherDiag}):item
     
@@ -24,7 +24,7 @@ Rule: OtherDiagListF2
 Priority: 99
 
 (   
-	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+	({DiagnosisTriggers.type == Diagnosis})
 	{Conj.type == list}
 	{OtherDiag}
 	({Conj.type == list}|{Conj.type == with})
@@ -43,7 +43,7 @@ Rule: OtherDiagListF3
 Priority: 98
 
 (   
-	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+	({DiagnosisTriggers.type == Diagnosis})
 	{Conj.type == list}
 	{Conj.type == list}
 	{OtherDiag}
@@ -63,7 +63,7 @@ Rule: OtherDiagListF4
 Priority: 97
 
 (   
-	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+	({DiagnosisTriggers.type == Diagnosis})
 	{Conj.type == list}
 	{Conj.type == list}
 	{OtherDiag}
@@ -78,4 +78,17 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
 
-
+Rule: OtherDiagListF5  /*when there are no list points, no list sentences*/
+Priority: 100
+(   
+	({DiagnosisTriggers.type == Diagnosis})
+	({Conj})
+	({OtherDiag}):item
+	
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagListF5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty}

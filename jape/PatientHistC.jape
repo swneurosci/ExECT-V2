@@ -1,5 +1,5 @@
 Phase: PatientHistC
-Input: Person Lookup2 Lookup3  PHistBlock timeElapsed DiagnosisTriggers Sentence PartialDate Numeric timePeriod
+Input: Person Lookup2 Lookup3 timeElapsed DiagnosisTriggers Sentence PartialDate Numeric timePeriod
 Options: control=appelt
 
 

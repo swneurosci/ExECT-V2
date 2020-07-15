@@ -7,7 +7,7 @@ Rule: OtherDiagListD1
 Priority: 100
 
 ( 
-	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+	({DiagnosisTriggers.type == Diagnosis})
     ({listPoint})?
     ({DiagnosisTriggers})?
 	({OtherDiag})
@@ -30,7 +30,7 @@ Rule: OtherDiagListD2   /*This captures the 3rd otherdiag when the 1st one had 2
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+	({DiagnosisTriggers.type == Diagnosis})
     {listPoint}
     {OtherDiag}
     ({DateSince})?
@@ -52,7 +52,7 @@ Rule: OtherDiagListD3
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == diagnosis}|{DiagnosisTriggers.type == suffers})
+	({DiagnosisTriggers.type == Diagnosis})
     {listPoint}
 	({OtherDiag})
     ({OtherDiag})
@@ -96,7 +96,7 @@ Rule: OtherDiagListD5
 Priority: 100
 
 (
-    {DiagnosisTriggers.type == diagnosis}
+   ({DiagnosisTriggers.type == Diagnosis})
     {listPoint}
     ({DiagnosisTriggers})? 
     ({OtherDiag})*
