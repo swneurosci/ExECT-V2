@@ -93,8 +93,8 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
 
-Rule: OtherDiagB6
-Priority: 90
+Rule: OtherDiagnosis6
+Priority: 60
 
 (   
 	
@@ -102,11 +102,10 @@ Priority: 90
 	({OtherDiag}):item	
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagB6, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+:item.PatientHistory = {rule = OtherDiagnosis6, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
-
+Certainty = :item.OtherDiag.Certainty} 
 
 
 Rule: OtherDiagB8 /*2nd item in a list without any points*/
