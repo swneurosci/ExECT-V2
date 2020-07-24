@@ -33,8 +33,8 @@ Priority: 100
 	({DiagnosisTriggers.type == Diagnosis})
     {listPoint}
     {OtherDiag}
-    ({DateSince})?
-    ({DateSince})?
+    ({DateSince})
+    ({DateSince})
     {OtherDiag}
     ({listPoint})?
     ({OtherDiag}):item
