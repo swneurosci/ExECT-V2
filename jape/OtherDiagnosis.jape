@@ -6,12 +6,12 @@ listPoint should prevent these rules from capturing diagnosis within lists at to
 
 Options: control=appelt
 
-Rule: OtherDiagnosis1
+Rule: OtherDiagnosis1  /*Top of letter has Diagnosistrigger == Diagnosis, for this inside sentences we use type == diagnosis*/
 Priority: 100
 
 (   
 	
-	{DiagnosisTriggers}
+	{DiagnosisTriggers.type == diagnosis}
 	({Lookup2})?
 	({Lookup2})?
 	({OtherDiag.rule == OtherDiagDate}):item
@@ -57,20 +57,9 @@ Priority: 99
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
-/*
-Rule: OtherDiagnosis4
-Priority: 99
 
-(   
-	{DiagnosisTriggers.majorType == diagnosis, DiagnosisTriggers.type == diagnosis}
-	({OtherDiag})?
-	({OtherDiag}):item
- ):match  
- -->
-:item.PatientHistory = {rule = OtherDiagnosis4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}*/
+
+
 
 /*triggered by opinion only,   " the impression is thet the ongoing episodes are..."*/
 
@@ -123,3 +112,5 @@ Priority: 100
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
+
+
