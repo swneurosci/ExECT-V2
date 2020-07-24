@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisListF
-Input: OtherDiag DiagnosisTriggers Conj NewParagraph
+Input: OtherDiag DiagnosisTriggers Conj NewLine
 
 Options: control=brill
 
@@ -78,17 +78,21 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
 
-Rule: OtherDiagListF5  /*when there are no list points, no list sentences*/
+/*
+Rule: OtherDiagListF5  //when there are no list points, no list sentences//
 Priority: 100
 (   
 	({DiagnosisTriggers.type == Diagnosis})
-	({Conj})
+	({Conj})?
+	{NewLine}
+	{NewLine}
+	({Conj})?
 	({OtherDiag}):item
-	
-    
+	{NewLine}
+
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagListF5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty} */
