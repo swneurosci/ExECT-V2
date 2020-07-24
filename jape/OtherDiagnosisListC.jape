@@ -1,8 +1,8 @@
 Phase: OtherDiagnosisListC
-Input:  DiagnosisTriggers OtherDiag listSent listPoint MedicalHistory DateSince
+Input:  DiagnosisTriggers OtherDiag listSent listPoint MedicalHistory DateSince Person Medmod
 
 //for the annotations triggered by Medical History , temporality is changed to Past//
-//in general these are for the 3rd list item at top of the letter//
+//in general these are for the 3rd list item at top of the letter, Person should stop it spilling out//
 Options: control=appelt
 
 
