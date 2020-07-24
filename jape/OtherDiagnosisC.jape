@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisC
-Input: OtherDiag NewLine DiagnosisTriggers listPoint listSent
+Input: OtherDiag NewLine DiagnosisTriggers listPoint listSent 
 
 /*For top of the letter diagnosis when there are no listpoints oo other points, listPoint is listed
 to stop the rule from fiering when the regular lists do*/
@@ -113,6 +113,53 @@ Rule: OtherDiagnosisC4
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagnosisC4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+YearDate = :match.OtherDiag.YearDate,
+MonthDate =:match.OtherDiag.MonthDate,
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUppe} 
+
+
+Rule: OtherDiagnosisC5
+
+(   
+
+	{DiagnosisTriggers.type == Diagnosis}
+	({OtherDiag}):item
+	({OtherDiag})
+	{NewLine}
+	
+
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagnosisC5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+YearDate = :match.OtherDiag.YearDate,
+MonthDate =:match.OtherDiag.MonthDate,
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUppe} 
+
+Rule: OtherDiagnosisC5a
+
+(   
+
+	{DiagnosisTriggers.type == Diagnosis}
+	({OtherDiag})
+	({OtherDiag}):item
+	{NewLine}
+	
+
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagnosisC5a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
