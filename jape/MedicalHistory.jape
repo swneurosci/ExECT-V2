@@ -27,6 +27,7 @@ NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods,
 AgeUnit =:match.OtherDiag.AgeUnit,
 Age =:match.OtherDiag.Age,
 AgeUnit = :match.OtherDiag.AgeUnit,
+AgeLower = :match.OtherDiag.AgeLower,
 AgeUpper =:match.OtherDiag.AgeUpper}
 
 Rule: MedicalHistory2
@@ -50,6 +51,7 @@ NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods,
 AgeUnit =:match.OtherDiag.AgeUnit,
 Age =:match.OtherDiag.Age,
 AgeUnit = :match.OtherDiag.AgeUnit,
+AgeLower = :match.OtherDiag.AgeLower,
 AgeUpper =:match.OtherDiag.AgeUpper}
 
 Rule: MedicalHistory3
@@ -75,6 +77,7 @@ NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods,
 AgeUnit =:match.OtherDiag.AgeUnit,
 Age =:match.OtherDiag.Age,
 AgeUnit = :match.OtherDiag.AgeUnit,
+AgeLower = :match.OtherDiag.AgeLower,
 AgeUpper =:match.OtherDiag.AgeUpper}
 
 Rule: MedicalHistory4
@@ -100,5 +103,6 @@ NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods,
 AgeUnit =:match.OtherDiag.AgeUnit,
 Age =:match.OtherDiag.Age,
 AgeUnit = :match.OtherDiag.AgeUnit,
+AgeLower = :match.OtherDiag.AgeLower,
 AgeUpper =:match.OtherDiag.AgeUpper}
 
