@@ -196,7 +196,7 @@ Priority: 90
  ):match  
  -->
 :match.Age = {rule =Age_Range3, AgeLower =:match.Range.N1,
-AgeUpper = :match.Range.N2, AgeUnit =:match.timePeriod.time-Unit} 
+AgeUpper = :match.Range.N2, AgeUnit =:match.timePeriod.time-unit} 
 
 Rule: Age_Range3a
 Priority: 90
@@ -211,7 +211,7 @@ Priority: 90
  ):match  
  -->
 :match.Age = {rule =Age_Range3a, AgeLower =:N1.Numeric.value,
-AgeUpper = :N2.Numeric.value, AgeUnit =:match.timePeriod.time-Unit} 
+AgeUpper = :N2.Numeric.value, AgeUnit =:match.timePeriod.time-unit} 
 
 Rule: Age_Range3b  /*at the age of 12 months and 30 months - but treated as range*/
 Priority: 90
@@ -226,7 +226,7 @@ Priority: 90
  ):match  
  -->
 :match.Age = {rule =Age_Range3b, AgeLower =:N1.Numeric.value,
-AgeUpper = :N2.Numeric.value, AgeUnit =:a.timePeriod.time-Unit} 
+AgeUpper = :N2.Numeric.value, AgeUnit =:a.timePeriod.time-unit} 
 
 
 Rule: Age_Range4
