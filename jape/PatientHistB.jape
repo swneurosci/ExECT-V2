@@ -66,6 +66,7 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, 
 AgeUnit = :item.OtherDiag.Age,
+Age = :item.OtherDiag.Age,
 AgeLower =:item.OtherDiag.AgeLower,
 AgeUpper =:item.OtherDiag.AgeUpper} 
 
@@ -243,7 +244,7 @@ Priority: 98
 
 (   
 	{Person}
-	({OtherDiag}):item
+	({OtherDiag.rule == OtherDiagPhrase}):item
    	{Lookup2.type == suffered}
    	{DateSince}
 
@@ -320,7 +321,7 @@ AgeUnit = :match.OtherDiag.AgeUnit,
 AgeUpper =:match.OtherDiag.AgeUpper}
 
 
-Rule: PtHistoryA20a //Opinion and 2nd otherdiag after sone lookups ...//
+Rule: PtHistoryB15 //Opinion and 2nd otherdiag after sone lookups ...//
 Priority: 99
 
 ( 
@@ -334,7 +335,25 @@ Priority: 99
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA20a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+:item.PatientHistory = {rule = PtHistoryB15, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty}
+
+
+Rule: PtHistoryB16  //this is A13a but it's not working there...?*, working here so dengarous!
+Priority: 100
+
+(   
+	({Person})
+	({Lookup2})
+	({OtherDiag.rule == OtherDiagTime}):item
+ 
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryB16, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+TimePeriod = :item.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
