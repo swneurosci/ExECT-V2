@@ -190,7 +190,7 @@ Priority: 99
 (   
 	{Age}
 	({Person})?
-	({Lookup2.language == onset, Lookup2.type != diagnosed}):item
+	({Lookup2.language == onset, Lookup2.type != diagnosed})
 	({Lookup.majorType == umls ,Lookup.minorType == Disease, Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient}):item
 
 ):match  
