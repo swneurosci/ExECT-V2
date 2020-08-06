@@ -9,7 +9,7 @@ Options: control=appelt
 
 Rule: DateSince1a
 Priority: 100
-
+//Think this is too unspecific
 (   
 	({timeElapsed.time == since}|{timeElapsed.time == in})?
 	{PartialDate}
@@ -36,7 +36,7 @@ Priority: 100
  -->
 :match.DateSince = {rule =DateSince2, YearDate =:match.Numeric.value}
 
-
+//And this one
 Rule: DateSince3  /*When the year of event is written without a preposition e.g. '2005' instead of  'in 2005', dengerous rule  as could capture many numbers noy just years,  - to be used in PH*/
 Priority: 100
 
