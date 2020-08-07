@@ -50,7 +50,7 @@ Priority: 100
  YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day}
 
 /* He reports his last seizure was in [DATE] */
-
+//Changed this from during to since - So person has been seizure free since DATE (not that they were seizure free during DATE)
 Rule: LastSeizure3
 Priority: 95 
 (
@@ -63,10 +63,10 @@ Priority: 95
 :match.SeizureFrequency11 = { rule = "LastSeizure3", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
  NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2, 
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
- YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "During"}
+ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 
 /* the last seizure was on [DATE] */
-
+//Changed this from during to since - So person has been seizure free since DATE (not that they were seizure free during DATE)
 Rule: LastSeizure3b
 Priority: 95 
 (
@@ -79,10 +79,10 @@ Priority: 95
 :match.SeizureFrequency11 = { rule = "LastSeizure3b", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
  NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2, 
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
- YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "During"}
+ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 
  /* He reports his last seizure was in [YEAR] */
-
+//Changed this from during to since - So person has been seizure free since DATE (not that they were seizure free during DATE)
 Rule: LastSeizure4
 Priority: 95 
 (
@@ -94,7 +94,7 @@ Priority: 95
 -->
 :match.SeizureFrequency11 = { rule = "LastSeizure4", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
- YearDate = :match.NumberRange.value, TimeSince_or_TimeOfEvent = "During"}
+ YearDate = :match.NumberRange.value, TimeSince_or_TimeOfEvent = "Since"}
 
 /* GTCS, the most recent being 5 years ago */
 
@@ -344,6 +344,7 @@ Priority: 95
 
 
 /* PointInTime no seizures during */
+//Changed this from during to since - So person has been seizure free since PointInTime (not that they were seizure free during PointInTime)
 /* DO WE WANT THIS STYLE OF RULE?
 Rule: NoSeizure8a
 Priority: 95 
@@ -355,7 +356,7 @@ Priority: 95
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure8a", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
- TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "During"
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "Since"
 }
 */
 
