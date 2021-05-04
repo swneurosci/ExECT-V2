@@ -1,5 +1,5 @@
 Phase: AgeDiagnosed
-Input: Lookup Person Lookup2 Sentence Age DiagnosisTriggers 
+Input: Lookup Person Lookup2 Sentence Age DiagnosisTriggers OtherPerson
 
 
   /*includes AgeDiagnosedRange*/
@@ -80,6 +80,7 @@ Priority: 99
 (   
 
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient }):item
+	({Lookup2})?
     {DiagnosisTriggers}
 	{Age}
 	
