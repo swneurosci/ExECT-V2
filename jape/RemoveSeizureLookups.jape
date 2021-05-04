@@ -4,12 +4,12 @@ Input: Lookup3 Token Lookup2 DiagnosisTriggers
 Options: contral=all
 
 //removes seizure mentions from Lookup3 = generic,  if followed by certain tokens
-//It is also used to emove Otherdiseases if the context means a service and not a diagnosis //
+//It is also used to remove Otherdiseases if the context means a service and not a diagnosis //
 
 Rule: RemoveSeizure
  (
      ({Lookup3.minorType == generic}):umls
-     ({Token.string == free}|{Token.string == clinic}|{Token.string == control})
+     ({Token.string == free}|{Token.string == clinic}|{Token.string == control}|{Token.string == frequency}|{Token.string == types}|{Token.string == markers})
  
 ):matches
 -->
@@ -20,7 +20,7 @@ Rule: RemoveSeizure
 Rule: RemoveSeizure
  (
      ({Lookup3.minorType == Disease}):umls
-     ({Token.string =~ type}|{Token.string =~ marker})
+     ({Token.string =~ Type}|{Token.string =~ marker})
  
 ):matches
 -->
@@ -32,7 +32,7 @@ Rule: RemoveSeizure
 Rule: RemoveSeizure
  (
      ({Lookup3.minorType == OtherDisease}):umls
-     ({Token.string =~ team}|{Token.string =~ service})
+     ({Token.string =~ team}|{Token.string =~ service}|{Token.string =~ Service})
  
 
 ):matches
