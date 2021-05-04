@@ -53,8 +53,8 @@ lewy body parkinson disease	CUI=C0030567	PREF=lewy body parkinson disease	TUI=T0
 lewy body parkinson's disease	CUI=C0030567	PREF=lewy body parkinson's disease	TUI=T047	STY=Disease or Syndrome
 megalocornea, multiple skeletal anomalies, and developmental delay	CUI=C1855305	PREF=megalocornea, multiple skeletal anomalies, and developmental delay	TUI=T047	STY=Disease or Syndrome
 melnick-needles syndrome, autosomal recessive, formerly	CUI=C1855305	PREF=melnick-needles syndrome, autosomal recessive, formerly	TUI=T047	STY=Disease or Syndrome
-migraine	CUI=C0149931	PREF=migraine	TUI=T047	STY=Disease or Syndrome
-migraines	CUI=C0149931	PREF=migraine	TUI=T047	STY=Disease or Syndrome
+migraine	CUI=C0149931	PREF=migraine disorders	TUI=T047	STY=Disease or Syndrome
+migraines	CUI=C0149931	PREF=migraine disorders	TUI=T047	STY=Disease or Syndrome
 monosomy 17q21.31	CUI=C1864871	PREF=monosomy 17q21.31	TUI=T047	STY=Disease or Syndrome
 ms	CUI=C0026769	PREF=ms	TUI=T047	STY=Disease or Syndrome
 multiple sclerosis	CUI=C0026769	PREF=multiple sclerosis	TUI=T047	STY=Disease or Syndrome
@@ -1134,8 +1134,8 @@ removal of brain tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061
 brain tumour operation	CUI=C1096120	PREF=Brain tumor operstion	TUI=T061	STY=Therapeutic or Preventive Procedure
 astrocytoma surgery	CUI=C1096492	PREF=Astrocytoma surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
 meningioma surgery	CUI=C1096493	PREF=Meningioma surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
-astrocytoma of brain	CUI=C3695127	PREF=Astrocytoma of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
-brain astrocytoma	CUI=C3695127	PREF=Astrocytoma of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
+astrocytoma of brain	CUI=C3695127	PREF=Astrocytoma of brain	TUI=T191	STY=Neoplastic process
+brain astrocytoma	CUI=C3695127	PREF=Astrocytoma of brain	TUI=T191	STY=Neoplastic process
 right hemiplegia	CUI=C0457433	PREF=Right hemiplegia	TUI=T033	STY=Finding
 right-sided hemiplegia	CUI=C0457433	PREF=Right hemiplegia	TUI=T033	STY=Finding
 right sided hemiplegia	CUI=C0457433	PREF=Right hemiplegia	TUI=T033	STY=Finding
@@ -1204,15 +1204,14 @@ infarct	CUI=C0751955	PREF=brain infarct	TUI=T047	STY=Disease or Syndrome
 ASD	CUI=C1510586	PREF=Autism Spectrum Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
 blind	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
 episodes of psychosis	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
-non-epileptic	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
 cerebral vascular incident	CUI=C0038454	PREF=cerebrovascular stroke	TUI=T047	STY=Disease or Syndrome
 meningitic	CUI=C0025289	PREF=meningitis	TUI=T047	STY=Disease or Syndrome
 Infectious disease of brain	CUI=C1264609	PREF=Infectious disease of brain	TUI=T047	STY=Disease or Syndrome
 brain infection	CUI=C1264609	PREF=Infectious disease of brain	TUI=T047	STY=Disease or Syndrome
 intracranial infection	CUI=C4761018	PREF=Intracranial infection	TUI=T047	STY=Disease or Syndrome
 intracranial infections	CUI=C4761018	PREF=Intracranial infection	TUI=T047	STY=Disease or Syndrome
-migrainous headache	CUI=C0149931	PREF=migraine	TUI=T047	STY=Disease or Syndrome
-migrainous headaches	CUI=C0149931	PREF=migraine	TUI=T047	STY=Disease or Syndrome
+migrainous headache	CUI=C0149931	PREF=migraine disorders	TUI=T047	STY=Disease or Syndrome
+migrainous headaches	CUI=C0149931	PREF=migraine disoreders	TUI=T047	STY=Disease or Syndrome
 normal birth	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
 born normally	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
 birth was normal	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding 
@@ -1230,3 +1229,22 @@ sleep myoclonus	CUI=C0751352	PREF=sleep myoclonus	TUI=T184	STY=sign or symptom
 loss of consciousness	CUI=C0041657	PREF=Loss of consciousness	TUI=T033	STY=Finding
 subdural empyema	CUI=C0038539	PREF=Empyema, Subdural	TUI=T047	STY=Disease or Syndrome
 subdural abscess	CUI=C0038539	PREF=Empyema, Subdural	TUI=T047	STY=Disease or Syndrome
+mastoid fracture	CUI=C4039921	PREF=mastoid fracture	TUI=T037	STY=Injury or Poisoning
+temporal bone fracture	CUI=C0272461	PREF=Fracture of temporal bone	TUI=T037	STY=Injury or Poisoning
+neurofibromatosis type I 	CUI=C0027831	PREF=Neurofibromatosis 1	TUI=T191	STY=Neoplastic Process
+neurofibromatosis type II	CUI=C0027832	PREF=Neurofibromatosis 2	TUI=T191	STY=Neoplastic Process
+anxiety	CUI=C0003467	PREF=anxiety	TUI=T048	STY=Mental or Behavioral Dysfunction
+anxiety disorder	CUI=C0003469	PREF=Anxiety disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
+anxiety disorders	CUI=C0003469	PREF=Anxiety disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
+anxiety with depression	CUI=C0338908	PREF=Mixed anxiety and depressive disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
+anxiety and depression	CUI=C0338908	PREF=Mixed anxiety and depressive disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
+stroke like migraine attacks after radiation therapy	CUI=C3665809	PREF=stroke-like migraine attacks after radiation therapy	TUI=T046	STY=Pathologic Function
+SMART	CUI=C3665809	PREF=stroke-like migraine attacks after radiation therapy	TUI=T046	STY=Pathologic Function
+SMART syndrome	CUI=C3665809	PREF=stroke-like migraine attacks after radiation therapy	TUI=T046	STY=Pathologic Function
+astrocytoma	CUI=C0004114	PREF=Astrocytoma	TUI=T191	STY=Neoplastic Process
+cerebral astrocytoma	CUI=C0750935	PREF=Cerebral Astrocytoma	TUI=T191	STY=Neoplastic Process
+hemisphere astrocytoma	CUI=C0750935	PREF=Cerebral Astrocytoma	TUI=T191	STY=Neoplastic Process
+Cerebral Hemispheric Astrocytoma	CUI=C0750935	PREF=Cerebral Astrocytoma	TUI=T191	STY=Neoplastic Proces
+Astrocytoma of cerebrum	CUI=C0750935	PREF=Cerebral Astrocytoma	TUI=T191	STY=Neoplastic Process
+headache with migraine	CUI=C0149931	PREF=migraine disorders	TUI=T047	STY=Disease or Syndrome
+headaches with migraine	CUI=C0149931	PREF=migraine disorders	TUI=T047	STY=Disease or Syndrome
