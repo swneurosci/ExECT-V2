@@ -65,3 +65,66 @@ Rule: PutNegation
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
 umlsAnnots.iterator().next().getFeatures().put("rule","PutNegation");
 }
+
+Rule: NegationBack
+
+(
+{Trigger.majorType == negation, Trigger.minorType == pre-condition} 
+({NegConj})?
+({Lookup3.Negation == Affirmed}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
+umlsAnnots.iterator().next().getFeatures().put("rule","NegationBack");
+}
+
+
+Rule: NegationBack
+
+(
+{Trigger.majorType == negation, Trigger.minorType == pre-condition} 
+{Lookup3}
+({NegConj})?
+({Lookup3.Negation == Affirmed}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
+umlsAnnots.iterator().next().getFeatures().put("rule","NegationBack");
+}
+
+Rule: NegationBack
+
+(
+{Trigger.majorType == negation, Trigger.minorType == pre-condition} 
+({NegConj})?
+{Lookup3}
+({NegConj})?
+{Lookup3}
+({NegConj})?
+({Lookup3.Negation == Affirmed}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
+umlsAnnots.iterator().next().getFeatures().put("rule","NegationBack");
+}
+
+Rule: NegationBack
+
+(
+{Trigger.majorType == negation, Trigger.minorType == pre-condition} 
+{Lookup3}
+({NegConj})?
+{Lookup3}
+({NegConj})?
+{Lookup3}
+({NegConj})?
+({Lookup3.Negation == Affirmed}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
+umlsAnnots.iterator().next().getFeatures().put("rule","NegationBack");
+}
