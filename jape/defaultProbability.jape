@@ -5,7 +5,7 @@ Input:Lookup Lookup2 Lookup3
 Options: control=all
 
 /*
- * if not certainty terms found, use Lookup.Negation to assign default value
+ * if no certainty terms found, use Lookup.Negation to assign default value
 */
 
 
