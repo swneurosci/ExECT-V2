@@ -54,7 +54,7 @@ C0030567	lewy body parkinson's disease
 C1855305	megalocornea, multiple skeletal anomalies, and developmental delay
 C1855305	melnick-needles syndrome, autosomal recessive, formerly
 C0149931	migraine
-C0149931	migraines
+C0149931	migraine disorders
 C1864871	monosomy 17q21.31
 C0026769	ms
 C0026769	multiple sclerosis
@@ -4127,3 +4127,16 @@ C3665337	normal birth
 C0002962	Angina Pectoris
 C0010068	coronary heart disease
 C0003850	Arteriosclerosis
+C4039921	mastoid fracture
+C0272461	temporal bone fracture	
+C0027831	neurofibromatosis type I 	
+C0027832	neurofibromatosis type II	
+C0003467	anxiety	
+C0003469	anxiety disorder
+C0003469	anxiety disorders
+C0338908	anxiety with depression
+C0338908	anxiety and depression	
+C3665809	SMART syndrome
+C0004114	astrocytoma
+C0750935	cerebral astrocytoma
+C0149931	headache with migraine
