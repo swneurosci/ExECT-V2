@@ -2,6 +2,8 @@ Phase: DiagnosisFilter
 Input:  DiagnosisA DiagnosisB
 Options: control=appelt
 
+// Bring A and B together
+
 Rule: DiagnosisAFilter
 Priority: 100
 (

@@ -2,9 +2,9 @@ Phase: DiagnosisB
 Input:   Lookup2 DiagnosisA listPoint Sentence
 
 
- /*These rules add DiagnosisA when an attribute with another level of certainty follows the diagnosis of epilepsy */ 
- /* Second DiagnosisB rule used for when certainty is the same as first Diagnosis */
-
+// These rules add DiagnosisA when an attribute with another level of certainty follows the diagnosis of epilepsy
+// Second DiagnosisB rule used for when certainty is the same as first Diagnosis
+// Could be tidied up into one/two rules with PREF and CUI coming from gazetteers (also then easier to add more)
 
 Options: control=appelt
 
@@ -14,8 +14,8 @@ Priority: 100
 
 (   
 	{DiagnosisA.Negation == Affirmed, DiagnosisA.Experiencer == Patient} 
-   ({Lookup2.minorType == probability}):a
-   ({Lookup2.lobe == temporal}):b
+  ({Lookup2.minorType == probability}):a
+  ({Lookup2.lobe == temporal}):b
     
  ):match  
  -->
@@ -27,8 +27,8 @@ Priority: 100
 
 (   
 	{DiagnosisA.Negation == Affirmed, DiagnosisA.Experiencer == Patient} 
-   ({Lookup2.minorType == probability}):a
-   ({Lookup2.lobe == frontal}):b
+  ({Lookup2.minorType == probability}):a
+  ({Lookup2.lobe == frontal}):b
     
  ):match  
  -->
@@ -40,8 +40,8 @@ Priority: 100
 
 (   
 	{DiagnosisA.Negation == Affirmed, DiagnosisA.Experiencer == Patient} 
-   ({Lookup2.minorType == probability}):a
-   ({Lookup2.lobe == occipital}):b
+  ({Lookup2.minorType == probability}):a
+  ({Lookup2.lobe == occipital}):b
     
  ):match  
  -->
@@ -53,8 +53,8 @@ Priority: 100
 
 (   
 	{DiagnosisA.Negation == Affirmed, DiagnosisA.Experiencer == Patient} 
-   ({Lookup2.minorType == probability}):a
-   ({Lookup2.lobe == parietal}):b
+  ({Lookup2.minorType == probability}):a
+  ({Lookup2.lobe == parietal}):b
     
  ):match  
  -->
@@ -66,8 +66,8 @@ Priority: 100
 
 (   
 	{DiagnosisA.Negation == Affirmed, DiagnosisA.Experiencer == Patient} 
-   ({Lookup2.minorType == probability}):a
-   ({Lookup2.epilepsy == focal}):b
+  ({Lookup2.minorType == probability}):a
+  ({Lookup2.epilepsy == focal}):b
     
  ):match  
  -->
@@ -79,8 +79,8 @@ Priority: 100
 
 (   
 	{DiagnosisA.Negation == Affirmed, DiagnosisA.Experiencer == Patient} 
-   ({Lookup2.minorType == probability}):a
-   ({Lookup2.epilepsy == generalised}):b
+  ({Lookup2.minorType == probability}):a
+  ({Lookup2.epilepsy == generalised}):b
     
  ):match  
  -->

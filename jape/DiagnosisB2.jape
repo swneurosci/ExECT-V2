@@ -2,8 +2,9 @@ Phase: DiagnosisB
 Input: DiagnosisA DiagBFiltered Split Lookup Lookup3
 
 
-/*These rules add DiagnosisA when an attribute with another level of certainty follows the diagnosis of epilepsy */ 
-//Will need to add context tagger to DiagBFiltered to get perfect cert and neg, but this will work for stopping black and most have same negation
+// These rules add DiagnosisA when an attribute with another level of certainty follows the diagnosis of epilepsy
+// Will need to add context tagger to DiagBFiltered ("focal" but not focal in "focal epilepsy") to get perfect cert and neg
+// but this will work for stopping block and most have same negation
 
 Options: control=appelt
 Rule: HDiagnosisB1
@@ -15,7 +16,7 @@ Priority: 100
 ):match  
  -->
 :DiagB.DiagnosisB = {rule = HDiagnosisB1, PREF = :DiagB.DiagBFiltered.PREF, CUI = :DiagB.DiagBFiltered.CUI, 
-Negation = :DiagB.DiagnosisA.Negation, Certainty = :DiagB.DiagnosisA.Certainty, DiagCategory = :DiagA.DiagnosisA.DiagCategory}
+Negation = :DiagA.DiagnosisA.Negation, Certainty = :DiagA.DiagnosisA.Certainty, DiagCategory = :DiagA.DiagnosisA.DiagCategory}
 
 Rule: HDiagnosisB2
 Priority: 100
@@ -26,4 +27,4 @@ Priority: 100
 ):match  
  -->
 :DiagB.DiagnosisB = {rule = HDiagnosisB2, PREF = :DiagB.DiagBFiltered.PREF, CUI = :DiagB.DiagBFiltered.CUI, 
-Negation = :DiagB.DiagnosisA.Negation, Certainty = :DiagB.DiagnosisA.Certainty, DiagCategory = :DiagA.DiagnosisA.DiagCategory}
+Negation = :DiagA.DiagnosisA.Negation, Certainty = :DiagA.DiagnosisA.Certainty, DiagCategory = :DiagA.DiagnosisA.DiagCategory}

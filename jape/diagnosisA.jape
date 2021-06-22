@@ -2,63 +2,67 @@ Phase: DiagnosisA
 Input:  Lookup DiagnosisTriggers NewParagraph
 Options: control=all
 
-/* 
-  * Use certain Lookup.STY with diagnosis annotations 
-  * e.g. (Lookup.PREF == "Diagnosis")
-  * also includes nested diagnosis i.e. multiple diagnosis in a phrase
-  * not filtered for epilepsy specific at this stage
-*/
 
-/* STY now != 'Sign or Symptom' to match DiagFromSeizure, this will also now pick up post-traumatic seizures */
+// Use certain Lookup.STY with diagnosis annotations 
+// e.g. (Lookup.PREF == "Diagnosis")
+// also includes nested diagnosis i.e. multiple diagnosis in a phrase
+// not filtered for epilepsy specific at this stage
+
+
+// STY now != 'Sign or Symptom' to match DiagFromSeizure, this will also now pick up post-traumatic seizures
+
+// diag trigger with one item after it
+// faster to reverse order - put in appelt mode and have multiple outputs for ones with more than 1?
+// Can't do as the earlier inputs dont have negation and temporality stuff to pick them up
 
 Rule: DiagDiagnosisTrigger1
 (
     ({DiagnosisTriggers.majorType == "diagnosis"})
 	(
-	{Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}
+	{Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}
 	):item
 ):label
 -->
 :item.DiagnosisA = { rule = "DiagDiagnosisTrigger1", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
 Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty, DiagCategory = :item.Lookup.DiagCategory}
 
-
+// diag trigger with two items after it
 Rule: DiagDiagnosisTrigger2
 (
 	({DiagnosisTriggers})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
+	(({Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
 :item.DiagnosisA = { rule = "DiagDiagnosisTrigger2", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
 Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty, DiagCategory = :item.Lookup.DiagCategory}
 
-
+// diag trigger with three items after it
 Rule: DiagDiagnosisTrigger3
 (
 	({DiagnosisTriggers})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
+	(({Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
 :item.DiagnosisA = { rule = "DiagDiagnosisTrigger3", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
 Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty, DiagCategory = :item.Lookup.DiagCategory}
 
-
+// diag trigger with four items after it
 Rule: DiagDiagnosisTrigger4
 (
 	({DiagnosisTriggers})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
+	(({Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
 :item.DiagnosisA = { rule = "DiagDiagnosisTrigger4", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
 Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty, DiagCategory = :item.Lookup.DiagCategory}
 
-
+// diag trigger with five items after it
 Rule: DiagDiagnosisTrigger5
 (
 	({DiagnosisTriggers})
@@ -66,7 +70,7 @@ Rule: DiagDiagnosisTrigger5
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	(({Lookup.STY !=~ "[Ss]ign or [Ss]ymptom", Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
+	(({Lookup.Experiencer == Patient, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"})):item
 ):match1
 -->
 :item.DiagnosisA = { rule = "DiagDiagnosisTrigger5", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,

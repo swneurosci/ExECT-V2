@@ -1,14 +1,14 @@
 Phase: DiagnosisfromSeziure
 Input:  Person Sentence Lookup Investigation DiagnosisTriggers
 Options: control=all
-
+// He has epilepsy... 
 Rule: DiagPersonTrigger1
 Priority: 100
 (
 
 	(
 	{Person}
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical", Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}):match
 	)
 
 ):match1
@@ -23,7 +23,7 @@ Priority: 99
 	(
 	{Person}
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.DiagCategory != "test", Lookup.Temporality != "hypothetical", Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.DiagCategory != "test", Lookup.Temporality != "hypothetical"}):match
 	)
 
 ):match1
@@ -39,7 +39,7 @@ Priority: 99
 	{Person}
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.DiagCategory != "test", Lookup.Temporality != "hypothetical", Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.DiagCategory != "test", Lookup.Temporality != "hypothetical"}):match
 	)
 
 ):match1
@@ -56,7 +56,7 @@ Priority: 99
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.DiagCategory != "test", Lookup.Temporality != "hypothetical", Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.DiagCategory != "test", Lookup.Temporality != "hypothetical"}):match
 	)
 
 ):match1
@@ -74,7 +74,7 @@ Priority: 99
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
 	({Lookup.Experiencer == Patient, Lookup.majorType == umls})
-	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.DiagCategory != "test", Lookup.Temporality != "hypothetical", Lookup.STY !=~ "[Ss]ign or [Ss]ymptom"}):match
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.Negation == Affirmed, Lookup.DiagCategory != "test", Lookup.Temporality != "hypothetical"}):match
 	)
 
 ):match1
