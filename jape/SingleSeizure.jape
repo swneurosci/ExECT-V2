@@ -4,8 +4,8 @@ Phase: SingleSeizure
 Input:  Lookup3 Token timePeriods
 Options: control=appelt
 
-
-
+// Still need this with the JAVA stuff in JAPE: Generic?
+// REMOVED FROM PIPELINE
 Rule: SingleSeizure
 (   
     ({Token@string == "a"} | {Token@string == "one"} | {Token@string == "single"} | {Token@string == "1"} | {Token@string == "an"})

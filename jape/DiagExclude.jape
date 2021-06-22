@@ -6,7 +6,9 @@ Options: control=all
 /* 
  * exclude a single seizure ever experience coontributing to a diagnosis
 */
-
+// Not in pipleine (as far as i can tell)
+// also we are now allowing single seizures to be diagnostic
+// DELETE ME
 
 
 Rule: DiagExclude

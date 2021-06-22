@@ -6,7 +6,7 @@ Input:   Lookup2 Diagnosis
   or the word symptomatic precedes diagnosis and "lateralisation" feature to epilepsy diagnosis if 
   the lateralisation is specified in the diagnosis as there are no specific CUIs for these types of focal epilepsie*/ 
 
-  
+  // All Diagnosis1 outputs go on to do nothing else...
 
 Options: control=appelt
 

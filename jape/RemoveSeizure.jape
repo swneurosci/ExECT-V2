@@ -4,6 +4,8 @@ Options: control=all
 
 
 // remove seziure frequency to mentions of seizure control
+// REMOVED FROM PIPELINE
+// DELETE ME?
 
 Rule: removeSeizureMention
 (   

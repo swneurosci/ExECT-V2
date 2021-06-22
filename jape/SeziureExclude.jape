@@ -5,7 +5,7 @@ Options: control=appelt
 
 /* remove a seizure mention if it has a Context annotation before it
 */
-
+// DELETE ME?
 
 Rule: seizureExclude
 Priority:100

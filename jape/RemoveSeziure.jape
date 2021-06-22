@@ -2,8 +2,10 @@ Phase: RemoveSeizureMention
 Input: SeizureMention
 Options: control=all
 
-
+// NAME TYPO?
 // remove seziure frequency to mentions of seizure control
+// REMOVED FROM PIPELINE
+// DELETE ME?
 
 Rule: removeSeizureMention
 (   

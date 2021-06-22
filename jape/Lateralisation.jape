@@ -6,7 +6,7 @@ Input:   Lookup2 Diagnosis
    as there are no specific Cuis for these types of focal epilepsied */
 
   /*
-
+  // All Diagnosis1 outputs go on to do nothing else...
 Options: control=appelt
 
 

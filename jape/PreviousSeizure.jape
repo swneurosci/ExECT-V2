@@ -2,7 +2,7 @@ Phase: Previous
 Input: Numeric Lookup3 Range Sentence TIMEX3 startList Date listPoint Split Context3
 Options: control=appelt
 
-
+// DELETE ME?
 
 
 Rule: previousSeizure

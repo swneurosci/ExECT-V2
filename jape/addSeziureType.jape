@@ -4,6 +4,7 @@ Phase: addSeizureType
 Input:Lookup Lookup3 SeizureMentions
 Options: control=appelt
 
+// Delete ME?
 
 Rule: prob1
 (

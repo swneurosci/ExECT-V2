@@ -2,6 +2,8 @@ Phase: DiagnosisfromSeziureLookup3
 Input:  Person Lookup3 Sentence
 Options: control=appelt
 
+// Never picked up and not sure why it is needed 
+
 Rule: Lookup3DiagFromSeizure1
 Priority: 100
 (

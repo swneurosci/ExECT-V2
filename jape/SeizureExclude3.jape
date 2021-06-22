@@ -2,6 +2,7 @@ Phase: SeizureExclude3
 Input: SeizureMentions OtherPerson Sentence
 Options: control=all
 
+// DELETE ME?
 
 Rule: removeFamSeizure
 Priority:99

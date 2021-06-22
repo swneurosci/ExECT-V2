@@ -6,6 +6,8 @@ Options: control=appelt
  * rules for someone being seizure free
 */
 
+// DELETE ME?
+
 Rule: seizureFreeExplicit
 Priority:99
 (
