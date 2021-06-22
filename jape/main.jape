@@ -10,15 +10,7 @@ ThirdDose
 prescription2
 prescriptionFilter
 prescriptionFilter2
-/*KeepPrescription*/
-/*KeepPrescriptionInText*/
 prescription-indicator
 LazyPrescription
-/*dates*/
-routes
-status
-prescription-coref
-exclude
-tense
 dose-change
 noMeds

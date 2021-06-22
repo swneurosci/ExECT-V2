@@ -1,7 +1,7 @@
 Phase: Tense
 Input:Drug Measurement Keyword DoseFrequency Token Split Date
 Options: control=appelt
-
+// MORE NICE RULES - REMOVED FROM PIPELINE
 Rule: HistoricPrescriptions
 (
 	{Keyword.kind == "historic"}

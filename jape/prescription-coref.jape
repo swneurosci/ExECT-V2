@@ -5,6 +5,9 @@ Options: control=appelt
 /*
  * SLaM JAPE file
 */
+// NEED STATUS.JAPE TO WORK
+// REMOVED FROM PIPELINE
+// VERY NICE RULE
 
 Rule: CoRef
 (
@@ -14,7 +17,7 @@ Rule: CoRef
 {
 	Annotation prescription = bindings.get("match").iterator().next();
 	String drug = (String)prescription.getFeatures().get("drug");
-	
+	// CANT WORK OUT WHAT LINE BELOW IS DOING EXACTLY - WHAT IS "0L"
 	List<Annotation> previous = new ArrayList<Annotation>(inputAS.get("Prescription",0L, prescription.getStartNode().getOffset()));
 	Collections.sort(previous, new OffsetComparator());
 	Collections.reverse(previous);
@@ -24,9 +27,9 @@ Rule: CoRef
 			if (!"stop".equals(a.getFeatures().get("status"))) {
 				//this is the closest previous mention of the drug which isn't a stop in itself
 				
-				String dose = (String)a.getFeatures().get("dose");
+				String dose = (String)a.getFeatures().get("dose"); // get dose
 				
-				if (dose != null && !dose.equals("unknown")) {
+				if (dose != null && !dose.equals("unknown")) { // dose not null or unknown
 					if (prescription.getFeatures().containsKey("dose"))
 						prescription.getFeatures().put("stopDose", prescription.getFeatures().get("dose"));					
 					

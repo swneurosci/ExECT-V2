@@ -2,6 +2,9 @@ Phase: Status
 Input:Prescription Token
 Options: control=appelt
 
+// THIS IS NOW BETTER PICKED UP BY CONTEXT PRESC AND PRESCRIPTION CHANGE PIPELINE (NOT YET TESTED FULLY)
+// KEEP FOR NOW BUT REMOVED FROM PIPELINE
+
 Rule: XtoY
 (
 	({Prescription}):stop

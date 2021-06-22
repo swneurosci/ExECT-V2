@@ -2,6 +2,10 @@ Phase: Routes
 Input:Prescription
 Options: control=appelt
 
+// SEE WHY WE WOULD WANT IN THE FUTURE BUT NOT NEEDED AT THE MOMENT
+// KEEP FOR NOW BUT IN THE FUTURE RULES WOULD HAVE TO BE BETTER THAN THIS
+// NO LONGER IN PIPELINE
+
 Rule: OralTablet
 (
 	{Prescription.dose =~ "tablet"}
