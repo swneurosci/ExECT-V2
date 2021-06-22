@@ -3,12 +3,15 @@ Input: Prescription0 Sentence Prescription2
 Options: control=all
 
 // If Presc0 not within Presc2 (presc with context infront of it) then can move on to next step
+
+// THIS RULE PICKS UP SAME NUMBER OF PRESCRIPTIONS AS FILTER AND FILTER2 DID IN COMBINATION 
+
 Rule: PrescriptionFilter1
 (
-    ({Prescription0 notWithin Prescription2}):pres2
+    ({Prescription0 notWithin Prescription2, Prescription0 notContains ContextPrescription}):pres2
 ):match
 -->
-:pres2.Prescription4 = { rule2 = PrescriptionFilter1,
+:pres2.Prescription = { rule2 = PrescriptionFilter1,
 rule = :pres2.Prescription0.rule,
 rule1 = :pres2.Prescription0.rule1,
 DrugName = :pres2.Prescription0.DrugName,  
@@ -19,4 +22,44 @@ Frequency = :pres2.Prescription0.Frequency,
 time-unit = :pres2.Prescription0.time-unit, 
 dose-interval = :pres2.Prescription0.dose-interval, 
 Context = :match.Prescription0.Context}
+
+// HERE'S DISPLAY OF OLD RULES NOW DELETED 
+
+// Rule: PrescriptionFilter1
+// (
+//     ({Prescription0 notWithin Prescription2}):pres2
+// ):match
+// -->
+// :pres2.Prescription = { rule2 = PrescriptionFilter1,
+// rule = :pres2.Prescription0.rule,
+// rule1 = :pres2.Prescription0.rule1,
+// DrugName = :pres2.Prescription0.DrugName,  
+// CUI = :pres2.Prescription0.CUI,
+// DrugDose = :pres2.Prescription0.DrugDose, 
+// DoseUnit =:pres2.Prescription0.DoseUnit, 
+// Frequency = :pres2.Prescription0.Frequency, 
+// time-unit = :pres2.Prescription0.time-unit, 
+// dose-interval = :pres2.Prescription0.dose-interval, 
+// Context = :match.Prescription0.Context}
+
+
+// Rule: PrescriptionFilter2
+// (
+//     ({Prescription4 notContains ContextPrescription}):pres2
+// ):match
+// -->
+// :pres2.Prescription = { rule3 = PrescriptionFilter2,
+// rule2 = :pres2.Prescription4.rule2,
+// rule1 = :pres2.Prescription4.rule1,
+// rule = :pres2.Prescription4.rule,
+// DrugName = :pres2.Prescription4.DrugName,  
+// CUI = :pres2.Prescription4.CUI,
+// DrugDose = :pres2.Prescription4.DrugDose, 
+// DoseUnit =:pres2.Prescription4.DoseUnit, 
+// Frequency = :pres2.Prescription4.Frequency, 
+// time-unit = :pres2.Prescription4.time-unit, 
+// dose-interval = :pres2.Prescription4.dose-interval, 
+// Context = :match.Prescription4.Context,
+// string = :match@string}
+
 
