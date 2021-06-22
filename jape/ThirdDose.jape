@@ -1,11 +1,8 @@
 Phase: PrescriptionImplicitPrescription0
-Input: Measurement DoseFrequency Medmod Split NP Prescription0 ContexPrescription Sentence
+Input: Measurement DoseFrequency Medmod Split NP Prescription0 ContexPrescription Sentence KidsDose
 Options: control=appelt
 
-/*
- * SLaM JAPE file
-*/
-
+// drug 100mg AM, 150mg lunch and 100mg PM
 
 Rule: ThirdDose
 (
@@ -31,6 +28,9 @@ string = :p1.Prescription0.drug,
  when = :p2.DoseFrequency.when,
  drug-type = :p1.Prescription0.drug-type,
  Contex = :match.Prescription0.Contex}
+
+// drug 100mg, 150mg and 100mg
+// Can't see it ever coming up
 
 Rule: ThirdDose
 (

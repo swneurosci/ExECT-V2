@@ -5,6 +5,7 @@ Options: control=appelt
 /*
  * SLaM JAPE file
 */
+// drug 100mg AM and 150mg PM
 
 Rule: SecondDose
 (
@@ -31,7 +32,8 @@ string = :p1.Prescription0.drug,
  drug-type = :p1.Prescription0.drug-type,
  Contex = :p1.Prescription0.Contex}
 
-
+// drug 100mg and 150mg
+// Hard to tell whats going on without the start and end points
 
 Rule: SecondDose2
 (
@@ -60,21 +62,22 @@ string = :p1.Prescription0.drug,
 
 
 
+// VERY OLD STUFF
 
-
-/*
-*Rule: WeanOff
-*(
-*	({Prescription}):p
-*	({Medmod}|{Measurement})*
-*):match
-*-->
-*:match.Prescription0 = { rule = "weanOff", drug = :p.Prescription.drug, route = :p.Prescription.route, status = "stop", dose = :p.Prescription.dose, dose-value = :p.Prescription.dose-value, dose-unit = :p.Prescription.dose-unit, dose-frequency = :p.Prescription.frequency, time-unit = :p.Prescription.time-unit, dose-interval = :p.Prescription.interval, when = :p.Prescription.when, drug-type = :p.Prescription.drug-type },
-*{
-*	Annotation prescription = bindings.get("p").iterator().next();
-*	inputAS.remove(prescription);
-*}
-*/
+// 
+// Rule: WeanOff
+// (
+// 	({Prescription}):p
+// 	({Medmod}|{Measurement})*
+// ):match
+// -->
+// :match.Prescription0 = { rule = "weanOff", drug = :p.Prescription.drug, route = :p.Prescription.route, status = "stop", dose = :p.Prescription.dose, dose-value = :p.Prescription.dose-value, dose-unit = :p.Prescription.dose-unit, dose-frequency = :p.Prescription.frequency, time-unit = :p.Prescription.time-unit, dose-interval = :p.Prescription.interval, when = :p.Prescription.when, drug-type = :p.Prescription.drug-type },
+// {
+// INTERSTING HOW TO DELETE PART OF THE MATCH NOT WHOLE THING!!!!!
+// 	Annotation prescription = bindings.get("p").iterator().next();
+// 	inputAS.remove(prescription);
+// }
+// /
 
 
 

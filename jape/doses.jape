@@ -5,7 +5,7 @@ Options: control=appelt
 /*
  * SLaM JAPE file
 */
-
+// 2 tablets = measurment (similar to 400mg)
 Rule: Tablets
 (
 	{Number}

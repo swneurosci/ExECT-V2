@@ -2,6 +2,8 @@ Phase: DrugStatus2
 Input: Prescription0 ContextPrescription Sentence
 Options: control=all
 
+// Is there a context prescription just before the prescription (not always picked up by other rule - but could be removed to speed up)
+
 Rule: doseMatch2
 (
     ({ContextPrescription})
