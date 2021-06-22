@@ -5,7 +5,7 @@ Options: control=all
 /*
 * This Rule can be deleted, no longer used
 */
-
+// DELETE ME
 Rule: keepPrescriptionInText
 (   
     {Temporal}

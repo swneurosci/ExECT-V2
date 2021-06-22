@@ -2,6 +2,8 @@ Phase: medFinding
 Input: Lookup Lookup2
 Options: control=appelt	
 
+// NOT NEEDED - DELETE ME?
+
 Rule: noMeds
 (
 	{Lookup.PREF == "Medicine"}

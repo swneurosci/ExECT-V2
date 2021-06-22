@@ -2,6 +2,9 @@ Phase: Dates
 Input: Prescription
 Options: control=appelt
 
+// DOSEN'T DO ANYTHING + NO LONGER NEEDED - GET DATE FROM CLINIC DATE FROM IDEX
+// DELETE ME
+
 Rule: Basic
 (
 	{Prescription}

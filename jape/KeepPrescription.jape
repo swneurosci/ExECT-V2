@@ -7,6 +7,8 @@ Options: control=all
  * These rules can be deleted as no longer used
 */
 
+// DELETE ME
+
 Rule: keepPrescription
 (   
     {startList}

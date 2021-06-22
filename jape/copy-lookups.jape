@@ -7,7 +7,8 @@ Options: control=appelt
  * Convert drug name lookups to Drug annotations where the type
  * of the drug (the minorType) becomes a type feature
  */
-
+// DOESN'T DO ANYTHING
+// DELETE ME
 
 Rule: drugs
 (

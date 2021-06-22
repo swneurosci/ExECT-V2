@@ -7,6 +7,9 @@ Options: control=appelt
  * i.e. Carbamazepine Retard 100mg twice daily
  */
 
+ // DOESN'T DO ANYTHING
+ // DELETE ME
+
 
 Rule: drug_mod
 (

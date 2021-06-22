@@ -1,16 +1,18 @@
 MultiPhase: Olanz
 Phases:
 
-copy-lookups
-drug_modifier
+// copy-lookups
+// drug_modifier
 doses
 prescription
 prescription-implicit
 ThirdDose
 prescription2
+// routes
+// status
+// prescription-coref
+// exclude
+// tense
+// dose-change
+// noMeds
 prescriptionFilter
-prescriptionFilter2
-prescription-indicator
-LazyPrescription
-dose-change
-noMeds

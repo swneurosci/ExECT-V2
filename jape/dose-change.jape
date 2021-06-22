@@ -6,7 +6,9 @@ Options: control=appelt
  * Find dose increase/decrease when applied to a drug 
  * i.e. increase the does of Lamotrigine by 25mg
  */
- 
+ // CONTEXTPRESC DOES THIS
+ // LOOKUP INCREASE AND DRUG DON'T EXIST
+ // DELETE ME
  
 Rule: dose_increase
 (

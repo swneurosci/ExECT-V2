@@ -5,7 +5,8 @@ Options: control=all
 /* 
  * JAPE rules for when multiple doses are reeled off for just one drug
 */
-
+// DON'T HAVE LOOKUP WITH STY = PHARM OR CLINC DRUG
+// DELETE ME 
 
 
 /* This rule picks up way too much
