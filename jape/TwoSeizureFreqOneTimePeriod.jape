@@ -2,6 +2,8 @@ Phase: SeizureFrequency
 Input: NumberRange timePeriods Lookup3 Sentence Split SeizureFrequency
 Options: control=appelt
 
+// this rule was for two complex partial seizures and one focal seizure in the last 4 months
+// Currently not in pipeline
 Rule: TwoSeizInOneTimePeriod
 (
     ({NumberRange})

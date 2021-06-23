@@ -2,8 +2,11 @@ Phase: SeizFrequency
 Input: NumberRange timePeriods Token Unit Lookup3 Age
 Options: control=appelt 
  
-/* SeizFrequency1 - Number = TimePeriods | SeizFrequency2 - Number = Seizures (LOOKUP3 MUST COME BEFORE THE NUMBER, OTHERWISE ITS EASY TO SPOT*/
+// SeizFrequency1 - Number = TimePeriods 
+// SeizFrequency2 - Number = Seizures (LOOKUP3 MUST COME BEFORE THE NUMBER, OTHERWISE ITS EASY TO SPOT)
 
+
+// 1 seizures every "2 weeks"
 Rule: SeizFrequency1a 
 Priority: 99 
 ( 
@@ -15,7 +18,7 @@ Priority: 99
 :match.SeizFrequency1 = {Rule = SeizFrequency1a, TimePeriod = :match.timePeriods.time-unit, 
 NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods = :match.NumberRange.N1} 
 
-
+// seizure "2 a week"
 Rule: SeizFrequency2b 
 Priority: 100 
 ( 
@@ -28,6 +31,7 @@ Priority: 100
 NumberOfTimePeriods = :match.timePeriods.frequency, QuantityTotal = :num.NumberRange.value, 
 QuantityLowerRange = :num.NumberRange.N1, QuantityUpperRange = :num.NumberRange.N2}
 
+// seizure "2 in a week"
 Rule: SeizFrequency2a 
 Priority: 100 
 ( 
@@ -41,7 +45,7 @@ NumberOfTimePeriods = :match.timePeriods.frequency, QuantityTotal = :match.Numbe
 QuantityLowerRange = :match.NumberRange.N1, QuantityUpperRange = :match.NumberRange.N2}
 
 
-
+// 1 seizures "last week"
 Rule: SeizFrequency1b 
 Priority: 98
 (   
