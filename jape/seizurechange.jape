@@ -119,7 +119,7 @@ Priority: 100
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureChange2a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
-DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, TimeSince_or_TimeOfEvent = match.timeElapsed.time} 
+DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
 
 
 Rule: SeizureChange2b
@@ -133,7 +133,7 @@ Priority: 100
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureChange2b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
-TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2, TimeSince_or_TimeOfEvent = match.timeElapsed.time} 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2, TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
 
 /* She had frequent seizures in the month of August */
 
@@ -189,7 +189,7 @@ Priority: 100
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureChange3c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
-PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = match.timeElapsed.time} 
+PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
 
 //increase in seizure frequency from last visit 
 Rule: SeizureChange3d
@@ -367,7 +367,7 @@ Priority: 100
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureChangeNegated2a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
-DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, TimeSince_or_TimeOfEvent = match.timeElapsed.time} 
+DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
 
 
 Rule: SeizureChangeNegated2b
@@ -381,7 +381,7 @@ Priority: 100
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureChangeNegated2b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
-TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2, TimeSince_or_TimeOfEvent = match.timeElapsed.time} 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2, TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
 
 
 /* Point in Time seizure change */
@@ -591,7 +591,7 @@ Priority: 100
 ):match 
 --> 
 :match.SeizureChange = { rule = "NegatedSeizureChange2a", CUI = :match.Lookup3.CUI, FrequencyChange = "Same", Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
-DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, TimeSince_or_TimeOfEvent = match.timeElapsed.time} 
+DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
 
 // seizure frequency no change since april 2020
 Rule: NegatedSeizureChange2b

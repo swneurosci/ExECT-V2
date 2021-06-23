@@ -183,7 +183,7 @@ Priority: 92
 :match.InvestigationIgnore= { rule = getInvestigationsOutcomeMRI7, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
 CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
 
-His MRI and EEG were both normal
+//His MRI and EEG were both normal
 Rule: getInvestigationsOutcomeMRI
 Priority: 92
 (
