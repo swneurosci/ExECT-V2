@@ -2,9 +2,10 @@ Phase: Investigations
 Input: Investigation p startList Mentions InvestigationFindingCT InvestigationFindingEEG InvestigationFindingMRI Split Diagnosis ContextInvestigations Conj Lookup Lookup3
 Options: control=appelt
 
-/* 
-  * get CT scans and their outcomes 
-*/
+
+// Investigations with something from lookup or lookup3 as the trigger for Abnormality
+// only over one line with nothing very complex
+
 
 Rule: InvestigationCTLookup
 Priority: 100

@@ -7,6 +7,8 @@ Options: control=brill
   * i.e. "EEG and MRI both normal"
   * Wont work as InvestFinding Spilt up into 3 - one for each type of investigation
 */
+// Best to re do this rule - unless it is already done in the other stuff. IT IS SO CAN BE DELETED
+// DELETE ME
 
 
 Rule: getInvestigationsOutcomes

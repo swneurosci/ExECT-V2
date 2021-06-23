@@ -6,7 +6,8 @@ Options: control=brill
   * get EEG, CT and MRI scans and their outcomes -- Wont work as InvestFinding Spilt up into 3 - one for each type of investigation 
 */
 
-
+// INVESTIGATION FINDING NO LONGER EXISTS - SPILT INTO CT, EEG, MRI FINDINGS
+// DELETE ME
 
 Rule: getInvestigationsOutcomes
 (
