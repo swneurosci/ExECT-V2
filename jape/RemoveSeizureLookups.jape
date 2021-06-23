@@ -5,6 +5,7 @@ Options: contral=all
 
 //removes seizure mentions from Lookup3 = generic,  if followed by certain tokens
 //It is also used to remove Otherdiseases if the context means a service and not a diagnosis //
+// THIS IS GOOD CLEAN UP BY THE LOOK OF IT
 
 Rule: RemoveSeizure
  (
