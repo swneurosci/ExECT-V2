@@ -1,0 +1,15 @@
+Multiphase:Diagnosis
+
+Phases:
+// Should be split into Diagnosis, seizureFreq and investigations
+diagnosisA
+// furtherDiagnosis
+// SingleSeizure
+// SingleSeizureLookup
+DiagfromSeizure
+DiagnosisB
+DiagnosisB2
+DiagfromSeizureLookup3
+RemoveSeizureLookups
+DiagnosisFilter
+

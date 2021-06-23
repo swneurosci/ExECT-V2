@@ -1,7 +1,7 @@
 Multiphase:Epilepsy
 
 Phases:
-
+//Should be split into Diagnosis, seizureFreq and investigations
 diagnosisA
 /*Lateralisation*/ /* this + symptomatic attributes are added to diagnosis (DiagnosisA) - for a moment in EpilepsyCause/Symptomatic2 */
 SeizFrequency

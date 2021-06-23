@@ -1,0 +1,14 @@
+Multiphase:Epilepsy
+
+Phases:
+// Should be split into Diagnosis, seizureFreq and investigations
+// Investigations
+InvestConj
+NegatedFindingCT
+NegatedFindingMRI
+NegatedFindingEEG
+InvestigationsEEG
+InvestigationsCT
+InvestigationsMRI
+InvestigationsLookup
+InvestigationWithin /* Need to work on this rule, deletes too much*/
