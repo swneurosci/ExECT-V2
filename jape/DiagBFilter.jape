@@ -11,7 +11,7 @@ Priority: 100
 	{DiagB notWithin Lookup}
 ):match  
  -->
-:match.DiagBFiltered = {ruleFilter = FilterDiagB, PREF = :match.DiagB.PREF, CUI = :match.DiagB.CUI}
+:match.DiagBFiltered1 = {ruleFilter = FilterDiagB, PREF = :match.DiagB.PREF, CUI = :match.DiagB.CUI}
 
 /* secondary generalisation already a lookup on its own, this is so can still be picked up */
 
@@ -22,4 +22,4 @@ Priority: 100
 	{DiagB.LookUp == Yes}
 ):match  
  -->
-:match.DiagBFiltered = {ruleFilter = DiagBFilterSecondGen, PREF = :match.DiagB.PREF, CUI = :match.DiagB.CUI}
+:match.DiagBFiltered1 = {ruleFilter = DiagBFilterSecondGen, PREF = :match.DiagB.PREF, CUI = :match.DiagB.CUI}

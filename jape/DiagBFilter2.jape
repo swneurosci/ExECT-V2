@@ -1,0 +1,17 @@
+Phase: DiagBFiltered2
+Input:  Lookup3 DiagBFiltered1 Token
+Options: control=all
+
+Rule: DiagBFilter
+Priority: 100
+
+// Lookup3 for comorbidities with terms that could be in DiagB
+
+(   
+    ({!Lookup3.minorType == "OtherDisease"})
+	{DiagBFiltered1 notWithin Lookup3}
+    ({!Lookup3.minorType == "OtherDisease"})
+
+):match  
+ -->
+:match.DiagBFiltered = {ruleFilter2 = DiagBFilterLookup3, ruleFilter = :match.DiagBFiltered1.ruleFilter, PREF = :match.DiagBFiltered1.PREF, CUI = :match.DiagBFiltered1.CUI}
