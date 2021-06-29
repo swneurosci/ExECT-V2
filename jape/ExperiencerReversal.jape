@@ -25,8 +25,8 @@ Rule: ExperiencerReversal1
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
   umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal1");
-
-}
+},
+:umls.Lookup3ExpChange = {rule = ExperienceReversal1}
 
 
 Rule: ExperiencerReversal2
@@ -47,7 +47,8 @@ Rule: ExperiencerReversal2
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
   umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal2");
-}
+},
+:umls.Lookup3ExpChange = {rule = ExperienceReversal2}
 
 Rule: ExperiencerReversal3
 
@@ -62,7 +63,8 @@ Rule: ExperiencerReversal3
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
   umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal3");
-}
+},
+:umls.Lookup3ExpChange = {rule = ExperienceReversal3}
 
 /* example: no febrile seizures and no family history of epilepsy - experiencer is a patient but GATE gives "other" so we revers it */
 
@@ -78,7 +80,8 @@ Rule: ExperiencerReversal4
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
   umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal4");
-  }
+  },
+:umls.Lookup3ExpChange = {rule = ExperienceReversal4}
 
   Rule: ExperiencerReversal5  /*from her father in childchood and she has a history of depression - assignig sufferes to patient not father*/
 
@@ -96,7 +99,8 @@ Rule: ExperiencerReversal4
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
   umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal5");
-}
+},
+:umls.Lookup3ExpChange = {rule = ExperienceReversal5}
 
 Rule: ExperiencerReversal6  /*explain to Patient and his father that the ongoing episodes are non-epileptic*/
 ( 
@@ -111,8 +115,9 @@ Rule: ExperiencerReversal6  /*explain to Patient and his father that the ongoing
 -->
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
-  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal6");
-}
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal6a");
+},
+:umls.Lookup3ExpChange = {rule = ExperienceReversal6a}
 
 Rule: ExperiencerReversal6  /*reversing from patient to other*/
 
@@ -128,5 +133,6 @@ Rule: ExperiencerReversal6  /*reversing from patient to other*/
 -->
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Other");
-  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal6");
-}
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal6b");
+},
+:umls.Lookup3ExpChange = {rule = ExperienceReversal6b}

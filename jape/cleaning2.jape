@@ -4,12 +4,11 @@ Phase: Cleaning
 Input:Lookup Lookup3 Address Location Token Person NounChunk Lookup2 MedicalHistory Sentence NewLine
 Options: control=appelt
 
+// SHOULD BE SAME AS cleaning.jape, but with lookup3 not lookup
 
-/*
- * These should address lookup3 that contain comorbidities - stroke, head injury, Deal with diseases that are part of URLs
- * e.g. www.diabetes-uk.org
- *
- */
+// These should address lookup3 that contain comorbidities - stroke, head injury, Deal with diseases that are part of URLs
+// e.g. www.diabetes-uk.org
+
 
 Rule: url1
 
@@ -20,14 +19,14 @@ Rule: url1
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = url1}
 
-/*
- * Remove Lookups that are preceded of proceded by a generic healthcare terms i.e. Clinic
- */
+
+// Remove Lookups that are preceded of proceded by a generic healthcare terms i.e. Clinic
+
  
 Rule: cleanHealthCareTerms
-
 (
   ({Lookup3.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup3.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup3.STY ==~ "[Dd]isease"}|{Lookup3.STY ==~ "[Ii]njury or [Pp]oisoning"})
   ({Lookup2.majorType == organization} | {Location})
@@ -35,10 +34,11 @@ Rule: cleanHealthCareTerms
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = cleanHealthCareTerms}
 
+// Remove Lookups that are preceded of proceded by a generic healthcare terms i.e. Clinic
 Rule: cleanHealthCareTerms
-
 (
    ({Lookup2.majorType == organization} | {Location})
    ({Lookup3.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup3.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup3.STY ==~ "[Dd]isease"}|{Lookup3.STY ==~ "[Ii]njury or [Pp]oisoning"})
@@ -47,22 +47,24 @@ Rule: cleanHealthCareTerms
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = cleanHealthCareTerms}
 
-
+// Remove Lookups that are preceded of proceded by a generic healthcare terms i.e. Clinic
+// Should be Lookup2.majorType (changed from lookup)
 Rule: cleanHealthCareTermsWithin
-
 (
-   ({Lookup3 within Lookup.majorType == organization})
+   ({Lookup3 within Lookup2.majorType == organization})
 ):umls
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = cleanHealthCareTermsWithin}
 
-
+// Delete This Rule
+// Don't have STY = HealthCareActivity
 Rule: cleanDiagnosis
-
 (
    ({Lookup3.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup3.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup3.STY ==~ "[Dd]isease"}|{Lookup3.STY ==~ "[Ii]njury or [Pp]oisoning"}):umls
 	({Lookup.STY ==~ "[Hh]ealth [Cc]are [Aa]ctivity"} | {Lookup.STY ==~ "[Hh]ealth [Cc]are [Rr]elated [Oo]rganization"})
@@ -70,11 +72,13 @@ Rule: cleanDiagnosis
 -->
 :umls { 
  inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = cleanDiagnosis}
 
 
 
-/*This removes Lookup2 'history of' if it is contained within MedicalHostory: past history of' that identifies past medical history*/
+// This removes Lookup2 'history of' if it is contained within MedicalHostory: past history of that identifies past medical history
+// Check more about this rule
 Rule: cleanLookup2
 
 (
@@ -83,7 +87,8 @@ Rule: cleanLookup2
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = cleanLookup2}
 
 //removes things like age group in Lookup2 if the term is contained in a health term, i.e. Child Health
 Rule: cleanLookup2
@@ -94,10 +99,11 @@ Rule: cleanLookup2
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = cleanLookup2}
 
 //This rule removes generic seizures in Lookup3 when they are part of epileptic seizure in lookup//
-//e.g., temporal onset lobe seizures - so seizures on theinr own will not be annotated in Lookup3.minorType == generic//
+//e.g., temporal onset lobe seizures - so seizures on their own will not be annotated in Lookup3.minorType == generic//
 
 Rule: cleanLookup3gen
 
@@ -107,9 +113,10 @@ Rule: cleanLookup3gen
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = cleanLookup3gen}
 
-
+// remove lookups when within a health care term (seizure clinic)
 Rule: cleanHealthCareTerms3
 
 (
@@ -118,8 +125,11 @@ Rule: cleanHealthCareTerms3
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = cleanHealthCareTerms3}
 
+// Dont have lookup2.minotType = health_condition
+// delete this rule
 Rule: RemoveLookupWithin
 
 (
@@ -128,7 +138,8 @@ Rule: RemoveLookupWithin
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = RemoveLookupWithin}
 
 
 

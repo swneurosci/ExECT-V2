@@ -4,6 +4,8 @@ Phase: NegationCleanUp4
 Input: Trigger Sentence Lookup2 Verbs
 Options: control=all
 
+// Why are we negating lookup2?
+// Commit cbca3b - 21/04/2020
 Rule: reverseNegation
 (
 {Trigger.majorType == negation}
@@ -14,4 +16,5 @@ Rule: reverseNegation
 :umls{
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
 umlsAnnots.iterator().next().getFeatures().put("rule","putNegation");
-}
+},
+:umls.LookupNegChange = {rule = putNegation}

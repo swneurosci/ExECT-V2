@@ -4,6 +4,11 @@ Phase: NegationCleanUp
 Input: NegConj Lookup Sentence Trigger LookupTrigger Lookup3
 Options: control=all
 
+// What is "LookupTrigger" in the INPUT - its on ContextTagger Gazetteers
+// Maybe its in to stop something that is already correct from being changed back
+
+// Could we combine the two !NegConj and !Trigger into ({!NegConj}|{!Trigger})[0,2]
+// Look at these two rules
 Rule: reverseNegation
 (
 {Trigger}
@@ -16,9 +21,11 @@ Rule: reverseNegation
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationa");
-}
+},
+:umls.LookupNegChange = {rule = reverseNegation}
 
 
+// Copy of rule above but lookup3 not lookup
 Rule: reverseNegation
 (
 {Trigger}
@@ -31,8 +38,17 @@ Rule: reverseNegation
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationa");
-}
+},
+:umls.Lookup3NegChange = {rule = reverseNegation}
 
+// seizure free  are not just a negation of seizures
+// but a concept with its own CUI so this removes a negation from the lookup3 where they live
+// it removes all negations of X free phrases
+
+// Instead of changing the negation
+// Before the context trigger has acted can we remove the 'Trigger' so it can't fire at all?
+// "free" is not a Trigger anymore - removed in the past? - Can't find when (was something else triggering a negation here not "free")
+// "non" is still there
 
 Rule: removeSeizureFreeAsNegation
 (
@@ -41,8 +57,9 @@ Rule: removeSeizureFreeAsNegation
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
-umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationb");
-}
+umlsAnnots.iterator().next().getFeatures().put("rule","removefree-asnegation");
+},
+:umls.LookupNegChange = {rule = removeSeizureFreeAsNegation}
 
 
 Rule: removeSeizureFreeAsNegation
@@ -52,15 +69,16 @@ Rule: removeSeizureFreeAsNegation
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
-umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationb");
-}
+umlsAnnots.iterator().next().getFeatures().put("rule","removefree-asnegation");
+},
+:umls.Lookup3NegChange = {rule = removeSeizureFreeAsNegation}
 
-
+// THESE TWO RULES NEED TO BE LOOKED AT
 
 Rule: reverseNegation
 (
 {Trigger}
-({LookupTrigger.Language == "Trigger"})[1,5]
+({LookupTrigger.Language == "Trigger"})[1,5]// Never going to get 5 of these
 {!NegConj}
 ({Lookup.Negation == "Negated"}):umls
 ):match
@@ -68,13 +86,14 @@ Rule: reverseNegation
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationc");
-}
+},
+:umls.LookupNegChange = {rule = reverseNegation}
 
 
 Rule: reverseNegation
 (
 {Trigger}
-({LookupTrigger.Language == "Trigger"})[1,5]
+({LookupTrigger.Language == "Trigger"})[1,5]// Never going to get 5 of these
 {!NegConj}
 ({Lookup3.Negation == "Negated"}):umls
 ):match
@@ -82,13 +101,13 @@ Rule: reverseNegation
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationc");
-}
+},
+:umls.Lookup3NegChange = {rule = reverseNegation}
 
-/*
- * Non-epileptic seizures are not just a negation of epilepsy
- * but a concept with its own CUI so this removes a negation from the lookup3 where they live
- * it removes all negations of non-concept phrases
- */
+
+// Non-epileptic seizures are not just a negation of epilepsy
+// but a concept with its own CUI so this removes a negation from the lookup3 where they live
+// it removes all negations of non-concept phrases
 
 
 Rule: removenon-asnegation
@@ -99,7 +118,8 @@ Rule: removenon-asnegation
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","removenon-asnegation");
-}
+},
+:umls.LookupNegChange = {rule = removenon-asnegation}
 
 Rule: removenon-asnegation
 (
@@ -109,5 +129,5 @@ Rule: removenon-asnegation
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","removenon-asnegation");
-
-}
+},
+:umls.Lookup3NegChange = {rule = removenon-asnegation}

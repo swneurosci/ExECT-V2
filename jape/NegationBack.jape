@@ -5,9 +5,10 @@ Input: NegConj Lookup Sentence Trigger Lookup3
 Options: control=all
 
 
-
+// no non-epileptic seizures - would deleting the contains "non" mean that all the rules would work fine 
+// and this wont be needed
+// for now rule is fine and should work well
 Rule: PutNegation
-
 (
 {Trigger.majorType == negation}  
 ({Lookup3 contains Trigger@string=="non"}):umls
@@ -15,11 +16,12 @@ Rule: PutNegation
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
-umlsAnnots.iterator().next().getFeatures().put("rule","PutNegation");
-}
+umlsAnnots.iterator().next().getFeatures().put("rule","PutNegationa");
+},
+:umls.Lookup3NegChange = {rule = PutNegationa}
 
+//need example
 Rule: PutNegation
-
 (
 {Trigger.majorType == negation} 
 {Trigger.majorType == temporality} 
@@ -29,11 +31,12 @@ Rule: PutNegation
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
-umlsAnnots.iterator().next().getFeatures().put("rule","PutNegation");
-}
+umlsAnnots.iterator().next().getFeatures().put("rule","PutNegationb");
+},
+:umls.Lookup3NegChange = {rule = PutNegationb}
 
+// need example
 Rule: PutNegation
-
 (
 {Trigger.majorType == negation} 
 {Trigger.majorType == temporality} 
@@ -45,11 +48,13 @@ Rule: PutNegation
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
-umlsAnnots.iterator().next().getFeatures().put("rule","PutNegation");
-}
+umlsAnnots.iterator().next().getFeatures().put("rule","PutNegationc");
+},
+:umls.Lookup3NegChange = {rule = PutNegationc}
 
+// need example
+// looks like no Lookup, lookup or Lookup (negating the 3rd one)
 Rule: PutNegation
-
 (
 {Trigger.majorType == negation} 
 {Trigger.majorType == temporality} 
@@ -63,11 +68,14 @@ Rule: PutNegation
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
-umlsAnnots.iterator().next().getFeatures().put("rule","PutNegation");
-}
+umlsAnnots.iterator().next().getFeatures().put("rule","PutNegationd");
+},
+:umls.Lookup3NegChange = {rule = PutNegationd}
 
+// why wouldn't this rule be done by ContextTagger normally?
+// need to see example
+// Also just rule above with slightly more detail
 Rule: NegationBack
-
 (
 {Trigger.majorType == negation, Trigger.minorType == pre-condition} 
 ({NegConj})?
@@ -76,12 +84,14 @@ Rule: NegationBack
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
-umlsAnnots.iterator().next().getFeatures().put("rule","NegationBack");
-}
+umlsAnnots.iterator().next().getFeatures().put("rule","NegationBacka");
+},
+:umls.Lookup3NegChange = {rule = NegationBacka}
 
-
+// why wouldn't this rule be done by ContextTagger normally?
+// need to see example
+// but maybe context tagger not running to second Lookup term
 Rule: NegationBack
-
 (
 {Trigger.majorType == negation, Trigger.minorType == pre-condition} 
 {Lookup3}
@@ -91,31 +101,16 @@ Rule: NegationBack
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
-umlsAnnots.iterator().next().getFeatures().put("rule","NegationBack");
-}
+umlsAnnots.iterator().next().getFeatures().put("rule","NegationBackb");
+},
+:umls.Lookup3NegChange = {rule = NegationBackb}
 
+// why wouldn't this rule be done by ContextTagger normally?
+// need to see example
+// but maybe context tagger not running to third Lookup term
 Rule: NegationBack
-
 (
 {Trigger.majorType == negation, Trigger.minorType == pre-condition} 
-({NegConj})?
-{Lookup3}
-({NegConj})?
-{Lookup3}
-({NegConj})?
-({Lookup3.Negation == Affirmed}):umls
-):match
--->
-:umls {
-umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
-umlsAnnots.iterator().next().getFeatures().put("rule","NegationBack");
-}
-
-Rule: NegationBack
-
-(
-{Trigger.majorType == negation, Trigger.minorType == pre-condition} 
-{Lookup3}
 ({NegConj})?
 {Lookup3}
 ({NegConj})?
@@ -126,5 +121,27 @@ Rule: NegationBack
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
-umlsAnnots.iterator().next().getFeatures().put("rule","NegationBack");
-}
+umlsAnnots.iterator().next().getFeatures().put("rule","NegationBackc");
+},
+:umls.Lookup3NegChange = {rule = NegationBackc}
+
+// why wouldn't this rule be done by ContextTagger normally?
+// need to see example
+// but maybe context tagger not running to 4th Lookup term
+Rule: NegationBack
+(
+{Trigger.majorType == negation, Trigger.minorType == pre-condition} 
+{Lookup3}
+({NegConj})?
+{Lookup3}
+({NegConj})?
+{Lookup3}
+({NegConj})?
+({Lookup3.Negation == Affirmed}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
+umlsAnnots.iterator().next().getFeatures().put("rule","NegationBackd");
+},
+:umls.Lookup3NegChange = {rule = NegationBackd}

@@ -4,12 +4,14 @@ Phase: ModifyLookups
 Input: Context Lookup3 Sentence
 Options: control=brill
 
-/*
- * If for some reason context is not applied , i.e. future or hypothetical 
- lookup gets recent Temporality, this rule tries to correct it.
-*/
 
+// If for some reason context is not applied , i.e. future or hypothetical 
+// lookup gets recent Temporality, this rule tries to correct it.
 
+// Could be that more needs to be added to the hypothetical triggers (not very many in there from what I can see)
+// But this rule looks good at cleaning up a lot of these misses.
+
+//Hypotheitical to lower case to match context
 Rule: ContextCorrection
 Priority: 100
 (
@@ -20,5 +22,5 @@ Priority: 100
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Temporality","Hypothetical");
   umlsAnnots.iterator().next().getFeatures().put("rule","ContextCorrection");
-
-}
+},
+:umls.Lookup3TepChange = {rule = ContextCorrection}

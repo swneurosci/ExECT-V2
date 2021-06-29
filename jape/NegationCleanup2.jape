@@ -4,6 +4,10 @@ Phase: NegationCleanUp2
 Input: Verbs Trigger Lookup Sentence Lookup3
 Options: control=all
 
+// Need to see an example of this rule
+// 'If this is "not"(trigger) successful then I would "consider"(verb) 
+// preventative treatment such as propranolol or possibly tompiramate given his "epilepsy" (lookup)'
+// Why isn't there a Lookup3 version?
 Rule: reverseNegation
 (
 {Trigger}
@@ -13,13 +17,14 @@ Rule: reverseNegation
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
-umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation2");
-}
+umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation2a");
+},
+:umls.LookupNegChange = {rule = reverseNegation2a}
 
 
-
+// This might be better to remove the "non" trigger - mentioned more in NegationCleanUp.jape
+// this the regex is wrong on the LHS here - needs % after the non??
 Rule: reverseNegation
-
 (
 {Lookup3.PREF =~ non, Lookup3.Negation == Affirmed }
 ({Lookup3.Negation =="Negated"}):umls
@@ -27,11 +32,12 @@ Rule: reverseNegation
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
-umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation2");
-}
+umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation2b");
+},
+:umls.Lookup3NegChange = {rule = reverseNegation2b}
 
+// This might be better to remove the "non" trigger - mentioned more in NegationCleanUp.jape
 Rule: reverseNegation
-
 (
 {Lookup3.PREF =~ non, Lookup3.Negation == Affirmed }
 {Lookup3}
@@ -40,7 +46,8 @@ Rule: reverseNegation
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
-umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation2");
-}
+umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation2c");
+},
+:umls.Lookup3NegChange = {rule = reverseNegation2c}
 
 

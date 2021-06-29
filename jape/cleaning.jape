@@ -6,11 +6,11 @@ Options: control=appelt
 
 
 
-/*
- * Deal with diseases that are part of URLs
- * e.g. www.diabetes-uk.org
- *
- */
+
+//  Deal with diseases that are part of URLs
+//  e.g. www.diabetes-uk.org
+ 
+ 
 
 Rule: url1
 
@@ -21,15 +21,14 @@ Rule: url1
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.LookupDeleted = {rule = url1}
 
 
 
 
-/*
- * Remove Lookups that are preceded of proceded by a generic healthcare terms i.e. Clinic
- */
- 
+// Remove Lookups that are preceded of proceded by a generic healthcare terms i.e. Clinic
+// I think this can now be any lookup (not ones wth specific STY)
 Rule: cleanHealthCareTerms
 
 (
@@ -39,8 +38,11 @@ Rule: cleanHealthCareTerms
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.LookupDeleted = {rule = cleanHealthCareTerms}
 
+// Remove Lookups that are preceded of proceded by a generic healthcare terms i.e. Clinic
+// I think this can now be any lookup (not ones wth specific STY)
 Rule: cleanHealthCareTerms
 
 (
@@ -51,9 +53,10 @@ Rule: cleanHealthCareTerms
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.LookupDeleted = {rule = cleanHealthCareTerms}
 
-
+// Good rule
 Rule: cleanHealthCareTermsWithin
 
 (
@@ -62,9 +65,11 @@ Rule: cleanHealthCareTermsWithin
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.LookupDeleted = {rule = cleanHealthCareTermsWithin}
 
-
+// Delete This Rule
+// Don't have STY = HealthCareActivity
 Rule: cleanDiagnosis
 
 (
@@ -74,13 +79,13 @@ Rule: cleanDiagnosis
 -->
 :umls { 
  inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.LookupDeleted = {rule = cleanDiagnosis}
 
-/* Temporal Concepts need to be removed 
-* - they are fequent, useless, and troublesome when relying on JAPE rules that use Lookup as input
-*/
+// Temporal Concepts need to be removed 
+// they are fequent, useless, and troublesome when relying on JAPE rules that use Lookup as input
 
-
+// Also Delete as shouldn't be in lookup anymore
 Rule: removeUselessLookups
 
 (
@@ -89,5 +94,6 @@ Rule: removeUselessLookups
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.LookupDeleted = {rule = removeUselessLookups}
 

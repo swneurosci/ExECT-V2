@@ -1,9 +1,9 @@
 Phase: removeUselessLookups
 Input:  Lookup Date Numeric
 Options: control=all
-
-
-Rule: removeUselessLookups
+// REMOVE FROM PIPELINE AND DELETE ME
+// This rule can be deleted
+Rule: removeUselessLookups3
 
 (
     ({Lookup.STY == "Temporal Concept"} | {Lookup.PREF == "Once A Day"} |
@@ -12,12 +12,11 @@ Rule: removeUselessLookups
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.LookupDeleted = {rule = removeUselessLookups3}
 
-
-
-
-Rule: removeUselessLookups
+// Some lookups do contain numbers, rule can be deleted I think
+Rule: removeUselessLookups4
 
 (
     ({Lookup contains Numeric}):umls
@@ -25,4 +24,5 @@ Rule: removeUselessLookups
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.LookupDeleted = {rule = removeUselessLookups4}

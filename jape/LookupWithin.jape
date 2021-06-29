@@ -4,28 +4,27 @@ Phase: LookupWithin
 Input: Lookup3 
 Options: control=brill
 
- 
+// NOT SURE WHAT THESE DO AFTER HOWEVER
 
-/*this removes lookup within rule for myoclonic jerks, as lookupWithin is excluded from OtherDiag rules*/
+// this removes lookup within rule for myoclonic jerks, as lookupWithin is excluded from OtherDiag rules
 
 Rule: NotLookupWithin
-
 (
-  ({Lookup3.CUI == "C0027066", Lookup3.CAT == "Seizures"}):a
+  ({Lookup3.CUI == "C0027066", Lookup3.CAT == "Seizures"}):a //CUI for mycolonus/myoclonic jerk
 ):match
 -->
 :match {
   getOnlyAnn(matchAnnots).getFeatures().put("rule", "NotLookupWithin");
-} 
- /*And this does the same for absences
+},
+:match.Lookup3NotWithin= {rule = NotLookupWithin}
+// And this does the same for absences
 
-Rule: NotLookupWithin
-
-(
-  ({Lookup3.CUI == "C0563606", Lookup3.CAT == "Seizures"}):a
-):match
--->
-:match {
-  getOnlyAnn(matchAnnots).getFeatures().put("rule", "NotLookupWithin");
-} */
+// Rule: NotLookupWithin
+// (
+//   ({Lookup3.CUI == "C0563606", Lookup3.CAT == "Seizures"}):a //CUI for absences/blank episodes/blank spells
+// ):match
+// -->
+// :match {
+//   getOnlyAnn(matchAnnots).getFeatures().put("rule", "NotLookupWithin");
+// }
 

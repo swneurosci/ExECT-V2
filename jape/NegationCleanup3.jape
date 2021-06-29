@@ -4,6 +4,11 @@ Phase: NegationCleanUp3
 Input: Lookup Sentence Token Lookup3
 Options: control=all
 
+// This might be better to remove the "non" trigger - mentioned more in NegationCleanUp.jape
+// combination of non-epileptic as well as epileptic seizures. 
+// here (non-)epileptic also picked up as a lookup (need to remove)
+
+// Have a look at the span of this rule. I think adding split will fix it (letter42 problem)
 Rule: reverseNegation
 (
 ({Token@string =~ "non[-]"})
@@ -14,8 +19,11 @@ Rule: reverseNegation
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule1","reverseNegation1a");
-}
+},
+:umls.LookupNegChange = {rule = reverseNegation1a}
 
+// This might be better to remove the "non" trigger - mentioned more in NegationCleanUp.jape
+// Above example not working for lookup3???????
 Rule: reverseNegation
 (
 ({Token@string == "non[-]"})
@@ -26,16 +34,17 @@ Rule: reverseNegation
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule1","reverseNegation1a");
-}
+},
+:umls.Lookup3NegChange = {rule = reverseNegation1a}
 
-
-Rule: reverseNegation  /*when episodes are described as not epileptic in nature they are automatically negated so here this negation is reversed*/
-
+// when episodes are described as not epileptic in nature they are automatically negated so here this negation is reversed
+Rule: reverseNegation  
 (
-({Lookup3.CUI == C3495874, Lookup3.Negation == "Negated"}):umls
+({Lookup3.CUI == C3495874, Lookup3.Negation == "Negated"}):umls // This is non-epileptic attacks/seizures CUI
 ):match
 -->
 :umls {
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation3");
-}
+},
+:umls.LookupNegChange = {rule = reverseNegation3}
