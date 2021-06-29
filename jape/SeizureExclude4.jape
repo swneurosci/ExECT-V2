@@ -4,7 +4,7 @@ Options: control=first
 
 
 
-Rule: seizureExclude
+Rule: seizureFreqExclude
 
 (   
     {History}
@@ -14,10 +14,11 @@ Rule: seizureExclude
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.SeizureFrequencyDeleted = {rule = seizureFreqExclude}
 
 
-Rule: seizureExclude
+Rule: seizureFreqExclude2
 
 (   
     ({SeizureFrequency}):umls
@@ -26,4 +27,5 @@ Rule: seizureExclude
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.SeizureFrequencyDeleted = {rule = seizureFreqExclude2}

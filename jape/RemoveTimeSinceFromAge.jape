@@ -10,5 +10,7 @@ Rule: RemoveTimeSinceFromAge
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.TimeSinceDeleted = {rule = RemoveTimeSinceFromAge}
+
 

@@ -6,6 +6,7 @@ Options: control=appelt
  *Exclude some seizure mentions/frequency if context suggests not talking about current siezures
  * or talking about negation
 */
+// Not in pipeline
 
 Rule: seizureExclude
 Priority: 99
@@ -16,7 +17,8 @@ Priority: 99
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.seizureExcludeDeleted = {rule = seizureExclude1}
 
 
 Rule: seizureExclude
@@ -28,7 +30,8 @@ Priority: 99
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.seizureExcludeDeleted = {rule = seizureExclude2}
 
 
 
@@ -45,7 +48,8 @@ Priority: 100
     ({SeizureFrequency} | {SeizureSince} | {SeizureFree}):umls
 ):match
 -->
-{ }
+{ },
+:umls.seizureExcludeSaved = {rule = savedFromExclusion}
 
 
 

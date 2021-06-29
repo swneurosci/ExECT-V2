@@ -3,7 +3,8 @@ Imports: {import static gate.Utils.*; }
 Phase: AnnotationPruning
 Input: Lookup Sentence
 Options: control=appelt
-
+// Don't have lookup label = EEG/MRI or abbrevOf = EEG/MRI
+// Delete/Remove I think
 /*
  * Remove annotations (mainly of type abbreviationOf) where tighter rules are needed 
  * i.e. "EEG with spike-wave complexes" exists in UMLS, but not "checked EEG and there appears to be with spike wave-complexes"
@@ -21,7 +22,8 @@ Rule: annoPrune
 :label{ 
   Annotation lookup = gate.Utils.getOnlyAnn(labelAnnots);
   inputAS.remove(lookup);  
-}
+},
+:umls.LookupDeleted = {rule = annoPrune}
 
 
 
@@ -34,4 +36,5 @@ Rule: annoPrune
 :label{ 
   Annotation lookup = gate.Utils.getOnlyAnn(labelAnnots);
   inputAS.remove(lookup);  
-}
+},
+:umls.LookupDeleted = {rule = annoPrune2}

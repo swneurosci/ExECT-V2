@@ -13,6 +13,8 @@ Priority:99
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.SeizureMentionsDeleted = {rule = removeFamSeizure}
+
 
 

@@ -10,5 +10,8 @@ Rule: RemoveLookup2FromTimeSince
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup2Deleted = {rule = RemoveLookup2FromTimeSince}
+
+
 

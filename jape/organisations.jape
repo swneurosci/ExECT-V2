@@ -9,7 +9,7 @@ Options: control=appelt
  * e.g. www.diabetes-uk.org
  *
  */
-
+// Not in pipeline
 
 Rule: url1
 
@@ -20,5 +20,6 @@ Rule: url1
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.LookupDeleted = {rule = url1}
 

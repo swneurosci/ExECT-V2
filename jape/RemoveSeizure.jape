@@ -14,4 +14,7 @@ Rule: removeSeizureMention
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.SeizureMentionDeleted = {rule = removeSeizureMention}
+
+

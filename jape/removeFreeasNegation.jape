@@ -9,5 +9,8 @@ Rule: removeFreeAsNegation
 ({Trigger.minorType=="post-condition", Trigger@string=="free"}):umls
 ):match
 -->
-:umls {inputAS.removeAll(umlsAnnots);
-}
+:umls {
+    inputAS.removeAll(umlsAnnots);
+},
+:umls.TriggerDeleted = {rule = removeFreeAsNegation}
+

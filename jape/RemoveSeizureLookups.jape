@@ -16,7 +16,8 @@ Rule: RemoveSeizure
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = RemoveSeizure1}
 
 Rule: RemoveSeizure
  (
@@ -27,7 +28,8 @@ Rule: RemoveSeizure
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = RemoveSeizure2}
 
 
 Rule: RemoveSeizure
@@ -40,7 +42,8 @@ Rule: RemoveSeizure
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = RemoveSeizure3}
 
 
 Rule: RemoveLookup3Within  /*when disease is the same as title such as Ms*/
@@ -51,7 +54,8 @@ Rule: RemoveLookup3Within  /*when disease is the same as title such as Ms*/
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = RemoveSeizure4}
 
 
 Rule: RemoveLookup3Within  /*Removes  generic lookup3 e.g. convulsion when it is within Lookup3 e.g.Febrile Convulsion*/
@@ -63,7 +67,8 @@ Rule: RemoveLookup3Within  /*Removes  generic lookup3 e.g. convulsion when it is
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-} 
+},
+:umls.Lookup3Deleted = {rule = RemoveLookup3Within1}
 
 
 
@@ -75,7 +80,8 @@ Rule: RemoveLookup3Within  /*Removes  generic lookup3 when it's within health te
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = RemoveLookup3Within2}
 
 Rule: RemoveLookup3Within  /*Removes generic lookup3 when it's within Diagnosis trigger Seizure type*/
 
@@ -85,5 +91,6 @@ Rule: RemoveLookup3Within  /*Removes generic lookup3 when it's within Diagnosis 
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.Lookup3Deleted = {rule = RemoveLookup3Within3}
 

@@ -7,7 +7,7 @@ Options: control=appelt
 */
 // DELETE ME?
 
-Rule: seizureExclude
+Rule: seizureExclude5
 Priority:100
 (   
     {Context}
@@ -16,4 +16,6 @@ Priority:100
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.SeizureMentionDeleted = {rule = seizureExclude5}
+

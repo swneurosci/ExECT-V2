@@ -11,4 +11,6 @@ Rule: RemoveSeizFreeBlock
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.SFreeBlockDeleted = {rule = RemoveSeizFreeBlock}
+

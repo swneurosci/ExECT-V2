@@ -25,7 +25,8 @@ Rule: DiagExclude
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.DiagnosisDeleted = {rule = DiagExclude}
 
 
 

@@ -13,7 +13,8 @@ Priority:99
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.SeizureMentionsDeleted = {rule = seziureCurrentSince1}
 
 
 Rule: seziureCurrentSince
@@ -26,4 +27,5 @@ Priority:99
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.SeizureMentionsDeleted = {rule = seziureCurrentSince2}

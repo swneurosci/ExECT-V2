@@ -26,4 +26,5 @@ Priority: 100
 
 	//TODO instead of removing just rename for easier debugging	
 	inputAS.removeAll(prescriptions);
-}
+},
+:match.PrescriptionsDeleted = {rule = FamilyPrescriptions}

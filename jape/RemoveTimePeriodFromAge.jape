@@ -12,7 +12,10 @@ Rule: RemoveTimePeriodsFromAge
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.timePeriodsDeleted = {rule = RemoveTimePeriodsFromAge}
+
+
 
 Rule: RemoveTimePeriodFromAge
 (   
@@ -21,4 +24,6 @@ Rule: RemoveTimePeriodFromAge
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.timePeriodDeleted = {rule = RemoveTimePeriodFromAge}
+

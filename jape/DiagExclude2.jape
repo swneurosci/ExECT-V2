@@ -2,6 +2,7 @@ Phase: DiagExclude2
 Input:  Lookup Investigation
 Options: control=all
 
+// Bad Rule - delete me i think - not in pipeline
 
 Rule: DiagExclude2
 (   
@@ -11,7 +12,8 @@ Rule: DiagExclude2
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
-}
+},
+:umls.LookupDeleted = {rule = DiagExclude2}
 
 
 
