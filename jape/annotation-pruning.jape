@@ -23,7 +23,7 @@ Rule: annoPrune
   Annotation lookup = gate.Utils.getOnlyAnn(labelAnnots);
   inputAS.remove(lookup);  
 },
-:umls.LookupDeleted = {rule = annoPrune}
+:label.LookupDeleted = {rule = annoPrune}
 
 
 
@@ -37,4 +37,4 @@ Rule: annoPrune
   Annotation lookup = gate.Utils.getOnlyAnn(labelAnnots);
   inputAS.remove(lookup);  
 },
-:umls.LookupDeleted = {rule = annoPrune2}
+:label.LookupDeleted = {rule = annoPrune2}

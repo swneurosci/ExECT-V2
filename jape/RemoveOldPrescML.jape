@@ -11,7 +11,7 @@ Rule: RemoveOldPrescrpitionML
 :match { 
   inputAS.removeAll(matchAnnots);
 },
-:umls.PrescriptionMLeleted = {rule = RemoveOldPrescrpitionML2nd}
+:match.PrescriptionMLeleted = {rule = RemoveOldPrescrpitionML2nd}
 
 Rule: RemoveOldPrescrpitionML
 (
@@ -21,4 +21,4 @@ Rule: RemoveOldPrescrpitionML
 :match { 
   inputAS.removeAll(matchAnnots);
 },
-:umls.PrescriptionML2Deleted = {rule = RemoveOldPrescrpitionML3rd}
+:match.PrescriptionML2Deleted = {rule = RemoveOldPrescrpitionML3rd}
