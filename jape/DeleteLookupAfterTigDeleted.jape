@@ -1,0 +1,52 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: DeleteLookupAfterTigDeleted
+Input: Lookup TriggerDeleted Token Lookup3
+Options: control=all
+
+// This deletes Lookup after a trigger that has been deleted.
+// non-epileptic Seizures - deleted second "epileptic seizure" within
+// Below deals with Lookup3
+Rule: DeleteLookupAfterTigDeleted
+(
+    ({TriggerDeleted})
+    ({Token@string == "-"})[0,1]
+    ({Lookup}):umls
+):match
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:match{
+  Annotation matchAnn = matchAnnots.iterator().next();//Get Annotations
+  FeatureMap preTagFM = Factory.newFeatureMap();//create new featuremap
+  preTagFM.putAll(matchAnn.getFeatures());//copy all of the features from annotation
+  Long tokenStart = matchAnnots.firstNode().getOffset();//get start of annotation
+  Long tokenEnd = matchAnnots.lastNode().getOffset();// get end of annotation
+  preTagFM.put("ruleDelete", "DeleteLookupAfterTigDeleted");//add rule name
+  AnnotationSet defaultSet = doc.getAnnotations("Bio");// select annotation set
+  gate.Utils.addAnn(defaultSet, tokenStart, tokenEnd, "LookupDeleted", preTagFM);//create annotation
+}
+
+// This deletes Lookup3 after a trigger that has been deleted.
+// non-epileptic Seizures - whole phrase kept but deleted second "epileptic seizure" within
+Rule: DeleteLookup3AfterTigDeleted
+(
+    ({TriggerDeleted})
+    ({Token@string == "-"})[0,1]
+    ({Lookup3}):umls
+):match
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:match{
+  Annotation matchAnn = matchAnnots.iterator().next();//Get Annotations
+  FeatureMap preTagFM = Factory.newFeatureMap();//create new featuremap
+  preTagFM.putAll(matchAnn.getFeatures());//copy all of the features from annotation
+  Long tokenStart = matchAnnots.firstNode().getOffset();//get start of annotation
+  Long tokenEnd = matchAnnots.lastNode().getOffset();// get end of annotation
+  preTagFM.put("ruleDelete", "DeleteLookup3AfterTigDeleted");//add rule name
+  AnnotationSet defaultSet = doc.getAnnotations("Bio");// select annotation set
+  gate.Utils.addAnn(defaultSet, tokenStart, tokenEnd, "Lookup3Deleted", preTagFM);//create annotation
+}

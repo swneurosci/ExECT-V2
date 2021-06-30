@@ -1,0 +1,26 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: DeleteNonAsTrigger
+Input: Lookup Sentence Trigger Lookup3 Token
+Options: control=all
+
+
+Rule: DeleteNonAsTrigger
+(
+({Trigger@string=~"[Nn]on", Trigger within Lookup}|{Trigger@string=~"[Nn]on", Trigger within Lookup3}):umls
+):match
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:match{
+  Annotation matchAnn = matchAnnots.iterator().next();//Get Annotations
+  FeatureMap preTagFM = Factory.newFeatureMap();//create new featuremap
+  preTagFM.putAll(matchAnn.getFeatures());//copy all of the features from annotation
+  Long tokenStart = matchAnnots.firstNode().getOffset();//get start of annotation
+  Long tokenEnd = matchAnnots.lastNode().getOffset();// get end of annotation
+  preTagFM.put("rule", "DeleteNonAsTrigger");//add rule name
+  AnnotationSet defaultSet = doc.getAnnotations("Bio");// select annotation set
+  gate.Utils.addAnn(defaultSet, tokenStart, tokenEnd, "TriggerDeleted", preTagFM);//create annotation
+}
+

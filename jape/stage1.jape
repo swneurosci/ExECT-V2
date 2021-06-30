@@ -34,3 +34,5 @@ TimeSince
 DateSince
 RemoveLookup2FromTimeSince
 RemoveTimeSinceFromAge
+DeleteNonAsTrigger
+DeleteLookupAfterTigDeleted
