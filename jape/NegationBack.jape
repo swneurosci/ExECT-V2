@@ -18,7 +18,7 @@ Rule: PutNegation
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
 umlsAnnots.iterator().next().getFeatures().put("rule","PutNegationa");
 },
-:umls.Lookup3NegChange = {rule = PutNegationa}
+:match.Lookup3NegChange = {rule = PutNegationa}
 
 //need example
 Rule: PutNegation
@@ -33,7 +33,7 @@ Rule: PutNegation
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
 umlsAnnots.iterator().next().getFeatures().put("rule","PutNegationb");
 },
-:umls.Lookup3NegChange = {rule = PutNegationb}
+:match.Lookup3NegChange = {rule = PutNegationb}
 
 // need example
 Rule: PutNegation
@@ -50,7 +50,7 @@ Rule: PutNegation
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
 umlsAnnots.iterator().next().getFeatures().put("rule","PutNegationc");
 },
-:umls.Lookup3NegChange = {rule = PutNegationc}
+:match.Lookup3NegChange = {rule = PutNegationc}
 
 // need example
 // looks like no Lookup, lookup or Lookup (negating the 3rd one)
@@ -70,7 +70,7 @@ Rule: PutNegation
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
 umlsAnnots.iterator().next().getFeatures().put("rule","PutNegationd");
 },
-:umls.Lookup3NegChange = {rule = PutNegationd}
+:match.Lookup3NegChange = {rule = PutNegationd}
 
 // why wouldn't this rule be done by ContextTagger normally?
 // need to see example
@@ -86,7 +86,7 @@ Rule: NegationBack
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
 umlsAnnots.iterator().next().getFeatures().put("rule","NegationBacka");
 },
-:umls.Lookup3NegChange = {rule = NegationBacka}
+:match.Lookup3NegChange = {rule = NegationBacka}
 
 // why wouldn't this rule be done by ContextTagger normally?
 // need to see example
@@ -103,7 +103,7 @@ Rule: NegationBack
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
 umlsAnnots.iterator().next().getFeatures().put("rule","NegationBackb");
 },
-:umls.Lookup3NegChange = {rule = NegationBackb}
+:match.Lookup3NegChange = {rule = NegationBackb}
 
 // why wouldn't this rule be done by ContextTagger normally?
 // need to see example
@@ -123,7 +123,7 @@ Rule: NegationBack
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
 umlsAnnots.iterator().next().getFeatures().put("rule","NegationBackc");
 },
-:umls.Lookup3NegChange = {rule = NegationBackc}
+:match.Lookup3NegChange = {rule = NegationBackc}
 
 // why wouldn't this rule be done by ContextTagger normally?
 // need to see example
@@ -144,4 +144,4 @@ Rule: NegationBack
 umlsAnnots.iterator().next().getFeatures().put("Negation","Negated");
 umlsAnnots.iterator().next().getFeatures().put("rule","NegationBackd");
 },
-:umls.Lookup3NegChange = {rule = NegationBackd}
+:match.Lookup3NegChange = {rule = NegationBackd}

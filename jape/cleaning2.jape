@@ -88,7 +88,7 @@ Rule: cleanLookup2
 :umls { 
   inputAS.removeAll(umlsAnnots);
 },
-:umls.Lookup3Deleted = {rule = cleanLookup2}
+:umls.Lookup2Deleted = {rule = cleanLookup2a}
 
 //removes things like age group in Lookup2 if the term is contained in a health term, i.e. Child Health
 Rule: cleanLookup2
@@ -100,7 +100,7 @@ Rule: cleanLookup2
 :umls { 
   inputAS.removeAll(umlsAnnots);
 },
-:umls.Lookup3Deleted = {rule = cleanLookup2}
+:umls.Lookup2Deleted = {rule = cleanLookup2b}
 
 //This rule removes generic seizures in Lookup3 when they are part of epileptic seizure in lookup//
 //e.g., temporal onset lobe seizures - so seizures on their own will not be annotated in Lookup3.minorType == generic//

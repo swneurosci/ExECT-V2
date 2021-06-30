@@ -2,6 +2,7 @@ Phase: RemoveTimePeriodFromAge
 Input:  TimeSince Lookup2
 Options: control=all
 
+// 139 times in 100 letters
 
 Rule: RemoveLookup2FromTimeSince
 (   
@@ -11,7 +12,16 @@ Rule: RemoveLookup2FromTimeSince
 :umls { 
   inputAS.removeAll(umlsAnnots);
 },
-:umls.Lookup2Deleted = {rule = RemoveLookup2FromTimeSince}
+:match{
+  Annotation matchAnn = matchAnnots.iterator().next();//Get Annotations
+  FeatureMap preTagFM = Factory.newFeatureMap();//create new featuremap
+  preTagFM.putAll(matchAnn.getFeatures());//copy all of the features from annotation
+  Long tokenStart = matchAnnots.firstNode().getOffset();//get start of annotation
+  Long tokenEnd = matchAnnots.lastNode().getOffset();// get end of annotation
+  preTagFM.put("rule", "RemoveLookup2FromTimeSince");//add rule name
+  AnnotationSet defaultSet = doc.getAnnotations("Bio");// select annotation set
+  gate.Utils.addAnn(defaultSet, tokenStart, tokenEnd, "Lookup2Deleted", preTagFM);//create annotation
+}
 
 
 

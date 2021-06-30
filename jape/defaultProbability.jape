@@ -17,7 +17,7 @@ Priority: 99
 -->
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Certainty","5");
-  getOnlyAnn(umlsAnnots).getFeatures().put("Rule","defrulea");
+  getOnlyAnn(umlsAnnots).getFeatures().put("ruleCert","defrulea");
 }
 
 Rule: default1a
@@ -28,7 +28,7 @@ Priority: 99
 -->
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Certainty","5");
-  getOnlyAnn(umlsAnnots).getFeatures().put("Rule","defruleb");
+  getOnlyAnn(umlsAnnots).getFeatures().put("ruleCert","defruleb");
 }
 
 
@@ -43,7 +43,7 @@ Priority: 99
 -->
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Certainty","1");
-  getOnlyAnn(umlsAnnots).getFeatures().put("Rule","defrulec");
+  getOnlyAnn(umlsAnnots).getFeatures().put("ruleCert","defrulec");
 }
 
 Rule: default2
@@ -54,12 +54,12 @@ Priority: 99
 -->
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Certainty","1");
-  getOnlyAnn(umlsAnnots).getFeatures().put("Rule","defruled");
+  getOnlyAnn(umlsAnnots).getFeatures().put("ruleCert","defruled");
 }
 
 
 
-
+// This rule is strange - looks for cases where certainty is a "SPACE"
 
 Rule: default2
 (
@@ -67,5 +67,5 @@ Rule: default2
 ):match
 -->
 :umls.Found = {
-  rule = "found"
+  CertRule = "found"
 }
