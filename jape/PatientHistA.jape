@@ -18,10 +18,11 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, 
+:item.PatientHistory = {rule = PtHistoryA1, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation, 
 AgeUnit = :item.OtherDiag.AgeUnit,
 AgeLower = :item.OtherDiag.AgeLower,
 AgeUpper = :item.OtherDiag.AgeUpper,
@@ -37,10 +38,11 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA1a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, 
+:item.PatientHistory = {rule = PtHistoryA1a,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 DayDate =:item.OtherDiag.MonthDate,
 MonthDate = :item.OtherDiag.MonthDate,
 YearDate = :item.OtherDiag.YearDate}
@@ -56,18 +58,19 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA1b, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, 
+:item.PatientHistory = {rule = PtHistoryA1b,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 TimePeriod = :item.OtherDiag.TimePeriod,
 LowerNumberOfTimePeriods = :match.OtherDiag.LowerNumberOfTimePeriods,
 UpperNumberOfTimePeriods =:match.OtherDiag.UpperNumberOfTimePeriods,
 NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
 
 
-/*other diagnosis with Date combined in OtherDiag 'he sufferd a strake in 2010' without Person 
-this could be too general but Person was made optional as for some reason GATE wasn't picking up 'He' in the text
+/*other diagnosis with Date combined in OtherDiag "he sufferd a strake in 2010" without Person 
+this could be too general but Person was made optional as for some reason GATE wasnt picking up "He" in the text
 altho some other optional Lookup and Perosn*/
 
 Rule: PtHistoryA1c  
@@ -83,10 +86,11 @@ Priority: 100
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA1c, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA1c,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 DayDate =:item.OtherDiag.MonthDate,
 MonthDate = :item.OtherDiag.MonthDate,
 YearDate = :item.OtherDiag.YearDate}
@@ -104,10 +108,11 @@ Priority: 99
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA2, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, 
+:item.PatientHistory = {rule = PtHistoryA2,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 YearDate = :match.DateSince.YearDate}
 
 Rule: PtHistoryA3 /*person  (who) onset OtherDiag from age of*/
@@ -122,10 +127,11 @@ Priority: 99
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA3, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA3,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 Age = :item.OtherDiag.Age,
 AgeUnit = :item.OtherDiag.AgeUnit,
 AgeLower = :item.OtherDiag.AgeLower,
@@ -144,10 +150,11 @@ Priority: 99
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA3a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA3a,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 Age = :item.OtherDiag.Age,
 AgeUnit = :item.OtherDiag.AgeUnit,
 AgeLower = :item.OtherDiag.AgeLower,
@@ -163,10 +170,11 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA4,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 DayDate =:item.OtherDiag.MonthDate,
 MonthDate = :item.OtherDiag.MonthDate,
 YearDate =:item.OtherDiag.YearDate}
@@ -183,10 +191,11 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA4a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA4a,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 TimePeriod = :item.OtherDiag.TimePeriod,
 NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
 
@@ -199,10 +208,11 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA4ab, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA4ab,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 DayDate =:item.OtherDiag.DayDate,
 MonthDate = :item.OtherDiag.MonthDate,
 YearDate =:item.OtherDiag.YearDate}
@@ -217,10 +227,11 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA4ab, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA4ab,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 TimePeriod = :item.OtherDiag.TimePeriod,
 NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
 
@@ -237,10 +248,11 @@ Priority: 99
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA4b, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, 
+:item.PatientHistory = {rule = PtHistoryA4b,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 TimePeriod = :match.TimeSince.time-unit,
 NumberOfTimePeriods =:match.TimeSince.value,
 PointInTime = "" }
@@ -257,10 +269,11 @@ Priority: 98
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA4,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 TimePeriod = :match.TimeSince.time-unit,
 NumberOfTimePeriods =:match.TimeSince.value}
 
@@ -275,10 +288,11 @@ Priority: 100
 	 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA6, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, 
+:item.PatientHistory = {rule = PtHistoryA6,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 AgeUnit = :match.Age.AgeUnit,
 Age = :item.OtherDiag.Age,
 AgeLower = :match.Age.AgeLower,
@@ -296,10 +310,11 @@ Priority: 90
 	({PointInTime})
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA7, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA7,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 MonthDate =:match.Lookup2.month,
 PointInTime = :match.PointInTime.Since}
 
@@ -315,10 +330,11 @@ Priority: 90
 	
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA7a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA7a,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 MonthDate =:match.PartialDate.month,
 PointInTime = :match.PointInTime.Since}
 
@@ -332,16 +348,17 @@ Priority: 90
 	{PointInTime}
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA7b, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA7b,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 PointInTime = :match.PointInTime.Since}
 
 /*time since is too far to be a part of OtherDiag - "history x yeaes of Person  experiencing seizures"*/
 Rule: PtHistoryA8  
 Priority: 90
-
+// Why empty yeardate?
 (   
 	{TimeSince}
 	{Person}
@@ -350,10 +367,11 @@ Priority: 90
 	({OtherDiag}):item
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA8, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, 
+:item.PatientHistory = {rule = PtHistoryA8,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 YearDate = "",
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods =:match.TimeSince.NumberOfTimePeriods}
@@ -372,10 +390,11 @@ Priority: 100
 
 ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA8a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA8a, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 AgeUnit = :match.Age.AgeUnit,
 Age = :item.OtherDiag.Age,
 AgeLower = :match.Age.AgeLower,
@@ -383,7 +402,9 @@ AgeUpper = :match.Age.AgeUpper}
 
 Rule: PtHistoryA8b   /*when history is of episodes that started on X date  but too far to be captured by OtherDiag with partial date */
 Priority: 90
-
+// what about daydate and month date
+// Also if stuff is too far away from otherDiag other diag should be improved not these rules
+// having rules like this make otherDiag useless
 (   
 	({Person})?
     {Lookup2.majorType == historic , Lookup2.minorType == symptoms}
@@ -391,10 +412,11 @@ Priority: 90
 	{DateSince}
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA8b, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, 
+:item.PatientHistory = {rule = PtHistoryA8b,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 YearDate = :match.DateSince.YearDate}
 
 /*Lady who had Lookup3 (such as normal birth)and had OtherDiag  with age range*/
@@ -409,10 +431,11 @@ Priority: 100
 	({OtherDiag.rule == OtherDiagAge}):item
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA9, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, 
+:item.PatientHistory = {rule = PtHistoryA9,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 AgeUnit = :match.OtherDiag.AgeUnit,
 Age = :item.OtherDiag.Age,
 AgeLower = :match.OtherDiag.AgeLower,
@@ -421,7 +444,7 @@ AgeUpper = :match.OtherDiag.AgeUpper}
 
  Rule: PtHistoryA10  /*as in ...difficult to say whether these are / he is having are non-epileptic seizures*/
 Priority: 80
-
+// whats wrong with just person otherDiag for this rule? "He is having X"
 (   
 	
 	{Lookup2.minorType == probability}
@@ -431,10 +454,11 @@ Priority: 80
 
 ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA10, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty} 
+:item.PatientHistory = {rule = PtHistoryA10,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,} 
 
 
 Rule: PtHistoryA11
@@ -450,16 +474,17 @@ Priority: 100
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA11, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA11,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
 AgeUpper = :match.Age.AgeUpper}
 
-
+//Day date and month date
 Rule: PtHistoryA12
 Priority: 100
 
@@ -472,12 +497,13 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA12, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA12, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 YearDate = :match.DateSince.YearDate}
-
+// day date and month date
 Rule: PtHistoryA12b
 Priority: 100
 
@@ -490,10 +516,11 @@ Priority: 100
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistory12, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistory12, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 YearDate = :match.DateSince.YearDate}
 
 Rule: PtHistoryA13
@@ -507,10 +534,11 @@ Priority: 100
   
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistory13, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, 
+:item.PatientHistory = {rule = PtHistory13, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 AgeUnit = :match.OtherDiag.AgeUnit,
 AgeLower = :match.OtherDiag.AgeLower,
 AgeUpper =:match.OtherDiag.AgeUpper}
@@ -526,10 +554,11 @@ Priority: 100
  
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA13a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA13a, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 TimePeriod = :item.OtherDiag.TimePeriod,
 NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
 
@@ -545,10 +574,11 @@ Priority: 100
  
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA13b, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA13b, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 TimePeriod = :item.OtherDiag.TimePeriod,
 NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
 
@@ -565,10 +595,11 @@ Priority: 100
    
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA13c, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA13c, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 PointInTime = :match.PointInTime.Since,
 MonthDate = :match.DateSince.MonthDate,
 YearDate = :match.DateSince.YearDate}
@@ -586,10 +617,11 @@ Priority: 98
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA14, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA14, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 DayDate =:item.DateSince.DayDate,
 MonthDate =:match.DateSince.MonthDate,
 YearDate = :match.DateSince.YearDate}
@@ -608,10 +640,11 @@ Priority: 50
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA14a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA14a, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 DayDate =:item.DateSince.DayDate,
 MonthDate =:match.DateSince.MonthDate,
 YearDate = :match.DateSince.YearDate}
@@ -627,10 +660,11 @@ Priority: 98
 	   
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA15, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA15, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 MonthDate =:match.DateSince.MonthDate,
 YearDate = :match.DateSince.YearDate} 
 
@@ -646,15 +680,16 @@ Priority: 100
 	  
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA16, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, 
+:item.PatientHistory = {rule = PtHistoryA16, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 TimePeriod = :match.TimeSince.time-unit,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
-/*sometimes Person doesn't get picked up by GATE ! "She had head injury at the age of 5 years"  */
-
+/*sometimes Person does not get picked up by GATE ! "She had head injury at the age of 5 years"  */
+// this worked for me....
 Rule: PtHistoryA17  
 Priority: 100
 (   
@@ -666,10 +701,11 @@ Priority: 100
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA17, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, 
+:item.PatientHistory = {rule = PtHistoryA17, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 AgeUnit =:match.OtherDiag.AgeUnit,
 Age =:match.OtherDiag.Age,
 AgeLower = :match.OtherDiag.AgeLower,
@@ -688,10 +724,11 @@ Priority: 98
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA19, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA19, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 TimePeriod = :match.OtherDiag.TimePeriod,
 NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods}
 
@@ -709,10 +746,11 @@ Priority: 99
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA20, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+:item.PatientHistory = {rule = PtHistoryA20, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}
 
 Rule: PtHistoryA20a //Opinion and otherdiag after some lookups ...//
 Priority: 99
@@ -727,10 +765,11 @@ Priority: 99
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA20a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+:item.PatientHistory = {rule = PtHistoryA20a, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}
 
 Rule: PtHistoryA21
 Priority: 98
@@ -743,10 +782,11 @@ Priority: 98
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA21, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA21, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 TimePeriod = :match.timePeriod.time-unit,
 YearDate =:match.Numeric.value}
 
@@ -764,10 +804,11 @@ Priority: 99
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA22, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+:item.PatientHistory = {rule = PtHistoryA22, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}
 
 
 
@@ -785,10 +826,11 @@ Priority: 80
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA23, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryA23, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 MonthDate =:match.OtherDiag.MonthDate,
 YearDate = :match.OtherDiag.YearDate}
 
@@ -806,11 +848,12 @@ Priority: 70
 	({!Lookup2})
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA24, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}  
-
+:item.PatientHistory = {rule = PtHistoryA24,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}  
+// Easier to move opinion phrases out of lookup2 into own input
 Rule: PtHistoryA24b  /*simple and dengerous : Opinion (possible) learning difficulties*/
 Priority: 80
 
@@ -824,11 +867,13 @@ Priority: 80
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA24b, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+:item.PatientHistory = {rule = PtHistoryA24b,//PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}
 
+// why not any person.. followed by otherDiag
 Rule: PtHistoryA24c  /*her last seizure / his treatment for- for example*/
 Priority: 70
 
@@ -841,12 +886,13 @@ Priority: 70
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA24c, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+:item.PatientHistory = {rule = PtHistoryA24c, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}
 
-
+// remove refering from lookup2
 Rule: PtHistoryA25  /*refering this person for...*/
 Priority: 70
 
@@ -860,10 +906,11 @@ Priority: 70
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA25, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+:item.PatientHistory = {rule = PtHistoryA25, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}
 
 
 Rule: PtHistoryA26  /*He has had depression  /  possible seizure*/
@@ -880,8 +927,9 @@ Priority: 70
 	({!NewLine})
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA26, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}  
+:item.PatientHistory = {rule = PtHistoryA26, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}  
 

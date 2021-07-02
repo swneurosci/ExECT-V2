@@ -9,7 +9,7 @@ Options: control=Brill
 
 /*this is to capture a second date for an event already captured in MedicalHistory1
 e.g. History of MI in 2010 and 2015 - this should capture 2015*/
-
+// What if the date was Jan 2010 and Feb 2015?
 Rule: MedicalHistoryB
 
 (   
@@ -19,8 +19,9 @@ Rule: MedicalHistoryB
 	({DateSince}):a
  ):match  
  -->
-:item.PatientHistory = {rule = MedicalHistoryB, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = MedicalHistoryB, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 YearDate = :a.DateSince.YearDate} 

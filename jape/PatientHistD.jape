@@ -24,10 +24,11 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryD1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty, 
+:item.PatientHistory = {rule = PtHistoryD1, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 AgeUnit =:match.timePeriod.time-unit,
 Age =:match.Number.value}
 
@@ -59,14 +60,15 @@ Priority: 100
 	({Person})?
 	{OtherDiag}
     {Lookup2}
-	({OtherDiag }):item
+	({OtherDiag}):item
     
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryD3, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+:item.PatientHistory = {rule = PtHistoryD3, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}
 
 Rule: PtHistoryD4  /*condition of interest then time of onset in the next sentence*/
 Priority: 100
@@ -81,10 +83,11 @@ Priority: 100
 	{TimeSince}
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryD4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = PtHistoryD4, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 TimePeriod = :match.TimeSince.TimePeriod,
 LowerNumberOfTimePeriods = :match.TimeSince.LowerNumberOfTimePeriods,
 UpperNumberOfTimePeriods = :match.TimeSince.UpperNumberOfTimePeriods}

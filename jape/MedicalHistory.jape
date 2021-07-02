@@ -15,10 +15,11 @@ Rule: MedicalHistory1
 	   
  ):match  
  -->
-:item.PatientHistory = {rule = MedicalHistory1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = MedicalHistory1, //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 DayDate = :match.OtherDiag.DayDate,
 MonthDate =:match.OtherDiag.MonthDate,
 YearDate = :match.OtherDiag.YearDate, 
@@ -39,10 +40,11 @@ Rule: MedicalHistory2
 	   
  ):match  
  -->
-:item.PatientHistory = {rule = MedicalHistory2, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = "Past", 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = MedicalHistory2,  //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 DayDate = :match.OtherDiag.DayDate,
 MonthDate =:match.OtherDiag.MonthDate,
 YearDate = :match.OtherDiag.YearDate, 
@@ -65,10 +67,11 @@ Rule: MedicalHistory3
     
  ):match  
  -->
-:item.PatientHistory = {rule = MedicalHistory3, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = "Past", 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = MedicalHistory3,  //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 DayDate = :match.OtherDiag.DayDate,
 MonthDate =:match.OtherDiag.MonthDate,
 YearDate = :match.OtherDiag.YearDate, 
@@ -91,10 +94,11 @@ Rule: MedicalHistory4
     
  ):match  
  -->
-:item.PatientHistory = {rule = MedicalHistory4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = "Past", 
-Certainty = :item.OtherDiag.Certainty,
+:item.PatientHistory = {rule = MedicalHistory4,  //PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
 DayDate = :match.OtherDiag.DayDate,
 MonthDate =:match.OtherDiag.MonthDate,
 YearDate = :match.OtherDiag.YearDate, 
