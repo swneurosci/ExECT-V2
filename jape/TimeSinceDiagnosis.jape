@@ -18,9 +18,9 @@ Priority: 99
  ):match  
  -->
 :item.WhenDiagnosed = {rule = TimeSinceDiagnosis1 , OnsetType = "time_since_diagnosis",
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+// PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value}
 
@@ -41,9 +41,9 @@ Priority: 99
  ):match  
  -->
 :item.WhenDiagnosed = {rule = TimeSinceDiagnosis2 , OnsetType = "time_since_diagnosis",
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+// PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation,
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value}
 
