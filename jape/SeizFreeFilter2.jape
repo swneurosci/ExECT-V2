@@ -7,12 +7,12 @@ Rule: SeizureFrequencySecondFilter
     ({SeizureFrequencyDriving within SeizureFrequencyNotDriving})
 ):match
 -->
-:match.SeizureFrequency = { rule2 = "SecondFilter", rule = :match.SeizureFrequencyDriving.rule, CUI = :match.SeizureFrequencyDriving.CUI, string = :match.SeizureFrequencyDriving@string, TimePeriod = :match.SeizureFrequencyDriving.TimePeriod,
-NumberOfTimePeriods = :match.SeizureFrequencyDriving.NumberOfTimePeriods, NumberOfSeizures  = :match.SeizureFrequencyDriving.NumberOfSeizures ,
+:match.SeizureFrequency = { rule2 = "SecondFilter", rule = :match.SeizureFrequencyDriving.rule, CUI = :match.SeizureFrequencyDriving.CUI, TimePeriod = :match.SeizureFrequencyDriving.TimePeriod,
+NumberOfTimePeriods = :match.SeizureFrequencyDriving.NumberOfTimePeriods, NumberOfSeizures  = :match.SeizureFrequencyDriving.NumberOfSeizures,
 LowerNumberOfSeizures  = :match.SeizureFrequencyDriving.LowerNumberOfSeizures, UpperNumberOfSeizures  = :match.SeizureFrequencyDriving.UpperNumberOfSeizures,
 YearDate = :match.SeizureFrequencyDriving.YearDate, DayDate = :match.SeizureFrequencyDriving.DayDate, MonthDate = :match.SeizureFrequencyDriving.MonthDate, string = :match.SeizureFrequencyDriving.string,
-SinceOrDuration = :match.SeizureFrequencyDriving.SinceOrDuration, Certainty = :match.SeizureFrequencyDriving.Certainty, Negation = :match.SeizureFrequencyDriving.Negation,
-AgeUnit = :match.SeizureFrequencyDriving.AgeUnit, Age = :match.SeizureFrequencyDriving.Age, AgeLower = :match.SeizureFrequencyDriving.AgeLower, AgeUpper = :match.SeizureFrequencyDriving.AgeUpper,
+SinceOrDuration = :match.SeizureFrequencyDriving.SinceOrDuration, AgeUnit = :match.SeizureFrequencyDriving.AgeUnit, Age = :match.SeizureFrequencyDriving.Age,
+AgeLower = :match.SeizureFrequencyDriving.AgeLower, AgeUpper = :match.SeizureFrequencyDriving.AgeUpper,
 PointInTime = :match.SeizureFrequencyDriving.PointInTime, LowerNuberOfTimePeriods = :match.SeizureFrequencyDriving.LowerNuberOfTimePeriods, UpperNuberOfTimePeriods = :match.SeizureFrequencyDriving.UpperNuberOfTimePeriods}
 
 
