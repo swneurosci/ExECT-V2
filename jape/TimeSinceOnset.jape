@@ -20,9 +20,10 @@ Priority: 100
  -->
 
 :item.Onset = {rule = TimeSinceOnset1 , OnsetType = "time_since_episodes_started",
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
@@ -40,9 +41,10 @@ Priority: 99
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset2 , OnsetType = "time_since_episodes_started",
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
@@ -59,9 +61,10 @@ Priority: 99
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset3 , OnsetType = "time_since_episodes_started",
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, 
-STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
@@ -79,9 +82,10 @@ Priority: 99
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset4, OnsetType = "time_since_episodes_started", 
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
@@ -96,9 +100,10 @@ Priority: 98
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset5, OnsetType = "time_since_episodes_started", 
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
@@ -115,9 +120,10 @@ Priority: 98
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset6, OnsetType = "time_since_episodes_started", 
-PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, TUI = :match.Lookup.TUI,
-STY = :match.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :match.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
@@ -133,9 +139,10 @@ Priority: 99
 ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset7, OnsetType = "time_since_episodes_started", 
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
@@ -152,9 +159,10 @@ Priority: 98
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset8, OnsetType = "time_since_episodes_started", 
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
@@ -175,9 +183,10 @@ Priority: 98
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset9, OnsetType = "time_since_episodes_started", 
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
@@ -192,9 +201,10 @@ Priority: 100
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset10 , OnsetType = "time_since_episodes_started",
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
@@ -212,9 +222,10 @@ Priority: 100
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset11 , OnsetType = "time_since_episodes_started",
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, 
-STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}	
     
@@ -230,8 +241,10 @@ Priority: 100
  ):match  
  -->
 :item.Onset = {rule = TimeSinceOnset12, OnsetType = "time_since_episodes_started", 
-PREF =:item.Lookup.PREF, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
@@ -253,8 +266,9 @@ Priority: 100
  -->
 
 :item.Onset = {rule = TimeSinceOnset13 , OnsetType = "time_since_episodes_started",
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}

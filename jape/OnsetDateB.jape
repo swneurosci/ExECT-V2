@@ -21,9 +21,10 @@ Priority: 100
  ):match  
  -->
 :item.Onset = {rule = OnsetDateB1, OnsetType = "date_of_onset", 
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
-STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
@@ -47,8 +48,10 @@ Priority: 100
  ):match  
  -->
 :item.Onset = {rule = OnsetDateB2, OnsetType = "date_of_onset", 
-PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
@@ -69,9 +72,10 @@ Priority: 100
  ):match  
  -->
 :item.Onset = {rule = OnsetDateB4, OnsetType = "date_of_onset", 
-PREF = :item.Looup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
-Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality,
-Certainty = :item.Lookup.Certainty,
+CUI = :item.Lookup.CUI,
+// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}

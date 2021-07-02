@@ -4,7 +4,7 @@ Options: control=appelt
 
 /*Conj should help to stop age of person being captured as age of onset - as theu are often in one sentence*/
 
-
+// All rules commented out
 	
 /*
 Rule: onsetAgeA2
