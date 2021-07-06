@@ -96,11 +96,11 @@ Priority: 100
 
 (   
 	{Person}
-    ({Lookup2.majorType == historic ,Lookup2.type == birth }):item 
+    ({Lookup2.majorType == historic ,Lookup2.type == birth }
     ({History})?
     ({Lookup2})?
     ({History})?
-    {Lookup2.minorType == gestation, Lookup2.CUI == C0233324}
+    {Lookup2.minorType == gestation, Lookup2.CUI == C0233324}):item 
     
     
     
