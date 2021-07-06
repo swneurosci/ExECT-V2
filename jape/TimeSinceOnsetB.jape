@@ -1,5 +1,5 @@
 Phase: TimeSinceOnsetB
-Input: Lookup3 Lookup Person  Numeric TimeSince timePeriod timeElapsed Lookup2 Split age Frequency
+Input: Lookup3 Lookup Person  Numeric TimeSince timePeriod timeElapsed Lookup2 Split age Frequency Conj
 //frequency is here to stop the phrases relating to frequency rather than an onset being annotated//
 
 //some of these rules go over two sentences, linking generic episodes with epilepsy onset*/
