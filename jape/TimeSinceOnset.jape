@@ -1,5 +1,5 @@
 Phase: TimeSinceOnset
-Input: Lookup3 Lookup Person Sentence TimeSince Lookup2 Split DiagnosisTriggers listPoint PHistBlock Pronouns
+Input: Lookup3 Lookup Person Sentence TimeSince Lookup2 Split DiagnosisTriggers listPoint PHistBlock Pronouns NumberRange Frequency
  /*PHistBlock should stop the rules picking up frequency e.g. once in 3 month - in 3 months is TimeSince */
 
 Options: control=appelt		
@@ -33,7 +33,7 @@ Priority: 99
 
 (   
     {Person}
-	{Lookup2.language == onset,Lookup2.type != diagnosed }
+	{Lookup2.language == onset,Lookup2.type != diagnosed,Lookup2.type == began }
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.minorType == Disease}):item
 	({Lookup2.type != another})?
 	{TimeSince}
@@ -53,10 +53,11 @@ Priority: 99
 
 (   
     {Person}
-	({Lookup2.type == historic})?
-	({Lookup2.language == onset,Lookup2.type != diagnosed })
-	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
-	{TimeSince}
+	({Pronouns.type == relative})?
+	({Lookup2.majorType == historic})?
+	(({Lookup2.language == onset}|{Lookup2.language == experience, Lookup2.type != diagnosed})
+	{Lookup.majorType == umls , Lookup.Negation == Affirmed}
+	{TimeSince}):item
 		
  ):match  
  -->
