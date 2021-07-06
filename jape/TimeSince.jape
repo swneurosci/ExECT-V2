@@ -1,5 +1,5 @@
 Phase: TimeSince
-Input: timeElapsed timePeriod age Sentence Trigger Token NumberRange
+Input: timeElapsed timePeriod age Sentence Trigger Token NumberRange Lookup3
 Options: control=appelt
 
 //Age is there to stop annotating Age as time since, so is the Token//
@@ -45,7 +45,7 @@ Priority: 90
 (  
 	
 	{NumberRange.majorType != frequency}
-    ({Token.string =~ month}|{Token.string =~ week}|{Token.string =~ year}|{Token.string =~ week})
+    {timePeriod.string =~ month}|{timePeriod.string =~ week}|{timePeriod.string =~ year}|{timePeriod.string =~ week}
 	
  ):match  
  -->
