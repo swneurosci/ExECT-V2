@@ -4,6 +4,7 @@ Phase: ModifyLookup
 Input: Lookup2 Lookup Lookup3 Sentence NegConj
 Options: control=appelt
 
+// why only negConj, what about Conj?
 
 Rule: probdrift1
 Priority: 99
@@ -17,7 +18,7 @@ Priority: 99
 :umls {
   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
-    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","probdrift");
+    getOnlyAnn(umlsAnnots).getFeatures().put("CertRule","probdrift");
 }
 
 Rule: probdrift1
@@ -36,5 +37,5 @@ Priority: 99
 :umls {
   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
-    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","probdrift");
+    getOnlyAnn(umlsAnnots).getFeatures().put("CertRule","probdrift");
 }

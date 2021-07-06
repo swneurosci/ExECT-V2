@@ -14,32 +14,35 @@ Rule: probRuleA
 Priority: 100
 (
 	({Lookup2.minorType == probability}):prob
+  ({Lookup2.minorType != probability})[0,1]
 	({Lookup.majorType == umls}):umls
 ):match
 -->
 :umls {
   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
-    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruleA");
+    getOnlyAnn(umlsAnnots).getFeatures().put("CertRule","ruleA");
 }
 
 Rule: probRuleB
 Priority: 100
 (
 	({Lookup2.minorType == probability}):prob
+  ({Lookup2.minorType != probability})[0,1]
   ({Lookup3.majorType == umls}):umls
 ):match
 -->
 :umls {
   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
-    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruleB");
+    getOnlyAnn(umlsAnnots).getFeatures().put("CertRule","ruleB");
 }
 
 Rule: probRuleC
 Priority: 99
 (
 	({Lookup2.minorType == probability}):prob
+  ({Lookup2.minorType != probability})[0,1]
 	({Lookup3.majorType == umls})+
   ({Lookup3.majorType == umls}):umls
 ):match
@@ -47,42 +50,45 @@ Priority: 99
 :umls {
   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
-    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruleC");
+    getOnlyAnn(umlsAnnots).getFeatures().put("CertRule","ruleC");
 }
-/* These two rules were causing problems, might work if control was appelt not brill 
-Rule: probRuleD
-Priority: 100
-(
-  ({Lookup3.majorType == umls , Lookup3.PREF == seizure}):umls
-	({Lookup2.minorType == probability}):prob
+// /* These two rules were causing problems, might work if control was appelt not brill 
+// Rule: probRuleD
+// Priority: 100
+// (
+//   ({Lookup3.majorType == umls , Lookup3.PREF == seizure}):umls
+//   ({Lookup2.minorType != probability})[0,1]
+// 	({Lookup2.minorType == probability}):prob
   
-):match
--->
-:umls {
-  getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
-    getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
-    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruleD");
-}
+// ):match
+// -->
+// :umls {
+//   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
+//     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
+//     getOnlyAnn(umlsAnnots).getFeatures().put("CertRule","ruleD");
+// }
 
-Rule: probRuleD
-Priority: 100
-(
-  ({Lookup.majorType == umls}):umls
-	({Lookup2.minorType == probability}):prob
+// Rule: probRuleD
+// Priority: 100
+// (
+//   ({Lookup.majorType == umls}):umls
+//   ({Lookup2.minorType != probability})[0,1]
+// 	({Lookup2.minorType == probability}):prob
   
-):match
--->
-:umls {
-  getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
-    getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
-    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruleD");
-}
-*/
+// ):match
+// -->
+// :umls {
+//   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
+//     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
+//     getOnlyAnn(umlsAnnots).getFeatures().put("CertRule","ruleD");
+// }
+// */
 
 Rule: probRuleE
 Priority: 99
 (
 	({Lookup2.minorType == probability}):prob
+  ({Lookup2.minorType != probability})[0,1]
 	({Lookup.majorType == umls})+
   ({Lookup.majorType == umls}):umls
 ):match
@@ -90,7 +96,7 @@ Priority: 99
 :umls {
   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
-    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","ruleE");
+    getOnlyAnn(umlsAnnots).getFeatures().put("CertRule","ruleE");
 }
 
 
@@ -98,20 +104,20 @@ Priority: 99
 to lookup3 within it. The main Lookup has a correct certainty  but the inner one hasn't - it gets default
 certainty (if this is switched on) or no certainty - which could be a better option here, Certainty  == "3" was an experiment...) */
 
-/*
+// /*
 
-Rule:probdrift
-Priority:99
-(
-  ({Lookup2.minorType == probability}):prob
-  ({Lookup3 within {lookup3.Certainty == "3" }}):umls
+// Rule:probdrift
+// Priority:99
+// (
+//   ({Lookup2.minorType == probability}):prob
+//   ({Lookup3 within {lookup3.Certainty == "3" }}):umls
 
-):match
--->
-:umls {
-  getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
-    getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
-    getOnlyAnn(umlsAnnots).getFeatures().put("Rule","probdrift");
-} 
+// ):match
+// -->
+// :umls {
+//   getOnlyAnn(umlsAnnots).getFeatures().put("Certainty", 
+//     getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
+//     getOnlyAnn(umlsAnnots).getFeatures().put("CertRule","probdrift");
+// } 
 
-*/
+// */
