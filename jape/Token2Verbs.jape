@@ -1,22 +1,12 @@
 Phase: Verbs
 Input: Token
 Options: control=all
-
+// Fires 6 times
+// Now only once
 Rule: Tokens2Verbs
 (
-{Token.category == "VB", Token@string != "have"} |
-{Token.category == "VB", Token@string != "show"} |
-{Token.category == "VB", Token@string != "suggest"} | 
-{Token.category == "VB", Token@string != "imply"} |
-{Token.category == "VB", Token@string != "report"} |
-{Token.category == "VB", Token@string != "confirm"} |
-{Token.category == "VBG", Token@string != "have"} |
-{Token.category == "VBG", Token@string != "show"} |
-{Token.category == "VBG", Token@string != "suggest"} | 
-{Token.category == "VBG", Token@string != "imply"} |
-{Token.category == "VBG", Token@string != "report"} |
-{Token.category == "VBG", Token@string != "confirm"}
-
+{Token.category == "VB", Token@string != "have", Token@string != "show", Token@string != "suggest", Token@string != "imply", Token@string != "report", Token@string != "confirm"}|
+{Token.category == "VBG", Token@string != "have", Token@string != "show", Token@string != "suggest", Token@string != "imply", Token@string != "report", Token@string != "confirm"}
 ):match
 -->
 :match.Verbs = {rule = Token2Verbs, string = :match.Token@string, category = :match.Token.category}
