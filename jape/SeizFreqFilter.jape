@@ -1,10 +1,11 @@
 Phase: SeizureFrequency
 Input: SeizureFrequency11 ContextPrescription Sentence
 Options: control=appelt
-
+// Doesn't actually do anything after this...
 Rule: SeizureFrequencyFilter1
 (
-    ({SeizureFrequency11 notContains ContextPrescription, SeizureFrequency11.SeizureType != "Seizure free"})
+    // ({SeizureFrequency11 notContains ContextPrescription, SeizureFrequency11.SeizureType != "Seizure free"})
+    ({SeizureFrequency11.SeizureType != "Seizure free"})
 ):match
 -->
 :match.SeizureFrequency1 = { rule2 = "filter", rule = :match.SeizureFrequency11.rule, CUI = :match.SeizureFrequency11.CUI, TimePeriod = :match.SeizureFrequency11.TimePeriod,

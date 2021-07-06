@@ -204,6 +204,17 @@ Priority: 100
 :match.SeizureChange = { rule = "SeizureChange3d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 PointInTime = :match.PointInTime.Since} 
 
+//since last year reoccurance of his seizures 
+Rule: SeizureChange3d
+Priority: 100 
+( 
+    ({PointInTime})
+    ({Frequency})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange3d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+PointInTime = :match.PointInTime.Since} 
 
 /* 
 *No Time period 
@@ -250,6 +261,7 @@ Priority: 99
 /* Lookup is contained within the Frequency "doesnt feel her seizure frequency has changed" */
 
 //DOESN'T GIVE NEAGTION OR CERT
+//increase in seizure frequency in the last 5 months
 Rule: SeizureChange5
 Priority: 99 
 ( 
@@ -261,6 +273,37 @@ Priority: 99
 --> 
 :match.SeizureChange = { rule = "SeizureChange5", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, 
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2}
+
+
+//DOESN'T GIVE NEAGTION OR CERT
+// Last year he had a increase in seizure frequency
+Rule: SeizureChange6
+Priority: 95
+( 
+    ({PointInTime})
+    ({Frequency.ContainsLookUp == Yes})
+
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange6", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since}
+
+
+
+//DOESN'T GIVE NEAGTION OR CERT
+// Solo rule like this is risky
+//increase in seizure frequency
+Rule: SeizureChange6
+Priority: 90
+( 
+    ({Frequency.ContainsLookUp == Yes})
+
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange7", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2}
+
 
 
 
