@@ -14,7 +14,8 @@ Priority: 100
 (   
 	({Person})?
   	({Lookup2.language == onset})
-	({OtherDiag.rule == OtherDiagAge }):item
+	({Person})
+	({OtherDiag}):item
     
  ):match  
  -->

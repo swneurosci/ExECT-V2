@@ -10,7 +10,7 @@ Rule: OtherDiagListC   /*this captures a second Other diag when the 1 one had tw
 Priority: 100
 // what about day date?
 (   
-	({DiagnosisTriggers.type == Diagnosis})
+	({DiagnosisTriggers.type == diagnosis})
     {listPoint}
     ({MedicalHistory})?
     ({DiagnosisTriggers})?
@@ -35,7 +35,7 @@ Rule: OtherDiagListC1
 Priority: 100
 
 (   
-    ({DiagnosisTriggers.type == Diagnosis})
+    ({DiagnosisTriggers.type == diagnosis})
     {listPoint}
     {listPoint}
     {OtherDiag}
@@ -61,7 +61,7 @@ Rule: OtherDiagListC2
 Priority: 90
 
 (   	
-({DiagnosisTriggers.type == Diagnosis})
+({DiagnosisTriggers.type == diagnosis})
 	{listPoint}
     ({MedicalHistory})?
     ({DiagnosisTriggers})?
@@ -83,7 +83,7 @@ Rule: OtherDiagListC3
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == Diagnosis})
+	({DiagnosisTriggers.type == diagnosis})
     {listPoint}
     ({listPoint})?
 	{OtherDiag}
@@ -108,7 +108,7 @@ Rule: OtherDiagListC4
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == Diagnosis})
+	({DiagnosisTriggers.type == diagnosis})
     {listPoint}
 	({OtherDiag})
     {listPoint}
@@ -128,7 +128,7 @@ Rule: OtherDiagListC5
 Priority: 100
 
 (   
-({DiagnosisTriggers.type == Diagnosis})
+({DiagnosisTriggers.type == diagnosis})
     {listPoint}
     ({listPoint})?
 	({OtherDiag})
@@ -148,7 +148,7 @@ Rule: OtherDiagListC6
 Priority: 100
 
 (   
-    ({DiagnosisTriggers.type == Diagnosis})
+    ({DiagnosisTriggers.type == diagnosis})
     {listPoint}
     {listPoint}
     {OtherDiag}

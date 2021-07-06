@@ -9,8 +9,8 @@ Options: control=appelt
 Rule: OtherDiagListA1
 Priority: 100
 
-(   ({DiagnosisTriggers.type == Diagnosis})
-    {listPoint}
+(   ({DiagnosisTriggers.type == diagnosis})
+    ({listPoint})
 	({OtherDiag.rule == OtherDiagDate}):item  
 	
  ):match  
@@ -25,7 +25,7 @@ MonthDate =:match.OtherDiag.MonthDate}
 Rule: OtherDiagListA2
 Priority: 100
 
-(   ({DiagnosisTriggers.type == Diagnosis})
+(   ({DiagnosisTriggers.type == diagnosis})
     {listPoint}
 	{listPoint}
 	({OtherDiag}):item  
@@ -45,7 +45,7 @@ PointInTime =:match.OtherDiag.PointInTime}
 Rule: OtherDiagListA2a  //as abobve but date - When a date is given but separated by a phrase//
 Priority: 100
 
-(   ({DiagnosisTriggers.type == Diagnosis})
+(   ({DiagnosisTriggers.type == diagnosis})
     {listPoint}
 	{listPoint}
 	({OtherDiag}):item  
@@ -64,7 +64,7 @@ Rule: OtherDiagListA3
 Priority: 90
 
 (   
-	({DiagnosisTriggers.type == Diagnosis})
+	({DiagnosisTriggers.type == diagnosis})
 	{listPoint}
 	({DiagnosisTriggers.majorType == diagnosis})
 	({OtherDiag}):item
@@ -87,7 +87,7 @@ Rule: OtherDiagListA4
 Priority: 90
 
 (   
-	({DiagnosisTriggers.type == Diagnosis})
+	({DiagnosisTriggers.type == diagnosis})
 	{listPoint}
 	({DiagnosisTriggers}|{MedicalHistory})?
 	({listPoint})?
@@ -110,7 +110,7 @@ Rule: OtherDiagListA5
 Priority: 90
 
 (   
-	({DiagnosisTriggers.type == Diagnosis})
+	({DiagnosisTriggers.type == diagnosis})
    {listPoint}
 	{listPoint}
 	({OtherDiag.rule == OtherDiagDate}):item
@@ -128,7 +128,7 @@ Rule: OtherDiagListA7
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == Diagnosis}|{MedicalHistory})
+	({DiagnosisTriggers.type == diagnosis}|{MedicalHistory})
     {listPoint}
 	({listPoint})*
 	({OtherDiag}):item
@@ -152,7 +152,7 @@ Rule: OtherDiagListA8
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == Diagnosis})
+	({DiagnosisTriggers.type == diagnosis})
     {listPoint}
 	({OtherDiag}):item
     ({Range})
@@ -169,7 +169,7 @@ Rule: OtherDiagListA9
 Priority: 90
 
 (   
-	({DiagnosisTriggers.type == Diagnosis})
+	({DiagnosisTriggers.type == diagnosis})
 	({endList})?
     {listPoint}
 	({OtherDiag}):item

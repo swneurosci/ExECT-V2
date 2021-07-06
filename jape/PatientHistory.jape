@@ -2,6 +2,7 @@ Multiphase:PatientHistory
 
 Phases:
 OtherDiagPhrase
+OtherDiagCleaning
 OtherDiagnosis
 OtherDiagnosisB
 OtherDiagnosisC

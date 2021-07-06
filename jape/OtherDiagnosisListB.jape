@@ -9,7 +9,7 @@ Rule: OtherDiagListB1
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == Diagnosis})
+	({DiagnosisTriggers.type == diagnosis})
     {listPoint}
     ({MedicalHistory})?
     ({DiagnosisTriggers})?
@@ -36,7 +36,7 @@ Rule: OtherDiagListB2
 Priority: 100
 
 (   
-    ({DiagnosisTriggers.type == Diagnosis})
+    ({DiagnosisTriggers.type == diagnosis})
     {listPoint}
     {listPoint}
     {OtherDiag}
@@ -62,7 +62,7 @@ Rule: OtherDiagListB2b
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == Diagnosis})
+	({DiagnosisTriggers.type == diagnosis})
     {listPoint}
     {listPoint}
     {OtherDiag}
@@ -88,7 +88,7 @@ Rule: OtherDiagListB3
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == Diagnosis})
+	({DiagnosisTriggers.type == diagnosis})
 	{listPoint}
     {OtherDiag}
     ({DateSince})?
@@ -116,9 +116,9 @@ Rule: OtherDiagListB4
 Priority: 100
 
 (   
-   ({DiagnosisTriggers.type == Diagnosis})
+   ({DiagnosisTriggers.type == diagnosis})
     {listPoint}
-    ({DiagnosisTriggers.type == Diagnosis})?
+    ({DiagnosisTriggers.type == diagnosis})?
     {OtherDiag}
     ({listPoint})
     ({OtherDiag}):item

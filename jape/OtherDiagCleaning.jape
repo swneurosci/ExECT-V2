@@ -1,0 +1,21 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: Cleaning
+Input: OtherDiag SeizureFrequency
+Options: control=appelt
+Rule: OtherDiagWithinSF
+
+(
+  {OtherDiag within SeizureFrequency}
+):umls
+
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls.OtherDiag = {ruleCleaning = OtherDiagWithinSF, rule = :umls.OtherDiag.rule,
+r = :umls.OtherDiag.r, PREF = :umls.OtherDiag.PREF, CUI = :umls.OtherDiag.CUI, 
+STY = :umls.OtherDiag.STY, Negation = :umls.OtherDiag.Negation,
+Experiencer = :umls.OtherDiag.Experiencer, Temporality = :umls.OtherDiag.Temporality, 
+Certainty = :umls.OtherDiag.Certainty
+}
