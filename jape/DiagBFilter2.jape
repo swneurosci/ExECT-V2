@@ -9,9 +9,9 @@ Priority: 100
 
 (   
     ({!Lookup3.minorType == "OtherDisease"})
-	{DiagBFiltered1 notWithin Lookup3}
+	({DiagBFiltered1 notWithin Lookup3}):match
     ({!Lookup3.minorType == "OtherDisease"})
 
-):match  
+):match1
  -->
 :match.DiagBFiltered = {ruleFilter2 = DiagBFilterLookup3, ruleFilter = :match.DiagBFiltered1.ruleFilter, PREF = :match.DiagBFiltered1.PREF, CUI = :match.DiagBFiltered1.CUI}
