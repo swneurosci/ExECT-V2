@@ -2,11 +2,11 @@ Imports: {import static gate.Utils.*; }
 Phase: Plurals
 Input: Lookup
 Options: control=brill
-
+// looks for epilepsy in string
 Rule:GetEpilepsy
 Priority: 100
 (
-{Lookup, !Lookup.SingleSeizure == "Yes", !Lookup.PluralSeizures == "Yes"}
+{Lookup, Lookup.DiagCategory != "SingleSeizure", Lookup.DiagCategory != "MultipleSeizures"}
 ):tag
 -->
 :tag{
@@ -29,11 +29,11 @@ if(tokenEnd - tokenStart > 3) {
    }
 }
 }
-
+// looks for epilepsy in PREF
 Rule:GetEpilepsy
 Priority: 100
 (
-{Lookup, !Lookup.SingleSeizure == "Yes", !Lookup.PluralSeizures == "Yes"}
+{Lookup, Lookup.DiagCategory != "SingleSeizure", Lookup.DiagCategory != "MultipleSeizures"}//HOW TO STOP GETTING SINGLE AND MULTIPLE SEIZURES?
 ):tag
 -->
 :tag{
