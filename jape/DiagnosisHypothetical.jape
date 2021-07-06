@@ -1,0 +1,17 @@
+Phase: DiagnosisHypothetical
+Input:  Person Sentence Lookup Investigation DiagnosisTriggers Token
+Options: control=all
+// He has epilepsy... when epilepsy is hypothetical or his epilepsy / John's Epilepsy.....
+Rule: DiagnosisHypothetical
+Priority: 100
+(
+
+	(
+	{Person}
+    ({Token.string == "has"})[0,1]
+	({Lookup.Experiencer == Patient, Lookup.majorType == umls, Lookup.DiagCategory != "test", Lookup.Negation == Affirmed, Lookup.Temporality == "hypothetical"}):match
+	)
+
+):match1
+-->
+:match.DiagnosisA = {rule = DiagnosisHypothetical, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI, Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty, DiagCategory = :match.Lookup.DiagCategory}
