@@ -45,3 +45,4 @@ DiagnosisB.lst:ExtraDiag:DiagB:MOVE:DiagB
 DrugPointInTime.lst::::DrugPointInTime
 Pronouns.lst::grammer::Pronouns
 SeizureSlang2.lst:umls:generic:MOVEundefinedSeizure:Seizures
+slangSeizures.lst::::SlangSeizures

@@ -1077,7 +1077,7 @@ intracranial bleed	CUI=C0151699	PREF=Intracranial hemorrhage	TUI=T046	STY=Pathol
 Victim of vehicular AND/OR traffic accident	CUI=C0277693	PREF=Victim of vehicular AND/OR traffic accident	TUI=T033	STY=Finding
 road traffic accident	CUI=C0277693	PREF=Victim of vehicular AND/OR traffic accident	TUI=T033	STY=Finding
 RTA	CUI=C0277693	PREF=Victim of vehicular AND/OR traffic accident	TUI=T033	STY=Finding
-subarachnoid hemorrhage CUI=C0038525	PREF=Subarachnoid hemorrhage	TUI=T047	STY=Disease or Syndrome
+subarachnoid hemorrhage	CUI=C0038525	PREF=Subarachnoid hemorrhage	TUI=T047	STY=Disease or Syndrome
 subarachnoid haemorrhage	CUI=C0038525	PREF=Subarachnoid hemorrhage	TUI=T047	STY=Disease or Syndrome
 neurofibromatosis 1	CUI=C0027831	PREF=Neurofibromatosis 1	TUI=T191	STY=Neoplastic Process
 NF1	CUI=C0027831	PREF=Neurofibromatosis 1	TUI=T191	STY=Neoplastic Process
@@ -1151,7 +1151,7 @@ Epidermoid cyst excision	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY
 excision of epidermoid cyst	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure	
 epidermoid cyst resected	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure	
 epidermoid cyst removed	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure
-tumor debulking	CUI=C0439805 PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
+tumor debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
 de-bulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
 debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
 Epidermoid tumor	CUI=C0854911	PREF=Central nervous system epidermoid tumour	TUI=T190	STY=Anatomical Abnormality
@@ -1178,7 +1178,7 @@ Post-traumatic stress disorder	CUI=C0038436	PREF=Post-traumatic stress disorder	
 Post traumatic stress disorder	CUI=C0038436	PREF=Post-traumatic stress disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
 PTSD	CUI=C0038436	PREF=Post-traumatic stress disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
 syncope	CUI=C0039070	PREF=syncope	TUI=T184	STY=sign or symptom
-vasovagal syncope	CUI=C0042420 PREF=Vasovagal syncope	TUI=T047	STY=Disease or Syndrome
+vasovagal syncope	CUI=C0042420	PREF=Vasovagal syncope	TUI=T047	STY=Disease or Syndrome
 myocardial infarction	CUI=C0027051	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome
 MI	CUI=C0027051	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome
 myocardial infarct	CUI=C0027051	PREF=Myocardial Infarction	TUI=T047	STY=Disease or Syndrome

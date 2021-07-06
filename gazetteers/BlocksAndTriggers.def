@@ -17,3 +17,5 @@ SeizureFrequencyBlock.lst::::SFBlock
 SChangeBlock.lst::::SChangeBlock
 driving.lst:driving:driving::SFreeBlock
 opinion.lst:diagnosis:opinion::Lookup2
+InvestigationBlock.lst::::InvestigationBlock
+but.lst::::but

@@ -399,3 +399,6 @@ occipital lobe onset seizures	CUI=C0393691	PREF=Occipital Lobe Epilepsy	TUI=T047
 occipital lobe onset seizure	CUI=C0393691	PREF=Occipital Lobe Epilepsy	TUI=T047	STY=Disease or Syndrome
 absence type seizures	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 absence type seizure	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
+focal seizures with loss of awareness	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
+focal to bilateral convulsive seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+Focal seizures with altered awareness	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
