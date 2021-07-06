@@ -3,6 +3,7 @@ Multiphase:Epilepsy
 Phases:
 // Should be split into Diagnosis, seizureFreq and investigations
 // Investigations
+InvestigationBlock
 InvestConj
 NegatedFindingCT
 NegatedFindingMRI

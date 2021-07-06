@@ -1,0 +1,26 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: Cleaning
+Input: Token Investigation InvestigationBlock
+Options: control=appelt
+Rule: InvestigationBlock
+
+(
+  ({Investigation}):umls
+  {InvestigationBlock}
+):match
+
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls{
+  Annotation matchAnn = umlsAnnots.iterator().next();//Get Annotations
+  FeatureMap preTagFM = Factory.newFeatureMap();//create new featuremap
+  preTagFM.putAll(matchAnn.getFeatures());//copy all of the features from annotation
+  Long tokenStart = umlsAnnots.firstNode().getOffset();//get start of annotation
+  Long tokenEnd = umlsAnnots.lastNode().getOffset();// get end of annotation
+  preTagFM.put("ruleDelete", "InvestigationBlock");//add rule name
+  AnnotationSet defaultSet = doc.getAnnotations("Bio");// select annotation set
+  gate.Utils.addAnn(defaultSet, tokenStart, tokenEnd, "InvestigationDeleted", preTagFM);//create annotation
+}
