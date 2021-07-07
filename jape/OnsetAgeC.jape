@@ -8,15 +8,15 @@ Priority: 100
 
 (   
 	{Pronouns.type == relative}
-    {Lookup2.majorType == historic, Lookup2.language == onset, Lookup2.type == suffered}
-	({Lookup.minorType == Disease ,Lookup.Experiencer == Patient , Lookup.Negation == Affirmed}):item
-	{Age}
+    ({Lookup2.majorType == historic, Lookup2.type == suffered}|{Lookup2.majorType == historic, Lookup2.type == has})
+	(({Lookup.minorType == Disease ,Lookup.Experiencer == Patient , Lookup.Negation == Affirmed})
+	{Age}):item
 		
  ):match  
  -->
 :item.Onset = {rule = onsetAgeC1, OnsetType = "age_episodes_started", 
 CUI = :item.Lookup.CUI,
-// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 // Certainty = :item.Lookup.Certainty,
 Age = :match.Age.Age,
