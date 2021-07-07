@@ -13,7 +13,7 @@ Priority: 100
 
 (   
 	({Person})?
-  	({Lookup2.language == onset})
+  	({Lookup2.language == experience})
 	({Person})
 	({OtherDiag}):item
     
@@ -97,7 +97,7 @@ Priority: 99
 
 (   
 	({Person})?
-    ({Lookup2.majorType == historic ,Lookup2.language == onset, Lookup2.minorType != symptoms}|{Lookup2.language == onset, Lookup2.type == suffered})
+    ({Lookup2.majorType == historic ,Lookup2.minorType != symptoms}|{Lookup2.type == suffered})
 	{DateSince}
 	({Lookup2})
 	({Lookup2})
@@ -142,6 +142,7 @@ Priority: 99
 	({Lookup2.majorType == historic})?
 	({Lookup2})?
 	({OtherDiag.rule == OtherDiagAge}):item	
+	({DateSince})?
     
  ):match  
  -->
@@ -152,7 +153,10 @@ Certainty = :item.OtherDiag.Certainty,
 Age = :item.OtherDiag.Age,
 AgeUnit = :item.OtherDiag.AgeUnit,
 AgeLower = :item.OtherDiag.AgeLower,
-AgeUpper = :item.OtherDiag.AgeUpper}
+AgeUpper = :item.OtherDiag.AgeUpper,
+DayDate =:match.DateSince.DayDate,
+MonthDate = :match.DateSince.MonthDate,
+YearDate =:match.DateSince.YearDate}
 
 Rule: PtHistoryA4  /*With otherDiag Date when Person may not be picked up and without a clear onset phrase*/
 Priority: 100
@@ -291,7 +295,7 @@ Priority: 90
 
 (   
 	{Person}
-	{Lookup2.minorType == symptoms, Lookup2.language == onset}
+	{Lookup2.minorType == symptoms}
 	({OtherDiag}):item
     ({Lookup2.minorType == date})
 	({PointInTime})
@@ -560,7 +564,7 @@ Priority: 100
 	({DateSince})
 	({PointInTime})?
 	{Person}
-   ({Lookup2.language == onset, Lookup2.type == suffered})
+   ({Lookup2.type == suffered})
 	({Lookup2.type !=past})?
 	({OtherDiag}):item
    
@@ -599,7 +603,7 @@ Rule: PtHistoryA14a  /* She had an injury due to seizure in  Date*/
 Priority: 50
 
 (   
-    ({Lookup2.language == onset})
+    ({Lookup2.language == experience})
 	({OtherDiag}):item
 	({Lookup2})
     {Person}
@@ -837,6 +841,7 @@ Priority: 70
 	
 	({Person.type == possessive})
 	({Lookup2})?
+	({Lookup2})?
 	({OtherDiag.rule == OtherDiagPhrase}):item
 	
 
@@ -848,7 +853,7 @@ Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Tempora
 Certainty = :item.OtherDiag.Certainty}
 
 
-Rule: PtHistoryA25  /*refering this person for...*/
+Rule: PtHistoryA25  /*referring this person for...*/
 Priority: 70
 
 (  
