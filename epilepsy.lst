@@ -922,3 +922,4 @@ focal to bilateral convulsive seizures	CUI=C0877017	PREF=Generalized tonic-cloni
 seizures are focal	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
 seizures are generalised	CUI=C0234533	PREF=generalised seizures	TUI=T047	STY=Disease or Syndrome
 Focal seizures with altered awareness	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
+epilepsy with generalised tonic clonic seizure alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome
