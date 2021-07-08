@@ -1,7 +1,7 @@
 Imports: {import static gate.Utils.*; }
 
 Phase: NegationCleanUp
-Input: NegConj Lookup Sentence Trigger Lookup3 but
+Input: NegConj Lookup Sentence Trigger Lookup3 but 
 Options: control=all
 
 
