@@ -1,7 +1,7 @@
 Imports: {import static gate.Utils.*; }
 
 Phase: NegationCleanUp
-Input: NegConj Lookup Sentence Trigger LookupTrigger Lookup3
+Input: NegConj Lookup Sentence Trigger LookupTrigger Lookup3 Conj
 Options: control=all
 
 // What is "LookupTrigger" in the INPUT - its on ContextTagger Gazetteers
@@ -131,3 +131,17 @@ umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","removenon-asnegation");
 },
 :match.Lookup3NegChange = {rule = removenon-asnegation}
+
+// this may be sensitive so should be checked
+Rule: stopNegationWithAnd
+(
+   ({Trgger.majorType == Negation, Trgger.minorType == pre-condition}) 
+   ({Conj.type == conj})
+   ({Lookup}):umls
+):match
+-->
+:umls {
+umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+umlsAnnots.iterator().next().getFeatures().put("rule","stopNegationWithAnd");
+},
+:match.LookupNegChange = {rule = stopNegationWithAnd}
