@@ -12,7 +12,7 @@ Options: control=appelt
 Rule: seziureSince
 Priority: 100
 (
-    {timeElapsed.time==since}
+    {timeElapsed.time==Since}
     ({PartialDate} | {Calendar})
     ({NumberRange})
     ({Lookup3.string =~ "seizures" , Lookup3.Negation == "Affirmed"} | {Lookup3.minorType == "seizure", Lookup3.Negation=="Affirmed" , Lookup3.Negation == "Affirmed"})
@@ -28,7 +28,7 @@ Priority: 100
 (
     ({NumberRange})
     ({Lookup3.string =~ "seizures" , Lookup3.Negation == "Affirmed"} | {Lookup3.minorType == "seizure", Lookup3.Negation=="Affirmed" , Lookup3.Negation == "Affirmed"})
-    {timeElapsed.time==since}
+    {timeElapsed.time==Since}
     ({PartialDate} | {Calendar})
 ):match
 -->
@@ -73,7 +73,7 @@ Priority: 100
 Rule: seizureSince0a
 Priority: 99
 (
-    ({timeElapsed.time==since}
+    ({timeElapsed.time==Since}
     {Lookup3.Negation == Affirmed}
     ({NumberRange})?
     ({timePeriods} | {PartialDate}))
@@ -89,7 +89,7 @@ sinceperiod = :match.timePeriods.time-unit, sinceInteraction = :match.Interactio
 Rule: seizureSince0b
 Priority: 99
 (
-    ({timeElapsed.time==since}
+    ({timeElapsed.time==Since}
     ({timePeriods} | {PartialDate})
     {Lookup3.Negation == Affirmed})
 ):match
@@ -106,9 +106,9 @@ sinceperiod = :match.timePeriods.time-unit, sinceInteraction = :match.Interactio
 Rule: seizureSince0b
 Priority: 99
 (
-    ({timeElapsed.time==last}
+    ({timeElapsed.time==Last}
     {Lookup3.Negation == Affirmed}
-    ({timeElapsed.time==during})*
+    ({timeElapsed.time==During})*
     {PartialDate})
 ):match
 -->
@@ -125,7 +125,7 @@ sinceperiod = :match.timePeriod.time-unit, sinceInteraction = :match.Interaction
 Rule: seizureSince0b
 Priority: 99
 (
-    {timeElapsed.time==last}
+    {timeElapsed.time==Last}
     {Lookup3.Negation == Affirmed}
     {NumberRange}
     {timePeriods}

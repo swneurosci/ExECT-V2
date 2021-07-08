@@ -19,7 +19,7 @@ Priority: 100
     {Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
     {Person}
     {Lookup2.majorType == historic}
-    {timeElapsed.time == in}
+    {timeElapsed.time == In}
     {Person.minorType == pronoun}
     ({Lookup2.minorType == time}):a
 
@@ -97,10 +97,10 @@ Priority: 80
     {Lookup2.type == suffered}
     ({Lookup2})?
     ({Person})?
-    {timeElapsed.time == since}
+    {timeElapsed.time == Since}
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
 	Lookup3.Experiencer == Patient}):item
-    {timeElapsed.time == in}
+    {timeElapsed.time == In}
     {Numeric}
 
  ):match  
