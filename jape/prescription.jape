@@ -160,6 +160,8 @@ Context = :match.ContextPrescription.context}
 
 /* Rule to pick up midazolam without frequency or Dose */
 // DONT LIKE THIS RULE SO SHOULD DELETE - picks up a lot of rubish (just mentions of midazolam)
+// Maybe if moved into SecondPresc so has to follow another Pres it may work better
+// Or create Gaz for word related to this
 
 
 // Rule: doseMatch0

@@ -43,21 +43,21 @@ Priority: 100
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation}
 
-/* Rule: OtherDiagB3
-Priority: 100
+// /* Rule: OtherDiagB3
+// Priority: 100
 
-(   ({!Investigation})
-	{Lookup2.minorType == opinion}
-	({Lookup2.minorType == probability})?
-    ({Lookup3})?
-	({OtherDiag}):item
+// (   ({!Investigation})
+// 	{Lookup2.minorType == opinion}
+// 	({Lookup2.minorType == probability})?
+//     ({Lookup3})?
+// 	({OtherDiag}):item
     
- ):match  
- -->
-:item.PatientHistory = {rule = OtherDiagB3, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty} */
+//  ):match  
+//  -->
+// :item.PatientHistory = {rule = OtherDiagB3, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+// STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+// Certainty = :item.OtherDiag.Certainty} */
 
 Rule: OtherDiagB4
 Priority: 100
