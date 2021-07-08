@@ -1,0 +1,32 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: DiagInInvestDelete
+Input: Sentence Diagnosis Investigation
+Options: control=all
+
+
+// no non-epileptic seizures - would deleting the contains "non" mean that all the rules would work fine 
+// and this wont be needed
+// for now rule is fine and should work well
+Rule: DiagInInvestDelete
+(
+{Sentence contains Diagnosis, Sentence contains Investigation}  
+):umls
+-->
+:umls {
+    AnnotationSet contAnnots = getContainedAnnotations(inputAS, umlsAnnots, "Diagnosis");
+    List<Annotation> contList = gate.Utils.inDocumentOrder(contAnnots);//Create list of all the possible annotations (some sentences contain two annotations for PreTag)
+    int length = contList.size();//how many items in the list
+    for (int i = 0; i < length; i++) {//loop around the number of items in the list
+        Annotation ithDiag = contList.get(i);
+        FeatureMap fmithDiag = ithDiag.getFeatures();
+        FeatureMap deleteFM = Factory.newFeatureMap();//create new featuremap
+        deleteFM.putAll(fmithDiag);//copy all of the features from annotation
+        Long tokenStart = ithDiag.getStartNode().getOffset();//get start of annotation
+        Long tokenEnd = ithDiag.getEndNode().getOffset();
+        deleteFM.put("ruleDelete", "DiagInInvestDelete");//add rule name
+        AnnotationSet defaultSet = doc.getAnnotations("Bio");
+        gate.Utils.addAnn(defaultSet, tokenStart, tokenEnd, "DiagnosisDeleted", deleteFM);//create annotation to say that diag as been deleted
+        inputAS.remove(ithDiag);// Deleting the Diag
+    }
+}
