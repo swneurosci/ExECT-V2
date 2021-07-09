@@ -8,7 +8,7 @@ Rule: TimeSince1
 Priority: 100
 
 (   
-	({timeElapsed.time == during}|{timeElapsed.time == since })
+	({timeElapsed.time == During}|{timeElapsed.time == Since })
 	{NumberRange}
 	{timePeriod}
 	
@@ -26,7 +26,7 @@ Priority: 100
 (   {NumberRange}
 	({!Token})?
     ({timePeriod})
-	{timeElapsed.time == since}
+	{timeElapsed.time == Since}
 	
 	
 	
@@ -60,7 +60,7 @@ Priority: 100
 
 (   
 	{timePeriod.string == "a year"}
-	{timeElapsed.time == since}
+	{timeElapsed.time == Since}
     
 	
 	

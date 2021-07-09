@@ -255,7 +255,7 @@ Priority: 95
 ( 
     ({NumberRange}) 
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
-    ({timeElapsed.time == "since"})? // not all PointInTime have since at start but some do
+    ({timeElapsed.time == "Since"})? // not all PointInTime have since at start but some do
     ({PointInTime}) 
 ):match 
 --> 
@@ -270,7 +270,7 @@ Priority: 95
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({Split})?
     ({NumberRange})
-    ({timeElapsed.time == "during"}) 
+    ({timeElapsed.time == "During"}) 
     ({PointInTime}) 
 ):match 
 --> 
@@ -285,7 +285,7 @@ Priority: 95
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({Split})?
     ({NumberRange})
-    ({timeElapsed.time != "during"}) 
+    ({timeElapsed.time != "During"}) 
     ({PointInTime}) 
 ):match 
 --> 
@@ -300,7 +300,7 @@ Priority: 99
     ({PartialDate})? 
     (({NumberRange})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
-    ({timeElapsed.time == "since"})
+    ({timeElapsed.time == "Since"})
     ({PartialDate})):match 
 ):match1 
 --> 
@@ -316,7 +316,7 @@ Priority: 99
     ({PartialDate})? 
     (({NumberRange})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
-    ({timeElapsed.time == "during"})
+    ({timeElapsed.time == "During"})
     ({PartialDate})):match 
 ):match1 
 --> 
@@ -325,11 +325,12 @@ NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.Num
 YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "During" }
 
 /* Since? [Date], [Person] had [NumberRange] [Lookup3] - further my letter of Nov 2009, J has had 6 to 7 seizures */
+// No timeElapsed in example so rule actually doesn't pick this up....
 
 Rule: hSeizurePartialDate1
 Priority: 95 
 ( 
-    ({timeElapsed.time == "since"})
+    ({timeElapsed.time == "Since"})
     ({PartialDate})
     ({NumberRange})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
@@ -344,9 +345,9 @@ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDat
 Rule: hSeizurePartialDate1b
 Priority: 95 
 ( 
-    ({timeElapsed.time == "since"})
-    ({timeElapsed.time == "last"})
-    ({timeElapsed.time == "during"})
+    ({timeElapsed.time == "Since"})
+    ({timeElapsed.time == "Last"})
+    ({timeElapsed.time == "During"})
     ({PartialDate})
     ({NumberRange})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
@@ -356,9 +357,9 @@ Priority: 95
 NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2,
 YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 
-/* November 2016. I am happy to report that he had only a single seizure since then. */
+/* 'until' November 2016. I am happy to report that he had only a single seizure since then. */
 //WHY IS THIS RULE NOT GOING TO SFREQ11 but STRAIGHT TO SFREQ?
-// maybe due to split (cant remember why exactly)
+// in the example above there is a untill before which is a SFBlock so blocking at filter
 Rule: hSeizurePartialDate2
 Priority: 95 
 ( 
@@ -366,7 +367,7 @@ Priority: 95
     ({Split})?
     ({NumberRange})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
-    ({timeElapsed.time == "since"}) 
+    ({timeElapsed.time == "Since"}) 
 ):match 
 --> 
 :match.SeizureFrequency11 = { rule = hSeizurePartialDate2, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
@@ -381,7 +382,7 @@ Priority: 95
     ({PartialDate})
     ({NumberRange})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
-    ({timeElapsed.time == "since"}) 
+    ({timeElapsed.time == "Since"}) 
 ):match 
 --> 
 :match.SeizureFrequency11 = { rule = hSeizurePartialDate2b, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
@@ -393,9 +394,9 @@ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDat
 Rule: hSeizurePartialDate2c
 Priority: 95 
 (
-    ({!timeElapsed.time  == "last"})
+    ({!timeElapsed.time  == "Last"})
     (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
-    ({timeElapsed.time == "during"}) 
+    ({timeElapsed.time == "During"}) 
     ({PartialDate})):match
 ):match1 
 --> 
@@ -408,7 +409,7 @@ Priority: 95
 (
     ({NumberRange notWithin Age})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "since"})
+    ({timeElapsed.time == "Since"})
     ({Age})
 ):match
 -->

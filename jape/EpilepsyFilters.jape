@@ -2,7 +2,8 @@ Phase: EpilepsyFilters
 Input: Investigations Mentions Lookup
 Options: control=appelt
 
-
+// WHat is this?
+// DELETE ME
 
 Rule: getMentions
 (

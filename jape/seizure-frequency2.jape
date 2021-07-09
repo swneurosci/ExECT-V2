@@ -7,11 +7,11 @@ Options: control=appelt
 Rule: LastSeizure1
 Priority: 100 
 (
-    ({timeElapsed.time  == "last"})
+    ({timeElapsed.time  == "Last"})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
     ({NumberRange})
     ({timePeriods})
-    ({timeElapsed.time == "since"})?
+    ({timeElapsed.time == "Since"})?
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "LastSeizure1", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
@@ -24,7 +24,7 @@ Rule: LastSeizure2a
 Priority: 100 
 (
     (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}):lookup
-    ({timeElapsed.time  == "last"})
+    ({timeElapsed.time  == "Last"})
     ({NumberRange.value == 1})
     ({NumberRange}):num
     ({timePeriods})):match
@@ -36,11 +36,12 @@ Priority: 100
 
 // Seizure, last one March 2012 or Seizures, last event/episode DATE
 //HUW
+// Slang Seizures empty gaz so wont do anything atm - can add these phrase back to it
 Rule: LastSeizure2b
 Priority: 100 
 (
     (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}):lookup
-    ({timeElapsed.time  == "last"})
+    ({timeElapsed.time  == "Last"})
     (({NumberRange.value == 1})|({SlangSeizures}))
     ({PartialDate})):match
 ):match1
@@ -54,9 +55,9 @@ Priority: 100
 Rule: LastSeizure3
 Priority: 95 
 (
-    ({timeElapsed.time  == "last"})
+    ({timeElapsed.time  == "Last"})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "during"})
+    ({timeElapsed.time == "During"})
     ({PartialDate})
 ):match
 -->
@@ -70,9 +71,9 @@ Priority: 95
 Rule: LastSeizure3b
 Priority: 95 
 (
-    ({timeElapsed.time  == "last"})
+    ({timeElapsed.time  == "Last"})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time==during})*
+    ({timeElapsed.time==During})*
     ({PartialDate})
 ):match
 -->
@@ -86,9 +87,9 @@ Priority: 95
 Rule: LastSeizure4
 Priority: 95 
 (
-    ({timeElapsed.time  == "last"})
+    ({timeElapsed.time  == "Last"})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "during"})
+    ({timeElapsed.time == "During"})
     ({NumberRange.value >= 1900})
 ):match
 -->
@@ -118,7 +119,7 @@ Priority: 95
   Rule: LastSeizure6
 Priority: 95 
 (
-    ({timeElapsed.time == "last"})
+    ({timeElapsed.time == "Last"})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
     ({Age})
 ):match
@@ -132,9 +133,9 @@ Priority: 95
 Rule: LastSeizure6b
 Priority: 95 
 (
-    ({timeElapsed.time == "last"})
+    ({timeElapsed.time == "Last"})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "during"})
+    ({timeElapsed.time == "During"})
     ({Age})
 ):match
 -->
@@ -166,7 +167,7 @@ Priority: 95
 (
     ({LastSeizure})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "during"})
+    ({timeElapsed.time == "During"})
     ({Age})
 ):match
 -->
@@ -185,7 +186,7 @@ Priority: 100
     ({Lookup3})?
     (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}):lookup
     ({NoSeizure})
-    ({timeElapsed.time  == "during"})
+    ({timeElapsed.time  == "During"})
     ({NumberRange}):num
     ({timePeriods})):match
 ):match1
@@ -202,7 +203,7 @@ Priority: 95
 (
     ({NoSeizure})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "during"})
+    ({timeElapsed.time == "During"})
     ({NumberRange})
     ({timePeriods})
 ):match
@@ -217,8 +218,8 @@ Rule: NoSeizure3
 Priority: 95 
 (
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "during"})
-    ({timeElapsed.time == "since"})
+    ({timeElapsed.time == "During"})
+    ({timeElapsed.time == "Since"})
     ({NumberRange})
     ({timePeriods})
 ):match
@@ -234,7 +235,7 @@ Priority: 95
 (
     ({NoSeizure})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "since"})
+    ({timeElapsed.time == "Since"})
     ({PointInTime})
 ):match
 -->
@@ -250,7 +251,7 @@ Priority: 95
 (
     ({NoSeizure})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "during"})
+    ({timeElapsed.time == "During"})
     ({PointInTime})
 ):match
 -->
@@ -265,8 +266,8 @@ Rule: NoSeizure5
 Priority: 95 
 (
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "since"})
-    ({timeElapsed.time == "last"})
+    ({timeElapsed.time == "Since"})
+    ({timeElapsed.time == "Last"})
     ({PartialDate})
 ):match
 -->
@@ -282,8 +283,8 @@ Rule: NoSeizure5a
 Priority: 95 
 (
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "during"})
-    ({timeElapsed.time == "last"})
+    ({timeElapsed.time == "During"})
+    ({timeElapsed.time == "Last"})
     ({PartialDate})
 ):match
 -->
@@ -299,7 +300,7 @@ Priority: 95
 Priority: 95 
 (
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "since"})
+    ({timeElapsed.time == "Since"})
     ({PartialDate})
 ):match
 -->
@@ -314,7 +315,7 @@ Rule: NoSeizure6a
 Priority: 95 
 (
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "during"})
+    ({timeElapsed.time == "During"})
     ({PartialDate})
 ):match
 -->
@@ -330,7 +331,7 @@ Priority: 95
 Priority: 95 
 (
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "since"})
+    ({timeElapsed.time == "Since"})
     ({Age})
 ):match
 -->
@@ -364,7 +365,7 @@ Priority: 95
     ({PointInTime})
     ({NumberRange within Measurement})?//For Started on Drug at dose of Xmg.....
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "since"})
+    ({timeElapsed.time == "Since"})
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure8", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
@@ -383,7 +384,7 @@ Priority: 95
     ({PointInTime})
     ({NumberRange within Measurement})?//For Started on Drug at dose of Xmg.....
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
-    ({timeElapsed.time == "during"})
+    ({timeElapsed.time == "During"})
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure8a", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
@@ -397,7 +398,7 @@ Priority: 95
 Rule: NoSeizure9
 Priority: 95 
 (
-    ({timeElapsed.time == "since"})
+    ({timeElapsed.time == "Since"})
     ({PointInTime})
     ({NumberRange within Measurement})?/*For Started on Drug at dose of Xmg.....*/
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
@@ -413,7 +414,7 @@ Priority: 95
 Rule: NoSeizure9a
 Priority: 95 
 (
-    ({timeElapsed.time == "during"})
+    ({timeElapsed.time == "During"})
     ({PointInTime})
     ({NumberRange within Measurement})?//For Started on Drug at dose of Xmg.....
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})

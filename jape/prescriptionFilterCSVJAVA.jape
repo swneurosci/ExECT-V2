@@ -13,5 +13,5 @@ Priority: 100
 :match{
     Annotation match = matchAnnots.iterator().next();
     String string = match.getFeatures().get("string").toString();
-  getOnlyAnn(matchAnnots).getFeatures().put("String1", string.substring(1, string.length()-1));
+    getOnlyAnn(matchAnnots).getFeatures().put("String1", string.substring(1, string.length()-1));
 }

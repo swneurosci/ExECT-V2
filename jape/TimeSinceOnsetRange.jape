@@ -14,7 +14,7 @@ Priority: 100
 	{Person}
     ({Person})?
 	{MedCause.majorType == context}
-	{timeElapsed.time == during}
+	{timeElapsed.time == During}
 	{Range}
     {timePeriod}
  ):match  
@@ -40,7 +40,7 @@ Priority: 99
 	{Lookup2.language == onset, Lookup2.type != diagnosed }
 	{Range}
     {timePeriod}
-    {timeElapsed.time == since}
+    {timeElapsed.time == Since}
  ):match  
  -->
 :item.Onset = {rule = seizuresForRange2 , OnsetType = "time_since_episodes_started",

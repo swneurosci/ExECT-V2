@@ -11,7 +11,7 @@ Rule: DateSince1a
 Priority: 100
 //Think this is too unspecific
 (   
-	({timeElapsed.time == since}|{timeElapsed.time == in})?
+	({timeElapsed.time == Since}|{timeElapsed.time == In})?
 	{PartialDate}
 	
 	
@@ -28,7 +28,7 @@ Rule: DateSince2
 Priority: 100
 
 (   
-	({timeElapsed.time == since}|{timeElapsed.time == in}|{timeElapsed.time == during})
+	({timeElapsed.time == Since}|{timeElapsed.time == In}|{timeElapsed.time == During})
 	{Numeric.value > 1940}
 
 	
@@ -41,7 +41,7 @@ Rule: DateSince3  /*When the year of event is written without a preposition e.g.
 Priority: 100
 
 (   
-	({timeElapsed.time == since}|{timeElapsed.time == in})?
+	({timeElapsed.time == Since}|{timeElapsed.time == In})?
 	{Numeric.value > 1940}
 	
 	
