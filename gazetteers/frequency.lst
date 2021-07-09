@@ -75,3 +75,4 @@ bd around menstruation:frequency=As_Required
 alternate days:frequency=0.5:time-unit=day
 alternate nights:frequency=0.5:time-unit=day
 monthly:frequency=1:time-unit=month
+SOS basis:time-unit=as required:frequency=As_Required:=
