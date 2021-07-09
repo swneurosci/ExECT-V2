@@ -22,7 +22,7 @@ Rule: reverseNegation
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationa");
 },
-:match.LookupNegChange = {rule = reverseNegation}
+:match.LookupNegChange = {rule = reverseNegationA}
 
 
 // Copy of rule above but lookup3 not lookup
@@ -39,7 +39,7 @@ Rule: reverseNegation
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationa");
 },
-:match.Lookup3NegChange = {rule = reverseNegation}
+:match.Lookup3NegChange = {rule = reverseNegationA}
 
 // seizure free  are not just a negation of seizures
 // but a concept with its own CUI so this removes a negation from the lookup3 where they live
@@ -87,7 +87,7 @@ Rule: reverseNegation
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationc");
 },
-:match.LookupNegChange = {rule = reverseNegation}
+:match.LookupNegChange = {rule = reverseNegationC}
 
 
 Rule: reverseNegation
@@ -102,7 +102,7 @@ Rule: reverseNegation
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegationc");
 },
-:match.Lookup3NegChange = {rule = reverseNegation}
+:match.Lookup3NegChange = {rule = reverseNegationC}
 
 
 // Non-epileptic seizures are not just a negation of epilepsy
