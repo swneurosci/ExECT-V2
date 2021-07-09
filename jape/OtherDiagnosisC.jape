@@ -9,9 +9,7 @@ Options: control=brill
 Rule: OtherDiagnosisC
 
 
-(   
-
-	
+(   	
 	{DiagnosisTriggers.type == diagnosis}
 	{NewLine}
 	({OtherDiag}):item
@@ -35,8 +33,6 @@ AgeUpper =:match.Age.AgeUppe}
 Rule: OtherDiagnosisC1
 
 (   
-
-	
 	{DiagnosisTriggers.type == diagnosis}
 	{OtherDiag}
 	{NewLine}
@@ -46,7 +42,7 @@ Rule: OtherDiagnosisC1
 
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagnosisC1,  //PREF = :item.OtherDiag.PREF,
+:item.PatientHistory = {rule = OtherDiagnosisC1,  PREF = :item.OtherDiag.PREF,
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
@@ -69,7 +65,7 @@ Rule: OtherDiagnosisC2
 
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagnosisC2,   //PREF = :item.OtherDiag.PREF,
+:item.PatientHistory = {rule = OtherDiagnosisC2, PREF = :item.OtherDiag.PREF,
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
@@ -84,7 +80,6 @@ AgeUpper =:match.Age.AgeUppe}
 Rule: OtherDiagnosisC3
 
 (   
-
 	{DiagnosisTriggers.type == diagnosis}
 	{NewLine}
 	({OtherDiag})
@@ -93,7 +88,7 @@ Rule: OtherDiagnosisC3
 
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagnosisC3,   //PREF = :item.OtherDiag.PREF,
+:item.PatientHistory = {rule = OtherDiagnosisC3, PREF = :item.OtherDiag.PREF,
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
@@ -116,7 +111,7 @@ Rule: OtherDiagnosisC4
 
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagnosisC4,   //PREF = :item.OtherDiag.PREF,
+:item.PatientHistory = {rule = OtherDiagnosisC4, PREF = :item.OtherDiag.PREF,
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
@@ -132,7 +127,6 @@ AgeUpper =:match.Age.AgeUppe}
 Rule: OtherDiagnosisC5
 
 (   
-
 	{DiagnosisTriggers.type == diagnosis}
 	({OtherDiag}):item
 	({OtherDiag})
@@ -141,7 +135,7 @@ Rule: OtherDiagnosisC5
 
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagnosisC5,   //PREF = :item.OtherDiag.PREF,
+:item.PatientHistory = {rule = OtherDiagnosisC5, PREF = :item.OtherDiag.PREF,
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
@@ -162,10 +156,9 @@ Rule: OtherDiagnosisC5a
 	({OtherDiag}):item
 	{NewLine}
 	
-
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagnosisC5a,   //PREF = :item.OtherDiag.PREF,
+:item.PatientHistory = {rule = OtherDiagnosisC5a, PREF = :item.OtherDiag.PREF,
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
