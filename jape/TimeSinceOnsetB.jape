@@ -119,7 +119,7 @@ Priority: 100
 
 (   
     {Lookup.majorType == umls , Lookup.Negation == Affirmed, Lookup.Experiencer  == Patient, Lookup.minorType == Disease}
-    {Lookup2.language == onset, Lookup2.minorType == symptoms, Lookup2.type == began}
+    ({Lookup2.language == onset, Lookup2.minorType == symptoms, Lookup2.type == began})?
 	{TimeSince}
 	{Person}
 	{Lookup2.language == experience, Lookup2.minorType == symptoms}
