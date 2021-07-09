@@ -15,8 +15,10 @@ Priority: 100
 
 (  
 	({Person})
-    {Lookup2.majorType == historic,Lookup2.minorType == symptoms}
+    ({Lookup2.majorType == historic,Lookup2.minorType == symptoms}|{Lookup2.majorType == historic})
+	({Lookup2})?
 	{OtherDiag}
+	({Person})?
 	({Lookup2})?
 	({Lookup2})?
 	({OtherDiag }):item
