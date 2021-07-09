@@ -8,7 +8,7 @@ Options: control=all
 
 Rule: PrescriptionFilter1
 (
-    ({Prescription0 notWithin Prescription2, Prescription0 notContains ContextPrescription}):pres2
+    ({Prescription0 notWithin Prescription2, Prescription0 notContains ContextPrescription, Prescription0 notContains KidsDose}):pres2
 ):match
 -->
 :pres2.Prescription = { rule2 = PrescriptionFilter1,

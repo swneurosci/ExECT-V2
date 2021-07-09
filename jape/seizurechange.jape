@@ -223,6 +223,8 @@ PointInTime = :match.PointInTime.Since}
 
 // increased seizure frequency 
 
+// NEED SOMETHING FOR INCREASE IN SEIZURE CONTROL (lookup3 deleted with seizure "control")
+
 Rule: SeizureChange4a
 Priority: 99 
 ( 
@@ -326,7 +328,7 @@ PointInTime = :match.PointInTime.Since}
 //DOESN'T GIVE NEAGTION OR CERT
 // Solo rule like this is risky
 //increase in seizure frequency
-Rule: SeizureChange6
+Rule: SeizureChange7
 Priority: 90
 ( 
     ({Frequency.ContainsLookUp == Yes})
