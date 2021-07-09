@@ -13,7 +13,7 @@ Priority: 100
 	
 	{DiagnosisTriggers.type == diagnosis}
 	({Lookup2.minorType != change})?
-	({Lookup2})?
+	({Lookup2})
 	({OtherDiag}):item
 	
     

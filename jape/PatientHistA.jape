@@ -1,7 +1,7 @@
 Phase: PatientHistA
-Input: OtherDiag Lookup2 TimeSince Person DateSince PHistBlock Investigation PartialDate Split NewLine Sentence DiagnosisTriggers PointInTime Age Pronouns  MedicalHistory listPoint
+Input: OtherDiag Lookup2 TimeSince Person DateSince PHistBlock Investigation PartialDate Split NewLine Sentence DiagnosisTriggers PointInTime Age Pronouns  MedicalHistory listPoint Lookup3
 
-
+//Lookup3 is used to block picking up any second mentions of other diagnosis
 /*These are expected to pick up the 1st of OtherDiag shown in a sentence, deriving age/timesince/datesince from OtherDiag 
 itself or from the sentence itself if they are too far*/
 
@@ -507,7 +507,7 @@ Rule: PtHistoryA13
 Priority: 100
 
 (   
-	({Person})?
+	({Person})
 	({Lookup2})?
 	({Lookup2.type == history}|{Lookup2.type == another}|{Lookup2.minorType == causality})
 	({OtherDiag}):item
@@ -515,7 +515,7 @@ Priority: 100
   
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistory13, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+:item.PatientHistory = {rule = PtHistoryA13, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, 
@@ -548,7 +548,8 @@ Priority: 100
 
 (   
 	({Person})?
-	({Lookup2})
+	({Lookup2.type != "diagnosed"})
+	({Lookup2.minorType != "probability"})
 	({OtherDiag.rule == OtherDiagTime}):item
  
  ):match  
@@ -689,7 +690,7 @@ Priority: 98
 (   
 	({Person})
 	({Lookup2})?
-	({Lookup2.language == experience}|{Lookup2.minorType == causality})
+	({Lookup2.language == experience, Lookup2.type != "diagnosed"}|{Lookup2.minorType == causality})
 	({Lookup2.type != previous})?
 	({OtherDiag.rule == OtherDiagTime}):item
 	
