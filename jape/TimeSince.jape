@@ -24,7 +24,6 @@ Rule: TimeSince3  /*with the exclusion of a day, a week etc I'm trying to exclud
 Priority: 100
 
 (   {NumberRange}
-	({!Token})?
     ({timePeriod})
 	{timeElapsed.time == Since}
 	
@@ -37,13 +36,13 @@ NumberOfTimePeriods =:match.NumberRange.value,
 LowerNumberOfTimePeriods =:match.NumberRange.N1,
 UpperNumberOfTimePeriods =:match.NumberRange.N2}
 
-
-//to stop at 2 year interval , may need to be watched 
-Rule: TimeSince3a
+// to unsefe ! so switched off
+//to stop at 2 year interval , or every 2 years.. may need to be watched 
+/*Rule: TimeSince3a
 Priority: 90
 
 (  
-	{Token.string != "at"}
+	({Token.string != "every", Token.string != "at"})
 	{NumberRange}
     ({timePeriod.string =~ month}|{timePeriod.string =~ week}|{timePeriod.string =~ year}|{timePeriod.string =~ week})
 	
@@ -52,7 +51,7 @@ Priority: 90
 :match.TimeSince = {rule =TimeSince3a, TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.NumberRange.value,
 LowerNumberOfTimePeriods =:match.NumberRange.N1,
-UpperNumberOfTimePeriods =:match.NumberRange.N2}
+UpperNumberOfTimePeriods =:match.NumberRange.N2}*/
 
 
 Rule: TimeSince4
