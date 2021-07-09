@@ -38,14 +38,14 @@ LowerNumberOfTimePeriods =:match.NumberRange.N1,
 UpperNumberOfTimePeriods =:match.NumberRange.N2}
 
 
-/* not a safe rule */
+//to stop at 2 year interval , may need to be watched 
 Rule: TimeSince3a
 Priority: 90
 
 (  
-	
-	{NumberRange.majorType != frequency}
-    {timePeriod.string =~ month}|{timePeriod.string =~ week}|{timePeriod.string =~ year}|{timePeriod.string =~ week}
+	{Token.string != "at"}
+	{NumberRange}
+    ({timePeriod.string =~ month}|{timePeriod.string =~ week}|{timePeriod.string =~ year}|{timePeriod.string =~ week})
 	
  ):match  
  -->
