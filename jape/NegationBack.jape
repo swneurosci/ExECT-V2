@@ -1,10 +1,10 @@
 Imports: {import static gate.Utils.*; }
 
 Phase: NegationCleanUp
-Input: NegConj Lookup Sentence Trigger Lookup3 but 
+Input: NegConj Lookup Sentence Trigger Lookup3 but Person
 Options: control=all
 
-
+//Person is here to stop his/her Lookup3 being negated
 // no non-epileptic seizures - would deleting the contains "non" mean that all the rules would work fine 
 // and this wont be needed
 // for now rule is fine and should work well
