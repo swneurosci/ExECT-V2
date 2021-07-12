@@ -1252,3 +1252,4 @@ psychotic episode	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Be
 Chronic daily headaches	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease or Syndrome
 alcohol abuse	CUI=C0221628	PREF=history of alcohol abuse	TUI=T033	STY=Finding
 visually impaired	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
+episode of psychosis	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
