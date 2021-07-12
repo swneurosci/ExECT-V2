@@ -169,6 +169,7 @@ PointInTime =:match.OtherDiag.PointInTime}
 /*this captures a 2nd date for an event already annotated in OtherDiagnosisListA
 e.g stroke in May 2012 and October 2016 - this rule changes the date from OtherDiag to that of DateSince I.E. 2016*/
 // What about day date?
+
 Rule: OtherDiagListB6  
 Priority: 100
 
@@ -188,3 +189,29 @@ Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI,
 Negation = :item.OtherDiag.Negation,
 YearDate = :a.DateSince.YearDate,
 MonthDate =:a.DateSince.MonthDate}
+
+//2nd item on the list with points but no listpoint just probability
+Rule: OtherDiagListB7
+Priority: 100
+
+(   
+	({DiagnosisTriggers.type == diagnosis}|{MedicalHistory})
+    {listPoint}
+	({listPoint})*
+    {OtherDiag}
+	({OtherDiag}):item
+   	
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagListB7, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+//STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty,
+Age = :item.OtherDiag.Age,
+AgeUnit = :item.OtherDiag.AgeUnit,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper,
+YearDate = :item.OtherDiag.YearDate,
+MonthDate =:item.OtherDiag.MonthDate,
+TimePeriod = :item.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
