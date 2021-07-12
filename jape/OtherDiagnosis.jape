@@ -118,4 +118,18 @@ Priority: 100
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation}
 
+Rule: OtherDiagnosis8 //with a list of seizures
+Priority: 100
 
+(  
+	{DiagnosisTriggers}
+	({Lookup2})+
+	({OtherDiag.rule == OtherDiagPhrase}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagnosis8,  PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}
