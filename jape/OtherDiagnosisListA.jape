@@ -139,14 +139,14 @@ Priority: 100
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
-Age = :match.OtherDiag.Age,
-AgeUnit = :match.OtherDiag.AgeUnit,
-AgeLower = :match.OtherDiag.AgeLower,
-AgeUpper =:match.OtherDiag.AgeUpper,
-YearDate = :match.OtherDiag.YearDate,
-MonthDate =:match.OtherDiag.MonthDate,
-TimePeriod = :match.OtherDiag.TimePeriod,
-NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods}
+Age = :item.OtherDiag.Age,
+AgeUnit = :item.OtherDiag.AgeUnit,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper,
+YearDate = :item.OtherDiag.YearDate,
+MonthDate =:item.OtherDiag.MonthDate,
+TimePeriod = :item.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
 
 Rule: OtherDiagListA8
 Priority: 100
