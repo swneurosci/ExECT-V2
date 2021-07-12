@@ -1,7 +1,7 @@
 Imports: {import static gate.Utils.*; }
 
 Phase: ModifyLookup
-Input: OtherPerson Lookup2 Person Lookup3 Lookup Conj Sentence
+Input: OtherPerson Lookup2 Person Lookup3 Lookup Conj Sentence 
 Options: control=brill
 
 /*
@@ -88,9 +88,10 @@ Rule: ExperiencerReversal4
 (
   {Person.minorType == pronoun}
   {OtherPerson}
-  ({Lookup2.majorType == person})
-  ({Conj})
+  ({Lookup2.majorType == person})?
+  ({Conj})?
   ({Person})
+  ({Person})?
   {Lookup2.majorType == historic}
 	({Lookup3.majorType == umls, Lookup3.minorType == OtherDisease, 
     Lookup3.Experiencer == Other}):umls
@@ -119,7 +120,42 @@ Rule: ExperiencerReversal6  /*explain to Patient and his father that the ongoing
 },
 :umls.Lookup3ExpChange = {rule = ExperienceReversal6a}
 
-Rule: ExperiencerReversal6  /*reversing from patient to other*/
+Rule: ExperiencerReversal6b  /*he also has Lookup3 and his brother told me...*/
+( 
+  ({Person.type == subject})
+  ({Conj})?
+  {Person.minorType == pronoun}
+  ({Lookup2.majorType == historic})?
+	({Lookup3.minorType == OtherDisease, Lookup3.Experiencer == Other}):umls
+ 
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal6a");
+},
+:umls.Lookup3ExpChange = {rule = ExperienceReversal6b}
+
+Rule: ExperiencerReversal7  /*reversing from other to patient : he lives with his ...and has no recellection of his seizures*/
+
+ (
+  {Person.type == subject}
+  {Conj}
+  {Person.type == possessive}
+  {OtherPerson.majorType == family}
+  ({Conj})
+  {Lookup2.majorType == historic}
+  {Person.type == possessive}
+	({Lookup3.majorType == umls, Lookup3.Experiencer == Other}):umls
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
+  umlsAnnots.iterator().next().getFeatures().put("rule2","ExperienceReversal7");
+},
+:umls.Lookup3ExpChange = {rule = ExperienceReversal7}
+
+Rule: ExperiencerReversal8  /*reversing from patient to other*/
 
  (
   {Person.minorType == pronoun}
@@ -133,6 +169,9 @@ Rule: ExperiencerReversal6  /*reversing from patient to other*/
 -->
 :umls {
   umlsAnnots.iterator().next().getFeatures().put("Experiencer","Other");
-  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal6b");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal8");
 },
-:umls.Lookup3ExpChange = {rule = ExperienceReversal6b}
+:umls.Lookup3ExpChange = {rule = ExperienceReversal8}
+
+
+
