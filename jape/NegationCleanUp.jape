@@ -135,9 +135,9 @@ umlsAnnots.iterator().next().getFeatures().put("rule","removenon-asnegation");
 // this may be sensitive so should be checked
 Rule: stopNegationWithAnd
 (
-   ({Trgger.majorType == Negation, Trgger.minorType == pre-condition}) 
+   ({Trigger.majorType == negation, Trigger.minorType == pre-condition}) 
    ({Conj.type == conj})
-   ({Lookup}):umls
+   ({Lookup3.minorType == generic}):umls
 ):match
 -->
 :umls {
