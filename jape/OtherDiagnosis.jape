@@ -64,21 +64,20 @@ Negation = :item.OtherDiag.Negation}
 
 
 
-/*triggered by opinion only,   " the impression is thet the ongoing episodes are..."*/
+// triggered by opinion only - could be too sensitive 
 
-/*Rule: OtherDiagnosis5
+Rule: OtherDiagnosis5
 Priority: 99
 
 (  
  	{Lookup2.minorType == opinion, Lookup2.majorType == diagnosis}
-	{Lookup2.minorType == opinion, Lookup2.majorType == diagnosis}
 	({OtherDiag}):item
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagnosis5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}*/ 
+Certainty = :item.OtherDiag.Certainty}
 
 
 Rule: OtherDiagnosis6  /*as in non-epileptic attacks would seem a most likely explanation*/
@@ -122,8 +121,24 @@ Rule: OtherDiagnosis8 //with a list of seizures
 Priority: 100
 
 (  
-	{DiagnosisTriggers}
+	{DiagnosisTriggers.type == diagnosis}
 	({Lookup2})+
+	({OtherDiag.rule == OtherDiagPhrase}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagnosis8,  PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}
+
+
+Rule: OtherDiagnosis8 //with a list of seizures
+Priority: 100
+
+(  
+	{DiagnosisTriggers.type == diagnosis}
 	({OtherDiag.rule == OtherDiagPhrase}):item
     
  ):match  
