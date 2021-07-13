@@ -82,21 +82,20 @@ Priority: 97
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation}
 
-/*
-Rule: OtherDiagListF5  //when there are no list points, no list sentences//
+ //when there are no list points, no list sentences//
+
+Rule: OtherDiagnosis8 //with a list of seizures
 Priority: 100
-(   
-	({DiagnosisTriggers.type == diagnosis})
-	({Conj})?
-	{NewLine}
-	{NewLine}
+
+(  
+	{DiagnosisTriggers.type == diagnosis}
 	({Conj})?
 	({OtherDiag}):item
-	{NewLine}
-
+    
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListF5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty} */
+:item.PatientHistory = {rule = OtherDiagnosis8,  PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}
