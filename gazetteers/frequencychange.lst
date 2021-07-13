@@ -49,3 +49,4 @@ decrease in seizure frequency:Quantity=Decreased:ContainsLookUp=Yes
 decrease in seizures frequency:Quantity=Decreased:ContainsLookUp=Yes
 reoccurance:Quantity=Increased
 restarted:Quantity=Increased
+reduction in the frequency:Quantity=Decreased

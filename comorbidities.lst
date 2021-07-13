@@ -1253,3 +1253,4 @@ Chronic daily headaches	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease 
 alcohol abuse	CUI=C0221628	PREF=history of alcohol abuse	TUI=T033	STY=Finding
 visually impaired	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
 episode of psychosis	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
+sclerosis	CUI=C0036429	PREF=sclerosis	TUI=T046	STY=Pathologic Function
