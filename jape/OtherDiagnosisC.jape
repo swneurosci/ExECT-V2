@@ -1,9 +1,9 @@
 Phase: OtherDiagnosisC
-Input: OtherDiag NewLine DiagnosisTriggers listPoint listSent Person Split
+Input: OtherDiag NewLine DiagnosisTriggers listPoint listSent Person Split MedicalHistory
 
 /*For top of the letter diagnosis when there are no listpoints oo other points, listPoint is listed
 to stop the rule from fiering when the regular lists do*/
-
+//MedicalHistory acts as a block to stop phrases from MedicalHistory being picked up
 Options: control=brill
 
 Rule: OtherDiagnosisC
