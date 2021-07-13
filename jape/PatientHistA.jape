@@ -825,7 +825,6 @@ Rule: PtHistoryA24b  /*simple and dengerous : Opinion (possible) learning diffic
 Priority: 80
 
 (  
-
  	({Lookup2.minorType == opinion})
 	 ({Person})?
 	 ({Lookup2.minorType == probability})
