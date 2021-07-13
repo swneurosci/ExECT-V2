@@ -1262,3 +1262,5 @@ mesial temporal lobe sclerosis	CUI=C3164863	PREF=Mesial temporal lobe sclerosis	
 temporal lobe sclerosis	CUI=C3662090	PREF=Temporal lobe sclerosis	TUI=T047	STY=Disease or Syndrome
 motor neuron disease	CUI=C0085084	PREF=Motor Neuron Disease	TUI=T047	STY=Disease or Syndrome
 MND	CUI=C0085084	PREF=Motor Neuron Disease	TUI=T047	STY=Disease or Syndrome
+SMART Syndrome (stroke like migraine attacks after radiation therapy)	CUI=C3665809	PREF=stroke-like migraine attacks after radiation therapy	TUI=T046	STY=Pathologic Function
+migrainous	CUI=C0149931	PREF=migraine disoreders	TUI=T047	STY=Disease or Syndrome
