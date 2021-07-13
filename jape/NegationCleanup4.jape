@@ -19,7 +19,7 @@ umlsAnnots.iterator().next().getFeatures().put("rule","putNegation");
 },
 :umls.LookupNegChange = {rule = putNegation}
 
-Rule: reverseNegation
+Rule: reverseNegation2
 (
 ({Person.type == possessive})
 ({Lookup3.minorType == generic, Lookup3.Negation == Negated}):umls
@@ -27,6 +27,19 @@ Rule: reverseNegation
 -->
 :umls{
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
-umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation");
+umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation2");
 },
-:umls.Lookup3NegChange = {rule = reverseNegation_in_NegationCleanup4}
+:umls.Lookup3NegChange = {rule = reverseNegation42_in_NegationCleanup4}
+
+Rule: reverseNegation3
+(
+({Lookup2.majorType == negation, Lookup2.minorType == stop})
+({Person.kind == firstName})
+({Lookup3.majorType == umls, Lookup3.Negation == Negated}):umls
+):match
+-->
+:umls{
+umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation3");
+},
+:umls.Lookup3NegChange = {rule = reverseNegation3_in_NegationCleanup4}
