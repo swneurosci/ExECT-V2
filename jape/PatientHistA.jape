@@ -807,8 +807,8 @@ Priority: 70
 
 (  
 	({Person.type == subject})
- 	({Lookup2.majorType == historic}|{Lookup2.majorType == modifier})
-	 ({Lookup2})?
+ 	({Lookup2.majorType == historic, Lookup2.type != diagnosed}|{Lookup2.majorType == modifier})
+	 ({Lookup2.type != diagnosed})?
 	 ({Lookup2.type != state})
 	 ({Lookup2})?
 	 ({Person})?
