@@ -99,3 +99,42 @@ Priority: 100
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation}
+
+Rule: OtherDiagnosis8a //when the list starts with a new line
+Priority: 100
+
+(  
+	{DiagnosisTriggers.type == diagnosis}
+	({NewLine})?
+	({Conj.type == list})
+	({Conj})
+	({Conj})
+	({OtherDiag}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagnosis8a,  PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}
+
+Rule: OtherDiagnosis8b //when the list starts with a new line
+Priority: 100
+
+(  
+	{DiagnosisTriggers.type == diagnosis}
+	({NewLine})?
+	({Conj.type == list})
+	({Conj})
+	({Conj})
+	{OtherDiag}
+	({OtherDiag}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagnosisb,  PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}
