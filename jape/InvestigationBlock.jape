@@ -5,6 +5,7 @@ Input: Token Investigation InvestigationBlock
 Options: control=appelt
 Rule: InvestigationBlock
 
+// Can't remember what was in investigationBlock - gazetteer now blank...
 (
   ({Investigation}):umls
   {InvestigationBlock}
