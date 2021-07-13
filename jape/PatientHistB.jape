@@ -323,12 +323,12 @@ AgeUnit = :match.OtherDiag.AgeUnit,
 AgeUpper =:match.OtherDiag.AgeUpper}
 
 
-Rule: PtHistoryB15 //Opinion and 2nd otherdiag after sone lookups ...//
+Rule: PtHistoryB15 //Opinion should be reserved for other diag ...//
 Priority: 99
 
 ( 
 
-	({Lookup2.minorType == opinion})
+	({Lookup2.minorType != opinion, Lookup2.minorType != probability})
 	({Person})?
 	({Lookup2})*
 	({Person})?
