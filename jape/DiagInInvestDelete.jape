@@ -8,9 +8,10 @@ Options: control=all
 // no non-epileptic seizures - would deleting the contains "non" mean that all the rules would work fine 
 // and this wont be needed
 // for now rule is fine and should work well
+// Improved with diagnosis from DiagnosisTriggers to be deleted not personTrigger
 Rule: DiagInInvestDelete
 (
-{Sentence contains Diagnosis, Sentence contains Investigation}  
+{Sentence contains Diagnosis.rule =~ DiagnosisTrigger, Sentence contains Investigation}  
 ):umls
 -->
 :umls {
