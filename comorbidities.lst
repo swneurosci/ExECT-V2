@@ -1253,4 +1253,12 @@ Chronic daily headaches	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease 
 alcohol abuse	CUI=C0221628	PREF=history of alcohol abuse	TUI=T033	STY=Finding
 visually impaired	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
 episode of psychosis	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
-sclerosis	CUI=C0036429	PREF=sclerosis	TUI=T046	STY=Pathologic Function
+convulsive seizures	CUI=C0751494	PREF=Convulsive Seizures	TUI=T184	STY=sign or symptom
+convulsive seizure	CUI=C0751494	PREF=Convulsive Seizures	TUI=T184	STY=sign or symptom
+seizure cluster	CUI=C3203523	PREF=Acute repetitive seizure	TUI=T047	STY=Disease or Syndrome
+cluster of seizures	CUI=C3203523	PREF=Acute repetitive seizure	TUI=T047	STY=Disease or Syndrome
+medial temporal sclerosis	CUI=C3164863	PREF=Mesial temporal lobe sclerosis	TUI=T047	STY=Disease or Syndrome
+mesial temporal lobe sclerosis	CUI=C3164863	PREF=Mesial temporal lobe sclerosis	TUI=T047	STY=Disease or Syndrome
+temporal lobe sclerosis	CUI=C3662090	PREF=Temporal lobe sclerosis	TUI=T047	STY=Disease or Syndrome
+motor neuron disease	CUI=C0085084	PREF=Motor Neuron Disease	TUI=T047	STY=Disease or Syndrome
+MND	CUI=C0085084	PREF=Motor Neuron Disease	TUI=T047	STY=Disease or Syndrome
