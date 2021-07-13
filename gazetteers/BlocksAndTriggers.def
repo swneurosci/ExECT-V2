@@ -20,3 +20,4 @@ driving.lst:driving:driving::SFreeBlock
 opinion.lst:diagnosis:opinion::Lookup2
 InvestigationBlock.lst::::InvestigationBlock
 but.lst::::but
+NegationStop.lst:negation:stop::Lookup2
