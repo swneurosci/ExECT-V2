@@ -1,5 +1,5 @@
 Phase: PatientHistC
-Input: Person Lookup2 Lookup3 timeElapsed DiagnosisTriggers Sentence PartialDate Numeric timePeriod
+Input: Person OtherDiag Lookup2 Lookup3 timeElapsed Age DiagnosisTriggers Sentence PartialDate Numeric timePeriod
 Options: control=appelt
 
 
@@ -112,6 +112,31 @@ Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI,
 Negation = :item.OtherDiag.Negation,
 YearDate =:match.Numeric.value}
 
+Rule: PtHistoryC5
+Priority: 100
 
+(   
+	{Person}
+	{OtherDiag}
+	({Lookup2})?
+	({Age}):a
+	({Person})?
+    ({timeElapsed})?
+	({Person})
+	({Lookup2.type == suffered})
+    ({OtherDiag})
+    ({Lookup2})?
+	({OtherDiag}):item
+		   
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryC5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+//STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, 
+AgeUnit = :a.Age.Unit,
+Age =:a.Age.Age,
+AgeLower =:a.Age.AgeLower,
+AgeUpper =:a.Age.AgeUpper}
 
 
