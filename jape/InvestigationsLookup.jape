@@ -11,7 +11,7 @@ Rule: InvestigationCTLookup
 Priority: 100
 (   
     ({ContextInvestigations})
-    ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
     ({Lookup}|{Lookup3})
 ):match
 -->
@@ -21,7 +21,7 @@ Rule: InvestigationEEGLookup
 Priority: 100
 (
     ({ContextInvestigations})
-    ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
     ({Lookup}|{Lookup3})
 ):match
 -->
@@ -31,7 +31,7 @@ Rule: InvestigationMRILookup
 Priority: 100
 (
     ({ContextInvestigations})
-    ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
     ({Lookup}|{Lookup3})
 ):match
 -->
@@ -42,7 +42,7 @@ Priority: 100
 (   
     ({ContextInvestigations})
     ({Lookup}|{Lookup3})
-    ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
 ):match
 -->
 :match.InvestigationIgnore = { rule = InvestigationCTLookup}
@@ -52,7 +52,7 @@ Priority: 100
 (
     ({ContextInvestigations})
     ({Lookup}|{Lookup3})
-    ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
 ):match
 -->
 :match.InvestigationIgnore = { rule = InvestigationEEGLookup}
@@ -62,7 +62,7 @@ Priority: 100
 (
     ({ContextInvestigations})
     ({Lookup}|{Lookup3})
-    ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
 
 ):match
 -->
@@ -74,7 +74,7 @@ Priority: 100
 (
     ({Lookup}|{Lookup3})
     ({ContextInvestigations})
-    ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
 ):match
 -->
 :match.InvestigationIgnore = { rule = InvestigationCTLookup}
@@ -84,7 +84,7 @@ Priority: 100
 (
     ({Lookup}|{Lookup3})
     ({ContextInvestigations})
-    ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
 ):match
 -->
 :match.InvestigationIgnore = { rule = InvestigationEEGLookup}
@@ -94,7 +94,7 @@ Priority: 100
 (
     ({Lookup}|{Lookup3})
     ({ContextInvestigations})
-    ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
 
 ):match
 -->
@@ -103,7 +103,7 @@ Priority: 100
 Rule: InvestigationCTLookup
 Priority: 100
 (
-    ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
     ({Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}|{Lookup3.Negation == Affirmed, Lookup3.Temporality != "hypothetical", Lookup3.CAT == Seizures})
 ):match
 -->
@@ -113,7 +113,7 @@ Priority: 100
 Rule: InvestigationCTLookup
 Priority: 100
 (
-    ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
     ({Lookup.Negation == Negated, Lookup.Temporality != "hypothetical"}|{Lookup3.Negation == Negated, Lookup3.Temporality != "hypothetical", Lookup3.CAT == Seizures})
 ):match
 -->
@@ -122,7 +122,7 @@ Priority: 100
 Rule: InvestigationEEGLookup
 Priority: 100
 (
-    ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
     ({Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}|{Lookup3.Negation == Affirmed, Lookup3.Temporality != "hypothetical", Lookup3.CAT == Seizures})
 ):match
 -->
@@ -131,7 +131,7 @@ Priority: 100
 Rule: InvestigationEEGLookup
 Priority: 100
 (
-    ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
     ({Lookup.Negation == Negated, Lookup.Temporality != "hypothetical"}|{Lookup3.Negation == Negated, Lookup3.Temporality != "hypothetical", Lookup3.CAT == Seizures})
 ):match
 -->
@@ -140,7 +140,7 @@ Priority: 100
 Rule: InvestigationMRILookup
 Priority: 100
 (
-    ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
     ({Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}|{Lookup3.Negation == Affirmed, Lookup3.Temporality != "hypothetical", Lookup3.CAT == Seizures})
 ):match
 -->
@@ -149,7 +149,7 @@ Priority: 100
 Rule: InvestigationMRILookup
 Priority: 100
 (
-    ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
     ({Lookup.Negation == Negated, Lookup.Temporality != "hypothetical"}|{Lookup3.Negation == Negated, Lookup3.Temporality != "hypothetical", Lookup3.CAT == Seizures})
 ):match
 -->
@@ -161,7 +161,7 @@ Rule: InvestigationCTLookup
 Priority: 100
 (
     ({Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}|{Lookup3.Negation == Affirmed, Lookup3.Temporality != "hypothetical", Lookup3.CAT == Seizures})
-    ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
 ):match
 -->
 :match.InvestigationsLookup = { rule = InvestigationCTLookup3, CT_Performed = "Yes", CT_Results = "Abnormal", Negation = :match.Investigation.Negation, CUI = "C0436539"}
@@ -171,7 +171,7 @@ Rule: InvestigationCTLookup
 Priority: 100
 (
     ({Lookup.Negation == Negated, Lookup.Temporality != "hypothetical"}|{Lookup3.Negation == Negated, Lookup3.Temporality != "hypothetical", Lookup3.CAT == Seizures})
-    ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
 ):match
 -->
 :match.InvestigationsLookup = { rule = InvestigationCTLookup4, CT_Performed = "Yes", CT_Results = "Normal", Negation = :match.Investigation.Negation, CUI = "C0744602"}
@@ -180,7 +180,7 @@ Rule: InvestigationEEGLookup
 Priority: 100
 (
     ({Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}|{Lookup3.Negation == Affirmed, Lookup3.Temporality != "hypothetical", Lookup3.CAT == Seizures})
-    ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
 ):match
 -->
 :match.InvestigationsLookup = { rule = InvestigationEEGLookup3, EEG_Performed = "Yes", EEG_Results = "Abnormal", Negation = :match.Investigation.Negation, CUI = "C0151611"}
@@ -190,7 +190,7 @@ Priority: 100
 (
     
     ({Lookup.Negation == Negated, Lookup.Temporality != "hypothetical"}|{Lookup3.Negation == Negated, Lookup3.Temporality != "hypothetical", Lookup3.CAT == Seizures})
-    ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
 ):match
 -->
 :match.InvestigationsLookup = { rule = InvestigationEEGLookup4, EEG_Performed = "Yes", EEG_Results = "Normal", Negation = :match.Investigation.Negation, CUI = "C0560017"}
@@ -199,7 +199,7 @@ Rule: InvestigationMRILookup
 Priority: 100
 (
     ({Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}|{Lookup3.Negation == Affirmed, Lookup3.Temporality != "hypothetical", Lookup3.CAT == Seizures})
-    ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
 ):match
 -->
 :match.InvestigationsLookup = { rule = InvestigationMRILookup3, MRI_Performed = "Yes", MRI_Results = "Abnormal", Negation = :match.Investigation.Negation, CUI = "C1319851"}
@@ -208,7 +208,7 @@ Rule: InvestigationMRILookup
 Priority: 100
 (
     ({Lookup.Negation == Negated, Lookup.Temporality != "hypothetical"}|{Lookup3.Negation == Negated, Lookup3.Temporality != "hypothetical", Lookup3.CAT == Seizures})
-    ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+    ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed, Investigation notWithin Investigations}):invest
 ):match
 -->
 :match.InvestigationsLookup = { rule = InvestigationMRILookup4, MRI_Performed = "Yes", MRI_Results = "Normal", Negation = :match.Investigation.Negation, CUI = "C0436481"}
