@@ -8,34 +8,35 @@ Options: control=all
 // combination of non-epileptic as well as epileptic seizures. 
 // here (non-)epileptic also picked up as a lookup (need to remove)
 
-// Have a look at the span of this rule. I think adding split will fix it (letter42 problem)
-Rule: reverseNegation
-(
-({Token@string =~ "non[-]"})
-({Token})+
-({Lookup.Negation == "Negated"}):umls
-):match
--->
-:umls {
-umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
-umlsAnnots.iterator().next().getFeatures().put("rule1","reverseNegation1a");
-},
-:match.LookupNegChange = {rule = reverseNegation1a}
+// // Have a look at the span of this rule. I think adding split will fix it (letter42 problem)+ ID1_Letter_4
+// Rule: reverseNegation
+// (
+// ({Token@string =~ "non[-]"})// I have removed 'non-' as a negation trigger when in a lookup so this rule may not be needed now. 
+// //It will be reversing stuff that wasn't negated by the non and probably by some other stuff which was correct. 
+// ({Token})+
+// ({Lookup.Negation == "Negated"}):umls
+// ):match
+// -->
+// :umls {
+// umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+// umlsAnnots.iterator().next().getFeatures().put("rule1","reverseNegation1a");
+// },
+// :match.LookupNegChange = {rule = reverseNegation1a}
 
-// This might be better to remove the "non" trigger - mentioned more in NegationCleanUp.jape
-// Above example not working for lookup3???????
-Rule: reverseNegation
-(
-({Token@string == "non[-]"})
-({Token})+
-({Lookup3.Negation == "Negated"}):umls
-):match
--->
-:umls {
-umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
-umlsAnnots.iterator().next().getFeatures().put("rule1","reverseNegation1a");
-},
-:match.Lookup3NegChange = {rule = reverseNegation1a}
+// // This might be better to remove the "non" trigger - mentioned more in NegationCleanUp.jape
+// // Above example not working for lookup3???????
+// Rule: reverseNegation
+// (
+// ({Token@string == "non[-]"})
+// ({Token})+
+// ({Lookup3.Negation == "Negated"}):umls
+// ):match
+// -->
+// :umls {
+// umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+// umlsAnnots.iterator().next().getFeatures().put("rule1","reverseNegation1a");
+// },
+// :match.Lookup3NegChange = {rule = reverseNegation1a}
 
 // when episodes are described as not epileptic in nature they are automatically negated so here this negation is reversed
 Rule: reverseNegation  
