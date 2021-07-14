@@ -1264,3 +1264,5 @@ motor neuron disease	CUI=C0085084	PREF=Motor Neuron Disease	TUI=T047	STY=Disease
 MND	CUI=C0085084	PREF=Motor Neuron Disease	TUI=T047	STY=Disease or Syndrome
 SMART Syndrome (stroke like migraine attacks after radiation therapy)	CUI=C3665809	PREF=stroke-like migraine attacks after radiation therapy	TUI=T046	STY=Pathologic Function
 migrainous	CUI=C0149931	PREF=migraine disoreders	TUI=T047	STY=Disease or Syndrome
+anterior temporal lobectomy	CUI=C1136214	PREF=Anterior Temporal Lobectomy	TUI=T061	STY=Therapeutic or Preventive Procedure
+temporal lobe resection	CUI=C1136214	PREF=Anterior Temporal Lobectomy	TUI=T061	STY=Therapeutic or Preventive Procedure
