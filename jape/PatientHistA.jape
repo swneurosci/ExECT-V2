@@ -34,6 +34,7 @@ Priority: 100
 (   
 	({Person})?
   	({Lookup2.language == onset})
+	({Lookup2})?
 	({OtherDiag.rule == OtherDiagDate}):item
     
  ):match  
@@ -510,7 +511,7 @@ Rule: PtHistoryA13a
 Priority: 100
 
 (   
-
+	({!Person})
 	({Person})
 	({Lookup2.majorType == historic})
 	({OtherDiag}):item
@@ -665,12 +666,36 @@ Age =:match.OtherDiag.Age,
 AgeLower = :match.OtherDiag.AgeLower,
 AgeUpper =:match.OtherDiag.AgeUpper}
 
+Rule: PtHistoryA18 
+Priority: 100
+(   
+	({Lookup2.type == experiencing})
+	({Lookup2})?
+	({OtherDiag}):item
+	({Person})
+	({Lookup2.minorType == symptoms})?
+
+ ):match  
+ -->
+:item.PatientHistory = {rule = PtHistoryA18, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, 
+AgeUnit =:match.OtherDiag.AgeUnit,
+Age =:match.OtherDiag.Age,
+AgeLower = :match.OtherDiag.AgeLower,
+AgeUpper =:match.OtherDiag.AgeUpper}
+
+
+
 Rule: PtHistoryA19 
 Priority: 98
 
-(   
+(  
+	({!Person})
 	({Person})
 	({Lookup2})?
+	({Age})?
 	({Lookup2.language == experience, Lookup2.type != "diagnosed"}|{Lookup2.minorType == causality})
 	({Lookup2.type != previous})?
 	({OtherDiag}):item
@@ -683,8 +708,11 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
 TimePeriod = :match.OtherDiag.TimePeriod,
-NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods}
-
+NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods,
+AgeUnit =:match.Age.AgeUnit,
+Age =:match.Age.Age,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUppe}
 
 Rule: PtHistoryA20 //with an onset - We are investigating P for possible ...//
 Priority: 99
@@ -726,8 +754,10 @@ Rule: PtHistoryA21 //with an opinion//
 Priority: 99
 
 ( 
-
-	({Lookup2.minorType == symptoms, Lookup2.type == experiencing}| {Lookup2.minorType == probability})
+	({!listPoint})
+	({!OtherDiag})
+	({Person})?
+	({Lookup2.minorType == symptoms, Lookup2.language == experience, Lookup2.type != diagnosed}| {Lookup2.minorType == probability})
 	({Lookup2.minorType == causality})?
 	({Person})?
 	({OtherDiag}):item
