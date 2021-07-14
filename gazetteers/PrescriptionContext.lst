@@ -56,3 +56,6 @@ wean down:context=future
 To try:context=future
 target dose:context=future
 should stop:context=future
+titrated:context=past
+To add:context=future
+to add:context=future
