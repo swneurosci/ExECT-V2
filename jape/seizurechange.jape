@@ -165,7 +165,7 @@ Priority: 100
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureChange3a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
-PointInTime = :match.PointInTime.Since} 
+PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "Since"}
 
 // seizures better since last clinic
 Rule: SeizureChange3b
@@ -177,7 +177,7 @@ Priority: 100
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureChange3b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
-PointInTime = :match.PointInTime.Since} 
+PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "Since"} 
 
 // seizures increased since change of medication
 Rule: SeizureChange3c
@@ -338,6 +338,36 @@ Priority: 90
 :match.SeizureChange = { rule = "SeizureChange7", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, 
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2}
 
+
+//increase in seizure frequency since/During date
+Rule: SeizureChange8
+Priority: 90
+( 
+    ({Frequency.ContainsLookUp == Yes})
+    ({timeElapsed})
+    ({PartialDate})
+
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange8", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, 
+DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1,
+UpperNumberOfTimePeriods = :match.NumberRange.N2, TimeSince_or_TimeOfEvent = :match.timeElapsed.time}
+
+//increase in seizure frequency since/During PointInTime
+Rule: SeizureChange8
+Priority: 90
+( 
+    ({Frequency.ContainsLookUp == Yes})
+    (({timeElapsed})
+    ({PointInTime})|({PointInTime contains Token.string ==~ "[Ss]ince"}))
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange8", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, 
+DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1,
+UpperNumberOfTimePeriods = :match.NumberRange.N2, TimeSince_or_TimeOfEvent = "Since", TimeSince_or_TimeOfEvent = :match.timeElapsed.time,
+PointInTime = :match.PointInTime.Since}
 
 
 

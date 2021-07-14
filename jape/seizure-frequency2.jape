@@ -228,8 +228,9 @@ Priority: 95
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
  NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods  = :match.NumberRange.N1}
 
- /* she has not had any further seizures since starting Zonisamide. */
-
+/* she has not had any further seizures since starting Zonisamide. */
+// Seizures here are affirmed not negated - but in the example they are negated... Picked up correctly by HseizureFree4d
+// NEED TO CHECK IN MORE DETAIL
 Rule: NoSeizure4
 Priority: 95 
 (
@@ -293,6 +294,23 @@ Priority: 95
  NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods  = :match.NumberRange.N1,
  YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day}
 */
+
+ /* Since Date no further seizures */
+
+Rule: NoSeizure5b
+Priority: 95 
+(   
+    ({timeElapsed.time == "Since"})
+    ({PartialDate})
+    ({NoSeizure})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
+
+):match
+-->
+:match.SeizureFrequency11 = { rule = "NoSeizure5b", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since",
+ NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods  = :match.NumberRange.N1,
+ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day}
 
 
 /*No seizure since April 2018 */
