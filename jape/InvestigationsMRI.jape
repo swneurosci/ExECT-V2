@@ -10,7 +10,7 @@ Rule: IgnoreInvestigationsOutcomeMRI
 Priority: 100
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):invest
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
   ({InvestigationFindingMRI})*
   (({InvestigationFindingMRI}):outcome)+
 ):match
@@ -22,7 +22,7 @@ CUI = :outcome.InvestigationFindingMRI.CUI, Negation = :outcome.InvestigationFin
 Rule: getInvestigationsOutcomeMRI
 Priority: 99
 (
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):invest
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
   ({InvestigationFindingMRI})*
   (({InvestigationFindingMRI}):outcome)+
 ):match
@@ -34,7 +34,7 @@ CUI = :outcome.InvestigationFindingMRI.CUI, Negation = :outcome.InvestigationFin
 // Rule: getInvestigationsOutcomeMRI2
 // Priority: 98
 // (
-//   ({Investigation.Complete == Yes, Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+//   ({Investigation.Complete == Yes, Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
 // ):match
 // -->
 // :match.Investigations = { rule = getInvestigationsOutcomeMRI2, MRI_Performed = "Yes", MRI_Results = :match.Investigation.Outcome, 
@@ -46,7 +46,7 @@ Priority: 97
 (
   ({ContextInvestigations})
   ({InvestigationFindingMRI})
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
 ):match
 -->
 :match.InvestigationIgnore = { rule = IgnoreInvestigationsOutcomeMRI3, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
@@ -57,7 +57,7 @@ Rule: getInvestigationsOutcomeMRI3
 Priority: 96
 (
   ({InvestigationFindingMRI})
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
 ):match
 -->
 :match.Investigations = { rule = getInvestigationsOutcomeMRI3, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
@@ -68,7 +68,7 @@ Rule: InvestigationTwoSentences
 Priority: 94
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Split})
   ({InvestigationFindingMRI})
 ):match
@@ -80,7 +80,7 @@ CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFinding
 Rule: InvestigationTwoSentences
 Priority: 94
 (
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Split})
   ({InvestigationFindingMRI})
 ):match
@@ -94,7 +94,7 @@ Rule: getInvestigationsOutcomeMRI
 Priority: 93
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})
   ({InvestigationFindingMRI})
 ):match
@@ -106,7 +106,7 @@ CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFinding
 Rule: getInvestigationsOutcomeMRI
 Priority: 93
 (
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})
   ({InvestigationFindingMRI})
 ):match
@@ -119,7 +119,7 @@ Rule: getInvestigationsOutcomeMRI
 Priority: 92
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})
   ({Split})
   ({InvestigationFindingMRI})
@@ -132,7 +132,7 @@ CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFinding
 Rule: getInvestigationsOutcomeMRI
 Priority: 92
 (
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})
   ({Split})
   ({InvestigationFindingMRI})
@@ -146,7 +146,7 @@ Rule: getInvestigationsOutcomeMRI
 Priority: 92
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Split})
   ({Conj})
   ({InvestigationFindingMRI})
@@ -159,7 +159,7 @@ CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFinding
 Rule: getInvestigationsOutcomeMRI
 Priority: 92
 (
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Split})
   ({Conj})
   ({InvestigationFindingMRI})
@@ -173,7 +173,7 @@ Rule: getInvestigationsOutcomeMRI
 Priority: 92
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Investigation})*
   ({Conj})?
   ({Investigation})
@@ -187,7 +187,7 @@ CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFinding
 Rule: getInvestigationsOutcomeMRI
 Priority: 92
 (
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Investigation})*
   ({Conj})?
   ({Investigation})
@@ -205,7 +205,7 @@ Priority: 92
   ({InvestigationFindingMRI})
   ({Investigation})*
   ({Conj})?
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
 ):match
 -->
 :match.InvestigationIgnore= { rule = getInvestigationsOutcomeMRI8, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
@@ -220,7 +220,7 @@ Priority: 92
   ({Conj})?
   ({Investigation})*
   ({Conj})?
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
 ):match
 -->
 :match.Investigations= { rule = getInvestigationsOutcomeMRI8, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
@@ -231,7 +231,7 @@ Rule: getInvestigationsOutcomeMRI
 Priority: 92
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Investigation})*
   ({Conj})?
   ({Investigation})
@@ -246,7 +246,7 @@ CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFinding
 Rule: getInvestigationsOutcomeEEG
 Priority: 92
 (
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Investigation})*
   ({Conj})?
   ({Investigation})
@@ -261,7 +261,7 @@ CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFinding
 Rule: getInvestigationsOutcomeEEG
 Priority: 92
 (
-  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})?
   ({Investigation})
   (({Split})|({Conj}))?

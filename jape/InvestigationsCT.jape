@@ -10,7 +10,7 @@ Rule: getInvestigationsOutcomeCT
 Priority: 100
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):invest
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
   ({InvestigationFindingCT})*
   (({InvestigationFindingCT}):outcome)+
 ):match
@@ -23,7 +23,7 @@ CUI = :outcome.InvestigationFindingCT.CUI, Negation = :outcome.InvestigationFind
 Rule: getInvestigationsOutcomeCT
 Priority: 99
 (
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):invest
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
   ({InvestigationFindingCT})*
   (({InvestigationFindingCT}):outcome)+
 ):match
@@ -35,7 +35,7 @@ CUI = :outcome.InvestigationFindingCT.CUI, Negation = :outcome.InvestigationFind
 *Rule: getInvestigationsOutcomeCT2
 *Priority: 98
 *(
-*  ({Investigation.Complete == Yes, Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+*  ({Investigation.Complete == Yes, Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
 *):match
 *-->
 *:match.Investigations = { rule = getInvestigationsOutcome2CT, CT_Performed = "Yes", CT_Results = :match.Investigation.Outcome, 
@@ -48,7 +48,7 @@ Priority: 97
 (
   ({ContextInvestigations})
   ({InvestigationFindingCT})
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
 ):match
 -->
 :match.InvestigationIgnore = { rule = getInvestigationsOutcomeCT3, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
@@ -60,7 +60,7 @@ Rule: getInvestigationsOutcomeCT3
 Priority: 96
 (
   ({InvestigationFindingCT})
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
 ):match
 -->
 :match.Investigations = { rule = getInvestigationsOutcomeCT3, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
@@ -71,7 +71,7 @@ Rule: InvestigationTwoSentences
 Priority: 94
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Split})
   ({InvestigationFindingCT})
 ):match
@@ -82,7 +82,7 @@ CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingC
 Rule: InvestigationTwoSentences
 Priority: 94
 (
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Split})
   ({InvestigationFindingCT})
 ):match
@@ -95,7 +95,7 @@ Rule: InvestigationTwoSentences
 Priority: 93
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})
   ({InvestigationFindingCT})
 ):match
@@ -106,7 +106,7 @@ CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingC
 Rule: InvestigationTwoSentences
 Priority: 93
 (
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})
   ({InvestigationFindingCT})
 ):match
@@ -119,7 +119,7 @@ Rule: InvestigationTwoSentences
 Priority: 92
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})
   ({Split})
   ({InvestigationFindingCT})
@@ -132,7 +132,7 @@ CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingC
 Rule: InvestigationTwoSentences
 Priority: 92
 (
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})
   ({Split})
   ({InvestigationFindingCT})
@@ -147,7 +147,7 @@ Rule: InvestigationTwoSentences
 Priority: 92
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Split})
   ({Conj})
   ({InvestigationFindingCT})
@@ -159,7 +159,7 @@ CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingC
 Rule: InvestigationTwoSentences
 Priority: 92
 (
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Split})
   ({Conj})
   ({InvestigationFindingCT})
@@ -174,7 +174,7 @@ Rule: getInvestigationsOutcomeCT
 Priority: 92
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Investigation})*
   ({Conj})?
   ({Investigation})
@@ -187,7 +187,7 @@ CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingC
 Rule: getInvestigationsOutcomeCT
 Priority: 92
 (
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Investigation})*
   ({Conj})?
   ({Investigation})
@@ -205,7 +205,7 @@ Priority: 92
   ({InvestigationFindingCT})
   ({Investigation})*
   ({Conj})?
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
 ):match
 -->
 :match.InvestigationIgnore= { rule = getInvestigationsOutcomeCT8, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
@@ -219,7 +219,7 @@ Priority: 92
   ({Conj})?
   ({Investigation})*
   ({Conj})?
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
 ):match
 -->
 :match.Investigations= { rule = getInvestigationsOutcomeCT8, CT_Performed = "Yes", CT_Results = :match.InvestigationFindingCT.Results, 
@@ -230,7 +230,7 @@ Rule: getInvestigationsOutcomeCT
 Priority: 92
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Investigation})*
   ({Conj})?
   ({Investigation})
@@ -245,7 +245,7 @@ CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingC
 Rule: getInvestigationsOutcomeCT
 Priority: 92
 (
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Investigation})*
   ({Conj})?
   ({Investigation})
@@ -261,7 +261,7 @@ CUI = :match.InvestigationFindingCT.CUI, Negation = :match.InvestigationFindingC
 Rule: getInvestigationsOutcomeCT
 Priority: 92
 (
-  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})?
   ({Investigation})
   (({Split})|({Conj}))?

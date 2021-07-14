@@ -10,7 +10,7 @@ Rule: getInvestigationsOutcomeEEG
 Priority: 100
 (
   ({ContextInvestigations})
-  (({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  (({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({InvestigationFindingEEG})*
   (({InvestigationFindingEEG}):outcome)+):match
 ):match1
@@ -21,7 +21,7 @@ CUI = :outcome.InvestigationFindingEEG.CUI, Negation = :outcome.InvestigationFin
 Rule: getInvestigationsOutcomeEEG
 Priority: 99
 (
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({InvestigationFindingEEG}):outcome
 ):match
 -->
@@ -34,7 +34,7 @@ CUI = :outcome.InvestigationFindingEEG.CUI, Negation = :outcome.InvestigationFin
 Rule: getInvestigationsOutcomeEEG2
 Priority: 98
 (
-  ({Investigation.Complete == Yes, Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Complete == Yes, Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
 ):match
 -->
 :match.Investigations = { rule = getInvestigationsOutcomeEEG2, EEG_Performed = "Yes", EEG_Type = :match.Investigation.Type, EEG_Results = :match.Investigation.Outcome, 
@@ -46,7 +46,7 @@ Priority: 97
 (
   ({ContextInvestigations})
   (({InvestigationFindingEEG})
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})):match
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})):match
 ):match1
 -->
 :match.InvestigationIgnore = { rule = IgnoreInvestigationsOutcomeEEG3, EEG_Performed = "Yes", EEG_Type = :match.Investigation.Type, EEG_Results = :match1.InvestigationFindingEEG.Results, 
@@ -58,7 +58,7 @@ Priority: 96
 (
   
   (({InvestigationFindingEEG})
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})):match
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})):match
 ):match1
 -->
 :match.Investigations = { rule = getInvestigationsOutcomeEEG3, EEG_Performed = "Yes", EEG_Type = :match.Investigation.Type, EEG_Results = :match1.InvestigationFindingEEG.Results, 
@@ -68,7 +68,7 @@ Rule: InvestigationTwoSentences
 Priority: 94
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Split})
   ({InvestigationFindingEEG})
 ):match
@@ -80,7 +80,7 @@ CUI = :match.InvestigationFindingEEG.CUI, Negation = :match.InvestigationFinding
 Rule: InvestigationTwoSentences
 Priority: 94
 (
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Split})
   ({InvestigationFindingEEG})
 ):match
@@ -93,7 +93,7 @@ Rule: getInvestigationsOutcomeEEG
 Priority: 93
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})
   ({InvestigationFindingEEG}):outcome
 ):match
@@ -106,7 +106,7 @@ CUI = :outcome.InvestigationFindingEEG.CUI, Negation = :outcome.InvestigationFin
 Rule: getInvestigationsOutcomeEEG
 Priority: 93
 (
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})
   ({InvestigationFindingEEG}):outcome
 ):match
@@ -118,7 +118,7 @@ Rule: getInvestigationsOutcomeEEG
 Priority: 92
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})
   ({Split})
   ({InvestigationFindingEEG}):outcome
@@ -130,7 +130,7 @@ CUI = :outcome.InvestigationFindingEEG.CUI, Negation = :outcome.InvestigationFin
 Rule: getInvestigationsOutcomeEEG
 Priority: 92
 (
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})
   ({Split})
   ({InvestigationFindingEEG}):outcome
@@ -143,7 +143,7 @@ Rule: getInvestigationsOutcomeEEG
 Priority: 92
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Split})
   ({Conj})
   ({InvestigationFindingEEG}):outcome
@@ -155,7 +155,7 @@ CUI = :outcome.InvestigationFindingEEG.CUI, Negation = :outcome.InvestigationFin
 Rule: getInvestigationsOutcomeEEG
 Priority: 92
 (
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Split})
   ({Conj})
   ({InvestigationFindingEEG}):outcome
@@ -169,7 +169,7 @@ Rule: getInvestigationsOutcomeEEG
 Priority: 92
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):EEG
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):EEG
   ({Investigation})*
   ({Conj})?
   ({Investigation})
@@ -183,7 +183,7 @@ CUI = :outcome.InvestigationFindingEEG.CUI, Negation = :outcome.InvestigationFin
 Rule: getInvestigationsOutcomeEEG
 Priority: 92
 (
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):EEG
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):EEG
   ({Investigation})*
   ({Conj})?
   ({Investigation})
@@ -201,7 +201,7 @@ Priority: 92
   ({InvestigationFindingEEG}):outcome
   ({Investigation})*
   ({Conj})?
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):EEG
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):EEG
 ):match
 -->
 :match.InvestigationIgnore= { rule = IgnoreInvestigationsOutcomeEEG8, EEG_Performed = "Yes", EEG_Type = :EEG.Investigation.Type, EEG_Results = :outcome.InvestigationFindingEEG.Results, 
@@ -216,7 +216,7 @@ Priority: 92
   ({Conj})?
   ({Investigation})*
   ({Conj})?
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):EEG
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):EEG
 ):match
 -->
 :match.Investigations= { rule = getInvestigationsOutcomeEEG8, EEG_Performed = "Yes", EEG_Type = :EEG.Investigation.Type, EEG_Results = :outcome.InvestigationFindingEEG.Results, 
@@ -227,7 +227,7 @@ Rule: getInvestigationsOutcomeEEG
 Priority: 92
 (
   ({ContextInvestigations})
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):EEG
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):EEG
   ({Investigation})*
   ({Conj})?
   ({Investigation})
@@ -241,7 +241,7 @@ CUI = :outcome.InvestigationFindingEEG.CUI, Negation = :outcome.InvestigationFin
 Rule: getInvestigationsOutcomeEEG
 Priority: 92
 (
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed}):EEG
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):EEG
   ({Investigation})*
   ({Conj})?
   ({Investigation})
@@ -256,7 +256,7 @@ CUI = :outcome.InvestigationFindingEEG.CUI, Negation = :outcome.InvestigationFin
 Rule: getInvestigationsOutcomeEEG
 Priority: 92
 (
-  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Negation == Affirmed})
+  ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({Conj})?
   ({Investigation})
   (({Split})|({Conj}))?
