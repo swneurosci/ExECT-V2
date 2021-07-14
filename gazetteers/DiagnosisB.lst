@@ -8,3 +8,4 @@ frontal:lobe=frontal:CUI=C0085541:PREF=Frontal Lobe Epilepsy
 refractory:epilepsy=refractory:CUI=C1096063:PREF=Drug Resistant Epilepsy
 intractable:epilepsy=refractory:CUI=C1096063:PREF=Drug Resistant Epilepsy
 secondary generalisation:epilepsy=secondary generalisation:CUI=C0270838:PREF=Secondarily Generalized Seizures:LookUp=Yes
+secondary generalization:epilepsy=secondary generalisation:CUI=C0270838:PREF=Secondarily Generalized Seizures:LookUp=Yes
