@@ -296,10 +296,8 @@ complex partial seizures with automatisms	CUI=C0270837	PREF=Epileptic automatism
 epileptic automatism	CUI=C0270837	PREF=Epileptic automatism	TUI=T047	STY=Disease or Syndrome
 epileptic complex partial seizures with automatisms	CUI=C0270837	PREF=Epileptic automatism	TUI=T047	STY=Disease or Syndrome
 Secondarily generalised seizures	CUI=C0270838	PREF=Secondarily generalized seizures	TUI=T047	STY=Disease or Syndrome
-secondary generalisation	CUI=C0270838	PREF=Secondarily generalized seizures	TUI=T047	STY=Disease or Syndrome
 secondary generalised seizure	CUI=C0270838	PREF=Secondarily generalized seizures	TUI=T047	STY=Disease or Syndrome
 secondary generalised seizures	CUI=C0270838	PREF=Secondarily generalized seizures	TUI=T047	STY=Disease or Syndrome
-secondary generalization	CUI=C0270838	PREF=Secondarily generalized seizures	TUI=T047	STY=Disease or Syndrome
 secondary generalized seizure	CUI=C0270838	PREF=Secondarily generalized seizures	TUI=T047	STY=Disease or Syndrome
 secondary generalized seizures	CUI=C0270838	PREF=Secondarily generalized seizures	TUI=T047	STY=Disease or Syndrome
 tonic seizure	CUI=C0270844	PREF=Tonic seizures	TUI=T047	STY=Disease or Syndrome
@@ -924,3 +922,6 @@ seizures are generalised	CUI=C0234533	PREF=generalised seizures	TUI=T047	STY=Dis
 Focal seizures with altered awareness	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
 epilepsy with generalised tonic clonic seizure alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome
 bilateral convulsive seizure	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+focal to bilateral tonic clonic seizure	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+focal to bilateral tonic clonic seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+
