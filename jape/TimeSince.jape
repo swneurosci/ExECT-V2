@@ -36,13 +36,13 @@ NumberOfTimePeriods =:match.NumberRange.value,
 LowerNumberOfTimePeriods =:match.NumberRange.N1,
 UpperNumberOfTimePeriods =:match.NumberRange.N2}
 
-// to unsefe ! so switched off
-//to stop at 2 year interval , or every 2 years.. may need to be watched 
-/*Rule: TimeSince3a
+
+//last few months
+Rule: TimeSince3a
 Priority: 90
 
 (  
-	({Token.string != "every", Token.string != "at"})
+	({timeElapsed.time == Last})
 	{NumberRange}
     ({timePeriod.string =~ month}|{timePeriod.string =~ week}|{timePeriod.string =~ year}|{timePeriod.string =~ week})
 	
@@ -51,7 +51,7 @@ Priority: 90
 :match.TimeSince = {rule =TimeSince3a, TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.NumberRange.value,
 LowerNumberOfTimePeriods =:match.NumberRange.N1,
-UpperNumberOfTimePeriods =:match.NumberRange.N2}*/
+UpperNumberOfTimePeriods =:match.NumberRange.N2}
 
 
 Rule: TimeSince4
