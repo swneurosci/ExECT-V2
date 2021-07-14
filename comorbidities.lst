@@ -1266,3 +1266,4 @@ SMART Syndrome (stroke like migraine attacks after radiation therapy)	CUI=C36658
 migrainous	CUI=C0149931	PREF=migraine disoreders	TUI=T047	STY=Disease or Syndrome
 anterior temporal lobectomy	CUI=C1136214	PREF=Anterior Temporal Lobectomy	TUI=T061	STY=Therapeutic or Preventive Procedure
 temporal lobe resection	CUI=C1136214	PREF=Anterior Temporal Lobectomy	TUI=T061	STY=Therapeutic or Preventive Procedure
+astrocytoma treated with surgery	CUI=C1096492	PREF=Astrocytoma surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
