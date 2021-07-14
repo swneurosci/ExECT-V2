@@ -8,7 +8,8 @@ Options: control=brill
  * assigns a certainty level  (1-5, 5 most certain)to Lookups 
  * using words such as "probably", "unlikely" etc
 */
-
+// Running over NewLines ... ID87_Letter_3 .. problem with list points at start of letter
+// If i deleted generalised from lookup2 would fix also
 
 Rule: probRuleA
 Priority: 100
