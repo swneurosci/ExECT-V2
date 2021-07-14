@@ -48,4 +48,5 @@ infarct:CUI=C0436539:Results=Abnormal
 no significant findings:CUI=C0744602:Results=Normal:Ignore=Yes
 epileptic activity was not seen:CUI=C0744602:Results=Normal:Ignore=Yes
 both normal:CUI=C0744602:Results=Normal
-changes:CUI=C0436539:Results=Abnormal:=
+changes:CUI=C0436539:Results=Abnormal
+unremarkable:CUI=C0744602:Results=Normal:=
