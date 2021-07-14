@@ -96,7 +96,7 @@ Priority: 100
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation}
 
-Rule: OtherDiagnosis6
+Rule: OtherDiagnosisB6
 Priority: 60
 
 (   
@@ -105,14 +105,14 @@ Priority: 60
 	({OtherDiag}):item	
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagnosis6,  PREF = :item.OtherDiag.PREF,
+:item.PatientHistory = {rule = OtherDiagnosisB6,  PREF = :item.OtherDiag.PREF,
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation} 
 
 
-Rule: OtherDiagB8 /*2nd item in a list without any points*/
+Rule: OtherDiagB7 /*2nd item in a list without any points*/
 Priority: 100
 
 (   
@@ -124,7 +124,7 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagB8, PREF = :item.OtherDiag.PREF,
+:item.PatientHistory = {rule = OtherDiagB7, PREF = :item.OtherDiag.PREF,
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
