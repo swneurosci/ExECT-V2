@@ -3,7 +3,7 @@ Input: Lookup Lookup3 Lookup2 Split
 
 
   /*These rules are set to select causes and suspected causes of epilepsy, when they are shown 
-   following an epilepsu diagnosis  - hence they have to follow Epilepsy diagnosis in the pipline in order to work */
+   following an epilepsy diagnosis  - hence they have to follow Epilepsy diagnosis in the pipline in order to work */
 
   
 
