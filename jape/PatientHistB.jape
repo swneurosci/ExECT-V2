@@ -117,7 +117,7 @@ Priority: 100
 //STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, 
-AgeUnit = :a.Age.Unit,
+AgeUnit = :a.Age.AgeUnit,
 Age =:a.Age.Age,
 AgeLower =:a.Age.AgeLower,
 AgeUpper =:a.Age.AgeUpper}
@@ -329,12 +329,13 @@ AgeUnit = :match.OtherDiag.AgeUnit,
 AgeUpper =:match.OtherDiag.AgeUpper}
 
 
-Rule: PtHistoryB15 //Opinion should be reserved for other diag ...//
+Rule: PtHistoryB15 ////
 Priority: 99
 
 ( 
 
 	({Lookup2.minorType != opinion, Lookup2.minorType != probability})
+	({Age})?
 	({Person})?
 	({Lookup2})+
 	({Person})?
@@ -346,7 +347,11 @@ Priority: 99
 :item.PatientHistory = {rule = PtHistoryB15, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty,
+AgeUnit =:match.Age.AgeUnit,
+Age =:match.Age.Age,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUppe}
 
 
 /*Rule: PtHistoryB16  //this is A13a but it's not working there...?*, working here so dengarous!
