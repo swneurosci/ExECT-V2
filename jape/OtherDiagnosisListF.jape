@@ -1,15 +1,16 @@
 Phase: OtherDiagnosisListF
-Input: OtherDiag DiagnosisTriggers Conj NewLine
+Input: OtherDiag DiagnosisTriggers Conj NewLine Lookup listPoint Investigation
 
 Options: control=brill
 
 /*These are for list with "alternative" list points */
-
+//Lookup is there to stop picking up items across many sentences
+//listPoins serves as a block
 Rule: OtherDiagListF1
 Priority: 100
 
 (   
-({DiagnosisTriggers.type == diagnosis})
+	({DiagnosisTriggers.type == diagnosis})
 	({Conj.type == list})
 	({OtherDiag}):item
     
@@ -84,23 +85,24 @@ Negation = :item.OtherDiag.Negation}
 
  //when there are no list points, no list sentences//
 
-Rule: OtherDiagnosis8 //with a list of seizures
+Rule: OtherDiagnosisListF5
 Priority: 100
 
 (  
+	({!Investigation})
 	{DiagnosisTriggers.type == diagnosis}
 	({Conj})?
 	({OtherDiag}):item
     
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagnosis8,  PREF = :item.OtherDiag.PREF,
+:item.PatientHistory = {rule = OtherDiagnosisListF5,  PREF = :item.OtherDiag.PREF,
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation}
 
-Rule: OtherDiagnosis8a //when the list starts with a new line
+Rule: OtherDiagnosisListF6 //when the list starts with a new line
 Priority: 100
 
 (  
@@ -113,13 +115,13 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagnosis8a,  PREF = :item.OtherDiag.PREF,
+:item.PatientHistory = {rule = OtherDiagnosisListF6,  PREF = :item.OtherDiag.PREF,
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation}
 
-Rule: OtherDiagnosis8b //when the list starts with a new line
+Rule: OtherDiagnosisListF7 //when the list starts with a new line
 Priority: 100
 
 (  
@@ -133,8 +135,27 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagnosisb,  PREF = :item.OtherDiag.PREF,
+:item.PatientHistory = {rule = OtherDiagnosisListF7,  PREF = :item.OtherDiag.PREF,
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation}
+
+Rule: OtherDiagListF8
+Priority: 100
+
+(   
+	({DiagnosisTriggers.type == seizureType})
+	({Conj.type == list})?
+	({Lookup})
+	({Conj})?
+	({OtherDiag}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagListF8,   PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI,
+YearDate = :item.OtherDiag.YearDate, 
 Negation = :item.OtherDiag.Negation}
