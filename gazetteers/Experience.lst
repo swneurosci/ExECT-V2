@@ -58,3 +58,7 @@ are controlled:type=not_continuing
 are well controlled:type=not_continuing
 are under control:type=not_continuing
 were not:type=past 
+underwent:type=suffered
+undergone:type=suffered
+admissions:type=suffered
+admission:type=suffered
