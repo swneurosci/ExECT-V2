@@ -452,17 +452,19 @@ Rule: PtHistoryA12
 Priority: 100
 
 (   
+	({Lookup2})
 	{DateSince}
 	{Person}
-    {Lookup2.type == past}
+    ({Lookup2.language == experience})
     ({Lookup2})?
 	({OtherDiag}):item
+	({Person})?
     
  ):match  
  -->
 :item.PatientHistory = {rule = PtHistoryA12, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+//STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
 YearDate = :match.DateSince.YearDate}
 
@@ -480,8 +482,8 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = PtHistory12b, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+//STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
 TimePeriod = :item.TimeSince.TimePeriod,
 NumberOfTimePeriods = :item.TimeSince.NumberOfTimePeriods}
@@ -751,13 +753,14 @@ Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Tempora
 Certainty = :item.OtherDiag.Certainty} 
 
 Rule: PtHistoryA21 //with an opinion//
-Priority: 99
+Priority: 80
 
 ( 
+	
 	({!listPoint})
 	({!OtherDiag})
-	({Person})?
-	({Lookup2.minorType == symptoms, Lookup2.language == experience, Lookup2.type != diagnosed}| {Lookup2.minorType == probability})
+	({Person})
+	({Lookup2.minorType == symptoms, Lookup2.language == experience, Lookup2.type != diagnosed})
 	({Lookup2.minorType == causality})?
 	({Person})?
 	({OtherDiag}):item
@@ -775,7 +778,7 @@ Rule: PtHistoryA22 //with an opinion and possible birth history in Lookup3//
 Priority: 99
 
 ( 
-
+	({!DiagnosisTriggers})
 	({Lookup2.minorType == opinion})
 	({Lookup2})?
 	({Person})?
