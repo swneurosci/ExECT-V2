@@ -1,5 +1,5 @@
 Phase: PatientHistB
-Input:   Lookup2 OtherDiag DateSince TimeSince Person Age Sentence PartialDate PointInTime Split DiagnosisTriggers
+Input:   Lookup2 OtherDiag DateSince TimeSince Person Age Sentence PartialDate PointInTime Split DiagnosisTriggers listPoint
 
 
 /*additional rules to annotate items in patient history when they are stated one after another in longer sentences
@@ -14,6 +14,7 @@ Rule: PtHistoryB1
 Priority: 100
 
 (  
+
 	({!Person.type == subject})
 	({Person})
     ({Lookup2.majorType == historic,Lookup2.minorType == symptoms}|{Lookup2.majorType == historic})
@@ -329,14 +330,15 @@ AgeUnit = :match.OtherDiag.AgeUnit,
 AgeUpper =:match.OtherDiag.AgeUpper}
 
 
-Rule: PtHistoryB15 ////
+Rule: PtHistoryB15 //using list point to stop the rule picking up items within a list
 Priority: 99
 
 ( 
-
+	({!listPoint})
 	({Lookup2.minorType != opinion, Lookup2.minorType != probability})
 	({Age})?
 	({Person})?
+	({!listPoint})
 	({Lookup2})+
 	({Person})?
 	({OtherDiag})
