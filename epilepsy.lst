@@ -580,7 +580,7 @@ tonic clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Dis
 tonic/clonic convulsions	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
 tonic-clonic convulsion	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
 focal sensory seizures	CUI=C0544645	PREF=Focal Sensory Seizure	TUI=T047	STY=Disease or Syndrome
-sensory seizures	CUI=C0544645	PREF=Focal Sensory Seizure	TUI=T047	STY=Disease or Syndrome
+sensory seizures	CUI=C0751496	PREF=Sensory Seizure	TUI=T047	STY=Disease or Syndrome	=
 salaam spasm	CUI=C0546878	PREF=salaam spasm	TUI=T047	STY=Disease or Syndrome
 fit (in known epileptic) nos	CUI=C0553754	PREF=fit (in known epileptic) nos	TUI=T047	STY=Disease or Syndrome
 recurrent febrile convulsion	CUI=C0585108	PREF=recurrent febrile convulsion	TUI=T047	STY=Disease or Syndrome
@@ -924,4 +924,3 @@ epilepsy with generalised tonic clonic seizure alone	CUI=C0393697	PREF=Epilepsy 
 bilateral convulsive seizure	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 focal to bilateral tonic clonic seizure	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 focal to bilateral tonic clonic seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
-
