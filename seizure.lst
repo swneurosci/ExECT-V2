@@ -403,3 +403,8 @@ focal to bilateral convulsive seizures	CUI=C0877017	PREF=Generalized tonic-cloni
 Focal seizures with altered awareness	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
 focal to bilateral tonic clonic seizure	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 focal to bilateral tonic clonic seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+seizure cluster	CUI=C3203523	PREF=Acute repetitive seizure	TUI=T047	STY=Disease or Syndrome
+cluster of seizures	CUI=C3203523	PREF=Acute repetitive seizure	TUI=T047	STY=Disease or Syndrome
+clusters of seizures	CUI=C3203523	PREF=Acute repetitive seizure	TUI=T047	STY=Disease or Syndrome
+convulsive seizure	CUI=C0751494	PREF=Convulsive Seizures	TUI=T184	STY=Sign or Symptom
+convulsive seizures	CUI=C0751494	PREF=Convulsive Seizures	TUI=T184	STY=Sign or Symptom
