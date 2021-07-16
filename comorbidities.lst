@@ -1045,11 +1045,11 @@ micro-cephaly	CUI=C0025958	PREF=Microcephaly	TUI=T019	STY=Congenital Abnormality
 head injury other	CUI=C0497301	PREF=head injury other	TUI=T037	STY=Injury or Poisoning
 head injury	CUI=C0497301	PREF=head injury other	TUI=T037	STY=Injury or Poisoning
 head injuries	CUI=C0497301	PREF=head injury other	TUI=T037	STY=Injury or Poisoning
-open head injury	CUI=C0518454	PREF=head injury open	TUI=T037	STY=Injury or Poisoning	
+open head injury	CUI=C0518454	PREF=head injury open	TUI=T037	STY=Injury or Poisoning
 Multiple Head Injuries	CUI=C0451948	PREF=Head Injuries, Multiple	TUI=T037	STY=Injury or Poisoning
 Superficial Head Injury	CUI=C0347536	PREF=Head Injury, Superficial	TUI=T037	STY=Injury or Poisoning
 Skull Fractures	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning
-Skull Fracture	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning 
+Skull Fracture	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning
 Unspecified brain damage due to birth injury	CUI=C1536522	PREF=Unspecified brain damage due to Birth injury	TUI=T037	STY=Injury or Poisoning
 brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to Birth injury	TUI=T037	STY=Injury or Poisoning
 traumatic brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	STY=Injury or Poisoning
@@ -1068,8 +1068,8 @@ perinatal insult	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
 perinatal injury	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
 injury in the perinatal period	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
 traumatic birth history	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
-neonatal complicaions	CUI=C4735642	PREF=Neonatal complications	TUI=T033	STY=Finding	
-neonatal intensive care	CUI=C0021709	PREF=neonatal intensive care unit	TUI=T093	STY=Health Care Related Organization	
+neonatal complicaions	CUI=C4735642	PREF=Neonatal complications	TUI=T033	STY=Finding
+neonatal intensive care	CUI=C0021709	PREF=neonatal intensive care unit	TUI=T093	STY=Health Care Related Organization
 intracranial hemorrhage	CUI=C0151699	PREF=Intracranial hemorrhage	TUI=T046	STY=Pathologic Function
 intracranial haemorrhage	CUI=C0151699	PREF=Intracranial hemorrhage	TUI=T046	STY=Pathologic Function
 intracranial bleeding	CUI=C0151699	PREF=Intracranial hemorrhage	TUI=T046	STY=Pathologic Function
@@ -1093,11 +1093,11 @@ bleeding in brain	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologic 
 hydrocephalus	CUI=C0020255	PREF=hydrocephalus	TUI=T047	STY=Disease or Syndrome
 cerebral abscess	CUI=C1510428	PREF=cerebral abscess	TUI=T047	STY=Disease or Syndrome
 brain abscess	CUI=C0006105	PREF=brain abscess	TUI=T047	STY=Disease or Syndrome
-depression	CUI=C0011570	PREF=Mental Depression	TUI=T048	STY=Mental or Behavioral Dysfunction	
+depression	CUI=C0011570	PREF=Mental Depression	TUI=T048	STY=Mental or Behavioral Dysfunction
 tic	CUI=C0040188	PREF=tic	TUI=T048	STY=Mental or Behavioral Dysfunction
 tic disorder unspecified	CUI=C0040188	PREF=tic disorder unspecified	TUI=T048	STY=Mental or Behavioral Dysfunction
 alcohol withdrawal-induced seizure	CUI=C0586323	PREF=withdrawal-induced seizure, alcohol	TUI=T048	STY=Mental or Behavioral Dysfunction
-neuronal heterotopia	CUI=C0266491	PREF=Neuronal heterotopia	TUI=T047	STY=Disease or Syndrome	
+neuronal heterotopia	CUI=C0266491	PREF=Neuronal heterotopia	TUI=T047	STY=Disease or Syndrome
 gray matter heterotopia	CUI=C0266491	PREF=Neuronal heterotopia	TUI=T047	STY=Disease or Syndrome
 heterotopic grey matter	CUI=C0266491	PREF=Neuronal heterotopia	TUI=T047	STY=Disease or Syndrome
 neoplasm of temporal lobe	CUI=C1263887	PREF=neoplasm of temporal lobe	TUI=T191	STY=Neoplastic Process
@@ -1109,28 +1109,28 @@ bran lesion	CUI=C0221505	PREF=lesion of brain	TUI=T047	STY=Disease or Syndrome
 mass lesion of temporal lobe on left	CUI=C2026259	PREF=mass lesion of temporal lobe on left	TUI=T047	STY=Disease or Syndrome
 left temporal lobe lesion	CUI=C2026259	PREF=mass lesion of temporal lobe on left	TUI=T047	STY=Disease or Syndrome
 mass lesion of temporal lobe on right	CUI=C2026260	PREF=mass lesion of temporal lobe on right	TUI=T047	STY=Disease or Syndrome
-right temporal lobe lesion	CUI=C2026260	PREF=mass lesion of temporal lobe on right	TUI=T047	STY=Disease or Syndrome	
+right temporal lobe lesion	CUI=C2026260	PREF=mass lesion of temporal lobe on right	TUI=T047	STY=Disease or Syndrome
 mass lesion of temporal lobe	CUI=C2026258	PREF=mass lesion of temporal lobe	TUI=T047	STY=Disease or Syndrome
 temporal lobe lesion	CUI=C2026258	PREF=mass lesion of temporal lobe	TUI=T047	STY=Disease or Syndrome
 temporal structural lesion	CUI=C2026258	PREF=mass lesion of temporal lobe	TUI=T047	STY=Disease or Syndrome
 benigh brain lesion	CUI=C0741634	PREF=brain lesion benign	TUI=T047	STY=Disease or Syndrome
 autistic spectrum disorder	CUI=C1510586	PREF=Autism Spectrum Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
 autism	CUI=C1510586	PREF=Autism Spectrum Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
-learning difficulties	CUI=C0424939	PREF=Learning difficulties	TUI=T033	STY=Finding	
+learning difficulties	CUI=C0424939	PREF=Learning difficulties	TUI=T033	STY=Finding
 behavioral disability	CUI=C0475639	PREF=Behavioral disability	TUI=T033	STY=Finding
 behavioral disabilities	CUI=C0475639	PREF=Behavioral disability	TUI=T033	STY=Finding
 behavior disorders	CUI=C0004930	PREF=Behavior Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
 behavioural disorders	CUI=C0004930	PREF=Behavior Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
 behavior disturbance	CUI=C0149623	PREF=behavior disturbance	TUI=T048	STY=Mental or Behavioral Dysfunction
-behavioural disturbance	CUI=C0149623	PREF=behavior disturbance	TUI=T048	STY=Mental or Behavioral Dysfunction	
+behavioural disturbance	CUI=C0149623	PREF=behavior disturbance	TUI=T048	STY=Mental or Behavioral Dysfunction
 SCBU	CUI=C0583275	PREF=Admission to special care baby unit	TUI=T058	STY=Health Care Activity
 special care baby unit	CUI=C0583275	PREF=Admission to special care baby unit	TUI=T058	STY=Health Care Activity
 gliosis	CUI=C0017639	PREF=gliosis	TUI=T046	STY=Pathologic Function
 obsessive compulsive disorder	CUI=C0028768	PREF=Obsessive-Compulsive Disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
 obsessive-compulsive disorder	CUI=C0028768	PREF=Obsessive-Compulsive Disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
-craniotomy	CUI=C0010280	PREF=craniotomy	TUI=T061	STY=Therapeutic or Preventive Procedure	
-removal of intracranial tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061	STY=Therapeutic or Preventive Procedure	
-removal of brain tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061	STY=Therapeutic or Preventive Procedure	
+craniotomy	CUI=C0010280	PREF=craniotomy	TUI=T061	STY=Therapeutic or Preventive Procedure
+removal of intracranial tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061	STY=Therapeutic or Preventive Procedure
+removal of brain tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061	STY=Therapeutic or Preventive Procedure
 brain tumour operation	CUI=C1096120	PREF=Brain tumor operstion	TUI=T061	STY=Therapeutic or Preventive Procedure
 astrocytoma surgery	CUI=C1096492	PREF=Astrocytoma surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
 meningioma surgery	CUI=C1096493	PREF=Meningioma surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
@@ -1144,12 +1144,12 @@ left-sided hemiplegia	CUI=C0457434	PREF=Left hemiplegia	TUI=T033	STY=Finding
 left sided hemiplegia	CUI=C0457434	PREF=Left hemiplegia	TUI=T033	STY=Finding
 spastic hemiplegia	CUI=C0154694	PREF=Hemiplegia, Spastic	TUI=T047	STY=Disease or Syndrome
 Charcot-Marie-Tooth Disease	CUI=C0007959	PREF=Charcot-Marie-Tooth Disease	TUI=T047	STY=Disease or Syndrome
-epithelial cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	STY=Anatomical Abnormality	
+epithelial cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	STY=Anatomical Abnormality
 epidermal cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	STY=Anatomical Abnormality
 epidermoid cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	STY=Anatomical Abnormality
-Epidermoid cyst excision	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure	
-excision of epidermoid cyst	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure	
-epidermoid cyst resected	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure	
+Epidermoid cyst excision	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure
+excision of epidermoid cyst	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure
+epidermoid cyst resected	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure
 epidermoid cyst removed	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	TSY=Therapeutic or Preventive Procedure
 tumor debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
 de-bulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	TSY=Therapeutic or Preventive Procedure
@@ -1170,7 +1170,7 @@ hemiparesis	CUI=C0018989	PREF=Hemiparesis	TUI=T184	STY=sign or symptom
 psychotic episodes	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
 cavernoma	CUI=C0018920	PREF=Hemangioma, Cavernous	TUI=T191	STY=Neoplastic Process
 cavernous hemangioma	CUI=C0018920	PREF=Hemangioma, Cavernous	TUI=T191	STY=Neoplastic Process
-lobectomy of brain	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	STY=Therapeutic or Preventive Procedure	
+lobectomy of brain	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
 excision of brain lobe	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
 resection of brain lobe	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
 brain lobectomy	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	STY=Therapeutic or Preventive Procedure
@@ -1214,8 +1214,8 @@ migrainous headache	CUI=C0149931	PREF=migraine disorders	TUI=T047	STY=Disease or
 migrainous headaches	CUI=C0149931	PREF=migraine disoreders	TUI=T047	STY=Disease or Syndrome
 normal birth	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
 born normally	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
-birth was normal	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding 
-angina	CUI=C0002962	PREF=Angina Pectoris	TUI=T184	STY=Sign or Symptom	
+birth was normal	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
+angina	CUI=C0002962	PREF=Angina Pectoris	TUI=T184	STY=Sign or Symptom
 ischaemic heart disease	CUI=C0002962	PREF=Angina Pectoris	TUI=T184	STY=Sign or Symptom
 angina pectoris	CUI=C0002962	PREF=Angina Pectoris	TUI=T184	STY=Sign or Symptom
 coronary heart disease	CUI=C0010068	PREF=coronary heart disease	TUI=T047	STY=Disease or Syndrome
@@ -1253,10 +1253,6 @@ Chronic daily headaches	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease 
 alcohol abuse	CUI=C0221628	PREF=history of alcohol abuse	TUI=T033	STY=Finding
 visually impaired	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
 episode of psychosis	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
-convulsive seizures	CUI=C0751494	PREF=Convulsive Seizures	TUI=T184	STY=sign or symptom
-convulsive seizure	CUI=C0751494	PREF=Convulsive Seizures	TUI=T184	STY=sign or symptom
-seizure cluster	CUI=C3203523	PREF=Acute repetitive seizure	TUI=T047	STY=Disease or Syndrome
-cluster of seizures	CUI=C3203523	PREF=Acute repetitive seizure	TUI=T047	STY=Disease or Syndrome
 medial temporal sclerosis	CUI=C3164863	PREF=Mesial temporal lobe sclerosis	TUI=T047	STY=Disease or Syndrome
 mesial temporal lobe sclerosis	CUI=C3164863	PREF=Mesial temporal lobe sclerosis	TUI=T047	STY=Disease or Syndrome
 temporal lobe sclerosis	CUI=C3662090	PREF=Temporal lobe sclerosis	TUI=T047	STY=Disease or Syndrome
