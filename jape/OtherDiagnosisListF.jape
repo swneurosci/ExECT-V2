@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisListF
-Input: OtherDiag DiagnosisTriggers Conj NewLine Lookup listPoint Investigation
+Input: OtherDiag DiagnosisTriggers Conj NewLine listPoint Investigation
 
 Options: control=brill
 
@@ -109,8 +109,8 @@ Priority: 100
 	{DiagnosisTriggers.type == diagnosis}
 	({NewLine})?
 	({Conj.type == list})
-	({Conj})
-	({Conj})
+	({Conj})?
+	({Conj})?
 	({OtherDiag}):item
     
  ):match  
@@ -147,8 +147,8 @@ Priority: 100
 (   
 	({DiagnosisTriggers.type == seizureType})
 	({Conj.type == list})?
-	({Lookup})
 	({Conj})?
+	({NewLine})?
 	({OtherDiag}):item
     
  ):match  
@@ -159,3 +159,22 @@ Priority: 100
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI,
 YearDate = :item.OtherDiag.YearDate, 
 Negation = :item.OtherDiag.Negation}
+
+Rule: OtherDiagnosisListF9 //when the list starts with a new line
+Priority: 100
+
+(  
+{DiagnosisTriggers.type == diagnosis}
+	({NewLine})
+	({Conj})
+	({NewLine})
+	({Conj})
+	({OtherDiag}):item
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagnosisListF9,  PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
+YearDate = :item.OtherDiag.YearDate} 
