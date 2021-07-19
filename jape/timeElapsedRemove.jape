@@ -1,0 +1,35 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: timeElapsedRemove 
+Input: timeElapsed timeElapsedBlock Token
+Options: control=appelt 
+
+ 
+// During sleep - during here not a timeElapsed
+// Block.location = after, before or both
+ 
+Rule: timeElapsedRemovedAfter
+Priority: 100 
+( 
+    ({timeElapsed}):a
+    ({timeElapsedBlock.location!= "before"})
+):match 
+--> 
+:a{ 
+  inputAS.removeAll(aAnnots);
+},
+:match.timeElapsedDeleted = {rule = timeElapsedRemovedAfter}
+
+
+Rule: timeElapsedRemovedBefore
+Priority: 100 
+( 
+    ({timeElapsedBlock.location!= "after"})
+    ({timeElapsed}):a
+):match 
+--> 
+:a{ 
+  inputAS.removeAll(aAnnots); 
+},
+:match.timeElapsedDeleted = {rule = timeElapsedRemovedBefore}
+
