@@ -1,7 +1,7 @@
 Phase: PatientHistA
-Input: OtherDiag Lookup2 TimeSince Person DateSince PHistBlock Investigation PartialDate Split NewLine Sentence DiagnosisTriggers PointInTime Age Pronouns  MedicalHistory listPoint Lookup3
+Input: OtherDiag Lookup2 TimeSince Person DateSince PHistBlock Investigation PartialDate Split NewLine Sentence DiagnosisTriggers PointInTime Age Pronouns  MedicalHistory listPoint 
 
-//Lookup3 is used to block picking up any second mentions of other diagnosis
+//Lookup3 was used as a block but I took it out
 /*These are expected to pick up the 1st of OtherDiag shown in a sentence, deriving age/timesince/datesince from OtherDiag 
 itself or from the sentence itself if they are too far*/
 
@@ -525,7 +525,10 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
 TimePeriod = :item.OtherDiag.TimePeriod,
-NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods,
+AgeUnit = :match.OtherDiag.AgeUnit,
+AgeLower = :match.OtherDiag.AgeLower,
+AgeUpper =:match.OtherDiag.AgeUpper}
 
 /*As above but picks up specific type Otherdiag with built in 'onset time since'  as no separate onset phrase 
 His seizures started 4 years ago*/
@@ -589,14 +592,16 @@ MonthDate =:match.DateSince.MonthDate,
 YearDate = :match.DateSince.YearDate}
 
 Rule: PtHistoryA14a  /* She had an injury due to seizure in  Date*/
-Priority: 50
+Priority: 90
 (   
+
     ({Lookup2.language == experience})
 	({OtherDiag}):item
 	({Lookup2})
     {Person}
 	({Lookup2})
-	({OtherDiag})
+	({Person})?
+	({OtherDiag})?
    	{DateSince}
 
  ):match  
