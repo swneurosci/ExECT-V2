@@ -1,0 +1,23 @@
+Phase: AToNumberRange 
+Input: Token Lookup Lookup3 
+Options: control=appelt 
+
+
+/* SeizureFrequency time (months weeks etc.) */
+
+// SeizFrequency1 - Number = TimePeriods
+// SeizFrequency2 - Number = Seizures (LOOKUP3 MUST COME BEFORE THE NUMBER, OTHERWISE ITS EASY TO SPOT
+ 
+/* 
+* A Lookup/lookup3 - A = NumberRange.value=1
+*/ 
+ 
+Rule: AToNumberRange 
+Priority: 100 
+( 
+    ({Token@string == "a"}):a
+    ({Lookup3}|{Lookup})
+):match 
+--> 
+:a.NumberRange = { rule = "AToNumberRange", value=1} 
+
