@@ -43,3 +43,7 @@ her surgery:Since=NewYear'sEve
 his surgery:Since=Surgery
 last time I saw him:Since=LastClinic
 last time I saw her:Since=LastClinic
+had a son:Since=ChildBirth
+had a child:Since=ChildBirth
+had a daughter:Since=ChildBirth
+had a kid:Since=ChildBirth
