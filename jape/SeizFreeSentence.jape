@@ -1,14 +1,14 @@
 Phase: SeizureFrequency
-Input: SeizureFrequencyDriving Split
+Input: SeizureFrequencyDriving Split but
 Options: control=all
 
 Rule: SFreeSentence
 (
-    ({Split})
+    ({Split}|{but})
     ({SeizureFrequencyDriving})?
     ({SeizureFrequencyDriving}):match
     ({SeizureFrequencyDriving})?
-    ({Split})
+    ({Split}|{but})
 ):match1
 -->
 :match1.SFreeSentence = { rule2 = "SFreeSentence", rule = :match.SeizureFrequency11.rule, CUI = :match.SeizureFrequency11.CUI, TimePeriod = :match.SeizureFrequency11.TimePeriod,

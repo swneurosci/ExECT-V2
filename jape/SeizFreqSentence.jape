@@ -1,14 +1,14 @@
 Phase: SeizureFrequency
-Input: SeizureFrequency11 Split
+Input: SeizureFrequency11 Split but
 Options: control=all
 
 Rule: SeizureFrequencyFilter2
 (
-    ({Split})
+    ({Split}|{but})
     ({SeizureFrequency11})?
     ({SeizureFrequency11}):match
     ({SeizureFrequency11})?
-    ({Split})
+    ({Split}|{but})
 ):match1
 -->
 :match1.SFreqSentence = { rule2 = "SFreqSentence", rule = :match.SeizureFrequency11.rule, CUI = :match.SeizureFrequency11.CUI, TimePeriod = :match.SeizureFrequency11.TimePeriod,

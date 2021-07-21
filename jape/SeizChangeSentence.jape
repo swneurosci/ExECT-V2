@@ -1,14 +1,14 @@
 Phase: SeizureFrequency
-Input: SeizureChange Split
+Input: SeizureChange Split but
 Options: control=all
 
 Rule: SChangeSentence
 (
-    ({Split})
+    ({Split}|{but})
     ({SeizureChange})?
     ({SeizureChange}):match
     ({SeizureChange})?
-    ({Split})
+    ({Split}|{but})
 ):match1
 -->
 :match1.SChangeSentence = { rule2 = "SChangeSentence", rule = :match.SeizureFrequency11.rule, CUI = :match.SeizureFrequency11.CUI, TimePeriod = :match.SeizureFrequency11.TimePeriod,
