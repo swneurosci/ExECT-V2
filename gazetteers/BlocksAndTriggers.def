@@ -21,3 +21,4 @@ opinion.lst:diagnosis:opinion::Lookup2
 InvestigationBlock.lst::::InvestigationBlock
 but.lst::::but
 NegationStop.lst:negation:stop::Lookup2
+PartialSeizure.lst::::PartialSeizure

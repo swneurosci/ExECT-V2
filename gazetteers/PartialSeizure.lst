@@ -1,0 +1,4 @@
+Complex:CUI=C0149958:PREF=Complex partial seizure:TUI=T047:STY=Disease or Syndrome
+complex partial:CUI=C0149958:PREF=Complex partial seizure:TUI=T047:STY=Disease or Syndrome
+simple partial:CUI=C0234974:PREF=simple partial seizure:TUI=T047:STY=Disease or Syndrome
+simple:CUI=C0234974:PREF=Simple Partial Seizures:TUI=T047:STY=Disease or Syndrome

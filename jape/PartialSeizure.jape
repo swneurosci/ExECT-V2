@@ -1,0 +1,61 @@
+Phase: PartialSeizure 
+Input: PartialSeizure Lookup3 Lookup Token NumberRange
+Options: control=all 
+
+
+ 
+// Complex Partial and Simple Partial seizures
+// Complex and Simple partial seizures
+// Removed that second part needs ComplexPart/SimplePart CUI from 
+Rule: PartialSeizureSimple 
+Priority: 100 
+( 
+    ({PartialSeizure.CUI == "C0234974"}):noSeiz
+    ({Token.string == "and"})
+    ({NumberRange})[0,1]
+    ({Lookup3})
+):match 
+--> 
+:noSeiz.Lookup3 = {rule = "PartialSeizureSimple", CUI = :match.PartialSeizure.CUI, PREF = :match.PartialSeizure.PREF,
+TUI = :match.PartialSeizure.TUI, STY = :match.PartialSeizure.STY, minorType = :match.Lookup3.minorType, majorType = :match.Lookup3.majorType}
+
+// 2 GTCS 2014 (without timeElapsed)
+// Tested only picked up once (letter 6 - but the token in the input is very strict)
+Rule: PartialSeizureSimple 
+Priority: 100 
+( 
+    ({PartialSeizure.CUI == "C0234974"}):noSeiz
+    ({Token.string == "and"})
+    ({NumberRange})[0,1]
+    ({Lookup})
+):match 
+--> 
+:noSeiz.Lookup = {rule = "PartialSeizureSimple", CUI = :match.PartialSeizure.CUI, PREF = :match.PartialSeizure.PREF,
+TUI = :match.PartialSeizure.TUI, STY = :match.PartialSeizure.STY, minorType = :match.Lookup.minorType, majorType = :match.Lookup.majorType}
+
+Rule: PartialSeizureComplex 
+Priority: 100 
+( 
+    ({PartialSeizure.CUI == "C0149958"}):noSeiz
+    ({Token.string == "and"})
+    ({NumberRange})[0,1]
+    ({Lookup3})
+):match 
+--> 
+:noSeiz.Lookup3 = {rule = "PartialSeizureComplex", CUI = :match.PartialSeizure.CUI, PREF = :match.PartialSeizure.PREF,
+TUI = :match.PartialSeizure.TUI, STY = :match.PartialSeizure.STY, minorType = :match.Lookup3.minorType, majorType = :match.Lookup3.majorType}
+
+// 2 GTCS 2014 (without timeElapsed)
+// Tested only picked up once (letter 6 - but the token in the input is very strict)
+Rule: PartialSeizureComplex 
+Priority: 100 
+( 
+    ({PartialSeizure.CUI == "C0149958"}):noSeiz
+    ({Token.string == "and"})
+    ({NumberRange})[0,1]
+    ({Lookup})
+):match 
+--> 
+:noSeiz.Lookup = {rule = "PartialSeizureComplex", CUI = :match.PartialSeizure.CUI, PREF = :match.PartialSeizure.PREF,
+TUI = :match.PartialSeizure.TUI, STY = :match.PartialSeizure.STY, minorType = :match.Lookup.minorType, majorType = :match.Lookup.majorType}
+
