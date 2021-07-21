@@ -71,3 +71,5 @@ cluster of seizures:CUI=C3203523:PREF=Acute repetitive seizure:TUI=T047	STY=Dise
 clusters of seizures:CUI=C3203523:PREF=Acute repetitive seizure:TUI=T047:STY=Disease or Syndrome:CAT=Seizures
 convulsive seizure:CUI=C0751494:PREF=Convulsive Seizures:TUI=T184-:STY=Sign or Symptom:CAT=Seizures
 convulsive seizures:CUI=C0751494:PREF=Convulsive Seizures:TUI=T184-:STY=Sign or Symptom:CAT=Seizures
+absence episode:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Seizures
+absence episodes:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Seizures

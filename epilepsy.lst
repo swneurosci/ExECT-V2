@@ -924,3 +924,21 @@ epilepsy with generalised tonic clonic seizure alone	CUI=C0393697	PREF=Epilepsy 
 bilateral convulsive seizure	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 focal to bilateral tonic clonic seizure	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 focal to bilateral tonic clonic seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+focal right arm Sensory Seizure	CUI=C0544645	PREF=Focal sensory seizure	TUI=T047	STY=Disease or Syndrome
+focal right arm sensory seizures	CUI=C0544645	PREF=Focal Sensory Seizure	TUI=T047	STY=Disease or Syndrome
+focal left arm Sensory Seizure	CUI=C0544645	PREF=Focal sensory seizure	TUI=T047	STY=Disease or Syndrome
+focal left arm sensory seizures	CUI=C0544645	PREF=Focal Sensory Seizure	TUI=T047	STY=Disease or Syndrome
+Generalised tonic chronic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalised tonic chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic chronic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalised tonic-chronic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalised tonic-chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic-chronic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic-chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalized tonic-chronic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalized tonic-chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalized tonic chronic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalized tonic chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+‘grand mal' seizures	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
+‘grand mal' seizure	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome

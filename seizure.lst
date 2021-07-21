@@ -177,7 +177,7 @@ myoclonic-atonic seizure	CUI=C0393702	PREF=Myoclonic Astatic Epilepsy	TUI=T047	S
 myoclonic-atonic seizures	CUI=C0393702	PREF=Myoclonic Astatic Epilepsy	TUI=T047	STY=Disease or Syndrome
 myoclonic absence seizure	CUI=C0393703	PREF=Myoclonic Absence Epilepsy	TUI=T047	STY=Disease or Syndrome
 myoclonic absence seizures	CUI=C0393703	PREF=Myoclonic Absence Epilepsy	TUI=T047	STY=Disease or Syndrome
-situation related seizures	CUI=C0393707	PREF=situation-related seizures 	TUI=T033	STY=Finding
+situation related seizures	CUI=C0393707	PREF=situation-related seizures	TUI=T033	STY=Finding
 situation-related seizures	CUI=C0393707	PREF=situation-related seizures	TUI=T033	STY=Finding
 eyelid myoclonus with absences	CUI=C0393722	PREF=Eyelid myoclonus with absences	TUI=T047	STY=Disease or Syndrome
 photomyoclonus	CUI=C0393722	PREF=Eyelid myoclonus with absences	TUI=T047	STY=Disease or Syndrome
@@ -193,10 +193,10 @@ Auditory uncinate fit	CUI=C0422852	PREF=Seizures, Auditory	TUI=T046	STY=Patholog
 seizure, auditory	CUI=C0422852	PREF=Seizures, Auditory	TUI=T046	STY=Pathologic Function
 seizures, auditory	CUI=C0422852	PREF=Seizures, Auditory	TUI=T046	STY=Pathologic Function
 olfactory seizure	CUI=C0422853	PREF=seizure, olfactory	TUI=T047	STY=Disease or Syndrome
-olfactory seizures	CUI=C0422853	PREF= Olfactory seizure	TUI=T047	STY=Disease or Syndrome
-olfactory uncinate fit	CUI=C0422853	PREF= Olfactory seizure	TUI=T047	STY=Disease or Syndrome
-seizure, olfactory	CUI=C0422853	PREF= Olfactory seizure	TUI=T047	STY=Disease or Syndrome
-seizures, olfactory	CUI=C0422853	PREF= Olfactory seizure	TUI=T047	STY=Disease or Syndrome
+olfactory seizures	CUI=C0422853	PREF=Olfactory seizure	TUI=T047	STY=Disease or Syndrome
+olfactory uncinate fit	CUI=C0422853	PREF=Olfactory seizure	TUI=T047	STY=Disease or Syndrome
+seizure, olfactory	CUI=C0422853	PREF=Olfactory seizure	TUI=T047	STY=Disease or Syndrome
+seizures, olfactory	CUI=C0422853	PREF=Olfactory seizure	TUI=T047	STY=Disease or Syndrome
 Focal sensory vestibular seizure	CUI=C0422855	PREF=Vertiginous seizure	TUI=T047	STY=Disease or Syndrome
 seizure, vertiginous	CUI=C0422855	PREF=Vertiginous seizure	TUI=T047	STY=Disease or Syndrome
 seizure, vestibular	CUI=C0422855	PREF=Vertiginous seizure	TUI=T047	STY=Disease or Syndrome
@@ -217,25 +217,25 @@ absence seizure, automatisms	CUI=C0422874	PREF=Absence seizure with automatisms	
 absence seizures with automatisms	CUI=C0422874	PREF=Absence seizure with automatisms	TUI=T033	STY=Finding
 absence seizure with autonomic components	CUI=C0422875	PREF=absence seizure with autonomic components	TUI=T033	STY=finding
 other status epilepticus	CUI=C0477372	PREF=other status epilepticus	TUI=T047	STY=Disease or Syndrome
-convulsions grand mal	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-generalised tonic clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-generalised tonic clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-generalised tonic-clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-generalised tonic-clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-generalized tonic clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-generalized tonic clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-generalized tonic-clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-grand mal	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-grand mal convulsion	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-grand mal convulsions	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-tonic clonic convulsion	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-tonic clonic convulsions	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-tonic clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-tonic clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-tonic/clonic convulsions	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-tonic-clonic convulsion	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-tonic-clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
-tonic-clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures  	TUI=T047	STY=Disease or Syndrome
+convulsions grand mal	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+generalised tonic clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+generalised tonic clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+generalised tonic-clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+generalised tonic-clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+generalized tonic clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+generalized tonic clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+generalized tonic-clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+grand mal	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+grand mal convulsion	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+grand mal convulsions	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic clonic convulsion	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic clonic convulsions	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic/clonic convulsions	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic-clonic convulsion	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic-clonic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic-clonic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
 focal Sensory Seizure	CUI=C0544645	PREF=Focal sensory seizure	TUI=T047	STY=Disease or Syndrome
 focal sensory seizures	CUI=C0544645	PREF=Focal Sensory Seizure	TUI=T047	STY=Disease or Syndrome
 salaam spasm	CUI=C0546878	PREF=salaam spasm	TUI=T047	STY=Disease or Syndrome
@@ -396,8 +396,6 @@ parietal lobe onse seizures	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	ST
 parietal lobe onset seizures	CUI=C0393690	PREF=Parietal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
 occipital lobe onset seizures	CUI=C0393691	PREF=Occipital Lobe Epilepsy	TUI=T047	STY=Disease or Syndrome
 occipital lobe onset seizure	CUI=C0393691	PREF=Occipital Lobe Epilepsy	TUI=T047	STY=Disease or Syndrome
-absence type seizures	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
-absence type seizure	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 focal seizures with loss of awareness	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
 focal to bilateral convulsive seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 Focal seizures with altered awareness	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
@@ -406,5 +404,21 @@ focal to bilateral tonic clonic seizures	CUI=C0877017	PREF=Generalized tonic-clo
 seizure cluster	CUI=C3203523	PREF=Acute repetitive seizure	TUI=T047	STY=Disease or Syndrome
 cluster of seizures	CUI=C3203523	PREF=Acute repetitive seizure	TUI=T047	STY=Disease or Syndrome
 clusters of seizures	CUI=C3203523	PREF=Acute repetitive seizure	TUI=T047	STY=Disease or Syndrome
-convulsive seizure	CUI=C0751494	PREF=Convulsive Seizures	TUI=T184	STY=Sign or Symptom
-convulsive seizures	CUI=C0751494	PREF=Convulsive Seizures	TUI=T184	STY=Sign or Symptom
+focal right arm Sensory Seizure	CUI=C0544645	PREF=Focal sensory seizure	TUI=T047	STY=Disease or Syndrome
+focal right arm sensory seizures	CUI=C0544645	PREF=Focal Sensory Seizure	TUI=T047	STY=Disease or Syndrome
+focal left arm Sensory Seizure	CUI=C0544645	PREF=Focal sensory seizure	TUI=T047	STY=Disease or Syndrome
+focal left arm sensory seizures	CUI=C0544645	PREF=Focal Sensory Seizure	TUI=T047	STY=Disease or Syndrome
+Generalised tonic chronic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalised tonic chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic chronic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalised tonic-chronic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalised tonic-chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic-chronic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+tonic-chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalized tonic-chronic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalized tonic-chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalized tonic chronic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+Generalized tonic chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+‘grand mal' seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+‘grand mal' seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
