@@ -21,7 +21,7 @@ Rule: numberRange1
     ({Numeric})
 ):match
 -->
-:match.Range = { rule = numberRange1, N1 = 0, N2 = :match.Numeric.value}
+:match.Range = { rule = numberRange1, N1 = "0", N2 = :match.Numeric.value}
 
 Rule: numberRange2
 (

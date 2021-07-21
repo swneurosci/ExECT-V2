@@ -13,5 +13,5 @@ Priority: 100
     ({Lookup3}|{Lookup})
 ):match 
 --> 
-:a.NumberRange = { rule = "AToNumberRange", value=1} 
+:a.NumberRange = { rule = "AToNumberRange", value="1"} 
 
