@@ -212,8 +212,10 @@ Priority: 100
 ):s 
 --> 
 :match.SeizureFrequencyDriving = { SeizureType=:match.Lookup3.PREF, rule = seizureFree1b7, PREF = "Fit Frequency" ,CUI = :match.Lookup3.CUI,  
-sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year PointInTime = :match.PointInTime.Since, 
-TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, NumberOfSeizures = "0" , Certainty = "5", Negation = :match.Lookup3.Negation, string = :s@string
+sinceInteraction = :match.Interaction@string, DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, 
+YearDate = :match.PartialDate.year PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = :match.timeElapsed.time,
+TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction@string,  sinceDrug = :match.Lookup.PREF, 
+NumberOfSeizures = "0" , Certainty = "5", Negation = :match.Lookup3.Negation, string = :s@string
 } 
  
  

@@ -1,0 +1,21 @@
+Phase: SeizureFrequency 
+Input: NumberRange Token Lookup3 
+Options: control=appelt 
+
+
+ 
+// 2 GTCS 2014 (without timeElapsed)
+// Tested only picked up once (letter 6 - but the token in the input is very strict)
+Rule: hSeizureFreq1a 
+Priority: 100 
+( 
+    ({NumberRange}):noSeiz
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({NumberRange.value >= 1950, NumberRange.value <= 2050}):year
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = "hSeizure1a", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+NumberOfTimePeriods = :match.timePeriods.frequency, TimePeriod = :match.timePeriods.time-unit, TimeSince_or_TimeOfEvent = "During",
+NumberOfSeizures = :noSeiz.NumberRange.value, LowerNumberOfSeizures  = :noSeiz.NumberRange.N1, UpperNumberOfSeizures  = :noSeiz.NumberRange.N2,
+YearDate = :year.NumberRange.value}
+

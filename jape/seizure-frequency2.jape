@@ -36,7 +36,7 @@ Priority: 100
 
 // Seizure, last one March 2012 or Seizures, last event/episode DATE
 //HUW
-// Slang Seizures empty gaz so wont do anything atm - can add these phrase back to it
+// Slang Seizures empty gaz so wont do anything atm - can add these phrase back to it - Now has episodes and events in it
 Rule: LastSeizure2b
 Priority: 100 
 (
@@ -49,6 +49,23 @@ Priority: 100
 :match.SeizureFrequency11 = { rule = "LastSeizure2b", CUI = :lookup.Lookup3.CUI, Certainty = :lookup.Lookup3.Certainty, Negation = :lookup.Lookup3.Negation, 
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since", //Check if this wants to be added
  YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day}
+
+// seizures since then, last one being in DATE
+Rule: LastSeizure2c
+Priority: 100 
+(
+    (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}):lookup
+    ({timeElapsed.time == "Since"})[0,1]
+    ({timeElapsed.time  == "Last"})
+    (({NumberRange.value == 1})|({SlangSeizures}))
+    ({timeElapsed.time == "During"})[0,1]
+    ({PartialDate})):match
+):match1
+-->
+:match.SeizureFrequency11 = { rule = "LastSeizure2c", CUI = :lookup.Lookup3.CUI, Certainty = :lookup.Lookup3.Certainty, Negation = :lookup.Lookup3.Negation, 
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since", //Check if this wants to be added
+ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day}
+
 
 /* He reports his last seizure was in [DATE] */
 //Changed this from during to since - So person has been seizure free since DATE (not that they were seizure free during DATE)
@@ -66,6 +83,7 @@ Priority: 95
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
  YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 
+
 /* the last seizure was on [DATE] */
 //Changed this from during to since - So person has been seizure free since DATE (not that they were seizure free during DATE)
 Rule: LastSeizure3b
@@ -82,7 +100,78 @@ Priority: 95
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
  YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 
+// GTCS, last event around New Years Eve
+Rule: LastSeizurePointInTimeA
+Priority: 100 
+(
+    (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}):lookup
+    ({timeElapsed.time  == "Last"})
+    (({NumberRange.value == 1})|({SlangSeizures}))
+    ({PointInTime})):match
+):match1
+-->
+:match.SeizureFrequency11 = { rule = "LastSeizurePointInTimeA", CUI = :lookup.Lookup3.CUI, Certainty = :lookup.Lookup3.Certainty, Negation = :lookup.Lookup3.Negation, 
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since", //Check if this wants to be added
+ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day,
+ PointInTime = :match.PointInTime.Since}
+
+ // GTCS since then, last event around New Years Eve - match LastSeizure2c style
+Rule: LastSeizurePointInTimeA
+Priority: 100 
+(
+    (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}):lookup
+    ({timeElapsed.time == "Since"})[0,1]
+    ({timeElapsed.time  == "Last"})
+    (({NumberRange.value == 1})|({SlangSeizures}))
+    ({PointInTime})):match
+):match1
+-->
+:match.SeizureFrequency11 = { rule = "LastSeizurePointInTimeA", CUI = :lookup.Lookup3.CUI, Certainty = :lookup.Lookup3.Certainty, Negation = :lookup.Lookup3.Negation, 
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since", //Check if this wants to be added
+ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day,
+ PointInTime = :match.PointInTime.Since}
+ 
+ 
+
+/* He reports his last seizure was in [DATE] */
+//Changed this from during to since - So person has been seizure free since DATE (not that they were seizure free during DATE)
+Rule: LastSeizurePointInTimeB
+Priority: 95 
+(
+    ({timeElapsed.time  == "Last"})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
+    ({timeElapsed.time == "During"})
+    ({PointInTime})
+):match
+-->
+:match.SeizureFrequency11 = { rule = "LastSeizurePointInTimeB", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+ NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2, 
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
+ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since",
+ PointInTime = :match.PointInTime.Since
+ }
+
+
+/* the last seizure was on [DATE] */
+//Changed this from during to since - So person has been seizure free since DATE (not that they were seizure free during DATE)
+Rule: LastSeizurePointInTimec
+Priority: 95 
+(
+    ({timeElapsed.time  == "Last"})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
+    ({timeElapsed.time==During})*
+    ({PartialDate})
+):match
+-->
+:match.SeizureFrequency11 = { rule = "LastSeizurePointInTimec", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+ NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2, 
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
+ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since",
+ PointInTime = :match.PointInTime.Since}
+
+
  /* He reports his last seizure was in [YEAR] */
+ // New rule for In/Since followed by number around 2000 to be a PartialDate now
 //Changed this from during to since - So person has been seizure free since DATE (not that they were seizure free during DATE)
 Rule: LastSeizure4
 Priority: 95 
@@ -125,7 +214,7 @@ Priority: 95
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "LastSeizure6", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
- TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since", 
  NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2,
  Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeUpper = :match.Age.AgeUpper, AgeLower = :match.Age.AgeLower}
 
@@ -140,7 +229,7 @@ Priority: 95
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "LastSeizure6b", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
- TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since",// Since not during because non in that time
  NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2,
  Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeUpper = :match.Age.AgeUpper, AgeLower = :match.Age.AgeLower}
 
@@ -156,7 +245,7 @@ Priority: 95
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "LastSeizure6a", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
- TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since",
  NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2,
  Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeUpper = :match.Age.AgeUpper, AgeLower = :match.Age.AgeLower}
 
@@ -227,6 +316,21 @@ Priority: 95
 :match.SeizureFrequency11 = { rule = "NoSeizure3", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
  NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods  = :match.NumberRange.N1}
+
+// had a seizure 10 days ago = no seizure for 10 days
+Rule: NoSeizure3a
+Priority: 95 
+(   
+    ({NumberRange.value == 1})//a
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
+    ({NumberRange}):time//10
+    ({timePeriods})//days
+    ({timeElapsed.time == Since})//ago
+):match
+-->
+:match.SeizureFrequency11 = { rule = "NoSeizure3a", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
+ NumberOfTimePeriods = :time.NumberRange.value, UpperNumberOfTimePeriods = :time.NumberRange.N2, LowerNumberOfTimePeriods  = :time.NumberRange.N1}
 
 /* she has not had any further seizures since starting Zonisamide. */
 // Seizures here are affirmed not negated - but in the example they are negated... Picked up correctly by HseizureFree4d

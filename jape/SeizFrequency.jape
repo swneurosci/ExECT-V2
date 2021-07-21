@@ -1,5 +1,5 @@
 Phase: SeizFrequency 
-Input: NumberRange timePeriods Token Unit Lookup3 Age
+Input: NumberRange timePeriods Token Unit Lookup3 Age SlangSeizures
 Options: control=appelt 
  
 // SeizFrequency1 - Number = TimePeriods 
@@ -36,7 +36,7 @@ Rule: SeizFrequency2a
 Priority: 100 
 ( 
     (({NumberRange}) 
-    ({Token, !Unit, !Lookup3}) 
+    ({Token, !Unit, !Lookup3, !SlangSeizures}) 
     ({timePeriods})):match
 ):match1 
 --> 
