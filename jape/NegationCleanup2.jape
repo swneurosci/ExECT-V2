@@ -8,6 +8,7 @@ Options: control=all
 // 'If this is "not"(trigger) successful then I would "consider"(verb) 
 // preventative treatment such as propranolol or possibly tompiramate given his "epilepsy" (lookup)'
 // Why isn't there a Lookup3 version?
+// What about a rule like Person Verb Lookup.negation = negated -> flip the negation, but with controls for only on one sentence (split)
 Rule: reverseNegation
 (
 {Trigger}
