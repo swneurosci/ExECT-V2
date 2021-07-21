@@ -326,7 +326,7 @@ NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.Num
 PointInTime = :match.PointInTime.Since} 
 
 // Since Last clinic he has had 5 seizures
-Rule: hSeizureFreq1aPointInTime 
+Rule: hSeizureFreq1bPointInTime 
 Priority: 100 
 ( 
     ({timeElapsed})
