@@ -75,10 +75,12 @@ umlsAnnots.iterator().next().getFeatures().put("rule","PutNegationd");
 // why wouldn't this rule be done by ContextTagger normally?
 // need to see example
 // Also just rule above with slightly more detail
+// THIS RULE CAUSING MORE PROBLEMS AGAIN - reversing some other rules - 4, 45, 57(but lookup3 also deleted),
+//Correclty returning in 6, 
 Rule: NegationBack
 (
 {Trigger.majorType == negation, Trigger.minorType == pre-condition} 
-({NegConj})?
+({NegConj})
 ({Lookup3.Negation == Affirmed}):umls
 ):match
 -->
@@ -95,7 +97,7 @@ Rule: NegationBack
 (
 {Trigger.majorType == negation, Trigger.minorType == pre-condition} 
 {Lookup3}
-({NegConj})?
+({NegConj})
 ({Lookup3.Negation == Affirmed}):umls
 ):match
 -->
@@ -115,7 +117,7 @@ Rule: NegationBack
 {Lookup3}
 ({NegConj})?
 {Lookup3}
-({NegConj})?
+({NegConj})
 ({Lookup3.Negation == Affirmed}):umls
 ):match
 -->
@@ -136,7 +138,7 @@ Rule: NegationBack
 {Lookup3}
 ({NegConj})?
 {Lookup3}
-({NegConj})?
+({NegConj})
 ({Lookup3.Negation == Affirmed}):umls
 ):match
 -->
