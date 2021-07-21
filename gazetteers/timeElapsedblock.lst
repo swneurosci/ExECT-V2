@@ -1,2 +1,6 @@
 sleep:location=after
 which:location=both
+increased:location=after
+decreased:location=after
+changed:location=after
+improvement:location=before
