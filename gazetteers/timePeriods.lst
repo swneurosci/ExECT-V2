@@ -1,5 +1,5 @@
 in the morning:frequency=1:time-unit=Day:when=morning:period=yes
-at night:frequency=1:time-unit=day:when=night
+at night:frequency=1:time-unit=Day:when=night:=
 every day:frequency=1:time-unit=Day:interval=1:period=yes
 daily:frequency=1:time-unit=Day:interval=1:period=yes
 in the evening:frequency=1:time-unit=Day:when=night:period=yes
@@ -33,7 +33,7 @@ number of months:frequency=2:time-unit=Month:type=greater
 a night:time-unit=Day:interval=1:period=yes:frequency=1
 monthly:frequency=1:time-unit=Month
 days:time-unit=Day:frequency=>1
-fortnight:time-unit=week:frequency=2
-each day:time-unit=Day:frequency=1:=
-a number of months:time-unit=Month:frequency=2:=
+fortnight:time-unit=Week:frequency=2:=
+each day:time-unit=Day:frequency=1
+a number of months:time-unit=Month:frequency=2
 years:frequency=>1:time-unit=Year

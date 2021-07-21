@@ -53,4 +53,7 @@ reduction in the frequency:Quantity=Decreased
 good response:Quantity=Decreased
 considerably better:Quantity=Decreased
 seizure frequency increased:Quantity=Increased:ContainsLookUp=Yes
-much better controlled:Quantity=Decreased:=
+much better controlled:Quantity=Decreased
+remained the same:Quantity=Same
+unchanged:Quantity=Same
+not been any significant improvement:Quantity=Same:Negation=Negated
