@@ -1,0 +1,249 @@
+Phase: SeizureControl 
+Input: SeizureControl Split Frequency NumberRange timePeriods PartialDate timeElapsed PointInTime Lookup3 Drug Coincide SeizureFree SeizureFrequency SeizureChange
+Options: control=appelt 
+
+//His Seizure control has remained the same.
+Rule: SeizureControl1a 
+Priority: 99 
+( 
+    ({SeizureControl}) 
+    ({Frequency}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureControl1a", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since, DayDate = :match.PartialDate.day,
+MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
+TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
+ 
+//There has been no change to his seizure control.
+Rule: SeizureControl1b 
+Priority: 99 
+(
+    ({Frequency})
+    ({SeizureControl}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureControl1b", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since, DayDate = :match.PartialDate.day,
+MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
+TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
+
+// Since DATE seizure control has improved
+Rule: SeizureControl2a 
+Priority: 99 
+( 
+    ({timeElapsed})
+    ({PartialDate})
+    ({SeizureControl}) 
+    ({Frequency}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureControl2a", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since, DayDate = :match.PartialDate.day,
+MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
+TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
+ 
+//Since DATE no change to her seizure control
+Rule: SeizureControl2b 
+Priority: 99 
+( 
+    ({timeElapsed})
+    ({PartialDate})
+    ({Frequency}) 
+    ({SeizureControl}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureControl2b", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since, DayDate = :match.PartialDate.day,
+MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
+TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
+
+// Since PointInTime seizure control has improved
+Rule: SeizureControl3a 
+Priority: 99 
+( 
+    (({timeElapsed}
+    {PointInTime})|({PointInTime contains Token.string ==~ "[Ss]ince"}))
+    ({SeizureControl}) 
+    ({Frequency}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureControl3a", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since, DayDate = :match.PartialDate.day,
+MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
+TimeSince_or_TimeOfEvent = "Since",
+TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
+ 
+//Since PointInTime no change to her seizure control
+Rule: SeizureControl3b 
+Priority: 99 
+( 
+    (({timeElapsed}
+    {PointInTime})|({PointInTime contains Token.string ==~ "[Ss]ince"}))
+    ({Frequency}) 
+    ({SeizureControl}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureControl3b", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since, DayDate = :match.PartialDate.day,
+MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
+TimeSince_or_TimeOfEvent = "Since",
+TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
+
+// In the last X months seizure control has improved
+Rule: SeizureControl4a 
+Priority: 99 
+( 
+    ({timeElapsed})
+    ({NumberRange})
+    ({timePeriods})
+    ({SeizureControl}) 
+    ({Frequency}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureControl4a", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since, DayDate = :match.PartialDate.day,
+MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year
+//,TimeSince_or_TimeOfEvent = "Since"
+} 
+ 
+//In the last Y years no change to her seizure control
+Rule: SeizureControl4b 
+Priority: 99 
+( 
+    ({timeElapsed})
+    ({NumberRange})
+    ({timePeriods})
+    ({Frequency}) 
+    ({SeizureControl}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureControl4b", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since, DayDate = :match.PartialDate.day,
+MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year
+//,TimeSince_or_TimeOfEvent = "Since"
+} 
+
+// seizure control has improved Since DATE 
+Rule: SeizureControl2c
+Priority: 99 
+( 
+    ({SeizureControl}) 
+    ({Frequency}) 
+    ({timeElapsed})
+    ({PartialDate})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureControl2c", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since, DayDate = :match.PartialDate.day,
+MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
+TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
+ 
+//no change to her seizure control Since DATE
+Rule: SeizureControl2d
+Priority: 99 
+( 
+    ({Frequency}) 
+    ({SeizureControl})
+    ({timeElapsed})
+    ({PartialDate})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureControl2d", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since, DayDate = :match.PartialDate.day,
+MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
+TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
+
+//  seizure control has improved Since PointInTime
+Rule: SeizureControl3c
+Priority: 99 
+(  
+    ({SeizureControl}) 
+    ({Frequency})
+    (({timeElapsed}
+    {PointInTime})|({PointInTime contains Token.string ==~ "[Ss]ince"}))
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureControl3c", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since, DayDate = :match.PartialDate.day,
+MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
+TimeSince_or_TimeOfEvent = "Since",
+TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
+ 
+// no change to her seizure control Since PointInTime
+Rule: SeizureControl3d 
+Priority: 99 
+( 
+    ({Frequency}) 
+    ({SeizureControl})
+    (({timeElapsed}
+    {PointInTime})|({PointInTime contains Token.string ==~ "[Ss]ince"}))
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureControl3d", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since, DayDate = :match.PartialDate.day,
+MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
+TimeSince_or_TimeOfEvent = "Since",
+TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
+
+//seizure control has improved In the last X months
+Rule: SeizureControl4c
+Priority: 99 
+( 
+    ({SeizureControl}) 
+    ({Frequency})
+    ({timeElapsed})
+    ({NumberRange})
+    ({timePeriods})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureControl4c", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since, DayDate = :match.PartialDate.day,
+MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year
+//,TimeSince_or_TimeOfEvent = "Since"
+} 
+ 
+//no change to her seizure control In the last Y years 
+Rule: SeizureControl4d
+Priority: 99 
+( 
+    ({Frequency}) 
+    ({SeizureControl})
+    ({timeElapsed})
+    ({NumberRange})
+    ({timePeriods})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureControl4d", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+PointInTime = :match.PointInTime.Since, DayDate = :match.PartialDate.day,
+MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year
+//,TimeSince_or_TimeOfEvent = "Since"
+} 
