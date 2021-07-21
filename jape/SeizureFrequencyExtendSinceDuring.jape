@@ -1,0 +1,28 @@
+Phase: SeizureFrequencyExtendSinceDuring 
+Input: SeizureFrequency11 Token
+Options: control=appelt 
+
+
+ 
+// SFreq and SFreq - get values from first into second 
+// Picked up only once and works fine
+Rule: hSeizureFreq1a 
+Priority: 99 
+( 
+    ({SeizureFrequency11.TimeSince_or_TimeOfEvent == "Since"}|{SeizureFrequency11.TimeSince_or_TimeOfEvent == "During"}):SF1
+    ({Token.string == "and"})
+    ({SeizureFrequency11, !SeizureFrequency11.TimeSince_or_TimeOfEvent == "Since", !SeizureFrequency11.TimeSince_or_TimeOfEvent == "During"}):match
+):match1 
+--> 
+:match.SeizureFrequency11 = { rule = :match.SeizureFrequency11.rule, CUI = :match.SeizureFrequency11.CUI,
+Certainty = :match.SeizureFrequency11.Certainty, Negation = :match.SeizureFrequency11.Negation,
+NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, TimePeriod = :match.SeizureFrequency11.TimePeriod, 
+NumberOfSeizures = :match.SeizureFrequency11.NumberOfSeizures, LowerNumberOfSeizures  = :match.SeizureFrequency11.LowerNumberOfSeizures, 
+UpperNumberOfSeizures  = :match.SeizureFrequency11.UpperNumberOfSeizures, TimeSince_or_TimeOfEvent = :SF1.SeizureFrequency11.TimeSince_or_TimeOfEvent,
+PointInTime = :SF1.SeizureFrequency11.PointInTime, DayDate = :SF1.SeizureFrequency11.DayDate,
+MonthDate = :SF1.SeizureFrequency11.MonthDate, YearDate = :SF1.SeizureFrequency11.YearDate
+ruleExtra = "SFExtendSinceDuring"},
+//Delete the old annotations
+:match { 
+  inputAS.removeAll(matchAnnots);
+}

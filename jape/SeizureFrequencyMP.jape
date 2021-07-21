@@ -7,8 +7,12 @@ SeizFrequency
 SeizureFree
 seizure-frequency1
 seizure-frequency2
+seizure-frequency3
 SF
 seizurechange
+SeizureControl
+SeizureFrequencyExtendSinceDuring
+TwoSeizureFreqOneTimePeriod
 SeizFreqSentence
 SeizChangeSentence
 SeizFreeSentence
@@ -18,5 +22,4 @@ SeizFreqFilter3
 SeizFreeFilter
 SeizFreeFilter2
 SeizChangeFilter
-//TwoSeizureFreqOneTimePeriod -- THIS GOES BELOW SeizChangeFilter2
 SeizChangeFilter2

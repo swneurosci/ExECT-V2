@@ -1,15 +1,37 @@
 Phase: SeizureFrequency
-Input: NumberRange timePeriods Lookup3 Sentence Split SeizureFrequency
+Input: NumberRange timePeriods Lookup3 Sentence Split SeizureFrequency11 Token
 Options: control=appelt
 
 // this rule was for two complex partial seizures and one focal seizure in the last 4 months
+// two seizureA and 5 seizure B since Febuary
 // Currently not in pipeline
 Rule: TwoSeizInOneTimePeriod
 (
-    ({NumberRange})
+    (({NumberRange})
     ({Lookup3.majorType == "umls", Lookup3.minorType != "OtherDisease"})
-    ({SeizureFrequency})
+    ({Token.string == "and"})):match1
+    ({SeizureFrequency11})
 ):match
 -->
-:match.SeizureFrequency = { rule = "TwoSeizInOneTimePeriod", CUI = :match.Lookup3.CUI,
-NumberOfTimePeriods = :match.SeizureFrequency.NumberOfTimePeriods, TimePeriod = :match.SeizureFrequency.TimePeriod, QuantityTotal = :match.NumberRange.value}
+:match1.SeizureFrequency11 = { rule = "TwoSeizInOneTimePeriod", CUI = :match.Lookup3.CUI,
+NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, TimePeriod = :match.SeizureFrequency11.TimePeriod,
+DayDate = :match.SeizureFrequency11.DayDate, MonthDate = :match.SeizureFrequency11.MonthDate, YearDate = :match.SeizureFrequency11.YearDate,
+PointInTime = :match.SeizureFrequency11.PointInTime, TimeSince_or_TimeOfEvent = :match.SeizureFrequency11.TimeSince_or_TimeOfEvent,
+QuantityTotal = :match.NumberRange.value}
+
+// Since last seen had 5 simple partial and 6 COMPLEX PARTIAL SEIZURES
+// Not added age here
+Rule: TwoSeizInOneTimePeriod
+(
+    ({SeizureFrequency11})
+    (({Token.string == "and"})
+    ({NumberRange})
+    ({Lookup3.majorType == "umls", Lookup3.minorType != "OtherDisease"})):match1
+):match
+-->
+:match1.SeizureFrequency11 = { rule = "TwoSeizInOneTimePeriod", CUI = :match.Lookup3.CUI,
+NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, TimePeriod = :match.SeizureFrequency11.TimePeriod,
+DayDate = :match.SeizureFrequency11.DayDate, MonthDate = :match.SeizureFrequency11.MonthDate, YearDate = :match.SeizureFrequency11.YearDate,
+PointInTime = :match.SeizureFrequency11.PointInTime, TimeSince_or_TimeOfEvent = :match.SeizureFrequency11.TimeSince_or_TimeOfEvent,
+NumberOfSeizures = :match.NumberRange.value}
+
