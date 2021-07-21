@@ -5,12 +5,13 @@ Options: control=appelt
 /*
  * pickup up day/month/year fate format, even if one component is missing
 */
-
+// KEEP AN EYE ON THIS CHANGE - MAYBE NEED TO LIMIT WHEN VALUE OF NUMERIC BETWEEN 1950 and 2050?
 Rule: partialDate
 Priority: 99
 (
 	({DayDate})?
 	{Lookup2.minorType == date}
+	({Token.kind == punctuation, Token.string == ","})[0,1]// September, 2012
 	({Numeric})?
 ):match
 -->
