@@ -10,7 +10,7 @@ Options: control=appelt
 Rule: SeizureChange1a
 Priority: 100 
 ( 
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({timeElapsed.time == During})?
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({timeElapsed})
@@ -28,7 +28,7 @@ Priority: 100
 ( 
     
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
-    ({Frequency})      
+    ({Frequency.Temporality != "hypothetical"})      
     ({timeElapsed})+
     ({NumberRange})
     ({timePeriods})
@@ -48,7 +48,7 @@ Priority: 100
     ({NumberRange})
     ({timePeriods})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
-    ({Frequency})      
+    ({Frequency.Temporality != "hypothetical"})      
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureChange1c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
@@ -64,7 +64,7 @@ Priority: 100
     ({timeElapsed})
     ({timePeriods})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
-    ({Frequency})      
+    ({Frequency.Temporality != "hypothetical"})      
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureChange1d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
@@ -77,7 +77,7 @@ TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.timePeri
 Rule: SeizureChange1e1
 Priority: 100
 ( 
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({timeElapsed})?
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({timeElapsed})
@@ -96,7 +96,7 @@ Priority: 100
     ({timeElapsed})
     ({NumberRange})
     ({timePeriods})
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
 
 ):match 
@@ -111,7 +111,7 @@ TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRa
 Rule: SeizureChange2a
 Priority: 100 
 ( 
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({timeElapsed.time == During})?
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({timeElapsed})
@@ -127,7 +127,7 @@ Priority: 100
 ( 
     
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
-    ({Frequency})      
+    ({Frequency.Temporality != "hypothetical"})      
     ({timeElapsed})+
     ({PartialDate})
 ):match 
@@ -141,7 +141,7 @@ NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :matc
 Rule: SeizureChange2c
 Priority: 100 
 ( 
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({timeElapsed.time == During})
     ({timePeriods})?
@@ -161,7 +161,7 @@ Priority: 100
 ( 
     ({PointInTime})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureChange3a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
@@ -172,7 +172,7 @@ Rule: SeizureChange3b
 Priority: 100 
 ( 
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({PointInTime})
 ):match 
 --> 
@@ -184,7 +184,7 @@ Rule: SeizureChange3c
 Priority: 100 
 ( 
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({timeElapsed})
     ({PointInTime})
 ):match 
@@ -196,7 +196,7 @@ PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = :match.timeEl
 Rule: SeizureChange3d
 Priority: 100 
 ( 
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({timeElapsed})// "in" is a timeElapsed
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({PointInTime})
@@ -210,7 +210,7 @@ Rule: SeizureChange3d
 Priority: 100 
 ( 
     ({PointInTime})
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
 ):match 
 --> 
@@ -228,7 +228,7 @@ PointInTime = :match.PointInTime.Since}
 Rule: SeizureChange4a
 Priority: 99 
 ( 
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
     Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
 ):match 
@@ -242,7 +242,7 @@ Priority: 99
 ( 
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
     Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureChange4b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation } 
@@ -251,7 +251,7 @@ Priority: 99
 Rule: SeizureChange4c
 Priority: 99 
 ( 
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({timeElapsed})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
     Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
@@ -265,7 +265,7 @@ Priority: 99
 ( 
     {timeElapsed.time == Since}
     {PartialDate}
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({timeElapsed})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
     Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
@@ -281,7 +281,7 @@ Priority: 99
 ( 
     (({timeElapsed.time == Since}
     {PointInTime})|({PointInTime contains Token.string ==~ "[Ss]ince"}))
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({timeElapsed})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
     Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
@@ -322,7 +322,7 @@ Priority: 95
 --> 
 :match.SeizureChange = { rule = "SeizureChange6", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, 
 TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
-PointInTime = :match.PointInTime.Since}
+PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "Since"}
 
 
 
@@ -598,7 +598,9 @@ Priority: 99
 --> 
 :match.SeizureChange = { rule = "SeizureChangeNegated4c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
 
-
+// WHAT ABOUT EXAMPLES LIKE
+// "did not lead to any further decrease in frequency of seizures" - this is picked up by SeizureChange4c (not the negated rule)
+// MAYBE RULES FOR NO CHANGE is negatated and different rules for when increase or decrease is negated? - EPI_LET186.txt example
 
 /* Negated Change in Frequency */
 

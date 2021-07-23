@@ -7,7 +7,7 @@ Rule: SeizureControl1a
 Priority: 99 
 ( 
     ({SeizureControl}) 
-    ({Frequency}) 
+    ({Frequency.Temporality != "hypothetical"}) 
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureControl1a", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
@@ -21,7 +21,7 @@ TimeSince_or_TimeOfEvent = :match.timeElapsed.time}
 Rule: SeizureControl1b 
 Priority: 99 
 (
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({SeizureControl}) 
 ):match 
 --> 
@@ -39,7 +39,7 @@ Priority: 99
     ({timeElapsed})
     ({PartialDate})
     ({SeizureControl}) 
-    ({Frequency}) 
+    ({Frequency.Temporality != "hypothetical"}) 
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureControl2a", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
@@ -55,7 +55,7 @@ Priority: 99
 ( 
     ({timeElapsed})
     ({PartialDate})
-    ({Frequency}) 
+    ({Frequency.Temporality != "hypothetical"}) 
     ({SeizureControl}) 
 ):match 
 --> 
@@ -73,7 +73,7 @@ Priority: 99
     (({timeElapsed}
     {PointInTime})|({PointInTime contains Token.string ==~ "[Ss]ince"}))
     ({SeizureControl}) 
-    ({Frequency}) 
+    ({Frequency.Temporality != "hypothetical"}) 
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureControl3a", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
@@ -90,7 +90,7 @@ Priority: 99
 ( 
     (({timeElapsed}
     {PointInTime})|({PointInTime contains Token.string ==~ "[Ss]ince"}))
-    ({Frequency}) 
+    ({Frequency.Temporality != "hypothetical"}) 
     ({SeizureControl}) 
 ):match 
 --> 
@@ -110,7 +110,7 @@ Priority: 99
     ({NumberRange})
     ({timePeriods})
     ({SeizureControl}) 
-    ({Frequency}) 
+    ({Frequency.Temporality != "hypothetical"}) 
 ):match 
 --> 
 :match.SeizureChange = { rule = "SeizureControl4a", CUI = "C0036572", FrequencyChange = :match.Frequency.Quantity, 
@@ -128,7 +128,7 @@ Priority: 99
     ({timeElapsed})
     ({NumberRange})
     ({timePeriods})
-    ({Frequency}) 
+    ({Frequency.Temporality != "hypothetical"}) 
     ({SeizureControl}) 
 ):match 
 --> 
@@ -145,7 +145,7 @@ Rule: SeizureControl2c
 Priority: 99 
 ( 
     ({SeizureControl}) 
-    ({Frequency}) 
+    ({Frequency.Temporality != "hypothetical"}) 
     ({timeElapsed})
     ({PartialDate})
 ):match 
@@ -161,7 +161,7 @@ TimeSince_or_TimeOfEvent = :match.timeElapsed.time}
 Rule: SeizureControl2d
 Priority: 99 
 ( 
-    ({Frequency}) 
+    ({Frequency.Temporality != "hypothetical"}) 
     ({SeizureControl})
     ({timeElapsed})
     ({PartialDate})
@@ -179,7 +179,7 @@ Rule: SeizureControl3c
 Priority: 99 
 (  
     ({SeizureControl}) 
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     (({timeElapsed}
     {PointInTime})|({PointInTime contains Token.string ==~ "[Ss]ince"}))
 ):match 
@@ -196,7 +196,7 @@ TimeSince_or_TimeOfEvent = :match.timeElapsed.time}
 Rule: SeizureControl3d 
 Priority: 99 
 ( 
-    ({Frequency}) 
+    ({Frequency.Temporality != "hypothetical"}) 
     ({SeizureControl})
     (({timeElapsed}
     {PointInTime})|({PointInTime contains Token.string ==~ "[Ss]ince"}))
@@ -215,7 +215,7 @@ Rule: SeizureControl4c
 Priority: 99 
 ( 
     ({SeizureControl}) 
-    ({Frequency})
+    ({Frequency.Temporality != "hypothetical"})
     ({timeElapsed})
     ({NumberRange})
     ({timePeriods})
@@ -233,7 +233,7 @@ MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year
 Rule: SeizureControl4d
 Priority: 99 
 ( 
-    ({Frequency}) 
+    ({Frequency.Temporality != "hypothetical"}) 
     ({SeizureControl})
     ({timeElapsed})
     ({NumberRange})
