@@ -57,3 +57,6 @@ much better controlled:Quantity=Decreased
 remained the same:Quantity=Same
 unchanged:Quantity=Same
 not been any significant improvement:Quantity=Same:Negation=Negated
+not made any difference to her seizure frequency:Quantity=Same:ContainsLookUp=Yes
+significant worsening:Quantity=Increased
+seizure frequency has deteriorated:Quantity=Increased:ContainsLookUp=Yes
