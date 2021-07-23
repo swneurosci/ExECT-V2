@@ -12,5 +12,5 @@ Priority: 100
     ({NumberRange.value >= 1900, NumberRange.value <= 2050}):date
 ):match 
 --> 
-:date.PartialDate = { rule = "PartialDateYear", YearDate = :match.NumberRange.value} 
+:date.PartialDate = { rule = "PartialDateYear", year = :match.NumberRange.value} 
 
