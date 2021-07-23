@@ -686,16 +686,16 @@ PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "Since"}
 // :match.SeizureFrequencyDriving = { rule = HseizureFree5a, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = "Affirmed", string = :match@string,
 // AgeUnit = :match.timePeriods.time-unit, Age = :match.NumberRange.value, AgeLower = :match.NumberRange.N1, AgeUpper = :match.NumberRange.N2}
 
-/*
-Rule: HseizureFreeNoTime
-Priority: 10
-(
-    ({Person})
-    ({Lookup3.PREF == "seizure free",Lookup3.Temporality != "hypothetical", Lookup3.Negation == "Affirmed"})
-):match
--->
-:match.SeizureFrequencyDriving = { rule = HseizureFreeNoTime, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = :match.Lookup3.Negation, string = :match@string }
-*/
+
+// Rule: HseizureFreeNoTime
+// Priority: 10
+// (
+//     ({Person})
+//     ({Lookup3.PREF == "seizure free",Lookup3.Temporality != "hypothetical", Lookup3.Negation == "Affirmed"})
+// ):match
+// -->
+// :match.SeizureFrequencyDriving = { rule = HseizureFreeNoTime, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = :match.Lookup3.Negation, string = :match@string }
+
 
 /* Seizure Free since AGE */
 // what about no seizure since AGE? -- picked up by NoSeizure7
@@ -709,5 +709,23 @@ Priority: 99
     ({Age})
 ):match
 -->
-:match.SeizureFrequencyDriving = { rule = HseizureFree4b, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = "Affirmed", string = :match@string,
+:match.SeizureFrequencyDriving = { rule = HseizureFree7, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = "Affirmed", string = :match@string,
 YearDate = :match.NumberRange.value, Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeUpper = :match.Age.AgeUpper, AgeLower = :match.Age.AgeLower, TimeSince_or_TimeOfEvent = :match.timeElapsed.time}
+
+
+
+// He has been 2 years seizure free
+
+Rule: HseizureFree8
+Priority: 99
+(
+    ({Person})
+    ({NumberRange})
+    ({timePeriods})
+    ({Lookup3.PREF == "seizure free",Lookup3.Temporality != "hypothetical", Lookup3.Negation == "Affirmed"})
+):match
+-->
+:match.SeizureFrequencyDriving = { rule = HseizureFree8, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = "Affirmed", string = :match@string,
+YearDate = :match.NumberRange.value, Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeUpper = :match.Age.AgeUpper, AgeLower = :match.Age.AgeLower, TimeSince_or_TimeOfEvent = :match.timeElapsed.time,
+NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+TimePeriod = :match.timePeriods.time-unit}

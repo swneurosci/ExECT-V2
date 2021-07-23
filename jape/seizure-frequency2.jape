@@ -291,15 +291,16 @@ Rule: NoSeizure2
 Priority: 95 
 (
     ({NoSeizure})
+    ({NumberRange.value == "1"})[0,1]// "a" is now a numberRange value = 1
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
     ({timeElapsed.time == "During"})
-    ({NumberRange})
+    ({NumberRange}):Num
     ({timePeriods})
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure2", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
- NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods  = :match.NumberRange.N1}
+ NumberOfTimePeriods = :Num.NumberRange.value, UpperNumberOfTimePeriods = :Num.NumberRange.N2, LowerNumberOfTimePeriods  = :Num.NumberRange.N1}
 
 /* GTCS in total although not for a number of years */
 
