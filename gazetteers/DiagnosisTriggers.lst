@@ -25,9 +25,9 @@ Seizure Types:type=diagnosis
 Problem:type=diagnosis
 description today is suggestive of:type=opinion
 description is suggestive of:type=opinion
-seizure frequency:type=seizureType
-Seizure frequency:type=seizureType
-Seizure Frequency:type=seizureType
+seizure frequency:type=seizureType:SF=true
+Seizure frequency:type=seizureType:SF=true
+Seizure Frequency:type=seizureType:SF=true
 I think that:type=opinion
 Seizure types:type=seizureType
 My impression is:type=opinion
