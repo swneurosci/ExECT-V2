@@ -37,3 +37,8 @@ History obtained is consistent:type=opinion
 Seizure type and frequency:type=seizureType
 Seizure Type:type=seizureType
 Problems:type=diagnosis
+consistent with:type=opinion
+type of seizure:type=seizureType
+type of seizures:type=seizureType
+types of seizures:type=seizureType:=
+types of seizure:type=seizureType:=
