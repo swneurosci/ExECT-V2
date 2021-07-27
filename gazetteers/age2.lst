@@ -1,0 +1,64 @@
+twenties:LowerAge=20:UpperAge=29
+thirties:LowerAge=30:UpperAge=39
+forties:LowerAge=40:UpperAge=49
+fifties:LowerAge=50:UpperAge=59
+sixties:LowerAge=60:UpperAge=69
+seventies:LowerAge=70:UpperAge=79
+eighties:LowerAge=80:UpperAge=89
+nineties:LowerAge=90:UpperAge=99
+20s:LowerAge=20:UpperAge=29
+30s:LowerAge=30:UpperAge=39
+40s:LowerAge=40:UpperAge=49
+50s:LowerAge=50:UpperAge=59
+60s:LowerAge=60:UpperAge=69
+70s:LowerAge=70:UpperAge=79
+80s:LowerAge=80:UpperAge=89
+90s:LowerAge=90:UpperAge=99
+early twenties:LowerAge=20:UpperAge=23
+mid twenties:LowerAge=24:UpperAge=26
+late twenties:LowerAge=27:UpperAge=29
+early thirties:LowerAge=30:UpperAge=33
+mid thirties:LowerAge=34:UpperAge=36
+late thirties:LowerAge=37:UpperAge=39
+early forties:LowerAge=40:UpperAge=43
+mid forties:LowerAge=44:UpperAge=46
+late forties:LowerAge=47:UpperAge=49
+early fifties:LowerAge=50:UpperAge=53
+mid fifties:LowerAge=54:UpperAge=56
+late fifties:LowerAge=57:UpperAge=59
+early sixties:LowerAge=60:UpperAge=53
+mid sixties:LowerAge=64:UpperAge=66
+late sixties:LowerAge=67:UpperAge=69
+early seventies:LowerAge=70:UpperAge=73
+mid seventies:LowerAge=74:UpperAge=76
+late seventies:LowerAge=77:UpperAge=79
+early eighties:LowerAge=80:UpperAge=83
+mid eighties:LowerAge=84:UpperAge=86
+late eighties:LowerAge=87:UpperAge=99
+early nineties:LowerAge=90:UpperAge=93
+mid nineties:LowerAge=94:UpperAge=96
+late nineties:LowerAge=97:UpperAge=99
+early 20s:LowerAge=20:UpperAge=423
+mid 20s:LowerAge=24:UpperAge=26
+late 20s:LowerAge=27:UpperAge=29
+early 30s:LowerAge=30:UpperAge=33
+mid 30s:LowerAge=34:UpperAge=36
+late 30s:LowerAge=37:UpperAge=39
+early 40s:LowerAge=40:UpperAge=43
+mid 40s:LowerAge=44:UpperAge=46
+late 40s:LowerAge=47:UpperAge=49
+early 50s:LowerAge=50:UpperAge=53
+mid 50s:LowerAge=54:UpperAge=56
+late 50s:LowerAge=57:UpperAge=59
+early 60s:LowerAge=60:UpperAge=63
+mid 60s:LowerAge=64:UpperAge=66
+late 60s:LowerAge=67:UpperAge=69
+early 70s:LowerAge=70:UpperAge=73
+mid 70s:LowerAge=74:UpperAge=76
+late 70s:LowerAge=77:UpperAge=79
+early 80s:LowerAge=80:UpperAge=83
+mid 80s:LowerAge=84:UpperAge=86
+late 80s:LowerAge=87:UpperAge=89
+early 90s:LowerAge=90:UpperAge=93
+mid 90s:LowerAge=94:UpperAge=96
+late 90s:LowerAge=97:UpperAge=99

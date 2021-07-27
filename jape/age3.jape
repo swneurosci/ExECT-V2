@@ -1,0 +1,19 @@
+Phase: Age
+Input: age Numeric YearToMonths timePeriod Lookup2 Person Split timeElapsed Range Sentence YearToMonths Token age2
+Options: control=appelt
+//Token is her to exclude picking up PostCode and other word-number combinations//
+
+
+
+
+Rule: Age5
+Priority: 80
+
+(   
+	{timeElapsed}//Since or During
+	{Person}// His/her
+	({age2}):match// early 30s, late twenties/ 60th birthday // created by age2.jape
+):match1
+-->
+:match.Age = {rule =Age5, AgeUnit = "Year",
+AgeLower =:match.age2.LowerAge, AgeUpper =:match.age2.UpperAge}

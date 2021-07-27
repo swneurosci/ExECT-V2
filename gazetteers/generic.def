@@ -33,6 +33,7 @@ Ordinals1.lst:Numerals:Ordinals::Lookup2
 SeizureFrequency.lst:::CHECK:SeizFreq
 SeizureOnset.lst:::CHECK:SeizOnset
 age.lst:age:age::age
+age2.lst:age:age::age2
 PointInTime.lst:time:since::PointInTime
 personAge.lst:person:time::Lookup2
 change.lst:frequency:change::Lookup2
