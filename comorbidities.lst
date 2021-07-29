@@ -1269,3 +1269,4 @@ dissociative convulsion	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=
 dissociative seizures	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
 pseudoseizures	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
 psychogenic non-epileptic seizure	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
+non epileptic seizure disorder	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	STY=Disease or Syndrome
