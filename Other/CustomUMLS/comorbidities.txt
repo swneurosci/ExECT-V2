@@ -108,6 +108,7 @@ C3495874	non-epileptic attack
 C3495874	non-epileptic attacks
 C1142430	psychogenic seizure
 C1142430	psychogenic seizures
+C1142430	non-epileptic psychogenic seizure
 C0344690	abnormal connection of hepatic vein to atrium
 C0344661	absent bridging vein
 C0009995	accessory atrium
@@ -1196,3 +1197,8 @@ C0004936	psychiatric illness
 C0036341	schizophrenia
 C0013146	drug abuse
 C0751955	infarct
+C0349245	dissociative convulsions
+C0349245	dissociative seizure
+C0349245	dissociative seizures
+C0349245	pseudoseizures
+C1142430	psychogenic non-epileptic seizure
