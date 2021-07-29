@@ -102,13 +102,13 @@ alcohol withdrawal seizures	CUI=C0586323	PREF=seizures, alcohol withdrawal	TUI=T
 alcohol withdrawal induced seizures	CUI=C0586323	PREF=seizures, alcohol withdrawal-induced	TUI=T048	STY=Mental or Behavioral Dysfunction
 alcohol-related seizures	CUI=C0586323	PREF=seizures, alcohol-related	TUI=T048	STY=Mental or Behavioral Dysfunction
 alcoholic seizures	CUI=C0586323	PREF=seizures, alcoholic	TUI=T048	STY=Mental or Behavioral Dysfunction
-non-epileptic seizure	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
-non-epileptic seizures	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
-non-epileptic attack	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
-non-epileptic attacks	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
-non epileptic attacks	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
-non epileptic attack	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
-non-epileptic psychogenic seizures	CUI=C3495874	PREF=non-epileptic seizure	TUI=T047	STY=Disease or Syndrome
+non-epileptic seizure	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	STY=Disease or Syndrome
+non-epileptic seizures	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	STY=Disease or Syndrome
+non-epileptic attack	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	STY=Disease or Syndrome
+non-epileptic attacks	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	STY=Disease or Syndrome
+non epileptic attacks	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	STY=Disease or Syndrome
+non epileptic attack	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	STY=Disease or Syndrome
+non-epileptic psychogenic seizures	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
 psychogenic seizure	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
 psychogenic seizures	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
 abnormal connection of hepatic vein to atrium	CUI=C0344690	PREF=abnormal connection of hepatic vein to atrium	TUI=T019	STY=Congenital Abnormality
@@ -1263,3 +1263,9 @@ migrainous	CUI=C0149931	PREF=migraine disoreders	TUI=T047	STY=Disease or Syndrom
 anterior temporal lobectomy	CUI=C1136214	PREF=Anterior Temporal Lobectomy	TUI=T061	STY=Therapeutic or Preventive Procedure
 temporal lobe resection	CUI=C1136214	PREF=Anterior Temporal Lobectomy	TUI=T061	STY=Therapeutic or Preventive Procedure
 astrocytoma treated with surgery	CUI=C1096492	PREF=Astrocytoma surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
+dissociative convulsions	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction	
+dissociative seizure	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
+dissociative convulsion	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
+dissociative seizures	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
+pseudoseizures	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
+psychogenic non-epileptic seizure	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
