@@ -1202,3 +1202,4 @@ C0349245	dissociative seizure
 C0349245	dissociative seizures
 C0349245	pseudoseizures
 C1142430	psychogenic non-epileptic seizure
+C3495874	non epileptic seizure disorder

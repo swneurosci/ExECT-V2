@@ -1353,7 +1353,7 @@ C3495874	non-epileptic attack
 C3495874	non-epileptic attacks
 C3495874	non epileptic attacks
 C3495874	non epileptic attack
-C3495874	non-epileptic psychogenic seizures
+C1142430	non-epileptic psychogenic seizures
 C1142430	psychogenic seizure
 C1142430	psychogenic seizures
 C0344690	abnormal connection of hepatic vein to atrium
@@ -3517,3 +3517,9 @@ C0436481	normal MRI
 C3515741	CT unknown
 C0013819	EEG unknown
 C0412675	MRI unknown
+C0349245	dissociative convulsions
+C0349245	dissociative seizure
+C0349245	dissociative seizures
+C0349245	pseudoseizures
+C1142430	psychogenic non-epileptic seizure
+C3495874	non epileptic seizure disorder
