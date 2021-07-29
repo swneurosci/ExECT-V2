@@ -1,0 +1,20 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: TheseLookups
+Input: Lookup These Lookup3 Split
+Options: control=appelt
+
+//Person is here to stop his/her Lookup3 being negated
+// no non-epileptic seizures - would deleting the contains "non" mean that all the rules would work fine 
+// and this wont be needed
+// for now rule is fine and should work well
+// Epi_Let4 good test + 40
+Rule: TheseLookups
+(
+    ({Lookup}|{Lookup3}) 
+    ({Split})?
+    ({These}):umls
+):match
+-->
+:umls.TheseLookups = {rule = TheseLookups, CUI = :match.Lookup.CUI, CUI = :match.Lookup3.CUI,
+PREF = :match.Lookup.PREF, PREF = :match.Lookup3.PREF, String = :umls.Lookup@string, String = :umls.Lookup3@string}

@@ -1,5 +1,5 @@
 Phase: DiagnosisB
-Input: DiagnosisA DiagBFiltered Split Lookup Lookup3
+Input: DiagnosisA DiagBFiltered Split Lookup Lookup3 Lookup2
 
 
 // These rules add DiagnosisA when an attribute with another level of certainty follows the diagnosis of epilepsy
@@ -12,19 +12,23 @@ Priority: 100
 
 (  
     ({DiagBFiltered}):DiagB
+    ({Lookup2.minorType == probability})[0,1]:cert
     ({DiagnosisA}):DiagA 
 ):match  
  -->
 :DiagB.DiagnosisB = {rule = HDiagnosisB1, PREF = :DiagB.DiagBFiltered.PREF, CUI = :DiagB.DiagBFiltered.CUI, 
-Negation = :DiagA.DiagnosisA.Negation, Certainty = :DiagA.DiagnosisA.Certainty, DiagCategory = :DiagA.DiagnosisA.DiagCategory}
+Negation = :DiagA.DiagnosisA.Negation, Certainty = :DiagA.DiagnosisA.Certainty,
+Certainty = :cert.Lookup2.Level, DiagCategory = :DiagA.DiagnosisA.DiagCategory}
 
 Rule: HDiagnosisB2
 Priority: 100
 
 (  
-    ({DiagnosisA}):DiagA 
+    ({DiagnosisA}):DiagA
+    ({Lookup2.minorType == probability})[0,1]:cert
     ({DiagBFiltered}):DiagB
 ):match  
  -->
 :DiagB.DiagnosisB = {rule = HDiagnosisB2, PREF = :DiagB.DiagBFiltered.PREF, CUI = :DiagB.DiagBFiltered.CUI, 
-Negation = :DiagA.DiagnosisA.Negation, Certainty = :DiagA.DiagnosisA.Certainty, DiagCategory = :DiagA.DiagnosisA.DiagCategory}
+Negation = :DiagA.DiagnosisA.Negation, Certainty = :DiagA.DiagnosisA.Certainty,
+Certainty = :cert.Lookup2.Level, DiagCategory = :DiagA.DiagnosisA.DiagCategory}

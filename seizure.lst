@@ -422,3 +422,4 @@ Generalized tonic chronic seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=
 Generalized tonic chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
 ‘grand mal' seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
 ‘grand mal' seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+seizure freedom	CUI=C1299590	PREF=seizure free	TUI=T033	STY=Finding

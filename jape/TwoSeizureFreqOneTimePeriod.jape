@@ -1,5 +1,5 @@
 Phase: SeizureFrequency
-Input: NumberRange timePeriods Lookup3 Sentence Split SeizureFrequency11 Token
+Input: NumberRange timePeriods Lookup3 Sentence Split SeizureFrequency11 Token SeizFrequency1
 Options: control=appelt
 
 // this rule was for two complex partial seizures and one focal seizure in the last 4 months
@@ -17,7 +17,7 @@ Rule: TwoSeizInOneTimePeriod
 NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, TimePeriod = :match.SeizureFrequency11.TimePeriod,
 DayDate = :match.SeizureFrequency11.DayDate, MonthDate = :match.SeizureFrequency11.MonthDate, YearDate = :match.SeizureFrequency11.YearDate,
 PointInTime = :match.SeizureFrequency11.PointInTime, TimeSince_or_TimeOfEvent = :match.SeizureFrequency11.TimeSince_or_TimeOfEvent,
-QuantityTotal = :match.NumberRange.value}
+NumberOfSeizures = :match.NumberRange.value, UpperNumberOfSeizures = :match.NumberRange.N2, LowerNumberOfSeizures = :match.NumberRange.N1}
 
 // Since last seen had 5 simple partial and 6 COMPLEX PARTIAL SEIZURES
 // Not added age here
@@ -27,11 +27,12 @@ Rule: TwoSeizInOneTimePeriod
     (({Token.string == "and"})
     ({NumberRange})
     ({Lookup3.majorType == "umls", Lookup3.minorType != "OtherDisease"})):match1
+    ({!SeizFrequency1}|{!timePeriods})
 ):match
 -->
 :match1.SeizureFrequency11 = { rule = "TwoSeizInOneTimePeriod", CUI = :match.Lookup3.CUI,
 NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, TimePeriod = :match.SeizureFrequency11.TimePeriod,
 DayDate = :match.SeizureFrequency11.DayDate, MonthDate = :match.SeizureFrequency11.MonthDate, YearDate = :match.SeizureFrequency11.YearDate,
 PointInTime = :match.SeizureFrequency11.PointInTime, TimeSince_or_TimeOfEvent = :match.SeizureFrequency11.TimeSince_or_TimeOfEvent,
-NumberOfSeizures = :match.NumberRange.value}
+NumberOfSeizures = :match.NumberRange.value, UpperNumberOfSeizures = :match.NumberRange.N2, LowerNumberOfSeizures = :match.NumberRange.N1}
 

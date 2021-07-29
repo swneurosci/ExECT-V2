@@ -29,6 +29,7 @@ EpilepsyJAVA
 DrugPointInTime
 YearToMonths
 Age
+age3
 RemoveSeizFreeBlock
 RemoveTimePeriodFromAge
 TimeSince
@@ -40,3 +41,4 @@ DeleteLookupAfterTigDeleted
 AToNumberRange
 timeElapsedRemove
 PartialDateYear
+TheseLookups
