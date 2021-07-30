@@ -3078,7 +3078,6 @@ C0494475	tonic clonic seizures
 C0494475	tonic/clonic convulsions
 C0494475	tonic-clonic convulsion
 C0544645	focal sensory seizures
-C0544645	sensory seizures
 C0546878	salaam spasm
 C0553754	fit (in known epileptic) nos
 C0585108	recurrent febrile convulsion
@@ -3517,6 +3516,10 @@ C0436481	normal MRI
 C3515741	CT unknown
 C0013819	EEG unknown
 C0412675	MRI unknown
+C3203523	cluster of seizures
+C3203523	seizure cluster
+C0751494	convulsive seizure
+C0751494	convulsive seizures
 C0349245	dissociative convulsions
 C0349245	dissociative seizure
 C0349245	dissociative seizures
