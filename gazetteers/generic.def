@@ -48,3 +48,4 @@ Pronouns.lst::grammer::Pronouns
 SeizureSlang2.lst:umls:generic:MOVEundefinedSeizure:Seizures
 slangSeizures.lst::::SlangSeizures
 timeElapsedblock.lst::::timeElapsedBlock
+birth.lst:birth:prematurebirth::Lookup2
