@@ -1274,7 +1274,7 @@ non-epileptic dissociative seizures	CUI=C0349245	PREF=Dissociative convulsions	T
 non epileptic dissociative seizures	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
 MCA infarct	CUI=C0740392 PREF=Infarction, Middle Cerebral Artery	TUI=T047	STY=Disease or Syndrome
 MCA infarction	CUI=C0740392 PREF=Infarction, Middle Cerebral Artery	TUI=T047	STY=Disease or Syndrome
-Middle Cerebral Artery infarction	CUI=C0740392 PREF=Infarction, Middle Cerebral Artery	TUI=T047	STY=Disease or Syndrome
+Middle Cerebral Artery infarction	CUI=C074039F2 PREF=Infarction, Middle Cerebral Artery	TUI=T047	STY=Disease or Syndrome
 post-traumatic damage to right frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
 post-traumatic damage to left frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
 post-traumatic damage to the right frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
@@ -1285,3 +1285,36 @@ memory problems	CUI=C0233794	PREF=Memory impairment	TUI=T048	STY=Mental or Behav
 memory impairment	CUI=C0233794	PREF=Memory impairment	TUI=T048	STY=Mental or Behavioral Dysfunction
 impaired memory	CUI=C0233794	PREF=Memory impairment	TUI=T048	STY=Mental or Behavioral Dysfunction
 impaired lapses	CUI=C0233794	PREF=Memory impairment	TUI=T048	STY=Mental or Behavioral Dysfunction
+essential myoclonus	CUI=C0270737	PREF=essential myoclonus	TUI=T047	STY=Disease or Syndrome
+familial essential myoclonus	CUI=C0270737	PREF=Familial essential myoclonus	TUI=T047	STY=Disease or Syndrome
+cherry red spot myoclonus syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+cherry red spot-myoclonus syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+cherry-red spot myoclonus synd	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+deficiencies, glycoprotein neuraminidase	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+deficiency, glycoprotein neuraminidase	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+glycoprotein neuraminidase deficiency	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+mucolipidosis type 1	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+myoclonus cherry red spot syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+myoclonus-cherry red spot syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+neuraminidase deficiency	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+normosomatic sialidosis	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+sialidase deficiency	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+sialidosis	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+sialidosis, type 1	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+type I mucolipidoses	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+type i mucolipidosis	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+other specified myoclonus	CUI=C0393618	PREF=Other specified myoclonus	TUI=T047	STY=Disease or Syndrome
+symptomatic myoclonus	CUI=C0393619	PREF=Symptomatic myoclonus	TUI=T047	STY=Disease or Syndrome
+drug-induced myoclonus	CUI=C0393622	PREF=Drug-induced myoclonus	TUI=T046	STY=Pathologic Function
+segmental cord myoclonus	CUI=C0393623	PREF=Segmental cord myoclonus	TUI=T047	STY=Disease or Syndrome
+palatal-tympanic myoclonus	CUI=C0393624	PREF=Palatal-tympanic myoclonus	TUI=T047	STY=Disease or Syndrome
+hyoid myoclonus	CUI=C0393625	PREF=hyoid myoclonus	TUI=T047	STY=Disease or Syndrome
+dancing eyes dancing feet syndrome	CUI=C0393626	PREF=Opsoclonus-Myoclonus Syndrome	TUI=T047	STY=Disease or Syndrome
+dancing eyes, dancing feet syndrome	CUI=C0393626	PREF=Opsoclonus-Myoclonus Syndrome	TUI=T047	STY=Disease or Syndrome
+dancing eyes-dancing feet syndrome	CUI=C0393626	PREF=Opsoclonus-Myoclonus Syndrome	TUI=T047	STY=Disease or Syndrome
+opsoclonus myoclonus ataxia	CUI=C0393626	PREF=Opsoclonus-Myoclonus Syndrome	TUI=T047	STY=Disease or Syndrome
+opsoclonus myoclonus syndrome	CUI=C0393626	PREF=Opsoclonus-Myoclonus Syndrome	TUI=T047	STY=Disease or Syndrome
+essential myoclonus	CUI=C0270737	PREF=essential myoclonus	TUI=T047	STY=Disease or Syndrome
+familial essential myoclonus	CUI=C0270737	PREF=Familial essential myoclonus	TUI=T047	STY=Disease or Syndrome
+type I mucolipidoses	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+type i mucolipidosis	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
