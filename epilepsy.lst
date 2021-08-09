@@ -244,10 +244,6 @@ normosomatic sialidosis	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Dise
 sialidase deficiency	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
 sialidosis	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
 sialidosis, type 1	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-type I mucolipidoses	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-type i mucolipidosis	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-essential myoclonus	CUI=C0270737	PREF=essential myoclonus	TUI=T047	STY=Disease or Syndrome
-familial essential myoclonus	CUI=C0270737	PREF=Familial essential myoclonus	TUI=T047	STY=Disease or Syndrome
 cursive (running) epilepsy	CUI=C0270819	PREF=Reflex Epilepsy, Cursive (Running)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 cursive reflex epilepsy - running	CUI=C0270819	PREF=Reflex Epilepsy, Cursive (Running)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 cursive seizure	CUI=C0270819	PREF=Reflex Epilepsy, Cursive (Running)	TUI=T047	STY=Disease or Syndrome
@@ -420,17 +416,6 @@ rolandic epilepsy	CUI=C0376532	PREF=Epilepsy, Rolandic	TUI=T047	STY=Disease or S
 focal encephalitis	CUI=C0393482	PREF=Focal encephalitis	TUI=T047	STY=Disease or Syndrome
 rasmussen syndrome	CUI=C0393484	PREF=Rasmussen Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Rasmussen encephalitis	CUI=C0393484	PREF=Rasmussen Syndrome	TUI=T047	STY=Disease or Syndrome
-other specified myoclonus	CUI=C0393618	PREF=Other specified myoclonus	TUI=T047	STY=Disease or Syndrome
-symptomatic myoclonus	CUI=C0393619	PREF=Symptomatic myoclonus	TUI=T047	STY=Disease or Syndrome
-drug-induced myoclonus	CUI=C0393622	PREF=Drug-induced myoclonus	TUI=T046	STY=Pathologic Function
-segmental cord myoclonus	CUI=C0393623	PREF=Segmental cord myoclonus	TUI=T047	STY=Disease or Syndrome
-palatal-tympanic myoclonus	CUI=C0393624	PREF=Palatal-tympanic myoclonus	TUI=T047	STY=Disease or Syndrome
-hyoid myoclonus	CUI=C0393625	PREF=hyoid myoclonus	TUI=T047	STY=Disease or Syndrome
-dancing eyes dancing feet syndrome	CUI=C0393626	PREF=Opsoclonus-Myoclonus Syndrome	TUI=T047	STY=Disease or Syndrome
-dancing eyes, dancing feet syndrome	CUI=C0393626	PREF=Opsoclonus-Myoclonus Syndrome	TUI=T047	STY=Disease or Syndrome
-dancing eyes-dancing feet syndrome	CUI=C0393626	PREF=Opsoclonus-Myoclonus Syndrome	TUI=T047	STY=Disease or Syndrome
-opsoclonus myoclonus ataxia	CUI=C0393626	PREF=Opsoclonus-Myoclonus Syndrome	TUI=T047	STY=Disease or Syndrome
-opsoclonus myoclonus syndrome	CUI=C0393626	PREF=Opsoclonus-Myoclonus Syndrome	TUI=T047	STY=Disease or Syndrome
 Benign atypical partial epilepsy in childhood	CUI=C0393673	PREF=Benign atypical partial epilepsy in childhood	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 BCEOP - benign childhood epilepsy with occipital paroxysms	CUI=C0393675	PREF=Childhood Benign Occipital Epilepsy	TUI=T047	STY=Disease or Syndrome
 benign occipital epilepsy of childhood	CUI=C0393675	PREF=Childhood Benign Occipital Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
