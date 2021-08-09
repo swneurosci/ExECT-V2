@@ -298,7 +298,7 @@ cerebral damage	CUI=C0270611	PREF=cerebral damage	TUI=T037	STY=Injury or Poisoni
 cerebral haemorrhage nos	CUI=C2937358	PREF=cerebral haemorrhage nos	TUI=T046	STY=Pathologic Function
 cerebral hemorrhage nos	CUI=C2937358	PREF=cerebral hemorrhage nos	TUI=T046	STY=Pathologic Function
 cerebral infarction nos	CUI=C0007785	PREF=cerebral infarction nos	TUI=T047	STY=Disease or Syndrome
-cerebral infarction, nos	CUI=C0007785	PREF=cerebral infarction, nos	TUI=T047	STY=Disease or Syndrome
+cerebral infarct	CUI=C0007785	PREF=cerebral infarction, nos	TUI=T047	STY=Disease or Syndrome
 cerebral infarction, unspecified	CUI=C0007785	PREF=cerebral infarction, unspecified	TUI=T047	STY=Disease or Syndrome
 cerebral infarctions	CUI=C0007785	PREF=cerebral infarctions	TUI=T047	STY=Disease or Syndrome
 cerebral infarcts	CUI=C0007785	PREF=cerebral infarcts	TUI=T047	STY=Disease or Syndrome
@@ -1270,3 +1270,18 @@ dissociative seizures	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Me
 pseudoseizures	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
 psychogenic non-epileptic seizure	CUI=C1142430	PREF=psychogenic seizure	TUI=T048	STY=Mental or Behavioral Dysfunction
 non epileptic seizure disorder	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	STY=Disease or Syndrome
+non-epileptic dissociative seizures	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
+non epileptic dissociative seizures	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
+MCA infarct	CUI=C0740392 PREF=Infarction, Middle Cerebral Artery	TUI=T047	STY=Disease or Syndrome
+MCA infarction	CUI=C0740392 PREF=Infarction, Middle Cerebral Artery	TUI=T047	STY=Disease or Syndrome
+Middle Cerebral Artery infarction	CUI=C0740392 PREF=Infarction, Middle Cerebral Artery	TUI=T047	STY=Disease or Syndrome
+post-traumatic damage to right frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
+post-traumatic damage to left frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
+post-traumatic damage to the right frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
+post-traumatic damage to the left frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
+post traumatic damage to right frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
+post traumatic damage to left frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
+memory problems	CUI=C0233794	PREF=Memory impairment	TUI=T048	STY=Mental or Behavioral Dysfunction
+memory impairment	CUI=C0233794	PREF=Memory impairment	TUI=T048	STY=Mental or Behavioral Dysfunction
+impaired memory	CUI=C0233794	PREF=Memory impairment	TUI=T048	STY=Mental or Behavioral Dysfunction
+impaired lapses	CUI=C0233794	PREF=Memory impairment	TUI=T048	STY=Mental or Behavioral Dysfunction
