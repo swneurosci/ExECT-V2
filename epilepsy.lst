@@ -941,6 +941,8 @@ Generalized tonic chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI
 ‘grand mal' seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
 ‘grand mal' seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
 epilepsy with generalised tonic chronic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+epilepsy with generalised tonic clonic seizures from sleep	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+epilepsy with generalised tonic clonic seizure from sleep	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 post cerebrovascular accident epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yespost-cerebrovascular accident epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 post-stroke epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 post stroke epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
