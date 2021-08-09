@@ -266,7 +266,7 @@ Priority: 99
     {timeElapsed.time == Since}
     {PartialDate}
     ({Frequency.Temporality != "hypothetical"})
-    ({timeElapsed})
+    ({timeElapsed})[0,1]
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
     Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
 ):match 
