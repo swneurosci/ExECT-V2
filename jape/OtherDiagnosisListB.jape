@@ -39,7 +39,9 @@ Priority: 100
     ({DiagnosisTriggers.type == diagnosis})
     {listPoint}
     {listPoint}
+    ({listPoint})?
     {OtherDiag}
+    ({listPoint})?
     ({OtherDiag}):item
 	
  ):match  

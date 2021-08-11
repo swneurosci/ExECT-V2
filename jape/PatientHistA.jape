@@ -13,7 +13,7 @@ Priority: 100
 
 (   
 	({Person})?
-  	({Lookup2.language == experience}|{Lookup2.majorType == diagnosis} )
+  	({Lookup2.language == experience}|{Lookup2.majorType == diagnosis})
 	({Person})
 	({OtherDiag}):item
     
@@ -331,10 +331,12 @@ Rule: PtHistoryA8
 Priority: 99
 
 (   
+	({!listPoint})
+	({!OtherDiag})
 	{TimeSince}
 	{Person}
 	({Lookup2})?
-    {Lookup2.majorType == historic , Lookup2.minorType == symptoms , Lookup2.language == onset}
+    ({Lookup2.majorType == historic , Lookup2.minorType == symptoms , Lookup2.language == onset}|{Lookup2.language == experience, Lookup2.type == experiencing})
 	({OtherDiag}):item
  ):match  
  -->
@@ -505,6 +507,7 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, 
 AgeUnit = :match.OtherDiag.AgeUnit,
+Age =:match.OtherDiag.Age,
 AgeLower = :match.OtherDiag.AgeLower,
 AgeUpper =:match.OtherDiag.AgeUpper}
 
@@ -527,6 +530,7 @@ Certainty = :item.OtherDiag.Certainty,
 TimePeriod = :item.OtherDiag.TimePeriod,
 NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods,
 AgeUnit = :match.OtherDiag.AgeUnit,
+Age =:match.OtherDiag.Age,
 AgeLower = :match.OtherDiag.AgeLower,
 AgeUpper =:match.OtherDiag.AgeUpper}
 
@@ -702,7 +706,7 @@ Priority: 98
 	({!Person})
 	({Person})
 	({Lookup2})?
-	({Age})?
+	({Age})
 	({Lookup2.language == experience, Lookup2.type != "diagnosed"}|{Lookup2.minorType == causality})
 	({Lookup2.type != previous})?
 	({OtherDiag}):item
