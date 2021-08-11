@@ -3541,3 +3541,95 @@ C0085084	MND
 C0036429	sclerosis
 C0338614	episode of psychosis
 C3665347	visually impaired
+C3697594	post cerebrovascular accident epilepsy	
+C2237348	partial adversive seizure
+C4749367	mesial temporal lobe epilepsy with hippocampal sclerosis
+C2080645	photosensitive seizure
+C0011847	diabetes
+C1263846	attention deficit hyperactivity disorder
+C1263846	adhd
+C1263846	attention deficit disorder
+C0004936	mental disorders
+C0004936	mental illness
+C0004936	mental health disorder
+C0004936	psychiatric illness
+C0036341	schizophrenia
+C0013146	drug abuse
+C0751955	infarct
+C0349245	dissociative convulsions
+C0349245	dissociative seizure
+C0349245	dissociative seizures
+C0349245	pseudoseizures
+C1142430	psychogenic non-epileptic seizure
+C3495874	non epileptic seizure disorder
+C0393626	dancing eyes dancing feet syndrome
+C0393626	dancing eyes-dancing feet syndrome
+C0393626	opsoclonus myoclonus ataxia
+C0393626	opsoclonus myoclonus syndrome
+C0268226	cherry red spot myoclonus syndrome
+C0268226	deficiency, glycoprotein neuraminidase
+C0268226	glycoprotein neuraminidase deficiency
+C0268226	mucolipidosis type 1
+C0268226	myoclonus-cherry red spot syndrome
+C0268226	neuraminidase deficiency
+C0268226	normosomatic sialidosis
+C0268226	sialidase deficiency
+C0268226	sialidosis
+C0268226	sialidosis, type 1
+C0268226	type I mucolipidoses
+C0268226	type i mucolipidosis
+C0270737	essential myoclonus
+C0270737	familial essential myoclonus
+C0740392	Middle Cerebral Artery infarction
+C2832052	post-traumatic damage to the left frontal lobe		
+C2832052	post-traumatic damage to the right frontal lobe
+C2832052	focal traumatic brain injury	
+C0233794	memory impairment
+C0270737	essential myoclonus	
+C0270737	familial essential myoclonus
+C0268226	cherry red spot myoclonus syndrome	
+C0268226	Type I Mucolipidosis
+C0268226	neuraminidase deficiency		
+C0268226	sialidase deficiency	
+C0393618	other specified myoclonus
+C0393619	symptomatic myoclonus	
+C0393622	drug-induced myoclonus		
+C0393623	segmental cord myoclonus		
+C0393624	palatal-tympanic myoclonus	
+C0393625	hyoid myoclonus
+C0393626	dancing eyes-dancing feet syndrome	
+C0393626	opsoclonus myoclonus syndrome	
+C0270737	essential myoclonus
+C2711743	febrile myoclonus
+C2711743	myoclonus associated with fever
+C0585108	recurrent febrile fit
+C0020538	hypertension
+C0020538	hypertensive disease
+C0007789	cerebral palsy
+C0007789	CP
+C0037315	sleep apnoea
+C0349245	NEAD
+C0344925	Perimembranous ventricular septal defect
+C0007787	transient cerebral ischemia	
+C0007787	transient cerebral attack	
+C0007787	TIA
+C0006012	borderline personality disorder
+C0031212	personality disorder
+C0004930	behavioral disorder
+C1561643	CKD	
+C1561643	chronic kidney deasese
+C0032019	pituitary neoplasm	
+C0032019	pituitary gland tumour 	
+C0038454	CVA
+C0973461 	dysphasia
+C0003635	dyspraxia	
+C0003635	apraxias
+C0876926	traumatic brain injury	
+C2748861	cortical malformation	
+C0151744	ischaemic heart disease	
+C0151744	myocardial ischaemia	
+C0151744	IHD
+C0266464	Polymicrogyria
+C0004134	ataxia	
+C1384666	hearing impairment	
+C1384666	hearing loss	 

@@ -407,3 +407,7 @@ C4316903	typical absence seizures
 C4316903	typical absences
 C0751495	frontal lobe onset seizures
 C0751495	frontal lobe onset seizure
+C0877017	focal onset generalised tonic-clonic seizures
+C0877017	focal onset tonic-clonic seizures
+C2237348	partial adversive seizure
+C2080645	photosensitive seizure
