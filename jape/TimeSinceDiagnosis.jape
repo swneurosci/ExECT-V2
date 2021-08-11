@@ -1,5 +1,5 @@
 Phase: TimeSinceDiagnosis
-Input: Lookup Person Sentence Numeric timePeriod timeElapsed Lookup2 Split DiagnosisTriggers
+Input: Lookup Person Sentence Numeric TimeSince timePeriod timeElapsed Lookup2 Split DiagnosisTriggers
 
 Options: control=appelt
 
@@ -48,4 +48,22 @@ TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value}
 
 
+Rule: TimeSinceDiagnosis3
+Priority: 99
+
+(   
+    {Person}
+	({Lookup2.majorType == historic})
+    {DiagnosisTriggers.majorType == diagnosis}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
+	{TimeSince}
+	
+ ):match  
+ -->
+:item.WhenDiagnosed = {rule = TimeSinceDiagnosis , OnsetType = "time_since_diagnosis",
+PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation,
+TimePeriod = :match.TimeSince.TimePeriod,
+NumberOfTimePeriods =:match.TimeSince.NumberOfTimePeriods}
 

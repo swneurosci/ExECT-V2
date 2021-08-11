@@ -76,20 +76,6 @@ Priority: 100
 :item.BirthHistory = {rule = Prem4, PREF = "late preterm", CUI = C3829315, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "34 to 37 weeks"}
 
-Rule: Prem5
-Priority: 90
-
-(   
-	{Person}
-    ({Lookup2.majorType == historic ,Lookup2.type == birth }):item
-	{Numeric.value <37} 
-    {timePeriod.time-unit == Week}
-    
-    
- ):match  
- -->
-:item.BirthHistory = {rule = Prem5, PREF = "preterm birth", CUI = C0151526, 
-STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "under 37 weeks"}
 
 Rule: Term1
 Priority: 100
@@ -123,6 +109,22 @@ Priority: 100
  -->
 :item.BirthHistory = {rule = Term2, PREF = "Term_Birth", CUI = C0233324, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient}
+
+//rules  Prem 5 to 8 look at the numbers of weeks short of a term birth
+Rule: Prem5
+Priority: 90
+
+(   
+	{Person}
+    ({Lookup2.majorType == historic ,Lookup2.type == birth }):item
+	{Numeric.value <37} 
+    {timePeriod.time-unit == Week}
+    
+    
+ ):match  
+ -->
+:item.BirthHistory = {rule = Prem5, PREF = "preterm birth", CUI = C0151526, 
+STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "under 37 weeks"}
 
 Rule: Prem6
 Priority: 100
