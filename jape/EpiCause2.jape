@@ -1,10 +1,10 @@
 Phase: EpiCause2
-Input: Lookup Lookup3 Lookup2 Split
+Input: Lookup Lookup3 Lookup2 Split listPoint
 
 
   /*These rules are set to select causes and suspected causes of epilepsy, when they are shown 
    following an epilepsu diagnosis  - hence they have to follow Epilepsy diagnosis in the pipline in order to work */
-
+//listPoint should stop piching up top letter lists
   
 
 Options: control=appelt
