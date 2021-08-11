@@ -1,6 +1,6 @@
 Phase: Onset
-Input: Lookup Person Lookup2 Sentence Age Pronouns
-
+Input: Lookup Person Lookup2 Sentence Age Pronouns DiagnosisTriggers Split
+//DiagnosisTriggers as a block
 Options: control=appelt
 
  Rule: onsetAgeB2  //2nd type of seizure mentioned after the  age of onset was associeted with another seizure in OnsetAge//
@@ -20,7 +20,7 @@ Priority: 100
  -->
 :item.Onset = {rule = onsetAgeB2, OnsetType = "age_episodes_started", 
 CUI = :item.Lookup.CUI,
-// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 // Certainty = :item.Lookup.Certainty,
 Age = :match.Age.Age,
@@ -44,7 +44,7 @@ Priority: 99
  -->
 :item.Onset = {rule = onsetAgeB4, OnsetType = "age_episodes_started", 
 CUI = :item.Lookup.CUI,
-// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 // Certainty = :item.Lookup.Certainty,
 Age = :match.Age.Age,
@@ -70,7 +70,7 @@ Priority: 98
  -->
 :item.Onset= {rule = onsetAgeB5, OnsetType = "age_episodes_started", 
 CUI = :item.Lookup.CUI,
-// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 // Certainty = :item.Lookup.Certainty,
 Age = :match.Age.Age,

@@ -1,5 +1,5 @@
 Phase: TimeSinceOnsetB
-Input: Lookup3 Lookup Person  Numeric TimeSince timePeriod timeElapsed Lookup2 Split age Frequency Conj
+Input: Lookup3 Lookup Person  Numeric TimeSince timePeriod timeElapsed Lookup2 Split age Frequency Conj OnsetBlock
 //frequency is here to stop the phrases relating to frequency rather than an onset being annotated//
 
 //some of these rules go over two sentences, linking generic episodes with epilepsy onset*/
@@ -47,7 +47,7 @@ Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
 
-Rule: TimeSinceOnsetB3
+/*Rule: TimeSinceOnsetB3
 Priority: 100
 
 (  
@@ -63,7 +63,7 @@ PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, TUI = :item.Lookup.TUI,
 STY = :item.Lookup.STY, Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 Certainty = :item.Lookup.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
-NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods}
+NumberOfTimePeriods = :match.TimeSince.NumberOfTimePeriods} */
 
 /* as in suffering with seizures for x years. At the onset she had only
 Partial seizures - so time since seizure onset goes to partial seizures */

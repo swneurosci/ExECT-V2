@@ -1,9 +1,9 @@
 Phase: OnsetAge
-Input: Lookup3 Person Lookup Lookup2 Sentence Age TimeSince Pronouns Frequency
+Input: Lookup3 Person Lookup Lookup2 Sentence Age TimeSince Pronouns Frequency Split DiagnosisTriggers
 Options: control=appelt
 
 /*TimeSince  and Pronouns are here to stop picking up phrases with TimeSince */
-
+/*DiagnosisTrigger acts as a block*/
 
 Rule: onsetAge1
 Priority: 99
@@ -11,7 +11,7 @@ Priority: 99
 (   
 	{Person}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
+	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.language == onset}
 	{Person.majorType == person}
 	({Lookup2.majorType == historic})
 	{Age}
@@ -35,7 +35,7 @@ Priority: 9
 	{Person}
 	({Lookup2})?
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient ,Lookup.minorType == Disease}):item
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.type != diagnosed}
+	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.language == onset, Lookup2.type != diagnosed}
 	{Age}
 	
 	
@@ -106,7 +106,7 @@ Priority: 99
 (   
 	{Person}
     {Lookup3.minorType == generic}
-	{Lookup2.language == onset, Lookup2.type != diagnosed }
+	{Lookup2.language == onset, Lookup2.type != diagnosed}
 	{Age}
 	({Lookup.majorType == umls ,Lookup.minorType == Disease, Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient}):item
 
@@ -192,7 +192,31 @@ AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
 AgeUpper =:match.Age.AgeUpper}
 
-/*at the age of  x she started having spec. seizures*/
+//he staretd having generic seizures at the age of and then had "proper" seizures at the age of
+Rule: onsetAge8b
+Priority: 99
+
+(   
+	{Person}
+	({Lookup2.language == onset})
+    {Lookup3.minorType == generic}
+	{Age}
+	{Lookup2.language == onset, Lookup2.type == began }
+	({Lookup.majorType == umls ,Lookup.minorType == Disease, Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient}
+	{Age}):item
+):match  
+ -->
+:item.Onset = {rule = onsetAge8b, OnsetType = "age_episodes_started", 
+CUI = :item.Lookup.CUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+/*STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer*/
+/* Certainty = :item.Lookup.Certainty*/
+Age = :item.Age.Age,
+AgeUnit = :item.Age.AgeUnit,
+AgeLower = :item.Age.AgeLower,
+AgeUpper = :item.Age.AgeUpper}
+
+
 Rule: onsetAge9
 Priority: 99
 
@@ -207,8 +231,8 @@ Priority: 99
 :item.Onset = {rule = onsetAge9, OnsetType = "age_episodes_started", 
 CUI = :item.Lookup.CUI,
 PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
-// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-// Certainty = :item.Lookup.Certainty,
+//STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty,
 Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
@@ -219,9 +243,11 @@ Rule: onsetAge10
 Priority: 99
 
 (   
-	{Lookup2.language == onset, Lookup2.type != diagnosed}
+	({Person})?
+	({Lookup2.language == onset, Lookup2.type != diagnosed}|{Lookup2.language == onset, Lookup2.type == began})
 	({Person})?
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
+	({Lookup2})?
 	({Lookup3})?
 	{Age}
 ):match   
@@ -230,13 +256,13 @@ Priority: 99
 CUI = :item.Lookup.CUI,
 PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-// Certainty = :item.Lookup.Certainty,
+Certainty = :item.Lookup.Certainty,
 Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
 AgeUpper =:match.Age.AgeUpper}
 
- /* ...add episodes age 13 evenntually diagnosed as focal seizures - linking 
+ /* ...add episodes age 13 eventually diagnosed as focal seizures - linking 
  seizures to odd episodes and the Age of onset*/
 Rule: onsetAge11
 Priority: 99
@@ -257,9 +283,10 @@ PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 // Certainty = :item.Lookup.Certainty,
 Certainty = :item.Lookup.Certainty,
+Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
-Age =:match.Age.Age}
-
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}
 //She has epilepsy since she was 10 years//
 Rule: onsetAge12
 Priority: 99
@@ -279,8 +306,10 @@ CUI = :item.Lookup.CUI,
 PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 // Certainty = :item.Lookup.Certainty,
+Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
-Age =:match.Age.Age}
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}
 
 Rule: onsetAge13 /*At around 15 months of age she had a GTCS...*  ? may pick up non-onset phrases */
 Priority: 98
@@ -302,3 +331,25 @@ Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
 AgeUpper =:match.Age.AgeUpper}
+
+Rule: onsetAge14 /*At around 15 months of age she had a GTCS...*  ? may pick up non-onset phrases */
+Priority: 98
+
+(  
+	
+	({Person})?
+	({Lookup2.type == historic})?
+	({Lookup.majorType == umls, Lookup.Negation == Affirmed,  Lookup.Experiencer == Patient, Lookup.minorType == Disease}):item
+	{Lookup2.language == onset, Lookup2.type == began}
+	{Age}
+ ):match  
+ -->
+:item.Onset= {rule = onsetAge14, OnsetType = "age_episodes_started", 
+CUI = :item.Lookup.CUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper = :match.Age.AgeUpper}
