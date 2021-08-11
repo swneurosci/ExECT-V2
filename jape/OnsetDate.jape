@@ -1,7 +1,7 @@
 Phase: OnsetDate
-Input: Lookup3 Person Lookup2 Sentence DateSince PointInTime Lookup Age DiagnosisTriggers
+Input: Lookup3 Person Lookup2 Sentence DateSince PointInTime Lookup Age DiagnosisTriggers Split Numeric OnsetBlock
 Options: control=appelt
-//Age is here to stop the rules picking up Age of onset//
+//Age is here to stop the rules picking up Age of onset, numeric should stop seizure frequency//
 //DiagnosisTriggers is to stop the rules from picking up diagnosis//
 
 Rule: OnsetDate1  /*She has been suffering from Epilepsy since 1988 */
@@ -31,7 +31,7 @@ Priority: 98
 
 (   
 	{Person}
-	({Lookup2.majorType == historic , Lookup2.language == onset, Lookup2.type != diagnosed })
+	({Lookup2.majorType == historic, Lookup2.language == onset, Lookup2.type != diagnosed })
 	({Person})?
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.minorType == Disease}):item
 	{DateSince}
@@ -70,7 +70,7 @@ Priority: 98
 (   
 	{Lookup2.majorType == historic}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.minorType == Disease}):item
-	{Lookup2.language == onset }
+	{Lookup2.language == onset}
 	{DateSince}
 	
 	
@@ -92,7 +92,7 @@ Priority: 98
 (   
 	({Person})
 	({Lookup2})
-	{Lookup2.majorType == historic, Lookup2.language == onset, Lookup2.type != diagnosed }
+	({Lookup2.majorType == historic, Lookup2.type == began, Lookup2.type != diagnosed }|{Lookup2.type == history})
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient }):item
 	({Lookup2.language == onset})?
 	{DateSince}
@@ -115,6 +115,7 @@ Rule: onsetDate6
 Priority: 100
 
 (   
+	{Split}
 	{Person}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient ,Lookup.minorType == Disease }):item
 	{Lookup2.language == onset}
@@ -125,7 +126,7 @@ Priority: 100
  -->
 :item.Onset = {rule = OnsetDate6, OnsetType = "date_of_onset", 
 CUI = :item.Lookup.CUI,
-// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 // Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
@@ -138,7 +139,7 @@ Priority: 98
 
 (   
 	{Person}
-	{Lookup2.majorType == historic , Lookup2.language == onset}
+	{Lookup2.majorType == historic, Lookup2.language == onset}
 	({Lookup.majorType == umls , Lookup.Experiencer == Patient , Lookup.Negation == Affirmed , Lookup.minorType == Disease }):item
 	{Person}
 	{PointInTime.minorType == since}
@@ -148,7 +149,7 @@ Priority: 98
  -->
 :item.Onset = {rule = OnsetDate8, OnsetType = "TimeFromPointInTime", 
 CUI = :item.Lookup.CUI,
-// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 // Certainty = :item.Lookup.Certainty,
 PointInTime =:match.PointInTime.Since,
@@ -160,7 +161,7 @@ Rule: OnsetDate9
 Priority: 98
 
 (   
-
+	{Split}
 	({Lookup2})?
 	{DateSince}
 	({Person})
@@ -172,7 +173,7 @@ Priority: 98
  -->
 :item.Onset = {rule = OnsetDate9, OnsetType = "date_of_onset", 
 CUI = :item.Lookup.CUI,
-// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 // Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
@@ -195,6 +196,29 @@ Priority: 100
  ):match  
  -->
 :item.Onset = {rule = OnsetDate10, PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, 
+CUI = :item.Lookup.CUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
+YearDate = :match.DateSince.YearDate,
+MonthDate =:match.DateSince.MonthDate,
+DayDate = :match.DateSince.DayDate}
+
+//here "first" the second Lookup2 triggers onset
+Rule: OnsetDate11
+Priority: 98
+
+(   
+	{Person}
+	({Lookup2.majorType == historic , Lookup2.type != diagnosed })
+	({Numeric})?
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.minorType == Disease}):item
+	({Lookup2.language == onset, Lookup2.type == began})
+	{DateSince}
+		
+ ):match  
+ -->
+:item.Onset = {rule = OnsetDate11, OnsetType = "date_of_onset", 
 CUI = :item.Lookup.CUI,
 // PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,

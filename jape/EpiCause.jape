@@ -18,6 +18,7 @@ Priority: 100
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
+    ({listPoint})?
     ({Lookup2})?
     {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
 	{Lookup2.minorType == causality}
@@ -29,25 +30,6 @@ Priority: 100
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
-
-Rule: Cause2
-Priority: 98
-
-(   
-	{DiagnosisTriggers.majorType == diagnosis}
-    ({Lookup2})?
-    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
-	{Lookup2.minorType == causality}
-    {Lookup3.minorType == OtherDisease}
-    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}):item
- ):match  
- -->
-:item.EpilepsyCause = {rule = Cause2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
-
-
 
 Rule: Cause3
 Priority: 99

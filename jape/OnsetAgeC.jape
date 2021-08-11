@@ -1,5 +1,5 @@
 Phase: Onset
-Input: Lookup Pronouns Lookup2 Sentence Age 
+Input: Lookup Pronouns Lookup2 Sentence Age DiagnosisTriggers
 
 Options: control=appelt
 
