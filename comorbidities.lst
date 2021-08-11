@@ -1049,7 +1049,7 @@ open head injury	CUI=C0518454	PREF=head injury open	TUI=T037	STY=Injury or Poiso
 Multiple Head Injuries	CUI=C0451948	PREF=Head Injuries, Multiple	TUI=T037	STY=Injury or Poisoning
 Superficial Head Injury	CUI=C0347536	PREF=Head Injury, Superficial	TUI=T037	STY=Injury or Poisoning
 Skull Fractures	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning
-Skull Fracture	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning
+skull fracture	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning
 Unspecified brain damage due to birth injury	CUI=C1536522	PREF=Unspecified brain damage due to Birth injury	TUI=T037	STY=Injury or Poisoning
 brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to Birth injury	TUI=T037	STY=Injury or Poisoning
 traumatic brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	STY=Injury or Poisoning
@@ -1318,3 +1318,44 @@ essential myoclonus	CUI=C0270737	PREF=essential myoclonus	TUI=T047	STY=Disease o
 familial essential myoclonus	CUI=C0270737	PREF=Familial essential myoclonus	TUI=T047	STY=Disease or Syndrome
 type I mucolipidoses	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
 type i mucolipidosis	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
+febrile myoclonus	CUI=C2711743	PREF=febrile myoclonus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+myoclonus associated with fever	CUI=C2711743	PREF=febrile myoclonus	TUI=T047	STY=Disease or Syndrome
+recurrent febrile convulsion	CUI=C0585108	PREF=recurrent febrile convulsion	TUI=T047	STY=Disease or Syndrome
+recurrent febrile convulsion (finding)	CUI=C0585108	PREF=recurrent febrile convulsion (finding)	TUI=T047	STY=Disease or Syndrome
+recurrent febrile fit	CUI=C0585108	PREF=recurrent febrile fit	TUI=T047	STY=Disease or Syndrome
+hypertension	CUI=C0020538	PREF=Hypertensive disease	TUI=T047	STY=Disease or Syndrome
+Hypertensive disease	CUI=C0020538	PREF=Hypertensive disease	TUI=T047	STY=Disease or Syndrome
+cerebral palsy	CUI=C0007789	PREF=Cerebral Palsy	TUI=T047	STY=Disease or Syndrome
+CP	CUI=C0007789	PREF=Cerebral Palsy	TUI=T047	STY=Disease or Syndrome
+sleep apnoea	CUI=C0037315	PREF=Sleep Apnea Syndromes	TUI=T047	STY=Disease or Syndrome
+NEAD	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
+Perimembranous ventricular septal defect	CUI=C0344925	PREF=Perimembranous ventricular septal defect	TUI=T019	STY=Congenital Abnormality
+Perimembranous VSD	CUI=C0344925	PREF=Perimembranous ventricular septal defect	TUI=T019	STY=Congenital Abnormality
+transient cerebral ischemia	CUI=C0007787	PREF=Transient Ischemic Attack	TUI=T047	STY=Disease or Syndrome
+transient cerebral attack	CUI=C0007787	PREF=Transient Ischemic Attack	TUI=T047	STY=Disease or Syndrome
+TIA	CUI=C0007787	PREF=Transient Ischemic Attack	TUI=T047	STY=Disease or Syndrome
+borderline personality disorder	CUI=C0006012	PREF=Borderline Personality Disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
+personality disorder	CUI= C0031212	PREF=Personality Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
+Behavioural disorder	CUI=C0004930	PREF=Behavioural disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
+behavioural disturbance	CUI=C0004930	PREF=Behavioural disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
+behavioral disorder	CUI=C0004930	PREF=Behavioural disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
+CKD	CUI=C1561643	PREF=Chronic kidney diseases	TUI=T047	STY=Disease or Syndrome
+chronic kidney deasese	CUI=C1561643	PREF=Chronic kidney diseases	TUI=T047	STY=Disease or Syndrome
+pituitary tumor	CUI=C0032019	PREF=Pituitary Neoplasms	TUI=T191	STY=Neoplastic Process
+pituitary neoplasm	CUI=C0032019	PREF=Pituitary Neoplasms	TUI=T191	STY=Neoplastic Process
+tumour of pituitary gland	CUI=C0032019	PREF=Pituitary Neoplasms	TUI=T191	STY=Neoplastic Process
+pituitary gland tumour 	CUI=C0032019	PREF=Pituitary Neoplasms	TUI=T191	STY=Neoplastic Process
+CVA	CUI=C0038454	PREF=accident - cerebrovascular	TUI=T047	STY=Disease or Syndrome
+dysphasia	CUI=C0973461 PREF=Dysphasia	TUI=T047	STY=Disease or Syndrome
+dyspraxia	CUI=C0003635	PREF=Apraxias	TUI=T048	STY=Mental or Behavioral Dysfunction
+apraxia	CUI=C0003635	PREF=Apraxias	TUI=T048	STY=Mental or Behavioral Dysfunction
+TBI	CUI=C0876926	PREF=traumatic brain injury	TUI=T037	STY=Injury or Poisoning
+cortical malformations	CUI=C2748861	PREF=Cortical malformations	TUI=T019	STY=Congenital Abnormality
+cortical malformation	CUI=C2748861	PREF=Cortical malformations	TUI=T019	STY=Congenital Abnormality
+ischaemic heart disease	CUI=C0151744	PREF=Myocardial Ischemia	TUI=T047	STY=Disease or Syndrome
+myocardial ischaemia	CUI=C0151744	PREF=Myocardial Ischemia	TUI=T047	STY=Disease or Syndrome
+IHD	CUI=C0151744	PREF=Myocardial Ischemia	TUI=T047	STY=Disease or Syndrome
+Polymicrogyria	CUI=C0266464	PREF=Polymicrogyria TUI=T019	STY=Congenital Abnormality
+ataxia	CUI=C0004134	PREF=Ataxia	TUI=T184	STY=sign or symptom
+hearing impairment	CUI=C1384666	PREF=hearing impairment	TUI=T047	STY=Disease or Syndrome
+hearing loss	CUI=C1384666	PREF=hearing impairment	TUI=T047	STY=Disease or Syndrome
