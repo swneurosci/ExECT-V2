@@ -568,9 +568,6 @@ focal sensory seizures	CUI=C0544645	PREF=Focal Sensory Seizure	TUI=T047	STY=Dise
 sensory seizures	CUI=C0751496	PREF=Sensory Seizure	TUI=T047	STY=Disease or Syndrome
 salaam spasm	CUI=C0546878	PREF=salaam spasm	TUI=T047	STY=Disease or Syndrome
 fit (in known epileptic) nos	CUI=C0553754	PREF=fit (in known epileptic) nos	TUI=T047	STY=Disease or Syndrome
-recurrent febrile convulsion	CUI=C0585108	PREF=recurrent febrile convulsion	TUI=T047	STY=Disease or Syndrome
-recurrent febrile convulsion (finding)	CUI=C0585108	PREF=recurrent febrile convulsion (finding)	TUI=T047	STY=Disease or Syndrome
-recurrent febrile fit	CUI=C0585108	PREF=recurrent febrile fit	TUI=T047	STY=Disease or Syndrome
 rum fits	CUI=C0586323	PREF=rum fits	TUI=T048	STY=Mental or Behavioral Dysfunction
 seizure, alcohol withdrawal	CUI=C0586323	PREF=seizure, alcohol withdrawal	TUI=T048	STY=Mental or Behavioral Dysfunction
 seizure, alcohol withdrawal-induced	CUI=C0586323	PREF=seizure, alcohol withdrawal-induced	TUI=T048	STY=Mental or Behavioral Dysfunction
@@ -723,8 +720,6 @@ Benign epilepsy with centrotemporal spikes	CUI=C2363129	PREF=Benign Rolandic Epi
 BECTS	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Childhood epilepsy with centro-temporal spikes	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 CECTS	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-febrile myoclonus	CUI=C2711743	PREF=febrile myoclonus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-myoclonus associated with fever	CUI=C2711743	PREF=febrile myoclonus	TUI=T047	STY=Disease or Syndrome
 epilepsy, ataxia, sensorineural deafness and tubulopathy	CUI=C2748572	PREF=SeSAME syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome	CUI=C2748572	PREF=SeSAME syndrome	TUI=T047	STY=Disease or Syndrome
 seizures, sensorineural deafness, ataxia, mental retardation and electrolyte imbalance	CUI=C2748572	PREF=SeSAME syndrome	TUI=T047	STY=Disease or Syndrome
@@ -934,3 +929,8 @@ post stroke epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TU
 partial adversive seizure	CUI=C2237348	PREF=simple partial seizure adversive	TUI=T033	STY=Finding
 partial adversive seizures	CUI=C2237348	PREF=simple partial seizure adversive	TUI=T033	STY=Finding
 simple partial adversive seizures	CUI=C2237348	PREF=simple partial seizure adversive	TUI=T033	STY=Finding
+mesial temporal lobe epilepsy with hippocampal sclerosis	CUI=C4749367	PREF=mesial temporal lobe epilepsy with hippocampal sclerosis	TUI=T047	STY=Disease or Syndrome
+photosensitive seizure CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=Disease or Syndrome
+photosensitive seizures CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=Disease or Syndrome
+photosensitive response seizures	CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=Disease or Syndrome
+	
