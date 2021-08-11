@@ -528,4 +528,27 @@ Priority: 95
 NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2,
 NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods, TimePeriod =  :match.SeizFrequency1.TimePeriod}
 
+// Doubled up seizure freq
+// She did have a cluster of seizures in August 2020 where she had 6-9 seizures every week
+Rule: hSeizureDoubledDuring
+Priority: 95 
+( 
+    ((({NumberRange})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    (({timeElapsed.time == "During"})
+    ({PartialDate}))):match
+    (({NumberRange}) 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({timePeriods})):match3):match2
+):match1
+-->
+:match.SeizureFrequency11 = {rule = hSeizureDoubledDuringPart1, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2,
+YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "During" }
+,
+:match2.SeizureFrequency11 = { rule = "hSeizureDoubledDuringPart2", CUI = :match3.Lookup3.CUI, Certainty = :match3.Lookup3.Certainty, Negation = :match3.Lookup3.Negation,
+NumberOfTimePeriods = :match3.timePeriods.frequency, TimePeriod = :match3.timePeriods.time-unit, TimeSince_or_TimeOfEvent = "During",
+NumberOfSeizures = :match3.NumberRange.value, LowerNumberOfSeizures  = :match3.NumberRange.N1, UpperNumberOfSeizures  = :match3.NumberRange.N2,
+DayDate = :match2.PartialDate.day, MonthDate = :match2.PartialDate.month, YearDate = :match2.PartialDate.year}
+
 
