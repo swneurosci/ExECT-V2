@@ -423,3 +423,10 @@ Generalized tonic chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI
 ‘grand mal' seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
 ‘grand mal' seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
 seizure freedom	CUI=C1299590	PREF=seizure free	TUI=T033	STY=Finding
+partial adversive seizure	CUI=C2237348	PREF=simple partial seizure adversive	TUI=T033	STY=Finding
+partial adversive seizures	CUI=C2237348	PREF=simple partial seizure adversive	TUI=T033	STY=Finding
+simple partial adversive seizures	CUI=C2237348	PREF=simple partial seizure adversive	TUI=T033	STY=Finding
+photosensitive seizure CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=Disease or Syndrome
+photosensitive seizures CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=Disease or Syndrome
+photosensitive response seizures	CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=Disease or Syndrome
+	
