@@ -1250,7 +1250,6 @@ headache with migraine	CUI=C0149931	PREF=migraine disorders	TUI=T047	STY=Disease
 headaches with migraine	CUI=C0149931	PREF=migraine disorders	TUI=T047	STY=Disease or Syndrome
 psychotic episode	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
 Chronic daily headaches	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease or Syndrome
-alcohol abuse	CUI=C0221628	PREF=history of alcohol abuse	TUI=T033	STY=Finding
 visually impaired	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
 episode of psychosis	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
 medial temporal sclerosis	CUI=C3164863	PREF=Mesial temporal lobe sclerosis	TUI=T047	STY=Disease or Syndrome
@@ -1359,3 +1358,5 @@ Polymicrogyria	CUI=C0266464	PREF=Polymicrogyria TUI=T019	STY=Congenital Abnormal
 ataxia	CUI=C0004134	PREF=Ataxia	TUI=T184	STY=sign or symptom
 hearing impairment	CUI=C1384666	PREF=hearing impairment	TUI=T047	STY=Disease or Syndrome
 hearing loss	CUI=C1384666	PREF=hearing impairment	TUI=T047	STY=Disease or Syndrome
+excess alcohol consumption	CUI=C0085762	PREF=alcohol abuse	TUI=T048	STY=Mental or Behavioral Dysfunction 
+lost consciousness	CUI=C0041657	PREF=Loss of consciousness	TUI=T033	STY=Finding
