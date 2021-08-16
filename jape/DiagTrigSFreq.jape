@@ -4,16 +4,15 @@ Options: control=appelt
 
 
  
-// 2 GTCS 2014 (without timeElapsed)
-// Tested only picked up once (letter 6 - but the token in the input is very strict)
+// seizure frequency - daily
 Rule: DiagTrigSFreq1
 Priority: 100 
 ( 
-    ({DiagnosisTriggers.SF == "true"})
+    ({DiagnosisTriggers.SF == "true", DiagnosisTriggers notWithin SeizureFrequency11})
     ({SeizFrequency2})
 ):match 
 --> 
-:match.SeizureFrequency11 = { rule = "DiagTrigSFreq1", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, 
+:match.SeizureFrequency11 = { rule = "DiagTrigSFreq1", CUI = "C0036572", Certainty = :match.Lookup3.Certainty, 
 Negation = :match.Lookup3.Negation, NumberOfTimePeriods = :match.SeizFrequency2.NumberOfTimePeriods,
 LowerNumberOfTimePeriods = :match.SeizFrequency2.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency2.UpperNumberOfTimePeriods,
 TimePeriod = :match.SeizFrequency2.TimePeriod, NumberOfSeizures = :match.SeizFrequency2.QuantityTotal,
@@ -21,17 +20,16 @@ LowerNumberOfSeizures  = :match.SeizFrequency2.QuantityLowerRange, UpperNumberOf
 
 
  
-// 2 GTCS 2014 (without timeElapsed)
-// Tested only picked up once (letter 6 - but the token in the input is very strict)
+// seizure frequency - 5 a month
 Rule: DiagTrigSFreq2
 Priority: 100 
 ( 
-    ({DiagnosisTriggers.SF == "true"})
+    ({DiagnosisTriggers.SF == "true", DiagnosisTriggers notWithin SeizureFrequency11})
     ({NumberRange})
     ({SeizFrequency1})
 ):match 
 --> 
-:match.SeizureFrequency11 = { rule = "DiagTrigSFreq2", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, 
+:match.SeizureFrequency11 = { rule = "DiagTrigSFreq2", CUI = "C0036572", Certainty = :match.Lookup3.Certainty, 
 Negation = :match.Lookup3.Negation, NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods,
 LowerNumberOfTimePeriods = :match.SeizFrequency1.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency1.UpperNumberOfTimePeriods,
 TimePeriod = :match.SeizFrequency1.TimePeriod, NumberOfSeizures = :match.NumberRange.value,
