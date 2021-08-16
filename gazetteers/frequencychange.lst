@@ -27,7 +27,7 @@ increasing:Quantity=Increased
 hasn't been any change:Quantity=Same:Negation=Negated
 hasn’t been any change:Quantity=Same:Negation=Negated
 less frequent:Quantity=Decreased
-getting better:Quantity=Decreased
+getting better:Quantity=Decreased:=
 reduced:Quantity=Decreased
 not made any difference:Quantity=Same
 occasional:Quantity=Infrequent
@@ -51,7 +51,7 @@ reoccurance:Quantity=Increased
 restarted:Quantity=Increased
 reduction in the frequency:Quantity=Decreased
 good response:Quantity=Decreased
-considerably better:Quantity=Decreased
+considerably better:Quantity=Decreased:=
 seizure frequency increased:Quantity=Increased:ContainsLookUp=Yes
 much better controlled:Quantity=Decreased
 remained the same:Quantity=Same
@@ -63,4 +63,6 @@ seizure frequency has deteriorated:Quantity=Increased:ContainsLookUp=Yes
 well controlled:Quantity=Infrequent
 returning:Quantity=Increased
 reappeared:Quantity=Increased
-returned:Quantity=Increased:=
+returned:Quantity=Increased
+coming down:Quantity=Decreased:=
+going up:Quantity=Increased:=
