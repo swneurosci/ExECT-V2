@@ -2,7 +2,7 @@ malformation:CUI=C0436539:Results=Abnormal
 AVM:CUI=C0436539:Results=Abnormal
 malformations:CUI=C0436539:Results=Abnormal
 lesion:CUI=C0436539:Results=Abnormal
-lesions:CUI=C0436539:Results=Abnormal
+lesions:CUI=C0436539:Results=Abnormal:=
 degeneration:CUI=C0436539:Results=Abnormal
 degenerative brain disorder:CUI=C0436539:Results=Abnormal
 atrophy:CUI=C0436539:Results=Abnormal
@@ -49,4 +49,5 @@ no significant findings:CUI=C0744602:Results=Normal:Ignore=Yes
 epileptic activity was not seen:CUI=C0744602:Results=Normal:Ignore=Yes
 both normal:CUI=C0744602:Results=Normal
 changes:CUI=C0436539:Results=Abnormal
-unremarkable:CUI=C0744602:Results=Normal:=
+unremarkable:CUI=C0744602:Results=Normal
+low density:CUI=C0436539:Results=Abnormal:=

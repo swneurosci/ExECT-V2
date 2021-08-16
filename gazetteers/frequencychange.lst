@@ -61,4 +61,6 @@ not made any difference to her seizure frequency:Quantity=Same:ContainsLookUp=Ye
 significant worsening:Quantity=Increased
 seizure frequency has deteriorated:Quantity=Increased:ContainsLookUp=Yes
 well controlled:Quantity=Infrequent
-returning:Quantity=Increased:=
+returning:Quantity=Increased
+reappeared:Quantity=Increased
+returned:Quantity=Increased:=

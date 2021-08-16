@@ -61,3 +61,4 @@ right sided changes:CUI=C0151611:Results=Abnormal
 both normal:CUI=C0560017:Results=Normal
 non-specific interictal changes:CUI=C0151611:Results=Abnormal:Ignore=Yes
 no changes:CUI=C0560017:Results=Normal:Ignore=Yes
+slowing:CUI=C0151611:Results=Abnormal:=

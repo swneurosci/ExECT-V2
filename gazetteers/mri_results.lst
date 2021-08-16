@@ -52,3 +52,5 @@ clear:CUI=C0436481:Results=Normal
 unremarkable:CUI=C0436481:Results=Normal
 both normal:CUI=C0436481:Results=Normal
 non-specific lesion:CUI=C1319851:Results=Abnormal:Ignore=Yes
+white matter:CUI=C1319851:Results=Abnormal:=
+white-matter:CUI=C1319851:Results=Abnormal:=
