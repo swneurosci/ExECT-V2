@@ -249,24 +249,6 @@ C0238111	lennox-gastat syndrome
 C0238111	Lennox-Gastaut syndrome
 C0264608	dysphonia of palatopharyngolaryngeal myoclonus
 C0265482	ring chromosome 20
-C0268226	cherry red spot myoclonus syndrome
-C0268226	cherry red spot-myoclonus syndrome
-C0268226	cherry-red spot myoclonus synd
-C0268226	deficiencies, glycoprotein neuraminidase
-C0268226	deficiency, glycoprotein neuraminidase
-C0268226	glycoprotein neuraminidase deficiency
-C0268226	mucolipidosis type 1
-C0268226	myoclonus cherry red spot syndrome
-C0268226	myoclonus-cherry red spot syndrome
-C0268226	neuraminidase deficiency
-C0268226	normosomatic sialidosis
-C0268226	sialidase deficiency
-C0268226	sialidosis
-C0268226	sialidosis, type 1
-C0268226	type I mucolipidoses
-C0268226	type i mucolipidosis
-C0270737	essential myoclonus
-C0270737	familial essential myoclonus
 C0270819	cursive (running) epilepsy
 C0270819	cursive reflex epilepsy - running
 C0270819	cursive seizure
@@ -447,11 +429,6 @@ C0393622	drug-induced myoclonus
 C0393623	segmental cord myoclonus
 C0393624	palatal-tympanic myoclonus
 C0393625	hyoid myoclonus
-C0393626	dancing eyes dancing feet syndrome
-C0393626	dancing eyes, dancing feet syndrome
-C0393626	dancing eyes-dancing feet syndrome
-C0393626	opsoclonus myoclonus ataxia
-C0393626	opsoclonus myoclonus syndrome
 C0393673	Benign atypical partial epilepsy in childhood
 C0393675	BCEOP - benign childhood epilepsy with occipital paroxysms
 C0393675	benign occipital epilepsy of childhood
@@ -763,8 +740,6 @@ C2363129	Benign epilepsy with centrotemporal spikes
 C2363129	BECTS
 C2363129	Childhood epilepsy with centro-temporal spikes
 C2363129	CECTS
-C2711743	febrile myoclonus
-C2711743	myoclonus associated with fever
 C2748572	epilepsy, ataxia, sensorineural deafness and tubulopathy
 C2748572	seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome
 C2748572	seizures, sensorineural deafness, ataxia, mental retardation and electrolyte imbalance
@@ -907,7 +882,6 @@ C4023516	Symptomatic seizures
 C0014547	focal onset epilepsy
 C0472349	Focal symptomatic epilepsy
 C0085541	frontal lobe onset seizure
-C0027066	myoclonus
 C4023512	myoclonic absence
 C4023512	myoclonic absences
 C0393703	myoclonic absence epilepsy
@@ -929,3 +903,8 @@ C0877017	focal onset generalised tonic-clonic seizures
 C0877017	focal onset tonic-clonic seizures
 C0751495	frontal lobe onset seizures
 C0751495	frontal lobe onset seizure
+C3697594	post cerebrovascular accident epilepsy	
+C2237348	partial adversive seizure
+C4749367	mesial temporal lobe epilepsy with hippocampal sclerosis
+C2080645	photosensitive seizure
+ 

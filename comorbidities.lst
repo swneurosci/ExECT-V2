@@ -1283,7 +1283,7 @@ post traumatic damage to left frontal lobe	CUI=C2832052	PREF=focal traumatic bra
 memory problems	CUI=C0233794	PREF=Memory impairment	TUI=T048	STY=Mental or Behavioral Dysfunction
 memory impairment	CUI=C0233794	PREF=Memory impairment	TUI=T048	STY=Mental or Behavioral Dysfunction
 impaired memory	CUI=C0233794	PREF=Memory impairment	TUI=T048	STY=Mental or Behavioral Dysfunction
-impaired lapses	CUI=C0233794	PREF=Memory impairment	TUI=T048	STY=Mental or Behavioral Dysfunction
+memory lapses	CUI=C0233794	PREF=Memory impairment	TUI=T048	STY=Mental or Behavioral Dysfunction
 essential myoclonus	CUI=C0270737	PREF=essential myoclonus	TUI=T047	STY=Disease or Syndrome
 familial essential myoclonus	CUI=C0270737	PREF=Familial essential myoclonus	TUI=T047	STY=Disease or Syndrome
 cherry red spot myoclonus syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
@@ -1358,5 +1358,11 @@ Polymicrogyria	CUI=C0266464	PREF=Polymicrogyria TUI=T019	STY=Congenital Abnormal
 ataxia	CUI=C0004134	PREF=Ataxia	TUI=T184	STY=sign or symptom
 hearing impairment	CUI=C1384666	PREF=hearing impairment	TUI=T047	STY=Disease or Syndrome
 hearing loss	CUI=C1384666	PREF=hearing impairment	TUI=T047	STY=Disease or Syndrome
+photosensitive	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding	
 excess alcohol consumption	CUI=C0085762	PREF=alcohol abuse	TUI=T048	STY=Mental or Behavioral Dysfunction 
 lost consciousness	CUI=C0041657	PREF=Loss of consciousness	TUI=T033	STY=Finding
+photoparoxysmal response on EEG	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
+photosensitivity	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
+photosensitive	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
+	
+

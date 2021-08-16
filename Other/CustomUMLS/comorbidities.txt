@@ -1274,3 +1274,6 @@ C0266464	Polymicrogyria
 C0004134	ataxia	
 C1384666	hearing impairment	
 C1384666	hearing loss	
+C3552821	photoparoxysmal response on EEG	
+C3552821	photosensitivity	
+	
