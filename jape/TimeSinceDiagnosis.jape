@@ -1,5 +1,5 @@
 Phase: TimeSinceDiagnosis
-Input: Lookup Person Sentence Numeric TimeSince timePeriod timeElapsed Lookup2 Split DiagnosisTriggers
+Input: Lookup Person Sentence Numeric TimeSince timePeriod timeElapsed Lookup2 Split DiagnosisTriggers OnsetBlock
 
 Options: control=appelt
 
