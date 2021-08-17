@@ -25,7 +25,7 @@ Rule: DiagTrigSFreq2
 Priority: 100 
 ( 
     ({DiagnosisTriggers.SF == "true", DiagnosisTriggers notWithin SeizureFrequency11})
-    ({NumberRange})
+    ({NumberRange notWithin Measurement})
     ({SeizFrequency1})
 ):match 
 --> 
