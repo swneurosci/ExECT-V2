@@ -1,0 +1,32 @@
+Imports: {import static gate.Utils.*; }
+Phase: DelNumInMeasurment 
+Input: NumberRange Measurement Age
+Options: control=appelt 
+
+
+ 
+//Remove numberRange from within Measurement
+Rule: hSeizureFreq1a 
+Priority: 100 
+( 
+    ({Measurement})
+):match 
+--> 
+:match {
+    Annotation matchAnn = matchAnnots.iterator().next();
+    AnnotationSet contAnnots = getContainedAnnotations(inputAS, matchAnnots, "NumberRange");//Create the annotation set for ClinicDetalisPreTag
+    inputAS.removeAll(contAnnots);
+}
+
+//Remove numberRange from within Age
+Rule: hSeizureFreq1a 
+Priority: 100 
+( 
+    ({Age})
+):match 
+--> 
+:match {
+    Annotation matchAnn = matchAnnots.iterator().next();
+    AnnotationSet contAnnots = getContainedAnnotations(inputAS, matchAnnots, "NumberRange");//Create the annotation set for ClinicDetalisPreTag
+    inputAS.removeAll(contAnnots);
+}
