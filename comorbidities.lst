@@ -1364,5 +1364,6 @@ lost consciousness	CUI=C0041657	PREF=Loss of consciousness	TUI=T033	STY=Finding
 photoparoxysmal response on EEG	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
 photosensitivity	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
 photosensitive	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
-	
-
+normal vaginal delivery	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
+normal delivery	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
+brain surgery	CUI=C0195775	PREF=Operation on brain	TUI=T061	STY=Therapeutic or Preventive Procedure
