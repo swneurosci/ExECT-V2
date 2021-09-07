@@ -2431,6 +2431,7 @@ C0027051	myocardial infarct
 C0027051	heart attack
 C0027051	cardiac infarction
 C0349245	dissociative convulsions
+C0349245	dissociative seizures
 C0349245	pseudoseizures
 C0151293	chronic headache
 C0151293	chronic headaches
@@ -3635,3 +3636,4 @@ C1384666	hearing impairment
 C1384666	hearing loss	
 C3552821	photoparoxysmal response on EEG	
 C3552821	photosensitivity 
+C0195775	brain surgery
