@@ -792,7 +792,6 @@ Priority: 99
 	({Lookup2})?
 	({Person})?
 	({Lookup2.majorType == historic}|{Lookup2.majorType == status}|{Lookup2.minorType == causality})
-	({Lookup3})?
 	({Lookup2})?
 	({OtherDiag}):item
     
