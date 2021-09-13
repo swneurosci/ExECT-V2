@@ -2484,7 +2484,6 @@ C0003467	anxiety
 C0003469	anxiety disorder
 C0003469	anxiety disorders
 C0338908	anxiety with depression
-C0338908	anxiety and depression
 C3665809	stroke like migraine attacks after radiation therapy
 C3665809	SMART
 C3665809	SMART syndrome
@@ -3637,3 +3636,4 @@ C1384666	hearing loss
 C3552821	photoparoxysmal response on EEG	
 C3552821	photosensitivity 
 C0195775	brain surgery
+C0039070	syncopal

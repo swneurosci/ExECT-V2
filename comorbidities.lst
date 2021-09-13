@@ -1226,7 +1226,6 @@ myoclonus, segmental	CUI=C0751351	PREF=myoclonus, segmental	TUI=T184	STY=sign or
 myoclonus, nocturnal	CUI=C0751352	PREF=myoclonus, nocturnal	TUI=T184	STY=sign or symptom
 myoclonus, sleep	CUI=C0751352	PREF=myoclonus, sleep	TUI=T184	STY=sign or symptom
 sleep myoclonus	CUI=C0751352	PREF=sleep myoclonus	TUI=T184	STY=sign or symptom
-loss of consciousness	CUI=C0041657	PREF=Loss of consciousness	TUI=T033	STY=Finding
 subdural empyema	CUI=C0038539	PREF=Empyema, Subdural	TUI=T047	STY=Disease or Syndrome
 subdural abscess	CUI=C0038539	PREF=Empyema, Subdural	TUI=T047	STY=Disease or Syndrome
 mastoid fracture	CUI=C4039921	PREF=mastoid fracture	TUI=T037	STY=Injury or Poisoning
@@ -1236,8 +1235,6 @@ neurofibromatosis type II	CUI=C0027832	PREF=Neurofibromatosis 2	TUI=T191	STY=Neo
 anxiety	CUI=C0003467	PREF=anxiety	TUI=T048	STY=Mental or Behavioral Dysfunction
 anxiety disorder	CUI=C0003469	PREF=Anxiety disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
 anxiety disorders	CUI=C0003469	PREF=Anxiety disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
-anxiety with depression	CUI=C0338908	PREF=Mixed anxiety and depressive disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
-anxiety and depression	CUI=C0338908	PREF=Mixed anxiety and depressive disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
 stroke like migraine attacks after radiation therapy	CUI=C3665809	PREF=stroke-like migraine attacks after radiation therapy	TUI=T046	STY=Pathologic Function
 SMART	CUI=C3665809	PREF=stroke-like migraine attacks after radiation therapy	TUI=T046	STY=Pathologic Function
 SMART syndrome	CUI=C3665809	PREF=stroke-like migraine attacks after radiation therapy	TUI=T046	STY=Pathologic Function
@@ -1360,10 +1357,12 @@ hearing impairment	CUI=C1384666	PREF=hearing impairment	TUI=T047	STY=Disease or 
 hearing loss	CUI=C1384666	PREF=hearing impairment	TUI=T047	STY=Disease or Syndrome
 photosensitive	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding	
 excess alcohol consumption	CUI=C0085762	PREF=alcohol abuse	TUI=T048	STY=Mental or Behavioral Dysfunction 
-lost consciousness	CUI=C0041657	PREF=Loss of consciousness	TUI=T033	STY=Finding
 photoparoxysmal response on EEG	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
 photosensitivity	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
 photosensitive	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
 normal vaginal delivery	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
 normal delivery	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
 brain surgery	CUI=C0195775	PREF=Operation on brain	TUI=T061	STY=Therapeutic or Preventive Procedure
+sub-arachnoid hemorrhage	CUI=C0038525	PREF=Subarachnoid hemorrhage	TUI=T047	STY=Disease or Syndrome
+diabetic	CUI=C0011847	PREF=Diabetes	TUI=T047	STY=Disease or Syndrome
+syncopal	CUI=C0039070	PREF=syncope	TUI=T184	STY=sign or symptom
