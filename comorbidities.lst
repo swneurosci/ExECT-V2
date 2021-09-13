@@ -1366,3 +1366,9 @@ brain surgery	CUI=C0195775	PREF=Operation on brain	TUI=T061	STY=Therapeutic or P
 sub-arachnoid hemorrhage	CUI=C0038525	PREF=Subarachnoid hemorrhage	TUI=T047	STY=Disease or Syndrome
 diabetic	CUI=C0011847	PREF=Diabetes	TUI=T047	STY=Disease or Syndrome
 syncopal	CUI=C0039070	PREF=syncope	TUI=T184	STY=sign or symptom
+cerebellar arophy	CUI=C0740279	PREF=Atrophy of cerebellum	TUI=T047	STY=Disease or Syndrome
+arophy of cerebellum	CUI=C0740279	PREF=Atrophy of cerebellum	TUI=T047	STY=Disease or Syndrome
+cerebral atrophy	CUI=C0235946	PREF=Cerebral atrophy	TUI=T047	STY=Disease or Syndrome
+brain atrophy	CUI=C0235946	PREF=Cerebral atrophy	TUI=T047	STY=Disease or Syndrome
+atrophy of the brain	CUI=C0235946	PREF=Cerebral atrophy	TUI=T047	STY=Disease or Syndrome
+Cortical atrophy	CUI=C0235946	PREF=Cerebral atrophy	TUI=T047	STY=Disease or Syndrome
