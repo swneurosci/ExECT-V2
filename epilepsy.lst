@@ -933,4 +933,4 @@ mesial temporal lobe epilepsy with hippocampal sclerosis	CUI=C4749367	PREF=mesia
 photosensitive seizure CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=Disease or Syndrome
 photosensitive seizures CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=Disease or Syndrome
 photosensitive response seizures	CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=Disease or Syndrome
-	
+structural epilepsy	CUI=C4524097	PREF=Structural epilepsy	TUI=T047	STY=Disease or Syndrome
