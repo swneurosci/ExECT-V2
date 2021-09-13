@@ -1359,9 +1359,9 @@ hearing impairment	CUI=C1384666	PREF=hearing impairment	TUI=T047	STY=Disease or 
 hearing loss	CUI=C1384666	PREF=hearing impairment	TUI=T047	STY=Disease or Syndrome
 photosensitive	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding	
 excess alcohol consumption	CUI=C0085762	PREF=alcohol abuse	TUI=T048	STY=Mental or Behavioral Dysfunction 
-lost consciousness	CUI=C0041657	PREF=Loss of consciousness	TUI=T033	STY=Finding
 photoparoxysmal response on EEG	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
 photosensitivity	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
 photosensitive	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
 sub-arachnoid hemorrhage	CUI=C0038525	PREF=Subarachnoid hemorrhage	TUI=T047	STY=Disease or Syndrome
 syncopal	CUI=C0039070	PREF=syncope	TUI=T184	STY=sign or symptom
+diabetic	CUI=C0011847	PREF=Diabetes	TUI=T047	STY=Disease or Syndrome
