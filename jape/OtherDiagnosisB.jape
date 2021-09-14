@@ -31,6 +31,7 @@ Priority: 100
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
 	({Lookup2.minorType == probability})?
+	({Lookup})?
 	({OtherDiag})
 	({Lookup2})?
 	({OtherDiag}):item
@@ -41,7 +42,16 @@ Priority: 100
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
-Negation = :item.OtherDiag.Negation}
+Negation = :item.OtherDiag.Negation,
+Age = :match.OtherDiag.Age,
+AgeUnit = :match.OtherDiag.AgeUnit,
+AgeLower = :match.OtherDiag.AgeLower,
+AgeUpper =:match.OtherDiag.AgeUpper,
+PointInTime =:match.OtherDiag.PointInTime,
+YearDate = :item.OtherDiag.YearDate,
+MonthDate =:item.OtherDiag.MonthDate,
+TimePeriod = :item.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
 
 // /* Rule: OtherDiagB3
 // Priority: 100
