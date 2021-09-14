@@ -1276,4 +1276,9 @@ C1384666	hearing impairment
 C1384666	hearing loss	
 C3552821	photoparoxysmal response on EEG	
 C3552821	photosensitivity	
-	
+C0740279	cerebellar arophy
+C074027		arophy of cerebellum
+C0235946	cerebral atrophy	
+C0235946	brain atrophy
+C0235946	atrophy of the brain	
+C0235946	Cortical atrophy	
