@@ -9,7 +9,7 @@ Rule: OtherDiagInv1
 
 
 (   
-    {Investigation.Investigation != EEG}
+    {Investigation}
 	({OtherDiag}):item
     
  ):match  
@@ -24,7 +24,7 @@ Rule: OtherDiagInv1
 
 
 (   
-    {Investigation.Investigation != EEG}
+    {Investigation}
     ({OtherDiag})
 	({OtherDiag}):item
     
