@@ -1,6 +1,6 @@
 Phase: OtherDiagnosisListD
 Input: DiagnosisTriggers OtherDiag listSent listPoint DateSince Age endList
-//in general to capture the 4th item in the tol of letter list//
+//in general to capture the 4th item in the top of letter list//
 Options: control=appelt
 
 Rule: OtherDiagListD1
