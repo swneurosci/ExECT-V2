@@ -3637,6 +3637,7 @@ C3552821	photoparoxysmal response on EEG
 C3552821	photosensitivity 
 C0195775	brain surgery
 C0039070	syncopal
+C4524097	structural epilepsy
 C0740279	cerebellar arophy
 C074027		arophy of cerebellum
 C0235946	cerebral atrophy	
