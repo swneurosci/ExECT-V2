@@ -3439,8 +3439,8 @@ C4048158	convulsion
 C4048158	Convulsions
 C4048158	convulsions
 C0041657	Loss of consciousness
-C0041657	loss of consciousness
 C0041657	episodes of loss of consciousness
+C4087400	Transient loss of consciousness
 C0344329	Collapse
 C0424531	funny do
 C0424531	funny dos
@@ -3644,3 +3644,6 @@ C0235946	cerebral atrophy
 C0235946	brain atrophy
 C0235946	atrophy of the brain	
 C0235946	Cortical atrophy	
+C0041341	tuberous sclerosis
+C0011854	type 1 diabetes
+C0011860	type 2 diabetes
