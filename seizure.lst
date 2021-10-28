@@ -9,7 +9,7 @@ motor seizure	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or
 motor seizures	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
 partial motor attacks	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
 partial motor seizure 	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
-partial motor seizures   	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
+partial motor seizures	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
 simple partial seizure with motor dysfunction	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
 simple partial seizures with motor signs	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
 myoclonus, intention	CUI=C0021712	PREF=Myoclonus, Intention	TUI=T184	STY=sign or symptom
@@ -429,4 +429,9 @@ simple partial adversive seizures	CUI=C2237348	PREF=simple partial seizure adver
 photosensitive seizure CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=Disease or Syndrome
 photosensitive seizures CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=Disease or Syndrome
 photosensitive response seizures	CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=Disease or Syndrome
-	
+partial motor seizures with secondary generalisation	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome 
+primarily generalised tonic-clonic seizures	CUI=C4476643	Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
+primarily generalised tonic clonic seizures	CUI=C4476643	Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
+generalised-onset tonic clonic seizure	CUI=C4476643	Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
+bilateral tonic-clonic seizure with generalised onset	CUI=C4476643	Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
+generalised-onset bilateral tonic-clonic seizures	CUI=C4476643	Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
