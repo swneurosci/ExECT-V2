@@ -168,6 +168,7 @@ Priority: 100
 PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "Since"}
 
 // seizures better since last clinic
+// seizures increased in the last year  ??..
 Rule: SeizureChange3b
 Priority: 100 
 ( 

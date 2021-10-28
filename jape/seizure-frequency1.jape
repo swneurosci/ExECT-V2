@@ -248,7 +248,10 @@ Priority: 100
 /* 
 * Since last clinic she has had four secondary gen seizures 
 */ 
- 
+ // No TimeElapsed in this rule
+// What about 'Last year she had around 15 generalised tonic clonic seizures.' This isn't a since but a during...
+// Add to PointInTime to add a default of SinceOrDuring....
+
 Rule: hSeizureFreqPointInTime1 
 Priority: 95 
 ( 

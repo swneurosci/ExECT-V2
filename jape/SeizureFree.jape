@@ -605,32 +605,32 @@ DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month
 /* he has been SeizureFree since YEAR */
 
 /* Need very simple rule similar to something above somewhere above, but with NumberRange.value > 1900 instead of PartialDate */
-
-Rule: HseizureFree4b1
-Priority: 99
-(
-    ({Person})?
-    ({Lookup3.PREF == "seizure free",Lookup3.Temporality != "hypothetical", Lookup3.Negation == "Affirmed"})
-    ({timeElapsed.time == "Since"})
-    ({NumberRange.value >= 1900})
-):match
--->
-:match.SeizureFrequencyDriving = { rule = HseizureFree4b, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = "Affirmed", string = :match@string,
-YearDate = :match.NumberRange.value}
+// Since and number now goes into Partial Date - dont need these rules
+// Rule: HseizureFree4b1
+// Priority: 99
+// (
+//     ({Person})?
+//     ({Lookup3.PREF == "seizure free",Lookup3.Temporality != "hypothetical", Lookup3.Negation == "Affirmed"})
+//     ({timeElapsed.time == "Since"})
+//     ({NumberRange.value >= 1900})
+// ):match
+// -->
+// :match.SeizureFrequencyDriving = { rule = HseizureFree4b1, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = "Affirmed", string = :match@string,
+// YearDate = :match.NumberRange.value}
 
 /* No seizure since YEAR */
 
-Rule: HseizureFree4b2
-Priority: 99
-(
-    ({Person})?
-    ({Lookup3.Negation == "Negated", Lookup3.Temporality != "hypothetical", !Lookup3.CAT == "Slang"})
-    ({timeElapsed.time == "Since"})
-    ({NumberRange.value >= 1900})
-):match
--->
-:match.SeizureFrequencyDriving = { rule = HseizureFree4b, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = "Affirmed", string = :match@string,
-YearDate = :match.NumberRange.value, TimeSince_or_TimeOfEvent = :match.timeElapsed.time}
+// Rule: HseizureFree4b2
+// Priority: 99
+// (
+//     ({Person})?
+//     ({Lookup3.Negation == "Negated", Lookup3.Temporality != "hypothetical", !Lookup3.CAT == "Slang"})
+//     ({timeElapsed.time == "Since"})
+//     ({NumberRange.value >= 1900})
+// ):match
+// -->
+// :match.SeizureFrequencyDriving = { rule = HseizureFree4b2, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = "Affirmed", string = :match@string,
+// YearDate = :match.NumberRange.value, TimeSince_or_TimeOfEvent = :match.timeElapsed.time}
 
 /* No seizure since last being seen */
 
