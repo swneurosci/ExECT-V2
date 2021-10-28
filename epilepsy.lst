@@ -934,3 +934,12 @@ photosensitive seizure CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=D
 photosensitive seizures CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=Disease or Syndrome
 photosensitive response seizures	CUI=C2080645	PREF=Visually-induced seizure	TUI=T047	STY=Disease or Syndrome
 structural epilepsy	CUI=C4524097	PREF=Structural epilepsy	TUI=T047	STY=Disease or Syndrome
+localisation based epilepsy	CUI=C0014547	PREF=Epilepsies, Partial	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+localised based epilepsy	CUI=C0014547	PREF=Epilepsies, Partial	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+localised epilepsy	CUI=C0014547	PREF=Epilepsies, Partial	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+partial motor seizures with secondary generalisation	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome 
+primarily generalised tonic-clonic seizures	CUI=C4476643	Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
+primarily generalised tonic clonic seizures	CUI=C4476643	Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
+generalised-onset tonic clonic seizure	CUI=C4476643	Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
+bilateral tonic-clonic seizure with generalised onset	CUI=C4476643	Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
+generalised-onset bilateral tonic-clonic seizures	CUI=C4476643	Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
