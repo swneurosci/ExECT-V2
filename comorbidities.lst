@@ -1268,9 +1268,9 @@ psychogenic non-epileptic seizure	CUI=C1142430	PREF=psychogenic seizure	TUI=T048
 non epileptic seizure disorder	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	STY=Disease or Syndrome
 non-epileptic dissociative seizures	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
 non epileptic dissociative seizures	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
-MCA infarct	CUI=C0740392 PREF=Infarction, Middle Cerebral Artery	TUI=T047	STY=Disease or Syndrome
-MCA infarction	CUI=C0740392 PREF=Infarction, Middle Cerebral Artery	TUI=T047	STY=Disease or Syndrome
-Middle Cerebral Artery infarction	CUI=C074039F2 PREF=Infarction, Middle Cerebral Artery	TUI=T047	STY=Disease or Syndrome
+MCA infarct	CUI=C0740392	PREF=Infarction, Middle Cerebral Artery	TUI=T047	STY=Disease or Syndrome
+MCA infarction	CUI=C0740392	PREF=Infarction, Middle Cerebral Artery	TUI=T047	STY=Disease or Syndrome
+Middle Cerebral Artery infarction	CUI=C0740392	PREF=Infarction, Middle Cerebral Artery	TUI=T047	STY=Disease or Syndrome
 post-traumatic damage to right frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
 post-traumatic damage to left frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
 post-traumatic damage to the right frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	STY=Injury or Poisoning
@@ -1372,3 +1372,13 @@ cerebral atrophy	CUI=C0235946	PREF=Cerebral atrophy	TUI=T047	STY=Disease or Synd
 brain atrophy	CUI=C0235946	PREF=Cerebral atrophy	TUI=T047	STY=Disease or Syndrome
 atrophy of the brain	CUI=C0235946	PREF=Cerebral atrophy	TUI=T047	STY=Disease or Syndrome
 Cortical atrophy	CUI=C0235946	PREF=Cerebral atrophy	TUI=T047	STY=Disease or Syndrome
+tuberous sclerosis	CUI=C0041341	PREF=Tuberous Sclerosis	TUI=T191	STY=Neoplastic Process
+loss of consciousness	CUI=C0041657	PREF=Loss of consciousness	TUI=T033	STY=Finding	
+Transient loss of consciousness	CUI=C4087400	PREF=Transient loss of consciousness	TUI=T033	STY=Finding	
+type 1 diabetes	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+diabetes type 1	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+diabetes type I	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+Diabetes Mellitus Type I	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+Diabetes type 2	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+Diabetes Mellitus Type II	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+Type 2 diabetes	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
