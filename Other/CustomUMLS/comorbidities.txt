@@ -1275,10 +1275,16 @@ C0004134	ataxia
 C1384666	hearing impairment	
 C1384666	hearing loss	
 C3552821	photoparoxysmal response on EEG	
-C3552821	photosensitivity	
+C3552821	photosensitivity
+C4087400	Transient loss of consciousness	
+C0041657	Loss of consciousness
 C0740279	cerebellar atrophy
 C074027		arophy of cerebellum
 C0235946	cerebral atrophy	
 C0235946	brain atrophy
 C0235946	atrophy of the brain	
-C0235946	Cortical atrophy	
+C0235946	cortical atrophy
+C0041341	tuberous sclerosis
+C0011854	type 1 diabetes
+C0011860	type 2 diabetes
+
