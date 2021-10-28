@@ -907,4 +907,9 @@ C3697594	post cerebrovascular accident epilepsy
 C2237348	partial adversive seizure
 C4749367	mesial temporal lobe epilepsy with hippocampal sclerosis
 C2080645	photosensitive seizure
+C0877017	partial motor seizures with secondary generalisation
+C0877017	generalized tonic-clonic seizures with focal onset
+C4476643	bilateral tonic-clonic seizure with generalized onset
+C4476643	primarily generalised tonic clonic seizures
+C4476643	generalised-onset bilateral tonic-clonic seizures
  
