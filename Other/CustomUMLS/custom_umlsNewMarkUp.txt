@@ -3634,12 +3634,12 @@ ataxia///C0004134
 hearing impairment///C1384666
 hearing loss///C1384666
 photoparoxysmal response on EEG///C3552821
-photosensitivity ///C3552821
+photosensitivity///C3552821
 brain surgery///C0195775
 syncopal///C0039070
 structural epilepsy///C4524097
 cerebellar atrophy///C0740279
-///C074027//////arophy of cerebellum
+arophy of cerebellum///C074027
 cerebral atrophy///C0235946
 brain atrophy///C0235946
 atrophy of the brain///C0235946
@@ -3652,3 +3652,8 @@ generalized tonic-clonic seizures with focal onset///C0877017
 bilateral tonic-clonic seizure with generalized onset///C4476643
 primarily generalised tonic clonic seizures///C4476643
 generalised-onset bilateral tonic-clonic seizures///C4476643
+Trisomy 21///C3537167
+Chromosome 21 trisomy///C3537167
+hypercholesterolaemia///C0020443	
+High Cholesterol Levels///C0020443
+ASD///C1510586
