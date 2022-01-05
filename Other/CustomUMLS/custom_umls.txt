@@ -3652,3 +3652,17 @@ C0877017	generalized tonic-clonic seizures with focal onset
 C4476643	bilateral tonic-clonic seizure with generalized onset
 C4476643	primarily generalised tonic clonic seizures
 C4476643	generalised-onset bilateral tonic-clonic seizures
+C0030508	parasomnia
+C3809094	occipital lobe infarct	
+C3665337	no problems at birth
+C3665337	birth history was normal	
+C4523971	epilepsy surgery	
+C0078981	arachnoid cyst
+C0276226	herpes encephalitis
+C0338437	neurocysticercosis
+C0338437	Cerebral cysticercosis
+C0559478	perinatal hypoxia
+C0559478	hypoxia during birth
+C0011194	Déjà vu
+C0011194	deja vu
+C0037567	Episenta
