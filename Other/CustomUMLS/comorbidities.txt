@@ -1287,4 +1287,21 @@ C0235946	cortical atrophy
 C0041341	tuberous sclerosis
 C0011854	type 1 diabetes
 C0011860	type 2 diabetes
-
+C3537167	Trisomy 21
+C3537167	Chromosome 21 trisomy
+C0020443	hypercholesterolaemia	
+C0020443	High Cholesterol Levels
+C1510586	ASD
+C0030508	parasomnia
+C3809094	occipital lobe infarct	
+C3665337	no problems at birth
+C3665337	birth history was normal	
+C4523971	epilepsy surgery	
+C0078981	arachnoid cyst
+C0276226	herpes encephalitis
+C0338437	neurocysticercosis
+C0338437	Cerebral cysticercosis
+C0559478	perinatal hypoxia
+C0559478	hypoxia during birth
+C0011194	Déjà vu
+C0011194	deja vu
