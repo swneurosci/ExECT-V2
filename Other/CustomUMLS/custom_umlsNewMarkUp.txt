@@ -3657,3 +3657,18 @@ Chromosome 21 trisomy///C3537167
 hypercholesterolaemia///C0020443	
 High Cholesterol Levels///C0020443
 ASD///C1510586
+parasomnia///C0030508
+occipital lobe infarct///C3809094
+no problems at birth///C3665337
+birth history was normal///C3665337
+epilepsy surgery///C4523971
+arachnoid cyst///C0078981
+herpes encephalitis///C0276226
+encephalitis due to herpes virus///C0276226
+neurocysticercosis///C0338437
+Cerebral cysticercosis///C0338437
+perinatal hypoxia///C0559478 PREF-Perinatal hypoxia
+hypoxia during birth///C0559478 PREF-Perinatal hypoxia
+deja vu///C0011194
+Déjà vu///C0011194
+Episenta///C0037567
