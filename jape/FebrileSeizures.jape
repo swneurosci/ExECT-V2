@@ -17,10 +17,10 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = NoFebSeizures1, Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, 
-Negation = :item.Lookup3.Negation 
-// STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Negation = :item.Lookup3.Negation, PREF = :item.Lookup3.PREF
+//STY = :item.Lookup3.STY,
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-// Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, Negation = :item.Lookup3.Negation
+//Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, Negation = :item.Lookup3.Negation
 }
 
 Rule: NoFebSeizures2
@@ -37,13 +37,13 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = NoFebSeizures2, Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI,
- Negation = :item.Lookup3.Negation 
-// STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+ Negation = :item.Lookup3.Negation, PREF = :item.Lookup3.PREF 
+// STY = :item.Lookup3.STY,
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-// Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, Negation = :item.Lookup3.Negation
+//Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, Negation = :item.Lookup3.Negation
 }
 
-// Why affirmed?
+
 Rule: NoFebSeizures2a
 Priority: 100
 
@@ -57,15 +57,15 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = NoFebSeizures2a, //PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-// STY = :item.Lookup3.STY, Negation = "Affirmed",
+:item.PatientHistory = {rule = NoFebSeizures2a, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 // Certainty = :item.Lookup3.Certainty
-Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, 
-Negation = "Affirmed" 
-// STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+Certainty = :item.Lookup3.Certainty, 
+ Negation = :item.Lookup3.Negation
+// STY = :item.Lookup3.STY, 
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-// Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, Negation = :item.Lookup3.Negation
+// Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, 
 }
 
 
@@ -84,7 +84,7 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = NoFebSeizures3, Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI,
- Negation = :item.Lookup3.Negation 
+ Negation = :item.Lookup3.Negation , PREF = :item.Lookup3.PREF
 // STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 // Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, Negation = :item.Lookup3.Negation
@@ -92,7 +92,7 @@ Priority: 100
 
 Rule: NoFebSeizures3a
 Priority: 100
-//this rule reverses the experiences from other to patient as for saome reason - other follewe just after, it applied it to the patient//
+//this rule reverses the experiences from other to patient as for some reason - other following just after, it applied it to the patient//
 (   
 	({Person})?
     {Lookup2.majorType == historic}
@@ -106,10 +106,10 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = NoFebSeizures3a, Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI,
- Negation = :item.Lookup3.Negation 
+ Negation = :item.Lookup3.Negation , PREF = :item.Lookup3.PREF
 // STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-// Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, Negation = :item.Lookup3.Negation
+Certainty = :item.Lookup3.Certainty
 }
 
 
@@ -126,7 +126,7 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = NoFebSeizures4, Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI,
- Negation = :item.Lookup3.Negation 
+ Negation = :item.Lookup3.Negation, PREF = :item.Lookup3.PREF
 // STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 // Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, Negation = :item.Lookup3.Negation
@@ -144,7 +144,7 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = NoFebSeizures4a, Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI,
- Negation = :item.Lookup3.Negation 
+ Negation = :item.Lookup3.Negation, PREF = :item.Lookup3.PREF
 // STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 // Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, Negation = :item.Lookup3.Negation
@@ -163,7 +163,7 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = NoFebSeizures4b, Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI,
- Negation = :item.Lookup3.Negation 
+ Negation = :item.Lookup3.Negation , PREF = :item.Lookup3.PREF
 // STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 // Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, Negation = :item.Lookup3.Negation
@@ -183,10 +183,10 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = NoFebSeizures4c, Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI,
- Negation = :item.Lookup3.Negation 
+ Negation = :item.Lookup3.Negation ,PREF = :item.Lookup3.PREF
 // STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-// Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, Negation = :item.Lookup3.Negation
+//Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, Negation = :item.Lookup3.Negation
 }
 
 Rule: FebSeizures5
@@ -203,10 +203,10 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = FebSeizures5, Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI,
- Negation = :item.Lookup3.Negation, 
+ Negation = :item.Lookup3.Negation, PREF = :item.Lookup3.PREF,
 // STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-// Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, Negation = :item.Lookup3.Negation
+//Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI, Negation = :item.Lookup3.Negation,
 AgeUnit =:match.Age.AgeUnit,
 Age =:match.Age.Age,
 AgeLower =:match.Age.AgeLower,
@@ -227,11 +227,11 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = FebSeizures7, //PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = FebSeizures7, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 // STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-// Certainty = :item.Lookup3.Certainty,
- Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI,
+Certainty = :item.Lookup3.Certainty,
+ Certainty = :item.Lookup3.Certainty, 
  Negation = :item.Lookup3.Negation,
 AgeLower =:match.Age.AgeLower,
 Age =:match.Age.Age,
@@ -253,11 +253,11 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = FebSeizures8, //PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.PatientHistory = {rule = FebSeizures8, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 // STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 // Certainty = :item.Lookup3.Certainty,
- Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI,
+ Certainty = :item.Lookup3.Certainty, 
  Negation = :item.Lookup3.Negation,
 AgeUnit = :match.Age.AgeUnit,
 AgeUpper = :match.Age.AgeUpper,
@@ -275,9 +275,8 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = FebSeizures9, //PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-// STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+:item.PatientHistory = {rule = FebSeizures9, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+Negation = :item.Lookup3.Negation,
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-// Certainty = :item.Lookup3.Certainty,
- Certainty = :item.Lookup3.Certainty, CUI = :item.Lookup3.CUI,
- Negation = :item.Lookup3.Negation}
+Certainty = :item.Lookup3.Certainty,
+ Certainty = :item.Lookup3.Certainty}

@@ -943,3 +943,4 @@ primarily generalised tonic clonic seizures	CUI=C4476643	PREF=Bilateral tonic-cl
 generalised-onset tonic clonic seizure	CUI=C4476643	PREF=Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
 bilateral tonic-clonic seizure with generalised onset	CUI=C4476643	PREF=Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
 generalised-onset bilateral tonic-clonic seizures	CUI=C4476643	PREF=Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
+TLE	CUI=C0014556	PREF=Epilepsy, Temporal Lobe	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes

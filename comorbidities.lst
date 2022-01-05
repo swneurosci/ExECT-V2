@@ -1342,7 +1342,7 @@ pituitary neoplasm	CUI=C0032019	PREF=Pituitary Neoplasms	TUI=T191	STY=Neoplastic
 tumour of pituitary gland	CUI=C0032019	PREF=Pituitary Neoplasms	TUI=T191	STY=Neoplastic Process
 pituitary gland tumour 	CUI=C0032019	PREF=Pituitary Neoplasms	TUI=T191	STY=Neoplastic Process
 CVA	CUI=C0038454	PREF=accident - cerebrovascular	TUI=T047	STY=Disease or Syndrome
-dysphasia	CUI=C0973461 PREF=Dysphasia	TUI=T047	STY=Disease or Syndrome
+dysphasia	CUI=C0973461	PREF=Dysphasia	TUI=T047	STY=Disease or Syndrome
 dyspraxia	CUI=C0003635	PREF=Apraxias	TUI=T048	STY=Mental or Behavioral Dysfunction
 apraxia	CUI=C0003635	PREF=Apraxias	TUI=T048	STY=Mental or Behavioral Dysfunction
 TBI	CUI=C0876926	PREF=traumatic brain injury	TUI=T037	STY=Injury or Poisoning
@@ -1387,3 +1387,19 @@ Chromosome 21 trisomy	CUI=C3537167	PREF=Trisomy 21	TUI=T049	STY=Cell or Molecula
 hypercholesterolaemia	CUI=C0020443	PREF=Hypercholesterolemia	TUI=T047	STY=Disease or Syndrome
 Hypercholesterolemia	CUI=C0020443	PREF=Hypercholesterolemia	TUI=T047	STY=Disease or Syndrome
 High Cholesterol Levels	CUI=C0020443	PREF=Hypercholesterolemia	TUI=T047	STY=Disease or Syndrome
+parasomnia	CUI=C0030508	PREF=Parasomnia	TUI=T047	STY=Disease or Syndrome	
+occipital lobe infarct	CUI=C3809094	PREF=Occipital lobe infarct	TUI=T047	STY=Disease or Syndrome	
+no problems at birth	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
+birth history was normal	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
+epilepsy surgery	CUI=C4523971	PREF=Epilepsy surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
+arachnoid cyst	CUI=C0078981	PREF=arachnoid cyst	TUI=T047	STY=Disease or Syndrome
+herpes encephalitis CUI=C0276226	PREF=Herpes encephalitis	TUI=T047	STY=Disease or Syndrome
+encephalitis due to herpes virus CUI=C0276226	PREF=Herpes encephalitis	TUI=T047	STY=Disease or Syndrome
+herpes simplex encephalitis CUI=C0276226	PREF=Herpes encephalitis	TUI=T047	STY=Disease or Syndrome
+neurocysticercosis	CUI=C0338437	PREF=Neurocysticercosis	TUI=T047	STY=Disease or Syndrome
+Cerebral cysticercosis	CUI=C0338437	PREF=Neurocysticercosis	TUI=T047	STY=Disease or Syndrome
+perinatal hypoxia	CUI=C0559478 PREF-Perinatal hypoxia		TUI=T046	STY=Pathologic Function
+hypoxia during birth	CUI=C0559478 PREF-Perinatal hypoxia		TUI=T046	STY=Pathologic Function	
+birth hypoxia	CUI=C0559478 PREF-Perinatal hypoxia		TUI=T046	STY=Pathologic Function
+deja vu	CUI=C0011194	PREF=Déjà vu	TUI=T041	STY=Mental Process
+Déjà vu	CUI=C0011194	PREF=Déjà vu	TUI=T041	STY=Mental Process

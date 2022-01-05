@@ -17,7 +17,7 @@ Rule: OtherDiagnosisC
 
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagnosisC,   //PREF = :item.OtherDiag.PREF,
+:item.PatientHistory = {rule = OtherDiagnosisC, PREF = :item.OtherDiag.PREF,
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
