@@ -1398,8 +1398,8 @@ encephalitis due to herpes virus CUI=C0276226	PREF=Herpes encephalitis	TUI=T047	
 herpes simplex encephalitis CUI=C0276226	PREF=Herpes encephalitis	TUI=T047	STY=Disease or Syndrome
 neurocysticercosis	CUI=C0338437	PREF=Neurocysticercosis	TUI=T047	STY=Disease or Syndrome
 Cerebral cysticercosis	CUI=C0338437	PREF=Neurocysticercosis	TUI=T047	STY=Disease or Syndrome
-perinatal hypoxia	CUI=C0559478 PREF-Perinatal hypoxia		TUI=T046	STY=Pathologic Function
-hypoxia during birth	CUI=C0559478 PREF-Perinatal hypoxia		TUI=T046	STY=Pathologic Function	
-birth hypoxia	CUI=C0559478 PREF-Perinatal hypoxia		TUI=T046	STY=Pathologic Function
+perinatal hypoxia	CUI=C0559478	PREF=Perinatal hypoxia	TUI=T046	STY=Pathologic Function
+hypoxia during birth	CUI=C0559478	PREF=Perinatal hypoxia	TUI=T046	STY=Pathologic Function	
+birth hypoxia	CUI=C0559478	PREF=Perinatal hypoxia	TUI=T046	STY=Pathologic Function
 deja vu	CUI=C0011194	PREF=Déjà vu	TUI=T041	STY=Mental Process
 Déjà vu	CUI=C0011194	PREF=Déjà vu	TUI=T041	STY=Mental Process
