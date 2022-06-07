@@ -51,7 +51,7 @@ Priority: 100
 CUI = :item.Lookup.CUI,
 // PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-// Certainty = :item.Lookup.Certainty,
+Certainty = :item.Lookup.Certainty,
 YearDate = :match.DateSince.YearDate,
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
@@ -62,20 +62,20 @@ Rule: OnsetDateB4
 Priority: 100
 
 (   
-	
+	// Lookcup from epilepsy.lst or seizure.lst, which is affirmed (not negated) and refers to a Patient (not Other)
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed, Lookup.minorType == Disease , Lookup.Experiencer == Patient}):item
-    {Split}
-    {Lookup2.language == onset , Lookup2.type == began}
-	{Lookup2}
-	{DateSince}
+    {Split} //end of sentence
+    {Lookup2.language == onset , Lookup2.type == began} //onset term based on Onset.lst
+	{Lookup2} //any Lookup2 
+	{DateSince} //from a rule defining date since = term (since, in) + DayDate
 		
  ):match  
- -->
+ --> // this is annotation output: Lookup with features as an Onset entity
 :item.Onset = {rule = OnsetDateB4, OnsetType = "date_of_onset", 
 CUI = :item.Lookup.CUI,
 // PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-// Certainty = :item.Lookup.Certainty,
-YearDate = :match.DateSince.YearDate,
+Certainty = :item.Lookup.Certainty, // certainty level transferred from the lookup
+YearDate = :match.DateSince.YearDate, //date split into 3 elements, YearDate, MonthDate, DayDate
 MonthDate =:match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}

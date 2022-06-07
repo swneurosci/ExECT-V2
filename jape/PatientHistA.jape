@@ -779,7 +779,12 @@ Priority: 80
 :item.PatientHistory = {rule = PtHistoryA21, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty,
+TimePeriod = :match.OtherDiag.TimePeriod,
+LowerNumberOfTimePeriods = :match.OtherDiag.LowerNumberOfTimePeriods,
+UpperNumberOfTimePeriods =:match.OtherDiag.UpperNumberOfTimePeriods,
+NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods}
+
 
 
 
