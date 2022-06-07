@@ -1062,7 +1062,7 @@ neonatal asphyxia	CUI=C0004045	PREF=Birth asphyxia	TUI=T047	STY=Disease or Syndr
 asphyxia at birth	CUI=C0004045	PREF=Birth asphyxia	TUI=T047	STY=Disease or Syndrome
 Birth trauma, asphyxia and hypoxia	CUI=C0411037	PREF=Birth trauma, asphyxia and hypoxia	TUI=T047	STY=Disease or Syndrome
 fetal distress	CUI=C0015930	PREF=Fetal distress	TUI=T046	STY=Pathologic Function
-birth injury	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
+foetal distress	CUI=C0015930	PREF=Fetal distress	TUI=T046	STY=Pathologic Function
 birth trauma	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
 perinatal insult	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
 perinatal injury	CUI=C0005604	PREF=Birth injury	TUI=T037	STY=Injury or Poisoning
@@ -1240,7 +1240,7 @@ SMART	CUI=C3665809	PREF=stroke-like migraine attacks after radiation therapy	TUI
 SMART syndrome	CUI=C3665809	PREF=stroke-like migraine attacks after radiation therapy	TUI=T046	STY=Pathologic Function
 astrocytoma	CUI=C0004114	PREF=Astrocytoma	TUI=T191	STY=Neoplastic Process
 cerebral astrocytoma	CUI=C0750935	PREF=Cerebral Astrocytoma	TUI=T191	STY=Neoplastic Process
-hemisphere astrocytoma	CUI=C0750935	PREF=Cerebral Astrocytoma	TUI=T191	STY=Neoplastic Process
+hemisphere astrocytoma	CUI=C3695127	PREF=Astrocytoma of brain	TUI=T191	STY=Neoplastic Process
 Cerebral Hemispheric Astrocytoma	CUI=C0750935	PREF=Cerebral Astrocytoma	TUI=T191	STY=Neoplastic Proces
 Astrocytoma of cerebrum	CUI=C0750935	PREF=Cerebral Astrocytoma	TUI=T191	STY=Neoplastic Process
 headache with migraine	CUI=C0149931	PREF=migraine disorders	TUI=T047	STY=Disease or Syndrome
