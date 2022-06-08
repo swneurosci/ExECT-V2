@@ -59,3 +59,5 @@ should stop:context=future
 titrated:context=past
 To add:context=future
 to add:context=future
+switched to:context=past
+switch to:context=future
