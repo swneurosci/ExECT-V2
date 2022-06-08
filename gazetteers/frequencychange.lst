@@ -66,3 +66,7 @@ reappeared:Quantity=Increased
 returned:Quantity=Increased
 coming down:Quantity=Decreased:=
 going up:Quantity=Increased:=
+more of his:Quantity=Same
+more of her:Quantity=Same
+no further seizures:Quantity=Decreased:ContainsLookUp=Yes
+not had any further seizures:Quantity=Decreased:ContainsLookUp=Yes
