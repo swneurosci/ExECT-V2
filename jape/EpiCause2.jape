@@ -17,6 +17,7 @@ Priority: 100
 	
     {Lookup.Negation == Affirmed}
     {Split}
+    ({Lookup2.minorType == opinion})?
     ({Lookup2.minorType == probability})?
     {Lookup2.minorType == causality}
     ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
