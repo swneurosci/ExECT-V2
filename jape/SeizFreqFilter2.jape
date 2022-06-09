@@ -7,7 +7,7 @@ Rule: SeizureFrequencyFilter2
     ({SFreqSentence contains {SeizureFrequency11 notContains SFBlock}, SFreqSentence notContains SFBlock})
 ):match
 -->
-:match.SeizureFrequency2 = { rule2 = "SFBlockFilter", rule = :match.SeizureFrequency11.rule, string = :match@string, CUI = :match.SeizureFrequency11.CUI, TimePeriod = :match.SeizureFrequency11.TimePeriod,
+:match.SeizureFrequency2 = { rule2 = "SFBlockFilter", rule = :match.SeizureFrequency11.rule,  CUI = :match.SeizureFrequency11.CUI, TimePeriod = :match.SeizureFrequency11.TimePeriod,
 NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, NumberOfSeizures  = :match.SeizureFrequency11.NumberOfSeizures ,
 LowerNumberOfSeizures  = :match.SeizureFrequency11.LowerNumberOfSeizures, UpperNumberOfSeizures  = :match.SeizureFrequency11.UpperNumberOfSeizures,
 YearDate = :match.SeizureFrequency11.YearDate, DayDate = :match.SeizureFrequency11.DayDate, MonthDate = :match.SeizureFrequency11.MonthDate,

@@ -12,7 +12,7 @@ NumberOfTimePeriods = :match.SeizureFrequencyDriving.NumberOfTimePeriods, Number
 LowerNumberOfSeizures  = :match.SeizureFrequencyDriving.LowerNumberOfSeizures, UpperNumberOfSeizures  = :match.SeizureFrequencyDriving.UpperNumberOfSeizures,
 YearDate = :match.SeizureFrequencyDriving.YearDate, DayDate = :match.SeizureFrequencyDriving.DayDate, MonthDate = :match.SeizureFrequencyDriving.MonthDate,
 SinceOrDuration = :match.SeizureFrequencyDriving.SinceOrDuration, Certainty = :match.SeizureFrequencyDriving.Certainty, Negation = :match.SeizureFrequencyDriving.Negation,
-AgeUnit = :match.SeizureFrequencyDriving.AgeUnit, Age = :match.SeizureFrequencyDriving.Age, AgeLower = :match.SeizureFrequencyDriving.AgeLower, AgeUpper = :match.SeizureFrequencyDriving.AgeUpper, string = :match.SeizureFrequencyDriving.string,
+AgeUnit = :match.SeizureFrequencyDriving.AgeUnit, Age = :match.SeizureFrequencyDriving.Age, AgeLower = :match.SeizureFrequencyDriving.AgeLower, AgeUpper = :match.SeizureFrequencyDriving.AgeUpper, 
 PointInTime = :match.SeizureFrequencyDriving.PointInTime, LowerNumberOfTimePeriods = :match.SeizureFrequencyDriving.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizureFrequencyDriving.UpperNumberOfTimePeriods}
 
 
