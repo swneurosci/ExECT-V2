@@ -43,3 +43,4 @@ underwent:type=treated
 treated:type=treated
 delivery:type=birth
 known to suffer:type=history
+known to have:type=history
