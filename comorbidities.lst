@@ -1403,3 +1403,5 @@ hypoxia during birth	CUI=C0559478	PREF=Perinatal hypoxia	TUI=T046	STY=Pathologic
 birth hypoxia	CUI=C0559478	PREF=Perinatal hypoxia	TUI=T046	STY=Pathologic Function
 deja vu	CUI=C0011194	PREF=Déjà vu	TUI=T041	STY=Mental Process
 Déjà vu	CUI=C0011194	PREF=Déjà vu	TUI=T041	STY=Mental Process
+intra-cerebral haematoma	CUI=C2937358	PREF=intracerebral haematoma	TUI=T046	STY=Pathologic Function
+basal ganglia haematoma	CUI=C1956233	PREF=Hematoma, Basal Ganglia	TUI=T047	STY=Disease or Syndrome
