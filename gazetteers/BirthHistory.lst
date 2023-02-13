@@ -1,4 +1,4 @@
-premature:value=under_37_weeks:TUI=T046:CUI=C0151526
+was premature:value=under_37_weeks:TUI=T046:CUI=C0151526
 prematurely:value=under_37_weeks:TUI=T046:CUI=C0151526
 preterm:value=under_37_weeks:TUI=T046:CUI=C0151526
 born early:value=under_37_weeks:TUI=T046:CUI=C0151526
@@ -14,3 +14,9 @@ born at term:value=term_birth:TUI=T040:CUI=C0233324
 term birth:value=term_birth:TUI=T040:CUI=C0233324
 term:value=term_birth:TUI=T040:CUI=C0233324
 at term:value=term_birth:TUI=T040:CUI=C0233324
+premature delivery:value=under_37_weeks:TUI=T046:CUI=C0151526
+prematurely:value=under_37_weeks:TUI=T046:CUI=C0151526
+preterm:value=under_37_weeks:TUI=T046:CUI=C0151526
+born early:value=under_37_weeks:TUI=T046:CUI=C0151526
+pre term:value=under_37_weeks:TUI=T046:CUI=C0151526
+premature delivery:value=under_37_weeks:TUI=T046:CUI=C0151526
