@@ -923,7 +923,7 @@ Generalized tonic chronic seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI
 epilepsy with generalised tonic chronic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy with generalised tonic clonic seizures from sleep	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy with generalised tonic clonic seizure from sleep	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-post cerebrovascular accident epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yespost-cerebrovascular accident epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+post cerebrovascular accident epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 post-stroke epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 post stroke epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 partial adversive seizure	CUI=C2237348	PREF=simple partial seizure adversive	TUI=T033	STY=Finding
@@ -937,10 +937,11 @@ structural epilepsy	CUI=C4524097	PREF=Structural epilepsy	TUI=T047	STY=Disease o
 localisation based epilepsy	CUI=C0014547	PREF=Epilepsies, Partial	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 localised based epilepsy	CUI=C0014547	PREF=Epilepsies, Partial	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 localised epilepsy	CUI=C0014547	PREF=Epilepsies, Partial	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-partial motor seizures with secondary generalisation	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome 
+partial motor seizures with secondary generalisation	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 primarily generalised tonic-clonic seizures	CUI=C4476643	PREF=Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
 primarily generalised tonic clonic seizures	CUI=C4476643	PREF=Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
 generalised-onset tonic clonic seizure	CUI=C4476643	PREF=Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
 bilateral tonic-clonic seizure with generalised onset	CUI=C4476643	PREF=Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
 generalised-onset bilateral tonic-clonic seizures	CUI=C4476643	PREF=Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
 TLE	CUI=C0014556	PREF=Epilepsy, Temporal Lobe	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+focal onset seizures	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
