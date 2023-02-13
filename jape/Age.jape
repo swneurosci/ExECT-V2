@@ -10,7 +10,7 @@ Rule: Age1a
 Priority: 80
 
 (   
-	{age}
+	{age} 
 	{Numeric}
 	{timePeriod}
 	
@@ -49,6 +49,7 @@ Rule: Age1d
 Priority: 100
 
 (   
+	
 	{Numeric}
 	{age.AgeUnit == Year}
 	
@@ -77,13 +78,13 @@ Priority:60
 
 (   
     {timeElapsed}
-	{age.value == aged}
-	{Numeric}
+	({age.value == aged}
+	{Numeric}):item
 	
  ):match  
  -->
 :match.Age = {rule =Age_since2, AgeUnit = "Year",
-Age =:match.Numeric.value}  
+Age =:item.Numeric.value}  
 
 
 Rule: Age_since3
@@ -140,7 +141,7 @@ Priority: 90
 AgeUnit = "Year"}  
 
 
-//when a numeric age is followed by a less precise lookup2 age group i.e. 12 year old eenager
+//when a numeric age is followed by a less precise lookup2 age group i.e. 12 year old teenager
 //the numeric value of age should be picked up
  Rule: Age_Range2a
 Priority: 100
