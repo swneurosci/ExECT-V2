@@ -7,7 +7,7 @@ Rule: TimeSinceDiagnosis1
 Priority: 99
 
 (   
-    {Person}
+    ({Person})?
 	({Lookup2.language == onset})?
     {DiagnosisTriggers.majorType == diagnosis}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
@@ -18,7 +18,7 @@ Priority: 99
  ):match  
  -->
 :item.WhenDiagnosed = {rule = TimeSinceDiagnosis1 , OnsetType = "time_since_diagnosis",
-// PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
+PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Experiencer = :item.Lookup.Experiencer,
 Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation,
 TimePeriod = :match.timePeriod.time-unit,
@@ -41,7 +41,7 @@ Priority: 99
  ):match  
  -->
 :item.WhenDiagnosed = {rule = TimeSinceDiagnosis2 , OnsetType = "time_since_diagnosis",
-// PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
+PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Experiencer = :item.Lookup.Experiencer,
 Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation,
 TimePeriod = :match.timePeriod.time-unit,
@@ -60,10 +60,28 @@ Priority: 99
 	
  ):match  
  -->
-:item.WhenDiagnosed = {rule = TimeSinceDiagnosis , OnsetType = "time_since_diagnosis",
+:item.WhenDiagnosed = {rule = TimeSinceDiagnosis3 , OnsetType = "time_since_diagnosis",
 PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Experiencer = :item.Lookup.Experiencer,
 Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation,
 TimePeriod = :match.TimeSince.TimePeriod,
 NumberOfTimePeriods =:match.TimeSince.NumberOfTimePeriods}
 
+Rule: TimeSinceDiagnosis4
+Priority: 99
+
+(   
+   
+    {DiagnosisTriggers.majorType == diagnosis}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
+	({Lookup2.majorType == historic})
+	{TimeSince}
+	
+ ):match  
+ -->
+:item.WhenDiagnosed = {rule = TimeSinceDiagnosis4 , OnsetType = "time_since_diagnosis",
+PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation,
+TimePeriod = :match.TimeSince.TimePeriod,
+NumberOfTimePeriods =:match.TimeSince.NumberOfTimePeriods}
