@@ -49,3 +49,5 @@ had a daughter:Since=ChildBirth
 had a kid:Since=ChildBirth
 Last Month:Since=Last_Month
 Last Week:Since=Last_Week
+since her birth:Since=From_Birth
+since his birth:Since=From_Birth
