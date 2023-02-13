@@ -5,7 +5,7 @@ aged:value=aged
 before the age of:value=topAge
 until the age of:value=topAge
 till the age of:value=topAge
-at the age of:value=aged
+the age of:value=aged
 at age:value=aged
 years old:value=aged:AgeUnit=Year
 he turned:value=topAge
