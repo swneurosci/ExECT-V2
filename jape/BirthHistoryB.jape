@@ -44,9 +44,10 @@ Rule: BirthB3
 Priority: 100
 
 (
-    {DiagnosisTriggers}
+    {DiagnosisTriggers} 
     ({Lookup3})?
-    ({Lookup2})*
+    ({Lookup2})?
+    ({Lookup2})?
     ({Lookup3.PREF =~ "Birth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
    
 
@@ -99,6 +100,7 @@ Priority: 100
 (
     
     {Person}
+    ({Lookup2})?
     ({Lookup2})?
     ({Lookup3.PREF =~ "[Bb]irth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
    
