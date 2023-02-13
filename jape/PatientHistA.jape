@@ -761,7 +761,7 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty} 
 
-Rule: PtHistoryA21 //with an opinion//
+/*Rule: PtHistoryA21 //with an opinion//
 Priority: 80
 
 ( 
@@ -783,7 +783,7 @@ Certainty = :item.OtherDiag.Certainty,
 TimePeriod = :match.OtherDiag.TimePeriod,
 LowerNumberOfTimePeriods = :match.OtherDiag.LowerNumberOfTimePeriods,
 UpperNumberOfTimePeriods =:match.OtherDiag.UpperNumberOfTimePeriods,
-NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods}
+NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods}*/
 
 
 
