@@ -110,3 +110,27 @@ Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Loo
 YearDate = :match.DateSince.YearDate,
 MonthDate = :match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
+
+
+Rule: DateDiagnosed6
+Priority: 90
+
+
+(   
+	({Person})?	
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient}):item
+	({Lookup2})?
+	({DiagnosisTriggers.majorType == diagnosis, DiagnosisTriggers.type != seizureType})
+	({Lookup2})?
+	{DateSince}
+	
+ ):match  
+ -->
+:item.WhenDiagnosed = {rule = DateDiagnosed6, OnsetType = "When_Diagnosed", 
+PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation,
+YearDate = :match.DateSince.YearDate,
+MonthDate = :match.DateSince.MonthDate,
+DayDate = :match.DateSince.DayDate}
+
