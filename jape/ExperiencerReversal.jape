@@ -71,6 +71,8 @@ Rule: ExperiencerReversal3
 Rule: ExperiencerReversal4
 
 (
+  ({!OtherPerson.majorType == family})
+  ({!Lookup2})
 	({Lookup3.majorType == umls, Lookup3.minorType == OtherDisease, 
     Lookup3.Experiencer == Other}):umls
     {Conj.majorType == grammar}
@@ -174,7 +176,9 @@ Rule: ExperiencerReversal9  /*reversing from patient to other*/
 
  (
   {Person.minorType == pronoun}
+  ({Lookup2})?
   {OtherPerson.majorType == family}
+  ({Conj})?
   {Lookup2.majorType == historic, Lookup2.type == past}
   ({Lookup2})?
   ({Lookup2})?
