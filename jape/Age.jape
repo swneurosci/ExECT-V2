@@ -220,10 +220,10 @@ Priority: 90
 (   
 	{age}
 	({Numeric}):N1
-	({timePeriod})?
+	({timePeriod.timeUnit == month})
 	({Token.string == and})
 	({Numeric}):N2
-	({timePeriod}):a
+	({timePeriod.timeUnit == month}):a
  ):match  
  -->
 :match.Age = {rule =Age_Range3b, AgeLower =:N1.Numeric.value,
@@ -259,7 +259,7 @@ Priority: 100
 AgeUpper = :match.Lookup2.upperAge, AgeUnit =:match.Lookup2.timeUnit}  
 
 
-/*when years are converted to months if the upper age is given in months, up to 2 years*/
+/*when years are converted to months if the upper age is given in months, up to 5 years*/
 Rule: Age_Range6  
 Priority: 100
 
@@ -274,3 +274,5 @@ Priority: 100
  -->
 :match.Age = {rule =Age_Range6, AgeLower =:match.YearToMonths.value, AgeUnit = :match.timePeriod.time-unit,
 AgeUpper =:match.Numeric.value} 
+
+
