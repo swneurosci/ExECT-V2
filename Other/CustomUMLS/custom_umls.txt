@@ -3639,7 +3639,7 @@ C0195775	brain surgery
 C0039070	syncopal
 C4524097	structural epilepsy
 C0740279	cerebellar atrophy
-C074027		arophy of cerebellum
+C0740279	arophy of cerebellum
 C0235946	cerebral atrophy	
 C0235946	brain atrophy
 C0235946	atrophy of the brain	
@@ -3666,3 +3666,12 @@ C0559478	hypoxia during birth
 C0011194	Déjà vu
 C0011194	deja vu
 C0037567	Episenta
+C0456798	perinatal trauma
+C0019080	haemorrhage
+C0025007	measles
+C0740392	MCA infarct	
+C0740392	MCA stroke	
+C0018946	subdural haemorrhage
+C0018946	subdural haematoma	
+C0020615	hypoglycaemia
+C0020615	hypoglycaemic
