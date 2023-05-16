@@ -29,6 +29,7 @@ seizure frequency:type=seizureType:SF=true
 Seizure frequency:type=seizureType:SF=true
 Seizure Frequency:type=seizureType:SF=true
 I think that:type=opinion
+I do think:type=opinion
 Seizure types:type=seizureType
 My impression is:type=opinion
 History is suggestive of:type=opinion
