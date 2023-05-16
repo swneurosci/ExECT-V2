@@ -29,4 +29,38 @@ Priority: 100
 :match.YearToMonths = {rule = YearToMonths2 , value = "24" , timePeriod = "Month"}
 
 
+Rule: YearToMonths3
+Priority: 100
 
+(   
+    
+    {Numeric.value == 3}
+	{timePeriod.time-unit == Year}
+    
+ ):match  
+ -->
+:match.YearToMonths = {rule = YearToMonths3 , value = "36" , timePeriod = "Month"}
+
+Rule: YearToMonths4
+Priority: 100
+
+(   
+    
+    {Numeric.value == 4}
+	{timePeriod.time-unit == Year}
+    
+ ):match  
+ -->
+:match.YearToMonths = {rule = YearToMonths4 , value = "48" , timePeriod = "Month"}
+
+Rule: YearToMonths5
+Priority: 100
+
+(   
+    
+    {Numeric.value == 5}
+	{timePeriod.time-unit == Year}
+    
+ ):match  
+ -->
+:match.YearToMonths = {rule = YearToMonths5 , value = "60" , timePeriod = "Month"}
