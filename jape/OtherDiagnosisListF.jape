@@ -27,7 +27,7 @@ Priority: 99
 
 (   
 	({DiagnosisTriggers.type == diagnosis})
-	{Conj.type == list}
+	({Conj.type == list})
 	{OtherDiag}
 	({Conj.type == list}|{Conj.type == with})
 	({OtherDiag}):item
@@ -129,8 +129,9 @@ Priority: 100
 	({NewLine})?
 	({Conj.type == list})
 	({Conj})
-	({Conj})
+	({Conj})?
 	{OtherDiag}
+	({NewLine})?
 	({OtherDiag}):item
     
  ):match  
@@ -178,3 +179,5 @@ Priority: 100
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation,
 YearDate = :item.OtherDiag.YearDate} 
+
+
