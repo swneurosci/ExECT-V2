@@ -12,6 +12,8 @@ Rule: OtherDiagnosisC
 (   	
 	{DiagnosisTriggers.type == diagnosis}
 	{NewLine}
+	({NewLine})?
+	({NewLine})?
 	({OtherDiag}):item
     {NewLine}
 
@@ -22,23 +24,26 @@ Rule: OtherDiagnosisC
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation,
-YearDate = :match.OtherDiag.YearDate,
-MonthDate =:match.OtherDiag.MonthDate,
-Age = :match.Age.Age,
-AgeUnit = :match.Age.AgeUnit,
-AgeLower = :match.Age.AgeLower,
-AgeUpper =:match.Age.AgeUppe}
+YearDate = :item.OtherDiag.YearDate,
+MonthDate =:item.OtherDiag.MonthDate,
+Age = :item.OtherDiag.Age,
+AgeUnit = :item.OtherDiag.AgeUnit,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUppe}
 
 
 Rule: OtherDiagnosisC1
 
 (   
 	{DiagnosisTriggers.type == diagnosis}
+	{NewLine}
+	({NewLine})?
+	({NewLine})?
 	{OtherDiag}
-	{NewLine}
-	{NewLine}
+	({NewLine})
+	({NewLine})?
 	({OtherDiag}):item
-    {NewLine}
+    ({NewLine})
 
  ):match  
  -->
@@ -47,12 +52,12 @@ Rule: OtherDiagnosisC1
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation,
-YearDate = :match.OtherDiag.YearDate,
-MonthDate =:match.OtherDiag.MonthDate,
-Age = :match.Age.Age,
-AgeUnit = :match.Age.AgeUnit,
-AgeLower = :match.Age.AgeLower,
-AgeUpper =:match.Age.AgeUppe}
+YearDate = :item.OtherDiag.YearDate,
+MonthDate =:item.OtherDiag.MonthDate,
+Age = :item.OtherDiag.Age,
+AgeUnit = :item.OtherDiag.AgeUnit,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUppe}
 
 Rule: OtherDiagnosisC2
 
@@ -70,19 +75,20 @@ Rule: OtherDiagnosisC2
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation,
-YearDate = :match.OtherDiag.YearDate,
-MonthDate =:match.OtherDiag.MonthDate,
-Age = :match.Age.Age,
-AgeUnit = :match.Age.AgeUnit,
-AgeLower = :match.Age.AgeLower,
-AgeUpper =:match.Age.AgeUppe}
+YearDate = :item.OtherDiag.YearDate,
+MonthDate =:item.OtherDiag.MonthDate,
+Age = :item.OtherDiag.Age,
+AgeUnit = :item.OtherDiag.AgeUnit,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUppe}
 
 Rule: OtherDiagnosisC3
 
 (   
 	{DiagnosisTriggers.type == diagnosis}
-	{NewLine}
+	({NewLine})?
 	({OtherDiag})
+	({NewLine})?
 	({OtherDiag}):item
     {NewLine}
 
@@ -93,12 +99,12 @@ Rule: OtherDiagnosisC3
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation,
-YearDate = :match.OtherDiag.YearDate,
-MonthDate =:match.OtherDiag.MonthDate,
-Age = :match.Age.Age,
-AgeUnit = :match.Age.AgeUnit,
-AgeLower = :match.Age.AgeLower,
-AgeUpper =:match.Age.AgeUppe}
+YearDate = :item.OtherDiag.YearDate,
+MonthDate =:item.OtherDiag.MonthDate,
+Age = :item.OtherDiag.Age,
+AgeUnit = :item.OtherDiag.AgeUnit,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUppe}
 
 Rule: OtherDiagnosisC4
 
@@ -116,12 +122,12 @@ Rule: OtherDiagnosisC4
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation,
-YearDate = :match.OtherDiag.YearDate,
-MonthDate =:match.OtherDiag.MonthDate,
-Age = :match.Age.Age,
-AgeUnit = :match.Age.AgeUnit,
-AgeLower = :match.Age.AgeLower,
-AgeUpper =:match.Age.AgeUppe} 
+YearDate = :item.OtherDiag.YearDate,
+MonthDate =:item.OtherDiag.MonthDate,
+Age = :item.OtherDiag.Age,
+AgeUnit = :item.OtherDiag.AgeUnit,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUppe} 
 
 
 Rule: OtherDiagnosisC5
@@ -140,12 +146,12 @@ Rule: OtherDiagnosisC5
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation,
-YearDate = :match.OtherDiag.YearDate,
-MonthDate =:match.OtherDiag.MonthDate,
-Age = :match.Age.Age,
-AgeUnit = :match.Age.AgeUnit,
-AgeLower = :match.Age.AgeLower,
-AgeUpper =:match.Age.AgeUppe} 
+YearDate = :item.OtherDiag.YearDate,
+MonthDate =:item.OtherDiag.MonthDate,
+Age = :item.OtherDiag.Age,
+AgeUnit = :item.OtherDiag.AgeUnit,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUppe} 
 
 Rule: OtherDiagnosisC5a
 
@@ -163,9 +169,37 @@ Rule: OtherDiagnosisC5a
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation,
-YearDate = :match.OtherDiag.YearDate,
-MonthDate =:match.OtherDiag.MonthDate,
-Age = :match.Age.Age,
-AgeUnit = :match.Age.AgeUnit,
-AgeLower = :match.Age.AgeLower,
-AgeUpper =:match.Age.AgeUppe} 
+YearDate = :item.OtherDiag.YearDate,
+MonthDate =:item.OtherDiag.MonthDate,
+Age = :item.OtherDiag.Age,
+AgeUnit = :item.OtherDiag.AgeUnit,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUppe} 
+
+Rule: OtherDiagnosisC6
+
+(   
+	{DiagnosisTriggers.type == diagnosis}
+	{NewLine}
+	({NewLine})?
+	{OtherDiag}
+	({NewLine})
+	{OtherDiag}
+	({NewLine})?
+	({OtherDiag}):item
+    ({NewLine})
+
+ ):match  
+ -->
+:item.PatientHistory = {rule = OtherDiagnosisC6,  PREF = :item.OtherDiag.PREF,
+// STY = :item.OtherDiag.STY, 
+// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Negation = :item.OtherDiag.Negation,
+YearDate = :item.OtherDiag.YearDate,
+MonthDate =:item.OtherDiag.MonthDate,
+Age = :item.OtherDiag.Age,
+AgeUnit = :item.OtherDiag.AgeUnit,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUppe}
+
