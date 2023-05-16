@@ -73,3 +73,12 @@ convulsive seizure:CUI=C0751494:PREF=Convulsive Seizures:TUI=T184-:STY=Sign or S
 convulsive seizures:CUI=C0751494:PREF=Convulsive Seizures:TUI=T184-:STY=Sign or Symptom:CAT=Seizures
 absence episode:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Seizures
 absence episodes:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Seizures
+"blank" episodes:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Slang
+"blank" episode:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Slang
+"blank" spells:CUI=C0563606:PREF=Vacant episode:TUI=T048:STY=Mental or Behavioral Dysfunction:CAT=Slang
+seizure-like:CUI=C0748601:PREF=seizure like event:TUI=T033:STY=Finding:CAT=Slang
+jerking episode:CUI=C0231530:PREF=Muscle twitch:TUI=T033:STY=Finding:CAT=Slang
+jerk-like episodes:CUI=C0231530:PREF=Muscle twitch:TUI=T033:STY=Finding:CAT=Slang
+jerk like episodes:CUI=C0231530:PREF=Muscle twitch:TUI=T033:STY=Finding:CAT=Slang
+jerk-like episode:CUI=C0231530:PREF=Muscle twitch:TUI=T033:STY=Finding:CAT=Slang
+jerk like episode:CUI=C0231530:PREF=Muscle twitch:TUI=T033:STY=Finding:CAT=Slang
