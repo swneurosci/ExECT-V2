@@ -1,6 +1,9 @@
 premature:value=premature
+prematurely at:value=premature_at
 prematurely:value=premature
 preterm:value=premature
 term:value=at term
 born early:value=premature
 pre term:value=premature
+early:value=premature
+short of full term:value=premature
