@@ -73,6 +73,7 @@ Priority: 99
 
 (  
  	{Lookup2.minorType == opinion, Lookup2.majorType == diagnosis}
+	({Lookup2})?
 	({OtherDiag}):item
  ):match  
  -->
