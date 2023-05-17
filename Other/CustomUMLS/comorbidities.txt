@@ -1305,3 +1305,9 @@ C0559478	perinatal hypoxia
 C0559478	hypoxia during birth
 C0011194	Déjà vu
 C0011194	deja vu
+C0456798	perinatal trauma
+C0019080	haemorrhage
+C0018946	subdural haemorrhage
+C0018946	subdural haematoma	
+C0020615	hypoglycaemia
+C0020615	hypoglycaemic
