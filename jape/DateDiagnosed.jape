@@ -1,5 +1,5 @@
 Phase: DateDiagnosed
-Input: Lookup Person Lookup2 DateSince Sentence DiagnosisTriggers PointInTime Number
+Input: Lookup Person Lookup2 DateSince Sentence DiagnosisTriggers PointInTime Number Lookup3
 
 Options: control=appelt
 

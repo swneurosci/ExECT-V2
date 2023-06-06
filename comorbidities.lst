@@ -1190,7 +1190,7 @@ chronic headache	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease or Synd
 chronic headaches	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease or Syndrome
 alcohol abuse	CUI=C0085762	PREF=alcohol abuse	TUI=T048	STY=Mental or Behavioral Dysfunction
 history of alcohol abuse	CUI=C0221628	PREF=history of alcohol abuse	TUI=T033	STY=Finding
-diabetes	CUI=C0011847	PREF=Diabetes	TUI=T047	STY=Disease or Syndrome
+diabetes	CUI=C0011849	PREF=Diabetes Mellitus	TUI=T047	STY=Disease or Syndrome
 attention deficit hyperactivity disorder	CUI=C1263846	PREF=Attention deficit hyperactivity disorder	TUI=T048	STY=Mental or Behavioral Dysfunctiona
 adhd	CUI=C1263846	PREF=Attention deficit hyperactivity disorder	TUI=T048	STY=Mental or Behavioral Dysfunctiona
 attention deficit disorder	CUI=C1263846	PREF=Attention deficit hyperactivity disorder	TUI=T048	STY=Mental or Behavioral Dysfunctiona
@@ -1326,7 +1326,7 @@ sleep apnoea	CUI=C0037315	PREF=Sleep Apnea Syndromes	TUI=T047	STY=Disease or Syn
 NEAD	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
 Perimembranous ventricular septal defect	CUI=C0344925	PREF=Perimembranous ventricular septal defect	TUI=T019	STY=Congenital Abnormality
 Perimembranous VSD	CUI=C0344925	PREF=Perimembranous ventricular septal defect	TUI=T019	STY=Congenital Abnormality
-transient cerebral ischemia	CUI=C0007787	PREF=Transient Ischemic Attack	TUI=T047	STY=Disease or Syndrome
+transient cerebral ischaemia	CUI=C0007787	PREF=Transient Ischemic Attack	TUI=T047	STY=Disease or Syndrome
 transient cerebral attack	CUI=C0007787	PREF=Transient Ischemic Attack	TUI=T047	STY=Disease or Syndrome
 TIA	CUI=C0007787	PREF=Transient Ischemic Attack	TUI=T047	STY=Disease or Syndrome
 borderline personality disorder	CUI=C0006012	PREF=Borderline Personality Disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
@@ -1363,7 +1363,7 @@ normal vaginal delivery	CUI=C3665337	PREF=Normal birth	TUI=T033	STY=Finding
 normal delivery	CUI=C3665337	PREF=Normal birth	TUI=T033	STY=Finding
 brain surgery	CUI=C0195775	PREF=Operation on brain	TUI=T061	STY=Therapeutic or Preventive Procedure
 sub-arachnoid hemorrhage	CUI=C0038525	PREF=Subarachnoid hemorrhage	TUI=T047	STY=Disease or Syndrome
-diabetic	CUI=C0011847	PREF=Diabetes	TUI=T047	STY=Disease or Syndrome
+diabetic	CUI=C0011849	PREF=Diabetes Mellitus	TUI=T047	STY=Disease or Syndrome
 syncopal	CUI=C0039070	PREF=syncope	TUI=T184	STY=sign or symptom
 cerebellar atrophy	CUI=C0740279	PREF=Atrophy of cerebellum	TUI=T047	STY=Disease or Syndrome
 arophy of cerebellum	CUI=C0740279	PREF=Atrophy of cerebellum	TUI=T047	STY=Disease or Syndrome
@@ -1377,10 +1377,10 @@ Transient loss of consciousness	CUI=C4087400	PREF=Transient loss of consciousnes
 type 1 diabetes	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
 diabetes type 1	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
 diabetes type I	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
-Diabetes Mellitus Type I	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
-Diabetes type 2	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
-Diabetes Mellitus Type II	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
-Type 2 diabetes	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+diabetes mellitus Type I	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+diabetes type 2	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+diabetes Mellitus Type II	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+type 2 diabetes	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
 Trisomy 21	CUI=C3537167	PREF=Trisomy 21	TUI=T049	STY=Cell or Molecular Dysfunction
 Chromosome 21 trisomy	CUI=C3537167	PREF=Trisomy 21	TUI=T049	STY=Cell or Molecular Dysfunction
 hypercholesterolaemia	CUI=C0020443	PREF=Hypercholesterolemia	TUI=T047	STY=Disease or Syndrome
@@ -1444,3 +1444,23 @@ hypertensions	CUI=C0020538	PREF=Hypertensive disease	TUI=T047	STY=Disease or Syn
 hypoglycaemia	CUI=C0020615	PREF=Hypoglycemia	TUI=T047	STY=Disease or Syndrome
 hypoglycemia	CUI=C0020615	PREF=Hypoglycemia	TUI=T047	STY=Disease or Syndrome
 hypoglycemic	CUI=C0020615	PREF=Hypoglycemia	TUI=T047	STY=Disease or Syndrome
+hypoxia during a long birth	CUI=C0559478	PREF=Perinatal hypoxia, birth	TUI=T046	STY=Pathologic Function
+non-insulin dependent diabetes	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+non-insulin dependent diabetes mellitus	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+type 1 diabetes	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+insulin-dependent diabetes	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+diabetes insipidus	CUI=C0011848	PREF=Diabetes Insipidus	TUI=T047	STY=Disease or Syndrome
+insipidus diabetes 	CUI=C0011848	PREF=Diabetes Insipidus	TUI=T047	STY=Disease or Syndrome
+gestational diabetes 	CUI=C0085207	PREF=Gestational Insipidus	TUI=T047	STY=Disease or Syndrome
+pregnancy-induced diabetes 	CUI=C0085207	PREF=Gestational Insipidus	TUI=T047	STY=Disease or Syndrome
+disturbance of consciousness	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding	
+altered of consciousness	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding	
+impaired consciousness	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding	
+altered awareness and consciousness	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding
+brain ischaemia	CUI=C0007786	PREF=Brain ischemia	TUI=T047	STY=Disease or Syndrome
+ischaemic damage left inferior frontal lobe	CUI=C0007786	PREF=Brain ischemia	TUI=T047	STY=Disease or Syndrome
+ischaemic damage right inferior frontal lobe	CUI=C0007786	PREF=Brain ischemia	TUI=T047	STY=Disease or Syndrome
+ischaemic damage right frontal lobe	PREF=Brain ischemia	CUI=C0007786	TUI=T047	STY=Disease or Syndrome
+ischaemic damage left frontal lobe	PREF=Brain ischemia	CUI=C0007786	TUI=T047	STY=Disease or Syndrome
+amygdalohippocampectomy	CUI=C2921031	PREF=Amygdalohippocampectomy	TUI=T061	STY=Therapeutic or Preventive Procedure
+hippocampectomy	CUI=C2921031	PREF=Amygdalohippocampectomy	TUI=T061	STY=Therapeutic or Preventive Procedure

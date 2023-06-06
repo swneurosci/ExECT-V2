@@ -3675,3 +3675,23 @@ C0018946	subdural haemorrhage
 C0018946	subdural haematoma	
 C0020615	hypoglycaemia
 C0020615	hypoglycaemic
+C0559478	hypoxia during a long birth
+C0011860	non-insulin dependent diabetes	
+C0011860	non-insulin dependent diabetes mellitus
+C0011854	type 1 diabetes
+C0011854	insulin-dependent diabetes
+C0011848	diabetes insipidus
+C0011848	insipidus diabetes
+C0085207	gestational diabetes
+C0085207	pregnancy-induced diabetes
+C0234428	disturbance of consciousness
+C0234428	altered of consciousness
+C0234428	impaired consciousness
+C0234428	altered awareness and consciousness
+C0007786	brain ischaemia	CUI=	PREF=Brain ischemia
+C0007786	ischaemic damage left inferior frontal lobe
+C0007786	ischaemic damage right inferior frontal lobe
+C0007786	ischaemic damage right frontal lobe
+C0007786	ischaemic damage left frontal lobe
+C2921031	amygdalohippocampectomy
+C2921031	hippocampectomy

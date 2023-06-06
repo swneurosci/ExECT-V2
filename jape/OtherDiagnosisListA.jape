@@ -26,8 +26,8 @@ Rule: OtherDiagListA2
 Priority: 100
 
 (   ({DiagnosisTriggers.type == diagnosis})
-    {listPoint}
-	{listPoint}
+    ({listPoint})
+	({listPoint})
 	({OtherDiag}):item  
 	
  ):match  
