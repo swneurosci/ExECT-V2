@@ -2437,7 +2437,7 @@ C0151293	chronic headache
 C0151293	chronic headaches
 C0085762	alcohol abuse
 C0221628	history of alcohol abuse
-C0011847	diabetes
+C0011849	diabetes
 C1263846	attention deficit hyperactivity disorder
 C1263846	adhd
 C1263846	attention deficit disorder
@@ -3545,7 +3545,7 @@ C3697594	post cerebrovascular accident epilepsy
 C2237348	partial adversive seizure
 C4749367	mesial temporal lobe epilepsy with hippocampal sclerosis
 C2080645	photosensitive seizure
-C0011847	diabetes
+C0011849	diabetes
 C1263846	attention deficit hyperactivity disorder
 C1263846	adhd
 C1263846	attention deficit disorder
@@ -3695,3 +3695,8 @@ C0007786	ischaemic damage right frontal lobe
 C0007786	ischaemic damage left frontal lobe
 C2921031	amygdalohippocampectomy
 C2921031	hippocampectomy
+C0221505	lobe lesion
+C1456496	lobe damage
+C0234428	blackout
+C0494475	bilateral tonic-clonic	
+C0751495	focal in onset
