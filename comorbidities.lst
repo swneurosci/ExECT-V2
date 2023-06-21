@@ -1107,11 +1107,8 @@ neoplasms	CUI=C0027651	PREF=neoplasms	TUI=T191	STY=Neoplastic Process
 lesion of brain	CUI=C0221505	PREF=lesion of brain	TUI=T047	STY=Disease or Syndrome
 bran lesion	CUI=C0221505	PREF=lesion of brain	TUI=T047	STY=Disease or Syndrome
 mass lesion of temporal lobe on left	CUI=C2026259	PREF=mass lesion of temporal lobe on left	TUI=T047	STY=Disease or Syndrome
-left temporal lobe lesion	CUI=C2026259	PREF=mass lesion of temporal lobe on left	TUI=T047	STY=Disease or Syndrome
 mass lesion of temporal lobe on right	CUI=C2026260	PREF=mass lesion of temporal lobe on right	TUI=T047	STY=Disease or Syndrome
-right temporal lobe lesion	CUI=C2026260	PREF=mass lesion of temporal lobe on right	TUI=T047	STY=Disease or Syndrome
 mass lesion of temporal lobe	CUI=C2026258	PREF=mass lesion of temporal lobe	TUI=T047	STY=Disease or Syndrome
-temporal lobe lesion	CUI=C2026258	PREF=mass lesion of temporal lobe	TUI=T047	STY=Disease or Syndrome
 temporal structural lesion	CUI=C2026258	PREF=mass lesion of temporal lobe	TUI=T047	STY=Disease or Syndrome
 benigh brain lesion	CUI=C0741634	PREF=brain lesion benign	TUI=T047	STY=Disease or Syndrome
 autistic spectrum disorder	CUI=C1510586	PREF=Autism Spectrum Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
@@ -1379,7 +1376,7 @@ diabetes type 1	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	
 diabetes type I	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
 diabetes mellitus Type I	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
 diabetes type 2	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
-diabetes Mellitus Type II	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+diabetes mellitus Type II	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
 type 2 diabetes	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
 Trisomy 21	CUI=C3537167	PREF=Trisomy 21	TUI=T049	STY=Cell or Molecular Dysfunction
 Chromosome 21 trisomy	CUI=C3537167	PREF=Trisomy 21	TUI=T049	STY=Cell or Molecular Dysfunction
@@ -1464,3 +1461,11 @@ ischaemic damage right frontal lobe	PREF=Brain ischemia	CUI=C0007786	TUI=T047	ST
 ischaemic damage left frontal lobe	PREF=Brain ischemia	CUI=C0007786	TUI=T047	STY=Disease or Syndrome
 amygdalohippocampectomy	CUI=C2921031	PREF=Amygdalohippocampectomy	TUI=T061	STY=Therapeutic or Preventive Procedure
 hippocampectomy	CUI=C2921031	PREF=Amygdalohippocampectomy	TUI=T061	STY=Therapeutic or Preventive Procedure
+lobe lesion	CUI=C0221505	PREF=lesion of brain	TUI=T033	STY=Finding
+lobe damage	CUI=C1456496	PREF=brain damage	TUI=T037	STY=Injury or Poisoning
+blackout	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding	
+blackouts	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding	
+non insulin dependent diabetes	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
+too much alcohol	CUI=C0085762	PREF=alcohol abuse	TUI=T048	STY=Mental or Behavioral Dysfunction
+altered awareness	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding
+altered consciousness	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding
