@@ -951,3 +951,7 @@ focal onset convulsive seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizu
 grand mal seizure	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
 grand mal seizures	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
 symptomatic structural epilepsy	CUI=C0472349	PREF=Localization-related symptomatic epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+epilepsy with generalised tonic clonic seizure alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+bilateral tonic clonic	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+bilateral tonic-clonic	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
+focal in onset	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
