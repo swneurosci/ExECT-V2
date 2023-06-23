@@ -955,3 +955,9 @@ epilepsy with generalised tonic clonic seizure alone	CUI=C0393697	PREF=Epilepsy 
 bilateral tonic clonic	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
 bilateral tonic-clonic	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047	STY=Disease or Syndrome
 focal in onset	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
+focal to bilateral convulsive seizure	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+focal impaired awareness seizures	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
+temporal lobe onset	CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Disease or Syndrome
+partial motor seizures	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
+focal epileptic seizures	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
+focal dyscognitive seizures	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
