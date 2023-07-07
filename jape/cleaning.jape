@@ -32,12 +32,12 @@ Rule: url1
 Rule: cleanHealthCareTerms
 
 (
-  ({Lookup.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup.STY ==~ "[Dd]isease"}|{Lookup.STY ==~ "[Ii]njury or [Pp]oisoning"})
+  ({Lookup.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup.STY ==~ "[Dd]isease"}|{Lookup.STY ==~ "[Ii]njury or [Pp]oisoning"}):lookup
   ({Lookup2.majorType == organization} | {Location})
 ):umls
 -->
-:umls { 
-  inputAS.removeAll(umlsAnnots);
+:lookup { 
+  inputAS.removeAll(lookupAnnots);
 },
 :umls.LookupDeleted = {rule = cleanHealthCareTerms}
 
@@ -47,12 +47,12 @@ Rule: cleanHealthCareTerms
 
 (
    ({Lookup2.majorType == organization} | {Location})
-   ({Lookup.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup.STY ==~ "[Dd]isease"})
+   ({Lookup.STY ==~ "[Ss]ign or [Ss]ymptom"} | {Lookup.STY ==~ "[Dd]isease or [Ss]yndrome"} | {Lookup.STY ==~ "[Dd]isease"}):lookup
   
 ):umls
 -->
-:umls { 
-  inputAS.removeAll(umlsAnnots);
+:lookup { 
+  inputAS.removeAll(lookupAnnots);
 },
 :umls.LookupDeleted = {rule = cleanHealthCareTerms}
 
