@@ -1259,7 +1259,7 @@ migrainous	CUI=C0149931	PREF=migraine disoreders	TUI=T047	STY=Disease or Syndrom
 anterior temporal lobectomy	CUI=C1136214	PREF=Anterior Temporal Lobectomy	TUI=T061	STY=Therapeutic or Preventive Procedure
 temporal lobe resection	CUI=C1136214	PREF=Anterior Temporal Lobectomy	TUI=T061	STY=Therapeutic or Preventive Procedure
 astrocytoma treated with surgery	CUI=C1096492	PREF=Astrocytoma surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
-dissociative convulsions	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction	
+dissociative convulsions	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
 dissociative seizure	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
 dissociative convulsion	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
 dissociative seizures	CUI=C0349245	PREF=Dissociative convulsions	TUI=T048	STY=Mental or Behavioral Dysfunction
@@ -1331,7 +1331,7 @@ transient cerebral ischemia	CUI=C0007787	PREF=Transient Ischemic Attack	TUI=T047
 transient cerebral attack	CUI=C0007787	PREF=Transient Ischemic Attack	TUI=T047	STY=Disease or Syndrome
 TIA	CUI=C0007787	PREF=Transient Ischemic Attack	TUI=T047	STY=Disease or Syndrome
 borderline personality disorder	CUI=C0006012	PREF=Borderline Personality Disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
-personality disorder	CUI= C0031212	PREF=Personality Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
+personality disorder	CUI=C0031212	PREF=Personality Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
 Behavioural disorder	CUI=C0004930	PREF=Behavioural disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
 behavioural disturbance	CUI=C0004930	PREF=Behavioural disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
 behavioral disorder	CUI=C0004930	PREF=Behavioural disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
@@ -1355,8 +1355,8 @@ Polymicrogyria	CUI=C0266464	PREF=Polymicrogyria TUI=T019	STY=Congenital Abnormal
 ataxia	CUI=C0004134	PREF=Ataxia	TUI=T184	STY=sign or symptom
 hearing impairment	CUI=C1384666	PREF=hearing impairment	TUI=T047	STY=Disease or Syndrome
 hearing loss	CUI=C1384666	PREF=hearing impairment	TUI=T047	STY=Disease or Syndrome
-photosensitive	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding	
-excess alcohol consumption	CUI=C0085762	PREF=alcohol abuse	TUI=T048	STY=Mental or Behavioral Dysfunction 
+photosensitive	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
+excess alcohol consumption	CUI=C0085762	PREF=alcohol abuse	TUI=T048	STY=Mental or Behavioral Dysfunction
 photoparoxysmal response on EEG	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
 photosensitivity	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
 photosensitive	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	STY=Finding
@@ -1373,8 +1373,8 @@ brain atrophy	CUI=C0235946	PREF=Cerebral atrophy	TUI=T047	STY=Disease or Syndrom
 atrophy of the brain	CUI=C0235946	PREF=Cerebral atrophy	TUI=T047	STY=Disease or Syndrome
 Cortical atrophy	CUI=C0235946	PREF=Cerebral atrophy	TUI=T047	STY=Disease or Syndrome
 tuberous sclerosis	CUI=C0041341	PREF=Tuberous Sclerosis	TUI=T191	STY=Neoplastic Process
-loss of consciousness	CUI=C0041657	PREF=Loss of consciousness	TUI=T033	STY=Finding	
-Transient loss of consciousness	CUI=C4087400	PREF=Transient loss of consciousness	TUI=T033	STY=Finding	
+loss of consciousness	CUI=C0041657	PREF=Loss of consciousness	TUI=T033	STY=Finding
+Transient loss of consciousness	CUI=C4087400	PREF=Transient loss of consciousness	TUI=T033	STY=Finding
 type 1 diabetes	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
 diabetes type 1	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
 diabetes type I	CUI=C0011854	PREF=Diabetes Mellitus, Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
@@ -1387,8 +1387,8 @@ Chromosome 21 trisomy	CUI=C3537167	PREF=Trisomy 21	TUI=T049	STY=Cell or Molecula
 hypercholesterolaemia	CUI=C0020443	PREF=Hypercholesterolemia	TUI=T047	STY=Disease or Syndrome
 Hypercholesterolemia	CUI=C0020443	PREF=Hypercholesterolemia	TUI=T047	STY=Disease or Syndrome
 High Cholesterol Levels	CUI=C0020443	PREF=Hypercholesterolemia	TUI=T047	STY=Disease or Syndrome
-parasomnia	CUI=C0030508	PREF=Parasomnia	TUI=T047	STY=Disease or Syndrome	
-occipital lobe infarct	CUI=C3809094	PREF=Occipital lobe infarct	TUI=T047	STY=Disease or Syndrome	
+parasomnia	CUI=C0030508	PREF=Parasomnia	TUI=T047	STY=Disease or Syndrome
+occipital lobe infarct	CUI=C3809094	PREF=Occipital lobe infarct	TUI=T047	STY=Disease or Syndrome
 no problems at birth	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
 birth history was normal	CUI=C3665337	PREF=Normal Birth	TUI=T033	STY=Finding
 epilepsy surgery	CUI=C4523971	PREF=Epilepsy surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
@@ -1399,7 +1399,9 @@ herpes simplex encephalitis CUI=C0276226	PREF=Herpes encephalitis	TUI=T047	STY=D
 neurocysticercosis	CUI=C0338437	PREF=Neurocysticercosis	TUI=T047	STY=Disease or Syndrome
 Cerebral cysticercosis	CUI=C0338437	PREF=Neurocysticercosis	TUI=T047	STY=Disease or Syndrome
 perinatal hypoxia	CUI=C0559478	PREF=Perinatal hypoxia	TUI=T046	STY=Pathologic Function
-hypoxia during birth	CUI=C0559478	PREF=Perinatal hypoxia	TUI=T046	STY=Pathologic Function	
+hypoxia during birth	CUI=C0559478	PREF=Perinatal hypoxia	TUI=T046	STY=Pathologic Function
 birth hypoxia	CUI=C0559478	PREF=Perinatal hypoxia	TUI=T046	STY=Pathologic Function
 deja vu	CUI=C0011194	PREF=Déjà vu	TUI=T041	STY=Mental Process
 Déjà vu	CUI=C0011194	PREF=Déjà vu	TUI=T041	STY=Mental Process
+meningioma resection	CUI=C1096493	PREF=Meningioma surgery	TUI=T061	STY=Therapeutic or Preventive Procedure
+sub-arachnoid haemorrhage	CUI=C0038525	PREF=Subarachnoid hemorrhage	TUI=T047	STY=Disease or Syndrome
