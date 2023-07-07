@@ -9,11 +9,11 @@ Rule: onsetAge1
 Priority: 99
 
 (   
-	{Person}
+	({Person})?
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.language == onset}
-	{Person.majorType == person}
-	({Lookup2.majorType == historic})
+	({Person.majorType == person})?
+	({Lookup2.majorType == historic})?
 	{Age}
 		
  ):match  
@@ -154,6 +154,7 @@ Priority: 99
 	{Person}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient  ,Lookup.minorType == Disease}):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.type != diagnosed }
+	({TimeSince})?
 	{Age}	
 	
  ):match  
@@ -338,7 +339,7 @@ Priority: 98
 (  
 	
 	({Person})?
-	({Lookup2.type == historic})?
+	({Lookup2.type == historic})
 	({Lookup.majorType == umls, Lookup.Negation == Affirmed,  Lookup.Experiencer == Patient, Lookup.minorType == Disease}):item
 	{Lookup2.language == onset, Lookup2.type == began}
 	{Age}
@@ -353,3 +354,24 @@ Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
 AgeUpper = :match.Age.AgeUpper}
+
+Rule: onsetAge15
+Priority: 99
+
+(   
+	{Age}
+	({Person})?
+	({Lookup2.language == onset, Lookup2.type != diagnosed})
+	({Lookup.majorType == umls ,Lookup.minorType == Disease, Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient}):item
+	({Age}):a
+):match  
+ -->
+:item.Onset = {rule = onsetAge15, OnsetType = "age_episodes_started", 
+CUI = :item.Lookup.CUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+//STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty,
+Age = :a.Age.Age,
+AgeUnit = :a.Age.AgeUnit,
+AgeLower = :a.Age.AgeLower,
+AgeUpper = :a.Age.AgeUpper}

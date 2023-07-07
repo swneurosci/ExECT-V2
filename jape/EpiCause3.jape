@@ -18,6 +18,7 @@ Priority: 100
 
 (   
 	({PatientHistory}):item
+  (({Lookup2.minorType == probability})?):a
 	{Lookup2.minorType == causality}
     ({Lookup})
  ):match  
@@ -25,4 +26,4 @@ Priority: 100
 :item.EpilepsyCause = {rule = Cause3a, PREF = :item.PatientHistory.PREF, CUI = :item.PatientHistory.CUI, 
 STY = :item.PatientHistory.STY, Negation = :item.PatientHistory.Negation,
 Experiencer = :item.PatientHistory.Experiencer, Temporality = :item.PatientHistory.Temporality, 
-Certainty = :item.PatientHistory.Certainty}
+Certainty = :a.Lookup2.Level}

@@ -1,5 +1,5 @@
 Phase: AgeDiagnosed
-Input: Lookup Person Lookup2 Sentence Age DiagnosisTriggers OtherPerson
+Input: Lookup Person Lookup2 Sentence Age DiagnosisTriggers  Pronouns
 
 
   /*includes AgeDiagnosedRange*/
@@ -36,6 +36,7 @@ Priority: 99
 
 (   
 	{Person}
+	({Pronouns})?
     {Lookup2.majorType == historic}
     {DiagnosisTriggers.type == diagnosis}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient }):item
@@ -58,6 +59,7 @@ Priority: 99
 
 (   
 	{Person}
+	({Pronouns})?
     {Lookup2.majorType == historic}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient }):item
     {DiagnosisTriggers.type == diagnosis}
@@ -79,7 +81,8 @@ Priority: 99
 
 (   
 
-	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient }):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed }):item
+	({Lookup2})?
 	({Lookup2})?
     {DiagnosisTriggers.type == diagnosis}
 	{Age}
@@ -103,9 +106,11 @@ Priority: 99
 	({Lookup2.type != began})
 	{Age}
 	({Person})?
+	({Pronouns})?
 	({Lookup2.majorType == historic})?
 	{DiagnosisTriggers.type == diagnosis}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient }):item
+	
     	
  ):match  
  -->

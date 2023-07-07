@@ -436,3 +436,7 @@ generalised-onset tonic clonic seizure	CUI=C4476643	PREF=Bilateral tonic-clonic 
 bilateral tonic-clonic seizure with generalised onset	CUI=C4476643	PREF=Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
 generalised-onset bilateral tonic-clonic seizures	CUI=C4476643	PREF=Bilateral tonic-clonic seizure with generalized onset	TUI=T184	STY=sign or symptom
 focal dyscognitive seizure	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
+secondary generalisation	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+focal onset seizures	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
+focal onset convulsive seizure	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
+focal onset convulsive seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome

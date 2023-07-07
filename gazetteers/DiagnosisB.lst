@@ -9,3 +9,4 @@ refractory:epilepsy=refractory:CUI=C1096063:PREF=Drug Resistant Epilepsy
 intractable:epilepsy=refractory:CUI=C1096063:PREF=Drug Resistant Epilepsy
 secondary generalisation:epilepsy=secondary generalisation:CUI=C0270838:PREF=Secondarily Generalized Seizures:LookUp=Yes
 secondary generalization:epilepsy=secondary generalisation:CUI=C0270838:PREF=Secondarily Generalized Seizures:LookUp=Yes
+symptomatic structural:epilepsy=symptomatic focal:CUI=C0472349:PREF=Localization-related symptomatic epilepsy:Lookup=Yes

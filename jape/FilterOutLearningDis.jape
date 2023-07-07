@@ -1,0 +1,15 @@
+Phase: EpilepsyCause
+Input:  EpilepsyCause
+Options: control=all
+// REMOVE FROM PIPELINE AND DELETE ME
+// This rule can be deleted
+Rule: RemoveFromEpiCause
+
+(
+    ({EpilepsyCause.PREF =~ "[Ll]earning" } | {EpilepsyCause.PREF =~ "[Dd]evelopment" }):umls
+):match
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls.RemovedEpiCause = {rule = RemoveFromEpiCause}

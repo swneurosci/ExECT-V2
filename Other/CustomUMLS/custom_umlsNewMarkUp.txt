@@ -3667,8 +3667,13 @@ herpes encephalitis///C0276226
 encephalitis due to herpes virus///C0276226
 neurocysticercosis///C0338437
 Cerebral cysticercosis///C0338437
-perinatal hypoxia///C0559478 PREF-Perinatal hypoxia
-hypoxia during birth///C0559478 PREF-Perinatal hypoxia
+perinatal hypoxia///C0559478
+hypoxia during birth///C0559478
 deja vu///C0011194
 Déjà vu///C0011194
 Episenta///C0037567
+perinatal trauma///C0456798
+haemorrhage///C0019080	
+measles///C0025007	
+MCA infarct///C0740392		
+MCA stroke///C0740392		

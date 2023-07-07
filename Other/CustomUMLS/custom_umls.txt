@@ -2437,7 +2437,7 @@ C0151293	chronic headache
 C0151293	chronic headaches
 C0085762	alcohol abuse
 C0221628	history of alcohol abuse
-C0011847	diabetes
+C0011849	diabetes
 C1263846	attention deficit hyperactivity disorder
 C1263846	adhd
 C1263846	attention deficit disorder
@@ -3545,7 +3545,7 @@ C3697594	post cerebrovascular accident epilepsy
 C2237348	partial adversive seizure
 C4749367	mesial temporal lobe epilepsy with hippocampal sclerosis
 C2080645	photosensitive seizure
-C0011847	diabetes
+C0011849	diabetes
 C1263846	attention deficit hyperactivity disorder
 C1263846	adhd
 C1263846	attention deficit disorder
@@ -3630,7 +3630,7 @@ C0151744	ischaemic heart disease
 C0151744	myocardial ischaemia	
 C0151744	IHD
 C0266464	Polymicrogyria
-C0004134	ataxia	
+C0004134	ataxia
 C1384666	hearing impairment	
 C1384666	hearing loss	
 C3552821	photoparoxysmal response on EEG	
@@ -3639,7 +3639,7 @@ C0195775	brain surgery
 C0039070	syncopal
 C4524097	structural epilepsy
 C0740279	cerebellar atrophy
-C074027		arophy of cerebellum
+C0740279	arophy of cerebellum
 C0235946	cerebral atrophy	
 C0235946	brain atrophy
 C0235946	atrophy of the brain	
@@ -3666,3 +3666,37 @@ C0559478	hypoxia during birth
 C0011194	Déjà vu
 C0011194	deja vu
 C0037567	Episenta
+C0456798	perinatal trauma
+C0019080	haemorrhage
+C0025007	measles
+C0740392	MCA infarct	
+C0740392	MCA stroke	
+C0018946	subdural haemorrhage
+C0018946	subdural haematoma	
+C0020615	hypoglycaemia
+C0020615	hypoglycaemic
+C0559478	hypoxia during a long birth
+C0011860	non-insulin dependent diabetes	
+C0011860	non-insulin dependent diabetes mellitus
+C0011854	type 1 diabetes
+C0011854	insulin-dependent diabetes
+C0011848	diabetes insipidus
+C0011848	insipidus diabetes
+C0085207	gestational diabetes
+C0085207	pregnancy-induced diabetes
+C0234428	disturbance of consciousness
+C0234428	altered of consciousness
+C0234428	impaired consciousness
+C0234428	altered awareness and consciousness
+C0007786	brain ischaemia	CUI=	PREF=Brain ischemia
+C0007786	ischaemic damage left inferior frontal lobe
+C0007786	ischaemic damage right inferior frontal lobe
+C0007786	ischaemic damage right frontal lobe
+C0007786	ischaemic damage left frontal lobe
+C2921031	amygdalohippocampectomy
+C2921031	hippocampectomy
+C0221505	lobe lesion
+C1456496	lobe damage
+C0234428	blackout
+C0494475	bilateral tonic-clonic	
+C0751495	focal in onset

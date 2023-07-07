@@ -507,9 +507,9 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, 
 AgeUnit = :match.OtherDiag.AgeUnit,
-Age =:match.OtherDiag.Age,
-AgeLower = :match.OtherDiag.AgeLower,
-AgeUpper =:match.OtherDiag.AgeUpper}
+Age =:item.OtherDiag.Age,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper}
 
 /*covers OtherDiag with TimeSince but also the simple phrases: he has OtherDiag */
 Rule: PtHistoryA13a  
@@ -529,10 +529,13 @@ Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Tempora
 Certainty = :item.OtherDiag.Certainty,
 TimePeriod = :item.OtherDiag.TimePeriod,
 NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods,
-AgeUnit = :match.OtherDiag.AgeUnit,
-Age =:match.OtherDiag.Age,
-AgeLower = :match.OtherDiag.AgeLower,
-AgeUpper =:match.OtherDiag.AgeUpper}
+AgeUnit = :item.OtherDiag.AgeUnit,
+Age =:item.OtherDiag.Age,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper,
+DayDate =:item.OtherDiag.DayDate,
+MonthDate = :item.OtherDiag.MonthDate,
+YearDate =:item.OtherDiag.YearDate}
 
 /*As above but picks up specific type Otherdiag with built in 'onset time since'  as no separate onset phrase 
 His seizures started 4 years ago*/
@@ -614,7 +617,7 @@ Priority: 90
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
-DayDate =:item.DateSince.DayDate,
+DayDate =:match.DateSince.DayDate,
 MonthDate =:match.DateSince.MonthDate,
 YearDate = :match.DateSince.YearDate}
 
@@ -672,10 +675,10 @@ Priority: 100
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, 
-AgeUnit =:match.OtherDiag.AgeUnit,
-Age =:match.OtherDiag.Age,
-AgeLower = :match.OtherDiag.AgeLower,
-AgeUpper =:match.OtherDiag.AgeUpper}
+AgeUnit =:item.OtherDiag.AgeUnit,
+Age =:item.OtherDiag.Age,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper}
 
 Rule: PtHistoryA18 
 Priority: 100
@@ -692,10 +695,10 @@ Priority: 100
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, 
-AgeUnit =:match.OtherDiag.AgeUnit,
-Age =:match.OtherDiag.Age,
-AgeLower = :match.OtherDiag.AgeLower,
-AgeUpper =:match.OtherDiag.AgeUpper}
+AgeUnit =:item.OtherDiag.AgeUnit,
+Age =:item.OtherDiag.Age,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper}
 
 
 
@@ -761,7 +764,7 @@ STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty} 
 
-Rule: PtHistoryA21 //with an opinion//
+/*Rule: PtHistoryA21 //with an opinion//
 Priority: 80
 
 ( 
@@ -783,7 +786,7 @@ Certainty = :item.OtherDiag.Certainty,
 TimePeriod = :match.OtherDiag.TimePeriod,
 LowerNumberOfTimePeriods = :match.OtherDiag.LowerNumberOfTimePeriods,
 UpperNumberOfTimePeriods =:match.OtherDiag.UpperNumberOfTimePeriods,
-NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods}
+NumberOfTimePeriods = :match.OtherDiag.NumberOfTimePeriods}*/
 
 
 
@@ -829,8 +832,8 @@ Priority: 80
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
-MonthDate =:match.OtherDiag.MonthDate,
-YearDate = :match.OtherDiag.YearDate}
+MonthDate =:item.OtherDiag.MonthDate,
+YearDate = :item.OtherDiag.YearDate}
 
 
 Rule: PtHistoryA24  /*It is to be a short rule so !Lookup2 stops it from picking up OtherDiag in more complex sentences*/
@@ -867,7 +870,8 @@ Priority: 80
 :item.PatientHistory = {rule = PtHistoryA24b, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty,
+PointInTime = :item.otherDiag.PointInTime}
 
 Rule: PtHistoryA24c  /*her last seizure / his treatment for- for example*/
 Priority: 70
@@ -885,7 +889,8 @@ Priority: 70
 :item.PatientHistory = {rule = PtHistoryA24c, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty,
+PointInTime = :item.OtherDiag.PointInTime}
 
 
 Rule: PtHistoryA25  /*referring this person for...*/
@@ -923,5 +928,5 @@ Priority: 40
 :item.PatientHistory = {rule = PtHistoryA26, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty}  
-
+Certainty = :item.OtherDiag.Certainty,  
+PointInTime = :item.otherDiag.PointInTime}

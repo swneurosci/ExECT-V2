@@ -20,15 +20,19 @@ Priority: 100
 	{DiagnosisTriggers.majorType == diagnosis}
     ({listPoint})?
     ({Lookup2})?
+    ({Lookup3})?
+    ({Lookup3})?
+    ({listPoint})?
     {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
 	{Lookup2.minorType == causality}
+    ({Lookup2})?
     ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
     Lookup3.Experiencer == Patient}):item
  ):match  
  -->
 :item.EpilepsyCause = {rule = Cause1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+//STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+//Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
 Rule: Cause3
@@ -46,8 +50,8 @@ Priority: 99
  ):match  
  -->
 :item.EpilepsyCause = {rule = Cause3, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+//STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+//Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
 Rule: Cause4
@@ -55,8 +59,9 @@ Priority: 99
 
 (   
 	
-    ({Lookup2.type == suffered}|{Lookup2.type == began})
+    ({Lookup2.type == suffered}|{Lookup2.type == began}|{Lookup2.minorType == causality})
     {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+    ({Lookup2})?
     {Lookup2.minorType == causality}
     ({Lookup2})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
@@ -65,9 +70,30 @@ Priority: 99
  ):match  
  -->
 :item.EpilepsyCause = {rule = Cause4, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+//STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+//Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
+
+Rule: Cause5
+Priority: 99
+
+(   
+	
+    ({DiagnosisTriggers})
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+    {Lookup2.minorType == causality}
+    ({Lookup2})?
+    ({Lookup2})?
+	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+    Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.EpilepsyCause = {rule = Cause5, PREF = :item.Lookup3.PREF, PREF = :item.Lookup2.PTRF, CUI = :item.Lookup3.CUI, 
+//STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+//Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
 
 Rule: Cause5
 Priority: 99
@@ -79,29 +105,72 @@ Priority: 99
     {Lookup2.minorType == causality}
     ({Lookup2})?
     ({Lookup2})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-    Lookup3.Experiencer == Patient}):item
+	({Lookup2.minorType == gestation}):item
     
  ):match  
  -->
-:item.EpilepsyCause = {rule = Cause5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
+:item.EpilepsyCause = {rule = Cause5, PREF = :item.Lookup2.value, CUI = :item.Lookup2.CUI, 
+//STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+//Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup2.Certainty}
 
 Rule: Cause6
 Priority: 99
 
 (   
 	
-    {DiagnosisTriggers}
-    {Lookup2.minorType == causality}
+    ({Lookup2.minorType == causality})
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+    ({Lookup2})?
+    ({Lookup2})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
     Lookup3.Experiencer == Patient}):item
-    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+    
  ):match  
  -->
 :item.EpilepsyCause = {rule = Cause6, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+//STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+//Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
+
+
+Rule: Cause7
+Priority: 100
+
+(   
+	
+    {Lookup.Negation == Affirmed}
+    {Lookup2.minorType == causality}
+    ({Lookup2})?
+    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+    Lookup3.Experiencer == Patient}):item
+  
+
+
+ ):match  
+ -->
+:item.EpilepsyCause = {rule = Cause7, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+//STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+//Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: Cause7a
+Priority: 100
+
+(   
+	
+    {Lookup.Negation == Affirmed}
+    ({Lookup2.minorType == probability}):a
+    {Lookup2.minorType == causality}
+    ({Lookup2})?
+    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+    Lookup3.Experiencer == Patient}):item
+  
+
+
+ ):match  
+ -->
+:item.EpilepsyCause = {rule = Cause7a, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+//STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+//Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :a.Lookup2.Level}

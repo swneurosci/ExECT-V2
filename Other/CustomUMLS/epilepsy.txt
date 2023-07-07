@@ -912,4 +912,4 @@ C0877017	generalized tonic-clonic seizures with focal onset
 C4476643	bilateral tonic-clonic seizure with generalized onset
 C4476643	primarily generalised tonic clonic seizures
 C4476643	generalised-onset bilateral tonic-clonic seizures
- 
+C0494475	bilateral tonic-clonic

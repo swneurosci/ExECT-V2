@@ -18,7 +18,7 @@ Priority: 98
  -->
 :item.Onset = {rule = onsetAgeRange1, OnsetType = "age_episodes_started", 
 CUI = :item.Lookup.CUI,
-// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 // Certainty = :item.Lookup.Certainty,
 Age = :match.Age.Age,
@@ -43,7 +43,7 @@ Priority: 98
  -->
 :item.Onset= {rule = onsetAgeRange3, OnsetType = "age_episodes_started", 
 CUI = :item.Lookup.CUI,
-// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 // Certainty = :item.Lookup.Certainty,
 Age = :match.Age.Age,
@@ -68,7 +68,7 @@ Priority: 98
  -->
 :item.Onset = {rule = onsetAgeRange5, OnsetType = "age_episodes_started", 
 CUI = :item.Lookup.CUI,
-// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 // Certainty = :item.Lookup.Certainty,
 Age = :match.Age.Age,
@@ -90,7 +90,7 @@ Priority: 98
  -->
 :item.Onset = {rule = onsetAgeRange6, OnsetType = "age_episodes_started", 
 CUI = :item.Lookup.CUI,
-// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 // Certainty = :item.Lookup.Certainty,
 Age = :match.Age.Age,
@@ -112,7 +112,7 @@ Priority: 98
  -->
 :item.Onset = {rule = onsetAgeRange7, OnsetType = "age_episodes_started", 
 CUI = :item.Lookup.CUI,
-// PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
 // Certainty = :item.Lookup.Certainty,
 Age = :match.Age.Age,
