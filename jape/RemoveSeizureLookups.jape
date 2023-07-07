@@ -94,3 +94,16 @@ Rule: RemoveLookup3Within  /*Removes generic lookup3 when it's within Diagnosis 
 },
 :umls.Lookup3Deleted = {rule = RemoveLookup3Within3}
 
+// added on 29/06/23  as a result of adding some concept to the coborbidities that are witin seizure terms --  may need checking
+
+Rule: RemoveLookup3Within4  /*Removes  lookup3 e.g. altered awareness  from focal seizures with altered awareness*/
+
+
+(
+  ({Lookup3 within {Lookup3.minorType == Disease}, Lookup3.minorType == OtherDisease}):umls
+):match
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls.Lookup3Deleted = {rule = RemoveLookup3Within4}

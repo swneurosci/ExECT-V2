@@ -3630,7 +3630,7 @@ C0151744	ischaemic heart disease
 C0151744	myocardial ischaemia	
 C0151744	IHD
 C0266464	Polymicrogyria
-C0004134	ataxia	
+C0004134	ataxia
 C1384666	hearing impairment	
 C1384666	hearing loss	
 C3552821	photoparoxysmal response on EEG	
