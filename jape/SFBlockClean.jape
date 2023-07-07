@@ -1,0 +1,15 @@
+Phase: SFBlockRemove
+Input: SFBlock Sentence DiagB Token
+Options: control=all
+
+Rule: SeizureFrequencySecondFilter
+(
+    ({DiagB})
+    ({SFBlock}):SFBlock
+   
+):match
+-->
+:match.SFBlockRemoved = {rule = "SFBlockRemove"},
+:SFBlock { 
+ inputAS.removeAll(SFBlockAnnots);
+}
