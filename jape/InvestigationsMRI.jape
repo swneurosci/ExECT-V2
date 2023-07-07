@@ -16,7 +16,7 @@ Priority: 100
 ):match
 -->
 :match.InvestigationIgnore = { rule = IgnoreInvestigationsOutcome1MRI, MRI_Performed = "Yes", MRI_Results = :outcome.InvestigationFindingMRI.Results, 
-CUI = :outcome.InvestigationFindingMRI.CUI, Negation = :outcome.InvestigationFindingMRI.Negation}
+CUI = :outcome.InvestigationFindingMRI.CUI}
 
 // MRI normal
 Rule: getInvestigationsOutcomeMRI
@@ -28,7 +28,7 @@ Priority: 99
 ):match
 -->
 :match.Investigations = { rule = getInvestigationsOutcome1MRI, MRI_Performed = "Yes", MRI_Results = :outcome.InvestigationFindingMRI.Results, 
-CUI = :outcome.InvestigationFindingMRI.CUI, Negation = :outcome.InvestigationFindingMRI.Negation}
+CUI = :outcome.InvestigationFindingMRI.CUI}
 
 // Removed the Investigation complete from Investigation gazetteer.
 // Rule: getInvestigationsOutcomeMRI2
@@ -38,7 +38,7 @@ CUI = :outcome.InvestigationFindingMRI.CUI, Negation = :outcome.InvestigationFin
 // ):match
 // -->
 // :match.Investigations = { rule = getInvestigationsOutcomeMRI2, MRI_Performed = "Yes", MRI_Results = :match.Investigation.Outcome, 
-// CUI = :match.Investigation.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+// CUI = :match.Investigation.CUI}
 
 // should, after his abnormal event, a MRI??? - hard to make an example for this
 Rule: IgnoreInvestigationsOutcomeMRI3
@@ -50,7 +50,7 @@ Priority: 97
 ):match
 -->
 :match.InvestigationIgnore = { rule = IgnoreInvestigationsOutcomeMRI3, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 // Normal MRI
 Rule: getInvestigationsOutcomeMRI3
@@ -61,7 +61,7 @@ Priority: 96
 ):match
 -->
 :match.Investigations = { rule = getInvestigationsOutcomeMRI3, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 // He should have a MRI in HOSPITAL. If the result is abnormal
 Rule: InvestigationTwoSentences
@@ -74,7 +74,7 @@ Priority: 94
 ):match
 -->
 :match.InvestigationIgnore = { rule = InvestigationTwoSentences, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 // He should has a MRI in HOSPITAL. The result was normal
 Rule: InvestigationTwoSentences
@@ -86,7 +86,7 @@ Priority: 94
 ):match
 -->
 :match.Investigations = { rule = InvestigationTwoSentences, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 
 // he should have a MRI and if it is abnormal....
@@ -100,7 +100,7 @@ Priority: 93
 ):match
 -->
 :match.InvestigationIgnore = { rule = getInvestigationsOutcomeMRI4, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 // He had an MRI and it was normal
 Rule: getInvestigationsOutcomeMRI
@@ -112,7 +112,7 @@ Priority: 93
 ):match
 -->
 :match.Investigations = { rule = getInvestigationsOutcomeMRI4, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 // he should have a MRI and start taking drugY. If it is normal.. 
 Rule: getInvestigationsOutcomeMRI
@@ -126,7 +126,7 @@ Priority: 92
 ):match
 -->
 :match.InvestigationIgnore = { rule = getInvestigationsOutcomeMRI5, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 // He had a MRI in 2007 and in 2009. Both were Normal.
 Rule: getInvestigationsOutcomeMRI
@@ -139,7 +139,7 @@ Priority: 92
 ):match
 -->
 :match.Investigations = { rule = getInvestigationsOutcomeMRI5, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 // He should have a MRI. With the knowledge of recent events, if it is abnormal...
 Rule: getInvestigationsOutcomeMRI
@@ -153,7 +153,7 @@ Priority: 92
 ):match
 -->
 :match.InvestigationIgnore = { rule = getInvestigationsOutcomeMRI6, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 //Had an MRI. With the results being normal...
 Rule: getInvestigationsOutcomeMRI
@@ -166,7 +166,7 @@ Priority: 92
 ):match
 -->
 :match.Investigations = { rule = getInvestigationsOutcomeMRI6, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 // Should have a MRI and an EEG, abnormal results would support....
 Rule: getInvestigationsOutcomeMRI
@@ -181,7 +181,7 @@ Priority: 92
 ):match
 -->
 :match.InvestigationIgnore= { rule = getInvestigationsOutcomeMRI7, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 //His MRI and EEG were both normal
 Rule: getInvestigationsOutcomeMRI
@@ -195,7 +195,7 @@ Priority: 92
 ):match
 -->
 :match.Investigations= { rule = getInvestigationsOutcomeMRI7, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 // Should have a MRI and an EEG, abnormal results would support....
 Rule: getInvestigationsOutcomeMRI
@@ -209,7 +209,7 @@ Priority: 92
 ):match
 -->
 :match.InvestigationIgnore= { rule = getInvestigationsOutcomeMRI8, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 
 // He had a normal MRI and EEG
@@ -224,7 +224,7 @@ Priority: 92
 ):match
 -->
 :match.Investigations= { rule = getInvestigationsOutcomeMRI8, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 // he should have a MRI, CT, and EEG, if they are abnormal...
 Rule: getInvestigationsOutcomeMRI
@@ -240,7 +240,7 @@ Priority: 92
 ):match
 -->
 :match.InvestigationIgnore= { rule = getInvestigationsOutcomeMRI9, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 // he had a MRI, CT and EEG. All were negative
 Rule: getInvestigationsOutcomeEEG
@@ -255,7 +255,7 @@ Priority: 92
 ):match
 -->
 :match.Investigations= { rule = getInvestigationsOutcomeMRI9, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 
 // he had a MRI and EEG. All were negative ||| he had a MRI, EEG and both were negative
 Rule: getInvestigationsOutcomeEEG
@@ -269,5 +269,5 @@ Priority: 92
 ):match
 -->
 :match.Investigations= { rule = getInvestigationsOutcomeMRI10, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
-CUI = :match.InvestigationFindingMRI.CUI, Negation = :match.InvestigationFindingMRI.Negation}
+CUI = :match.InvestigationFindingMRI.CUI}
 

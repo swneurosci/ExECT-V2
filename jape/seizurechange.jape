@@ -248,6 +248,24 @@ Priority: 99
 --> 
 :match.SeizureChange = { rule = "SeizureChange4b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation } 
 
+Rule: SeizureChange4b2
+Priority: 99 
+( 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
+    Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
+    ({Frequency.Temporality != "hypothetical"})
+    ({NumberRange})
+    ({timePeriods})
+    ({timeElapsed})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange4b2", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, 
+Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2, 
+TimePeriod = :match.timePeriods.time-unit
+ } 
+
+
 // increase in seizure frequency
 Rule: SeizureChange4c
 Priority: 99 

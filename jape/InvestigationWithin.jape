@@ -13,7 +13,7 @@ Priority: 100
 -->
 :match.Investigations = { rule = :match.InvestigationsLookup.rule, EEG_Performed = :match.InvestigationsLookup.EEG_Performed, EEG_Type = :match.InvestigationsLookup.EEG_Type,
 EEG_Results = :match.InvestigationsLookup.EEG_Results, CT_Performed = :match.InvestigationsLookup.CT_Performed, CT_Results = :match.InvestigationsLookup.CT_Results,
-MRI_Performed = :match.InvestigationsLookup.MRI_Performed, MRI_Results = :match.InvestigationsLookup.MRI_Results, CUI = :match.InvestigationsLookup.CUI, Negation = :match.InvestigationsLookup.Negation}
+MRI_Performed = :match.InvestigationsLookup.MRI_Performed, MRI_Results = :match.InvestigationsLookup.MRI_Results, CUI = :match.InvestigationsLookup.CUI}
 
 // Stops doubling up
 Rule: InvestWithinInvest
@@ -24,4 +24,4 @@ Priority: 100
 -->
 :match.InvestigationIgnore = { rule = :match.InvestigationsLookup.rule, EEG_Performed = :match.InvestigationsLookup.EEG_Performed, EEG_Type = :match.InvestigationsLookup.EEG_Type,
 EEG_Results = :match.InvestigationsLookup.EEG_Results, CT_Performed = :match.InvestigationsLookup.CT_Performed, CT_Results = :match.InvestigationsLookup.CT_Results,
-MRI_Performed = :match.InvestigationsLookup.MRI_Performed, MRI_Results = :match.InvestigationsLookup.MRI_Results, CUI = :match.InvestigationsLookup.CUI, Negation = :match.InvestigationsLookup.Negation}
+MRI_Performed = :match.InvestigationsLookup.MRI_Performed, MRI_Results = :match.InvestigationsLookup.MRI_Results, CUI = :match.InvestigationsLookup.CUI}
