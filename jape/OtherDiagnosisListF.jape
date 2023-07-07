@@ -154,10 +154,10 @@ Priority: 100
     
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagListF8,   PREF = :item.OtherDiag.PREF,
+:item.PatientHistory = {rule = OtherDiagListF8,   PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI,
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI,
+Certainty = :item.OtherDiag.Certainty,
 YearDate = :item.OtherDiag.YearDate, 
 Negation = :item.OtherDiag.Negation}
 
@@ -173,10 +173,10 @@ Priority: 100
 	({OtherDiag}):item
  ):match  
  -->
-:item.PatientHistory = {rule = OtherDiagnosisListF9,  PREF = :item.OtherDiag.PREF,
+:item.PatientHistory = {rule = OtherDiagnosisListF9,  PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 // STY = :item.OtherDiag.STY, 
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
+Certainty = :item.OtherDiag.Certainty, 
 Negation = :item.OtherDiag.Negation,
 YearDate = :item.OtherDiag.YearDate} 
 

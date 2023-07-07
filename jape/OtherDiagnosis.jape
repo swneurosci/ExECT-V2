@@ -78,8 +78,9 @@ Priority: 99
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagnosis5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+//STY = :item.OtherDiag.STY, Experiencer = :item.OtherDiag.Experiencer, 
+//Temporality = :item.OtherDiag.Temporality, 
+Negation = :item.OtherDiag.Negation,
 Certainty = :item.OtherDiag.Certainty}
 
 

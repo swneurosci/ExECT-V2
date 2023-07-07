@@ -18,9 +18,8 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = FebSeizuresB1, , PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-// STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+// STY = :item.Lookup3.STY, 
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-// Certainty = :item.Lookup3.Certainty,
  Certainty = :item.Lookup3.Certainty, 
  Negation = :item.Lookup3.Negation,
 AgeUnit =:match.Age.AgeUnit,
