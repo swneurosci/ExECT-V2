@@ -61,4 +61,10 @@ right sided changes:CUI=C0151611:Results=Abnormal
 both normal:CUI=C0560017:Results=Normal
 non-specific interictal changes:CUI=C0151611:Results=Abnormal:Ignore=Yes
 no changes:CUI=C0560017:Results=Normal:Ignore=Yes
-slowing:CUI=C0151611:Results=Abnormal:=
+slowing:CUI=C0151611:Results=Abnormal
+sharpened waveforms:CUI=C0151611:Results=Abnormal
+no EEG changes:CUI=C0560017:Results=Normal:Ignore=Yes
+temporal lobe discharges:CUI=C0151611:Results=Abnormal
+changes:CUI=C0151611:Results=Abnormal
+not have the results of his recent:CUI=C0013819:Results=Unknown
+not show any epileptic activity:CUI=C0151611:Results=Abnormal:Ignore=Yes

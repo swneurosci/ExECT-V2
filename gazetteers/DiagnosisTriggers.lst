@@ -44,3 +44,5 @@ type of seizures:type=seizureType
 types of seizures:type=seizureType
 types of seizure:type=seizureType
 Seizure taking frequency:type=seizureType:SF=true
+Impression:type=opinion
+Comments:type=opinion

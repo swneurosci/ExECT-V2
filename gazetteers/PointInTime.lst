@@ -51,3 +51,15 @@ Last Month:Since=Last_Month
 Last Week:Since=Last_Week
 since her birth:Since=From_Birth
 since his birth:Since=From_Birth
+previous appointment:Since=LastClinic
+previous phone call:Since=LastClinic
+previous phone clinic:Since=LastClinic
+starting antiepileptic medication:Since=DrugChange
+starting AEDs:Since=DrugChange
+starting anti-seizure medication:Since=DrugChange
+on this dose
+last appointment:Since=LastClinic
+after his operation:Since=Surgery
+after his surgery:Since=Surgery
+after her surgery:Since=Surgery
+after her operation:Since=Surgery

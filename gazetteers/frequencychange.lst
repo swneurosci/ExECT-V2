@@ -4,6 +4,9 @@ same as last time:Quantity=Same
 increase:Quantity=Increased
 decrease:Quantity=Decreased
 frequent:Quantity=Frequent
+Increase:Quantity=Increased
+Decrease:Quantity=Decreased
+Frequent:Quantity=Frequent
 infrequent:Quantity=Infrequent
 no change:Quantity=Same
 got better:Quantity=Decreased
@@ -16,8 +19,13 @@ more commonly:Quantity=Increased
 less commonly:Quantity=Decreased
 increased rate:Quantity=Increased
 decreased rate:Quantity=Decreased
+Improved:Quantity=Decreased
 improved:Quantity=Decreased
 deteriorated:Quantity=Increased
+Worsened:Quantity=Increased
+Increased:Quantity=Increased
+Decreased:Quantity=Decreased
+Improvement:Quantity=Decreased
 worsened:Quantity=Increased
 increased:Quantity=Increased
 decreased:Quantity=Decreased
@@ -27,7 +35,8 @@ increasing:Quantity=Increased
 hasn't been any change:Quantity=Same:Negation=Negated
 hasn’t been any change:Quantity=Same:Negation=Negated
 less frequent:Quantity=Decreased
-getting better:Quantity=Decreased:=
+getting better:Quantity=Decreased
+Reduced:Quantity=Decreased
 reduced:Quantity=Decreased
 not made any difference:Quantity=Same
 occasional:Quantity=Infrequent
@@ -51,7 +60,7 @@ reoccurance:Quantity=Increased
 restarted:Quantity=Increased
 reduction in the frequency:Quantity=Decreased
 good response:Quantity=Decreased
-considerably better:Quantity=Decreased:=
+considerably better:Quantity=Decreased
 seizure frequency increased:Quantity=Increased:ContainsLookUp=Yes
 much better controlled:Quantity=Decreased
 remained the same:Quantity=Same
@@ -64,9 +73,19 @@ well controlled:Quantity=Infrequent
 returning:Quantity=Increased
 reappeared:Quantity=Increased
 returned:Quantity=Increased
-coming down:Quantity=Decreased:=
-going up:Quantity=Increased:=
-more of his:Quantity=Same
-more of her:Quantity=Same
-no further seizures:Quantity=Decreased:ContainsLookUp=Yes
-not had any further seizures:Quantity=Decreased:ContainsLookUp=Yes
+coming down:Quantity=Decreased
+going up:Quantity=Increased
+more of his:Quantity=Increased
+more of her:Quantity=Increased
+are completely under control:Quantity=0:SeizureFree=Yes
+no further:Quantity=0:SeizureFree=Yes:Negation=Negated
+not had any further:Quantity=0:SeizureFree=Yes:Negation=Negated
+Occasional:Quantity=Infrequent
+Infrequent:Quantity=Infrequent
+hasn't helped:Quantity=Same:Negation=Negated
+hasn't really help:Quantity=Same:Negation=Negated
+continues to get:Quantity=Same
+remains the same:Quantity=Same
+remains seizure free:Quantity=Same:ContainsLookUp=Yes:CUI=C1299590
+no change in her seizure frequency:Quantity=Same:ContainsLookUp=Yes
+no change in his seizure frequency:Quantity=Same:ContainsLookUp=Yes

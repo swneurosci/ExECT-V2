@@ -19,7 +19,7 @@ CalenderUnit.lst:frequency:time::Calendar
 NegConj.lst:negation:allow::NegConj
 months.lst:time:date::Lookup2
 person_id.lst:person:health_terms::Lookup2
-date.lst:time:date::Lookup2
+date.lst:time:date:DATE:Lookup2
 patient.lst:person:noun::Person
 no_meds.lst:treatment:CUI::Lookup2
 conditional.lst:context:future::Context

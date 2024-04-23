@@ -33,6 +33,7 @@ background of:type=history
 did have:type=past
 had to:type=had to
 was born:type=birth
+was born at:type=birth
 at that time:type=time
 removed:type=past
 resected:type=past

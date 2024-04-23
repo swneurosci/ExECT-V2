@@ -52,5 +52,17 @@ clear:CUI=C0436481:Results=Normal
 unremarkable:CUI=C0436481:Results=Normal
 both normal:CUI=C0436481:Results=Normal
 non-specific lesion:CUI=C1319851:Results=Abnormal:Ignore=Yes
-white matter:CUI=C1319851:Results=Abnormal:=
-white-matter:CUI=C1319851:Results=Abnormal:=
+white matter:CUI=C1319851:Results=Abnormal
+white-matter:CUI=C1319851:Results=Abnormal
+infarct:CUI=C1319851:Results=Abnormal
+structural brain changes:CUI=C1319851:Results=Abnormal
+structural brain change:CUI=C1319851:Results=Abnormal
+clear changes:CUI=C1319851:Results=Abnormal
+meningioma:CUI=C1319851:Results=Abnormal
+negative:CUI=C0436481:Results=Normal
+hyperintensities:CUI=C1319851:Results=Abnormal
+hippocampus:CUI=C1319851:Results=Abnormal
+hyperintensity:CUI=C1319851:Results=Abnormal
+perinatal hypoxia:CUI=C1319851:Results=Abnormal
+small vessel disease:CUI=C1319851:Results=Abnormal
+changes:CUI=C1319851:Results=Abnormal

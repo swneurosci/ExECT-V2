@@ -25,3 +25,5 @@ sleep deprived EEGs:Investigation=EEG:Type=SleepDeprived
 neuroimaging:Investigation=MRI
 Videotelemetry:Investigation=EEG:Type=VideoTelemetry
 ambulatory EEG:Investigation=EEG:Type=Ambulatory
+eeg:Investigation=EEG
+mri:Investigation=MRI
