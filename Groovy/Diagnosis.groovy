@@ -5,7 +5,7 @@ new File(scriptParams.outputFile).withWriterAppend{ out ->
       //def (A,B,C,D) =  doc.getFeatures().get("gate.SourceURL").split("_|\\.")
       //String[] id = D.split("/")
       String[] id =  doc.getFeatures().get("gate.SourceURL").split("/")
-      out.writeLine(/${id[-1]},${anno.start()},${anno.end()}, ${f.get('CUI')},"${f.get('PREF')}",/+
+      out.writeLine(/${id[-1]},${anno.start()},${anno.end()},${f.get('CUI')},"${f.get('PREF')}",/+
       /${f.get('Negation')},${f.get('DiagCategory')},${f.get('Certainty')},${f.get('rule')},/)
     }
   } 

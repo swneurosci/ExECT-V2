@@ -3,7 +3,7 @@ new File(scriptParams.outputFile).withWriterAppend{ out ->
     anno ->
       def f = anno.getFeatures()
       String[] id =  doc.getFeatures().get("gate.SourceURL").split("/")
-      out.writeLine(/${id[-1]},${anno.start()},${anno.end()}, ${f.get('CUI')},"${f.get('PREF')}",/+
+      out.writeLine(/${id[-1]},${anno.start()},${anno.end()},${f.get('CUI')},"${f.get('PREF')}",/+
       /${f.get('Negation')},${f.get('Experiencer')},${f.get('Certainty')},${f.get('rule')},/)
     }
   } 

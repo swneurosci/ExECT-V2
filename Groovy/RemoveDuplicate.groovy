@@ -27,5 +27,3 @@ for (int i=0 ; i < annList.size() - 1 ; i++) {
     }
   }
 }
-
-
