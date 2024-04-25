@@ -712,7 +712,7 @@ stapedial myoclonus	CUI=C1960877	PREF=Stapedial myoclonus	TUI=T047	STY=Disease o
 myoclonus of tensor tympani muscle	CUI=C1998254	PREF=Myoclonus of tensor tympani muscle	TUI=T047	STY=Disease or Syndrome
 myoclonus tensor tympani muscle	CUI=C1998254	PREF=Myoclonus of tensor tympani muscle	TUI=T047	STY=Disease or Syndrome
 tensor tympani myoclonus	CUI=C1998254	PREF=Myoclonus of tensor tympani muscle	TUI=T047	STY=Disease or Syndrome
-benigh rolandic epilepsy 	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+benign rolandic epilepsy 	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Centralopathic epilepsy	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Temporal-central focal epilepsy	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Benign Childhood Epilepsy With Centro Temporal Spikes	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -818,8 +818,6 @@ osteogenesis imperfecta, retinopathy, seizures, intellectual disability syndrome
 dend (developmental delay, epilepsy, neonatal diabetes) syndrome	CUI=C4303593	PREF=Developmental delay, epilepsy, neonatal diabetes syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 dend syndrome	CUI=C4303593	PREF=Developmental delay, epilepsy, neonatal diabetes syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 developmental delay, epilepsy, neonatal diabetes syndrome	CUI=C4303593	PREF=Developmental delay, epilepsy, neonatal diabetes syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-sudden unexpected death in epilepsy	CUI=C4304727	PREF=Sudden unexpected death in epilepsy	TUI=T033	STY=Finding	Epilepsy=Yes
-SUDEP	CUI=C4304727	PREF=Sudden unexpected death in epilepsy	TUI=T033	STY=Finding	Epilepsy=Yes
 myoclonic epileptic seizures	CUI=C4317123	PREF=Myoclonic Seizures	TUI=T184	STY=sign or symptom
 myoclonic seizure	CUI=C4317123	PREF=Myoclonic Seizures	TUI=T184	STY=sign or symptom
 myoclonic seizure disorder	CUI=C4317123	PREF=Myoclonic Seizures	TUI=T184	STY=sign or symptom
@@ -924,6 +922,7 @@ epilepsy with generalised tonic chronic seizures alone	CUI=C0393697	PREF=Epileps
 epilepsy with generalised tonic clonic seizures from sleep	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy with generalised tonic clonic seizure from sleep	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 post cerebrovascular accident epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+post-cerebrovascular accident epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 post-stroke epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 post stroke epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 partial adversive seizure	CUI=C2237348	PREF=simple partial seizure adversive	TUI=T033	STY=Finding
@@ -961,3 +960,20 @@ temporal lobe onset	CUI=C0014556	PREF=Temporal lobe epilepsy	TUI=T047	STY=Diseas
 partial motor seizures	CUI=C0016399	PREF=Epilepsy, Partial, Motor	TUI=T047	STY=Disease or Syndrome
 focal epileptic seizures	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
 focal dyscognitive seizures	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
+Epilepsy with generalised tonic clonic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome
+focal to bilateral seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047
+focal to bilateral convulsive epileptic seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047
+Benign Rolandic Epilepsy	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+epilepsy - focal	CUI=C0014547	PREF=Epilepsies, Partial	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+Epilepsy - generalised	CUI=C0014548	PREF=Epilepsy, Generalized	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+GTCS	CUI=C0494475	PREF=Tonic - clonic seizures	TUI=T047
+Childhood epilepsy	CUI=C4315525	PREF=Childhood epilepsy	TUI=T033	STY=Finding
+epilepsy in childhood	CUI=C4315525	PREF=Childhood epilepsy	TUI=T033	STY=Finding
+epilepsy in early childhood	CUI=C4315525	PREF=Childhood epilepsy	TUI=T033	STY=Finding
+epilepsy as a child	CUI=C4315525	PREF=Childhood epilepsy	TUI=T033	STY=Finding
+nocturnal epilepsy	CUI=C0393719	PREF=nocturnal epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=YesEpilepsy with generalised tonic clonic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+epilepsy with tonic clonic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+epilepsy with tonic clonic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+Generalised Epilepsy with tonic-clonic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+Generalised seizures	CUI=C0234533	PREF=generalised seizures	TUI=T047	STY=Disease or Syndrom
+refractory epilepsy	CUI=C1096063	PREF=Drug Resistant Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes

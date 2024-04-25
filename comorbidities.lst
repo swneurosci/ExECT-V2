@@ -141,8 +141,6 @@ anomalous valve of coronary sinus	CUI=C0344701	PREF=anomalous valve of coronary 
 anomaly of the pulmonary veins, unspecified	CUI=C0265914	PREF=anomaly of the pulmonary veins, unspecified	TUI=T019	STY=Congenital Abnormality
 anomaly of the vena cava, unspecified	CUI=C0265925	PREF=anomaly of the vena cava, unspecified	TUI=T019	STY=Congenital Abnormality
 anomaly, scimitar	CUI=C0036400	PREF=anomaly, scimitar	TUI=T019	STY=Congenital Abnormality
-anoxic brain injury	CUI=C0003132	PREF=anoxic brain damage	TUI=T046	STY=Pathologic Function
-anoxic brain damage	CUI=C0003132	PREF=anoxic brain damage	TUI=T046	STY=Pathologic Function
 anoxic encephalopathies	CUI=C0003132	PREF=anoxic encephalopathies	TUI=T046	STY=Pathologic Function
 anoxic encephalopathy	CUI=C0003132	PREF=anoxic encephalopathy (disorder)	TUI=T046	STY=Pathologic Function
 apoplexy	CUI=C0038454	PREF=apoplexy	TUI=T047	STY=Disease or Syndrome
@@ -209,9 +207,6 @@ blue rubber bleb nevus syndrome	CUI=C0346072	PREF=blue rubber bleb nevus syndrom
 brain cancer	CUI=C0153633	PREF=brain cancer	TUI=T191	STY=Neoplastic Process
 occipital tumour	CUI=C1263889	PREF=Neoplasm of occipital lobe	TUI=T191	STY=Neoplastic Process
 brain cancers	CUI=C0153633	PREF=brain cancers	TUI=T191	STY=Neoplastic Process
-brain damage	CUI=C0270611	PREF=brain damage	TUI=T037	STY=Injury or Poisoning
-brain damage	CUI=C1456496	PREF=brain damage	TUI=T037	STY=Injury or Poisoning
-anoxic brain damage	CUI=C0003132	PREF=brain damage, anoxic	TUI=T046	STY=Pathologic Function
 cerebral brain hemorrhage	CUI=C2937358	PREF=brain hemorrhage, cerebral	TUI=T046	STY=Pathologic Function
 brain hemorrhages - cerebral	CUI=C2937358	PREF=brain hemorrhages, cerebral	TUI=T046	STY=Pathologic Function
 brain infarct	CUI=C0751955	PREF=brain infarct	TUI=T047	STY=Disease or Syndrome
@@ -1051,8 +1046,6 @@ Superficial Head Injury	CUI=C0347536	PREF=Head Injury, Superficial	TUI=T037	STY=
 Skull Fractures	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning
 skull fracture	CUI=C0037304	PREF=Skull Fractures	TUI=T037	STY=Injury or Poisoning
 Unspecified brain damage due to birth injury	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	STY=Injury or Poisoning
-brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	STY=Injury or Poisoning
-traumatic brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	STY=Injury or Poisoning
 hippocampal sclerosis	CUI=C1504404	PREF=Hippocampal sclerosis	TUI=T047	STY=Disease or Syndrome
 mesial temporal lobe sclerosis	CUI=C3164863	PREF=mesial temporal lobe sclerosis	TUI=T047	STY=Disease or Syndrome
 cortical dysplasia	CUI=C0431380	PREF=Cortical Dysplasia	TUI=T019	STY=Congenital Abnormality
@@ -1107,8 +1100,11 @@ neoplasms	CUI=C0027651	PREF=neoplasms	TUI=T191	STY=Neoplastic Process
 lesion of brain	CUI=C0221505	PREF=lesion of brain	TUI=T047	STY=Disease or Syndrome
 bran lesion	CUI=C0221505	PREF=lesion of brain	TUI=T047	STY=Disease or Syndrome
 mass lesion of temporal lobe on left	CUI=C2026259	PREF=mass lesion of temporal lobe on left	TUI=T047	STY=Disease or Syndrome
+left temporal lobe lesion	CUI=C2026259	PREF=mass lesion of temporal lobe on left	TUI=T047	STY=Disease or Syndrome
 mass lesion of temporal lobe on right	CUI=C2026260	PREF=mass lesion of temporal lobe on right	TUI=T047	STY=Disease or Syndrome
+right temporal lobe lesion	CUI=C2026260	PREF=mass lesion of temporal lobe on right	TUI=T047	STY=Disease or Syndrome
 mass lesion of temporal lobe	CUI=C2026258	PREF=mass lesion of temporal lobe	TUI=T047	STY=Disease or Syndrome
+temporal lobe lesion	CUI=C2026258	PREF=mass lesion of temporal lobe	TUI=T047	STY=Disease or Syndrome
 temporal structural lesion	CUI=C2026258	PREF=mass lesion of temporal lobe	TUI=T047	STY=Disease or Syndrome
 benigh brain lesion	CUI=C0741634	PREF=brain lesion benign	TUI=T047	STY=Disease or Syndrome
 autistic spectrum disorder	CUI=C1510586	PREF=Autism Spectrum Disorders	TUI=T048	STY=Mental or Behavioral Dysfunction
@@ -1213,6 +1209,7 @@ normal birth	CUI=C3665337	PREF=Normal birth	TUI=T033	STY=Finding
 born normally	CUI=C3665337	PREF=Normal birth	TUI=T033	STY=Finding
 birth was normal	CUI=C3665337	PREF=Normal birth	TUI=T033	STY=Finding
 angina	CUI=C0002962	PREF=Angina Pectoris	TUI=T184	STY=Sign or Symptom
+ischaemic heart disease	CUI=C0002962	PREF=Angina Pectoris	TUI=T184	STY=Sign or Symptom
 angina pectoris	CUI=C0002962	PREF=Angina Pectoris	TUI=T184	STY=Sign or Symptom
 coronary heart disease	CUI=C0010068	PREF=coronary heart disease	TUI=T047	STY=Disease or Syndrome
 CHD	CUI=C0010068	PREF=coronary heart disease	TUI=T047	STY=Disease or Syndrome
@@ -1242,7 +1239,6 @@ Astrocytoma of cerebrum	CUI=C0750935	PREF=Cerebral Astrocytoma	TUI=T191	STY=Neop
 headache with migraine	CUI=C0149931	PREF=migraine disorders	TUI=T047	STY=Disease or Syndrome
 headaches with migraine	CUI=C0149931	PREF=migraine disorders	TUI=T047	STY=Disease or Syndrome
 psychotic episode	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
-Chronic daily headaches	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease or Syndrome
 visually impaired	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
 episode of psychosis	CUI=C0338614	PREF=Psychotic episodes	TUI=T048	STY=Mental or Behavioral Dysfunction
 medial temporal sclerosis	CUI=C3164863	PREF=Mesial temporal lobe sclerosis	TUI=T047	STY=Disease or Syndrome
@@ -1429,7 +1425,7 @@ middle cerebral artery stroke	CUI=C0740392	PREF=Infarction, Middle Cerebral Arte
 ruptured ACA aneurysm	CUI=C0242084	PREF=ruptured cerebral aneurysm	TUI=T047	STY=Disease or Syndrome
 ruptured cerebral artery aneurysm	CUI=C0242084	PREF=ruptured cerebral aneurysm	TUI=T047	STY=Disease or Syndrome
 hypoxia during a difficult birth	CUI=C0559478	PREF=Perinatal hypoxia, birth	TUI=T046	STY=Pathologic Function	
-chronic daily headache	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease or Syndrome
+chronic daily headache	CUI=C0752147	PREF=chronic daily headache	TUI=T047	STY=Disease or Syndrome
 cerebrum haemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	STY=Pathologic Function
 subdural haemorrhage	CUI=C0018946 PREF=Subdural Hematoma	TUI=T046	STY=Pathologic Function	
 subdural haematoma	CUI=C0018946 PREF=Subdural Hematoma	TUI=T046	STY=Pathologic Function	
@@ -1463,10 +1459,39 @@ ischaemic damage left frontal lobe	PREF=Brain ischemia	CUI=C0007786	TUI=T047	STY
 amygdalohippocampectomy	CUI=C2921031	PREF=Amygdalohippocampectomy	TUI=T061	STY=Therapeutic or Preventive Procedure
 hippocampectomy	CUI=C2921031	PREF=Amygdalohippocampectomy	TUI=T061	STY=Therapeutic or Preventive Procedure
 lobe lesion	CUI=C0221505	PREF=lesion of brain	TUI=T033	STY=Finding
-lobe damage	CUI=C1456496	PREF=brain damage	TUI=T037	STY=Injury or Poisoning
 blackout	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding	
 blackouts	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding	
 non insulin dependent diabetes	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-Dependent	TUI=T047	STY=Disease or Syndrome
 too much alcohol	CUI=C0085762	PREF=alcohol abuse	TUI=T048	STY=Mental or Behavioral Dysfunction
 altered awareness	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding
 altered consciousness	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding
+loss of awareness	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding
+Asperger syndrome	CUI=C0236792	PREF=Asperger syndrome	TUI=T048	STY=Mental or Behavioral Dysfunction
+Asperger's syndrome	CUI=C0236792	PREF=Asperger syndrome	TUI=T048	STY=Mental or Behavioral Dysfunction
+Aspergers	CUI=C0236792	PREF=Asperger syndrome	TUI=T048	STY=Mental or Behavioral Dysfunction
+aspergers	CUI=C0236792	PREF=Asperger syndrome	TUI=T048	STY=Mental or Behavioral Dysfunction
+partially sighted	CUI=C3665347	PREF=Visual Impairment	TUI=T033	STY=Finding
+bipolar	CUI=C0005586	PREF=Bipolar Disorder	TUI=T048	STY=Mental or Behavioral Dysfunction
+alcoholism	CUI=C0001973	PREF=Alcoholic Intoxication, Chronic	TUI=T048	STY=Mental or Behavioral Dysfunction
+atrial fibrillation	CUI=C0004238	PREF=atrial fibrillation	TUI=T047	STY=Disease or Syndrome
+neuropathy	CUI=C0442874	PREF=Neuropathy	TUI=T047	STY=Disease or Syndrome
+idiopathic intracranial hypertension CUI=C0033845 PREF=Pseudotumor Cerebri	TUI=T047	STY=Disease or Syndrome
+IIH CUI=C0033845 PREF=Pseudotumor Cerebri	TUI=T047	STY=Disease or Syndrome
+idiopathic intracranial hypertension CUI=C0033845 PREF=Pseudotumor Cerebri	TUI=T047	STY=Disease or Syndrome
+benign intracranial hypertension CUI=C0033845 PREF=Pseudotumor Cerebri	TUI=T047	STY=Disease or Syndrome
+pseudotumour cerebri CUI=C0033845 PREF=Pseudotumor Cerebri	TUI=T047	STY=Disease or Syndrome
+oligodendroglioma	CUI=C0028945	PREF=Oligodendroglioma	TUI=T191	STY=Neoplastic process
+oligodendrogliomas	CUI=C0028945	PREF=Oligodendroglioma	TUI=T191	STY=Neoplastic process
+drop attack	CUI=C0259813	PREF=Drop Attack	TUI=T184	STY=Sign or Symptom
+drop attacks	CUI=C0259813	PREF=Drop Attack	TUI=T184	STY=Sign or Symptom
+myasthenia gravis	CUI=C0026896	PREF=Myasthenia Gravis	TUI=T047	STY=Disease or Syndrome	
+hemiparkinsonism hemiatrophy syndrome	CUI=C4545231	PREF=Hemiparkinsonism hemiatrophy syndrome	TUI=T047	STY=Disease or Syndrome
+hemiparkinsonism	CUI=C4545231	PREF=Hemiparkinsonism hemiatrophy syndrome	TUI=T047	STY=Disease or Syndrome		
+hemi-parkinsonism	CUI=C4545231	PREF=Hemiparkinsonism hemiatrophy syndrome	TUI=T047	STY=Disease or Syndrome	
+hemi parkinsonism	CUI=C4545231	PREF=Hemiparkinsonism hemiatrophy syndrome	TUI=T047	STY=Disease or Syndrome		
+intellectual disability	CUI=C3714756	PREF=Intellectual Disability	TUI=T048	STY=Mental or Behavioral Dysfunction
+mental retardation	CUI=C3714756	PREF=Intellectual Disability	TUI=T048	STY=Mental or Behavioral Dysfunction
+depressive episode	CUI=C0349217	PREF=Depressive episode, unspecified	TUI=T048	STY=Mental or Behavioral Dysfunction
+chronic featureless headache	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease or Syndrome
+chronic featureless headaches	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease or Syndrome
+hypoxic birth injury	CUI=C0559478	PREF=Perinatal hypoxia, birth	TUI=T046	STY=Pathologic Function
