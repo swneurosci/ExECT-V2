@@ -1,0 +1,42 @@
+Imports: {import static gate.Utils.*; 
+            import java.util.*; }
+
+Phase: Dates
+Input:DateBio
+Options: control=all
+
+Rule: DoB_2
+Priority: 100
+(
+	({DateBio}):a	
+):match
+-->
+:match { 
+    Annotation dateBio = bindings.get("match").iterator().next();
+    // System.out.println(dateBio.getFeatures());
+    String dayDate = getOnlyAnn(bindings.get("a")).getFeatures().get("DayDate").toString();
+    String monthDate = getOnlyAnn(bindings.get("a")).getFeatures().get("MonthDate").toString();
+    String yearDate = getOnlyAnn(bindings.get("a")).getFeatures().get("YearDate").toString();
+    if (dayDate.length() == 1) {
+        dayDate = "0" + dayDate;
+        // System.out.println(dayDate);
+        dateBio.getFeatures().put("DayDate", dayDate);
+    }
+    if (monthDate.length() == 1) {
+        monthDate = "0" + monthDate;
+        // System.out.println(monthDate);
+        dateBio.getFeatures().put("MonthDate", monthDate);
+    }
+    if (yearDate.length() == 2) {
+        if (Integer.parseInt(yearDate) > 25) {
+            yearDate = "19" + yearDate;
+            // System.out.println(yearDate);
+            dateBio.getFeatures().put("YearDate", yearDate);
+        } else {
+            yearDate = "20" + yearDate;
+            // System.out.println(yearDate);
+            dateBio.getFeatures().put("YearDate", yearDate);
+        }
+    }   
+    // System.out.println(dateBio.getFeatures());
+}

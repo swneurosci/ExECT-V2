@@ -143,5 +143,5 @@ Priority: 100
  -->
 :item.BirthHistory = {rule = BirthB7,  PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
-Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
+Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality,
+Certainty =:item.Lookup3.Certainty}

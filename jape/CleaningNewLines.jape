@@ -1,0 +1,26 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: CleaningNewLines
+Input:Lookup Lookup2 Token NewParagraph DiagBFiltered DiagnosisTriggers Lookup3
+Options: control=appelt
+
+
+
+Rule: NewLineDeleted
+
+(
+  ({DiagnosisTriggers}|{Lookup}|{Lookup3}|{Token.string ==":"}|{Lookup2.minorType == "probability"}|{Lookup2.majorType == "diagnosis"}):triggers //Get triggers that could be used in the Listing 
+  (({NewParagraph})[1,5]):newParagraph //Get up to 5 new lines
+  (({DiagBFiltered}|{Lookup}|{Lookup3}|{Lookup2.minorType == "probability"}|{Lookup2.majorType == "diagnosis"})[1,3]):terms //Terms to pickup (plus stuff to change certainty) -- Need the [1,3] so you can grab multiple if there is a extra with the lookup
+  (({NewParagraph})[1,5]):newParagraph2 //Get up to 5 new lines
+):umls
+
+-->
+:newParagraph { 
+  inputAS.removeAll(newParagraphAnnots);
+},
+:newParagraph2 { 
+  inputAS.removeAll(newParagraph2Annots);
+},
+:newParagraph.NewParagraphDeleted = {rule = "NewParagraphDeleted"},
+:newParagraph2.NewParagraphDeleted = {rule = "NewParagraphDeleted2"}

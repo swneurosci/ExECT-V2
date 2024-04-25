@@ -1,10 +1,10 @@
 Phase: LookupAppelt
-Input:  Lookup4 Seizures Comorbidities
+Input:  Lookup4 Seizures Comorbidities NewLine
 Options: control=appelt
 
 Rule: LookupAppelt
 (
-    ({Lookup4})
+    ({Lookup4 notContains NewLine})
 ):match
 -->
 :match.Lookup = { rule = "LookupAppelt",

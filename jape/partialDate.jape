@@ -10,19 +10,20 @@ Rule: partialDate
 Priority: 99
 (
 	({DayDate})?
-	{Lookup2.minorType == date}
+	({Lookup2.minorType == date, !Lookup2.language == DATE})
 	({Token.kind == punctuation, Token.string == ","})[0,1]// September, 2012
 	({Numeric})?
 ):match
 -->
 :match.PartialDate = {rule = partialDate, day=:match.DayDate.value, month=:match.Lookup2.month, year=:match.Numeric.value}
+
 //Day then month
 Rule: partialDate2
 Priority: 99
 (
 	
 	({Numeric.value <=31})
-	{Lookup2.minorType == date}
+	({Lookup2.minorType == date, !Lookup2.language == DATE})
 	
 ):match
 -->
@@ -34,8 +35,31 @@ Priority: 99
 (
 	
 	{Lookup2.minorType == SpecificDate}
+	({Token.string == "in"})?
 	({Numeric.value <= 2050, Numeric.value >= 1940})[0,1]
 	
 ):match
 -->
 :match.PartialDate = {rule = partialDate3, day=:match.Lookup2.day, month=:match.Lookup2.month, year =:match.Numeric.value}
+// not sure about this one...
+Rule: partialDate
+Priority: 99
+(
+	({DayDate})?
+	({Lookup2.minorType == date, !Lookup2.language == DATE})
+	({Token.string == "in"})[0,1]// xmas in 
+	({Numeric})?
+):match
+-->
+:match.PartialDate = {rule = partialDate4, day=:match.DayDate.value, month=:match.Lookup2.month, year=:match.Numeric.value}
+
+// Febuary 6th
+Rule: partialDate
+Priority: 99
+(
+	({Lookup2.minorType == date, !Lookup2.language == DATE})
+	({DayDate})
+
+):match
+-->
+:match.PartialDate = {rule = partialDate5, day=:match.DayDate.value, month=:match.Lookup2.month, year=:match.Numeric.value}

@@ -3,14 +3,18 @@ Multiphase:SeizureFrequency
 Phases:
 //Should be split into Diagnosis, seizureFreq and investigations
 
+SFBlockToSChangeBlock
 SeizFrequency
 SeizureFree
 seizure-frequency1
 seizure-frequency2
 seizure-frequency3
 DiagTrigSFreq
+SeizureFrequencyTwoSentences
+SFTwoTimePeriodsOneSeizure
 SF
 seizurechange
+SeizureFreePhrases
 SeizureControl
 SeizureFrequencyExtendSinceDuring
 TwoSeizureFreqOneTimePeriod

@@ -13,7 +13,7 @@ Rule: numberRange
 :match.Range = { rule = numberRange, N1 = :n1.Numeric.value, N2 = :n2.Numeric.value}
 
 
-
+// up to 4
 Rule: numberRange1
 (
     ({Token.string == "up"})
@@ -22,6 +22,18 @@ Rule: numberRange1
 ):match
 -->
 :match.Range = { rule = numberRange1, N1 = "0", N2 = :match.Numeric.value}
+
+// up to 2 or 3
+Rule: numberRange1
+(
+    ({Token.string == "up"})
+    ({Token.string == "to"})
+    ({Numeric})
+    ({Token.string == "or"})
+    ({Numeric}):N2
+):match
+-->
+:match.Range = { rule = numberRange1, N1 = "0", N2 = :N2.Numeric.value}
 
 Rule: numberRange2
 (

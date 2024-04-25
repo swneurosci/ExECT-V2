@@ -1,0 +1,21 @@
+Imports: {import static gate.Utils.*; }
+Phase: LastNode
+Input: Sentence
+Options: control=appelt
+
+Rule: firstNode
+Priority: 100
+//Annotate the first node
+(
+    ({Sentence})+
+):match
+-->
+:match{
+    AnnotationSet matchannots = bindings.get("match");
+    int firstNode = matchannots.firstNode().getOffset().intValue();
+    // system.out.println("firstNode: " + firstNode);
+    FeatureMap newFeatures = Factory.newFeatureMap();
+    newFeatures.put("Rule", "firstNode");
+    AnnotationSet defaultSet = doc.getAnnotations("Bio");//Adding to Bio Annotataion Set
+    gate.Utils.addAnn(defaultSet, firstNode, firstNode + 1, "firstNode", newFeatures);
+}

@@ -1,5 +1,5 @@
 Phase: SeizureFrequency 
-Input: SeizFrequency1 SeizFrequency2 DiagnosisTriggers NumberRange timePeriods Lookup3
+Input: SeizFrequency1 SeizFrequency2 DiagnosisTriggers NumberRange timePeriods Lookup3 Frequency timeElapsed PointInTime PartialDate Age
 Options: control=appelt 
 
 
@@ -34,4 +34,89 @@ Negation = :match.Lookup3.Negation, NumberOfTimePeriods = :match.SeizFrequency1.
 LowerNumberOfTimePeriods = :match.SeizFrequency1.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency1.UpperNumberOfTimePeriods,
 TimePeriod = :match.SeizFrequency1.TimePeriod, NumberOfSeizures = :match.NumberRange.value,
 LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2}
+
+// seizure frequency - 5 a month
+Rule: DiagTrigSFreq2
+Priority: 100 
+( 
+    ({DiagnosisTriggers.SF == "true", DiagnosisTriggers notWithin SeizureFrequency11})
+    ({SeizFrequency1})
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = "DiagTrigSFreq2a", CUI = "C0036572", Certainty = :match.Lookup3.Certainty, 
+Negation = :match.Lookup3.Negation, NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods,
+LowerNumberOfTimePeriods = :match.SeizFrequency1.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency1.UpperNumberOfTimePeriods,
+TimePeriod = :match.SeizFrequency1.TimePeriod, NumberOfSeizures = "1"}
+
+// seizure frequency increased
+Rule: DiagTrigSFreqChange
+Priority: 100 
+( 
+    ({DiagnosisTriggers.SF == "true", DiagnosisTriggers notWithin SeizureFrequency11})
+    ({Frequency})
+):match 
+--> 
+:match.SeizureChange = { rule = "DiagTrigSFreqChange", CUI = "C0036572", Certainty = :match.Lookup3.Certainty, 
+Negation = :match.Lookup3.Negation, NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods,
+LowerNumberOfTimePeriods = :match.SeizFrequency1.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency1.UpperNumberOfTimePeriods,
+TimePeriod = :match.SeizFrequency1.TimePeriod, NumberOfSeizures = :match.NumberRange.value,
+LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2,
+FrequencyChange = :match.Frequency.Quantity}
+
+
+// seizure frequency increased Since Drug change
+Rule: DiagTrigSFreqChange
+Priority: 100 
+( 
+    ({DiagnosisTriggers.SF == "true", DiagnosisTriggers notWithin SeizureFrequency11})
+    ({Frequency})
+    ({timeElapsed})[0,1]
+    ({PointInTime})
+):match 
+--> 
+:match.SeizureChange = { rule = "DiagTrigSFreqChange", CUI = "C0036572", Certainty = :match.Lookup3.Certainty, 
+Negation = :match.Lookup3.Negation, NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods,
+LowerNumberOfTimePeriods = :match.SeizFrequency1.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency1.UpperNumberOfTimePeriods,
+TimePeriod = :match.SeizFrequency1.TimePeriod, NumberOfSeizures = :match.NumberRange.value,
+LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2,
+FrequencyChange = :match.Frequency.Quantity, TimeSince_or_TimeOfEvent= "Since",
+PointInTime = :match.PointInTime.Since}
+
+// seizure frequency increased Since Partial Date
+Rule: DiagTrigSFreqChange
+Priority: 100 
+( 
+    ({DiagnosisTriggers.SF == "true", DiagnosisTriggers notWithin SeizureFrequency11})
+    ({Frequency})
+    ({timeElapsed})[0,1]
+    ({PartialDate}|{NumberRange.value > 1950, NumberRange.value < 2050}):num
+):match 
+--> 
+:match.SeizureChange = { rule = "DiagTrigSFreqChange", CUI = "C0036572", Certainty = :match.Lookup3.Certainty, 
+Negation = :match.Lookup3.Negation, NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods,
+LowerNumberOfTimePeriods = :match.SeizFrequency1.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency1.UpperNumberOfTimePeriods,
+TimePeriod = :match.SeizFrequency1.TimePeriod, NumberOfSeizures = :match.NumberRange.value,
+LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2,
+FrequencyChange = :match.Frequency.Quantity, TimeSince_or_TimeOfEvent= "Since",
+PointInTime = :match.PointInTime.Since,
+ YearDate = :num.NumberRange.value, YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day}   
+
+
+// seizure frequency increased Since AGE
+Rule: DiagTrigSFreqChange
+Priority: 100 
+( 
+    ({DiagnosisTriggers.SF == "true", DiagnosisTriggers notWithin SeizureFrequency11})
+    ({Frequency})
+    ({timeElapsed})[0,1]
+    ({Age})
+):match 
+--> 
+:match.SeizureChange = { rule = "DiagTrigSFreqChange", CUI = "C0036572", Certainty = :match.Lookup3.Certainty, 
+Negation = :match.Lookup3.Negation, NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods,
+LowerNumberOfTimePeriods = :match.SeizFrequency1.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizFrequency1.UpperNumberOfTimePeriods,
+TimePeriod = :match.SeizFrequency1.TimePeriod, NumberOfSeizures = :match.NumberRange.value,
+LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2,
+FrequencyChange = :match.Frequency.Quantity, TimeSince_or_TimeOfEvent= "Since",
+PointInTime = :match.PointInTime.Since, Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeUpper = :match.Age.AgeUpper, AgeLower = :match.Age.AgeLower} 
 

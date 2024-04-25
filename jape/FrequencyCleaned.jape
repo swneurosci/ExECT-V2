@@ -1,0 +1,18 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: Cleaning
+Input:Lookup Frequency Token
+Options: control=appelt
+
+Rule: FrequencyCleaned
+
+(
+  ({Lookup}):lookup
+  ({Token.string == "with"})
+  ({Frequency}):freq
+):umls
+-->
+:freq { 
+  inputAS.removeAll(freqAnnots);
+},
+:umls.FrequencyDeleted = {rule = FrequencyCleaned}

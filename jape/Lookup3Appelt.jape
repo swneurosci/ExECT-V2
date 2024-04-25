@@ -1,11 +1,11 @@
 Phase: Lookup3Appelt
-Input:  Seizures
+Input:  Seizures NewLine
 Options: control=appelt
 
 Rule: Seizures2Lookup3   /* rule - creates an appelt Lookup3 from seizures annotation (based on seizure.lst) */
 
 (
-    ({Seizures})
+    ({Seizures notContains NewLine})
 ):match
 -->
 :match.Lookup3 = { majorType = :match.Seizures.majorType,

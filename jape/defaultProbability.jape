@@ -60,6 +60,7 @@ Priority: 99
 
 
 // This rule is strange - looks for cases where certainty is a "SPACE"
+// yes - not sure about this at all
 
 Rule: default2
 (
@@ -68,4 +69,16 @@ Rule: default2
 -->
 :umls.Found = {
   CertRule = "found"
+}
+
+
+Rule: default3
+Priority: 99
+(
+	({Lookup2.majorType == causality, Lookup2.Certainty ==~"(?i)"}):umls
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Certainty","5");
+  getOnlyAnn(umlsAnnots).getFeatures().put("ruleCert","defruled");
 }

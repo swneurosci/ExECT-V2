@@ -12,7 +12,7 @@ Priority: 99
 ( 
     ({NumberRange}
     {timePeriods notContains Token.string == per, timePeriods notContains Token.string == a, timePeriods notContains Token.string == every, timePeriods notContains Token.string == each}):match
-    ({Token.string != ago})  
+    ({Token.string != ago, Token.string != before})  
 ):match1 
 --> 
 :match.SeizFrequency1 = {Rule = SeizFrequency1a, TimePeriod = :match.timePeriods.time-unit, 
@@ -24,7 +24,7 @@ Priority: 100
 ( 
     (({NumberRange}):num
     ({timePeriods contains Token.string == per}|{timePeriods contains Token.string == a}|{timePeriods contains Token.string == every}|{timePeriods contains Token.string == each})):match
-    ({Token.string != ago})  
+    ({Token.string != ago, Token.string != before})  
 ):match1 
 --> 
 :match.SeizFrequency2 = {Rule = SeizFrequency2b, TimePeriod = :match.timePeriods.time-unit, 
@@ -45,12 +45,13 @@ NumberOfTimePeriods = :match.timePeriods.frequency, QuantityTotal = :match.Numbe
 QuantityLowerRange = :match.NumberRange.N1, QuantityUpperRange = :match.NumberRange.N2}
 
 
-// 1 seizures "last week"
+// 1 seizures "last week" also picks up "in the morning"
 Rule: SeizFrequency1b 
 Priority: 98
 (   
+    ({Token.string != sometimes, Token.string != occasionally })  // blocks hypotheticals
     ({timePeriods}):match
-    ({Token.string != ago})  
+    ({Token.string != ago, Token.string != dose, Token.string != ammount, Token.string != doseage, Token.string != quantity, Token.string != before})  // blocks in the morning dose
 ):match1 
 --> 
 :match.SeizFrequency1 = {Rule = SeizFrequency1b, TimePeriod = :match.timePeriods.time-unit, 

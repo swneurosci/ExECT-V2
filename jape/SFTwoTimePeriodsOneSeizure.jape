@@ -1,0 +1,64 @@
+
+Phase: SeizureFrequencyTwoTimePeriodsOneSeizure
+Input: NumberRange timePeriods Lookup3 Split SeizureFrequency11 lastOne SeizFrequency1 PartialDate DateBio timeElapsed PointInTime
+Options: control=appelt
+
+// He has also had secondary generalised seizures, they happen about every year, his last one was PointInTime.
+Rule: OneSeizTwoTimePeriods4
+(
+    ({SeizureFrequency11})
+    ({Split})?
+    (({lastOne})
+    ({PointInTime})):match2
+):match
+-->
+:match2.SeizureFrequency11 = { rule = "OneSeizTwoTimePeriods4", CUI = :match.SeizureFrequency11.CUI,
+PointInTime = :match.PointInTime.Since, 
+TimeSince_or_TimeOfEvent = "Since", NumberOfSeizures = "1"}
+
+// He has also had secondary generalised seizures, they happen about every year, his last one was on Christmas day 2009.
+Rule: OneSeizTwoTimePeriods1
+(
+    ({SeizureFrequency11})
+    ({Split})?
+    (({lastOne})
+    ({timeElapsed.time == "During"})?
+    ({PartialDate})):match2
+):match
+-->
+:match2.SeizureFrequency11 = { rule = "OneSeizTwoTimePeriods1", CUI = :match.SeizureFrequency11.CUI,
+DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
+TimeSince_or_TimeOfEvent = "Since", NumberOfSeizures = "1"}
+
+
+
+// He has also had secondary generalised seizures, they happen about every year, his last one was 3 months ago.
+Rule: OneSeizTwoTimePeriods2
+(
+    ({SeizureFrequency11})
+    ({Split})?
+    (({lastOne})
+    ({NumberRange})
+    ({timePeriods})
+    ({timeElapsed.time == "Since"})):match2
+):match
+-->
+:match2.SeizureFrequency11 = { rule = "OneSeizTwoTimePeriods2", CUI = :match.SeizureFrequency11.CUI,
+NumberOfTimePeriods = :match.NumberRange.NumberOfTimePeriods, TimePeriod = :match.timePeriods.TimePeriod, 
+UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods = :match.NumberRange.N1,
+TimeSince_or_TimeOfEvent = "Since", NumberOfSeizures = "1"}
+
+
+// He has also had secondary generalised seizures, they happen about every year, his last one was 20/03/2009.
+Rule: OneSeizTwoTimePeriods3
+(
+    ({SeizureFrequency11})
+    ({Split})?
+    ((({lastOne})
+    ({timeElapsed.time == "During"})?
+    ({DateBio}))):match2
+):match
+-->
+:match2.SeizureFrequency11 = { rule = "OneSeizTwoTimePeriods3", CUI = :match.SeizureFrequency11.CUI,
+DayDate = :match.DateBio.DayDate, MonthDate = :match.DateBio.MonthDate, YearDate = :match.DateBio.YearDate,
+TimeSince_or_TimeOfEvent = "Since", NumberOfSeizures = "1"}

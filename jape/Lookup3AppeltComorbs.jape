@@ -1,11 +1,11 @@
 Phase: Lookup3Appelt
-Input: Comorbidities
+Input: Comorbidities NewLine
 Options: control=appelt
 
 
 Rule: Comorb2Lookup3  /* rule - creates an appelt Lookup3 from comorbidities annotation (based on comorbidities.lst) */
 (
-    ({Comorbidities})
+    ({Comorbidities notContains NewLine})
 ):match
 -->
 :match.Lookup3 = { majorType = :match.Comorbidities.majorType,

@@ -9,7 +9,7 @@ Priority: 100
 
 (   
     ({!Lookup3.minorType == "OtherDisease"})
-	({DiagBFiltered1 notWithin Lookup3}):match
+	({DiagBFiltered1 notWithin Lookup3.minorType == "OtherDisease"}):match
     ({!Lookup3.minorType == "OtherDisease"})
 
 ):match1

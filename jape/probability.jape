@@ -1,7 +1,7 @@
 Imports: {import static gate.Utils.*; }
 
 Phase: ModifyLookup
-Input: Lookup Lookup2 Lookup3 Sentence
+Input: Lookup Lookup2 Lookup3 Sentence NewLine
 Options: control=brill
 
 /*
@@ -10,6 +10,8 @@ Options: control=brill
 */
 // Running over NewLines ... ID87_Letter_3 .. problem with list points at start of letter
 // If i deleted generalised from lookup2 would fix also
+// Added new line to the RULES - BFS check if this is fine. Thinking is that a new line/item would not have same certainty as previous (return to default/5)
+// so far it looks fine
 
 Rule: probRuleA
 Priority: 100
@@ -122,3 +124,18 @@ certainty (if this is switched on) or no certainty - which could be a better opt
 // } 
 
 // */
+
+
+Rule: probRuleF
+Priority: 100
+(
+	({Lookup2.minorType == probability}):prob
+  ({Lookup2.minorType == causality}):cause
+	
+):match
+-->
+:cause {
+  getOnlyAnn(causeAnnots).getFeatures().put("Certainty", 
+    getOnlyAnn(bindings.get("prob")).getFeatures().get("Level"));
+    getOnlyAnn(causeAnnots).getFeatures().put("CertRule","ruleF");
+}

@@ -1,0 +1,6 @@
+MultiPhase:	TriggerCleaning
+
+Phases:
+TriggerCleaning
+TriggerCleaningExperiencer
+TriggerCleaningNegation

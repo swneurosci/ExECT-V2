@@ -4,13 +4,17 @@ Phases:
 annotation-pruning
 cleaning
 cleaning2
+cleaning3
 NegationCleanUp
 NegationCleanup2
 NegationCleanup3
 NegationCleanup4
+TriggerCleaning
 removeUselessLookups
 NegationBack
 LookupWithin
 ContextCorrection
 DelNumInMeasurment
 SFBlockClean
+FrequencyCleaned
+CleaningNewLines

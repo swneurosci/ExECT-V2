@@ -1,0 +1,18 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: TriggerCleaning
+Input: Token Trigger
+Options: control=appelt
+
+// his brother said....
+Rule: Someone_Said
+
+(
+  ({Trigger.majorType == "experiencer"}):Experiencer
+  ({Token.string == "said"}):as
+):umls
+-->
+:Experiencer { 
+  inputAS.removeAll(ExperiencerAnnots);
+},
+:umls.TriggerExperiencerDeleted = {rule = "Someone_Said"}

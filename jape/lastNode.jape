@@ -1,0 +1,22 @@
+Imports: {import static gate.Utils.*; }
+Phase: LastNode
+Input: Sentence
+Options: control=appelt
+
+
+Rule: LastNode
+Priority: 100
+//Annotate the last node
+// Not sure if needed in V2 - does take a while to run... 
+(
+	({Sentence})+
+):match
+-->
+:match{
+    AnnotationSet matchannots = bindings.get("match");
+    int lastNode = matchannots.lastNode().getOffset().intValue();
+    FeatureMap newFeatures = Factory.newFeatureMap();
+    newFeatures.put("Rule", "lastNode");
+    AnnotationSet defaultSet = doc.getAnnotations("Bio");//Adding to Bio Annotataion Set
+    gate.Utils.addAnn(defaultSet, lastNode - 1, lastNode, "lastNode", newFeatures);
+}

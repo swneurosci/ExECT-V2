@@ -2,7 +2,7 @@ Phase: SeizureFrequency
 Input: Drug DrugPointInTime Split Token
 Options: control=all
 
-Rule: SeizureFrequencySecondFilter
+Rule: ContPrescDrug
 (
     ({DrugPointInTime})
     ({Token})?
@@ -11,7 +11,7 @@ Rule: SeizureFrequencySecondFilter
 -->
 :match.PointInTime = { rule = "ContPrescDrug", Since = "DrugChange"}
 
-Rule: SeizureFrequencySecondFilter
+Rule: ContPrescDrug2
 (
     ({Drug})
     ({Token})?
@@ -21,7 +21,7 @@ Rule: SeizureFrequencySecondFilter
 :match.PointInTime = { rule = "ContPrescDrug2", Since = "DrugChange"}
 
 
-Rule: SeizureFrequencySecondFilter
+Rule: DrugHas
 (
     ({Drug})
     ({Token.string == "has"})

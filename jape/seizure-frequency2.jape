@@ -15,8 +15,9 @@ Priority: 100
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "LastSeizure1", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
- NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2, 
- TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0"}
+ NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, 
+ UpperNumberOfTimePeriods  = :match.NumberRange.N2, 
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since"}
 
 /*  She has had five generalised tonic seizures, the last one approximately five years ago. - DOESNT WORK, NEED TO RETHINK THIS   */
 
@@ -31,8 +32,9 @@ Priority: 100
 ):match1
 -->
 :match.SeizureFrequency11 = { rule = "LastSeizure2a", CUI = :lookup.Lookup3.CUI, Certainty = :lookup.Lookup3.Certainty, Negation = :lookup.Lookup3.Negation,
- NumberOfTimePeriods = :num.NumberRange.value, LowerNumberOfTimePeriods  = :num.NumberRange.N1, UpperNumberOfTimePeriods  = :num.NumberRange.N2, 
- TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0"}
+ NumberOfTimePeriods = :num.NumberRange.value, LowerNumberOfTimePeriods  = :num.NumberRange.N1, 
+ UpperNumberOfTimePeriods  = :num.NumberRange.N2, 
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since"}
 
 // Seizure, last one March 2012 or Seizures, last event/episode DATE
 //HUW
@@ -43,12 +45,13 @@ Priority: 100
     (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}):lookup
     ({timeElapsed.time  == "Last"})
     (({NumberRange.value == 1})|({SlangSeizures}))
-    ({PartialDate})):match
+    ({PartialDate}|{NumberRange.value > 1950, NumberRange.value < 2050}):num):match
 ):match1
 -->
 :match.SeizureFrequency11 = { rule = "LastSeizure2b", CUI = :lookup.Lookup3.CUI, Certainty = :lookup.Lookup3.Certainty, Negation = :lookup.Lookup3.Negation, 
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since", //Check if this wants to be added
- YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day}
+YearDate = :num.NumberRange.value, YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, 
+DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 
 // seizures since then, last one being in DATE
 Rule: LastSeizure2c
@@ -59,12 +62,13 @@ Priority: 100
     ({timeElapsed.time  == "Last"})
     (({NumberRange.value == 1})|({SlangSeizures}))
     ({timeElapsed.time == "During"})[0,1]
-    ({PartialDate})):match
+    ({PartialDate}|{NumberRange.value > 1950, NumberRange.value < 2050}):num):match
 ):match1
 -->
 :match.SeizureFrequency11 = { rule = "LastSeizure2c", CUI = :lookup.Lookup3.CUI, Certainty = :lookup.Lookup3.Certainty, Negation = :lookup.Lookup3.Negation, 
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since", //Check if this wants to be added
- YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day}
+YearDate = :num.NumberRange.value, YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, 
+DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 
 
 /* He reports his last seizure was in [DATE] */
@@ -75,13 +79,15 @@ Priority: 95
     ({timeElapsed.time  == "Last"})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
     ({timeElapsed.time == "During"})
-    ({PartialDate})
+    ({PartialDate}|{NumberRange.value > 1950, NumberRange.value < 2050}):num
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "LastSeizure3", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
- NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2, 
- TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
- YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
+ NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, 
+ UpperNumberOfTimePeriods  = :match.NumberRange.N2, 
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",YearDate = :num.NumberRange.value, 
+ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, 
+ TimeSince_or_TimeOfEvent = "Since"}
 
 
 /* the last seizure was on [DATE] */
@@ -92,13 +98,14 @@ Priority: 95
     ({timeElapsed.time  == "Last"})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
     ({timeElapsed.time==During})*
-    ({PartialDate})
+    ({PartialDate}|{NumberRange.value > 1950, NumberRange.value < 2050}):num
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "LastSeizure3b", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
  NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2, 
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
- YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
+ YearDate = :num.NumberRange.value, YearDate = :match.PartialDate.year, 
+ MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 
 // GTCS, last event around New Years Eve
 Rule: LastSeizurePointInTimeA
@@ -160,13 +167,14 @@ Priority: 95
     ({timeElapsed.time  == "Last"})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
     ({timeElapsed.time==During})*
-    ({PartialDate})
+    ({PartialDate}|{NumberRange.value > 1950, NumberRange.value < 2050}):num
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "LastSeizurePointInTimec", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
  NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2, 
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
- YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since",
+ YearDate = :num.NumberRange.value, YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month,
+ DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since",
  PointInTime = :match.PointInTime.Since}
 
 
@@ -188,6 +196,39 @@ Priority: 95
 //  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
 //  YearDate = :match.NumberRange.value, TimeSince_or_TimeOfEvent = "Since"}
 
+ // GTCS since then, last event 5 years ago
+Rule: LastSeizuretimePeriodA
+Priority: 100 
+(
+    (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}):lookup
+    ({timeElapsed.time  == "Last"})
+    (({NumberRange.value == 1})|({SlangSeizures}))
+    ({NumberRange}):num
+    ({timePeriods})):match
+):match1
+-->
+:match.SeizureFrequency11 = { rule = "LastSeizuretimePeriodA", CUI = :lookup.Lookup3.CUI, Certainty = :lookup.Lookup3.Certainty, Negation = :lookup.Lookup3.Negation, 
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since", //Check if this wants to be added
+ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day,
+ PointInTime = :match.PointInTime.Since, NumberOfTimePeriods = :num.NumberRange.value, LowerNumberOfTimePeriods  = :num.NumberRange.N1, UpperNumberOfTimePeriods  = :num.NumberRange.N2}
+
+
+ // GTCS since then, last event  5 years ago - match LastSeizure2c style + LastSeizurePointInTimeA
+Rule: LastSeizuretimePeriodB
+Priority: 100 
+(
+    (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}):lookup
+    ({timeElapsed.time == "Since"})[0,1]
+    ({timeElapsed.time  == "Last"})
+    (({NumberRange.value == 1})|({SlangSeizures}))
+    ({NumberRange}):num
+    ({timePeriods})):match
+):match1
+-->
+:match.SeizureFrequency11Test = { rule = "LastSeizuretimePeriodB", CUI = :lookup.Lookup3.CUI, Certainty = :lookup.Lookup3.Certainty, Negation = :lookup.Lookup3.Negation, 
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since", //Check if this wants to be added
+ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day,
+ PointInTime = :match.PointInTime.Since, NumberOfTimePeriods = :num.NumberRange.value, LowerNumberOfTimePeriods  = :num.NumberRange.N1, UpperNumberOfTimePeriods  = :num.NumberRange.N2}
 /* GTCS, the most recent being 5 years ago */
 
  Rule: LastSeizure5
@@ -202,7 +243,8 @@ Priority: 95
 -->
 :match.SeizureFrequency11 = { rule = "LastSeizure5", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
  TimePeriod = :time.timePeriods.time-unit, NumberOfSeizures = "0",
- NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2}
+ NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, 
+ UpperNumberOfTimePeriods  = :match.NumberRange.N2,TimeSince_or_TimeOfEvent = "Since"}
 
 
 /* Last Seizure was age X */
@@ -268,6 +310,43 @@ Priority: 95
  Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeUpper = :match.Age.AgeUpper, AgeLower = :match.Age.AgeLower}
 
 
+/* Most recent Seizure DATE */
+// No seizures since Age basically so added "Since" to output
+  Rule: LastSeizure6
+Priority: 95 
+(
+    ({LastSeizure})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
+    ({PartialDate})
+):match
+-->
+:match.SeizureFrequency11 = { rule = "LastSeizurePartialDate", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since",
+ NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2,
+ Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeUpper = :match.Age.AgeUpper, AgeLower = :match.Age.AgeLower,
+ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day}
+
+
+ /* Most recent Seizure DATE */
+// No seizures since 3 years ago
+// last seizure 5 years ago
+  Rule: LastSeizure6
+Priority: 95 
+(
+    ({LastSeizure})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
+    ({NumberRange})
+    ({timePeriods})
+    ({timeElapsed.string == "ago"})
+):match
+-->
+:match.SeizureFrequency11 = { rule = "LastSeizureTimeAgo", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since",
+ NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods  = :match.NumberRange.N1, UpperNumberOfTimePeriods  = :match.NumberRange.N2,
+ Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeUpper = :match.Age.AgeUpper, AgeLower = :match.Age.AgeLower,
+ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day}
+
+
 // complex partial seizures however has not had any of these for the last 2 years. (NEED TO GET THE HAS NOT HAD INTO THIS RULE)
 // IT ALSO PICKS UP -  She had febrile "CONVULSIONS AS A CHILD, AND FOR THE LAST 10 YEARS" has had complex partial seizures. 
 // CHILD = AGE BLOCK? - not picked up any more but child isn't in AGE????
@@ -283,7 +362,8 @@ Priority: 100
 ):match1
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure1", CUI = :lookup.Lookup3.CUI, Certainty = :lookup.Lookup3.Certainty, Negation = :lookup.Lookup3.Negation,
- NumberOfTimePeriods = :num.NumberRange.value, LowerNumberOfTimePeriods  = :num.NumberRange.N1, UpperNumberOfTimePeriods  = :num.NumberRange.N2, 
+ NumberOfTimePeriods = :num.NumberRange.value, LowerNumberOfTimePeriods  = :num.NumberRange.N1, 
+ UpperNumberOfTimePeriods  = :num.NumberRange.N2, 
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0"}
 
 
@@ -302,7 +382,8 @@ Priority: 95
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure2", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = "Affirmed",
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",
- NumberOfTimePeriods = :Num.NumberRange.value, UpperNumberOfTimePeriods = :Num.NumberRange.N2, LowerNumberOfTimePeriods  = :Num.NumberRange.N1}
+ NumberOfTimePeriods = :Num.NumberRange.value, UpperNumberOfTimePeriods = :Num.NumberRange.N2, 
+ LowerNumberOfTimePeriods  = :Num.NumberRange.N1}
 
 /* GTCS in total although not for a number of years */
 
@@ -350,6 +431,21 @@ Priority: 95
 :match.SeizureFrequency11 = { rule = "NoSeizure4", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "Since",
  NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods  = :match.NumberRange.N1}
+// hasn't had any seizures now for around three weeks
+Rule: NoSeizure4b
+Priority: 95 
+(
+    ({NoSeizure})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
+    ({timeElapsed}) // for
+    ({SeizFrequency1})
+):match
+-->
+:match.SeizureFrequency11 = { rule = "NoSeizure4b", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+ NumberOfSeizures = "0", PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "Since",
+ UpperNumberOfTimePeriods = :match.NSeizFrequency1mberRange.UpperNumberOfTimePeriods, LowerNumberOfTimePeriods  = :match.SeizFrequency1.LowerNumberOfTimePeriods,
+ NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods, TimePeriod =  :match.SeizFrequency1.TimePeriod}
+
 
 
  /* she has not had any further seizures during last year. */
@@ -376,13 +472,13 @@ Priority: 95
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
     ({timeElapsed.time == "Since"})
     ({timeElapsed.time == "Last"})
-    ({PartialDate})
+    ({PartialDate}|{NumberRange.value > 1950, NumberRange.value < 2050}):num
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure5", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since",
  NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods  = :match.NumberRange.N1,
- YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day}
+ YearDate = :num.NumberRange.value, YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day}
 
 
 /* No seizures during last April */
@@ -393,7 +489,7 @@ Priority: 95
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
     ({timeElapsed.time == "During"})
     ({timeElapsed.time == "Last"})
-    ({PartialDate})
+    ({PartialDate}|{NumberRange.value > 1950, NumberRange.value < 2050})
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure5a", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
@@ -408,7 +504,7 @@ Rule: NoSeizure5b
 Priority: 95 
 (   
     ({timeElapsed.time == "Since"})
-    ({PartialDate})
+    ({PartialDate}|{NumberRange.value > 1950, NumberRange.value < 2050})
     ({NoSeizure})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
 
@@ -426,13 +522,13 @@ Priority: 95
 (
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
     ({timeElapsed.time == "Since"})
-    ({PartialDate})
+    ({PartialDate}|{NumberRange.value > 1950, NumberRange.value < 2050}):num
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure6", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
  TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since",
  NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods  = :match.NumberRange.N1,
- YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day}   
+ YearDate = :num.NumberRange.value, YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day}   
 
 /*No seizure during April 2018 */
 /* DO WE WANT THIS STYLE OF RULE?
@@ -441,7 +537,7 @@ Priority: 95
 (
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
     ({timeElapsed.time == "During"})
-    ({PartialDate})
+    ({PartialDate}|{NumberRange.value > 1950, NumberRange.value < 2050})
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure6a", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
@@ -461,7 +557,7 @@ Priority: 95
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure7", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
-TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0",  //TimeSince_or_TimeOfEvent = "Since", DO WE WANT SINCE OR DURING FOR AGE
+TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since", //DO WE WANT SINCE OR DURING FOR AGE
 NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods  = :match.NumberRange.N1,
 YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day,
 Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeUpper = :match.Age.AgeUpper, AgeLower = :match.Age.AgeLower}   
@@ -476,7 +572,7 @@ Priority: 95
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure7a", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
-TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", //TimeSince_or_TimeOfEvent = "Since", DO WE WANT SINCE OR DURING FOR AGE
+TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", TimeSince_or_TimeOfEvent = "Since",// DO WE WANT SINCE OR DURING FOR AGE
 NumberOfTimePeriods = :match.NumberRange.value, UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods  = :match.NumberRange.N1,
 YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day,
 Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeUpper = :match.Age.AgeUpper, AgeLower = :match.Age.AgeLower}   
@@ -494,7 +590,8 @@ Priority: 95
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure8", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
- TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "Since"
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", 
+ PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "Since"
 }
 
 // Since discharge no further seizures 
@@ -508,7 +605,8 @@ Priority: 95
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure8b", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
- TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "Since"
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", PointInTime = :match.PointInTime.Since,
+  TimeSince_or_TimeOfEvent = "Since"
 }
 
 
@@ -544,7 +642,8 @@ Priority: 95
 ):match
 -->
 :match.SeizureFrequency11 = { rule = "NoSeizure9", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
- TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "Since"
+ TimePeriod = :match.timePeriods.time-unit, NumberOfSeizures = "0", PointInTime = :match.PointInTime.Since, 
+ TimeSince_or_TimeOfEvent = "Since"
 }
 
 /* during PointInTime no seizures */

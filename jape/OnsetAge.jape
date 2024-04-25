@@ -152,7 +152,7 @@ Priority: 99
 
 (   
 	{Person}
-	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient  ,Lookup.minorType == Disease}):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient, Lookup.minorType == Disease}):item
 	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.type != diagnosed }
 	({TimeSince})?
 	{Age}	
@@ -375,3 +375,4 @@ Age = :a.Age.Age,
 AgeUnit = :a.Age.AgeUnit,
 AgeLower = :a.Age.AgeLower,
 AgeUpper = :a.Age.AgeUpper}
+

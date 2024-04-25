@@ -159,7 +159,7 @@ Priority: 100
     ({timePeriods})
 ):match
 -->
-:match.SeizureFrequency1 = { rule = "hSeizure3a", CUI = :match.Lookup3.CUI, NoOfTimePeriods = :num2.NumberRange.value, TimePeriod = :match.timePeriods.time-unit, QuantityTotal = :num1.NumberRange.value}
+:match.SeizureFrequency1 = { rule = "hSeizure3a2", CUI = :match.Lookup3.CUI, NoOfTimePeriods = :num2.NumberRange.value, TimePeriod = :match.timePeriods.time-unit, QuantityTotal = :num1.NumberRange.value}
 
 /*
 * smaller ones occur on a daily basis up to 10 times per day
@@ -175,7 +175,7 @@ Priority: 95
     ({SeizFreq}):SF2
 ):match
 -->
-:match.SeizureFrequency1 = { rule = "hSeizure4a", CUI = :match.Lookup3.CUI, NoOfTimePeriods = :SF2.SeizFreq.NoOfTimePeriods, TimePeriod = :SF2.SeizFreq.TimePeriod, QuantityTotal = :match.NumberRange.value, QuantityLower = :match.NumberRange.N1, QuantityUpper = :match.NumberRange.N2}
+:match.SeizureFrequency1 = { rule = "hSeizure4a2", CUI = :match.Lookup3.CUI, NoOfTimePeriods = :SF2.SeizFreq.NoOfTimePeriods, TimePeriod = :SF2.SeizFreq.TimePeriod, QuantityTotal = :match.NumberRange.value, QuantityLower = :match.NumberRange.N1, QuantityUpper = :match.NumberRange.N2}
 
 /*
 * once every few month she will have a slightly larger episode
@@ -191,6 +191,6 @@ Priority: 95
     ({Lookup3.majorType == "epilepsy", Lookup3.minorType == "seizure", Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient})
 ):match
 -->
-:match.SeizureFrequency1 = { rule = "hSeizure5a", CUI = :match.Lookup3.CUI, NoOfTimePeriods = :n2.NumberRange.value, TimePeriod = :match.timePeriods.time-unit, QuantityTotal = :n1.NumberRange.value, QuantityLower = :n1.NumberRange.N1, QuantityUpper = :n1.NumberRange.N2}
+:match.SeizureFrequency1 = { rule = "hSeizure5a2", CUI = :match.Lookup3.CUI, NoOfTimePeriods = :n2.NumberRange.value, TimePeriod = :match.timePeriods.time-unit, QuantityTotal = :n1.NumberRange.value, QuantityLower = :n1.NumberRange.N1, QuantityUpper = :n1.NumberRange.N2}
 
 

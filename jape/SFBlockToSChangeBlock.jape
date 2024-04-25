@@ -1,0 +1,15 @@
+Phase: SeizureFrequency 
+Input: SFBlock
+Options: control=appelt 
+
+
+ 
+// stupid rule to fix stupid problem
+Rule: DiagTrigSFreq1
+Priority: 100 
+( 
+    ({SFBlock@string == "before this"})
+):match 
+--> 
+:match.SChangeBlock = {}
+

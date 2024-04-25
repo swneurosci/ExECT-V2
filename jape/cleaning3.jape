@@ -1,0 +1,23 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: Cleaning
+Input:Conj DateBio
+Options: control=all
+
+// SHOULD BE SAME AS cleaning.jape, but with lookup3 not lookup
+
+// These should address lookup3 that contain comorbidities - stroke, head injury, Deal with diseases that are part of URLs
+// e.g. www.diabetes-uk.org
+
+
+Rule: url1
+
+(
+  {Conj within DateBio}
+):umls
+
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls.ConjDeleted = {rule = DateBioConj}

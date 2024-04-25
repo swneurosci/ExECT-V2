@@ -1,0 +1,22 @@
+
+Imports: {import static gate.Utils.*; }
+
+Phase: TriggerCleaning
+Input: Token Trigger Lookup3
+Options: control=appelt
+
+// his brother said....
+Rule: NotVeryOften
+(
+  ({Trigger.majorType == "negation"}):Negation
+  ({Token.string == "get"}):get
+  ({Lookup3})
+  ({Token.string == "very"})?:very
+  ({Token.string == "often"}):often
+):umls
+-->
+:Negation { 
+  inputAS.removeAll(NegationAnnots);
+},
+:umls.Lookup3NegationDeleted = {rule = "NotVeryOften"},
+:umls.TriggerNegationDeleted = {rule = "NotVeryOften"}

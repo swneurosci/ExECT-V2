@@ -1,0 +1,18 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: TriggerCleaning
+Input: Token Trigger
+Options: control=appelt
+
+
+Rule: AS_IF
+
+(
+  ({Token.string == "as"}):as
+  ({Trigger.minorType == "hypothetical"}):if
+):umls
+-->
+:if { 
+  inputAS.removeAll(ifAnnots);
+},
+:umls.TriggerHypotheticalDeleted = {rule = "AS_IF"}

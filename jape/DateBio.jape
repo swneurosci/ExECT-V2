@@ -19,7 +19,9 @@ Macro: MONTH
 Macro: DATESEP
 (
 	{Token.kind == punctuation, Token.string == "/"} |
-	{Token.kind == punctuation, Token.string == "."}
+	{Token.kind == punctuation, Token.string == "."} |
+	{Token.kind == punctuation, Token.subkind == "dashpunct"}
+
 )
 
 Macro: DAYOFMONTH
@@ -31,7 +33,7 @@ Macro: DAYOFMONTH
 )
 
 
-/* Matches UK date in dd/mm/yyyy, dd/mm/yy, dd.mm.yyyy or dd.mm.yy format */
+/* Matches UK date in dd/mm/yyyy, dd/mm/yy, dd.mm.yyyy or dd.mm.yy format + dd-mm-yy*/
 
 Rule: DateBio1
 
@@ -47,37 +49,127 @@ Rule: DateBio1
 
 
 
-
+// 21st Jan 2020
 Rule: DateBio2
 
 (
 	({Lookup2.majorType == "Numerals" , Lookup2.minorType == "Ordinals"}):day
-	({Lookup2.majorType == "time" , Lookup2.minorType == "date"}):month
+	({Lookup2.majorType == "time" , Lookup2.minorType == "date", Lookup2.language != "DATE"}):month
 	({Numeric.rule == "Numerals"}):year			
 ):match
 -->
 :match.DateBio = {rule = "DateBio2" , value = :match@string, DateBio = :match@string, DayDate = :match.Lookup2.Ordinals, MonthDate = :match.Lookup2.month, YearDate = :year@string, string = :match@string}
 
+// 21st Jan, 2020
+Rule: DateBio2a
+
+(
+	({Lookup2.majorType == "Numerals" , Lookup2.minorType == "Ordinals"}):day
+	({Lookup2.majorType == "time" , Lookup2.minorType == "date"}):month
+	({Token.kind == punctuation, Token.string == ","})// for comma between month and year
+	({Numeric.rule == "Numerals"}):year			
+):match
+-->
+:match.DateBio = {rule = "DateBio2a" , value = :match@string, DateBio = :match@string, DayDate = :match.Lookup2.Ordinals, MonthDate = :match.Lookup2.month, YearDate = :year@string, string = :match@string}
 
 
+// 21 Jan 2020
+Rule: DateBio2b
+
+(
+	({Numeric.rule == "Numerals"}):day
+	({Lookup2.majorType == "time" , Lookup2.minorType == "date", Lookup2.language != "DATE"}):month
+	({Numeric.rule == "Numerals"}):year			
+):match
+-->
+:match.DateBio = {rule = "DateBio2b" , value = :match@string, DateBio = :match@string, DayDate = :day.Numeric.value, MonthDate = :match.Lookup2.month, YearDate = :year@string, string = :match@string}
+
+
+// 21 Jan, 2020
+Rule: DateBio2c
+
+(
+	({Numeric.rule == "Numerals"}):day
+	({Lookup2.majorType == "time" , Lookup2.minorType == "date", Lookup2.language != "DATE"}):month
+	({Token.kind == punctuation, Token.string == ","})// for comma between month and year
+	({Numeric.rule == "Numerals"}):year			
+):match
+-->
+:match.DateBio = {rule = "DateBio2c" , value = :match@string, DateBio = :match@string, DayDate = :match.Numeric.value, MonthDate = :match.Lookup2.month, YearDate = :year@string, string = :match@string}
+
+
+//21st Jan 2020
 Rule: DateBio3
 
 (
 	({DayDate.majorType == "time" , DayDate.minorType == "date"}):day
-	({Month.majorType == "time" , Month.minorType == "date"}):month
+	({Month.majorType == "time" , Month.minorType == "date", Lookup2.language != "DATE"}):month
+	({Token.kind == punctuation, Token.string == ","})[0,1]// for comma between month and year
 	({Numeric.rule == "Numerals"}):year			
 ):match
 -->
 :match.DateBio = {rule = "DateBio3" , DateBio =  :match@string, DayDate = :match.DayDate.value, MonthDate = :match.Month.month, YearDate = :match.Numeric.value, string = :match@string}
 
+
+// January 21st 2020
 Rule: DateBio4
 
 (
-	({Lookup2.majorType == "time" , Lookup2.minorType == "date"}):month
+	({Lookup2.majorType == "time" , Lookup2.minorType == "date", Lookup2.language != "DATE"}):month
 	({Lookup2.majorType == "Numerals" , Lookup2.minorType == Ordinals}):day
 	({Numeric.rule == "Numerals"}):year			
 ):match
 -->
 :match.DateBio = {rule = "DateBio4" ,
+ DateBio =  :match@string, DayDate = :day.Lookup2.Ordinals, 
+ MonthDate = :month.Lookup2.month, YearDate = :year.Numeric.value}
+
+
+// January 21st, 2020
+Rule: DateBio4b
+
+(
+	({Lookup2.majorType == "time" , Lookup2.minorType == "date", Lookup2.language != "DATE"}):month
+	({Lookup2.majorType == "Numerals" , Lookup2.minorType == Ordinals}):day
+	({Token.kind == punctuation, Token.string == ","})// for comma between month and year
+	({Numeric.rule == "Numerals"}):year			
+):match
+-->
+:match.DateBio = {rule = "DateBio4b" ,
+ DateBio =  :match@string, DayDate = :day.Lookup2.Ordinals, 
+ MonthDate = :month.Lookup2.month, YearDate = :year.Numeric.value}
+
+
+ 
+// 21-Jun-2020
+Rule: DateBio5a
+
+(
+	
+	({Numeric}):day
+	({Token.kind == punctuation, Token.subkind == "dashpunct"})// for comma between month and year
+	({Lookup2.majorType == "time" , Lookup2.minorType == "date", Lookup2.language != "DATE"}):month
+	({Token.kind == punctuation, Token.subkind == "dashpunct"})[0,1]// for comma between month and year
+	({Numeric}):year			
+):match
+-->
+:match.DateBio = {rule = "DateBio4b" ,
+ DateBio =  :match@string, DayDate = :day.Numeric.value, 
+ MonthDate = :month.Lookup2.month, YearDate = :year.Numeric.value}
+
+
+// 21st-Jun-2020
+Rule: DateBio5b
+
+(
+	
+	({Lookup2.majorType == "Numerals" , Lookup2.minorType == Ordinals}):day
+	({Token.kind == punctuation, Token.subkind == "dashpunct"})// for comma between month and year
+	({Lookup2.majorType == "time" , Lookup2.minorType == "date", Lookup2.language != "DATE"}):month
+	({Token.kind == punctuation, Token.subkind == "dashpunct"})[0,1]// for comma between month and year
+	({Numeric.rule == "Numerals"}):year			
+):match
+-->
+:match.DateBio = {rule = "DateBio4b" ,
  DateBio =  :match@string, DayDate = :day.Lookup2.Ordinals, 
  MonthDate = :month.Lookup2.month, YearDate = :year.Numeric.value}

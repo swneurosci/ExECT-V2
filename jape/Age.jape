@@ -10,7 +10,7 @@ Rule: Age1a
 Priority: 80
 
 (   
-	{age} 
+	{age}
 	{Numeric}
 	{timePeriod}
 	
@@ -49,7 +49,6 @@ Rule: Age1d
 Priority: 100
 
 (   
-	
 	{Numeric}
 	{age.AgeUnit == Year}
 	
@@ -77,14 +76,14 @@ Rule: Age_since2
 Priority:60
 
 (   
-    {timeElapsed}
-	({age.value == aged}
-	{Numeric}):item
+    {timeElapsed.time != Since}
+	{age.value == aged}
+	{Numeric}
 	
  ):match  
  -->
 :match.Age = {rule =Age_since2, AgeUnit = "Year",
-Age =:item.Numeric.value}  
+Age =:match.Numeric.value}  
 
 
 Rule: Age_since3
@@ -141,7 +140,7 @@ Priority: 90
 AgeUnit = "Year"}  
 
 
-//when a numeric age is followed by a less precise lookup2 age group i.e. 12 year old teenager
+//when a numeric age is followed by a less precise lookup2 age group i.e. 12 year old eenager
 //the numeric value of age should be picked up
  Rule: Age_Range2a
 Priority: 100
@@ -220,10 +219,10 @@ Priority: 90
 (   
 	{age}
 	({Numeric}):N1
-	({timePeriod.timeUnit == month})
+	({timePeriod})?
 	({Token.string == and})
 	({Numeric}):N2
-	({timePeriod.timeUnit == month}):a
+	({timePeriod}):a
  ):match  
  -->
 :match.Age = {rule =Age_Range3b, AgeLower =:N1.Numeric.value,
@@ -259,7 +258,7 @@ Priority: 100
 AgeUpper = :match.Lookup2.upperAge, AgeUnit =:match.Lookup2.timeUnit}  
 
 
-/*when years are converted to months if the upper age is given in months, up to 5 years*/
+/*when years are converted to months if the upper age is given in months, up to 2 years*/
 Rule: Age_Range6  
 Priority: 100
 
@@ -274,5 +273,3 @@ Priority: 100
  -->
 :match.Age = {rule =Age_Range6, AgeLower =:match.YearToMonths.value, AgeUnit = :match.timePeriod.time-unit,
 AgeUpper =:match.Numeric.value} 
-
-

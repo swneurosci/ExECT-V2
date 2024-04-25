@@ -11,10 +11,10 @@ Rule: SChangeSentence
     ({Split}|{but})
 ):match1
 -->
-:match1.SChangeSentence = { rule2 = "SChangeSentence", rule = :match.SeizureFrequency11.rule, CUI = :match.SeizureFrequency11.CUI, TimePeriod = :match.SeizureFrequency11.TimePeriod,
-NumberOfTimePeriods = :match.SeizureFrequency11.NumberOfTimePeriods, NumberOfSeizures  = :match.SeizureFrequency11.NumberOfSeizures ,
-LowerNumberOfSeizures  = :match.SeizureFrequency11.LowerNumberOfSeizures, UpperNumberOfSeizures  = :match.SeizureFrequency11.UpperNumberOfSeizures,
-YearDate = :match.SeizureFrequency11.YearDate, DayDate = :match.SeizureFrequency11.DayDate, MonthDate = :match.SeizureFrequency11.MonthDate,
-SinceOrDuration = :match.SeizureFrequency11.SinceOrDuration, Certainty = :match.SeizureFrequency11.Certainty, Negation = :match.SeizureFrequency11.Negation,
-AgeUnit = :match.SeizureFrequency11.AgeUnit, Age = :match.SeizureFrequency11.Age, AgeLower = :match.SeizureFrequency11.AgeLower, AgeUpper = :match.SeizureFrequency11.AgeUpper,
-PointInTime = :match.SeizureFrequency11.PointInTime, LowerNumberOfTimePeriods = :match.SeizureFrequency11.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizureFrequency11.UpperNumberOfTimePeriods}
+:match1.SChangeSentence = { rule2 = "SChangeSentence", rule = :match.SeizureChange.rule, CUI = :match.SeizureChange.CUI, TimePeriod = :match.SeizureChange.TimePeriod,
+NumberOfTimePeriods = :match.SeizureChange.NumberOfTimePeriods, NumberOfSeizures  = :match.SeizureChange.NumberOfSeizures ,
+LowerNumberOfSeizures  = :match.SeizureChange.LowerNumberOfSeizures, UpperNumberOfSeizures  = :match.SeizureChange.UpperNumberOfSeizures,
+YearDate = :match.SeizureChange.YearDate, DayDate = :match.SeizureChange.DayDate, MonthDate = :match.SeizureChange.MonthDate,
+SinceOrDuration = :match.SeizureChange.SinceOrDuration, Certainty = :match.SeizureChange.Certainty, Negation = :match.SeizureChange.Negation,
+AgeUnit = :match.SeizureChange.AgeUnit, Age = :match.SeizureChange.Age, AgeLower = :match.SeizureChange.AgeLower, AgeUpper = :match.SeizureChange.AgeUpper,
+PointInTime = :match.SeizureChange.PointInTime, LowerNumberOfTimePeriods = :match.SeizureChange.LowerNumberOfTimePeriods, UpperNumberOfTimePeriods = :match.SeizureChange.UpperNumberOfTimePeriods}

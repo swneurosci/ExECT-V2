@@ -40,7 +40,7 @@ Priority: 99
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
-    ({listPoint})?
+    ({listPoint})
     {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
     {Lookup2.minorType == causality}
     ({Lookup2})*
