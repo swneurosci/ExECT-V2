@@ -1486,9 +1486,9 @@ drop attack	CUI=C0259813	PREF=Drop Attack	TUI=T184	STY=Sign or Symptom
 drop attacks	CUI=C0259813	PREF=Drop Attack	TUI=T184	STY=Sign or Symptom
 myasthenia gravis	CUI=C0026896	PREF=Myasthenia Gravis	TUI=T047	STY=Disease or Syndrome	
 hemiparkinsonism hemiatrophy syndrome	CUI=C4545231	PREF=Hemiparkinsonism hemiatrophy syndrome	TUI=T047	STY=Disease or Syndrome
-hemiparkinsonism	CUI=C4545231	PREF=Hemiparkinsonism hemiatrophy syndrome	TUI=T047	STY=Disease or Syndrome		
-hemi-parkinsonism	CUI=C4545231	PREF=Hemiparkinsonism hemiatrophy syndrome	TUI=T047	STY=Disease or Syndrome	
-hemi parkinsonism	CUI=C4545231	PREF=Hemiparkinsonism hemiatrophy syndrome	TUI=T047	STY=Disease or Syndrome		
+hemiparkinsonism	CUI=C4545231	PREF=Hemiparkinsonism hemiatrophy syndrome	TUI=T047	STY=Disease or syndrome
+hemi-parkinsonism	CUI=C4545231	PREF=Hemiparkinsonism hemiatrophy syndrome	TUI=T047	STY=Disease or Syndrome
+hemi parkinsonism	CUI=C4545231	PREF=Hemiparkinsonism hemiatrophy syndrome	TUI=T047	STY=Disease or Syndrome
 intellectual disability	CUI=C3714756	PREF=Intellectual Disability	TUI=T048	STY=Mental or Behavioral Dysfunction
 mental retardation	CUI=C3714756	PREF=Intellectual Disability	TUI=T048	STY=Mental or Behavioral Dysfunction
 depressive episode	CUI=C0349217	PREF=Depressive episode, unspecified	TUI=T048	STY=Mental or Behavioral Dysfunction
