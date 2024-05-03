@@ -89,3 +89,5 @@ remains the same:Quantity=Same
 remains seizure free:Quantity=Same:ContainsLookUp=Yes:CUI=C1299590
 no change in her seizure frequency:Quantity=Same:ContainsLookUp=Yes
 no change in his seizure frequency:Quantity=Same:ContainsLookUp=Yes
+not well controlled:Quantity=Frequent:Negation=Negated
+not been any recurrence:Quantity=Same
