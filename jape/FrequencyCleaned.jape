@@ -10,6 +10,7 @@ Rule: FrequencyCleaned
   ({Lookup}):lookup
   ({Token.string == "with"})
   ({Frequency}):freq
+  ({!Lookup})
 ):umls
 -->
 :freq { 
