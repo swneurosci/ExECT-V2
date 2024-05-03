@@ -46,3 +46,6 @@ types of seizure:type=seizureType
 Seizure taking frequency:type=seizureType:SF=true
 Impression:type=opinion
 Comments:type=opinion
+History is convincing:type=opinion
+It is likely to be:type=opinion
+background of:type=diagnosis

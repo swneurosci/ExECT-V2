@@ -977,3 +977,4 @@ epilepsy with tonic clonic seizures alone	CUI=C0393697	PREF=Epilepsy with grand 
 Generalised Epilepsy with tonic-clonic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Generalised seizures	CUI=C0234533	PREF=generalised seizures	TUI=T047	STY=Disease or Syndrom
 refractory epilepsy	CUI=C1096063	PREF=Drug Resistant Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+symptomatic localisation based epilepsy	CUI=C0472349	PREF=Localization-related symptomatic epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
