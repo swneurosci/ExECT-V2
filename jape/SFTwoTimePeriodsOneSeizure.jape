@@ -1,14 +1,15 @@
 
 Phase: SeizureFrequencyTwoTimePeriodsOneSeizure
-Input: NumberRange timePeriods Lookup3 Split SeizureFrequency11 lastOne SeizFrequency1 PartialDate DateBio timeElapsed PointInTime
+Input: NumberRange timePeriods Lookup3 Split SeizureFrequency11 lastOne SeizFrequency1 PartialDate DateBio timeElapsed PointInTime SlangSeizures
 Options: control=appelt
 
 // He has also had secondary generalised seizures, they happen about every year, his last one was PointInTime.
+// He has also had secondary generalised seizures, they happen about every year, his last episode(SLANG) was X.
 Rule: OneSeizTwoTimePeriods4
 (
     ({SeizureFrequency11})
     ({Split})?
-    (({lastOne})
+    ((({lastOne})|({timeElapsed@string == "last"}{SlangSeizures}))
     ({PointInTime})):match2
 ):match
 -->
@@ -21,7 +22,7 @@ Rule: OneSeizTwoTimePeriods1
 (
     ({SeizureFrequency11})
     ({Split})?
-    (({lastOne})
+    ((({lastOne})|({timeElapsed@string == "last"}{SlangSeizures}))
     ({timeElapsed.time == "During"})?
     ({PartialDate})):match2
 ):match
@@ -37,7 +38,7 @@ Rule: OneSeizTwoTimePeriods2
 (
     ({SeizureFrequency11})
     ({Split})?
-    (({lastOne})
+    ((({lastOne})|({timeElapsed@string == "last"}{SlangSeizures}))
     ({NumberRange})
     ({timePeriods})
     ({timeElapsed.time == "Since"})):match2
@@ -54,7 +55,7 @@ Rule: OneSeizTwoTimePeriods3
 (
     ({SeizureFrequency11})
     ({Split})?
-    ((({lastOne})
+    (((({lastOne})|({timeElapsed@string == "last"}{SlangSeizures}))
     ({timeElapsed.time == "During"})?
     ({DateBio}))):match2
 ):match
