@@ -14,7 +14,7 @@ Rule: OneSeizTwoTimePeriods4
 -->
 :match2.SeizureFrequency11 = { rule = "OneSeizTwoTimePeriods4", CUI = :match.SeizureFrequency11.CUI,
 PointInTime = :match.PointInTime.Since, 
-TimeSince_or_TimeOfEvent = "Since", NumberOfSeizures = "1"}
+TimeSince_or_TimeOfEvent = "Since", NumberOfSeizures = "0"}
 
 // He has also had secondary generalised seizures, they happen about every year, his last one was on Christmas day 2009.
 Rule: OneSeizTwoTimePeriods1
@@ -28,7 +28,7 @@ Rule: OneSeizTwoTimePeriods1
 -->
 :match2.SeizureFrequency11 = { rule = "OneSeizTwoTimePeriods1", CUI = :match.SeizureFrequency11.CUI,
 DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
-TimeSince_or_TimeOfEvent = "Since", NumberOfSeizures = "1"}
+TimeSince_or_TimeOfEvent = "Since", NumberOfSeizures = "0"}
 
 
 
@@ -44,9 +44,9 @@ Rule: OneSeizTwoTimePeriods2
 ):match
 -->
 :match2.SeizureFrequency11 = { rule = "OneSeizTwoTimePeriods2", CUI = :match.SeizureFrequency11.CUI,
-NumberOfTimePeriods = :match.NumberRange.NumberOfTimePeriods, TimePeriod = :match.timePeriods.TimePeriod, 
+NumberOfTimePeriods = :match.NumberRange.value, TimePeriod = :match.timePeriods.time-unit, 
 UpperNumberOfTimePeriods = :match.NumberRange.N2, LowerNumberOfTimePeriods = :match.NumberRange.N1,
-TimeSince_or_TimeOfEvent = "Since", NumberOfSeizures = "1"}
+TimeSince_or_TimeOfEvent = "Since", NumberOfSeizures = "0"}
 
 
 // He has also had secondary generalised seizures, they happen about every year, his last one was 20/03/2009.
@@ -61,4 +61,4 @@ Rule: OneSeizTwoTimePeriods3
 -->
 :match2.SeizureFrequency11 = { rule = "OneSeizTwoTimePeriods3", CUI = :match.SeizureFrequency11.CUI,
 DayDate = :match.DateBio.DayDate, MonthDate = :match.DateBio.MonthDate, YearDate = :match.DateBio.YearDate,
-TimeSince_or_TimeOfEvent = "Since", NumberOfSeizures = "1"}
+TimeSince_or_TimeOfEvent = "Since", NumberOfSeizures = "0"}
