@@ -1,0 +1,26 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: CleaningNewLines3
+Input: NewParagraph Sentence listPoint
+Options: control=appelt
+
+// Testing rule looking at sentences rather than tokens
+
+Rule: NewParagraphDeletedSecondRule
+
+(
+  (({NewParagraph})[1,5]):newParagraph //Get up to 5 new lines
+  (({listPoint})[0,1]):listPoint //Get the list point if it is there
+  (({Sentence})[1,2]):tokens1
+  (({NewParagraph})[1,5]):newParagraph2 //Get up to 5 new lines
+):umls
+
+-->
+:newParagraph { 
+  inputAS.removeAll(newParagraphAnnots);
+},
+:newParagraph.NewParagraphDeleted = {rule = "NewParagraphDeletedSecondRule"},
+:newParagraph2 { 
+  inputAS.removeAll(newParagraph2Annots);
+},
+:newParagraph2.NewParagraphDeleted = {rule = "NewParagraphDeletedSecondRule2"}

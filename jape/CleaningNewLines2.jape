@@ -1,0 +1,28 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: CleaningNewLines2
+Input:Lookup Token NewParagraph Lookup3 listPoint
+Options: control=appelt
+
+
+
+Rule: NewParagraphDeletedSecondRule
+
+(
+  (({NewParagraph})[1,5]):newParagraph //Get up to 5 new lines
+  (({listPoint})[0,1]):listPoint //Get the list point if it is there
+  (({Token})[0,5]):tokens1
+  (({Lookup}|{Lookup3})[0,1]) // check for lookups
+  (({Token})[0,10]):tokens2
+  (({NewParagraph})[1,5]):newParagraph2 //Get up to 5 new lines
+):umls
+
+-->
+:newParagraph { 
+  inputAS.removeAll(newParagraphAnnots);
+},
+:newParagraph.NewParagraphDeleted = {rule = "NewParagraphDeletedSecondRule"},
+:newParagraph2 { 
+  inputAS.removeAll(newParagraph2Annots);
+},
+:newParagraph2.NewParagraphDeleted = {rule = "NewParagraphDeletedSecondRule2"}
