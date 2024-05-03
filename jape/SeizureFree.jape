@@ -545,6 +545,7 @@ Priority: 100
 ( 
     ({Person})?
     ({Lookup3.PREF == "seizure free", Lookup3.Temporality != "hypothetical", !Lookup3.CAT == "Slang"}
+    ({timeElapsed})?
     ({PointInTime})
     ):match 
 ):s 
@@ -780,5 +781,22 @@ Priority: 100
 -->
 :match.SeizureFrequencyDriving = { rule = HseizureFree9, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = "Affirmed", string = :match@string,
 Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeUpper = :match.Age.AgeUpper, AgeLower = :match.Age.AgeLower, TimeSince_or_TimeOfEvent = :match.timeElapsed.time,
+NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
+TimePeriod = :match.timePeriods.time-unit}
+
+
+
+// No seizures/fits for 3 years
+Rule: HseizureFree10
+Priority: 100
+(
+    ({Lookup3.Temporality != "hypothetical", Lookup3.Negation == "Negated", Lookup3.CAT != "Slang"})
+    ({timeElapsed})
+    ({NumberRange})
+    ({timePeriods})
+):match
+-->
+:match.SeizureFrequencyDriving = { rule = HseizureFree10, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = "Affirmed", string = :match@string,
+Age = :match.Age.Age, AgeUnit = :match.Age.AgeUnit, AgeUpper = :match.Age.AgeUpper, AgeLower = :match.Age.AgeLower, TimeSince_or_TimeOfEvent = "Since",
 NumberOfTimePeriods = :match.NumberRange.value, LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2,
 TimePeriod = :match.timePeriods.time-unit}
