@@ -1,19 +1,19 @@
 Phase: SeizureFrequency
-Input: Drug DrugPointInTime Split Token
+Input: Drug DrugPointInTime Split Token AEMSlang
 Options: control=all
 
 Rule: ContPrescDrug
 (
     ({DrugPointInTime})
     ({Token})?
-    ({Drug})
+    ({Drug}|{AEMSlang})
 ):match
 -->
 :match.PointInTime = { rule = "ContPrescDrug", Since = "DrugChange"}
 
 Rule: ContPrescDrug2
 (
-    ({Drug})
+    ({Drug}|{AEMSlang})
     ({Token})?
     ({DrugPointInTime})
 ):match
@@ -23,7 +23,7 @@ Rule: ContPrescDrug2
 
 Rule: DrugHas
 (
-    ({Drug})
+    ({Drug}|{AEMSlang})
     ({Token.string == "has"})
 ):match
 -->
