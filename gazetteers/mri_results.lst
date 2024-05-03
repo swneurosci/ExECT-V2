@@ -6,7 +6,7 @@ lesions:CUI=C1319851:Results=Abnormal
 degeneration:CUI=C1319851:Results=Abnormal
 degenerative brain disorder:CUI=C1319851:Results=Abnormal
 atrophy:CUI=C1319851:Results=Abnormal
-CVA:CUI=C1319851:Results=Abnormal
+CVA:CUI=C1319851:Results=Abnormal:=
 cerebral artery occlusion:CUI=C1319851:Results=Abnormal
 hemorrhage:CUI=C1319851:Results=Abnormal
 haemorrhage:CUI=C1319851:Results=Abnormal
@@ -66,3 +66,5 @@ hyperintensity:CUI=C1319851:Results=Abnormal
 perinatal hypoxia:CUI=C1319851:Results=Abnormal
 small vessel disease:CUI=C1319851:Results=Abnormal
 changes:CUI=C1319851:Results=Abnormal
+defect:CUI=C1319851:Results=Abnormal
+asymmetric lateral ventricles:CUI=C1319851:Results=Abnormal

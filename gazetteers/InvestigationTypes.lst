@@ -1,7 +1,7 @@
 EEG:Investigation=EEG
 MRI:Investigation=MRI
 CT:Investigation=CT
-EEGs~:Investigation=EEG
+EEGs~:Investigation=EEG:=
 MRIs~:Investigation=MRI
 CTs~:Investigation=CT
 EEG's~:Investigation=EEG
@@ -26,4 +26,5 @@ neuroimaging:Investigation=MRI
 Videotelemetry:Investigation=EEG:Type=VideoTelemetry
 ambulatory EEG:Investigation=EEG:Type=Ambulatory
 eeg:Investigation=EEG
-mri:Investigation=MRI
+mri:Investigation=MRI:=
+MR brain scan:Investigation=MRI:=

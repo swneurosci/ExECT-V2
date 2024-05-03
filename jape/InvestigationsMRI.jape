@@ -76,7 +76,7 @@ Priority: 94
 :match.InvestigationIgnore = { rule = InvestigationTwoSentences, MRI_Performed = "Yes", MRI_Results = :match.InvestigationFindingMRI.Results, 
 CUI = :match.InvestigationFindingMRI.CUI}
 
-// He should has a MRI in HOSPITAL. The result was normal
+// He had a MRI in HOSPITAL. The result was normal
 Rule: InvestigationTwoSentences
 Priority: 94
 (
