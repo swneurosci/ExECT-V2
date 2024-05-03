@@ -192,5 +192,16 @@ Rule: ExperiencerReversal9  /*reversing from patient to other*/
 },
 :umls.Lookup3ExpChange = {rule = ExperienceReversal9}
 
+// Epilpesy as a CHILD - was experiencer = other, should be patient
 
+Rule: ExperiencerReversal10  /*reversing from other to patient*/
 
+ (
+  ({Lookup contains OtherPerson}):umls
+  ):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Experiencer","Patient");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ExperienceReversal10");
+},
+:umls.LookupExpChange = {rule = ExperienceReversal9, type = "OtherToPatient"}
