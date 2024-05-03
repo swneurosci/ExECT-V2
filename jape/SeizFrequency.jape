@@ -45,12 +45,12 @@ NumberOfTimePeriods = :match.timePeriods.frequency, QuantityTotal = :match.Numbe
 QuantityLowerRange = :match.NumberRange.N1, QuantityUpperRange = :match.NumberRange.N2}
 
 
-// 1 seizures "last week" also picks up "in the morning"
+// 1 seizures "last week" also picks up "in the morning" . -- BLocking "night"
 Rule: SeizFrequency1b 
 Priority: 98
 (   
     ({Token.string != sometimes, Token.string != occasionally })  // blocks hypotheticals
-    ({timePeriods}):match
+    ({timePeriods, timePeriods.NotSF != "Yes"}):match
     ({Token.string != ago, Token.string != dose, Token.string != ammount, Token.string != doseage, Token.string != quantity, Token.string != before})  // blocks in the morning dose
 ):match1 
 --> 
