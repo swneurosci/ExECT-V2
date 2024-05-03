@@ -6,7 +6,7 @@ Options: control=appelt
 Rule: listPoint  
 (
 {Numeric.rule == "Numerals", Token.length == 1}
-{Split}
+{Split.kind == "internal"}
 ):match
 -->
 :match.listPoint = {rule = "listPoint"}
