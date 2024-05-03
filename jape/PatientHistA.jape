@@ -558,6 +558,7 @@ Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
 TimePeriod = :item.OtherDiag.TimePeriod,
 NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
 
+// since Jan 2012, (when she was born,)? shes has suffered from learning dis...
 Rule: PtHistoryA13c
 Priority: 100
 
@@ -667,7 +668,7 @@ Priority: 100
 	
 	({Person})
 	({Lookup2.type == past, Lookup2.majorType == historic}|{Lookup2.type == experiencing, Lookup2.minorType == symptoms}|{Lookup2.minorType == causality})
-	({OtherDiag }):item
+	({OtherDiag}):item
 	({Lookup2})?
 
  ):match  

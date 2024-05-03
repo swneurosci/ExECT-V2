@@ -2,6 +2,24 @@ Phase: SeizureChange
 Input: Lookup3 Split SeizureFree SeizureFrequency Frequency timeElapsed NumberRange timePeriods PartialDate Coincide PointInTime Drug
 Options: control=appelt 
 
+
+// infrequent Seizures
+Rule: SeizureChange0a
+Priority: 100 
+( 
+    ({Frequency.Temporality != "hypothetical", Frequency.SeizureFree != "Yes"})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChange0a", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity,
+ Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+TimePeriod = :match.timePeriods.time-unit, NumberOfTimePeriods = :match.NumberRange.value, 
+LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :match.NumberRange.N2 } 
+
+
+
+
+
 //ADD TIME SINCE OR TIME DURING TO DATE RULES!!
 /*
 * increase seizures For the last X time Period

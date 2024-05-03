@@ -245,6 +245,8 @@ TimePeriod = :match.timePeriods.time-unit, sinceInteraction = :match.Interaction
 } 
  
  // seizure free since 5 weeks
+ 
+ /// HUW LOOK AT "NO Seizure FOR X TIME" (timeElapsed.time == During,, Not SINCE...)
 Rule: seizureFree1d1b 
 Priority: 99 
 ( 

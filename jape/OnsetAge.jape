@@ -294,6 +294,7 @@ Priority: 99
 
 (   
 	{Person}
+	({Pronouns})?
     {Lookup2}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient }):item
     ({Person})?

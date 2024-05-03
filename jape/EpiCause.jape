@@ -1,5 +1,5 @@
 Phase: EpiCause
-Input: Lookup Lookup3 DiagnosisTriggers Lookup2 listPoint
+Input: Lookup Lookup3 DiagnosisTriggers Lookup2 listPoint Sentence
 
 
   /*These rules are set to select causes and suspected causes of epilepsy, the UMLS CUI that is returned relates to the cause, 
@@ -11,7 +11,7 @@ Input: Lookup Lookup3 DiagnosisTriggers Lookup2 listPoint
 
 Options: control=appelt
 
-
+// top of letter list - may have to select sentence as the rule picks up things far beyond the top of letter
 
 Rule: Cause1
 Priority: 100
@@ -23,7 +23,7 @@ Priority: 100
     ({Lookup3})?
     ({Lookup3})?
     ({listPoint})?
-    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Negation == Affirmed, Lookup.Experiencer == Patient}
 	{Lookup2.minorType == causality}
     ({Lookup2})?
     ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
@@ -41,7 +41,7 @@ Priority: 99
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
     ({listPoint})
-    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Negation == Affirmed, Lookup.Experiencer == Patient}
     {Lookup2.minorType == causality}
     ({Lookup2})*
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
@@ -60,7 +60,7 @@ Priority: 99
 (   
 	
     ({Lookup2.type == suffered}|{Lookup2.type == began}|{Lookup2.minorType == causality})
-    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+    {Lookup.majorType == umls , Lookup.minorType == Disease ,Lookup.Negation == Affirmed, Lookup.Experiencer == Patient}
     ({Lookup2})?
     {Lookup2.minorType == causality}
     ({Lookup2})?
@@ -80,7 +80,7 @@ Priority: 99
 (   
 	
     ({DiagnosisTriggers})
-    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Negation == Affirmed, Lookup.Experiencer == Patient}
     {Lookup2.minorType == causality}
     ({Lookup2})?
     ({Lookup2})?
@@ -101,7 +101,7 @@ Priority: 99
 (   
 	
     {DiagnosisTriggers}
-    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+    {Lookup.majorType == umls , Lookup.minorType == Disease ,Lookup.Negation == Affirmed, Lookup.Experiencer == Patient}
     {Lookup2.minorType == causality}
     ({Lookup2})?
     ({Lookup2})?
@@ -120,7 +120,7 @@ Priority: 99
 (   
 	
     ({Lookup2.minorType == causality})
-    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Negation == Affirmed, Lookup.Experiencer == Patient}
     ({Lookup2})?
     ({Lookup2})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 

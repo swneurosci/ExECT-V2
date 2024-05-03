@@ -45,3 +45,6 @@ treated:type=treated
 delivery:type=birth
 known to suffer:type=history
 known to have:type=history
+was delivered:type=birth
+known to have had:type=history
+

@@ -1494,4 +1494,8 @@ mental retardation	CUI=C3714756	PREF=Intellectual Disability	TUI=T048	STY=Mental
 depressive episode	CUI=C0349217	PREF=Depressive episode, unspecified	TUI=T048	STY=Mental or Behavioral Dysfunction
 chronic featureless headache	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease or Syndrome
 chronic featureless headaches	CUI=C0151293	PREF=chronic headache	TUI=T047	STY=Disease or Syndrome
+heavy alcohol intake    CUI=C0085762	PREF=alcohol abuse	TUI=T048	STY=Mental or Behavioral Dysfunction
+alcohol related seizures	CUI=C0586323	PREF=seizures, alcohol-related	TUI=T048	STY=Mental or Behavioral Dysfunction
 hypoxic birth injury	CUI=C0559478	PREF=Perinatal hypoxia, birth	TUI=T046	STY=Pathologic Function
+tumour	CUI=C0027651	PREF=Neoplasms	TUI=T191	STY=Neoplastic process
+tumor   CUI=C0027651	PREF=Neoplasms	TUI=T191	STY=Neoplastic process
