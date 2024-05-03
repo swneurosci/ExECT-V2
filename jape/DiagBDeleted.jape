@@ -1,0 +1,16 @@
+Imports: {import static gate.Utils.*; }
+Phase: DiagBFiltered
+Input:  DiagBFiltered DiagBBlocks Token
+Options: control=all
+
+Rule: DiagBFilteredDeleted
+Priority: 100
+(
+    ({DiagBFiltered}):DiagB
+    ({DiagBBlocks})
+):match
+ -->
+:match.DiagBFilteredDeleted = {ruleFilter2 = DiagBFilteredDeleted},
+:DiagB { 
+  inputAS.removeAll(DiagBAnnots);
+}

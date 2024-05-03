@@ -15,3 +15,4 @@ drug resistant:epilepsy=refractory:CUI=C1096063:PREF=Drug Resistant Epilepsy
 left temporal:lobe=temporal:CUI=C0014556
 right temporal:lobe=temporal:CUI=C0014556:PREF=Temporal Lobe Epilepsy
 nocturnal:epilepsy=nocturnal:CUI=C0393719:PREF=Nocturnal Epilepsy
+Complex Partial:epilepsy=complex partial:CUI=C0149958:PREF=Complex Partial Seizure:Lookup=Yes
