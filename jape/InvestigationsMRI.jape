@@ -218,7 +218,7 @@ Priority: 92
 (
   ({InvestigationFindingMRI})
   ({Conj})?
-  ({Investigation})*
+  ({Investigation})+
   ({Conj})?
   ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
 ):match

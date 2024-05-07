@@ -208,13 +208,13 @@ Priority: 92
 CUI = :outcome.InvestigationFindingEEG.CUI}
 
 
-
+// abnormal and? INVEST? and? EEG.... 
 Rule: getInvestigationsOutcomeEEG
 Priority: 92
 (
   ({InvestigationFindingEEG}):outcome
   ({Conj})?
-  ({Investigation})*
+  ({Investigation})+// 1 or more
   ({Conj})?
   ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):EEG
 ):match

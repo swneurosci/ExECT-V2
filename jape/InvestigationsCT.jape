@@ -217,7 +217,7 @@ Priority: 92
 (
   ({InvestigationFindingCT})
   ({Conj})?
-  ({Investigation})*
+  ({Investigation})+
   ({Conj})?
   ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
 ):match
