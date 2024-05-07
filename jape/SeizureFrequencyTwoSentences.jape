@@ -147,6 +147,25 @@ NumberOfSeizures = "0"}
 
 
 
+//Seizures. These Episodes happen once a month...
+
+Rule: TwoSentenceSFSlangSeizures
+Priority: 100 
+( 
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
+    ({Split})
+    ({SlangSeizures})
+    ({SeizFrequency2})
+):match 
+--> 
+:match.SeizureFrequency11 = { rule = "TwoSentenceSFSlangSeizures", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, 
+Negation = :match.Lookup3.Negation, DayDate = :match.DateBio.DayDate, MonthDate = :match.DateBio.MonthDate, 
+YearDate = :match.DateBio.YearDate, NumberOfTimePeriods = :match.SeizFrequency2.NumberOfTimePeriods,
+TimePeriod = :match.SeizFrequency2.TimePeriod, NumberOfSeizures = :match.SeizFrequency2.QuantityTotal, 
+LowerNumberOfSeizures  = :match.SeizFrequency2.QuantityLowerRange, UpperNumberOfSeizures  = :match.SeizFrequency2.QuantityUpperRange} 
+
+
+
 
 
 
