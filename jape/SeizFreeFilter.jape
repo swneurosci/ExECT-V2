@@ -1,6 +1,6 @@
 Phase: SeizureFrequency
 Input: SeizureFrequencyDriving SFreeBlock SFreeSentence
-Options: control=appelt
+Options: control=all // changed to match SeizureChange fix
 
 Rule: SeizureFrequencyFilter1
 (

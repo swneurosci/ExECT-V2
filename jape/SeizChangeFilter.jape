@@ -1,6 +1,7 @@
 Phase: SeizureFrequency
 Input: SeizureChange SChangeBlock SChangeSentence
-Options: control=appelt // BFS change to all - need to check...
+Options: control=all // BFS change to all - need to check... - was changed to fix issues of 2 Seiz Change in one sentence...
+
 
 Rule: SeizureChangeFilter1
 (
