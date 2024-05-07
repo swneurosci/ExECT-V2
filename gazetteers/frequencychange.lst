@@ -91,3 +91,11 @@ no change in her seizure frequency:Quantity=Same:ContainsLookUp=Yes
 no change in his seizure frequency:Quantity=Same:ContainsLookUp=Yes
 not well controlled:Quantity=Frequent:Negation=Negated
 not been any recurrence:Quantity=Same
+deterioration in his seizure control:Quantity=Increased:ContainsLookUp=Yes
+deterioration in her seizure control:Quantity=Increased:ContainsLookUp=Yes
+deterioration in their seizure control:Quantity=Increased:ContainsLookUp=Yes
+deterioration in seizure control:Quantity=Increased:ContainsLookUp=Yes
+improvement in his seizure control:Quantity=Decreased:ContainsLookUp=Yes
+improvement in her seizure control:Quantity=Decreased:ContainsLookUp=Yes
+improvement in their seizure control:Quantity=Decreased:ContainsLookUp=Yes
+improvement in seizure control:Quantity=Decreased:ContainsLookUp=Yes
