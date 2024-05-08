@@ -1,0 +1,17 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: InvestigationContainsNotEpilepsy
+Input:  Investigations InvestigationNotEpilepsy
+Options: control=all
+
+
+
+Rule: DiagExclude
+(   
+    ({Investigations contains InvestigationNotEpilepsy}):invest
+):match
+-->
+:invest { 
+  inputAS.removeAll(investAnnots);
+},
+:invest.InvestigationsIgnored = {rule = "InvestigationNotEpilepsy"}

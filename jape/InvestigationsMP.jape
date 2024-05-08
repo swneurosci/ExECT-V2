@@ -13,3 +13,4 @@ InvestigationsCT
 InvestigationsMRI
 InvestigationsLookup
 InvestigationWithin /* Need to work on this rule, deletes too much*/
+InvestigationNotEpilepsy
