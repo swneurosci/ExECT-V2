@@ -125,7 +125,7 @@ Priority: 90
 	
  ):match  
  -->
-:match.Age = {rule =Age_Range1, AgeUpper =:match.Numeric.value, AgeLower =:match.Lookup2.lowerAge,
+:match.Age = {rule =Age_Range1, AgeUpper =:match.Numeric.value, AgeLower =:match.Numeric.lowerAge,
 AgeUnit =:match.timePeriod.time-unit}  
 
   Rule: Age_Range1b
@@ -137,10 +137,23 @@ Priority: 90
 	
  ):match  
  -->
-:match.Age = {rule =Age_Range1b, AgeUpper =:match.Numeric.value, AgeLower =:match.Lookup2.lowerAge,
+:match.Age = {rule =Age_Range1b, AgeUpper =:match.Numeric.value, AgeLower =:match.Numeric.lowerAge,
 AgeUnit = "Year"}  
 
+Rule: Age_Range1c
+Priority: 90
 
+(   
+	{age}
+	({Numeric}):a	
+	({Token.string == and}|{Token.string == to})
+	({Numeric}):b
+	{!timePeriod}
+ ):match  
+
+ -->
+:match.Age = {rule =Age_Range1c, AgeLower =:a.Numeric.value, AgeUpper =:b.Numeric.value, 
+AgeUnit = "Year"}  
 //when a numeric age is followed by a less precise lookup2 age group i.e. 12 year old teenager
 //the numeric value of age should be picked up
  Rule: Age_Range2a

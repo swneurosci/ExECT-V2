@@ -682,12 +682,12 @@ C0022739	klippel trenaunay dis
 C0022739	klippel trenaunay disease
 C0022739	klippel trenaunay syndrome (disorder)
 C0022739	klippel trenaunay weber syndrome
-C0022739	klippel tr?â??naunay weber syndrome
+C0022739	klippel tr? ??naunay weber syndrome
 C0022739	klippel-trenaunay disease
 C0022739	klippel-trenaunay syndromes
 C0022739	klippel-trenaunay-weber syndro
 C0022739	klippel-trenaunay-weber syndrome (disorder)
-C0022739	klippel-tr?â??naunay-weber syndrome
+C0022739	klippel-tr? ??naunay-weber syndrome
 C0022739	kts
 C0022739	ktw syndromes
 C0344681	la - cor sinus defect l atrium
@@ -1222,6 +1222,8 @@ C0268226	type i mucolipidosis
 C0270737	essential myoclonus
 C0270737	familial essential myoclonus
 C0740392	Middle Cerebral Artery infarction
+C0740392	MCA infarction
+C0740392	MCA infarct
 C2832052	post-traumatic damage to the left frontal lobe		
 C2832052	post-traumatic damage to the right frontal lobe
 C2832052	focal traumatic brain injury	
@@ -1303,7 +1305,7 @@ C0338437	neurocysticercosis
 C0338437	Cerebral cysticercosis
 C0559478	perinatal hypoxia
 C0559478	hypoxia during birth
-C0011194	Déjà vu
+C0011194	D j  vu
 C0011194	deja vu
 C0456798	perinatal trauma
 C0019080	haemorrhage
@@ -1333,3 +1335,4 @@ C2921031	hippocampectomy
 C0221505	lobe lesion
 C1456496	lobe damage
 C0234428	blackout
+C0002962	angina pectoris

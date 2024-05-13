@@ -2463,7 +2463,6 @@ C3665337	normal birth
 C3665337	born normally
 C3665337	birth was normal
 C0002962	angina
-C0002962	ischaemic heart disease
 C0002962	angina pectoris
 C0010068	coronary heart disease
 C0010068	CHD
@@ -3653,7 +3652,7 @@ C4476643	bilateral tonic-clonic seizure with generalized onset
 C4476643	primarily generalised tonic clonic seizures
 C4476643	generalised-onset bilateral tonic-clonic seizures
 C0030508	parasomnia
-C3809094	occipital lobe infarct	
+C3809094	occipital lobe infarct
 C3665337	no problems at birth
 C3665337	birth history was normal	
 C4523971	epilepsy surgery	
@@ -3700,3 +3699,6 @@ C1456496	lobe damage
 C0234428	blackout
 C0494475	bilateral tonic-clonic	
 C0751495	focal in onset
+C0740392	MCA infarction
+C0740392	MCA infarct
+C1384485	normal delivery
