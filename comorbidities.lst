@@ -1119,8 +1119,8 @@ stiff-baby syndrome	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
 say meyer syndrome	CUI=C1839125	PREF=Say Meyer syndrome	TUI=T047	EC=No
 trigonocephaly, short stature and developmental delay	CUI=C1839125	PREF=Say Meyer syndrome	TUI=T047	EC=No
 trigonocephaly, short stature, and retarded psychomotor development	CUI=C1839125	PREF=Say Meyer syndrome	TUI=T047	EC=No
-X-linked creatine deficiency	CUI=C1845862	PREF-Creatine deficiency, X-linked	TUI=T047	EC=Yes
-Creatine transporter deficiency	CUI=C1845862 	PREF-Creatine deficiency, X-linked	TUI=T047	EC=Yes
+X-linked creatine deficiency	CUI=C1845862	PREF=Creatine deficiency, X-linked	TUI=T047	EC=Yes
+Creatine transporter deficiency	CUI=C1845862 	PREF=Creatine deficiency, X-linked	TUI=T047	EC=Yes
 subcorticalband heterotopia	CUI=C1848201	PREF=Subcortical Band Heterotopia	TUI=T019	EC=Yes
 double cortex	CUI=C1848201	PREF=Subcortical Band Heterotopia	TUI=T019	EC=Yes
 sbcortical laminar heterotopia	CUI=C1848201	PREF=Subcortical Band Heterotopia	TUI=T019	EC=Yes
