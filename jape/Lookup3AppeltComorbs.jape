@@ -13,4 +13,4 @@ minorType = :match.Comorbidities.minorType,
 TUI= :match.Comorbidities.TUI, 
 PREF = :match.Comorbidities.PREF,
 CUI = :match.Comorbidities.CUI, 
-STY = :match.Comorbidities.STY}
+EC= :match.Comorbidities.EC}

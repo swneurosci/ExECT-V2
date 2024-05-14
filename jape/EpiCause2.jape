@@ -21,7 +21,7 @@ Priority: 100
     ({Lookup2.minorType == probability})?
     {Lookup2.minorType == causality}
     ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-    Lookup3.Experiencer == Patient}):item
+    Lookup3.Experiencer == Patient, Lookup3.EC != No}):item
   
 
 

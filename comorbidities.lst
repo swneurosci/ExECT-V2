@@ -1263,6 +1263,7 @@ N-methyl D-aspartate receptor antibody encephalitis	CUI=C2986717	PREF=Anti-N-Met
 retroaortic brachiocephalic vein	CUI=C3163891	PREF=retroaortic brachiocephalic vein	TUI=T019	EC=
 medial temporal sclerosis	CUI=C3164863	PREF=Mesial temporal lobe sclerosis	TUI=T047	EC=Yes
 mesial temporal lobe sclerosis	CUI=C3164863	PREF=Mesial temporal lobe sclerosis	TUI=T047	EC=Yes
+mesial temporal sclerosis	CUI=C3164863	PREF=Mesial temporal lobe sclerosis	TUI=T047	EC=Yes
 lacunar stroke	CUI=C3178801	PREF=lacunar strokes	TUI=T047	EC=Yes
 lacunar syndrome	CUI=C3178801	PREF=lacunar strokes	TUI=T047	EC=Yes
 ruptured aneurysm of intracranial artery	CUI=C3266645	PREF=ruptured aneurysm of intracranial artery	TUI=T047	EC=Yes
@@ -1436,3 +1437,9 @@ Distal monosomy 17p13.3	CUI=C4707092	PREF=Distal 17p13.3 microdeletion syndrome	
 neonatal complicaions	CUI=C4735642	PREF=Neonatal complications	TUI=T033	EC=
 intracranial infection	CUI=C4761018	PREF=Intracranial infection	TUI=T047	EC=Yes
 intracranial infections	CUI=C4761018	PREF=Intracranial infection	TUI=T047	EC=Yes
+mental health problem	CUI=C1446377	PREF=Mental health problems	TUI=T033	EC=No
+mental health problems	CUI=C1446377	PREF=Mental health problems	TUI=T033	EC=No
+mental health difficulty	CUI=C1446377	PREF=Mental health problems	TUI=T033	EC=No
+mental health difficulties	CUI=C1446377	PREF=Mental health problems	TUI=T033	EC=No
+cerebellar infarction	CUI=C0236073	PREF=Cerebellar infarction	TUI=TUI=T047	EC=Yes
+cerebellar infarct	CUI=C0236073	PREF=Cerebellar infarction	TUI=TUI=T047	EC=Yes
