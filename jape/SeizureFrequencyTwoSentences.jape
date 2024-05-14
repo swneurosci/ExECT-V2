@@ -7,7 +7,7 @@ Options: control=appelt
 // Might need to add more to input for blocking
 
 
-// He is haveing seizures. These happen every week. - Also picked up every 2 months 
+// He is having seizures. These happen every week. - Also picked up every 2 months 
 
 Rule: hSeizureFreq3aTwoSentences
 Priority: 100 
