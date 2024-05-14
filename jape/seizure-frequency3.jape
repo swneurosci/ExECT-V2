@@ -14,7 +14,7 @@ Priority: 100
     ({NumberRange.value >= 1950, NumberRange.value <= 2050}):year
 ):match 
 --> 
-:match.SeizureFrequency11 = { rule = "hSeizure1aYears", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
+:match.SeizureFrequency11 = { class = "Last", rule = "hSeizure1aYears", CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 NumberOfTimePeriods = :match.timePeriods.frequency, TimePeriod = :match.timePeriods.time-unit, TimeSince_or_TimeOfEvent = "During",
 NumberOfSeizures = :noSeiz.NumberRange.value, LowerNumberOfSeizures  = :noSeiz.NumberRange.N1, UpperNumberOfSeizures  = :noSeiz.NumberRange.N2,
 YearDate = :year.NumberRange.value}
