@@ -22,7 +22,7 @@ Priority: 100
  ):match  
  -->
 :item.OtherDiag = {rule = OtherDiagDate, r = "1", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC= :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 YearDate = :match.PartialDate.year,
@@ -46,7 +46,7 @@ Priority: 100
  ):match  
  -->
 :item.OtherDiag = {rule = OtherDiagDate, r = "2", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 YearDate = :match.DateSince.YearDate,
@@ -68,7 +68,7 @@ Priority: 100
  ):match  
  -->
 :item.OtherDiag = {rule = OtherDiagDate, r = "3", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC= :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 YearDate = :match.DateSince.YearDate,
@@ -90,7 +90,7 @@ Priority: 100
  ):match  
  -->
 :item.OtherDiag = {rule = OtherDiagDate, r = "4", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 YearDate = :match.DateBio.YearDate,
@@ -109,7 +109,7 @@ Priority: 99
  ):match  
  -->
 :item.OtherDiag = {rule = OtherDiagDate, r = "5", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 YearDate = :match.PartialDate.year,
@@ -128,7 +128,7 @@ Priority: 100
  ):match  
  -->
 :item.OtherDiag = {rule = OtherDiagTime, r = "1", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
@@ -150,7 +150,7 @@ Priority: 100
  ):match  
  -->
 :item.OtherDiag = {rule = OtherDiagTime, r = "2", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 TimePeriod = :match.TimeSince.TimePeriod,
@@ -172,7 +172,7 @@ Priority: 100
  ):match  
  -->
 :item.OtherDiag = {rule = OtherDiagDate, r = "4", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 YearDate = :match.DateSince.YearDate}
@@ -193,7 +193,7 @@ Priority: 100
  ):match  
  -->
 :item.OtherDiag = {rule = OtherDiagAge, r = "1", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 Age = :match.Age.Age,
@@ -214,7 +214,7 @@ Priority: 100
  ):match  
  -->
 :item.OtherDiag = {rule = OtherDiagAge, r = "2", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 AgeUnit = :match.Age.AgeUnit,
@@ -238,7 +238,7 @@ Priority: 100
  ):match  
  -->
 :item.OtherDiag = {rule = OtherDiagAge, r = "3", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 AgeUnit = :match.Age.AgeUnit,
@@ -260,7 +260,7 @@ Priority: 90
  ):match  
  -->
 :item.OtherDiag = {rule = OtherDiagPhrase, r = "1", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 PointInTime = :match.PointInTime.Since}
@@ -277,7 +277,7 @@ Priority: 99
  ):match  
  -->
 :item.OtherDiag = {rule = OtherDiagPhrase, r = "2" PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer,
 Certainty = :item.Lookup3.Certainty}
 
@@ -324,7 +324,7 @@ Priority: 100
  ):match  
  -->
 :item.OtherDiag = {rule = OtherDiagDate, r = "3", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 YearDate = :match.DateSince.year,
