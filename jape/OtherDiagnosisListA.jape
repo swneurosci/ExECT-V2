@@ -16,7 +16,7 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagListA1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-//STY = :item.OtherDiag.STY, 
+EC = :item.OtherDiag.EC, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
 Negation = :item.OtherDiag.Negation,
@@ -34,7 +34,7 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagListA2, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-//STY = :item.OtherDiag.STY, 
+EC = :item.OtherDiag.EC, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
 Negation = :item.OtherDiag.Negation,
@@ -55,7 +55,7 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagListA2a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-//STY = :item.OtherDiag.STY, 
+EC = :item.OtherDiag.EC, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
 Negation = :item.OtherDiag.Negation,
@@ -75,7 +75,7 @@ Priority: 90
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagListA3, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-//STY = :item.OtherDiag.STY, 
+EC = :item.OtherDiag.EC, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
 Negation = :item.OtherDiag.Negation,
@@ -100,7 +100,7 @@ Priority: 90
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagListA4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-STY = :item.OtherDiag.STY, 
+EC = :item.OtherDiag.EC, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 //Certainty = :item.OtherDiag.Certainty,
 Negation = :item.OtherDiag.Negation,
@@ -123,7 +123,7 @@ Priority: 90
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagListA5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-//STY = :item.OtherDiag.STY, 
+EC = :item.OtherDiag.EC, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
 Negation = :item.OtherDiag.Negation,
@@ -142,7 +142,7 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagListA7, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-//STY = :item.OtherDiag.STY, 
+EC = :item.OtherDiag.EC, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
 Negation = :item.OtherDiag.Negation,
@@ -167,7 +167,7 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagListA8, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-//STY = :item.OtherDiag.STY,
+EC = :item.OtherDiag.EC, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, 
 Negation = :item.OtherDiag.Negation,
@@ -187,7 +187,7 @@ Priority: 90
  ):match  
  -->
 :item.PatientHistory = {rule = OtherDiagListA9, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-//STY = :item.OtherDiag.STY, 
+EC = :item.OtherDiag.EC, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Negation = :item.OtherDiag.Negation,
 Certainty = :item.OtherDiag.Certainty}
