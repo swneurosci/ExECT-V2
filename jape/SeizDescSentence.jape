@@ -1,0 +1,12 @@
+Phase: PatientHistory
+Input: SeizureDescription Split
+Options: control=all
+
+Rule: SeizDescSentence1
+(
+    {Split}
+    ({SeizureDescription})+
+    {Split}
+):match
+-->
+:match.SeizDescSentence = { rule = "SeizDescSentence1"}
