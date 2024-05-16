@@ -1,6 +1,7 @@
 Multiphase:PatientHistory
 
 Phases:
+SeizDescSentence
 OtherDiagPhrase
 OtherDiagCleaning
 OtherDiagnosis
