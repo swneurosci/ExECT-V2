@@ -20,7 +20,20 @@ Priority: 100
 ):match
 -->
 :umls {
-  umlsAnnots.iterator().next().getFeatures().put("Temporality","Hypothetical");
+  umlsAnnots.iterator().next().getFeatures().put("Temporality","hypothetical");
   umlsAnnots.iterator().next().getFeatures().put("rule","ContextCorrection");
 },
 :umls.Lookup3TepChange = {rule = ContextCorrection}
+
+Rule: ContextCorrection2
+Priority: 100
+(
+	{Context.context == hypothetical}
+	({Lookup3.majorType == umls, Lookup3.Temporality == historical}):umls
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Temporality","hypothetical");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ContextCorrection");
+},
+:umls.Lookup3TepChange = {rule = ContextCorrection2}

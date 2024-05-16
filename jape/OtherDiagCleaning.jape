@@ -1,8 +1,9 @@
 Imports: {import static gate.Utils.*; }
 
-Phase: Cleaning
-Input: OtherDiag SeizureFrequency
+Phase: PatientHistory
+Input: OtherDiag SeizureFrequency SeizDescSentence
 Options: control=appelt
+
 Rule: OtherDiagWithinSF
 
 (
@@ -13,10 +14,16 @@ Rule: OtherDiagWithinSF
 :umls { 
   inputAS.removeAll(umlsAnnots);
 },
-:umls.OtherDiag = {ruleCleaning = OtherDiagWithinSF, rule = :umls.OtherDiag.rule,
-r = :umls.OtherDiag.r, PREF = :umls.OtherDiag.PREF, CUI = :umls.OtherDiag.CUI, 
-//Negation = :umls.OtherDiag.Negation,
-EC = :umls.OtherDiag.EC
-Experiencer = :umls.OtherDiag.Experiencer, Temporality = :umls.OtherDiag.Temporality, 
-Certainty = :umls.OtherDiag.Certainty
-}
+:umls.OtherDiagRemoved = {ruleCleaning = OtherDiagWithinSF}
+
+
+Rule: OtherDiagWithinSeizueDesc
+(
+  {OtherDiag within SeizDescSentence}
+):umls
+
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls.OtherDiagRemoved = {ruleCleaning = OtherDiagWithinSeizueDesc}
