@@ -1,5 +1,5 @@
 Phase: OtherDiagnosis
-Input:  DiagnosisTriggers Sentence OtherDiag listPoint Lookup2 Split Investigation 
+Input:  DiagnosisTriggers Sentence OtherDiag listPoint Split Investigation 
 
 /* These are to capture OtherDiag when it is given in a sentence within the body of the letter, 1st in a sentence if there is more than one, 
 listPoint should prevent these rules from capturing diagnosis within lists at top of letter*/
@@ -12,8 +12,6 @@ Priority: 100
 (   
 
 	{DiagnosisTriggers.type == diagnosis}
-	({Lookup2.minorType != change})?
-	({Lookup2})
 	({OtherDiag}):item
 	
     
@@ -29,14 +27,12 @@ MonthDate =:match.OtherDiag.MonthDate,
 YearDate = :match.OtherDiag.YearDate}
 
 Rule: OtherDiagnosis2
-Priority: 100
-
+Priority: 100 //({Lookup2})?
+	//({Lookup2.minorType == probability})
+//({Lookup2})
 (   
 	({!Investigation})
-	({Lookup2})?
-	({Lookup2.minorType == probability})
 	{DiagnosisTriggers.type == diagnosis}
-	({Lookup2})
 	({OtherDiag}):item
     
  ):match  
@@ -48,12 +44,11 @@ Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI,
 Negation = :item.OtherDiag.Negation}
 
 Rule: OtherDiagnosis3  /*when the top of letter diagnosis has no listpoints and just one item*/
-Priority: 99
+Priority: 99// ({Lookup2.minorType == probability})
 
 (   
-	{!Lookup2}
+
 	{DiagnosisTriggers.majorType == diagnosis, DiagnosisTriggers.type == diagnosis}
-	({Lookup2.minorType == probability})
 	({OtherDiag}):item
  ):match  
  -->
@@ -68,12 +63,12 @@ Negation = :item.OtherDiag.Negation}
 
 // triggered by opinion only - could be too sensitive 
 
-Rule: OtherDiagnosis5
+/*Rule: OtherDiagnosis5
 Priority: 99
 
-(  
- 	{Lookup2.minorType == opinion, Lookup2.majorType == diagnosis}
-	({Lookup2})?
+(  //{Lookup2.minorType == opinion, Lookup2.majorType == diagnosis}
+	//({Lookup2})?
+ 	
 	({OtherDiag}):item
  ):match  
  -->
@@ -82,11 +77,11 @@ Priority: 99
 //Temporality = :item.OtherDiag.Temporality, 
 EC = :item.OtherDiag.EC, 
 Negation = :item.OtherDiag.Negation,
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty}*/
 
 
-Rule: OtherDiagnosis6  /*as in non-epileptic attacks would seem a most likely explanation*/
-Priority: 90
+ /*Rule: OtherDiagnosis6  /*as in non-epileptic attacks would seem a most likely explanation*/
+/* Priority: 90
 
 (  
 	({!Lookup2})
@@ -102,7 +97,7 @@ Priority: 90
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 EC = :item.OtherDiag.EC, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
-Negation = :item.OtherDiag.Negation}
+Negation = :item.OtherDiag.Negation} */
 
 
 
@@ -110,7 +105,7 @@ Rule: OtherDiagnosis7 //with an opinion//
 Priority: 100
 
 (  
-	({Lookup2.minorType == opinion})
+	
 	{DiagnosisTriggers}
 	({OtherDiag.rule == OtherDiagPhrase}):item
     
@@ -122,12 +117,11 @@ EC = :item.OtherDiag.EC,
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation}
 
-Rule: OtherDiagnosis8a //with a list of seizures
-Priority: 100
+Rule: OtherDiagnosis8a //with a list of seizures or epilepsy diagnosis followed by other diagnosis
+Priority: 100 //({Lookup2})[1,3]
 
 (  
-	{DiagnosisTriggers.type == diagnosis}
-	({Lookup2})+
+	{DiagnosisTriggers.majorType == diagnosis}
 	({OtherDiag.rule == OtherDiagPhrase}):item
     
  ):match  
@@ -139,7 +133,7 @@ Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI,
 Negation = :item.OtherDiag.Negation}
 
 
-Rule: OtherDiagnosis8b //with a list of seizures
+/*Rule: OtherDiagnosis8b //with a list of seizures
 Priority: 100
 
 (  
@@ -172,13 +166,13 @@ Certainty = :item.OtherDiag.Certainty,
 TimePeriod = :match.TimeSince.time-unit,
 NumberOfTimePeriods =:match.TimeSince.value}*/
 
-/*Rule: PtHistoryA21
-Priority: 98
+Rule: PtHistoryA21
+Priority: 98 //({Lookup2.type == suffered}|{Lookup2.type == has})
 
 (   
 	({DiagnosisTriggers.majorType == diagnosis})
-	({Person})
-	({Lookup2.type == suffered}|{Lookup2.type == has})
+	
+	
 	({OtherDiag}):item
 
  ):match  
@@ -188,4 +182,4 @@ EC = :item.OtherDiag.EC, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,
 TimePeriod = :match.timePeriod.time-unit,
-YearDate =:match.Numeric.value} */
+YearDate =:match.Numeric.value} 

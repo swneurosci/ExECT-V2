@@ -83,7 +83,7 @@ EC = :item.OtherDiag.EC,
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation}
 
- //when there are no list points, no list sentences//
+ //when there are no list points, no list sentences, as in :  'diagnosis of focal epilepsy secondary to mesial temporal lobe sclerosis'
 
 Rule: OtherDiagnosisListF5
 Priority: 100

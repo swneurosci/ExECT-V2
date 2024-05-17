@@ -173,13 +173,14 @@ Priority: 100
 
 /*lookup2.minorType == time captures age groups e.g. teenager , timeElapsed is not always used in such phrases*/
 
-/* THIS RULE PICKS UP TOO MUCH - NEEDS TO BE MORE SPECIFIC */
+/* THIS RULE PICKS UP TOO MUCH - NEEDS TO BE MORE SPECIFIC */  //added more detail but need to try it out on more examples
  Rule: Age_Range2b
 Priority: 90
 
 (   
-	({Token.string == a})
-	{Lookup2.minorType == time}	
+	({Token.string == as})
+	({Token.string == a}| {Token.string == an})
+	{Lookup2.minorType == time,Lookup2.majorType == person }	
 	
  ):match  
  -->

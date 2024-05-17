@@ -1,5 +1,5 @@
 Phase: OtherDiagPhrase
-Input: Lookup3 PartialDate Age Sentence Person Conj TimeSince DateSince DateBio Lookup2  Split timeElapsed PointInTime
+Input: Lookup3 PartialDate Age Sentence Person Conj TimeSince DateSince DateBio OnsetPhrase  Split timeElapsed PointInTime
 
 /* To annotate Lookup3 Other diseases or generic seizures when listed in listSent with age, dates */
 Options: control=Appelt
@@ -10,7 +10,7 @@ Priority: 100
 (  
 	
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient , Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != Hypothetical, Lookup3.Negation == Affirmed }):item
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed }):item
 	({timeElapsed})?
 	({Conj})?
     ({PartialDate})
@@ -21,7 +21,7 @@ Priority: 100
 
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagDate, r = "1", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagDate, r = "1", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC= :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -29,23 +29,22 @@ YearDate = :match.PartialDate.year,
 MonthDate =:match.PartialDate.month,
 DayDate =:match.PartialDate.day}
 
-//produces otherDiag with a date//
+//produces otherDiag term with a date//
 Rule: OtherDiagDate 
 Priority: 100
 
 (  
 	
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient , Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != Hypothetical, Lookup3.Negation == Affirmed }):item
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed }):item
 	({Conj})?
-	({Lookup2})?
 	({timeElapsed.time != Last})?
     ({DateSince})
 	
 
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagDate, r = "2", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagDate, r = "2", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -60,14 +59,13 @@ Priority: 100
 (  
 	
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient , Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != Hypothetical, Lookup3.Negation == Affirmed }):item
-	({Lookup2})?
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed }):item
     ({DateSince})
 	
 
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagDate, r = "3", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagDate, r = "3", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC= :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -82,14 +80,13 @@ Priority: 100
 (  
 	
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient , Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != Hypothetical, Lookup3.Negation == Affirmed }):item
-	({Lookup2})?
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed }):item
     ({DateBio})
 	
 
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagDate, r = "4", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagDate, r = "4", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -104,11 +101,11 @@ Priority: 99
 (  
 	({PartialDate})
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient ,Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != Hypothetical, Lookup3.Negation == Affirmed }):item
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed }):item
    
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagDate, r = "5", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagDate, r = "5", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -120,14 +117,14 @@ Priority: 100
 
 (  
 	({Lookup3.minorType == OtherDisease,  Lookup3.Negation == Affirmed, Lookup3.majorType == umls,Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != Hypothetical, Lookup3.Negation == Affirmed }):item
-	({Lookup2.language == onset})?
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed }):item
+	({OnsetPhrase})?
     ({TimeSince})
 	
 
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagTime, r = "1", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagTime, r = "1", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -141,15 +138,15 @@ Priority: 100
 
 (  
 	({TimeSince})
-	({Lookup2.language == onset})?
+	({OnsetPhrase})?
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls,Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != Hypothetical, Lookup3.Negation == Affirmed }):item
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed }):item
     
 	
 
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagTime, r = "2", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagTime, r = "2", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -165,13 +162,13 @@ Priority: 100
 
 (  
 	({Lookup3.minorType == OtherDisease,  Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952, Lookup3.CUI != C0005604, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != Hypothetical, Lookup3.Negation == Affirmed }):item
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed }):item
     ({DateSince.YearDate >1930})
 	
 
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagDate, r = "4", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagDate, r = "4", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -182,17 +179,16 @@ Rule: OtherDiagAge
 Priority: 100
 
 (  
-	({Lookup2.language == onset})?
+	{Person}
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls,Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != Hypothetical, Lookup3.Negation == Affirmed }):item
-	({Lookup2})
-   ({Lookup2.language == onset})?
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed }):item
+   ({OnsetPhrase})
    ({Age})
 	
 
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagAge, r = "1", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagAge, r = "1", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -206,14 +202,14 @@ Priority: 100
 
 (  
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls,Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != Hypothetical, Lookup3.Negation == Affirmed }):item
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed }):item
     ({timeElapsed})?
 	({Age})
 	
 
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagAge, r = "2", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagAge, r = "2", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -228,16 +224,15 @@ Priority: 100
 
 (  
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls,Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != Hypothetical, Lookup3.Negation == Affirmed }):item
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed }):item
     ({Person.type == subject})
-	({Lookup2.type == past})
 	({timeElapsed.time == During})?
 	({Age})
 	
 
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagAge, r = "3", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagAge, r = "3", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -252,46 +247,46 @@ Priority: 90
 (
 	
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls,Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952, Lookup3.CUI != C0583275, Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != Hypothetical, Lookup3.Negation == Affirmed }):item
-    ({Lookup2.language == onset})?
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed }):item
+    ({OnsetPhrase})?
 	{PointInTime}
 	
 
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagPhrase, r = "1", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagPhrase, r = "1", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI,TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
 PointInTime = :match.PointInTime.Since}
 
 
+// probably a dengerous rule that annotates Lookup 3 that is not negated, hypothetical, reletaes to a person, not to birth, febrile seizute or diagnpstic procedure
 Rule: OtherDiagPhrase
 Priority: 99
 
 (  
-	
-	({Lookup3.minorType == OtherDisease, Lookup3.Temporality != Hypothetical, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952, Lookup3.CUI != C0583275,  Lookup3.Experiencer == Patient}|
-	{Lookup3.majorType == umls, Lookup3.Temporality != Hypothetical, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
+
+	({Lookup3.minorType == OtherDisease, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952, Lookup3.CUI != C0583275,  Lookup3.Experiencer == Patient, Lookup3.TUI != T060}|
+	{Lookup3.majorType == umls, Lookup3.Temporality != hypothetical, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed , Lookup3.TUI != T060}):item
 	
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagPhrase, r = "2" PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagPhrase, r = "2" PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer,
 Certainty = :item.Lookup3.Certainty}
 
 
-Rule: OtherDiagPhrase3a  //Includes hypothetical Lookup3 
-Priority: 90
+//Rule: OtherDiagPhrase3a  //Includes hypothetical Lookup3 
+/*Priority: 90
 
 (  
 	({Person.type == possessive})
 	({Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Negation == Affirmed, Lookup3.PREF !~ "birth"}):item
-	({Lookup2.type == continuing}|{Lookup2.type == not_continuing})
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagPhrase, r = "3a" PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagPhrase, r = "3a" PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
  Negation = :item.Lookup3.Negation,
 Certainty = :match.Lookup3.Certainty} 
 
@@ -299,15 +294,15 @@ Rule: OtherDiagPhrase3b  //Includes hypothetical Lookup3
 Priority: 90
 
 (  
-	({Lookup2.type == continuing}|{Lookup2.type == not_continuing})
+	
 	({Person.type == possessive})
 	({Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Negation == Affirmed,Lookup3.PREF !~ "birth" }):item
 	
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagPhrase, r = "3b" PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagPhrase, r = "3b" PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
  Negation = :item.Lookup3.Negation,
-Certainty = :match.Lookup3.Certainty} 
+Certainty = :match.Lookup3.Certainty} */
 
 
 Rule: OtherDiagDate
@@ -316,14 +311,14 @@ Priority: 100
 (  
 	
 	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient , Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952}|
-	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != Hypothetical, Lookup3.Negation == Affirmed }):item
+	{Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Experiencer == Patient, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed }):item
 	({Conj})?
     ({DateSince})
 	
 
  ):match  
  -->
-:item.OtherDiag = {rule = OtherDiagDate, r = "3", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiag = {rule = OtherDiagDate, r = "3", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,

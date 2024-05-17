@@ -1,10 +1,10 @@
 Imports: {import static gate.Utils.*; }
 
 Phase: PatientHistory
-Input: OtherDiag SeizureFrequency SeizDescSentence
+Input: OtherDiag SeizureFrequency SeizDescSentence Context
 Options: control=appelt
 
-Rule: OtherDiagWithinSF
+/*Rule: OtherDiagWithinSF
 
 (
   {OtherDiag within SeizureFrequency}
@@ -14,7 +14,7 @@ Rule: OtherDiagWithinSF
 :umls { 
   inputAS.removeAll(umlsAnnots);
 },
-:umls.OtherDiagRemoved = {ruleCleaning = OtherDiagWithinSF}
+:umls.OtherDiagRemoved = {ruleCleaning = OtherDiagWithinSF}*/
 
 
 Rule: OtherDiagWithinSeizueDesc
@@ -27,3 +27,20 @@ Rule: OtherDiagWithinSeizueDesc
   inputAS.removeAll(umlsAnnots);
 },
 :umls.OtherDiagRemoved = {ruleCleaning = OtherDiagWithinSeizueDesc}
+
+
+
+Rule: OtherDiagFuture
+
+// when future context reletes to medical ptocedure it is removed 
+
+(
+  {Context.minorType == future}
+  {OtherDiag.TUI == T061}
+):umls
+
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls.OtherDiagRemoved = {ruleCleaning = OtherDiagFuture}

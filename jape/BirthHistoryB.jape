@@ -1,5 +1,5 @@
 Phase: BirthHistoryB
-Input: Lookup3 Lookup2 Person  Sentence DiagnosisTriggers 
+Input: Lookup3 Person  Sentence DiagnosisTriggers OnsetPhrase
 
 Options: control=appelt
 
@@ -10,8 +10,7 @@ Priority: 100
 
 (
     {Person}
-    {Lookup2.majorType == historic}
-    ({Lookup2.type  == time})?
+   
     ({Lookup3.TUI == "T058" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
    
 
@@ -27,8 +26,8 @@ Priority: 100
 
 (
     {Person}
-    {Lookup2.majorType == historic}
-    ({Lookup2.type  == time})?
+  
+   
     ({Lookup3.PREF =~ "Birth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
    
 
@@ -46,8 +45,6 @@ Priority: 100
 (
     {DiagnosisTriggers} 
     ({Lookup3})?
-    ({Lookup2})?
-    ({Lookup2})?
     ({Lookup3.PREF =~ "[Bb]irth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
    
 
@@ -63,9 +60,9 @@ Priority: 100
 
 (
     {Person}
-    {Lookup2.type == has}
+    
     {Lookup3}
-    {Lookup2.minorType == causality}
+   
     ({Lookup3.PREF =~ "[Bb]irth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
    
 
@@ -82,8 +79,8 @@ Priority: 100
 
 (
     
-    {Lookup2.language == onset, Lookup2.type == diagnosed}
-    ({Lookup2})?
+    {OnsetPhrase}
+  
     ({Lookup3.PREF =~ "[Bb]irth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
    
 
@@ -100,8 +97,7 @@ Priority: 100
 (
     
     {Person}
-    ({Lookup2})?
-    ({Lookup2})?
+  
     ({Lookup3.PREF =~ "[Bb]irth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
    
 
@@ -117,9 +113,7 @@ Priority: 100
 
 (
     
-    ({Lookup2.minorType == opinion})
-    ({Lookup2})?
-    ({Lookup2})?
+   
     ({Lookup3.PREF =~ "[Bb]irth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
    
 

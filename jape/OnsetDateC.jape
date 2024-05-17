@@ -1,7 +1,0 @@
-Phase: OnsetDateC
-Input: Lookup DiagnosisTriggers Lookup2  PartialDate Numeric Lookup3 DateSince
-Options: control=appelt
-
-// EMPTY RULE
-
-// DELETE ME

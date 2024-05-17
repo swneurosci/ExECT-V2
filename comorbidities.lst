@@ -213,8 +213,6 @@ Downs syndrome	CUI=C0013080	PREF=Trisomy 21	TUI=T047	EC=Yes
 Down syndrome	CUI=C0013080	PREF=Trisomy 21	TUI=T047	EC=Yes
 drug abuse	CUI=C0013146	PREF=Drug abuse	TUI=T048	EC=No
 substance abuse	CUI=C0013146	PREF=Drug abuse	TUI=T048	EC=No
-electroencephalogram	CUI=C0013819	PREF=electroencephalogram	TUI=T060	EC=No
-EEG	CUI=C0013819	PREF=electroencephalogram	TUI=T060	EC=No
 encephalitis	CUI=C0014038	PREF=Encephalitis	TUI=T047	EC=Yes
 brain inflammation	CUI=C0014038	PREF=Encephalitis	TUI=T047	EC=Yes
 epidermal cyst	CUI=C0014511	PREF=Epithelial cyst	TUI=T190	EC=Yes
@@ -562,6 +560,9 @@ impaired memory	CUI=C0233794	PREF=Memory impairment	TUI=T048	EC=No
 memory impairment	CUI=C0233794	PREF=Memory impairment	TUI=T048	EC=No
 memory lapses	CUI=C0233794	PREF=Memory impairment	TUI=T048	EC=No
 memory problems	CUI=C0233794	PREF=Memory impairment	TUI=T048	EC=No
+memory difficulties	CUI=C0233794	PREF=Memory impairment	TUI=T048	EC=No
+impaired memory	CUI=C0233794	PREF=Memory impairment	TUI=T048	EC=No
+memory defici	CUI=C0233794	PREF=Memory impairment	TUI=T048	EC=No
 hyperexplexia	CUI=C0234166	PREF=Hyperexplexia	TUI=T047	EC=No
 startle syndrome	CUI=C0234166	PREF=Hyperexplexia	TUI=T047	EC=No
 postural tremor	CUI=C0234378	PREF=Static Tremor	TUI=T033	EC=No

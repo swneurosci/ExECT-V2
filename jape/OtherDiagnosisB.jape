@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisB
-Input: OtherDiag Lookup3 Lookup2 Lookup Split DiagnosisTriggers listPoint 
+Input: OtherDiag Lookup3 Lookup Split DiagnosisTriggers listPoint 
 
 /*Removed Sentence from these rules as some items are within list without listPoints, may have to
 use some other means of stopping the rules from picking up everything from the text*/
@@ -7,11 +7,10 @@ use some other means of stopping the rules from picking up everything from the t
 Options: control=appelt
 
 Rule: OtherDiagB
-Priority: 100
+Priority: 100 //({Lookup2})* removed for a try 
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
-	({Lookup2})*
 	({Lookup3})
 	({OtherDiag.rule == OtherDiagTime}):item
 	
@@ -26,14 +25,12 @@ NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
 
 
 Rule: OtherDiagB1
-Priority: 100
-
+Priority: 100 //({Lookup2.minorType == probability})?
+				//({Lookup2})[0,3]
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
-	({Lookup2.minorType == probability})?
-	({Lookup})?
+	({Lookup})[0,2]
 	({OtherDiag})
-	({Lookup2})?
 	({OtherDiag}):item
     
  ):match  
@@ -53,28 +50,13 @@ MonthDate =:item.OtherDiag.MonthDate,
 TimePeriod = :item.OtherDiag.TimePeriod,
 NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
 
-// /* Rule: OtherDiagB3
-// Priority: 100
-
-// (   ({!Investigation})
-// 	{Lookup2.minorType == opinion}
-// 	({Lookup2.minorType == probability})?
-//     ({Lookup3})?
-// 	({OtherDiag}):item
-    
-//  ):match  
-//  -->
-// :item.PatientHistory = {rule = OtherDiagB3, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-// STY = :item.OtherDiag.STY, Negation = :item.OtherDiag.Negation,
-// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-// Certainty = :item.OtherDiag.Certainty} */
 
 Rule: OtherDiagB4
-Priority: 100
-
+Priority: 100 //({Lookup2.minorType == probability})?
+//{Lookup2.minorType == opinion}
 (   
-	{Lookup2.minorType == opinion}
-	({Lookup2.minorType == probability})?
+
+	
     {Lookup3}
 	{Lookup3}
 	({OtherDiag}):item
@@ -88,14 +70,13 @@ Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI,
 Negation = :item.OtherDiag.Negation}
 
 Rule: OtherDiagB5  /*trying to stop this fiering when it is a top list*/
-Priority: 100
-
+Priority: 100//{Lookup2.minorType == probability} 
+//({Lookup2})?
 (  
 	
-	{Lookup2.minorType == probability} 
+	
 	({Lookup3})
 	{Lookup}
-	({Lookup2})?
 	({OtherDiag}):item
     
  ):match  
