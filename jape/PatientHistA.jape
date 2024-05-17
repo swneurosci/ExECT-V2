@@ -1,5 +1,5 @@
 Phase: PatientHistA
-Input: OtherDiag Experience TimeSince Person DateSince PHistBlock Investigation PartialDate Split NewLine Sentence DiagnosisTriggers PointInTime Age Pronouns  MedicalHistory listPoint 
+Input: OtherDiag Experience TimeSince Person DateSince PHistBlock Investigation Split PartialDate NewLine Sentence DiagnosisTriggers PointInTime Age Pronouns  MedicalHistory listPoint 
 
 //Lookup3 was used as a block but I took it out
 /*These are expected to pick up the 1st of OtherDiag shown in a sentence, deriving age/timesince/datesince from OtherDiag 
@@ -822,12 +822,12 @@ EC = :item.OtherDiag.EC,
 Negation = :item.OtherDiag.Negation,
 Certainty = :item.OtherDiag.Certainty}  
 
-Rule: PtHistoryA24b  /*simple and dengerous : Opinion (possible) learning difficulties*/
-Priority: 80
-//({Lookup2.minorType == opinion})
-	 
-	// ({Lookup2.minorType == probability})
+Rule: PtHistoryA24b  //simple and dengerous   'They have had some seizures'  Split is there to indicate a new sentence as sometimes 
+// without it the rule doesn't fire 
+Priority: 90
+
 (  
+	({Split})?
  	({Person})
 	{Experience}
 	({OtherDiag.rule == OtherDiagPhrase}):item
@@ -836,8 +836,7 @@ Priority: 80
  ):match  
  -->
 :item.PatientHistory = {rule = PtHistoryA24b, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-EC = :item.OtherDiag.EC,  
-//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+EC = :item.OtherDiag.EC, 
 Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
 PointInTime = :item.otherDiag.PointInTime}
 

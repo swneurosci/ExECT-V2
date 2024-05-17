@@ -1444,3 +1444,4 @@ mental health difficulty	CUI=C1446377	PREF=Mental health problems	TUI=T033	EC=No
 mental health difficulties	CUI=C1446377	PREF=Mental health problems	TUI=T033	EC=No
 cerebellar infarction	CUI=C0236073	PREF=Cerebellar infarction	TUI=TUI=T047	EC=Yes
 cerebellar infarct	CUI=C0236073	PREF=Cerebellar infarction	TUI=TUI=T047	EC=Yes
+heart block	CUI=C0018794	Pref=Heart Block	TUI=T047	EC=No

@@ -46,3 +46,7 @@ types of seizure:type=seizureType
 Seizure taking frequency:type=seizureType:SF=true
 diagnoses:type=diagnosis
 Diagnoses:type=diagnosis
+Comorbidities:type=comorbidities
+Co-morbidities:type=comorbidities
+comorbidities:type=comorbidities
+co-morbidities:type=comorbidities
