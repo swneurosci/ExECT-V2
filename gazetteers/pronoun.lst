@@ -10,3 +10,5 @@ Him:type=object
 him:type=object
 hers:type=possessive
 Hers:type=possessive
+They:type=subject
+they:type=subject

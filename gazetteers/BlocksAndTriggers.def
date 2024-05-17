@@ -8,8 +8,8 @@ ct_results.lst:CT:results::InvestigationFindingCT
 InvestigationTypes.lst:examination:neuro::Investigation
 KidsDose.lst::::KidsDose
 LastSeizure.lst::::LastSeizure
-Onset.lst:historic:symptoms:onset:Lookup2
-Experience.lst:historic:symptoms:experience:Lookup2
+Onset.lst:historic:symptoms:onset:OnsetPhrase
+Experience.lst:historic:symptoms:experience:Experience
 cause.lst:diagnosis:causality::Lookup2
 MedicalHistory.lst:diagnosis:past::MedicalHistory
 NoSeizure.lst::::NoSeizure

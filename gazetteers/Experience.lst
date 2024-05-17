@@ -67,4 +67,8 @@ did have:type=suffered
 having:type=experiencing 
 gets:type=experiencing
 does seem to have:type=experiencing
-is getting
+is getting:type=experiencing
+experiencing:type=experiencing
+experiences:type=experiencing
+continues to have:type=experiencing
+have had:type=suffered
