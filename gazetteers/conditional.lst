@@ -34,3 +34,7 @@ chance of having:context=hypothetical
 forthcoming:context=future
 impending:context=future
 approaching:context=future
+as if he's:context=current
+as if she's:context=current
+as if he is:context=current
+as if she is :context=current
