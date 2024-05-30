@@ -305,8 +305,8 @@ AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
 AgeUpper =:match.Age.AgeUpper}
 
-Rule: onsetAge13 /*At around 15 months of age she had a GTCS...*  ? may pick up non-onset phrases */
-Priority: 98
+//Rule: onsetAge13 /*At around 15 months of age she had a GTCS...*  ? may pick up non-onset phrases */ // it does
+/*Priority: 98
 
 (  
 	{Age}
@@ -323,7 +323,7 @@ PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
-AgeUpper =:match.Age.AgeUpper}
+AgeUpper =:match.Age.AgeUpper}*/
 
 Rule: onsetAge14 /*At around 15 months of age she had a GTCS...*  ? may pick up non-onset phrases */
 Priority: 98

@@ -1,10 +1,10 @@
 Phase: EpiCause2
-Input: Lookup Lookup3 Lookup2 Split listPoint
+Input: Lookup Lookup3 CausePhrase Split listPoint
 
 
   /*These rules are set to select causes and suspected causes of epilepsy, when they are shown 
-   following an epilepsu diagnosis  - hence they have to follow Epilepsy diagnosis in the pipline in order to work */
-//listPoint should stop piching up top letter lists
+   following an epilepsy diagnosis  - hence they have to follow Epilepsy diagnosis in the pipline in order to work */
+//listPoint should stop picking up top letter lists
   
 
 Options: control=appelt
@@ -17,9 +17,7 @@ Priority: 100
 	
     {Lookup.Negation == Affirmed}
     {Split}
-    ({Lookup2.minorType == opinion})?
-    ({Lookup2.minorType == probability})?
-    {Lookup2.minorType == causality}
+    {CausePhrase}
     ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
     Lookup3.Experiencer == Patient, Lookup3.EC != No}):item
   
@@ -28,7 +26,7 @@ Priority: 100
  ):match  
  -->
 :item.EpilepsyCause = {rule = Cause2a, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-//STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
+EC = :item.Lookup3.EC,
 //Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 

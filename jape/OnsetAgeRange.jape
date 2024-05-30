@@ -8,7 +8,7 @@ Priority: 98
 
 (   
 	{Person}
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
+	{Experience.type != "diagnosed"}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed, Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
 	{Person}
 	({Age})
@@ -27,13 +27,13 @@ AgeLower = :match.Age.AgeLower,
 AgeUpper =:match.Age.AgeUpper}
 
 
-Rule: onsetAgeRange3
-Priority: 98
+//Rule: onsetAgeRange3
+/*Priority: 98
 
 (   
 
 	{Person}
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
+	{Experience.type != "diagnosed"}
 	({Lookup.majorType == umls ,Lookup.Experiencer == Patient , Lookup.Negation == Affirmed}):item
 	{Person}
 	({Age})
@@ -49,7 +49,7 @@ PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
-AgeUpper =:match.Age.AgeUpper}
+AgeUpper =:match.Age.AgeUpper}*/
 
 
 
@@ -60,7 +60,6 @@ Priority: 98
 (   
 	{Person}
 	({Lookup.majorType == umls , Lookup.Experiencer == Patient , Lookup.Negation == Affirmed} ):item
-	{Lookup2}
 	{Person}
 	({Age})
 	
@@ -76,33 +75,12 @@ AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
 AgeUpper =:match.Age.AgeUpper}
 
+
 Rule: onsetAgeRange6
 Priority: 98
 
 (   
-	{Person}
-	({Lookup.majorType == umls ,Lookup.Experiencer == Patient , Lookup.Negation == Affirmed}):item 
-	{Lookup2}
-	{Person}
-	({Age})
-	
- ):match  
- -->
-:item.Onset = {rule = onsetAgeRange6, OnsetType = "age_episodes_started", 
-CUI = :item.Lookup.CUI,
-PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
-// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
-// Certainty = :item.Lookup.Certainty,
-Age = :match.Age.Age,
-AgeUnit = :match.Age.AgeUnit,
-AgeLower = :match.Age.AgeLower,
-AgeUpper =:match.Age.AgeUpper}
-
-Rule: onsetAgeRange7
-Priority: 98
-
-(   
-	{Lookup2.majorType == historic}
+	{Experience.type != "diagnosed"}
 	{Person}
 	({Lookup.majorType == umls , Lookup.Experiencer == Patient , Lookup.Negation == Affirmed}):item
 	{Person}
@@ -110,7 +88,7 @@ Priority: 98
 	
  ):match  
  -->
-:item.Onset = {rule = onsetAgeRange7, OnsetType = "age_episodes_started", 
+:item.Onset = {rule = onsetAgeRange6, OnsetType = "age_episodes_started", 
 CUI = :item.Lookup.CUI,
 PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
