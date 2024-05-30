@@ -1,0 +1,63 @@
+
+Phase: PatientHistory
+Input: Lookup3 OtherDiag Token Sentence 
+Options: control=all
+// removes OtherDiag in Patient history that follows seizure phrase but it's a part of it
+// e.g. convulsive seizure with loss of consciousness
+
+Rule: OtherDiagCleaningB1
+(   
+    ({Lookup3.minorType == generic})
+    ({Token.string == "with"})
+    ({OtherDiag.TUI == T033}):umls
+):matches
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls.OtherDiagRemoved = {rule = OtherDiagCleaningB1}
+
+// as above but with involving that links the phrases
+Rule: OtherDiagCleaningB2
+(   
+    ({Lookup3.minorType == generic})
+    ({Token.string == "involving"})
+    ({OtherDiag.TUI == T033}):umls
+):matches
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls.OtherDiagRemoved = {rule = OtherDiagCleaningB2}
+
+// As above as in 'focal seizures followed by convulsions'
+Rule: OtherDiagCleaningB3
+(   
+    ({Lookup3.minorType == generic})
+    ({Token.string == "followed"})
+    ({Token.string == "by"})
+    ({OtherDiag.TUI == T033}):umls
+):matches
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls.OtherDiagRemoved = {rule = OtherDiagCleaningB3}
+
+// this blocks seizure if followed by frequency as we are now annotating generic seizures even in frequency
+// as in @ seizure ype and frequency' but not in just seizure frequency ...
+// if stated without a perso
+
+Rule: OtherDiagCleaningB4
+(   
+    ({Lookup3.minorType == generic})
+    ({Token.string == "frequency"}):umls
+    
+):matches
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls.OtherDiagRemoved = {rule = OtherDiagCleaningB4}
+
+

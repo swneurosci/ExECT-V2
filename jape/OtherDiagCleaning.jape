@@ -1,33 +1,34 @@
 Imports: {import static gate.Utils.*; }
 
 Phase: PatientHistory
-Input: OtherDiag SeizureFrequency SeizDescSentence Context
+Input: OtherDiag SeizureFrequency SeizDescSentence Context Lookup4 PHistBlock Sentence Person
 Options: control=appelt
 
-/*Rule: OtherDiagWithinSF
-
+/* Rule: OtherDiagWithinSF  // we can always switch this on, but sometimes seizure frequency phrase contains seizure onset so we then miss it//
+// we could use Some of the specific seizureFrequency outputs in Bio as there are different ones//
 (
-  {OtherDiag within SeizureFrequency}
-):umls
+  ({OtherDiag within SeizureFrequency, OtherDiag.PREF =~ "seizure"}):item
 
--->
-:umls { 
-  inputAS.removeAll(umlsAnnots);
-},
-:umls.OtherDiagRemoved = {ruleCleaning = OtherDiagWithinSF}*/
 
+	
+    
+ ):match  
+ -->
+:item.OtherDiagB = {rule = OtherDiagWithinSF, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+EC= :item.OtherDiag.EC,TUI = :item.OtherDiag.TUI, 
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation}*/
 
 Rule: OtherDiagWithinSeizueDesc
 (
-  {OtherDiag within SeizDescSentence}
-):umls
+  ({OtherDiag within SeizDescSentence}):umls
+):match
 
 -->
 :umls { 
   inputAS.removeAll(umlsAnnots);
 },
 :umls.OtherDiagRemoved = {ruleCleaning = OtherDiagWithinSeizueDesc}
-
 
 
 Rule: OtherDiagFuture
@@ -44,3 +45,33 @@ Rule: OtherDiagFuture
   inputAS.removeAll(umlsAnnots);
 },
 :umls.OtherDiagRemoved = {ruleCleaning = OtherDiagFuture}
+
+
+Rule: OtherDiagWithinLookup4  //Lookup4 contains epilepsy terms so removing things like stroke is in post-stroke epilepsy
+(
+  {OtherDiag within Lookup4}
+):umls
+
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls.OtherDiagRemoved = {ruleCleaning = OtherDiagWithinLookup4}
+
+// this removes OtherDiag phrases which follow PHBlok (rather than used in the rules) e.g. risk of further seizures, 
+// he knows that seizures... but not he knows that his seizure
+
+Rule: PHistBlock_OtherDiag 
+
+(
+  {PHistBlock}
+  {OtherDiag}
+):umls
+
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls.OtherDiagRemoved = {ruleCleaning = PHistBlock_OtherDiag}
+
+
