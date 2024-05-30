@@ -1,5 +1,5 @@
 Phase: OtherDiagnosisB
-Input: OtherDiag Lookup3 Lookup Split DiagnosisTriggers listPoint 
+Input: OtherDiag Lookup3 Lookup Split DiagnosisTriggers listPoint NewLine 
 
 /*Removed Sentence from these rules as some items are within list without listPoints, may have to
 use some other means of stopping the rules from picking up everything from the text*/
@@ -11,8 +11,14 @@ Priority: 100 //({Lookup2})* removed for a try
 
 (   
 	{DiagnosisTriggers.majorType == diagnosis}
+	({Split})?
+	({NewLine})?
+	({listPoint})?
 	({Lookup3})
-	({OtherDiag.rule == OtherDiagTime}):item
+	({NewLine})?
+	({Split})?
+	({listPoint})?
+	({OtherDiag}):item
 	
  ):match  
  -->
@@ -52,8 +58,7 @@ NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
 
 
 Rule: OtherDiagB4
-Priority: 100 //({Lookup2.minorType == probability})?
-//{Lookup2.minorType == opinion}
+Priority: 100 
 (   
 
 	
@@ -120,3 +125,6 @@ EC = :item.OtherDiag.EC,
 // Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
 Negation = :item.OtherDiag.Negation}
+
+
+
