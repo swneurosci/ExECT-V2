@@ -617,6 +617,7 @@ vogt spielmeyer disease	CUI=C0751383	PREF=Juvenile Neuronal Ceroid Lipofuscinosi
 convulsions local	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
 focal seizure	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
 focal seizures	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
+focal seizures without secondary generalisation	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
 local convulsion	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
 local seizure	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
 partial seizure	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
@@ -897,7 +898,7 @@ focal seizures with loss of awareness	CUI=C0270834	PREF=Complex partial seizure 
 focal to bilateral convulsive seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 seizures are focal	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
 seizures are generalised	CUI=C0234533	PREF=generalised seizures	TUI=T047	STY=Disease or Syndrome
-Focal seizures with altered awareness	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
+focal seizures with altered awareness	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
 epilepsy with generalised tonic clonic seizure alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 bilateral convulsive seizure	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
 focal to bilateral tonic clonic seizure	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome
@@ -964,3 +965,4 @@ focal dyscognitive seizures	CUI=C0270834	PREF=Complex partial seizure with impai
 post-stroke epileptic seizures	CUI=C4518323	PREF=Epilepsy due to cerebrovascular accident	TUI=T047	STY=Disease or Syndrome
 post-stroke epileptic seizure	CUI=C4518323	PREF=Epilepsy due to cerebrovascular accident	TUI=T047	STY=Disease or Syndrome
 post-stroke epilepsy	CUI=C4518323	PREF=Epilepsy due to cerebrovascular accident	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+focal seizures with secondary generalisation	CUI=C0270838	PREF=Secondarily generalized seizures	TUI=T047	STY=Disease or Syndrome
