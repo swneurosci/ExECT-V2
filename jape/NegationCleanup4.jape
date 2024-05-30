@@ -19,6 +19,7 @@ umlsAnnots.iterator().next().getFeatures().put("rule","putNegation");
 },
 :umls.LookupNegChange = {rule = putNegation}
 
+// As for  when ' his seizures' is for some reason negated
 Rule: reverseNegation2
 (
 ({Person.type == possessive})
@@ -29,7 +30,24 @@ Rule: reverseNegation2
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation2");
 },
-:umls.Lookup3NegChange = {rule = reverseNegation42_in_NegationCleanup4}
+:umls.Lookup3NegChange = {rule = reverseNegation2_in_NegationCleanup4}
+
+
+// As for  ' he could not describe the seizures' - removes negation from Lookup 2
+Rule: reverseNegation3
+(
+({Lookup2.majorType == modifier, Lookup2.type == neg_state})
+({Verbs})?
+({Lookup3.minorType == generic, Lookup3.Negation == Negated}):umls
+):match
+-->
+:umls{
+umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation2");
+},
+:umls.Lookup3NegChange = {rule = reverseNegation3_in_NegationCleanup4}
+
+
 
 Rule: reverseNegation3
 (
@@ -42,4 +60,42 @@ Rule: reverseNegation3
 umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
 umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation3");
 },
-:umls.Lookup3NegChange = {rule = reverseNegation3_in_NegationCleanup4}
+:umls.Lookup3NegChange = {rule = reverseNegation4_in_NegationCleanup4}
+
+
+// when: focal seizures without secondary generalisation is followed by another diagnosis (temporal sclerosis which gets negated
+// becouse of "without" - reversing that negation )
+Rule: reverseNegation5
+(
+({Lookup3.minorType == Disease, Lookup3.Negation == Affirmed})
+({Trigger.minorType == pre-condition, Trigger.majorType == negation})
+({Lookup3.minorType == Disease, Lookup3.Negation == Negated})
+({Lookup2})?
+({Lookup3.minorType == OtherDisease, Lookup3.Negation == Negated}):umls
+
+):match
+-->
+:umls{
+umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation3");
+},
+:umls.Lookup3NegChange = {rule = reverseNegation5_in_NegationCleanup4}
+
+// as above but there are two Lookup3 phrases , temporal sclerosis  depression, depression is negated becouse of "without"
+// this rule is reversing this negation
+Rule: reverseNegation6
+(
+({Lookup3.minorType == Disease, Lookup3.Negation == Affirmed})
+({Trigger.minorType == pre-condition, Trigger.majorType == negation})
+({Lookup3.minorType == Disease, Lookup3.Negation == Negated})
+({Lookup2})?
+({Lookup3.minorType == OtherDisease, Lookup3.Negation == Negated})
+({Lookup3.minorType == OtherDisease, Lookup3.Negation == Negated}):umls
+
+):match
+-->
+:umls{
+umlsAnnots.iterator().next().getFeatures().put("Negation","Affirmed");
+umlsAnnots.iterator().next().getFeatures().put("rule","reverseNegation3");
+},
+:umls.Lookup3NegChange = {rule = reverseNegation6_in_NegationCleanup4}
