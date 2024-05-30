@@ -10,7 +10,7 @@ KidsDose.lst::::KidsDose
 LastSeizure.lst::::LastSeizure
 Onset.lst:historic:symptoms:onset:OnsetPhrase
 Experience.lst:historic:symptoms:experience:Experience
-cause.lst:diagnosis:causality::Lookup2
+cause.lst:diagnosis:causality::CausePhrase
 MedicalHistory.lst:diagnosis:past::MedicalHistory
 NoSeizure.lst::::NoSeizure
 PHistBlock.lst::::PHistBlock
