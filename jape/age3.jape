@@ -17,3 +17,20 @@ Priority: 80
 -->
 :match.Age = {rule =Age5, AgeUnit = "Year",
 AgeLower =:match.age2.LowerAge, AgeUpper =:match.age2.UpperAge}
+
+Rule: age3_2 
+Priority: 100
+
+(   
+	{age}
+	{Numeric}
+	({timePeriod})?
+	({Token.string == "and"}
+	{Numeric}
+	{timePeriod}):item
+
+
+ ):match  
+ -->
+:item.Age = {rule = age3_2 , AgeUnit = :item.timePeriod.time-unit,
+Age =:item.Numeric.value} 

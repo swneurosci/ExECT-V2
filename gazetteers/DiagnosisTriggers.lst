@@ -50,3 +50,5 @@ History is convincing:type=opinion
 It is likely to be:type=opinion
 background of:type=diagnosis
 known to suffer from:type=suffers
+Diagnoses:type=diagnosis
+diagnoses:type=diagnosis

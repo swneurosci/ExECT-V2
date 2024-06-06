@@ -46,8 +46,8 @@ myoclonic jerks:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Sei
 myoclonus:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Seizures
 Myoclonic jerks:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Seizures
 Myoclonus:CUI=C0027066:PREF=myoclonus:TUI=T184:STY=Sign or Symptom:CAT=Seizures
-Turn:CUI=C0424531:PREF=Funny turn:TUI=T033:STY=Finding:CAT=Slang
-Turns:CUI=C0424531:PREF=Funny turn:TUI=T033:STY=Finding:CAT=Slang
+odd turn:CUI=C0424531:PREF=Funny turn:TUI=T033:STY=Finding:CAT=Slang
+odd turns:CUI=C0424531:PREF=Funny turn:TUI=T033:STY=Finding:CAT=Slang
 episodes of jerks:CUI=C0231530:PREF=Muscle twitch:TUI=T033:STY=Finding:CAT=Slang
 jerking episodes:CUI=C0231530:PREF=Muscle twitch:TUI=T033:STY=Finding:CAT=Slang
 hypnic jerk:CUI=C2732862:PREF=Hypnic jerk:TUI=T033:STY=Finding:CAT=Slang
