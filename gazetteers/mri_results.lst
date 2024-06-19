@@ -6,7 +6,7 @@ lesions:CUI=C1319851:Results=Abnormal
 degeneration:CUI=C1319851:Results=Abnormal
 degenerative brain disorder:CUI=C1319851:Results=Abnormal
 atrophy:CUI=C1319851:Results=Abnormal
-CVA:CUI=C1319851:Results=Abnormal:=
+CVA:CUI=C1319851:Results=Abnormal
 cerebral artery occlusion:CUI=C1319851:Results=Abnormal
 hemorrhage:CUI=C1319851:Results=Abnormal
 haemorrhage:CUI=C1319851:Results=Abnormal

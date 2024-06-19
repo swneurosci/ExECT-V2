@@ -1,19 +1,19 @@
 Phase: OnsetAge
-Input: Lookup3 Person Lookup Lookup2 Sentence Age TimeSince Pronouns Frequency Split DiagnosisTriggers
+Input: Lookup3 Person Lookup OnsetPhrase Sentence Age TimeSince Pronouns Frequency Split DiagnosisTriggers
 Options: control=appelt
 
 /*TimeSince  and Pronouns are here to stop picking up phrases with TimeSince */
 /*DiagnosisTrigger acts as a block*/
 
 Rule: onsetAge1
-Priority: 99
+Priority: 99 //({Lookup2.majorType == historic})?
 
 (   
 	({Person})?
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.language == onset}
+	{OnsetPhrase}
 	({Person.majorType == person})?
-	({Lookup2.majorType == historic})?
+	
 	{Age}
 		
  ):match  
@@ -33,9 +33,8 @@ Priority: 9
 
 (   
 	{Person}
-	({Lookup2})?
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient ,Lookup.minorType == Disease}):item
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.language == onset, Lookup2.type != diagnosed}
+	{OnsetPhrase}
 	{Age}
 	
 	
@@ -53,13 +52,11 @@ AgeUpper =:match.Age.AgeUpper}
  
  /* will also get Diagnosis: probable X since age 10 - as Person is optional */
 Rule: onsetAge3
-Priority: 98
+Priority: 98 //({Lookup2.minorType == probability})({Lookup2.majorType == historic, Lookup2.minorType == symptoms})?	
+	//({Lookup2})?
 
 (   
 	({Person})?
-	({Lookup2.minorType == probability})
-	({Lookup2.majorType == historic, Lookup2.minorType == symptoms})?
-	({Lookup2})?
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient ,Lookup.minorType == Disease}):item
 	{Age}
 	
@@ -82,9 +79,8 @@ Priority: 98
 (   
 	{Person}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed }):item
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms}
+	{OnsetPhrase}
 	({Person})
-	({Lookup2})?
 	{Age}
 		
 	
@@ -106,7 +102,7 @@ Priority: 99
 (   
 	{Person}
     {Lookup3.minorType == generic}
-	{Lookup2.language == onset, Lookup2.type != diagnosed}
+	{OnsetPhrase.language == onset, OnsetPhrase.type != diagnosed}
 	{Age}
 	({Lookup.majorType == umls ,Lookup.minorType == Disease, Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient}):item
 
@@ -124,14 +120,12 @@ AgeUpper =:match.Age.AgeUpper}
 
 
 Rule: onsetAge6
-Priority: 98
+Priority: 98 //({Lookup2})?({Lookup2})?
 
 (  
 	{Age}
-	({Lookup2})?
 	{Person}
-	({Lookup2})?
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.type != diagnosed}
+	{OnsetPhrase}
 	({Lookup.majorType == umls, Lookup.Negation == Affirmed,  Lookup.Experiencer == Patient, Lookup.minorType == Disease}):item
 		
  ):match  
@@ -152,8 +146,8 @@ Priority: 99
 
 (   
 	{Person}
-	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient, Lookup.minorType == Disease}):item
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.type != diagnosed }
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient  ,Lookup.minorType == Disease}):item
+	{OnsetPhrase}
 	({TimeSince})?
 	{Age}	
 	
@@ -177,7 +171,7 @@ Priority: 99
 (   
 	{Person}
     {Lookup3.minorType == generic}
-	{Lookup2.language == onset, Lookup2.type != diagnosed }
+	{OnsetPhrase}
 	{Age}
 	({Lookup.majorType == umls ,Lookup.minorType == Disease, Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient}):item
 
@@ -199,10 +193,10 @@ Priority: 99
 
 (   
 	{Person}
-	({Lookup2.language == onset})
+	({OnsetPhrase})
     {Lookup3.minorType == generic}
 	{Age}
-	{Lookup2.language == onset, Lookup2.type == began }
+	{OnsetPhrase}
 	({Lookup.majorType == umls ,Lookup.minorType == Disease, Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient}
 	{Age}):item
 ):match  
@@ -224,7 +218,7 @@ Priority: 99
 (   
 	{Age}
 	({Person})?
-	({Lookup2.language == onset, Lookup2.type != diagnosed})
+	({OnsetPhrase})
 	({Lookup.majorType == umls ,Lookup.minorType == Disease, Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient}):item
 
 ):match  
@@ -245,10 +239,10 @@ Priority: 99
 
 (   
 	({Person})?
-	({Lookup2.language == onset, Lookup2.type != diagnosed}|{Lookup2.language == onset, Lookup2.type == began})
+	({OnsetPhrase})
 	({Person})?
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
-	({Lookup2})?
+
 	({Lookup3})?
 	{Age}
 ):match   
@@ -270,10 +264,10 @@ Priority: 99
 
 (   
 	{Person}
-    {Lookup2.language == onset, Lookup2.type != diagnosed }
+    {OnsetPhrase}
     {Lookup3}
 	{Age}
-	{Lookup2.language == onset}
+	{OnsetPhrase}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient }):item
 
 ):match  
@@ -294,11 +288,9 @@ Priority: 99
 
 (   
 	{Person}
-	({Pronouns})?
-    {Lookup2}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient }):item
     ({Person})?
-	({Lookup2.type != diagnosed})?
+	({OnsetPhrase})?
 	{Age}
 	
 ):match  
@@ -313,13 +305,12 @@ AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
 AgeUpper =:match.Age.AgeUpper}
 
-Rule: onsetAge13 /*At around 15 months of age she had a GTCS...*  ? may pick up non-onset phrases */
-Priority: 98
+//Rule: onsetAge13 /*At around 15 months of age she had a GTCS...*  ? may pick up non-onset phrases */ // it does
+/*Priority: 98
 
 (  
 	{Age}
 	{Person}
-	{Lookup2.majorType == historic, Lookup2.type == past}
 	({Lookup.majorType == umls, Lookup.Negation == Affirmed,  Lookup.Experiencer == Patient, Lookup.minorType == Disease}):item
 		
  ):match  
@@ -332,7 +323,7 @@ PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
-AgeUpper =:match.Age.AgeUpper}
+AgeUpper =:match.Age.AgeUpper}*/
 
 Rule: onsetAge14 /*At around 15 months of age she had a GTCS...*  ? may pick up non-onset phrases */
 Priority: 98
@@ -340,9 +331,8 @@ Priority: 98
 (  
 	
 	({Person})?
-	({Lookup2.type == historic})
 	({Lookup.majorType == umls, Lookup.Negation == Affirmed,  Lookup.Experiencer == Patient, Lookup.minorType == Disease}):item
-	{Lookup2.language == onset, Lookup2.type == began}
+	{OnsetPhrase}
 	{Age}
  ):match  
  -->
@@ -356,8 +346,8 @@ AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
 AgeUpper = :match.Age.AgeUpper}
 
-Rule: onsetAge15
-Priority: 99
+//Rule: onsetAge15
+/*Priority: 99
 
 (   
 	{Age}
@@ -375,5 +365,4 @@ Certainty = :item.Lookup.Certainty,
 Age = :a.Age.Age,
 AgeUnit = :a.Age.AgeUnit,
 AgeLower = :a.Age.AgeLower,
-AgeUpper = :a.Age.AgeUpper}
-
+AgeUpper = :a.Age.AgeUpper}*/

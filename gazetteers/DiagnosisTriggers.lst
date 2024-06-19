@@ -52,3 +52,7 @@ background of:type=diagnosis
 known to suffer from:type=suffers
 Diagnoses:type=diagnosis
 diagnoses:type=diagnosis
+Comorbidities:type=comorbidities
+Co-morbidities:type=comorbidities
+comorbidities:type=comorbidities
+co-morbidities:type=comorbidities

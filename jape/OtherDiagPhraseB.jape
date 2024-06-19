@@ -1,0 +1,19 @@
+Phase: OtherDiagPhrase
+Input: Lookup3 PartialDate Age Sentence Person Conj TimeSince DateSince DateBio OnsetPhrase  Split timeElapsed PointInTime
+
+/* To annotate Lookup3 Other diseases or generic seizures when listed in listSent with age, dates */
+Options: control=Appelt
+
+Rule: OtherDiagPhrase1  //Includes hypothetical Lookup3 but possesive will make it recent  - risk of complications for his diabetes and hypertension
+Priority: 90
+
+(  
+	({Person.type == possessive})
+    {Lookup3}
+    ({Conj})?
+	({Lookup3.majorType == umls, Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.PREF !~ "birth", Lookup3.TUI != T061}):item
+ ):match  
+ -->
+:item.OtherDiag = {rule = OtherDiagPhraseB, r = "1" PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI, EC = :item.Lookup3.EC,
+ Negation = :item.Lookup3.Negation,
+Certainty = "5"} 

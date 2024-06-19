@@ -928,9 +928,9 @@ clonic seizures	CUI=C3887898	PREF=Clonic Seizures	TUI=T047	STY=Disease or Syndro
 clonic convulsion	CUI=C3887898	PREF=Clonic Seizures	TUI=T047	STY=Disease or Syndrome
 clonic convulsions	CUI=C3887898	PREF=Clonic Seizures	TUI=T047	STY=Disease or Syndrome
 non-refractory epilepsy	CUI=C1827389	PREF=Epilepsy, not refractory	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-generalised onset tonic clonic CUI=C5703382	Generalized onset tonic-clonic epileptic seizure	TUI=T047	STY=Disease or Syndrome
-generalized onset tonic clonic CUI=C5703382	Generalized onset tonic-clonic epileptic seizure	TUI=T047	STY=Disease or Syndrome
-generalised-onset tonic-clonic CUI=C5703382	Generalized onset tonic-clonic epileptic seizure	TUI=T047	STY=Disease or Syndrome
+generalised onset tonic clonic CUI=C5703382	PREF=Generalized onset tonic-clonic epileptic seizure	TUI=T047	STY=Disease or Syndrome
+generalized onset tonic clonic CUI=C5703382	PREF=Generalized onset tonic-clonic epileptic seizure	TUI=T047	STY=Disease or Syndrome
+generalised-onset tonic-clonic CUI=C5703382	PREF=Generalized onset tonic-clonic epileptic seizure	TUI=T047	STY=Disease or Syndrome
 primarily generalised tonic-clonic seizure	CUI=C5703382	PREF=Generalized onset tonic-clonic epileptic seizure	TUI=T184	STY=sign or symptom
 primarily generalised tonic-clonic seizures	CUI=C5703382	PREF=Generalized onset tonic-clonic epileptic seizure	TUI=T184	STY=sign or symptom
 generalised-onset bilateral tonic-clonic seizures	CUI=C5703382	PREF=Generalized onset tonic-clonic epileptic seizure	TUI=T184	STY=sign or symptom
@@ -943,3 +943,6 @@ Juvenile myopathy, encephalopathy, lactic acidosis, stroke	CUI=C0162671	PREF=MEL
 Encephalomyopathy, Lactic Acidosis, and Stroke-Like Episodes	CUI=C0162671	PREF=MELAS Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Alpers Syndrome CUI=C0205710	PREF=Alpers Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Alpers' Syndrome CUI=C0205710	PREF=Alpers Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+post-stroke epileptic seizures	CUI=C4518323	PREF=Epilepsy due to cerebrovascular accident	TUI=T047	STY=Disease or Syndrome
+post-stroke epileptic seizure	CUI=C4518323	PREF=Epilepsy due to cerebrovascular accident	TUI=T047	STY=Disease or Syndrome
+focal seizures with secondary generalisation	CUI=C0270838	PREF=Secondarily generalized seizures	TUI=T047	STY=Disease or Syndrome

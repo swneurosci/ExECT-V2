@@ -1,0 +1,101 @@
+Phase: PatientHistory
+Input:  PatientHistoryA PatientHistoryB PatientHistoryC PatientHistoryD
+Options: control=appelt
+
+// filtering the longest match for Patient History diagnosis to remove incomplete annotations
+
+Rule: PatientHistoryAFilter
+
+Priority: 100
+
+(
+	({PatientHistoryA}):item
+	
+):match
+-->
+:item.PatientHistory = {rule = PatientHistoryAFilter, PREF = :item.PatientHistoryA.PREF, 
+CUI = :item.PatientHistoryA.CUI, Negation = :item.PatientHistoryA.Negation, Certainty = :item.PatientHistoryA.Certainty, 
+EC = :item.PatientHistoryA.EC,
+AgeUnit = :item.PatientHistoryA.AgeUnit,
+AgeLower = :item.PatientHistoryA.AgeLower,
+AgeUpper = :item.PatientHistoryA.AgeUpper,
+Age = :item.PatientHistoryA.Age,
+DayDate = :item.PatientHistoryA.DayDate,
+MonthDate = :item.PatientHistoryA.MonthDate,
+YearDate = :item.PatientHistoryA.YearDate,
+PointInTime = :item.PatientHistoryA.PointInTime,
+TimePeriod = :item.PatientHistoryA.TimePeriod,
+LowerNumberOfTimePeriods = :item.PatientHistoryA.LowerNumberOfTimePeriods,
+UpperNumberOfTimePeriods = :item.PatientHistoryA.UpperNumberOfTimePeriods,
+NumberOfTimePeriods = :item.PatientHistoryA.NumberOfTimePeriods}
+
+
+Rule: PatientHistoryBFilter
+Priority: 100
+(
+	({PatientHistoryB}):item
+	
+):match
+-->
+:item.PatientHistory = {rule = PatientHistoryBFilter, PREF = :item.PatientHistoryB.PREF, 
+CUI = :item.PatientHistoryB.CUI, Negation = :item.PatientHistoryB.Negation, Certainty = :item.PatientHistoryB.Certainty, 
+EC = :item.PatientHistoryB.EC,
+AgeUnit = :item.PatientHistoryB.AgeUnit,
+AgeLower = :item.PatientHistoryB.AgeLower,
+AgeUpper = :item.PatientHistoryB.AgeUpper,
+Age = :item.PatientHistoryB.Age,
+DayDate = :item.PatientHistoryB.DayDate,
+MonthDate = :item.PatientHistoryB.MonthDate,
+YearDate = :item.PatientHistoryB.YearDate,
+PointInTime = :item.PatientHistoryB.PointInTime,
+TimePeriod = :item.PatientHistoryB.TimePeriod,
+LowerNumberOfTimePeriods = :item.PatientHistoryB.LowerNumberOfTimePeriods,
+UpperNumberOfTimePeriods = :item.PatientHistoryB.UpperNumberOfTimePeriods,
+NumberOfTimePeriods = :item.PatientHistoryB.NumberOfTimePeriods}
+
+Rule: PatientHistoryCFilter
+Priority: 100
+(
+	({PatientHistoryC}):item
+	
+):match
+-->
+:item.PatientHistory = {rule = PatientHistoryCFilter, PREF = :item.PatientHistoryC.PREF, 
+CUI = :item.PatientHistoryC.CUI, Negation = :item.PatientHistoryC.Negation, Certainty = :item.PatientHistoryC.Certainty, 
+EC = :item.PatientHistoryC.EC,
+AgeUnit = :item.PatientHistoryC.AgeUnit,
+AgeLower = :item.PatientHistoryC.AgeLower,
+AgeUpper = :item.PatientHistoryC.AgeUpper,
+Age = :item.PatientHistoryC.Age,
+DayDate = :item.PatientHistoryC.DayDate,
+MonthDate = :item.PatientHistoryC.MonthDate,
+YearDate = :item.PatientHistoryC.YearDate,
+PointInTime = :item.PatientHistoryC.PointInTime,
+TimePeriod = :item.PatientHistoryC.TimePeriod,
+LowerNumberOfTimePeriods = :item.PatientHistoryC.LowerNumberOfTimePeriods,
+UpperNumberOfTimePeriods = :item.PatientHistoryC.UpperNumberOfTimePeriods,
+NumberOfTimePeriods = :item.PatientHistoryC.NumberOfTimePeriods}
+
+
+Rule: PatientHistoryDFilter
+Priority: 100
+(
+	({PatientHistoryD}):item
+	
+):match
+-->
+:item.PatientHistory = {rule = PatientHistoryDFilter, PREF = :item.PatientHistoryD.PREF, 
+CUI = :item.PatientHistoryD.CUI, Negation = :item.PatientHistoryD.Negation, Certainty = :item.PatientHistoryD.Certainty, 
+EC = :item.PatientHistoryD.EC,
+AgeUnit = :item.PatientHistoryD.AgeUnit,
+AgeLower = :item.PatientHistoryD.AgeLower,
+AgeUpper = :item.PatientHistoryD.AgeUpper,
+Age = :item.PatientHistoryD.Age,
+DayDate = :item.PatientHistoryD.DayDate,
+MonthDate = :item.PatientHistoryD.MonthDate,
+YearDate = :item.PatientHistoryD.YearDate,
+PointInTime = :item.PatientHistoryD.PointInTime,
+TimePeriod = :item.PatientHistoryD.TimePeriod,
+LowerNumberOfTimePeriods = :item.PatientHistoryD.LowerNumberOfTimePeriods,
+UpperNumberOfTimePeriods = :item.PatientHistoryD.UpperNumberOfTimePeriods,
+NumberOfTimePeriods = :item.PatientHistoryD.NumberOfTimePeriods}
