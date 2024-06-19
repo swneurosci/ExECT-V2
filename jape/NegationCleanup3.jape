@@ -41,7 +41,7 @@ Options: control=all
 // when episodes are described as not epileptic in nature they are automatically negated so here this negation is reversed
 Rule: reverseNegation  
 (
-({Lookup3.CUI == C3495874, Lookup3.Negation == "Negated"}):umls // This is non-epileptic attacks/seizures CUI
+({Lookup3.CUI == C3495874, Lookup3.Negation == "Negated"}):umls //This is non-epileptic attacks/seizures CUI - it is
 ):match
 -->
 :umls {

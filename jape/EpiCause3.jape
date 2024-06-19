@@ -1,5 +1,5 @@
 Phase: EpiCause3
-Input: PatientHistory Lookup3 Lookup2 Lookup Sentence
+Input: PatientHistory Lookup3 Lookup2 Lookup Sentence CausePhrase
 
 
   /*These rules are set to select causes and suspected causes of epilepsy, the UMLS CUI that is returned relates to the cause, 
@@ -7,7 +7,7 @@ Input: PatientHistory Lookup3 Lookup2 Lookup Sentence
   symptomatic epilepsy (STY = Disease or syndrome) it would be annotated in Diagnosis.  Epilepsies
     with STY = "injury or poisoning" may have their own CUI and they would be annotated by Symptomatic*/
 
-  
+  // Lookup2 has been removed from most of the other rules in Epilepsy cause but here it is still used as birth history goes to Lookup2
 
 Options: control=Brill
 
@@ -27,3 +27,20 @@ Priority: 100
 STY = :item.PatientHistory.STY, Negation = :item.PatientHistory.Negation,
 Experiencer = :item.PatientHistory.Experiencer, Temporality = :item.PatientHistory.Temporality, 
 Certainty = :a.Lookup2.Level}
+
+Rule: Cause3b
+Priority: 99
+
+(   
+	
+    {DiagnosisTriggers}
+    {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
+    {CausePhrase}
+	({Lookup2.minorType == gestation}):item
+    
+ ):match  
+ -->
+:item.EpilepsyCause = {rule = Cause3b, PREF = :item.Lookup2.value, CUI = :item.Lookup2.CUI, 
+EC = :item.Lookup3.EC,
+//Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup2.Certainty}

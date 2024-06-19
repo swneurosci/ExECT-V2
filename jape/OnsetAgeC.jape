@@ -1,5 +1,5 @@
 Phase: Onset
-Input: Lookup Pronouns Lookup2 Sentence Age DiagnosisTriggers
+Input: Lookup Pronouns Experience Sentence Age DiagnosisTriggers OnsetPhrase
 
 Options: control=appelt
 
@@ -8,7 +8,7 @@ Priority: 100
 
 (   
 	{Pronouns.type == relative}
-    ({Lookup2.majorType == historic, Lookup2.type == suffered}|{Lookup2.majorType == historic, Lookup2.type == has})
+    ({Experience})
 	(({Lookup.minorType == Disease ,Lookup.Experiencer == Patient , Lookup.Negation == Affirmed})
 	{Age}):item
 		

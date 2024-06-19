@@ -37,3 +37,17 @@ Priority: 100
   umlsAnnots.iterator().next().getFeatures().put("rule","ContextCorrection");
 },
 :umls.Lookup3TepChange = {rule = ContextCorrection2}
+
+// This is to change GATE's built in Context with trigger 'if' for phrases  such as 'as if he is' - which seem less hypothetical added to our context list in Generic gaz
+Rule: ContextCorrection3
+Priority: 100
+(
+	{Context.context == current}
+	({Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Temporality == hypothetical}):umls
+):match
+-->
+:umls {
+  umlsAnnots.iterator().next().getFeatures().put("Temporality","Recent");
+  umlsAnnots.iterator().next().getFeatures().put("rule","ContextCorrection");
+},
+:umls.Lookup3TepChange = {rule = ContextCorrection2}

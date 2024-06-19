@@ -10,7 +10,7 @@ Options: contral=all
 Rule: RemoveSeizure
  (
      ({Lookup3.minorType == generic}):umls
-     ({Token.string == free}|{Token.string == clinic}|{Token.string == control}|{Token.string == frequency}|{Token.string == types}|{Token.string == markers})
+     ({Token.string == free}|{Token.string == freedom}|{Token.string == clinic}|{Token.string == control}|{Token.string == frequency}|{Token.string == types}|{Token.string == markers})
  
 ):matches
 -->
@@ -58,8 +58,8 @@ Rule: RemoveLookup3Within  /*when disease is the same as title such as Ms*/
 :umls.Lookup3Deleted = {rule = RemoveSeizure4}
 
 
+ // Doesn't seem to work but it's needed
 Rule: RemoveLookup3Within  /*Removes  generic lookup3 e.g. convulsion when it is within Lookup3 e.g.Febrile Convulsion*/
-
 
 (
   ({Lookup3 within {Lookup3.minorType == OtherDisease}, Lookup3.minorType == generic}):umls
@@ -72,7 +72,7 @@ Rule: RemoveLookup3Within  /*Removes  generic lookup3 e.g. convulsion when it is
 
 
 
-Rule: RemoveLookup3Within  /*Removes  generic lookup3 when it's within health term e.g fit and well*/
+Rule: RemoveLookup3Within  /*Removes generic lookup3 when it's within health term e.g fit and well*/
 
 (
   ({Lookup3 within {Lookup2.majorType == health_condition}, Lookup3.minorType == generic}):umls
@@ -107,3 +107,5 @@ Rule: RemoveLookup3Within4  /*Removes  lookup3 e.g. altered awareness  from foca
   inputAS.removeAll(umlsAnnots);
 },
 :umls.Lookup3Deleted = {rule = RemoveLookup3Within4}
+
+

@@ -35,3 +35,6 @@ his medication:type=treatment
 medications:type=treatment
 once:type=another
 twice:type=another
+not able to:type=neg_state
+unable to:type=neg_state
+not willing to:type=neg_state

@@ -1,6 +1,6 @@
 Phase: PatientHistC
-Input: Person OtherDiag Lookup2 Lookup3 timeElapsed Age DiagnosisTriggers Sentence PartialDate Numeric timePeriod
-Options: control=appelt
+Input: OtherDiag  DiagnosisTriggers Sentence
+Options: control= all
 
 
 /*  Additional PtHistory These rules annotate events in patient history - type of event with an UMLS CUI, age (precise and as a range), 
@@ -12,131 +12,128 @@ date as year/month, and time since the event, as TimePeriod / NumberOfTimePeriod
 Rule: PtHistoryC1
 Priority: 100
 
-(   
-	{Person}
-    {Lookup2.majorType == historic}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.Experiencer == Patient}|
-    {Lookup3.majorType == umls, Lookup3.minorType == generic,Lookup3.Experiencer == Patient, Lookup3.Negation == Affirmed }):item
-    {Person}
-    {Lookup2.majorType == historic}
-    {timeElapsed.time == In}
-    {Person.minorType == pronoun}
-    ({Lookup2.minorType == time}):a
-
-
+(  
+   ({DiagnosisTriggers})
+	({OtherDiag}):item
+	
 ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryC1, PREF = :item.OtherDiag.PREF,
-// STY = :item.OtherDiag.STY, 
-// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
-Negation = :item.OtherDiag.Negation,
-YearDate = "",
-MonthDate = "",
-Age = "",
-AgeUnit = :a.Lookup2.timeUnit,
-AgeLower =:a.Lookup2.lowerAge,
-AgeUpper =:a.Lookup2.upperAge,
-TimePeriod = "",
-NumberOfTimePeriods = "",
-PointInTime = ""} 
-
-
+:item.PatientHistoryC = {rule = PtHistoryC1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI,
+EC = :item.OtherDiag.EC,  
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
+TimePeriod = :item.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods,
+AgeUnit = :item.OtherDiag.AgeUnit,
+Age =:item.OtherDiag.Age,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper,
+DayDate =:item.OtherDiag.DayDate,
+MonthDate = :item.OtherDiag.MonthDate,
+YearDate =:item.OtherDiag.YearDate}
 
 Rule: PtHistoryC2
 Priority: 100
 
-(   
-	{Person}
-    {Lookup2.type == has}
-    {Lookup2.type == suffered}
-    {timeElapsed}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-	Lookup3.Experiencer == Patient}):item
-   
- ):match  
+(  
+   ({DiagnosisTriggers})
+    ({OtherDiag})
+	({OtherDiag}):item
+	
+):match  
  -->
-:item.PatientHistory = {rule = PtHistoryC2, PREF = :item.OtherDiag.PREF,
-// STY = :item.OtherDiag.STY, 
-// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
-Negation = :item.OtherDiag.Negation}
-
+:item.PatientHistoryC = {rule = PtHistoryC2, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI,
+EC = :item.OtherDiag.EC,  
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
+TimePeriod = :item.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods,
+AgeUnit = :item.OtherDiag.AgeUnit,
+Age =:item.OtherDiag.Age,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper,
+DayDate =:item.OtherDiag.DayDate,
+MonthDate = :item.OtherDiag.MonthDate,
+YearDate =:item.OtherDiag.YearDate}
 
 Rule: PtHistoryC3
-Priority: 80
+Priority: 100
 
-(   
-	{Person}
-    {Lookup2.type == has}
-    {Lookup2.type == suffered}
-    {timeElapsed}
-    {Lookup3}
-    ({timeElapsed})
-	({Numeric})*
-    ({Lookup3})?
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-	Lookup3.Experiencer == Patient}):item
-   
-
- ):match  
+(  
+    {DiagnosisTriggers}
+    ({OtherDiag})
+    ({OtherDiag})
+	({OtherDiag}):item
+	
+):match  
  -->
-:item.PatientHistory = {rule = PtHistoryC3, PREF = :item.OtherDiag.PREF,
-// STY = :item.OtherDiag.STY, 
-// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
-Negation = :item.OtherDiag.Negation}
-
+:item.PatientHistoryC = {rule = PtHistoryC3, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI,
+EC = :item.OtherDiag.EC,  
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
+TimePeriod = :item.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods,
+AgeUnit = :item.OtherDiag.AgeUnit,
+Age =:item.OtherDiag.Age,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper,
+DayDate =:item.OtherDiag.DayDate,
+MonthDate = :item.OtherDiag.MonthDate,
+YearDate =:item.OtherDiag.YearDate}
 
 
 Rule: PtHistoryC4
-Priority: 80
+Priority: 100
 
-(   
-	{Person}
-    {Lookup2.type == suffered}
-    ({Lookup2})?
-    ({Person})?
-    {timeElapsed.time == Since}
-	({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-	Lookup3.Experiencer == Patient}):item
-    {timeElapsed.time == In}
-    {Numeric}
-
- ):match  
+(  
+    {DiagnosisTriggers}
+    ({OtherDiag})
+    ({OtherDiag})
+    ({OtherDiag})
+	({OtherDiag}):item
+	
+):match  
  -->
-:item.PatientHistory = {rule = PtHistoryC4, PREF = :item.OtherDiag.PREF,
-// STY = :item.OtherDiag.STY, 
-// Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, CUI = :item.OtherDiag.CUI, 
-Negation = :item.OtherDiag.Negation,
-YearDate =:match.Numeric.value}
+:item.PatientHistoryC = {rule = PtHistoryC4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI,
+EC = :item.OtherDiag.EC,  
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
+TimePeriod = :item.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods,
+AgeUnit = :item.OtherDiag.AgeUnit,
+Age =:item.OtherDiag.Age,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper,
+DayDate =:item.OtherDiag.DayDate,
+MonthDate = :item.OtherDiag.MonthDate,
+YearDate =:item.OtherDiag.YearDate}
+
+
 
 Rule: PtHistoryC5
 Priority: 100
 
-(   
-	{Person}
-	{OtherDiag}
-	({Lookup2})?
-	({Age}):a
-	({Person})?
-    ({timeElapsed})?
-	({Person})
-	({Lookup2.type == suffered})
+(  
+    {DiagnosisTriggers}
     ({OtherDiag})
-    ({Lookup2})?
+    ({OtherDiag})
+    ({OtherDiag})
+    ({OtherDiag})
 	({OtherDiag}):item
-		   
- ):match  
+	
+):match  
  -->
-:item.PatientHistory = {rule = PtHistoryC5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-//STY = :item.OtherDiag.STY, 
+:item.PatientHistoryC = {rule = PtHistoryC5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI,
+EC = :item.OtherDiag.EC,  
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
-AgeUnit = :a.Age.AgeUnit,
-Age =:a.Age.Age,
-AgeLower =:a.Age.AgeLower,
-AgeUpper =:a.Age.AgeUpper}
-
+TimePeriod = :item.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods,
+AgeUnit = :item.OtherDiag.AgeUnit,
+Age =:item.OtherDiag.Age,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper,
+DayDate =:item.OtherDiag.DayDate,
+MonthDate = :item.OtherDiag.MonthDate,
+YearDate =:item.OtherDiag.YearDate}
 

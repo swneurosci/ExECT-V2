@@ -248,8 +248,12 @@ Human immunodeficiency virus infection	CUI=C0019693	PREF=HIV infection	TUI=T047	
 T-Lymphotropic Virus Type III Infections	CUI=C0019693	PREF=HIV infection	TUI=T047	EC=Yes
 hydrocephalus	CUI=C0020255	PREF=Hydrocephalus	TUI=T047	EC=Yes
 hydrocephaly	CUI=C0020255	PREF=Hydrocephalus	TUI=T047	EC=Yes
-High Cholesterol Levels	CUI=C0020443	PREF=Hypercholesterolemia	TUI=T047	EC=No
+normal pressure hydrocephalus	CUI=C0020258	PREF=Normal Pressure Hydrocephalus	TUI=T047	EC=Yes
+normal-pressure hydrocephalus	CUI=C0020258	PREF=Normal Pressure Hydrocephalus	TUI=T047	EC=Yes
+Hakim's Syndromes	CUI=C0020258	PREF=Normal Pressure Hydrocephalus	TUI=T047	EC=Yes
+high cholesterol levels	CUI=C0020443	PREF=Hypercholesterolemia	TUI=T047	EC=No
 hypercholesterolaemia	CUI=C0020443	PREF=Hypercholesterolemia	TUI=T047	EC=No
+hypercholesteremia	CUI=C0020443	PREF=Hypercholesterolemia	TUI=T047	EC=No
 hypertension	CUI=C0020538	PREF=Hypertensive disease	TUI=T047	EC=No
 Hypertensive disease	CUI=C0020538	PREF=Hypertensive disease	TUI=T047	EC=No
 hypoglycaemia	CUI=C0020615	PREF=Hypoglycemia	TUI=T047	EC=No
@@ -299,6 +303,7 @@ micro-cephaly	CUI=C0025958	PREF=Microcephaly	TUI=T019	EC=No
 ms	CUI=C0026769	PREF=Multiple sclerosis	TUI=T047	EC=Yes
 multiple sclerosis	CUI=C0026769	PREF=Multiple sclerosis	TUI=T047	EC=Yes
 myasthenia gravis	CUI=C0026896	PREF=Myasthenia Gravis	TUI=T047	EC=No
+myasthenic	CUI=C0026896	PREF=Myasthenia Gravis	TUI=T047	EC=No
 Erb-Goldflam disease	CUI=C0026896	PREF=Myasthenia Gravis	TUI=T047	EC=No
 cardiac infarction	CUI=C0027051	PREF=Myocardial Infarction	TUI=T047	EC=No
 heart attack	CUI=C0027051	PREF=Myocardial Infarction	TUI=T047	EC=No
@@ -391,7 +396,11 @@ pulmonary venolobar syndrome	CUI=C0036400	PREF=Scimitar syndrome	TUI=T019	EC=No
 total anomalous pulmonary venous drainage	CUI=C0036400	PREF=Scimitar syndrome	TUI=T019	EC=No
 sclerosis	CUI=C0036429	PREF=Sclerosis	TUI=T046	EC=No
 Self-mutilation	CUI=C0036601	PREF=Self Mutilation	TUI=T033	EC=No
-self-harm	CUI=C0036601	PREF=Self Mutilation	TUI=T033	EC=No
+deliberate self-harm	CUI=C0085271	PREF=Self-Injurious Behavior	TUI=T055	EC=No
+self-injurious behavior	CUI=C0085271	PREF=Self-Injurious Behavior	TUI=T055	EC=No
+self-harming behaviours	CUI=C0085271	PREF=Self-Injurious Behavior	TUI=T055	EC=No
+intentional self injuries	CUI=C0085271	PREF=Self-Injurious Behavior	TUI=T055	EC=No
+self harming	CUI=C0085271	PREF=Self-Injurious Behavior	TUI=T055	EC=No
 skull fracture	CUI=C0037304	PREF=Skull Fractures	TUI=T037	EC=Yes
 skull fractures	CUI=C0037304	PREF=Skull Fractures	TUI=T037	EC=Yes
 sleep apnoea	CUI=C0037315	PREF=Sleep Apnea Syndromes	TUI=T047	EC=No
@@ -791,7 +800,7 @@ malignant cerebral tumour	CUI=C0346903	PREF=Malignant neoplasm of cerebrum	TUI=T
 cerebral tumour - malignant	CUI=C0346903	PREF=Malignant neoplasm of cerebrum	TUI=T191	EC=Yes
 malignant tumur of cerebrum	CUI=C0346903	PREF=Malignant neoplasm of cerebrum	TUI=T191	EC=Yes
 malignant neoplasm of cerebrum	CUI=C0346903	PREF=Malignant neoplasm of cerebrum	TUI=T191	EC=Yes
-Superficial Head Injury	CUI=C0347536	PREF=Head Injury, Superficial	TUI=T037	EC=No
+superficial head injury	CUI=C0347536	PREF=Head Injury, Superficial	TUI=T037	EC=No
 arteriovenous malformation of spinal vessel	CUI=C0348023	PREF=Spinal arteriovenous malformation	TUI=T019	EC=No
 spinal arteriovenous malformat	CUI=C0348023	PREF=Spinal arteriovenous malformation	TUI=T019	EC=No
 spinal avm	CUI=C0348023	PREF=Spinal arteriovenous malformation	TUI=T019	EC=No
@@ -940,8 +949,8 @@ Cyanotic episode	CUI=C0578475	PREF=Cyanotic attack	TUI=T184	EC=No
 Cyanotic episodes	CUI=C0578475	PREF=Cyanotic attack	TUI=T184	EC=No
 SCBU	CUI=C0583275	PREF=Admission to special care baby unit	TUI=T058	EC=No
 special care baby unit	CUI=C0583275	PREF=Admission to special care baby unit	TUI=T058	EC=No
-recurrent febrile convulsion	CUI=C0585108	PREF=recurrent febrile convulsion	TUI=T047	EC=No
-recurrent febrile fit	CUI=C0585108	PREF=recurrent febrile convulsion	TUI=T047	EC=No
+recurrent febrile convulsion	CUI=C0585108	PREF=Recurrent Febrile Convulsion	TUI=T047	EC=No
+recurrent febrile fit	CUI=C0585108	PREF=Recurrent Febrile Convulsion	TUI=T047	EC=No
 alcohol withdrawal induced seizures	CUI=C0586323	PREF=Alcohol Withdrawal Seizures	TUI=T048	EC=No
 alcohol withdrawal seizures	CUI=C0586323	PREF=Alcohol Withdrawal Seizures	TUI=T048	EC=No
 alcohol withdrawal-induced seizure	CUI=C0586323	PREF=Alcohol Withdrawal Seizures	TUI=T048	EC=No
@@ -1013,6 +1022,7 @@ brain infarction	CUI=C0751955	PREF=Brain Infarction	TUI=T047	EC=Yes
 brain infarctions	CUI=C0751955	PREF=Brain Infarction	TUI=T047	EC=Yes
 infarct	CUI=C0751955	PREF=Brain Infarction	TUI=T047	EC=Yes
 chronic daily headache	CUI=C0752147	PREF=chronic daily headache	TUI=T047	EC=No
+chronic daily headaches	CUI=C0752147	PREF=chronic daily headache	TUI=T047	EC=No
 hypoxic ischaemic brain injury	CUI=C0752304	PREF=Hypoxic-Ischemic Encephalopathy	TUI=T047	EC=Yes
 hypoxic ischaemic encephalopathy	CUI=C0752304	PREF=Hypoxic-Ischemic Encephalopathy	TUI=T047	EC=Yes
 hypoxic ischaemic brain injury	CUI=C0752304	PREF=Hypoxic-Ischemic Encephalopathy	TUI=T047	EC=Yes
@@ -1056,8 +1066,9 @@ meningioma surgery	CUI=C1096493	PREF=Meningioma surgery	TUI=T061	EC=
 anterior temporal lobectomy	CUI=C1136214	PREF=Anterior Temporal Lobectomy	TUI=T061	EC=
 temporal lobe resection	CUI=C1136214	PREF=Anterior Temporal Lobectomy	TUI=T061	EC=
 non epileptic psychogenic seizures	CUI=C1142430	PREF=Psychogenic seizure	TUI=T048	EC=No
+non - epileptic psychogenic seizures	CUI=C1142430	PREF=Psychogenic seizure	TUI=T048	EC=No
 non-epileptic psychogenic seizures	CUI=C1142430	PREF=Psychogenic seizure	TUI=T048	EC=No
-PENS	CUI=C1142430	PREF=Psychogenic seizure	TUI=T048	EC=No
+PNES	CUI=C1142430	PREF=Psychogenic seizure	TUI=T048	EC=No
 psychogenic nonepileptic attack disorder	CUI=C1142430	PREF=Psychogenic seizure	TUI=T048	EC=No
 psychogenic non-epileptic seizure	CUI=C1142430	PREF=Psychogenic seizure	TUI=T048	EC=No
 psychogenic seizure	CUI=C1142430	PREF=Psychogenic seizure	TUI=T048	EC=No
@@ -1093,6 +1104,8 @@ cerebral abscess	CUI=C1510428	PREF=Cerebral abscess	TUI=T047	EC=Yes
 ASD	CUI=C1510586	PREF=Autism Spectrum Disorders	TUI=T048	EC=No
 autism	CUI=C1510586	PREF=Autism Spectrum Disorders	TUI=T048	EC=No
 autistic spectrum disorder	CUI=C1510586	PREF=Autism Spectrum Disorders	TUI=T048	EC=No
+autistic spectrum 	CUI=C1510586	PREF=Autism Spectrum Disorders	TUI=T048	EC=No
+autistic	CUI=C1510586	PREF=Autism Spectrum Disorders	TUI=T048	EC=No
 Deletion 1p36	CUI=C1515592	PREF=Deletion 1p36	TUI=T049	EC=Yes
 1p36 Deletion	CUI=C1515592	PREF=Deletion 1p36	TUI=T049	EC=Yes
 congenital renal arteriovenous malformation	CUI=C1533649	PREF=congenital renal arteriovenous malformation	TUI=T019	EC=No
@@ -1100,7 +1113,7 @@ brain injury at birth	CUI=C1536522	PREF=Unspecified brain damage due to birth in
 brain damage due to birth injury	CUI=C1536522	PREF=Unspecified brain damage due to birth injury	TUI=T037	EC=Yes
 renal arteriovenous malformation	CUI=C1536875	PREF=renal arteriovenous malformation	TUI=T190	EC=No
 renal arteriovenous malformation	CUI=C1536875	PREF=renal arteriovenous malformation	TUI=T190	EC=No
-chronic kidney deasese	CUI=C1561643	PREF=Chronic kidney diseases	TUI=T047	EC=No
+chronic kidney disease	CUI=C1561643	PREF=Chronic kidney diseases	TUI=T047	EC=No
 CKD	CUI=C1561643	PREF=Chronic kidney diseases	TUI=T047	EC=No
 galen malformations veins	CUI=C1562503	PREF=vein of galen malformations	TUI=T019	EC=Yes
 vein of galen malformation	CUI=C1562503	PREF=vein of galen malformations	TUI=T019	EC=Yes
@@ -1197,10 +1210,10 @@ Trisomy 15q11q13	CUI=C2675336	PREF=Duplication 15q11-q13 Syndrome	TUI=T047	EC=Ye
 15q13.3 Microdeletion Syndrome	CUI=C2677613	PREF=Chromosome 15q13.3 Microdeletion Syndrome	TUI=T019	EC=Yes
 15q13.3 microdeletion	CUI=C2677613	PREF=Chromosome 15q13.3 Microdeletion Syndrome	TUI=T019	EC=Yes
 15q13.3 deletion	CUI=C2677613	PREF=Chromosome 15q13.3 Microdeletion Syndrome	TUI=T019	EC=Yes
-febrile myoclonus	CUI=C2711743	PREF=febrile myoclonus	TUI=T047	EC=
-febrile myoclonus	CUI=C2711743	PREF=febrile myoclonus	TUI=T047	EC=
-myoclonus associated with fever	CUI=C2711743	PREF=febrile myoclonus	TUI=T047	EC=
-myoclonus associated with fever	CUI=C2711743	PREF=febrile myoclonus	TUI=T047	EC=
+febrile myoclonus	CUI=C2711743	PREF=Febrile myoclonus	TUI=T047	EC=
+febrile myoclonus	CUI=C2711743	PREF=Febrile myoclonus	TUI=T047	EC=
+myoclonus associated with fever	CUI=C2711743	PREF=Febrile myoclonus	TUI=T047	EC=
+myoclonus associated with fever	CUI=C2711743	PREF=Febrile myoclonus	TUI=T047	EC=
 cortical malformation	CUI=C2748861	PREF=Cortical malformations	TUI=T019	EC=Yes
 cortical malformation	CUI=C2748861	PREF=Cortical malformations	TUI=T019	EC=Yes
 cortical malformations	CUI=C2748861	PREF=Cortical malformations	TUI=T019	EC=Yes
@@ -1275,10 +1288,13 @@ nonepileptic seizures	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
 nonepileptic seizure	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
 non epileptic attack	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
 non epileptic seizure	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
-non epileptic seizure	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
+non epileptic seizures	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
 non epileptic attacks	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
 non-epileptic attack	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
+non- epileptic attacks	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
+non - epileptic attack	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
 non-epileptic attacks	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
+nonepileptic attacks	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
 non-epileptic seizure	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
 non-epileptic seizures	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
 severe traumatic brain injury	CUI=C3508474	PREF=severe traumatic brain injury	TUI=T037	EC=Yes
@@ -1445,3 +1461,4 @@ mental health difficulties	CUI=C1446377	PREF=Mental health problems	TUI=T033	EC=
 cerebellar infarction	CUI=C0236073	PREF=Cerebellar infarction	TUI=TUI=T047	EC=Yes
 cerebellar infarct	CUI=C0236073	PREF=Cerebellar infarction	TUI=TUI=T047	EC=Yes
 heart block	CUI=C0018794	Pref=Heart Block	TUI=T047	EC=No
+myoclonous CUI=C0027066	PREF=Myoclonus	TUI=033	EC=No

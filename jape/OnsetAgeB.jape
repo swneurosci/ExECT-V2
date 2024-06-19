@@ -1,5 +1,5 @@
 Phase: Onset
-Input: Lookup Person Lookup2  Age Pronouns DiagnosisTriggers Split
+Input: Lookup Person Age Pronouns DiagnosisTriggers Split Experience OnsetPhrase
 //DiagnosisTriggers as a block
 Options: control=appelt
 
@@ -9,9 +9,9 @@ Priority: 100
 (   
 	{Person}
 	({Lookup})
-	{Lookup2.language == onset}
+	{OnsetPhrase}
 	{Age}
-	({Lookup2.language == experience})?
+	({Experience})?
 	({Lookup.minorType == Disease ,Lookup.Experiencer == Patient , Lookup.Negation == Affirmed}):item
 	
 	
@@ -34,11 +34,10 @@ This rule was abased on a sentence that needed experience reversal*/
 Priority: 99
 
 (   
-	{Lookup2.language == onset}
+	{OnsetPhrase}
 	{Person}
 	{Lookup}
 	{Age}
-	({Lookup2})?
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
 ):match   
  -->
@@ -55,15 +54,12 @@ AgeUpper =:match.Age.AgeUpper}
 
 /*As above: one age, second type of seizures*/
 
-Rule: onsetAgeB5
+/*Rule: onsetAgeB5
 Priority: 98
 
 (  
 	{Age}
-	({Lookup2})
 	{Person}
-	({Lookup2})
-	{Lookup2.majorType == historic, Lookup2.minorType == symptoms, Lookup2.type != diagnosed}
 	({Lookup.majorType == umls, Lookup.Negation == Affirmed,  Lookup.Experiencer == Patient, Lookup.minorType == Disease}):item
 		
  ):match  
@@ -76,7 +72,7 @@ PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
 Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
-AgeUpper =:match.Age.AgeUpper}
+AgeUpper =:match.Age.AgeUpper}*/
 
 Rule: onsetAgeB6
 Priority: 98
@@ -86,7 +82,7 @@ Priority: 98
 	({Lookup.majorType == umls, Lookup.Negation == Affirmed,  Lookup.Experiencer == Patient, Lookup.minorType == Disease}):item
 	({Person})?
 	{Split}
-	({Lookup2.language == onset, Lookup2.minorType == symptoms, Lookup2.type == began})
+	({OnsetPhrase})
 	{Age}
 	
 		

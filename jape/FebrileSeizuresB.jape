@@ -12,13 +12,13 @@ Priority: 100
 (   
     {Age}
  	{Pronouns}
-	({Lookup3.Negation == Affirmed, Lookup3.CUI == C0009952, 
+	({Lookup3.Negation == Affirmed, Lookup3.PREF =~ "[Ff]ebrile", 
 	Lookup3.Experiencer == Patient}):item
     
  ):match  
  -->
 :item.PatientHistory = {rule = FebSeizuresB1, , PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-// STY = :item.Lookup3.STY, 
+EC = :item.Lookup3.EC, 
 // Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
  Certainty = :item.Lookup3.Certainty, 
  Negation = :item.Lookup3.Negation,
