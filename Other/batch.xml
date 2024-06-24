@@ -1,0 +1,26 @@
+<batch id ="sample" xmlns ="http://gate.ac.uk/ns/cloud/batch/1.0">
+    <application file ="Set_Your_Path/epilepsy.xgapp"/>
+    
+    <report file ="../reports/sample-report.xml"/> 
+    
+    <input dir="PATH_TO_YOUR_INPUT_DIRECTORY"
+        mimeType=""
+        compression="none"
+        encoding="UTF-8"
+        class="gate.cloud.io.file.FileInputHandler" />
+
+    <output dir="PATH_TO_YOUR_JSON_OUTPUT_DIRECTORY"
+        compression="none"
+        encoding="UTF-8"
+        fileExtension=".out.json"
+        class="gate.cloud.io.file.JSONOutputHandler">
+        <annotationSet name ="Output">
+        </annotationSet> 
+    </output>
+    
+    <documents>
+        <documentEnumerator class = "gate.cloud.io.file.FileDocumentEnumerator"
+        dir="PATH_TO_YOUR_INPUT_DIRECTORY"
+        includes= "*.txt"/>
+    </documents>
+</batch >
