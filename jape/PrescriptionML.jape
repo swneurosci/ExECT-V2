@@ -1,8 +1,8 @@
 MultiPhase: Olanz
 Phases:
 
-prescriptionNotFilter
-prescriptionNotFilter2
+PrescriptionNotFilter
+PrescriptionNotFilter2
 PrescriptionMLCreated
 PrescML
 RemoveOldPrescML
