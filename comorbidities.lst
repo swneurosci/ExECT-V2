@@ -1388,8 +1388,8 @@ cerebrovascular accident due to occlusion of right anterior cerebral artery	CUI=
 stroke due to occlusion of right anterior cerebral artery	CUI=C4520264	PREF=cerebrovascular accident due to occlusion of right anterior cerebral artery	TUI=T047	EC=Yes
 cerebrovascular accident due to occlusion of right posterior communicating artery	CUI=C4520265	PREF=cerebrovascular accident due to occlusion of right posterior communicating artery	TUI=T047	EC=Yes
 stroke due to occlusion of right posterior communicating artery	CUI=C4520265	PREF=cerebrovascular accident due to occlusion of right posterior communicating artery	TUI=T047	EC=Yes
-epilepsy surgery	CUI=C4523971	PREF=Epilepsy surgery	TUI=T061	EC=
-surgery for epilepsy 	CUI=C4523971	PREF=Epilepsy surgery	TUI=T061	EC=
+epilepsy surgery	CUI=C4523971	PREF=Epilepsy surgery	TUI=T061	EC=No
+surgery for epilepsy 	CUI=C4523971	PREF=Epilepsy surgery	TUI=T061	EC=No
 cerebrovascular accident due to stenosis of right vertebral artery	CUI=C4543115	PREF=cerebrovascular accident due to stenosis of right vertebral artery	TUI=T047	EC=Yes
 cerebrovascular accident due to stenosis of left vertebral artery	CUI=C4543116	PREF=cerebrovascular accident due to stenosis of left vertebral artery	TUI=T047	EC=Yes
 cerebrovascular accident due to thrombus of left carotid artery	CUI=C4543198	PREF=cerebrovascular accident due to thrombus of left carotid artery	TUI=T047	EC=Yes
