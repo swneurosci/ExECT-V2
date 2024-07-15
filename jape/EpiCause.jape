@@ -1,6 +1,6 @@
 Phase: EpiCause
-Input: Lookup Lookup3 DiagnosisTriggers CausePhrase listPoint
-
+Input: Lookup Lookup3 DiagnosisTriggers CausePhrase listPoint Sentence SeizureDescription
+// Seizure description used as a block
 
   /*These rules are set to select causes and suspected causes of epilepsy, the UMLS CUI that is returned relates to the cause, 
   rather than a CUI associated with the type of epilepsy i.e.  if there is a CUI for a specific type of 
@@ -88,7 +88,7 @@ EC = :item.Lookup3.EC,
 Certainty = :item.Lookup3.Certainty}
 
 
-Rule: Cause5
+Rule: Cause6
 Priority: 99
 
 (   
@@ -100,30 +100,11 @@ Priority: 99
     
  ):match  
  -->
-:item.EpilepsyCause = {rule = Cause5, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.EpilepsyCause = {rule = Cause6, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 EC = :item.Lookup3.EC,
 //Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
-
-Rule: Cause6
-Priority: 100
-
-(   
-	
-    {Lookup.Negation == Affirmed}
-    {CausePhrase}
-    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
-    Lookup3.Experiencer == Patient, Lookup3.EC != No}):item
-  
-
-
- ):match  
- -->
-:item.EpilepsyCause = {rule = Cause6, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI,
-EC = :item.Lookup3.EC,
-//Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
-Certainty = :item.Lookup3.Certainty}
 
 Rule: Cause7
 Priority: 100
@@ -139,7 +120,26 @@ Priority: 100
 
  ):match  
  -->
-:item.EpilepsyCause = {rule = Cause7, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.EpilepsyCause = {rule = Cause7, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI,
+EC = :item.Lookup3.EC,
+//Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
+
+Rule: Cause8
+Priority: 100
+
+(   
+	
+    {Lookup.Negation == Affirmed}
+    {CausePhrase}
+    ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+    Lookup3.Experiencer == Patient, Lookup3.EC != No}):item
+  
+
+
+ ):match  
+ -->
+:item.EpilepsyCause = {rule = Cause8, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 EC = :item.Lookup3.EC,
 //Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
