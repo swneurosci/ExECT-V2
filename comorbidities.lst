@@ -39,7 +39,7 @@ apraxia	CUI=C0003635	PREF=Apraxias	TUI=T048	EC=No
 dyspraxia	CUI=C0003635	PREF=Apraxias	TUI=T048	EC=No
 arteriosclerosis	CUI=C0003850	PREF=Arteriosclerosis	TUI=T047	EC=Yes
 arteriosclerotic vascular disease	CUI=C0003850	PREF=Arteriosclerosis	TUI=T047	EC=Yes
-arteriovenous fistula	CUI=C0003855	PREF=Arteriovenous fistula	TUI=T190	EC=
+arteriovenous fistula	CUI=C0003855	PREF=Arteriovenous fistula	TUI=T190	EC=Yes
 arteriovenous abnormality	CUI=C0003857	PREF=Congenital arteriovenous malformation	TUI=T019	EC=Yes
 congenital arteriovenous malformation	CUI=C0003857	PREF=Congenital arteriovenous malformation	TUI=T019	EC=Yes
 congenital avm	CUI=C0003857	PREF=Congenital arteriovenous malformation	TUI=T019	EC=Yes
@@ -101,7 +101,6 @@ arteriovenous malformation of brain	CUI=C0007772	PREF=Intracranial Arteriovenous
 intracranial arteriovenous malformation	CUI=C0007772	PREF=Intracranial Arteriovenous Malformation	TUI=T019	EC=Yes
 congenital intracranial arteriovenous malformations	CUI=C0007772	PREF=Intracranial Arteriovenous Malformation	TUI=T019	EC=Yes
 intracranial arteriovenous malformation	CUI=C0007772	PREF=Intracranial Arteriovenous Malformation	TUI=T019	EC=Yes
-intracranial arteriovenous malformation	CUI=C0007772	PREF=Intracranial Arteriovenous Malformation	TUI=T019	EC=Yes
 intracranial AVM	CUI=C0007772	PREF=Intracranial Arteriovenous Malformation	TUI=T019	EC=Yes
 intracranial arteriovenous malformations	CUI=C0007772	PREF=Intracranial Arteriovenous Malformation	TUI=T019	EC=Yes
 intracranial avm	CUI=C0007772	PREF=Intracranial Arteriovenous Malformation	TUI=T019	EC=Yes
@@ -114,6 +113,7 @@ cerebral infarcts	CUI=C0007785	PREF=Cerebral Infarction	TUI=T047	EC=Yes
 infarct cerebral	CUI=C0007785	PREF=Cerebral Infarction	TUI=T047	EC=Yes
 brain ischaemia	CUI=C0007786	PREF=Brain ischemia	TUI=T047	EC=Yes
 brain ischaemia	CUI=C0007786	PREF=Brain ischemia	TUI=T047	EC=Yes
+ischaemic damage	CUI=C0007786	PREF=Brain ischemia	TUI=T047	EC=Yes
 ischaemic damage left inferior frontal lobe	CUI=C0007786	PREF=Brain ischemia	TUI=T047	EC=Yes
 ischaemic damage left inferior frontal lobe	CUI=C0007786	PREF=Brain ischemia	TUI=T047	EC=Yes
 ischaemic damage right inferior frontal lobe	CUI=C0007786	PREF=Brain ischemia	TUI=T047	EC=Yes
@@ -167,8 +167,8 @@ vascular brain disorders	CUI=C0007820	PREF=Cerebrovascular Disorders	TUI=T047	EC
 Charcot Marie Tooth Disease	CUI=C0007959	PREF=Charcot-Marie Tooth Disease	TUI=T047	EC=No
 Charcot-Marie Tooth Disease	CUI=C0007959	PREF=Charcot-Marie Tooth Disease	TUI=T047	EC=No
 peroneal muscular atrophy	CUI=C0007959	PREF=Charcot-Marie Tooth Disease	TUI=T047	EC=No
-febrile convulsion	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=Yes
-febrile convulsions	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=Yes
+febrile convulsion	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=No
+febrile convulsions	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=No
 febrile seizure	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=Yes
 febrile seizures	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=Yes
 generalised tonic clonic seizure associated with fever	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=Yes
@@ -294,7 +294,7 @@ dyschondroplasia and cavernous hemangioma	CUI=C0024454	PREF=Maffucci Syndrome	TU
 dyschondroplasia and cavernous haemangioma	CUI=C0024454	PREF=Maffucci Syndrome	TUI=T047	EC=No
 hemangiomatosis chondrodystrophica	CUI=C0024454	PREF=Maffucci Syndrome	TUI=T047	EC=No
 kast syndrome	CUI=C0024454	PREF=Maffucci Syndrome	TUI=T047	EC=No
-measles	CUI=C0025007	PREF=Measles	TUI=T047	EC=No
+measles	CUI=C0025007	PREF=Measles	TUI=T047	EC=Yes
 meningitic	CUI=C0025289	PREF=Meningitis	TUI=T047	EC=Yes
 meningitis	CUI=C0025289	PREF=Meningitis	TUI=T047	EC=Yes
 Inflammation of meninges	CUI=C0025289	PREF=Meningitis	TUI=T047	EC=Yes
@@ -545,12 +545,12 @@ myopathy, mitochondrial-encephalopathy-lactic acidosis-stroke	CUI=C0162671	PREF=
 neurofibromatosis	CUI=C0162678	PREF=Neurofibromatosis 	TUI=T191	EC=Yes
 Aicardi syndrome	CUI=C0175713	PREF=Aicardi's syndrome	TUI=T047	EC=Yes
 Aicardi's syndrome	CUI=C0175713	PREF=Aicardi's syndrome	TUI=T047	EC=Yes
-brain operation	CUI=C0195775	PREF=Operation on brain	TUI=T061	EC=No
-brain surgery	CUI=C0195775	PREF=Operation on brain	TUI=T061	EC=No
-brain lobectomy	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	EC=No
-excision of brain lobe	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	EC=No
-lobectomy of brain	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	EC=No
-resection of brain lobe	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	EC=No
+brain operation	CUI=C0195775	PREF=Operation on brain	TUI=T061	EC=Yes
+brain surgery	CUI=C0195775	PREF=Operation on brain	TUI=T061	EC=Yes
+brain lobectomy	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	EC=Yes
+excision of brain lobe	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	EC=Yes
+lobectomy of brain	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	EC=Yes
+resection of brain lobe	CUI=C0195961	PREF=Lobectomy of brain	TUI=T061	EC=Yes
 neuroepitheliomatous neoplasm	CUI=C0206715	PREF=Neoplasms, Neuroepithelial	TUI=T191	EC=Yes
 neuroepithelial tumour	CUI=C0206715	PREF=Neoplasms, Neuroepithelial	TUI=T191	EC=Yes
 ganglioglioma	CUI=C0206716	PREF=Ganglioglioma	TUI=T191	EC=Yes
@@ -559,10 +559,10 @@ gangliogliomas	CUI=C0206716	PREF=Ganglioglioma	TUI=T191	EC=Yes
 biotinidase deficiency	CUI=C0220754	PREF=Biotinidase Deficiency	TUI=T047	EC=Yes
 deficiency of biotinidase	CUI=C0220754	PREF=Biotinidase Deficiency	TUI=T047	EC=Yes
 late-onset multiple carboxylase deficiency	CUI=C0220754	PREF=Biotinidase Deficiency	TUI=T047	EC=Yes
-bran lesion	CUI=C0221505	PREF=Lesion of brain	TUI=T033	EC=No
-lesion of brain	CUI=C0221505	PREF=Lesion of brain	TUI=T033	EC=No
-lobe lesion	CUI=C0221505	PREF=Lesion of brain	TUI=T033	EC=No
-cerebral lesion	CUI=C0221505	PREF=Lesion of brain	TUI=T033	EC=No
+bran lesion	CUI=C0221505	PREF=Lesion of brain	TUI=T033	EC=Yes
+lesion of brain	CUI=C0221505	PREF=Lesion of brain	TUI=T033	EC=Yes
+lobe lesion	CUI=C0221505	PREF=Lesion of brain	TUI=T033	EC=Yes
+cerebral lesion	CUI=C0221505	PREF=Lesion of brain	TUI=T033	EC=Yes
 history of alcohol abuse	CUI=C0221628	PREF=history of alcohol abuse	TUI=T033	EC=No
 alcohol abuse history	CUI=C0221628	PREF=history of alcohol abuse	TUI=T033	EC=No
 impaired memory	CUI=C0233794	PREF=Memory impairment	TUI=T048	EC=No
@@ -738,22 +738,18 @@ lymphedema, lymphangiectasia, intellectual disability 	CUI=C0340834	PREF=Henneka
 lymphangiectasies and lymphedema hennekam 	CUI=C0340834	PREF=Hennekam lymphangiectasia lymphedema syndrome	TUI=T047	EC=No
 arteriovenous angioma	CUI=C0340835	PREF=Arteriovenous angioma	TUI=T019	EC=Yes
 ava	CUI=C0340835	PREF=Arteriovenous angioma	TUI=T019	EC=Yes
-arterioven fistula occlusion	CUI=C0340837	PREF=Congenital arteriovenous fistula occlusion	TUI=T019	EC=No
-congenital arteriovenous fistula occlusion	CUI=C0340837	PREF=Congenital arteriovenous fistula occlusion	TUI=T019	EC=No
-congenital arteriovenous fistula stenosis	CUI=C0340838	PREF=congenital arteriovenous fistula stenosis	TUI=T019	EC=No
-congenital arteriovenous fistula thrombosis	CUI=C0340839	PREF=congenital arteriovenous fistula thrombosis	TUI=T019	EC=No
-congenital arteriovenous fistula thrombosis	CUI=C0340839	PREF=congenital arteriovenous fistula thrombosis	TUI=T019	EC=No
-congenital arteriovenous fistula infection	CUI=C0340840	PREF=congenital arteriovenous fistula infection	TUI=T047	EC=No
-congenital arteriovenous fistula haemorrhage	CUI=C0340842	PREF=congenital arteriovenous fistula haemorrhage	TUI=T046	EC=No
-congenital arteriovenous fistula hemorrhage	CUI=C0340842	PREF=congenital arteriovenous fistula haemorrhage	TUI=T046	EC=No
-congenital arteriovenous fistula rupture	CUI=C0340843	PREF=congenital arteriovenous fistula rupture	TUI=T019	EC=No
-congenital arteriovenous fistula rupture	CUI=C0340843	PREF=congenital arteriovenous fistula rupture	TUI=T019	EC=No
-arteriovenous-lymphat malforma	CUI=C0340844	PREF=Arteriovenous-lymphatic malformation	TUI=T019	EC=No
+arterioven fistula occlusion	CUI=C0340837	PREF=Congenital arteriovenous fistula occlusion	TUI=T019	EC=Yes
+congenital arteriovenous fistula occlusion	CUI=C0340837	PREF=Congenital arteriovenous fistula occlusion	TUI=T019	EC=Yes
+congenital arteriovenous fistula stenosis	CUI=C0340838	PREF=congenital arteriovenous fistula stenosis	TUI=T019	EC=Yes
+congenital arteriovenous fistula thrombosis	CUI=C0340839	PREF=congenital arteriovenous fistula thrombosis	TUI=T019	EC=Yes
+congenital arteriovenous fistula infection	CUI=C0340840	PREF=congenital arteriovenous fistula infection	TUI=T047	EC=Yes
+congenital arteriovenous fistula haemorrhage	CUI=C0340842	PREF=congenital arteriovenous fistula haemorrhage	TUI=T046	EC=Yes
+congenital arteriovenous fistula hemorrhage	CUI=C0340842	PREF=congenital arteriovenous fistula haemorrhage	TUI=T046	EC=Yes
+congenital arteriovenous fistula rupture	CUI=C0340843	PREF=congenital arteriovenous fistula rupture	TUI=T019	EC=Yes
 arteriovenous-lymphat malforma	CUI=C0340844	PREF=Arteriovenous-lymphatic malformation	TUI=T019	EC=No
 arteriovenous-lymphatic malformation	CUI=C0340844	PREF=Arteriovenous-lymphatic malformation	TUI=T019	EC=No
 arteriovenous lymphatic malformation	CUI=C0340844	PREF=Arteriovenous-lymphatic malformation	TUI=T019	EC=No
-Arteriovenous fistula hemorrhage	CUI=C0340912	PREF=arteriovenous fistula hemorrhage	TUI=T046	EC=No
-Arteriovenous fistula hemorrhage	CUI=C0340912	PREF=arteriovenous fistula hemorrhage	TUI=T046	EC=No
+Arteriovenous fistula hemorrhage	CUI=C0340912	PREF=arteriovenous fistula hemorrhage	TUI=T046	EC=Yes
 hypothalamic mass	CUI=C0342417	PREF=Hypothalamic mass	TUI=T190	EC=Yes
 mass of hypothalamus	CUI=C0342417	PREF=Hypothalamic mass	TUI=T190	EC=Yes
 mass of hypothalamus	CUI=C0342417	PREF=Hypothalamic mass	TUI=T190	EC=Yes
@@ -780,8 +776,7 @@ prominent valve of inferior vena cava	CUI=C0344698	PREF=Prominent valve of infer
 anomalous valve of coronary sinus	CUI=C0344701	PREF=Anomalous valve of coronary sinus	TUI=T019	EC=
 Perimembranous ventricular septal defect	CUI=C0344925	PREF=Perimembranous ventricular septal defect	TUI=T019	EC=
 Perimembranous VSD	CUI=C0344925	PREF=Perimembranous ventricular septal defect	TUI=T019	EC=
-intrapulm arterioven fistula	CUI=C0345042	PREF=Intrapulmonary arteriovenous fistula	TUI=T019	EC=
-intrapulmonary arteriovenous fistula	CUI=C0345042	PREF=Intrapulmonary arteriovenous fistula	TUI=T019	EC=
+intrapulmonary arteriovenous fistula	CUI=C0345042	PREF=Intrapulmonary arteriovenous fistula	TUI=T019	EC=No
 cobb syndrome	CUI=C0346068	PREF=Cobb's syndrome	TUI=T047	EC=No
 cobb's syndrome	CUI=C0346068	PREF=Cobb's syndrome	TUI=T047	EC=No
 Spinal arteriovenous metameric syndrome	CUI=C0346068	PREF=Cobb's syndrome	TUI=T047	EC=No
@@ -895,7 +890,6 @@ perinatal hypoxic ischaemic encephalopathy	CUI=C0475802	PREF=Perinatal anoxic-is
 perinatal anoxic-ischaemic brain injury	CUI=C0475802	PREF=Perinatal anoxic-ischemic brain injury, birth	TUI=T047	EC=Yes
 perinatal anoxic ischaemic brain injury	CUI=C0475802	PREF=Perinatal anoxic-ischemic brain injury, birth	TUI=T047	EC=Yes
 perinatal hypoxic - ischaemic encephalopathy	CUI=C0475802	PREF=Perinatal anoxic-ischemic brain injury, birth	TUI=T047	EC=Yes
-arteriovenous malformation of the peripheral vascular system	CUI=C0495524	PREF=arteriovenous malformation of the peripheral vascular system	TUI=T019	EC=No
 arteriovenous malformation of the peripheral vascular system	CUI=C0495524	PREF=arteriovenous malformation of the peripheral vascular system	TUI=T019	EC=No
 peripheral arteriovenous malformation	CUI=C0495524	PREF=arteriovenous malformation of the peripheral vascular system	TUI=T019	EC=No
 peripheral arterio-venous malformation	CUI=C0495524	PREF=arteriovenous malformation of the peripheral vascular system	TUI=T019	EC=No
@@ -1239,12 +1233,11 @@ hippocampectomy	CUI=C2921031	PREF=Amygdalohippocampectomy	TUI=T061	EC=
 Ring chromosome 14	CUI=C2930916	PREF=Ring Chromosome 14 Syndrome	TUI=T047	EC=Yes
 Ring 14	CUI=C2930916	PREF=Ring Chromosome 14 Syndrome	TUI=T047	EC=Yes
 Chromosome 14 ring	CUI=C2930916	PREF=Ring Chromosome 14 Syndrome	TUI=T047	EC=Yes
-congenital coronary arteriovenous fistula	CUI=C2937219	PREF=congenital coronary arteriovenous fistula	TUI=T019	EC=
-congenital coronary arteriovenous fistula	CUI=C2937219	PREF=congenital coronary arteriovenous fistula	TUI=T019	EC=
-congenital abnormality of vein	CUI=C2937220	PREF=venous malformation	TUI=T019	EC=
-congenital anomaly of vein	CUI=C2937220	PREF=venous malformation	TUI=T019	EC=
-venous malformation	CUI=C2937220	PREF=venous malformation	TUI=T019	EC=
-venous malformations	CUI=C2937220	PREF=venous malformation	TUI=T019	EC=
+congenital coronary arteriovenous fistula	CUI=C2937219	PREF=congenital coronary arteriovenous fistula	TUI=T019	EC=No
+congenital abnormality of vein	CUI=C2937220	PREF=venous malformation	TUI=T019	EC=Yes
+congenital anomaly of vein	CUI=C2937220	PREF=venous malformation	TUI=T019	EC=Yes
+venous malformation	CUI=C2937220	PREF=venous malformation	TUI=T019	EC=Yes
+venous malformations	CUI=C2937220	PREF=venous malformation	TUI=T019	EC=Yes
 brain blead	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
 cerebral bleed	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
 cerebral haemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
@@ -1519,3 +1512,6 @@ cortical myoclonus	CUI=C3698239	PREF=Cerebral cortex myoclonus	TUI=T047	EC=No
 focal myoclonus	CUI=C4511434	PREF=focal myoclonus	TUI=T033	EC=No
 focal myoclonus (finding)	CUI=C4511434	PREF=focal myoclonus	TUI=T033	EC=No
 myoclonus, cerebellar ataxia, deafness syndrome	CUI=C4518566	PREF=Myoclonus, cerebellar ataxia, deafness syndrome	TUI=T047	EC=No
+premature birth	CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
+prematurity CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
+premature delivery	CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
