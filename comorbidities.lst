@@ -1462,3 +1462,60 @@ cerebellar infarction	CUI=C0236073	PREF=Cerebellar infarction	TUI=TUI=T047	EC=Ye
 cerebellar infarct	CUI=C0236073	PREF=Cerebellar infarction	TUI=TUI=T047	EC=Yes
 heart block	CUI=C0018794	Pref=Heart Block	TUI=T047	EC=No
 myoclonous CUI=C0027066	PREF=Myoclonus	TUI=033	EC=No
+dysphonia of palatopharyngolaryngeal myoclonus	CUI=C0264608	PREF=Dysphonia of palatopharyngolaryngeal myoclonus	TUI=T047	EC=No
+cherry red spot myoclonus syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047    EC=No
+cherry red spot-myoclonus syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	EC=No
+cherry-red spot myoclonus synd	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	EC=No
+deficiencies, glycoprotein neuraminidase	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	EC=No
+deficiency, glycoprotein neuraminidase	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	EC=No
+glycoprotein neuraminidase deficiency	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	EC=No
+mucolipidosis type 1	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	EC=No
+myoclonus cherry red spot syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	EC=No
+myoclonus-cherry red spot syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	EC=No
+neuraminidase deficiency	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	EC=No
+normosomatic sialidosis	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	EC=No
+sialidase deficiency	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	EC=No
+sialidosis	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	EC=No
+sialidosis, type 1	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	EC=No
+myoclonus, segmental	CUI=C0751351	PREF=myoclonus, segmental	TUI=T184	EC=No
+myoclonus, nocturnal	CUI=C0751352	PREF=myoclonus, nocturnal	TUI=T184	EC=No
+myoclonus, sleep	CUI=C0751352	PREF=myoclonus, sleep	TUI=T184	EC=No
+sleep myoclonus	CUI=C0751352	PREF=sleep myoclonus	TUI=T184	EC=No
+mitochondrial diseases	CUI=C0751651	PREF=Mitochondrial Diseases	TUI=T047	EC=No
+mitochondrial disorder	CUI=C0751651	PREF=Mitochondrial Diseases	TUI=T047	EC=No
+mitochondrial disorders	CUI=C0751651	PREF=Mitochondrial Diseases	TUI=T047	EC=No
+myoclonus, benign neonatal sleep	CUI=C0751946	PREF=Neonatal Sleep Myoclonus, Benign	TUI=T047	EC=No
+Benign neonatal sleep myoclonus	CUI=C0751946	PREF=Neonatal Sleep Myoclonus, Benign	TUI=T047	EC=No
+brain syndrome	CUI=C1446648	PREF=brain syndrome	TUI=T047	EC=No
+non-specific brain syndrome	CUI=C1446648	PREF=non-specific brain syndrome	TUI=T047	EC=No
+non-specific brain syndrome, nos	CUI=C1446648	PREF=non-specific brain syndrome, nos	TUI=T047	EC=No
+congenital stiff man syndrome	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+congenital stiff person syndrome	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+exagerrated startle reflex	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+exaggerated startle reaction	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+familial startle disease	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+hereditary hyperekplexia	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+hkpx1	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+hyperekplexia, hereditary 1	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+hyperexplexia hereditary	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+startle disease, familial	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+startle reaction, exaggerated	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+sthe	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+stiff baby syndrome	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+stiff-baby syndrome	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+stiff-man syndrome, congenital	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+stiff-person syndrome, congenital	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	EC=No
+non-epileptic myoclonus	CUI=C1960676	PREF=Non-epileptic myoclonus	TUI=T047	EC=No
+myoclonus of stapedius muscle	CUI=C1960877	PREF=Stapedial myoclonus	TUI=T047	EC=No
+stapedial myoclonus	CUI=C1960877	PREF=Stapedial myoclonus	TUI=T047	EC=No
+myoclonus of tensor tympani muscle	CUI=C1998254	PREF=Myoclonus of tensor tympani muscle	TUI=T047	EC=No
+myoclonus tensor tympani muscle	CUI=C1998254	PREF=Myoclonus of tensor tympani muscle	TUI=T047	EC=No
+tensor tympani myoclonus	CUI=C1998254	PREF=Myoclonus of tensor tympani muscle	TUI=T047	EC=No
+spinal cord myoclonus	CUI=C3697670	PREF=Spinal cord myoclonus	TUI=T047	EC=No
+spinal myoclonus	CUI=C3697670	PREF=Spinal cord myoclonus	TUI=T047	EC=No
+brainstem myoclonus	CUI=C3698072	PREF=Brainstem myoclonus	TUI=T047	EC=No
+cerebral cortex myoclonus	CUI=C3698239	PREF=Cerebral cortex myoclonus	TUI=T047	EC=No
+cortical myoclonus	CUI=C3698239	PREF=Cerebral cortex myoclonus	TUI=T047	EC=No
+focal myoclonus	CUI=C4511434	PREF=focal myoclonus	TUI=T033	EC=No
+focal myoclonus (finding)	CUI=C4511434	PREF=focal myoclonus	TUI=T033	EC=No
+myoclonus, cerebellar ataxia, deafness syndrome	CUI=C4518566	PREF=Myoclonus, cerebellar ataxia, deafness syndrome	TUI=T047	EC=No

@@ -228,22 +228,7 @@ lennox gastaut syndrome	CUI=C0238111	PREF=Lennox-Gastaut syndrome	TUI=T047	STY=D
 lennox gastaut syndromes	CUI=C0238111	PREF=Lennox-Gastaut syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 lennox-gastat syndrome	CUI=C0238111	PREF=Lennox-Gastaut syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Lennox-Gastaut syndrome	CUI=C0238111	PREF=Lennox-Gastaut syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-dysphonia of palatopharyngolaryngeal myoclonus	CUI=C0264608	PREF=Dysphonia of palatopharyngolaryngeal myoclonus	TUI=T047	STY=Disease or Syndrome
 ring chromosome 20	CUI=C0265482	PREF=ring chromosome 20	TUI=T019	STY=Congenital Abnormality
-cherry red spot myoclonus syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-cherry red spot-myoclonus syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-cherry-red spot myoclonus synd	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-deficiencies, glycoprotein neuraminidase	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-deficiency, glycoprotein neuraminidase	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-glycoprotein neuraminidase deficiency	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-mucolipidosis type 1	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-myoclonus cherry red spot syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-myoclonus-cherry red spot syndrome	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-neuraminidase deficiency	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-normosomatic sialidosis	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-sialidase deficiency	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-sialidosis	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
-sialidosis, type 1	CUI=C0268226	PREF=Type I Mucolipidosis	TUI=T047	STY=Disease or Syndrome
 cursive (running) epilepsy	CUI=C0270819	PREF=Reflex Epilepsy, Cursive (Running)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 cursive reflex epilepsy - running	CUI=C0270819	PREF=Reflex Epilepsy, Cursive (Running)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 cursive seizure	CUI=C0270819	PREF=Reflex Epilepsy, Cursive (Running)	TUI=T047	STY=Disease or Syndrome
@@ -583,10 +568,6 @@ seizures, atypical absence	CUI=C0595948	PREF=Atypical absence seizure	TUI=T047	S
 dravet syndrome	CUI=C0751122	PREF=Infantile Severe Myoclonic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 atypical absence epilepsy	CUI=C0751124	PREF=Epilepsy, Absence, Atypical	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy, absence, atypical	CUI=C0751124	PREF=epilepsy, absence, atypical	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-myoclonus, segmental	CUI=C0751351	PREF=myoclonus, segmental	TUI=T184	STY=sign or symptom
-myoclonus, nocturnal	CUI=C0751352	PREF=myoclonus, nocturnal	TUI=T184	STY=sign or symptom
-myoclonus, sleep	CUI=C0751352	PREF=myoclonus, sleep	TUI=T184	STY=sign or symptom
-sleep myoclonus	CUI=C0751352	PREF=sleep myoclonus	TUI=T184	STY=sign or symptom
 amaurotic idiocy juvenile type	CUI=C0751383	PREF=Juvenile Neuronal Ceroid Lipofuscinosis	TUI=T047	STY=Disease or Syndrome
 amaurotic idiocy, juvenile type	CUI=C0751383	PREF=Juvenile Neuronal Ceroid Lipofuscinosis	TUI=T047	STY=Disease or Syndrome
 Batten disease, juvenile	CUI=C0751383	PREF=Juvenile Neuronal Ceroid Lipofuscinosis	TUI=T047	STY=Disease or Syndrome
@@ -628,14 +609,9 @@ seizure, focal	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrom
 seizure, partial	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
 seizures, partial, afebrile	CUI=C0751495	PREF=Seizures, Focal	TUI=T047	STY=Disease or Syndrome
 status epilepticus, simple partial	CUI=C0751524	PREF=Simple Partial Status Epilepticus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-mitochondrial diseases	CUI=C0751651	PREF=Mitochondrial Diseases	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-mitochondrial disorder	CUI=C0751651	PREF=Mitochondrial Diseases	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-mitochondrial disorders	CUI=C0751651	PREF=Mitochondrial Diseases	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Unverricht-Lundborg syndrome	CUI=C0751785	PREF=Unverricht-Lundborg syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Baltic myoclonus epilepsy	CUI=C0751785	PREF=Unverricht-Lundborg syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Unverricht-Lundborg disease	CUI=C0751785	PREF=Unverricht-Lundborg syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-myoclonus, benign neonatal sleep	CUI=C0751946	PREF=Neonatal Sleep Myoclonus, Benign	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-Benign neonatal sleep myoclonus	CUI=C0751946	PREF=Neonatal Sleep Myoclonus, Benign	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 focal clonic seizures	CUI=C0752323	PREF=Focal Clonic Seizures	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 focal tonic seizures	CUI=C0752324	PREF=Focal tonic seizures	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 bilateral convulsive seizures	CUI=C0877017	PREF=Generalized tonic-clonic seizures with focal onset	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -659,9 +635,6 @@ medication resistant epilepsy	CUI=C1096063	PREF=Drug Resistant Epilepsy	TUI=T047
 refractory epilepsies	CUI=C1096063	PREF=Drug Resistant Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 seizures due to metabolic disorder	CUI=C1299598	PREF=seizures due to metabolic disorder	TUI=T047	STY=Disease or Syndrome
 symptomatic epilepsy	CUI=C1406659	PREF=symptomatic epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-brain syndrome	CUI=C1446648	PREF=brain syndrome	TUI=T047	STY=Disease or Syndrome
-non-specific brain syndrome	CUI=C1446648	PREF=non-specific brain syndrome	TUI=T047	STY=Disease or Syndrome
-non-specific brain syndrome, nos	CUI=C1446648	PREF=non-specific brain syndrome, nos	TUI=T047	STY=Disease or Syndrome
 epileptic spasms	CUI=C1527366	PREF=Salaam seizures	TUI=T047	STY=Disease or Syndrome
 salaam attack	CUI=C1527366	PREF=Salaam seizures	TUI=T047	STY=Disease or Syndrome
 salaam attacks	CUI=C1527366	PREF=Salaam seizures	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -670,22 +643,6 @@ salaam seizures	CUI=C1527366	PREF=Salaam seizures	TUI=T047	STY=Disease or Syndro
 epilepsy and recurrent seizures	CUI=C1719410	PREF=epilepsy and recurrent seizures	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy, not intractable	CUI=C1827389	PREF=Epilepsy, not refractory	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy, not refractory	CUI=C1827389	PREF=Epilepsy, not refractory	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-congenital stiff man syndrome	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-congenital stiff person syndrome	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-exagerrated startle reflex	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-exaggerated startle reaction	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-familial startle disease	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-hereditary hyperekplexia	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-hkpx1	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-hyperekplexia, hereditary 1	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-hyperexplexia hereditary	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-startle disease, familial	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-startle reaction, exaggerated	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-sthe	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-stiff baby syndrome	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-stiff-baby syndrome	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-stiff-man syndrome, congenital	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
-stiff-person syndrome, congenital	CUI=C1835614	PREF=Hereditary Hyperexplexia	TUI=T047	STY=Disease or Syndrome
 myoclonic seizure, intractable	CUI=C1836402	PREF=Myoclonic seizure, refractory	TUI=T033	STY=Finding
 myoclonic seizure, refractory	CUI=C1836402	PREF=Myoclonic seizure, refractory	TUI=T033	STY=Finding
 myoclonic seizures, intractable	CUI=C1836402	PREF=Myoclonic seizure, refractory	TUI=T033	STY=Finding
@@ -707,13 +664,7 @@ pyridoxal 5-phosphate dependent epilepsy	CUI=C1864723	PREF=Pyridoxamine 5-Prime-
 pyridoxal 5'-phosphate-dependent epilepsy	CUI=C1864723	PREF=Pyridoxamine 5-Prime-Phosphate Oxidase Deficiency	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 pyridoxal phosphate-responsive seizures	CUI=C1864723	PREF=Pyridoxamine 5-Prime-Phosphate Oxidase Deficiency	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 pyridoxine-5'-phosphate oxidase deficiency	CUI=C1864723	PREF=Pyridoxamine 5-Prime-Phosphate Oxidase Deficiency	TUI=T047	STY=Disease or Syndrome
-non-epileptic myoclonus	CUI=C1960676	PREF=Non-epileptic myoclonus	TUI=T047	STY=Disease or Syndrome
-myoclonus of stapedius muscle	CUI=C1960877	PREF=Stapedial myoclonus	TUI=T047	STY=Disease or Syndrome
-stapedial myoclonus	CUI=C1960877	PREF=Stapedial myoclonus	TUI=T047	STY=Disease or Syndrome
-myoclonus of tensor tympani muscle	CUI=C1998254	PREF=Myoclonus of tensor tympani muscle	TUI=T047	STY=Disease or Syndrome
-myoclonus tensor tympani muscle	CUI=C1998254	PREF=Myoclonus of tensor tympani muscle	TUI=T047	STY=Disease or Syndrome
-tensor tympani myoclonus	CUI=C1998254	PREF=Myoclonus of tensor tympani muscle	TUI=T047	STY=Disease or Syndrome
-benigh rolandic epilepsy 	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+Benign rolandic epilepsy 	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Centralopathic epilepsy	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Temporal-central focal epilepsy	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Benign Childhood Epilepsy With Centro Temporal Spikes	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -778,11 +729,6 @@ seizure disorder as sequela of stroke	CUI=C3662042	PREF=Seizure disorder as sequ
 rolandic seizures with status epilepticus	CUI=C3662441	PREF=Status epilepticus in benign Rolandic epilepsy	TUI=T047	STY=Disease or Syndrome
 status epilepticus in benign rolandic epilepsy	CUI=C3662441	PREF=Status epilepticus in benign Rolandic epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 post-cerebrovascular accident epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-spinal cord myoclonus	CUI=C3697670	PREF=Spinal cord myoclonus	TUI=T047	STY=Disease or Syndrome
-spinal myoclonus	CUI=C3697670	PREF=Spinal cord myoclonus	TUI=T047	STY=Disease or Syndrome
-brainstem myoclonus	CUI=C3698072	PREF=Brainstem myoclonus	TUI=T047	STY=Disease or Syndrome
-cerebral cortex myoclonus	CUI=C3698239	PREF=Cerebral cortex myoclonus	TUI=T047	STY=Disease or Syndrome
-cortical myoclonus	CUI=C3698239	PREF=Cerebral cortex myoclonus	TUI=T047	STY=Disease or Syndrome
 epilepsy in mother complicating pregnancy	CUI=C3826393	PREF=Epilepsy in mother complicating pregnancy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy in pregnancy	CUI=C3826393	PREF=Epilepsy in mother complicating pregnancy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy in childbirth	CUI=C3840267	PREF=Epilepsy in mother complicating childbirth	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -837,8 +783,6 @@ epilepsy co-occurrent and due to degenerative brain disorder	CUI=C4511049	PREF=E
 epilepsy with degenerative brain disorder	CUI=C4511049	PREF=Epilepsy co-occurrent and due to degenerative brain disorder	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy co-occurrent and due to demyelinating disorder	CUI=C4511050	PREF=Epilepsy co-occurrent and due to demyelinating disorder	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy with demyelinating disorder	CUI=C4511050	PREF=Epilepsy co-occurrent and due to demyelinating disorder	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-focal myoclonus	CUI=C4511434	PREF=focal myoclonus	TUI=T033	STY=Finding
-focal myoclonus (finding)	CUI=C4511434	PREF=focal myoclonus	TUI=T033	STY=Finding
 epilepsy due to intracranial neoplasm	CUI=C4511576	PREF=Epilepsy due to intracranial tumor	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy due to intracranial tumor	CUI=C4511576	PREF=Epilepsy due to intracranial tumor	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy due to intracranial tumour	CUI=C4511576	PREF=Epilepsy due to intracranial tumor	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -853,7 +797,6 @@ slc35a3-cdg - solute carrier family 35 member a3 congenital disorder of glycosyl
 epilepsy due to cerebrovascular accident	CUI=C4518323	PREF=Epilepsy due to cerebrovascular accident	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy due to stroke	CUI=C4518323	PREF=Epilepsy due to cerebrovascular accident	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy telangiectasia syndrome	CUI=C4518554	PREF=epilepsy telangiectasia syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-myoclonus, cerebellar ataxia, deafness syndrome	CUI=C4518566	PREF=Myoclonus, cerebellar ataxia, deafness syndrome	TUI=T047	STY=Disease or Syndrome
 epilepsy of infancy with migrating focal seizures	CUI=C4518639	PREF=Epilepsy of infancy with migrating focal seizures	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Focal emotional seizure	CUI=C4732752	PREF=Focal emotional seizure	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Generalised tonic seizure	CUI=C0270844	PREF=Tonic seizures	TUI=T047	STY=Disease or Syndrome
@@ -925,6 +868,7 @@ epilepsy with generalised tonic chronic seizures alone	CUI=C0393697	PREF=Epileps
 epilepsy with generalised tonic clonic seizures from sleep	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy with generalised tonic clonic seizure from sleep	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 post cerebrovascular accident epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+post-cerebrovascular accident epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 post-stroke epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 post stroke epilepsy	CUI=C3697594	PREF=Post-cerebrovascular accident epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 partial adversive seizure	CUI=C2237348	PREF=simple partial seizure adversive	TUI=T033	STY=Finding
