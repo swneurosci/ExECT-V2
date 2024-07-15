@@ -42,10 +42,29 @@ Priority: 99
   
 
 
- ):match  
+ ):match 
  -->
 :item.EpilepsyCause = {rule = Cause4b, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 EC = :item.Lookup3.EC,
 //Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
+Rule: Cause4a  // she had a stroke. This is a cause of her epilepst
+Priority: 99
+
+(   
+	
+     ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 
+     Lookup3.Experiencer == Patient, Lookup3.EC != No}):item
+    {Split}
+    {CausePhrase}
+    {Lookup.Negation == Affirmed}
+  
+
+
+ ):match  
+ -->
+:item.EpilepsyCause = {rule = Cause4a, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+EC = :item.Lookup3.EC,
+//Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
+Certainty = :item.Lookup3.Certainty}
