@@ -304,8 +304,8 @@ benign neonatal seizures [ambiguous]	CUI=C0270851	PREF=Benign neonatal epilepsy	
 convulsions, benign neonatal	CUI=C0270851	PREF=Benign neonatal epilepsy	TUI=T047	STY=Disease or Syndrome
 epilepsy, benign neonatal	CUI=C0270851	PREF=Benign neonatal epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 neonatal convulsion, benign	CUI=C0270851	PREF=Benign neonatal epilepsy	TUI=T047	STY=Disease or Syndrome
-neonatal convulsions, benign	CUI=C0270851	PREF=Benign neonatal epilepsy	TUI=T047	STY=Disease or Syndrome
-neonatal epilepsies, benign	CUI=C0270851	PREF=Benign neonatal epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+self-limited neonatal epilepsy	CUI=C0270851	PREF=Benign neonatal epilepsy	TUI=T047	STY=Disease or Syndrome
+self limited neonatal epilepsy	CUI=C0270851	PREF=Benign neonatal epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 neonatal epilepsy, benign	CUI=C0270851	PREF=Benign neonatal epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 adolescent myoclonic epilepsies	CUI=C0270853	PREF=Juvenile myoclonic epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 adolescent myoclonic epilepsy	CUI=C0270853	PREF=Juvenile myoclonic epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -962,3 +962,10 @@ Juvenile myopathy, encephalopathy, lactic acidosis, stroke	CUI=C0162671	PREF=MEL
 Encephalomyopathy, Lactic Acidosis, and Stroke-Like Episodes	CUI=C0162671	PREF=MELAS Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Alpers Syndrome CUI=C0205710	PREF=Alpers Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Alpers' Syndrome CUI=C0205710	PREF=Alpers Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+self limited epilepsy with centrotemporal spikes (SeLECTS)	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+self-limited epilepsy with centrotemporal spikes (SeLECTS)	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+SeLECTS	CUI=C2363129	PREF=Benign Rolandic Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+Childhood Occipital Visual Epilepsy (COVE)	CUI=C0393675	PREF=Childhood Benign Occipital Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+Childhood Occipital Visual Epilepsy	CUI=C0393675	PREF=Childhood Benign Occipital Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+focal seizures with impaired awareness	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
+Epilepsy with myolonic absences	CUI=C0393703	PREF=Myoclonic Absence Epilepsy	TUI=T047	STY=Disease or Syndrome
