@@ -1470,3 +1470,5 @@ non insulin dependent diabetes	CUI=C0011860	PREF=Diabetes Mellitus, Non Insulin-
 too much alcohol	CUI=C0085762	PREF=alcohol abuse	TUI=T048	STY=Mental or Behavioral Dysfunction
 altered awareness	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding
 altered consciousness	CUI=C0234428	PREF=disturbance of consciousness	TUI=T033	STY=Finding
+hyperekplexia	CUI=C0234166	PREF=hyperekplexia	TUI=T184	STY=sign or symptom
+startle syndrome	CUI=C0234166	PREF=startle syndrome	TUI=T184	STY=sign or symptom

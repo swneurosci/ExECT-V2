@@ -3700,3 +3700,5 @@ C1456496	lobe damage
 C0234428	blackout
 C0494475	bilateral tonic-clonic	
 C0751495	focal in onset
+C3714756	intellectual disability
+C0033845	IIH
