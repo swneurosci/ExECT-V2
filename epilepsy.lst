@@ -46,7 +46,6 @@ epileptic fit	CUI=C0014544	PREF=Epilepsy	TUI=T047	STY=Disease or Syndrome
 epileptic fits	CUI=C0014544	PREF=Epilepsy	TUI=T047	STY=Disease or Syndrome
 epileptic seizure	CUI=C4317109	PREF=Epileptic Seizures	TUI=T047	STY=Disease or Syndrome
 epileptic seizures	CUI=C4317109	PREF=Epileptic Seizures	TUI=T047	STY=Disease or Syndrome
-seizure disorders	CUI=C0014544	PREF=Epilepsy	TUI=T047	STY=Disease or Syndrome
 epilepsies, focal	CUI=C0014547	PREF=Epilepsies, Partial	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsies, localization-related	CUI=C0014547	PREF=Epilepsies, Partial	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsies, partial	CUI=C0014547	PREF=Epilepsies, Partial	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -817,7 +816,6 @@ typical absence seizure	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease 
 typical absence seizures 	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 typical absences	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
 absence seizures	CUI=C4316903	PREF=Absence Seizures	TUI=T047	STY=Disease or Syndrome
-seizure disorder	CUI=C0014544	PREF=Epilepsy	TUI=T047	STY=Disease or Syndrome
 gge	CUI=C0270850	PREF=Idiopathic generalized epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 genetic generalised epilepsy	CUI=C0270850	PREF=Idiopathic generalized epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 genetic generalized epilepsy	CUI=C0270850	PREF=Idiopathic generalized epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
