@@ -136,7 +136,7 @@ syndrome, west	CUI=C0037769	PREF=West Syndrome	TUI=T047	STY=Disease or Syndrome	
 west syndrome	CUI=C0037769	PREF=West Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 West's syndrome	CUI=C0037769	PREF=West Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 generalized status epilepticus	CUI=C0038220	PREF=Status Epilepticus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
-status epilepticus 	CUI=C0038220	PREF=Status Epilepticus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+status epilepticus	CUI=C0038220	PREF=Status Epilepticus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 status epilepticus, generalized	CUI=C0038220	PREF=Status Epilepticus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 status epilepticus, unspecified	CUI=C0038220	PREF=Status Epilepticus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 sturge-weber syndrome	CUI=C0038505	PREF=sturge-weber syndrome	TUI=T019	STY=Congenital Abnormality	Epilepsy=Yes
@@ -922,7 +922,7 @@ Childhood epilepsy	CUI=C4315525	PREF=Childhood epilepsy	TUI=T033	STY=Finding
 epilepsy in childhood	CUI=C4315525	PREF=Childhood epilepsy	TUI=T033	STY=Finding
 epilepsy in early childhood	CUI=C4315525	PREF=Childhood epilepsy	TUI=T033	STY=Finding
 epilepsy as a child	CUI=C4315525	PREF=Childhood epilepsy	TUI=T033	STY=Finding
-nocturnal epilepsy	CUI=C0393719	PREF=nocturnal epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=YesEpilepsy with generalised tonic clonic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+nocturnal epilepsy	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy with tonic clonic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 epilepsy with tonic clonic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 Generalised Epilepsy with tonic-clonic seizures alone	CUI=C0393697	PREF=Epilepsy with grand mal seizures on awakening (disorder)	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
@@ -941,7 +941,7 @@ generalized onset tonic seizure	CUI=C1836508	PREF=Generalized onset tonic epilep
 generalized onset tonic seizures	CUI=C1836508	PREF=Generalized onset tonic epileptic seizure	TUI=T047	STY=Disease or Syndrome
 generalized tonic seizure	CUI=C1836508	PREF=Generalized onset tonic epileptic seizure	TUI=T047	STY=Disease or Syndrome
 generalized tonic seizures	CUI=C1836508	PREF=Generalized onset tonic epileptic seizure	TUI=T047	STY=Disease or Syndrome
-infantile spasms	CUI=C3887898	PREF=Infantile spasm	TUI=T047	STY=Disease or Syndrome	
+infantile spasms	CUI=C3887898	PREF=Infantile spasm	TUI=T047	STY=Disease or Syndrome
 clonic seizure	CUI=C3887898	PREF=Clonic Seizures	TUI=T047	STY=Disease or Syndrome
 clonic seizures	CUI=C3887898	PREF=Clonic Seizures	TUI=T047	STY=Disease or Syndrome
 clonic convulsion	CUI=C3887898	PREF=Clonic Seizures	TUI=T047	STY=Disease or Syndrome

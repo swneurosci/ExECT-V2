@@ -238,7 +238,7 @@ subdural haematoma	CUI=C0018946	PREF=Hematoma, Subdural	TUI=T046	EC=Yes
 sub dural haemorrhage	CUI=C0018946	PREF=Hematoma, Subdural	TUI=T046	EC=Yes
 subdural haemorrhage	CUI=C0018946	PREF=Hematoma, Subdural	TUI=T046	EC=Yes
 subdural haematoma	CUI=C0018946	PREF=Hematoma, Subdural	TUI=T046	EC=Yes
-sub dural haematoma	CUI=C0018946 	PREF=Hematoma, Subdural	TUI=T046	EC=Yes
+sub dural haematoma	CUI=C0018946	PREF=Hematoma, Subdural	TUI=T046	EC=Yes
 hemiparesis	CUI=C0018989	PREF=Hemiparesis	TUI=T184	EC=No
 haemorrhage	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=No
 bleeding	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=No
@@ -340,8 +340,8 @@ massive osteolyses	CUI=C0029438	PREF=Massive Osteolyses	TUI=T047	EC=No
 phantom bone disease	CUI=C0029438	PREF=Massive Osteolyses	TUI=T047	EC=No
 parasomnia	CUI=C0030508	PREF=Parasomnia	TUI=T047	EC=No
 parasomnia	CUI=C0030508	PREF=Parasomnia	TUI=T047	EC=No
-parasomnia	CUI=C0030508 	PREF=Parasomnia	TUI=T047	EC=No
-parasomnis	CUI=C0030508 	PREF=Parasomnia	TUI=T047	EC=No
+parasomnia	CUI=C0030508	PREF=Parasomnia	TUI=T047	EC=No
+parasomnis	CUI=C0030508	PREF=Parasomnia	TUI=T047	EC=No
 idiopathic parkinson's disease	CUI=C0030567	PREF=Parkinson Disease	TUI=T047	EC=No
 parkinsons disease	CUI=C0030567	PREF=Parkinson Disease	TUI=T047	EC=No
 parkinson's disease	CUI=C0030567	PREF=Parkinson Disease	TUI=T047	EC=No
@@ -542,7 +542,7 @@ mitochondrial encephalopathy, lactic acidosis and stroke-like episodes	CUI=C0162
 mitochondrial myopathy, encephalopathy, lactic acidosis and stroke-like episodes	CUI=C0162671	PREF=MELAS Syndrome	TUI=T047	EC=Yes
 mitochondrial myopathy, lactic acidosis, stroke-like episode	CUI=C0162671	PREF=MELAS Syndrome	TUI=T047	EC=Yes
 myopathy, mitochondrial-encephalopathy-lactic acidosis-stroke	CUI=C0162671	PREF=MELAS Syndrome	TUI=T047	EC=Yes
-neurofibromatosis	CUI=C0162678	PREF=Neurofibromatosis 	TUI=T191	EC=Yes
+neurofibromatosis	CUI=C0162678	PREF=Neurofibromatosis	TUI=T191	EC=Yes
 Aicardi syndrome	CUI=C0175713	PREF=Aicardi's syndrome	TUI=T047	EC=Yes
 Aicardi's syndrome	CUI=C0175713	PREF=Aicardi's syndrome	TUI=T047	EC=Yes
 brain operation	CUI=C0195775	PREF=Operation on brain	TUI=T061	EC=Yes
@@ -635,16 +635,16 @@ anomaly of the pulmonary veins	CUI=C0265914	PREF=Anomalous pulmonary vein	TUI=T0
 anomalous portal venous connection	CUI=C0265922	PREF=Anomalous portal venous connection	TUI=T019	EC=No
 anomaly of the vena cava	CUI=C0265925	PREF=Congenital anomaly of vena cava	TUI=T019	EC=No
 anomaly of vena cava	CUI=C0265925	PREF=Congenital anomaly of vena cava	TUI=T019	EC=No
-venous malformation	CUI=C0265950	PREF=venous malformation	TUI=T019	EC=
-venous malformations	CUI=C0265950	PREF=venous malformation	TUI=T019	EC=
+venous malformation	CUI=C0265950	PREF=venous malformation	TUI=T019
+venous malformations	CUI=C0265950	PREF=venous malformation	TUI=T019
 absence of vein	CUI=C0265951	PREF=congenital absence of vein	TUI=T019	EC=No
 atresia of vein	CUI=C0265952	PREF=congenital atresia of vein	TUI=T019	EC=No
 congenital phlebectasia	CUI=C0265953	PREF=Congenital phlebectasia	TUI=T019	EC=No
 congenital varix	CUI=C0265953	PREF=Congenital phlebectasia	TUI=T019	EC=No
 diffuse phlebectasia	CUI=C0265953	PREF=Congenital phlebectasia	TUI=T019	EC=No
 Lissencephaly	CUI=C0266463	PREF=Lissencephaly	TUI=T019	EC=Yes
-polymicrogyria	CUI=C0266464	PREF=Polymicrogyria 	TUI=T019	EC=Yes
-Micropolygyria	CUI=C0266464	PREF=Polymicrogyria 	TUI=T019	EC=Yes
+polymicrogyria	CUI=C0266464	PREF=Polymicrogyria	TUI=T019	EC=Yes
+Micropolygyria	CUI=C0266464	PREF=Polymicrogyria	TUI=T019	EC=Yes
 schizencephaly	CUI=C0266484	PREF=Schizencephaly	TUI=T019	EC=Yes
 schizencephalic cysts	CUI=C0266484	PREF=Schizencephaly	TUI=T019	EC=Yes
 Schizencephaly	CUI=C0266484	PREF=Schizencephaly	TUI=T019	EC=Yes
@@ -771,11 +771,11 @@ congenital coronary sinus stenosis	CUI=C0344684	PREF=congenital coronary sinus s
 congenital aneurysm of coronary sinus	CUI=C0344686	PREF=congenital aneurysm of coronary sinus	TUI=T019	EC=No
 ductus venosus abnormality	CUI=C0344687	PREF=Ductus venosus abnormality	TUI=T019	EC=Yes
 venous duct abnormality	CUI=C0344687	PREF=Ductus venosus abnormality	TUI=T019	EC=Yes
-prominent eustachian valve	CUI=C0344698	PREF=Prominent valve of inferior vena cava	TUI=T019	EC=
-prominent valve of inferior vena cava	CUI=C0344698	PREF=Prominent valve of inferior vena cava	TUI=T019	EC=
-anomalous valve of coronary sinus	CUI=C0344701	PREF=Anomalous valve of coronary sinus	TUI=T019	EC=
-Perimembranous ventricular septal defect	CUI=C0344925	PREF=Perimembranous ventricular septal defect	TUI=T019	EC=
-Perimembranous VSD	CUI=C0344925	PREF=Perimembranous ventricular septal defect	TUI=T019	EC=
+prominent eustachian valve	CUI=C0344698	PREF=Prominent valve of inferior vena cava	TUI=T019
+prominent valve of inferior vena cava	CUI=C0344698	PREF=Prominent valve of inferior vena cava	TUI=T019
+anomalous valve of coronary sinus	CUI=C0344701	PREF=Anomalous valve of coronary sinus	TUI=T019
+Perimembranous ventricular septal defect	CUI=C0344925	PREF=Perimembranous ventricular septal defect	TUI=T019
+Perimembranous VSD	CUI=C0344925	PREF=Perimembranous ventricular septal defect	TUI=T019
 intrapulmonary arteriovenous fistula	CUI=C0345042	PREF=Intrapulmonary arteriovenous fistula	TUI=T019	EC=No
 cobb syndrome	CUI=C0346068	PREF=Cobb's syndrome	TUI=T047	EC=No
 cobb's syndrome	CUI=C0346068	PREF=Cobb's syndrome	TUI=T047	EC=No
@@ -859,13 +859,13 @@ hemimegalencephaly	CUI=C0431391	PREF=Hemimegalencephaly	TUI=T047	EC=Yes
 unilateral macrocephaly	CUI=C0431391	PREF=Hemimegalencephaly	TUI=T047	EC=Yes
 congenital arteriovenous malformation of retina	CUI=C0431454	PREF=congenital arteriovenous malformation of retina	TUI=T019	EC=No
 ongenital arteriovenous anomaly of retina	CUI=C0431454	PREF=congenital arteriovenous malformation of retina	TUI=T019	EC=No
-debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	EC=
-de-bulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	EC=
-tumor debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	EC=
+debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061
+de-bulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061
+tumor debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061
 neuropathy	CUI=C0442874	PREF=Neuropathy	TUI=T047	EC=No
 brain stem stroke syndrome	CUI=C0451671	PREF=brain stem stroke syndrome	TUI=T047	EC=Yes
 Multiple Head Injuries	CUI=C0451948	PREF=Head Injuries, Multiple	TUI=T037	EC=Yes
-perinatal hypoxia and asphyxia	CUI=C0456033 	PREF=Perinatal hypoxia and asphyxia 	TUI=T037	EC=Yes
+perinatal hypoxia and asphyxia	CUI=C0456033	PREF=Perinatal hypoxia and asphyxia	TUI=T037	EC=Yes
 perinatal trauma	CUI=C0456798	PREF=Perinatal trauma, birth	TUI=T037	EC=Yes
 right hemiplegia	CUI=C0457433	PREF=Right hemiplegia	TUI=T033	EC=No
 right sided hemiplegia	CUI=C0457433	PREF=Right hemiplegia	TUI=T033	EC=No
@@ -972,7 +972,7 @@ neoplasm of brainstem	CUI=C0677866	PREF=Brain Stem Neoplasms	TUI=T191	EC=Yes
 neoplasms of brainstem	CUI=C0677866	PREF=Brain Stem Neoplasms	TUI=T191	EC=Yes
 congenital anomaly of azygos vein	CUI=C0685758	PREF=congenital anomaly of azygos vein	TUI=T019	EC=Yes
 congenital transposition of azygos vein	CUI=C0685760	PREF=congenital transposition of azygos vein	TUI=T019	EC=Yes
-supernumerary azygos vein	CUI=C0685761	PREF=supernumerary azygos vein	TUI=T019	EC=
+supernumerary azygos vein	CUI=C0685761	PREF=supernumerary azygos vein	TUI=T019
 arophy of cerebellum	CUI=C0740279	PREF=Atrophy of cerebellum	TUI=T047	EC=Yes
 cerebellar atrophy	CUI=C0740279	PREF=Atrophy of cerebellum	TUI=T047	EC=Yes
 MCA infarct	CUI=C0740392	PREF=Infarction, Middle Cerebral Artery	TUI=T047	EC=Yes
@@ -981,10 +981,10 @@ MCA stroke	CUI=C0740392	PREF=Infarction, Middle Cerebral Artery	TUI=T047	EC=Yes
 Middle Cerebral Artery infarction	CUI=C0740392	PREF=Infarction, Middle Cerebral Artery	TUI=T047	EC=Yes
 middle cerebral artery stroke	CUI=C0740392	PREF=Infarction, Middle Cerebral Artery	TUI=T047	EC=Yes
 benigh brain lesion	CUI=C0741634	PREF=brain lesion benign	TUI=T047	EC=Yes
-Epidermoid cyst excision	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	EC=
-epidermoid cyst removed	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	EC=
-epidermoid cyst resected	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	EC=
-excision of epidermoid cyst	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061	EC=
+Epidermoid cyst excision	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061
+epidermoid cyst removed	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061
+epidermoid cyst resected	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061
+excision of epidermoid cyst	CUI=C0743537	PREF=Epidermoid cyst excision	TUI=T061
 Astrocytoma of cerebrum	CUI=C0750935	PREF=Cerebral Astrocytoma	TUI=T191	EC=Yes
 cerebral astrocytoma	CUI=C0750935	PREF=Cerebral Astrocytoma	TUI=T191	EC=Yes
 Cerebral Hemispheric Astrocytoma	CUI=C0750935	PREF=Cerebral Astrocytoma	TUI=T191	EC=Yes
@@ -1004,8 +1004,8 @@ sleep myoclonus	CUI=C0751352	PREF=sleep myoclonus	TUI=T184	EC=No
 narcolepsy-Cataplexy Syndrome	CUI=C0751362	PREF=Narcolepsy-Cataplexy Syndrome	TUI=T047	EC=No
 cataplexy and narcolepsy	CUI=C0751362	PREF=Narcolepsy-Cataplexy Syndrome	TUI=T047	EC=No
 narcolepsy with cataplexy	CUI=C0751362	PREF=Narcolepsy-Cataplexy Syndrome	TUI=T047	EC=No
-mitochondrial disease	CUI=C0751651	PREF=Mitochondrial Diseases	TUI=T047	EC=
-mitochondrial diseases	CUI=C0751651	PREF=Mitochondrial Diseases	TUI=T047	EC=
+mitochondrial disease	CUI=C0751651	PREF=Mitochondrial Diseases	TUI=T047
+mitochondrial diseases	CUI=C0751651	PREF=Mitochondrial Diseases	TUI=T047
 neoplasm of optic nerve and sheath	CUI=C0751728	PREF=Optic Nerve Sheath Neoplasm	TUI=T191	EC=No
 optic nerve sheath neoplasm	CUI=C0751728	PREF=Optic Nerve Sheath Neoplasm	TUI=T191	EC=No
 optic nerve sheath tumour	CUI=C0751728	PREF=Optic Nerve Sheath Neoplasm	TUI=T191	EC=No
@@ -1032,10 +1032,10 @@ thrombosis of cerebral arteries	CUI=C0795687	PREF=Cerebral arterial thrombosis	T
 thrombosis of cerebral artery	CUI=C0795687	PREF=Cerebral arterial thrombosis	TUI=T047	EC=Yes
 bohring opitz syndrome	CUI=C0796232	PREF=bohring opitz syndrome	TUI=T047	EC=Yes
 bops	CUI=C0796232	PREF=bohring opitz syndrome	TUI=T047	EC=Yes
-removal of brain tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061	EC=
-excision of brain tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061	EC=
-removal of intracranial tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061	EC=
-excision of intracranial tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061	EC=
+removal of brain tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061
+excision of brain tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061
+removal of intracranial tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061
+excision of intracranial tumour	CUI=C0841323	PREF=Removal of intracranial tumor	TUI=T061
 Epidermoid tumor	CUI=C0854911	PREF=Central nervous system epidermoid tumour	TUI=T190	EC=Yes
 epidermoid tumour	CUI=C0854911	PREF=Central nervous system epidermoid tumour	TUI=T190	EC=Yes
 TBI	CUI=C0876926	PREF=traumatic brain injury	TUI=T037	EC=Yes
@@ -1052,13 +1052,13 @@ PMA	CUI=C0917981	PREF=Progressive Muscular Atrophy	TUI=T047	EC=No
 ischaemic stroke	CUI=C0948008	PREF=ischaemic stroke	TUI=T047	EC=Yes
 ischemic stroke	CUI=C0948008	PREF=ischaemic stroke	TUI=T047	EC=Yes
 dysphasia	CUI=C0973461	PREF=Dysphasia	TUI=T047	EC=No
-brain tumour operation	CUI=C1096120	PREF=Brain tumor operation	TUI=T061	EC=
-astrocytoma surgery	CUI=C1096492	PREF=Astrocytoma surgery	TUI=T061	EC=
-astrocytoma treated with surgery	CUI=C1096492	PREF=Astrocytoma surgery	TUI=T061	EC=
-meningioma resection	CUI=C1096493	PREF=Meningioma surgery	TUI=T061	EC=
-meningioma surgery	CUI=C1096493	PREF=Meningioma surgery	TUI=T061	EC=
-anterior temporal lobectomy	CUI=C1136214	PREF=Anterior Temporal Lobectomy	TUI=T061	EC=
-temporal lobe resection	CUI=C1136214	PREF=Anterior Temporal Lobectomy	TUI=T061	EC=
+brain tumour operation	CUI=C1096120	PREF=Brain tumor operation	TUI=T061
+astrocytoma surgery	CUI=C1096492	PREF=Astrocytoma surgery	TUI=T061
+astrocytoma treated with surgery	CUI=C1096492	PREF=Astrocytoma surgery	TUI=T061
+meningioma resection	CUI=C1096493	PREF=Meningioma surgery	TUI=T061
+meningioma surgery	CUI=C1096493	PREF=Meningioma surgery	TUI=T061
+anterior temporal lobectomy	CUI=C1136214	PREF=Anterior Temporal Lobectomy	TUI=T061
+temporal lobe resection	CUI=C1136214	PREF=Anterior Temporal Lobectomy	TUI=T061
 non epileptic psychogenic seizures	CUI=C1142430	PREF=Psychogenic seizure	TUI=T048	EC=No
 non - epileptic psychogenic seizures	CUI=C1142430	PREF=Psychogenic seizure	TUI=T048	EC=No
 non-epileptic psychogenic seizures	CUI=C1142430	PREF=Psychogenic seizure	TUI=T048	EC=No
@@ -1082,8 +1082,8 @@ Infectious disease of brain	CUI=C1264609	PREF=Infectious disease of brain	TUI=T0
 DNET	CUI=C1266177	PREF=Dysembryoplastic neuroepithelial tumor	TUI=T191	EC=Yes
 DNT	CUI=C1266177	PREF=Dysembryoplastic neuroepithelial tumor	TUI=T191	EC=Yes
 Dysembryoplastic neuroepithelial tumour	CUI=C1266177	PREF=Dysembryoplastic neuroepithelial tumor	TUI=T191	EC=Yes
-congenital pulmonary vein confluence	CUI=C1290492	PREF=congenital pulmonary vein confluence	TUI=T019	EC=
-congenital portal-systemic shunt	CUI=C1290495	PREF=congenital portal-systemic shunt	TUI=T019	EC=
+congenital pulmonary vein confluence	CUI=C1290492	PREF=congenital pulmonary vein confluence	TUI=T019
+congenital portal-systemic shunt	CUI=C1290495	PREF=congenital portal-systemic shunt	TUI=T019
 occlusive stroke	CUI=C1298680	PREF=occlusive stroke	TUI=T047	EC=Yes
 neonatal cerebral infarction	CUI=C1299567	PREF=neonatal cerebral infarction	TUI=T047	EC=Yes
 neonatal stroke	CUI=C1299567	PREF=neonatal cerebral infarction	TUI=T047	EC=Yes
@@ -1128,11 +1128,11 @@ say meyer syndrome	CUI=C1839125	PREF=Say Meyer syndrome	TUI=T047	EC=No
 trigonocephaly, short stature and developmental delay	CUI=C1839125	PREF=Say Meyer syndrome	TUI=T047	EC=No
 trigonocephaly, short stature, and retarded psychomotor development	CUI=C1839125	PREF=Say Meyer syndrome	TUI=T047	EC=No
 X-linked creatine deficiency	CUI=C1845862	PREF=Creatine deficiency, X-linked	TUI=T047	EC=Yes
-Creatine transporter deficiency	CUI=C1845862 	PREF=Creatine deficiency, X-linked	TUI=T047	EC=Yes
+Creatine transporter deficiency	CUI=C1845862	PREF=Creatine deficiency, X-linked	TUI=T047	EC=Yes
 subcorticalband heterotopia	CUI=C1848201	PREF=Subcortical Band Heterotopia	TUI=T019	EC=Yes
 double cortex	CUI=C1848201	PREF=Subcortical Band Heterotopia	TUI=T019	EC=Yes
 sbcortical laminar heterotopia	CUI=C1848201	PREF=Subcortical Band Heterotopia	TUI=T019	EC=Yes
-Respiratory distress in neonatal period	CUI=C1850092	PREF=Respiratory distress in neonatal period	TUI=T033	EC=
+Respiratory distress in neonatal period	CUI=C1850092	PREF=Respiratory distress in neonatal period	TUI=T033
 frank ter haar syndrome	CUI=C1855305	PREF=Ter Haar syndrome	TUI=T047	EC=No
 megalocornea, multiple skeletal anomalies, and developmental delay	CUI=C1855305	PREF=Ter Haar syndrome	TUI=T047	EC=No
 melnick-needles syndrome	CUI=C1855305	PREF=Ter Haar syndrome	TUI=T047	EC=No
@@ -1160,9 +1160,9 @@ Wolf-Hirschhorn Syndrome	CUI=C1956097	PREF=Wolf-Hirschhorn Syndrome	TUI=T047	EC=
 Chromosome 4 short arm deletion	CUI=C1956097	PREF=Wolf-Hirschhorn Syndrome	TUI=T047	EC=Yes
 Deletion of short arm of chromosome 4	CUI=C1956097	PREF=Wolf-Hirschhorn Syndrome	TUI=T047	EC=Yes
  chromosome 4 partial delition	CUI=C1956097	PREF=Wolf-Hirschhorn Syndrome	TUI=T047	EC=Yes
-Arteriovenous aneurysm	CUI=C1956223	PREF=Arteriovenous Aneurysm	TUI=T190	EC=
+Arteriovenous aneurysm	CUI=C1956223	PREF=Arteriovenous Aneurysm	TUI=T190
 basal ganglia haematoma	CUI=C1956233	PREF=Hematoma, Basal Ganglia	TUI=T047	EC=Yes
-cerebral venous angioma	CUI=C1956261	PREF=Cerebral venous angioma 	TUI=T019	EC=Yes
+cerebral venous angioma	CUI=C1956261	PREF=Cerebral venous angioma	TUI=T019	EC=Yes
 cerebral venous angioma	CUI=C1956261	PREF=Cerebral venous angioma	TUI=T019	EC=Yes
 Cavernous angioma	CUI=C1959589	PREF=Cavernous angioma	TUI=T191	EC=Yes
 cognitive developmental delay	CUI=C1959866	PREF=cognitive developmental delay	TUI=T048	EC=No
@@ -1191,7 +1191,7 @@ malignant neoplasm of temporal lobe of brain	CUI=C2118558	PREF=malignant neoplas
 sleep related movement	CUI=C2231106	PREF=Sleep related movement disorder	TUI=T047	EC=No
 sleep-related movement 	CUI=C2231106	PREF=Sleep related movement disorder	TUI=T047	EC=No
 perinatal brain injurt	CUI=C2347482	PREF=Perinatal brain injury	TUI=T037	EC=Yes
-perinatal brain injurt	CUI=C2347482 	PREF=Perinatal brain injury	TUI=T037	EC=Yes
+perinatal brain injurt	CUI=C2347482	PREF=Perinatal brain injury	TUI=T037	EC=Yes
 glioneuronal tumor	CUI=C2363902	PREF=glioneuronal tumor	TUI=T191	EC=Yes
 glioneuronal tumor	CUI=C2363902	PREF=glioneuronal tumor	TUI=T191	EC=Yes
 Reflex anoxic seizure	CUI=C2584658	PREF=Reflex anoxic seizure	TUI=T033	EC=No
@@ -1204,10 +1204,10 @@ Trisomy 15q11q13	CUI=C2675336	PREF=Duplication 15q11-q13 Syndrome	TUI=T047	EC=Ye
 15q13.3 Microdeletion Syndrome	CUI=C2677613	PREF=Chromosome 15q13.3 Microdeletion Syndrome	TUI=T019	EC=Yes
 15q13.3 microdeletion	CUI=C2677613	PREF=Chromosome 15q13.3 Microdeletion Syndrome	TUI=T019	EC=Yes
 15q13.3 deletion	CUI=C2677613	PREF=Chromosome 15q13.3 Microdeletion Syndrome	TUI=T019	EC=Yes
-febrile myoclonus	CUI=C2711743	PREF=Febrile myoclonus	TUI=T047	EC=
-febrile myoclonus	CUI=C2711743	PREF=Febrile myoclonus	TUI=T047	EC=
-myoclonus associated with fever	CUI=C2711743	PREF=Febrile myoclonus	TUI=T047	EC=
-myoclonus associated with fever	CUI=C2711743	PREF=Febrile myoclonus	TUI=T047	EC=
+febrile myoclonus	CUI=C2711743	PREF=Febrile myoclonus	TUI=T047
+febrile myoclonus	CUI=C2711743	PREF=Febrile myoclonus	TUI=T047
+myoclonus associated with fever	CUI=C2711743	PREF=Febrile myoclonus	TUI=T047
+myoclonus associated with fever	CUI=C2711743	PREF=Febrile myoclonus	TUI=T047
 cortical malformation	CUI=C2748861	PREF=Cortical malformations	TUI=T019	EC=Yes
 cortical malformation	CUI=C2748861	PREF=Cortical malformations	TUI=T019	EC=Yes
 cortical malformations	CUI=C2748861	PREF=Cortical malformations	TUI=T019	EC=Yes
@@ -1227,9 +1227,9 @@ post-traumatic damage to right frontal lobe	CUI=C2832052	PREF=focal traumatic br
 post-traumatic damage to the left frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	EC=Yes
 post-traumatic damage to the left frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	EC=Yes
 post-traumatic damage to the right frontal lobe	CUI=C2832052	PREF=focal traumatic brain injury	TUI=T037	EC=Yes
-amygdalohippocampectomy	CUI=C2921031	PREF=Amygdalohippocampectomy	TUI=T061	EC=
-hippocampectomy	CUI=C2921031	PREF=Amygdalohippocampectomy	TUI=T061	EC=
-hippocampectomy	CUI=C2921031	PREF=Amygdalohippocampectomy	TUI=T061	EC=
+amygdalohippocampectomy	CUI=C2921031	PREF=Amygdalohippocampectomy	TUI=T061
+hippocampectomy	CUI=C2921031	PREF=Amygdalohippocampectomy	TUI=T061
+hippocampectomy	CUI=C2921031	PREF=Amygdalohippocampectomy	TUI=T061
 Ring chromosome 14	CUI=C2930916	PREF=Ring Chromosome 14 Syndrome	TUI=T047	EC=Yes
 Ring 14	CUI=C2930916	PREF=Ring Chromosome 14 Syndrome	TUI=T047	EC=Yes
 Chromosome 14 ring	CUI=C2930916	PREF=Ring Chromosome 14 Syndrome	TUI=T047	EC=Yes
@@ -1267,7 +1267,7 @@ Anti-NMDAR Encephalitis	CUI=C2986717	PREF=Anti-N-Methyl-D-Aspartate Receptor Enc
 Autoimmune encephalitis caused by N-methyl D-aspartate receptor antibody	CUI=C2986717	PREF=Anti-N-Methyl-D-Aspartate Receptor Encephalitis	TUI=T047	EC=Yes
 Autoimmune encephalitis due to N-methyl D-aspartate receptor antibody	CUI=C2986717	PREF=Anti-N-Methyl-D-Aspartate Receptor Encephalitis	TUI=T047	EC=Yes
 N-methyl D-aspartate receptor antibody encephalitis	CUI=C2986717	PREF=Anti-N-Methyl-D-Aspartate Receptor Encephalitis	TUI=T047	EC=Yes
-retroaortic brachiocephalic vein	CUI=C3163891	PREF=retroaortic brachiocephalic vein	TUI=T019	EC=
+retroaortic brachiocephalic vein	CUI=C3163891	PREF=retroaortic brachiocephalic vein	TUI=T019
 medial temporal sclerosis	CUI=C3164863	PREF=Mesial temporal lobe sclerosis	TUI=T047	EC=Yes
 mesial temporal lobe sclerosis	CUI=C3164863	PREF=Mesial temporal lobe sclerosis	TUI=T047	EC=Yes
 mesial temporal sclerosis	CUI=C3164863	PREF=Mesial temporal lobe sclerosis	TUI=T047	EC=Yes
@@ -1291,12 +1291,12 @@ nonepileptic attacks	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
 non-epileptic seizure	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
 non-epileptic seizures	CUI=C3495874	PREF=Nonepileptic Seizures	TUI=T047	EC=No
 severe traumatic brain injury	CUI=C3508474	PREF=severe traumatic brain injury	TUI=T037	EC=Yes
-chronic cerebrovascular accident	CUI=C3536593	PREF=Chronic cerebrovascular accident	TUI=T047	EC=
-chronic stroke	CUI=C3536593	PREF=Chronic cerebrovascular accident	TUI=T047	EC=
-chronic strokes	CUI=C3536593	PREF=Chronic cerebrovascular accident	TUI=T047	EC=
-photoparoxysmal response on EEG	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	EC=
-photosensitive	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	EC=
-photosensitivity	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033	EC=
+chronic cerebrovascular accident	CUI=C3536593	PREF=Chronic cerebrovascular accident	TUI=T047
+chronic stroke	CUI=C3536593	PREF=Chronic cerebrovascular accident	TUI=T047
+chronic strokes	CUI=C3536593	PREF=Chronic cerebrovascular accident	TUI=T047
+photoparoxysmal response on EEG	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033
+photosensitive	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033
+photosensitivity	CUI=C3552821	PREF=EEG with photoparoxysmal response	TUI=T033
 temporal lobe sclerosis	CUI=C3662090	PREF=Temporal lobe sclerosis	TUI=T047	EC=Yes
 temporal lobe sclerosis	CUI=C3662090	PREF=Temporal lobe sclerosis	TUI=T047	EC=Yes
 birth history was normal	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
@@ -1444,7 +1444,7 @@ left vertebral artery thrombosis with stroke	CUI=C4551382	PREF=left vertebral ar
 Distal monosomy 17p13.3	CUI=C4707092	PREF=Distal 17p13.3 microdeletion syndrome	TUI=T047	EC=Yes
 17p13.3 microdeletion	CUI=C4707092	PREF=Distal 17p13.3 microdeletion syndrome	TUI=T047	EC=Yes
 Distal monosomy 17p13.3	CUI=C4707092	PREF=Distal 17p13.3 microdeletion syndrome	TUI=T047	EC=Yes
-neonatal complicaions	CUI=C4735642	PREF=Neonatal complications	TUI=T033	EC=
+neonatal complicaions	CUI=C4735642	PREF=Neonatal complications	TUI=T033
 intracranial infection	CUI=C4761018	PREF=Intracranial infection	TUI=T047	EC=Yes
 intracranial infections	CUI=C4761018	PREF=Intracranial infection	TUI=T047	EC=Yes
 mental health problem	CUI=C1446377	PREF=Mental health problems	TUI=T033	EC=No
