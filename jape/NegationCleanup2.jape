@@ -5,14 +5,14 @@ Input: Verbs Trigger Lookup Sentence Lookup3
 Options: control=all
 
 // Need to see an example of this rule
-// 'If this is "not"(trigger) successful then I would "consider"(verb) 
+// 'If this is "not"(trigger) successful then I would "consider"(verb) -=-- HS 26/11/24 - also triggers on " he did not suffer from....."
 // preventative treatment such as propranolol or possibly tompiramate given his "epilepsy" (lookup)'
 // Why isn't there a Lookup3 version?
 // What about a rule like Person Verb Lookup.negation = negated -> flip the negation, but with controls for only on one sentence (split)
 Rule: reverseNegation
 (
 {Trigger}
-({Verbs})[1,3]
+({Verbs, Verbs@string != "suffer})[1,3]
 ({Lookup.Negation =="Negated"}):umls
 ):match
 -->

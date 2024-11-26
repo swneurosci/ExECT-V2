@@ -68,3 +68,6 @@ temporal lobe discharges:CUI=C0151611:Results=Abnormal
 changes:CUI=C0151611:Results=Abnormal
 not have the results of his recent:CUI=C0013819:Results=Unknown
 not show any epileptic activity:CUI=C0151611:Results=Abnormal:Ignore=Yes
+change:CUI=C0151611:Results=Abnormal
+no change:CUI=C0560017:Results=Normal:Ignore=Yes
+paroxysmal slow activity:CUI=C0151611:Results=Abnormal
