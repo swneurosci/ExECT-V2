@@ -12,8 +12,8 @@ Options: control=all
 Rule: reverseNegation
 (
 {Trigger}
-({Verbs, Verbs@string != "suffer"}")[1,3]
-({Lookup.Negation =="Negated"}):umls
+({Verbs, Verbs@string != "suffer"})[1,3]
+({Lookup.Negation == "Negated"}):umls
 ):match
 -->
 :umls {
