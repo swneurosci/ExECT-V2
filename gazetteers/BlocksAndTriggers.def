@@ -14,9 +14,7 @@ cause.lst:diagnosis:causality::CausePhrase
 MedicalHistory.lst:diagnosis:past::MedicalHistory
 NoSeizure.lst::::NoSeizure
 PHistBlock.lst::::PHistBlock
-SeizureFrequencyBlock.lst::::SFBlock
-SChangeBlock.lst::::SChangeBlock
-driving.lst:driving:driving::SFreeBlock
+SeizureFrequencyBlock.lst::::SFreqBlock
 opinion.lst:diagnosis:opinion::Lookup2
 InvestigationBlock.lst::::InvestigationBlock
 but.lst::::but

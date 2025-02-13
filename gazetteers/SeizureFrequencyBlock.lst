@@ -1,52 +1,101 @@
-risk
-gone
-until
-recover
-at onset
-up until recently
-remained
-relapse
-intervals
-onset
-admission
-he was getting
-started a
-started in
-admitted
-she suffered from
-he suffered from
-recurred
-started having
-she was getting
-started again
-of his diagnosis
-of her diagnosis
-later
-diagnosed
-started with
-until recurrence
-not typical of epilepsy
-post-ictal period
-before this
-chance
-he was having
-she was having
-his first
-her first
-reduced from
-increased from
-were occurring
-used to happen
-were happening
-injured
-previously
-Previously
-day time ones
-night time ones
-began to have
-she had
-he had
-She had
-He had
-was recurrence
-presented with
+driving:SFreeBlock=Yes:driving=driving
+drive:SFreeBlock=Yes:driving=driving
+risk:SFBlock=Yes:SFreeBlock=Yes:SChangeBlock=Yes
+Risk:SFBlock=Yes:SFreeBlock=Yes:SChangeBlock=Yes
+gone:SFBlock=Yes:SFreeBlock=Yes
+was:SFreeBlock=Yes
+untill:SFreeBlock=Yes:SChangeBlock=Yes
+hopefully he will have been:SFreeBlock=Yes
+recover:SFBlock=Yes:SFreeBlock=Yes
+possibility of making:SFreeBlock=Yes
+longest she has ever been:SFreeBlock=Yes
+longest he has ever been:SFreeBlock=Yes
+up untill recently:SFreeBlock=Yes
+has gone for more:SFreeBlock=Yes
+relapse:SFBlock=Yes:SFreeBlock=Yes
+never been:SFreeBlock=Yes
+recently went:SFreeBlock=Yes
+driven:SFreeBlock=Yes
+will be:SFreeBlock=Yes
+had been:SFreeBlock=Yes
+best period of:SFreeBlock=Yes
+Previously:SFreeBlock=Yes:SFBlock=Yes
+previously:SFreeBlock=Yes:SFBlock=Yes
+remained:SFBlock=Yes:SFreeBlock=Yes
+until:SFBlock=Yes:SChangeBlock=Yes
+at onset:SFBlock=Yes
+up until recently:SFBlock=Yes
+intervals:SFBlock=Yes
+onset:SFBlock=Yes
+admission:SFBlock=Yes
+he was getting:SFBlock=Yes
+started a:SFBlock=Yes
+started in:SFBlock=Yes
+admitted:SFBlock=Yes
+she suffered from:SFBlock=Yes
+he suffered from:SFBlock=Yes
+recurred:SFBlock=Yes
+started having:SFBlock=Yes
+she was getting:SFBlock=Yes
+started again:SFBlock=Yes
+of his diagnosis:SFBlock=Yes
+of her diagnosis:SFBlock=Yes
+later:SFBlock=Yes
+diagnosed:SFBlock=Yes
+started with:SFBlock=Yes
+until recurrence:SFBlock=Yes
+not typical of epilepsy:SFBlock=Yes
+post-ictal period:SFBlock=Yes
+before this:SFBlock=Yes
+chance:SFBlock=Yes
+he was having:SFBlock=Yes
+she was having:SFBlock=Yes
+his first:SFBlock=Yes
+her first:SFBlock=Yes
+reduced from:SFBlock=Yes
+increased from:SFBlock=Yes
+were occurring:SFBlock=Yes
+used to happen:SFBlock=Yes
+were happening:SFBlock=Yes
+injured:SFBlock=Yes
+day time ones:SFBlock=Yes
+night time ones:SFBlock=Yes
+began to have:SFBlock=Yes
+she had:SFBlock=Yes:SChangeBlock=Yes
+he had:SFBlock=Yes:SChangeBlock=Yes
+She had:SFBlock=Yes:SChangeBlock=Yes
+He had:SFBlock=Yes:SChangeBlock=Yes
+was recurrence:SFBlock=Yes
+presented with:SFBlock=Yes
+seemed:SChangeBlock=Yes
+would be:SChangeBlock=Yes
+however:SChangeBlock=Yes
+bulit:SChangeBlock=Yes
+suffered from:SChangeBlock=Yes
+in case:SChangeBlock=Yes
+consider:SChangeBlock=Yes
+meals:SChangeBlock=Yes
+food:SChangeBlock=Yes
+sleep deprivation:SChangeBlock=Yes
+depriving:SChangeBlock=Yes
+was having:SChangeBlock=Yes
+followed by:SChangeBlock=Yes
+up to:SChangeBlock=Yes
+increased it:SChangeBlock=Yes
+decreased it:SChangeBlock=Yes
+occurs:SChangeBlock=Yes
+tends to occur:SChangeBlock=Yes
+mood:SChangeBlock=Yes
+for the next:SChangeBlock=Yes
+for a while:SChangeBlock=Yes
+were:SChangeBlock=Yes
+suggest:SChangeBlock=Yes
+would:SChangeBlock=Yes
+medication:SChangeBlock=Yes
+can you:SChangeBlock=Yes
+previously had:SChangeBlock=Yes
+risks:SChangeBlock=Yes
+Risks:SChangeBlock=Yes
+before this her:SChangeBlock=Yes
+stress:SChangeBlock=Yes
+before this his:SChangeBlock=Yes

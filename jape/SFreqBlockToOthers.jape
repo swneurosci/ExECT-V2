@@ -1,0 +1,36 @@
+Phase: SFreqBlockToOthers
+Input: SFreqBlock
+Options: control=all 
+
+
+ 
+
+Rule: SFreqBlockToSFBlock
+Priority: 100 
+( 
+    ({SFreqBlock.SFBlock == "Yes"})
+):match 
+--> 
+:match.SFBlock = {rule  = "SFreqBlockToSFBlock"}
+
+
+
+Rule: SFreqBlockToSFreeBlock
+Priority: 100 
+( 
+    ({SFreqBlock.SFreeBlock == "Yes"})
+):match 
+--> 
+:match.SFreeBlock = {rule  = "SFreqBlockToSFreeBlock", driving = :match.SFreqBlock.driving}
+
+
+
+
+
+Rule: SFreqBlockToSChangeBlock
+Priority: 100 
+( 
+    ({SFreqBlock.SChangeBlock == "Yes"})
+):match 
+--> 
+:match.SChangeBlock = {rule  = "SFreqBlockToSChangeBlock"}

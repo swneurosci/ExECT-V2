@@ -13,3 +13,21 @@ Priority: 100
 --> 
 :match.SChangeBlock = {}
 
+ 
+// stupid rule to fix stupid problem
+Rule: DiagTrigSFreq1
+Priority: 100 
+( 
+    ({SFBlock@string == "risk"})
+):match 
+--> 
+:match.SChangeBlock = {}
+
+// stupid rule to fix stupid problem
+Rule: DiagTrigSFreq1
+Priority: 100 
+( 
+    ({SFBlock@string == "Risk"})
+):match 
+--> 
+:match.SChangeBlock = {}
