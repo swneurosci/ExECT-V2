@@ -10,12 +10,13 @@ Options: control=all
 // Could we combine the two !NegConj and !Trigger into ({!NegConj}|{!Trigger})[0,2]
 // Look at these two rules
 // This rule can fire when there is a NegConj - 77.txt "no history of X,Y or Z" - it is then changed back
+// 2025 - finally fixed
 Rule: reverseNegation
 (
 {Trigger}// Not
 ({Lookup})[1,5] // Seizures.....
-{!NegConj} 
-{!Trigger}
+({!NegConj, !Trigger})
+({!NegConj, !Trigger})
 ({Lookup.Negation == "Negated"}):umls // Negated seizures
 ):match
 -->
@@ -31,8 +32,8 @@ Rule: reverseNegation
 (
 {Trigger}
 ({Lookup3})[1,5]
-{!NegConj} 
-{!Trigger}
+({!NegConj, !Trigger})
+({!NegConj, !Trigger})
 ({Lookup3.Negation == "Negated"}):umls
 ):match
 -->
