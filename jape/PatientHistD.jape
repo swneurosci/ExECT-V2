@@ -7,6 +7,8 @@ Options: control=all
 Rule: PtHistoryD1
 Priority: 100
 
+// NO!!!!!!!!!!!!!!!!!!!!
+// Need control 
 
 (  
 
@@ -15,7 +17,7 @@ Priority: 100
 ):match  
  -->
 :item.PatientHistoryD = {rule = PtHistoryD, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI,
-EC = :item.OtherDiag.EC,
+EC = :item.OtherDiag.EC,  ruleOtherDiag = :item.OtherDiag.rule,
 Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation}
 
 
@@ -30,7 +32,7 @@ Priority: 100
 ):match  
  -->
 :item.PatientHistoryD = {rule = PtHistoryD, PREF = :item.OtherDiag.PREF,
-EC = :item.OtherDiag.EC,  
+EC = :item.OtherDiag.EC,  ruleOtherDiag = :item.OtherDiag.rule, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
 TimePeriod = :item.OtherDiag.TimePeriod,

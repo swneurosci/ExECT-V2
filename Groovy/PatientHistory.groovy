@@ -9,7 +9,7 @@ new File(scriptParams.outputFile).withWriterAppend{ out ->
       /${f.get('YearDate')},${f.get('MonthDate')},${f.get('DayDate')},${f.get('PointInTime')},/+
       /${f.get('Age')},${f.get('AgeLower')},${f.get('AgeUpper')},${f.get('AgeUnit')},/+
       /${f.get('Certainty')},${f.get('Negation')},${f.get('Experiencer')},/+
-      /${f.get('rule')}/)
+      /${f.get('rule')},${f.get('ruleOtherDiag')},${f.get('ruleFilter')}/)
     }
   }
 
