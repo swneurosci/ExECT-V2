@@ -4,7 +4,7 @@ Input: Lookup3 Person  Sentence DiagnosisTriggers OnsetPhrase
 Options: control=appelt
 
 /*these rule are to capture birth injuries and other events in the perinatal period*/
-
+// she was on special care baby unit for...//
 Rule: BirthB1
 Priority: 100
 
@@ -38,7 +38,7 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
-
+//This is likely to be secondary to a perinatal insult// 
 Rule: BirthB3
 Priority: 100
 
@@ -91,6 +91,8 @@ STY = :item.Lookup3.STY, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
+
+// Her birthwas normal //
 Rule: BirthB6
 Priority: 100
 
