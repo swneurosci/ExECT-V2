@@ -13,8 +13,10 @@ Priority: 100
 	
 ):match
 -->
-:item.PatientHistory = {rule = PatientHistoryAFilter, PREF = :item.PatientHistoryA.PREF, 
+:item.PatientHistory = {ruleFilter = PatientHistoryAFilter, PREF = :item.PatientHistoryA.PREF, 
 CUI = :item.PatientHistoryA.CUI, Negation = :item.PatientHistoryA.Negation, Certainty = :item.PatientHistoryA.Certainty, 
+ruleOtherDiag = :item.PatientHistoryA.ruleOtherDiag,
+rule = :item.PatientHistoryA.rule,
 EC = :item.PatientHistoryA.EC,
 AgeUnit = :item.PatientHistoryA.AgeUnit,
 AgeLower = :item.PatientHistoryA.AgeLower,
@@ -40,6 +42,8 @@ Priority: 100
 :item.PatientHistory = {rule = PatientHistoryBFilter, PREF = :item.PatientHistoryB.PREF, 
 CUI = :item.PatientHistoryB.CUI, Negation = :item.PatientHistoryB.Negation, Certainty = :item.PatientHistoryB.Certainty, 
 EC = :item.PatientHistoryB.EC,
+ruleOtherDiag = :item.PatientHistoryB.ruleOtherDiag,
+rule = :item.PatientHistoryB.rule,
 AgeUnit = :item.PatientHistoryB.AgeUnit,
 AgeLower = :item.PatientHistoryB.AgeLower,
 AgeUpper = :item.PatientHistoryB.AgeUpper,
@@ -63,6 +67,8 @@ Priority: 100
 :item.PatientHistory = {rule = PatientHistoryCFilter, PREF = :item.PatientHistoryC.PREF, 
 CUI = :item.PatientHistoryC.CUI, Negation = :item.PatientHistoryC.Negation, Certainty = :item.PatientHistoryC.Certainty, 
 EC = :item.PatientHistoryC.EC,
+ruleOtherDiag = :item.PatientHistoryC.ruleOtherDiag,
+rule = :item.PatientHistoryC.rule,
 AgeUnit = :item.PatientHistoryC.AgeUnit,
 AgeLower = :item.PatientHistoryC.AgeLower,
 AgeUpper = :item.PatientHistoryC.AgeUpper,
@@ -87,6 +93,8 @@ Priority: 100
 :item.PatientHistory = {rule = PatientHistoryDFilter, PREF = :item.PatientHistoryD.PREF, 
 CUI = :item.PatientHistoryD.CUI, Negation = :item.PatientHistoryD.Negation, Certainty = :item.PatientHistoryD.Certainty, 
 EC = :item.PatientHistoryD.EC,
+ruleOtherDiag = :item.PatientHistoryD.ruleOtherDiag,
+rule = :item.PatientHistoryD.rule,
 AgeUnit = :item.PatientHistoryD.AgeUnit,
 AgeLower = :item.PatientHistoryD.AgeLower,
 AgeUpper = :item.PatientHistoryD.AgeUpper,
