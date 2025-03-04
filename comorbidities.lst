@@ -169,8 +169,8 @@ Charcot-Marie Tooth Disease	CUI=C0007959	PREF=Charcot-Marie Tooth Disease	TUI=T0
 peroneal muscular atrophy	CUI=C0007959	PREF=Charcot-Marie Tooth Disease	TUI=T047	EC=No
 febrile convulsion	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=No
 febrile convulsions	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=No
-febrile seizure	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=Yes
-febrile seizures	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=Yes
+febrile seizure	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=No
+febrile seizures	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=No
 generalised tonic clonic seizure associated with fever	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=Yes
 generalised tonic clonic seizures associated with fever	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=Yes
 pyrexial convulsion	CUI=C0009952	PREF=Febrile Convulsions	TUI=T047	EC=Yes
@@ -187,8 +187,8 @@ craniotomy	CUI=C0010280	PREF=craniotomy	TUI=T061	EC=No
 Cytomegalovirus Infections	CUI=C0010823	PREF=Cytomegalovirus Infections	TUI=T047	EC=Yes
 CMV	CUI=C0010823	PREF=Cytomegalovirus Infections	TUI=T047	EC=Yes
 Cytomegalovirus disease	CUI=C0010823	PREF=Cytomegalovirus Infections	TUI=T047	EC=Yes
-D�j� vu	CUI=C0011194	PREF=d�j� vu	TUI=T041	EC=No
-deja vu	CUI=C0011194	PREF=d�j� vu	TUI=T041	EC=No
+D j  vu	CUI=C0011194	PREF=d j  vu	TUI=T041	EC=No
+deja vu	CUI=C0011194	PREF=d j  vu	TUI=T041	EC=No
 depression	CUI=C0011570	PREF=Mental Depression	TUI=T048	EC=No
 depressed	CUI=C0011570	PREF=Mental Depression	TUI=T048	EC=No
 diabetes insipidus	CUI=C0011848	PREF=Diabetes Insipidus	TUI=T047	EC=No
@@ -240,9 +240,9 @@ subdural haemorrhage	CUI=C0018946	PREF=Hematoma, Subdural	TUI=T046	EC=Yes
 subdural haematoma	CUI=C0018946	PREF=Hematoma, Subdural	TUI=T046	EC=Yes
 sub dural haematoma	CUI=C0018946 	PREF=Hematoma, Subdural	TUI=T046	EC=Yes
 hemiparesis	CUI=C0018989	PREF=Hemiparesis	TUI=T184	EC=No
-haemorrhage	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=No
-bleeding	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=No
-blood loss	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=No
+haemorrhage	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=Yes
+bleeding	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=Yes
+blood loss	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=Yes
 HIV infection	CUI=C0019693	PREF=HIV infection	TUI=T047	EC=Yes
 Human immunodeficiency virus infection	CUI=C0019693	PREF=HIV infection	TUI=T047	EC=Yes
 T-Lymphotropic Virus Type III Infections	CUI=C0019693	PREF=HIV infection	TUI=T047	EC=Yes
@@ -341,7 +341,7 @@ phantom bone disease	CUI=C0029438	PREF=Massive Osteolyses	TUI=T047	EC=No
 parasomnia	CUI=C0030508	PREF=Parasomnia	TUI=T047	EC=No
 parasomnia	CUI=C0030508	PREF=Parasomnia	TUI=T047	EC=No
 parasomnia	CUI=C0030508 	PREF=Parasomnia	TUI=T047	EC=No
-parasomnis	CUI=C0030508 	PREF=Parasomnia	TUI=T047	EC=No
+parasomnias	CUI=C0030508 	PREF=Parasomnia	TUI=T047	EC=No
 idiopathic parkinson's disease	CUI=C0030567	PREF=Parkinson Disease	TUI=T047	EC=No
 parkinsons disease	CUI=C0030567	PREF=Parkinson Disease	TUI=T047	EC=No
 parkinson's disease	CUI=C0030567	PREF=Parkinson Disease	TUI=T047	EC=No
@@ -394,7 +394,7 @@ apvr	CUI=C0036400	PREF=Scimitar syndrome	TUI=T019	EC=No
 pulmonary venous return anomaly	CUI=C0036400	PREF=Scimitar syndrome	TUI=T019	EC=No
 pulmonary venolobar syndrome	CUI=C0036400	PREF=Scimitar syndrome	TUI=T019	EC=No
 total anomalous pulmonary venous drainage	CUI=C0036400	PREF=Scimitar syndrome	TUI=T019	EC=No
-sclerosis	CUI=C0036429	PREF=Sclerosis	TUI=T046	EC=No
+sclerosis	CUI=C0036429	PREF=Sclerosis	TUI=T046	EC=Yes
 Self-mutilation	CUI=C0036601	PREF=Self Mutilation	TUI=T033	EC=No
 deliberate self-harm	CUI=C0085271	PREF=Self-Injurious Behavior	TUI=T055	EC=No
 self-injurious behavior	CUI=C0085271	PREF=Self-Injurious Behavior	TUI=T055	EC=No
@@ -492,9 +492,9 @@ Acquired toxoplasmal meningoencephalitis	CUI=C0085315	PREF=Toxoplasmosis, Cerebr
 alcohol abuse	CUI=C0085762	PREF=Alcohol abuse	TUI=T048	EC=Yes
 excess alcohol consumption	CUI=C0085762	PREF=Alcohol abuse	TUI=T048	EC=Yes
 too much alcohol	CUI=C0085762	PREF=Alcohol abuse	TUI=T048	EC=Yes
-benign neoplasm	CUI=C0086692	PREF=Benign Neoplasm	TUI=T191	EC=No
-benign tumour	CUI=C0086692	PREF=Benign Neoplasm	TUI=T191	EC=No
-Benign neoplastic disease	CUI=C0086692	PREF=Benign Neoplasm	TUI=T191	EC=No
+benign neoplasm	CUI=C0086692	PREF=Benign Neoplasm	TUI=T191	EC=Yes
+benign tumour	CUI=C0086692	PREF=Benign Neoplasm	TUI=T191	EC=Yes
+Benign neoplastic disease	CUI=C0086692	PREF=Benign Neoplasm	TUI=T191	EC=Yes
 panic attacks	CUI=C0086769	PREF=Panic Attacks	TUI=T048	EC=No
 behavior disturbance	CUI=C0149623	PREF=behavior disturbance	TUI=T048	EC=No
 behavioural disturbance	CUI=C0149623	PREF=behavior disturbance	TUI=T048	EC=No
@@ -530,8 +530,8 @@ malignant brain neoplasms	CUI=C0153633	PREF=Malignant neoplasm of brain	TUI=T191
 malignant brain tumour	CUI=C0153633	PREF=Malignant neoplasm of brain	TUI=T191	EC=Yes
 malignant brain tumor	CUI=C0153633	PREF=Malignant neoplasm of brain	TUI=T191	EC=Yes
 malignant neoplasm of brain	CUI=C0153633	PREF=Malignant neoplasm of brain	TUI=T191	EC=Yes
-neoplastic disease of uncertain behaviour	CUI=C0154129	PREF=Neoplastic disease of uncertain behaviour	TUI=T191	EC=No
-borderline Neoplasm	CUI=C0154129	PREF=Neoplastic disease of uncertain behaviour	TUI=T191	EC=No
+neoplastic disease of uncertain behaviour	CUI=C0154129	PREF=Neoplastic disease of uncertain behaviour	TUI=T191	EC=Yes
+borderline Neoplasm	CUI=C0154129	PREF=Neoplastic disease of uncertain behaviour	TUI=T191	EC=Yes
 spastic hemiplegia	CUI=C0154694	PREF=Hemiplegia, Spastic	TUI=T047	EC=No
 partial anomalous pulmonary venous connection	CUI=C0158634	PREF=partial anomalous pulmonary venous connection	TUI=T019	EC=No
 partial anomalous pulmonary venous return	CUI=C0158634	PREF=partial anomalous pulmonary venous connection	TUI=T019	EC=No
@@ -600,7 +600,7 @@ ruptured ACA aneurysm	CUI=C0242084	PREF=Ruptured cerebral aneurysm	TUI=T047	EC=Y
 ruptured cerebral aneurysm	CUI=C0242084	PREF=Ruptured cerebral aneurysm	TUI=T047	EC=Yes
 ruptured cerebral artery aneurysm	CUI=C0242084	PREF=Ruptured cerebral aneurysm	TUI=T047	EC=Yes
 thrombotic stroke	CUI=C0242129	PREF=Thrombotic stroke	TUI=T047	EC=Yes
-hypoxia	CUI=C0242184	PREF=Hypoxia	TUI=T046	EC=No
+hypoxia	CUI=C0242184	PREF=Hypoxia	TUI=T046	EC=Yes
 Parkinsonian disease	CUI=C0242422	PREF=Parkinsonian Disorders	TUI=T047	EC=No
 parkinsonism	CUI=C0242422	PREF=Parkinsonian Disorders	TUI=T047	EC=No
 viral encephalitis	CUI=C0243010	PREF=viral encephalitis	TUI=T047	EC=Yes
@@ -683,8 +683,8 @@ intracerebral injury	CUI=C0270611	PREF=Brain Injuries	TUI=T037	EC=Yes
 lobe damage	CUI=C0270611	PREF=Brain Injuries	TUI=T037	EC=Yes
 essential myoclonus	CUI=C0270737	PREF=Familial essential myoclonus	TUI=T047	EC=No
 familial essential myoclonus	CUI=C0270737	PREF=Familial essential myoclonus	TUI=T047	EC=No
-temporal bone fracture	CUI=C0272461	PREF=Fracture of temporal bone	TUI=T037	EC=No
-temporal bone fracture	CUI=C0272461	PREF=Fracture of temporal bone	TUI=T037	EC=No
+temporal bone fracture	CUI=C0272461	PREF=Fracture of temporal bone	TUI=T037	EC=
+temporal bone fracture	CUI=C0272461	PREF=Fracture of temporal bone	TUI=T037	EC=
 herpes simplex encephalitis	CUI=C0276226	PREF=Herpes encephalitis	TUI=T047	EC=Yes
 herpes encephalitis	CUI=C0276226	PREF=Herpes encephalitis	TUI=T047	EC=Yes
 herpes encephalitis	CUI=C0276226	PREF=Herpes encephalitis	TUI=T047	EC=Yes
@@ -762,8 +762,8 @@ laevoatrial cardinal vein	CUI=C0344660	PREF=laevoatrial cardinal vein	TUI=T019	E
 left atrium to innominate vein	CUI=C0344660	PREF=laevoatrial cardinal vein	TUI=T019	EC=No
 left atrium to innominate vein	CUI=C0344660	PREF=laevoatrial cardinal vein	TUI=T019	EC=No
 levoatrial cardinal vein	CUI=C0344660	PREF=laevoatrial cardinal vein	TUI=T019	EC=No
-absent bridging vein	CUI=C0344661	PREF=absent bridging vein	TUI=T019	EC=No
-anomal portal vein termination	CUI=C0344674	PREF=Anomalous portal vein termination	TUI=T019	EC=No
+absent bridging vein	CUI=C0344661	PREF=absent bridging vein	TUI=T019	EC=
+anomal portal vein termination	CUI=C0344674	PREF=Anomalous portal vein termination	TUI=T019	EC=
 anomalous portal vein termination	CUI=C0344674	PREF=Anomalous portal vein termination	TUI=T019	EC=No
 coronary sinus defect in left atrium	CUI=C0344681	PREF=Coronary sinus defect in left atrium	TUI=T019	EC=No
 partially unroofed coronary sinus	CUI=C0344681	PREF=Coronary sinus defect in left atrium	TUI=T019	EC=No
@@ -771,11 +771,11 @@ congenital coronary sinus stenosis	CUI=C0344684	PREF=congenital coronary sinus s
 congenital aneurysm of coronary sinus	CUI=C0344686	PREF=congenital aneurysm of coronary sinus	TUI=T019	EC=No
 ductus venosus abnormality	CUI=C0344687	PREF=Ductus venosus abnormality	TUI=T019	EC=Yes
 venous duct abnormality	CUI=C0344687	PREF=Ductus venosus abnormality	TUI=T019	EC=Yes
-prominent eustachian valve	CUI=C0344698	PREF=Prominent valve of inferior vena cava	TUI=T019	EC=
-prominent valve of inferior vena cava	CUI=C0344698	PREF=Prominent valve of inferior vena cava	TUI=T019	EC=
-anomalous valve of coronary sinus	CUI=C0344701	PREF=Anomalous valve of coronary sinus	TUI=T019	EC=
-Perimembranous ventricular septal defect	CUI=C0344925	PREF=Perimembranous ventricular septal defect	TUI=T019	EC=
-Perimembranous VSD	CUI=C0344925	PREF=Perimembranous ventricular septal defect	TUI=T019	EC=
+prominent eustachian valve	CUI=C0344698	PREF=Prominent valve of inferior vena cava	TUI=T019	EC=No
+prominent valve of inferior vena cava	CUI=C0344698	PREF=Prominent valve of inferior vena cava	TUI=T019	EC=No
+anomalous valve of coronary sinus	CUI=C0344701	PREF=Anomalous valve of coronary sinus	TUI=T019	EC=No
+Perimembranous ventricular septal defect	CUI=C0344925	PREF=Perimembranous ventricular septal defect	TUI=T019	EC=No
+Perimembranous VSD	CUI=C0344925	PREF=Perimembranous ventricular septal defect	TUI=T019	EC=No
 intrapulmonary arteriovenous fistula	CUI=C0345042	PREF=Intrapulmonary arteriovenous fistula	TUI=T019	EC=No
 cobb syndrome	CUI=C0346068	PREF=Cobb's syndrome	TUI=T047	EC=No
 cobb's syndrome	CUI=C0346068	PREF=Cobb's syndrome	TUI=T047	EC=No
@@ -859,13 +859,13 @@ hemimegalencephaly	CUI=C0431391	PREF=Hemimegalencephaly	TUI=T047	EC=Yes
 unilateral macrocephaly	CUI=C0431391	PREF=Hemimegalencephaly	TUI=T047	EC=Yes
 congenital arteriovenous malformation of retina	CUI=C0431454	PREF=congenital arteriovenous malformation of retina	TUI=T019	EC=No
 ongenital arteriovenous anomaly of retina	CUI=C0431454	PREF=congenital arteriovenous malformation of retina	TUI=T019	EC=No
-debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	EC=
-de-bulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	EC=
-tumor debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	EC=
+debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	EC=Yes
+de-bulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	EC=Yes
+tumor debulking	CUI=C0439805	PREF=Tumor debulking	TUI=T061	EC=Yes
 neuropathy	CUI=C0442874	PREF=Neuropathy	TUI=T047	EC=No
 brain stem stroke syndrome	CUI=C0451671	PREF=brain stem stroke syndrome	TUI=T047	EC=Yes
 Multiple Head Injuries	CUI=C0451948	PREF=Head Injuries, Multiple	TUI=T037	EC=Yes
-perinatal hypoxia and asphyxia	CUI=C0456033 	PREF=Perinatal hypoxia and asphyxia 	TUI=T037	EC=Yes
+perinatal hypoxia and asphyxia	CUI=C0456033 	PREF=Perinatal hypoxia and asphyxia, birth 	TUI=T037	EC=Yes
 perinatal trauma	CUI=C0456798	PREF=Perinatal trauma, birth	TUI=T037	EC=Yes
 right hemiplegia	CUI=C0457433	PREF=Right hemiplegia	TUI=T033	EC=No
 right sided hemiplegia	CUI=C0457433	PREF=Right hemiplegia	TUI=T033	EC=No
@@ -993,11 +993,11 @@ malignant primary brain tumour	CUI=C0750979	PREF=Primary malignant neoplasm of b
 malignant primary brain tumor	CUI=C0750979	PREF=Primary malignant neoplasm of brain	TUI=T191	EC=Yes
 primary malignant brain tumours	CUI=C0750979	PREF=Primary malignant neoplasm of brain	TUI=T191	EC=Yes
 primary malignant neoplasm of brain	CUI=C0750979	PREF=Primary malignant neoplasm of brain	TUI=T191	EC=Yes
-complex febrile seizure	CUI=C0751057	PREF=Seizure, Febrile, Complex	TUI=T047	EC=Yes
-complex febrile seizures	CUI=C0751057	PREF=Seizure, Febrile, Complex	TUI=T047	EC=Yes
-Complex febrile convulsion	CUI=C0751057	PREF=Seizure, Febrile, Complex	TUI=T047	EC=Yes
-Complex febrile convulsions	CUI=C0751057	PREF=Seizure, Febrile, Complex	TUI=T047	EC=Yes
-Complex fever fit	CUI=C0751057	PREF=Seizure, Febrile, Complex	TUI=T047	EC=Yes
+complex febrile seizure	CUI=C0751057	PREF=Seizure, Febrile, Complex	TUI=T047	EC=No
+complex febrile seizures	CUI=C0751057	PREF=Seizure, Febrile, Complex	TUI=T047	EC=No
+Complex febrile convulsion	CUI=C0751057	PREF=Seizure, Febrile, Complex	TUI=T047	EC=No
+Complex febrile convulsions	CUI=C0751057	PREF=Seizure, Febrile, Complex	TUI=T047	EC=No
+Complex fever fit	CUI=C0751057	PREF=Seizure, Febrile, Complex	TUI=T047	EC=No
 learning disabilities	CUI=C0751265	PREF=learning disability	TUI=T048	EC=No
 learning disability	CUI=C0751265	PREF=learning disability	TUI=T048	EC=No
 sleep myoclonus	CUI=C0751352	PREF=sleep myoclonus	TUI=T184	EC=No
@@ -1515,3 +1515,4 @@ myoclonus, cerebellar ataxia, deafness syndrome	CUI=C4518566	PREF=Myoclonus, cer
 premature birth	CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
 prematurity CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
 premature delivery	CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
+haemorrhages	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=Yes

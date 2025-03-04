@@ -201,11 +201,6 @@ myoclonic epilepsy with ragged red fibers	CUI=C0162672	PREF=MERRF Syndrome	TUI=T
 myoclonus with epilepsy and with ragged red fibers (merrf syndrome)	CUI=C0162672	PREF=MERRF Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 myoclonus with epilepsy with ragged red fibers	CUI=C0162672	PREF=MERRF Syndrome	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 myoencephalopathy ragged red fiber disease	CUI=C0162672	PREF=MERRF Syndrome	TUI=T047	STY=Disease or Syndrome
-hyperekplexia	CUI=C0234166	PREF=hyperekplexia	TUI=T184	STY=sign or symptom
-hyperekplexias	CUI=C0234166	PREF=hyperekplexias	TUI=T184	STY=sign or symptom
-hyperexplexia	CUI=C0234166	PREF=hyperexplexia	TUI=T184	STY=sign or symptom
-hyperexplexia (finding)	CUI=C0234166	PREF=hyperexplexia (finding)	TUI=T184	STY=sign or symptom
-startle syndrome	CUI=C0234166	PREF=startle syndrome	TUI=T184	STY=sign or symptom
 generalised convulsion	CUI=C0234533	PREF=Generalized seizures	TUI=T047	STY=Disease or Syndrome
 generalised fit	CUI=C0234533	PREF=Generalized seizures	TUI=T047	STY=Disease or Syndrome
 generalised seizure	CUI=C0234533	PREF=Generalized seizures	TUI=T047	STY=Disease or Syndrome
@@ -969,3 +964,5 @@ Childhood Occipital Visual Epilepsy (COVE)	CUI=C0393675	PREF=Childhood Benign Oc
 Childhood Occipital Visual Epilepsy	CUI=C0393675	PREF=Childhood Benign Occipital Epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 focal seizures with impaired awareness	CUI=C0270834	PREF=Complex partial seizure with impairment of consciousness	TUI=T047	STY=Disease or Syndrome
 Epilepsy with myolonic absences	CUI=C0393703	PREF=Myoclonic Absence Epilepsy	TUI=T047	STY=Disease or Syndrome
+non-convulsive status epilepticus	CUI=C0751523	PREF=non-convulsive status epilepticus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+non convulsive status epilepticus	CUI=C0751523	PREF=non-convulsive status epilepticus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
