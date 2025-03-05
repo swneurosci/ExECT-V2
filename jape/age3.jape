@@ -18,6 +18,10 @@ Priority: 80
 :match.Age = {rule =Age5, AgeUnit = "Year",
 AgeLower =:match.age2.LowerAge, AgeUpper =:match.age2.UpperAge}
 
+// age of 5 ?month and 1 year
+
+//age of 1 and 3 years 
+
 Rule: age3_2 
 Priority: 100
 

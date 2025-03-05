@@ -6,6 +6,7 @@ Options: control= all
 /*  Additional PtHistory These rules annotate events in patient history - type of event with an UMLS CUI, age (precise and as a range), 
 date as year/month, and time since the event, as TimePeriod / NumberOfTimePeriods) And this should be the 3rd event within sentence
 */
+// All fine - similar to PTHistB 17 rule in other Jape file ( i think anything picked up by that will also be picked up by C2)
 
 // why empty inputs
 
@@ -19,7 +20,7 @@ Priority: 100
 ):match  
  -->
 :item.PatientHistoryC = {rule = PtHistoryC1, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI,
-EC = :item.OtherDiag.EC,  
+EC = :item.OtherDiag.EC,  ruleOtherDiag = :item.OtherDiag.rule, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
 TimePeriod = :item.OtherDiag.TimePeriod,
@@ -43,7 +44,7 @@ Priority: 100
 ):match  
  -->
 :item.PatientHistoryC = {rule = PtHistoryC2, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI,
-EC = :item.OtherDiag.EC,  
+EC = :item.OtherDiag.EC,  ruleOtherDiag = :item.OtherDiag.rule, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
 TimePeriod = :item.OtherDiag.TimePeriod,
@@ -68,7 +69,7 @@ Priority: 100
 ):match  
  -->
 :item.PatientHistoryC = {rule = PtHistoryC3, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI,
-EC = :item.OtherDiag.EC,  
+EC = :item.OtherDiag.EC,  ruleOtherDiag = :item.OtherDiag.rule, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
 TimePeriod = :item.OtherDiag.TimePeriod,
@@ -95,7 +96,7 @@ Priority: 100
 ):match  
  -->
 :item.PatientHistoryC = {rule = PtHistoryC4, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI,
-EC = :item.OtherDiag.EC,  
+EC = :item.OtherDiag.EC,  ruleOtherDiag = :item.OtherDiag.rule, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
 TimePeriod = :item.OtherDiag.TimePeriod,
@@ -124,7 +125,7 @@ Priority: 100
 ):match  
  -->
 :item.PatientHistoryC = {rule = PtHistoryC5, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI,
-EC = :item.OtherDiag.EC,  
+EC = :item.OtherDiag.EC,  ruleOtherDiag = :item.OtherDiag.rule, 
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
 TimePeriod = :item.OtherDiag.TimePeriod,

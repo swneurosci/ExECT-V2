@@ -166,7 +166,9 @@ Certainty = :item.OtherDiag.Certainty,
 TimePeriod = :match.TimeSince.time-unit,
 NumberOfTimePeriods =:match.TimeSince.value}*/
 
-Rule: PtHistoryA21
+
+// HS Update rule name so matches others in the file - was PtHistoryA21
+Rule: OtherDiagnosis9
 Priority: 98 //({Lookup2.type == suffered}|{Lookup2.type == has})
 
 (   
@@ -177,7 +179,7 @@ Priority: 98 //({Lookup2.type == suffered}|{Lookup2.type == has})
 
  ):match  
  -->
-:item.PatientHistory = {rule = PtHistoryA21, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+:item.PatientHistory = {rule = OtherDiagnosis9, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 EC = :item.OtherDiag.EC, Negation = :item.OtherDiag.Negation,
 Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Certainty = :item.OtherDiag.Certainty,

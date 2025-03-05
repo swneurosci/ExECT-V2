@@ -15,6 +15,18 @@ Priority: 100
  -->
 :match.YearToMonths = {rule = YearToMonths1 , value = "12" , timePeriod = "Month"}
 
+// a year
+Rule: YearToMonths1b
+Priority: 100
+
+(   
+    {Token.string == "a"}
+	{timePeriod.time-unit == Year}  
+    
+ ):match  
+ -->
+:match.YearToMonths = {rule = YearToMonths1b , value = "12" , timePeriod = "Month"}
+
 
 Rule: YearToMonths2
 Priority: 100
@@ -64,3 +76,74 @@ Priority: 100
  ):match  
  -->
 :match.YearToMonths = {rule = YearToMonths5 , value = "60" , timePeriod = "Month"}
+
+
+Rule: YearToMonths6
+Priority: 100
+
+(   
+    
+    {Numeric.value == 6}
+	{timePeriod.time-unit == Year}
+    
+ ):match  
+ -->
+:match.YearToMonths = {rule = YearToMonths6 , value = "72" , timePeriod = "Month"}
+
+
+
+
+Rule: YearToMonths7
+Priority: 100
+
+(   
+    
+    {Numeric.value == 7}
+	{timePeriod.time-unit == Year}
+    
+ ):match  
+ -->
+:match.YearToMonths = {rule = YearToMonths7 , value = "84" , timePeriod = "Month"}
+
+
+
+
+Rule: YearToMonths8
+Priority: 100
+
+(   
+    
+    {Numeric.value == 8}
+	{timePeriod.time-unit == Year}
+    
+ ):match  
+ -->
+:match.YearToMonths = {rule = YearToMonths8 , value = "96" , timePeriod = "Month"}
+
+
+
+Rule: YearToMonths9
+Priority: 100
+
+(   
+    
+    {Numeric.value == 9}
+	{timePeriod.time-unit == Year}
+    
+ ):match  
+ -->
+:match.YearToMonths = {rule = YearToMonths9 , value = "108" , timePeriod = "Month"}
+
+
+
+Rule: YearToMonths10
+Priority: 100
+
+(   
+    
+    {Numeric.value == 10}
+	{timePeriod.time-unit == Year}
+    
+ ):match  
+ -->
+:match.YearToMonths = {rule = YearToMonths10 , value = "120" , timePeriod = "Month"}

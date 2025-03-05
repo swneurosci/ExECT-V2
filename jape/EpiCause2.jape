@@ -6,6 +6,7 @@ Input: Lookup Lookup3 CausePhrase Split listPoint
    following an epilepsy diagnosis  - hence they have to follow Epilepsy diagnosis in the pipline in order to work */
 //listPoint should stop picking up top letter lists
   
+/// Epilepsy. ..... Related to ..... Dementia
 
 Options: control=appelt
 

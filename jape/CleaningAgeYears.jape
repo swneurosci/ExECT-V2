@@ -1,0 +1,42 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: CleaningAge
+Input: Age
+Options: control=all
+
+
+Rule: CleaningAge
+(
+    ({Age.AgeChanged == "Lower"}):a
+
+):match
+-->
+:match{
+    Annotation ageChange = bindings.get("match").iterator().next();//Get Annotations
+    //System.out.println(ageChange.getFeatures());
+    String ageLower = getOnlyAnn(bindings.get("a")).getFeatures().get("AgeLower").toString(); // get the lower age value as a string
+    float ageLowerfloat= Float.valueOf(ageLower); // convert to interger
+    //System.out.println(ageLowerINT);
+    float ageLowerNew = ageLowerfloat * 12; // times 12 to convert to months
+    //System.out.println(ageLowerNew);
+    ageChange.getFeatures().put("AgeLower", ageLowerNew); // replace old value with new (x12) value
+}
+
+
+
+Rule: CleaningAge
+(
+    ({Age.AgeChanged == "Upper"}):a
+
+):match
+-->
+:match{
+    Annotation ageChange = bindings.get("match").iterator().next();//Get Annotations
+    //System.out.println(ageChange.getFeatures());
+    String ageUpper = getOnlyAnn(bindings.get("a")).getFeatures().get("AgeUpper").toString();
+    float ageUpperfloat = Float.valueOf(ageUpper);
+   // System.out.println(ageUpperfloat);
+    float ageUpperNew = ageUpperfloat * 12;
+    //System.out.println(ageUpperNew);
+    ageChange.getFeatures().put("AgeUpper", ageUpperNew);
+}
