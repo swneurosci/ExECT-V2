@@ -87,7 +87,7 @@ Priority: 100
 :item.BirthHistory = {rule = Prem4, PREF = "late preterm", CUI = C3829315, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "34 to 37 weeks"}
 
-
+// He was born on time
 Rule: Term1
 Priority: 100
 

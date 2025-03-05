@@ -1539,3 +1539,6 @@ premature birth	CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
 prematurity CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
 premature delivery	CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
 haemorrhages	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=Yes
+symptomatic seizure	CUI=C4023516	PREF=Symptomatic Seizures	TUI=T184	STY=sign or symptom
+symptomatic seizures	CUI=C4023516	PREF=Symptomatic Seizures	TUI=T184	STY=sign or symptom
+acute symptomatic seizure	CUI=C4023516	PREF=Symptomatic Seizures	TUI=T184	STY=sign or symptom
