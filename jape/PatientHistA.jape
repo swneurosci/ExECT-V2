@@ -209,11 +209,16 @@ NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
 
 
 // Nees Age and Date in output?
+	//
+	//
 Rule: PtHistoryA9  /* top of letter diagnosis*/
 Priority: 100
 
 (   
-	({DiagnosisTriggers.type == diagnosis})
+	
+	({DiagnosisTriggers})
+	({listPoint})?
+	({CausePhrase})
 	({OtherDiag}):item	
     
  ):match  
@@ -332,8 +337,8 @@ Rule: PtHistoryA15  // As in : History is consistent with  epilepsy secondary to
 Priority: 90
 
 (   
-	({DiagnosisTriggers.Type == diagnosis})
-	({Experience})?
+	({DiagnosisTriggers.type == diagnosis})
+	({Experience})
 	({OtherDiag}):item
 	
  ):match  
