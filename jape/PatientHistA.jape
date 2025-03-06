@@ -1,5 +1,5 @@
 Phase: PatientHistA
-Input: OtherDiag Experience Conj CausePhrase TimeSince Person DateSince Investigation Split PartialDate NewLine Sentence DiagnosisTriggers PointInTime Age Pronouns  MedicalHistory listPoint 
+Input: OtherDiag Experience Conj CausePhrase TimeSince Person DateSince Investigation Split PartialDate NewLine DiagnosisTriggers PointInTime Age Pronouns  MedicalHistory listPoint 
 
 //Lookup3 was used as a block but I took it out
 /*These are expected to pick up the 1st of OtherDiag shown in a sentence, deriving age/timesince/datesince from OtherDiag 
@@ -37,7 +37,7 @@ Rule: PtHistoryA2  /* To capture otherdiagnosis which is combined with Date or T
 Priority: 100
 (   
 	({Person})
-	({Experience})
+	({Experience})[1,2]
 	({OtherDiag}):item
     
  ):match  
@@ -210,14 +210,14 @@ NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
 
 // Nees Age and Date in output?
 	//
+	
 	//
 Rule: PtHistoryA9  /* top of letter diagnosis*/
 Priority: 100
 
 (   
-	
 	({DiagnosisTriggers})
-	({listPoint})?
+	({listPoint})
 	({CausePhrase})
 	({OtherDiag}):item	
     
