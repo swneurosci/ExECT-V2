@@ -1,5 +1,5 @@
 Phase: EpiCause2
-Input: Lookup Lookup3 CausePhrase Split listPoint
+Input: Lookup Lookup3 CausePhrase Split listPoint 
 
 
   /*These rules are set to select causes and suspected causes of epilepsy, when they are shown 
