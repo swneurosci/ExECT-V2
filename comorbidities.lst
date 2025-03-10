@@ -1542,3 +1542,4 @@ haemorrhages	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=Yes
 symptomatic seizure	CUI=C4023516	PREF=Symptomatic Seizures	TUI=T184	STY=sign or symptom
 symptomatic seizures	CUI=C4023516	PREF=Symptomatic Seizures	TUI=T184	STY=sign or symptom
 acute symptomatic seizure	CUI=C4023516	PREF=Symptomatic Seizures	TUI=T184	STY=sign or symptom
+symptomatic myoclonus	CUI=C0393619	PREF=Symptomatic myoclonus	TUI=T047	STY=Disease or Syndrome
