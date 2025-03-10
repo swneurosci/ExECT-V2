@@ -187,8 +187,8 @@ craniotomy	CUI=C0010280	PREF=craniotomy	TUI=T061	EC=No
 Cytomegalovirus Infections	CUI=C0010823	PREF=Cytomegalovirus Infections	TUI=T047	EC=Yes
 CMV	CUI=C0010823	PREF=Cytomegalovirus Infections	TUI=T047	EC=Yes
 Cytomegalovirus disease	CUI=C0010823	PREF=Cytomegalovirus Infections	TUI=T047	EC=Yes
-D j  vu	CUI=C0011194	PREF=d j  vu	TUI=T041	EC=No
-deja vu	CUI=C0011194	PREF=d j  vu	TUI=T041	EC=No
+Déjà vu	CUI=C0011194	PREF=déjà vu	TUI=T041	EC=No
+deja vu	CUI=C0011194	PREF=déjà vu	TUI=T041	EC=No
 depression	CUI=C0011570	PREF=Mental Depression	TUI=T048	EC=No
 depressed	CUI=C0011570	PREF=Mental Depression	TUI=T048	EC=No
 diabetes insipidus	CUI=C0011848	PREF=Diabetes Insipidus	TUI=T047	EC=No
