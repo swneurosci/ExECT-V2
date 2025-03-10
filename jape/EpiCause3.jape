@@ -28,12 +28,13 @@ STY = :item.PatientHistory.STY, Negation = :item.PatientHistory.Negation,
 Experiencer = :item.PatientHistory.Experiencer, Temporality = :item.PatientHistory.Temporality, 
 Certainty = :a.Lookup2.Level}
 
-Rule: Cause3b
+
+Rule: Cause3b 
 Priority: 99
 
 (   
 	
-    {DiagnosisTriggers}
+    
     {Lookup.majorType == umls , Lookup.minorType == Disease , Lookup.Experiencer == Patient}
     {CausePhrase}
 	({Lookup2.minorType == gestation}):item

@@ -1,5 +1,5 @@
 Phase: PatientHistory
-Input:  PatientHistoryA PatientHistoryB PatientHistoryC PatientHistoryD
+Input:  PatientHistoryA PatientHistoryB PatientHistoryC //PatientHistoryD
 Options: control=appelt
 
 // filtering the longest match for Patient History diagnosis to remove incomplete annotations
@@ -83,8 +83,8 @@ UpperNumberOfTimePeriods = :item.PatientHistoryC.UpperNumberOfTimePeriods,
 NumberOfTimePeriods = :item.PatientHistoryC.NumberOfTimePeriods}
 
 
-Rule: PatientHistoryDFilter
-Priority: 100
+//Rule: PatientHistoryDFilter
+/*Priority: 100
 (
 	({PatientHistoryD}):item
 	
@@ -106,4 +106,4 @@ PointInTime = :item.PatientHistoryD.PointInTime,
 TimePeriod = :item.PatientHistoryD.TimePeriod,
 LowerNumberOfTimePeriods = :item.PatientHistoryD.LowerNumberOfTimePeriods,
 UpperNumberOfTimePeriods = :item.PatientHistoryD.UpperNumberOfTimePeriods,
-NumberOfTimePeriods = :item.PatientHistoryD.NumberOfTimePeriods}
+NumberOfTimePeriods = :item.PatientHistoryD.NumberOfTimePeriods}*/

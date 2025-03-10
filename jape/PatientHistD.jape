@@ -2,10 +2,10 @@ Phase: PatientHistD
 Input: OtherDiag Token
 
 
-Options: control=all
+//Options: control=all
 
-Rule: PtHistoryD1
-Priority: 100
+//Rule: PtHistoryD1
+/*Priority: 100
 
 // NO!!!!!!!!!!!!!!!!!!!!
 // Need control 

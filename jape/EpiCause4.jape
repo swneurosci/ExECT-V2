@@ -31,6 +31,9 @@ EC = :item.Lookup3.EC,
 //Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty}
 
+
+// this picks up a diagnosis of symptomatic epilepsy followed by a cause without a couse phrase : 
+//Symptomatic structural focal epilepsy (probable perinatal insult)
 Rule: Cause4b
 Priority: 99
 

@@ -557,7 +557,7 @@ Rule: Seizures15  //Includes hypothetical Lookup3 but possesive makes it worth a
 // it is the only PatientHistory output with Temporality- so we may filter this out if needed
 (  
 	({Person.type == possessive})
-	({Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Negation == Affirmed}):item
+	({Lookup3.majorType == umls, Lookup3.minorType == generic, Lookup3.Negation == Affirmed, Lookup3.Experiencer == Patient}):item
 
  ):match  
  -->
@@ -591,7 +591,7 @@ Rule: LastSeizureDate1  //Date
 
 (   
     ({timeElapsed.time == Last})
-    ({Lookup3.minorType == generic, Lookup3.PREF =~ "[Ss]eizure"}):item
+    ({Lookup3.minorType == generic, Lookup3.PREF =~ "[Ss]eizure", Lookup3.Experiencer == Patient}):item
 	({DateSince})
 	
 	

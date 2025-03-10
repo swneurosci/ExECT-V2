@@ -161,7 +161,7 @@ clonic epileptic seizures	CUI=C0347870	PREF=Epileptic seizures - clonic	TUI=T047
 epileptic seizures - clonic	CUI=C0347870	PREF=Epileptic seizures - clonic	TUI=T047	STY=Disease or Syndrome
 epileptic seizures, clonic	CUI=C0347870	PREF=Epileptic seizures - clonic	TUI=T047	STY=Disease or Syndrome
 other specified myoclonus	CUI=C0393618	PREF=Other specified myoclonus	TUI=T047	STY=Disease or Syndrome
-symptomatic myoclonus	CUI=C0393619	PREF=Symptomatic myoclonus	TUI=T047	STY=Disease or Syndrome
+
 drug-induced myoclonus	CUI=C0393622	PREF=Drug-induced myoclonus	TUI=T046	STY=Pathologic Function
 segmental cord myoclonus	CUI=C0393623	PREF=Segmental cord myoclonus	TUI=T047	STY=Disease or Syndrome
 palatal-tympanic myoclonus	CUI=C0393624	PREF=Palatal-tympanic myoclonus	TUI=T047	STY=Disease or Syndrome
