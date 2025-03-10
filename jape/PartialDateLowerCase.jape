@@ -1,0 +1,49 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: Cleaning
+Input: PartialDate Lookup2
+Options: control=appelt
+
+// This rule could be done to Lookup2 minorType=Date majorType=Time but i think this will be quicker
+// Remove Partial date when it is only a month (usualy 'may') in lowercases only
+ 
+ 
+
+Rule: PartialDateLowerCase
+
+(
+  {PartialDate contains Lookup2.minorType == "date"}
+):umls
+
+-->
+:umls { 
+    AnnotationSet contAnnots = getContainedAnnotations(inputAS, umlsAnnots, "Lookup2"); // get contained lookup2 annotations
+    List<Annotation> contList = gate.Utils.inDocumentOrder(contAnnots);
+    if (contList.size() == 0) {
+        return;
+    }
+    else {
+        Annotation lookupAnnot = contList.get(0); // get first annotation
+        Long lookupStart = lookupAnnot.getStartNode().getOffset();//get start of lookup annotation
+        Long lookupEnd = lookupAnnot.getEndNode().getOffset();
+        Long tokenStart = umlsAnnots.firstNode().getOffset();// get start of PartialDate
+        Long tokenEnd = umlsAnnots.lastNode().getOffset();
+        if (lookupStart == tokenStart && lookupEnd == tokenEnd) { // start and end at same place
+            try {
+                String firstLetter = doc.getContent().getContent(tokenStart, tokenStart+1).toString();// get first letter of Partial annotation
+                    if(firstLetter.equals(firstLetter.toLowerCase())) { // check if first letter is lowercase
+                        getOnlyAnn(umlsAnnots).getFeatures().put("ruleDelete", "PartialDateLowerCase");// add feature to delete
+                        FeatureMap deleteFM = Factory.newFeatureMap();//create new featuremap
+                        //deleteFM.putAll(fmPartialDate);
+                        deleteFM.put("ruleDelete", "PartialDateLowerCase");
+                        AnnotationSet defaultSet = doc.getAnnotations("Bio");
+                        gate.Utils.addAnn(defaultSet, tokenStart, tokenEnd, "PartialDateDeleted", deleteFM);
+                        // inputAS.remove(umlsAnnots);
+                        }
+            } catch (InvalidOffsetException e) {
+                // not possible
+                throw new LuckyException("Invalid offset from annotation");
+            }
+        }
+    }
+}

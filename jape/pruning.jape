@@ -20,3 +20,5 @@ FrequencyCleaned
 CleaningNewLines
 //CleaningNewLines3
 CleaningNewLines2
+PartialDateLowerCase
+DeletePartialDateLowerCase

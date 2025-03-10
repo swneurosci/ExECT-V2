@@ -1,0 +1,14 @@
+Imports: {import static gate.Utils.*; }
+Phase: PartialDateLowerCaseDelete
+Input: PartialDate
+Options: control=all
+
+Rule:PartialDateLowerCaseDelete
+Priority: 100
+(
+{PartialDate.ruleDelete == "PartialDateLowerCase"}
+):umls
+-->
+:umls { 
+inputAS.removeAll(umlsAnnots);
+}
