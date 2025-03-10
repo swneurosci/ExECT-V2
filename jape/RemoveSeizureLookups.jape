@@ -7,10 +7,10 @@ Options: contral=all
 //It is also used to remove Otherdiseases if the context means a service and not a diagnosis //
 // THIS IS GOOD CLEAN UP BY THE LOOK OF IT
 
-Rule: RemoveSeizure
+Rule: RemoveSeizure1
  (
      ({Lookup3.minorType == generic}):umls
-     ({Token.string == free}|{Token.string == freedom}|{Token.string == clinic}|{Token.string == control}|{Token.string == frequency}|{Token.string == types}|{Token.string == markers})
+     ({Token.string == free}|{Token.string == freedom}|{Token.string ==~ "[Rr]isk"}|{Token.string == clinic}|{Token.string == control}|{Token.string == frequency}|{Token.string == types}|{Token.string == markers})
  
 ):matches
 -->
@@ -19,7 +19,7 @@ Rule: RemoveSeizure
 },
 :umls.Lookup3Deleted = {rule = RemoveSeizure1}
 
-Rule: RemoveSeizure
+Rule: RemoveSeizure2
  (
      ({Lookup3.minorType == Disease}):umls
      ({Token.string =~ Type}|{Token.string =~ marker})
@@ -32,7 +32,7 @@ Rule: RemoveSeizure
 :umls.Lookup3Deleted = {rule = RemoveSeizure2}
 
 
-Rule: RemoveSeizure
+Rule: RemoveSeizure3
  (
      ({Lookup3.minorType == OtherDisease}):umls
      ({Token.string =~ team}|{Token.string =~ service}|{Token.string =~ Service})
@@ -46,7 +46,7 @@ Rule: RemoveSeizure
 :umls.Lookup3Deleted = {rule = RemoveSeizure3}
 
 
-Rule: RemoveLookup3Within  /*when disease is the same as title such as Ms*/
+Rule: RemoveSeizure4  /*when disease is the same as title such as Ms*/
 
 (
   ({Lookup3 within {Person.ruleFinal == PersonFinal}}):umls
