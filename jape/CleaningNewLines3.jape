@@ -5,6 +5,7 @@ Input: NewParagraph Sentence listPoint
 Options: control=appelt
 
 // Testing rule looking at sentences rather than tokens
+// Commented out of pipeline ATM
 
 Rule: NewParagraphDeletedSecondRule
 

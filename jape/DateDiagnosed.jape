@@ -111,6 +111,7 @@ YearDate = :match.DateSince.YearDate,
 MonthDate = :match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
 
+// Rule error in this rule
 
 Rule: DateDiagnosed6
 Priority: 90
