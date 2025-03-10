@@ -1,5 +1,5 @@
 Phase: PatientHistC
-Input: OtherDiag  DiagnosisTriggers Sentence
+Input: OtherDiag  DiagnosisTriggers Split listPoint Person Drug
 Options: control= all
 
 
@@ -10,11 +10,23 @@ date as year/month, and time since the event, as TimePeriod / NumberOfTimePeriod
 
 // why empty inputs
 
+// Added Person + Drug in input to block running into letter
+
+
+
+Macro: SPLIT
+(
+		{Split} | //this split is at the end of the line (hidden) - could use .kind == external (kind=internal = "." etc...)
+		{listPoint}// this is to catch "1./2./3. ...."
+)
+
+
 Rule: PtHistoryC1
 Priority: 100
 
 (  
-   ({DiagnosisTriggers})
+    ({DiagnosisTriggers})
+    (SPLIT)[0,4]
 	({OtherDiag}):item
 	
 ):match  
@@ -37,9 +49,11 @@ Rule: PtHistoryC2
 Priority: 100
 
 (  
-   ({DiagnosisTriggers})
+    ({DiagnosisTriggers})
+    (SPLIT)[0,4]
     ({OtherDiag})
-	({OtherDiag}):item
+    (SPLIT)[1,4]
+    ({OtherDiag}):item
 	
 ):match  
  -->
@@ -62,8 +76,11 @@ Priority: 100
 
 (  
     {DiagnosisTriggers}
+    (SPLIT)[0,4]
     ({OtherDiag})
+    (SPLIT)[1,4]
     ({OtherDiag})
+    (SPLIT)[1,4]
 	({OtherDiag}):item
 	
 ):match  
@@ -88,9 +105,13 @@ Priority: 100
 
 (  
     {DiagnosisTriggers}
+    (SPLIT)[0,4]
     ({OtherDiag})
+    (SPLIT)[1,4]
     ({OtherDiag})
+    (SPLIT)[1,4]
     ({OtherDiag})
+    (SPLIT)[1,4]
 	({OtherDiag}):item
 	
 ):match  
@@ -116,10 +137,15 @@ Priority: 100
 
 (  
     {DiagnosisTriggers}
+    (SPLIT)[0,4]
     ({OtherDiag})
+    (SPLIT)[1,4]
     ({OtherDiag})
+    (SPLIT)[1,4]
     ({OtherDiag})
+    (SPLIT)[1,4]
     ({OtherDiag})
+    (SPLIT)[1,4]
 	({OtherDiag}):item
 	
 ):match  
