@@ -45,7 +45,7 @@ doesn't feel his seizure frequency has changed:Quantity=Same:ContainsLookUp=Yes
 doesn’t feel her seizure frequency has changed:Quantity=Same:ContainsLookUp=Yes
 doesn’t feel his seizure frequency has changed:Quantity=Same:ContainsLookUp=Yes
 begun to manifest:Quantity=Increased
-not been any change:Quantity=Same:Negation=Negated
+not been any change:Quantity=Same:Negation=Negated:=
 significant frequency:Quantity=Frequent
 fewer:Quantity=Decreased
 increase in her seizure frequency:Quantity=Increased:ContainsLookUp=Yes
@@ -86,11 +86,11 @@ hasn't helped:Quantity=Same:Negation=Negated
 hasn't really help:Quantity=Same:Negation=Negated
 continues to get:Quantity=Same
 remains the same:Quantity=Same
-remains seizure free:Quantity=Same:ContainsLookUp=Yes:CUI=C1299590
+remains seizure free:Quantity=0:ContainsLookUp=Yes:CUI=C1299590
 no change in her seizure frequency:Quantity=Same:ContainsLookUp=Yes
 no change in his seizure frequency:Quantity=Same:ContainsLookUp=Yes
 not well controlled:Quantity=Frequent:Negation=Negated
-not been any recurrence:Quantity=Same
+not been any recurrence:Quantity=0:=
 deterioration in his seizure control:Quantity=Increased:ContainsLookUp=Yes
 deterioration in her seizure control:Quantity=Increased:ContainsLookUp=Yes
 deterioration in their seizure control:Quantity=Increased:ContainsLookUp=Yes
@@ -99,3 +99,5 @@ improvement in his seizure control:Quantity=Decreased:ContainsLookUp=Yes
 improvement in her seizure control:Quantity=Decreased:ContainsLookUp=Yes
 improvement in their seizure control:Quantity=Decreased:ContainsLookUp=Yes
 improvement in seizure control:Quantity=Decreased:ContainsLookUp=Yes
+no recurrence:Quantity=0
+have stopped:Quantity=0

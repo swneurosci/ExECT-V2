@@ -1,5 +1,5 @@
 Phase: SeizureFrequency 
-Input: SeizFrequency1 SeizFrequency2 NumberRange timePeriods Lookup3 Split SeizFreq Prescription0 Measurement SeizureFree Age PointInTime timeElapsed Coincide PartialDate NoSeizure LastSeizure SlangSeizures
+Input: SeizFrequency1 SeizFrequency2 NumberRange timePeriods Lookup3 Split SeizFreq Prescription0 Measurement SeizureFree Age PointInTime timeElapsed Coincide PartialDate DateBio NoSeizure LastSeizure SlangSeizures
 Options: control=appelt 
 
 
@@ -25,6 +25,7 @@ NumberOfTimePeriods = :match.timePeriods.frequency, TimePeriod = :match.timePeri
 NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2} 
 
 // During March 2020 3 seizures a day. 
+// Dont think need date bio for this rule.. "During 03/09/2019 1 seizure a day" not really a thing
 
 Rule: hSeizureFreq1aDuringDate 
 Priority: 100 
@@ -422,6 +423,7 @@ UpperNumberOfSeizures  = :match.NumberRange.N2}
 
 
 /* 8 Seizures since DATE */
+// 8 seizures since 03/09/2019 ? - sounds reasonable so added DateBio
 
 Rule: hSeizurePartialDate3b
 Priority: 99 
@@ -430,15 +432,18 @@ Priority: 99
     (({NumberRange})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({timeElapsed.time == "Since"})
-    ({PartialDate})):match 
+    ({PartialDate}|{DateBio})):match 
 ):match1 
 --> 
 :match.SeizureFrequency11 = { class = "FrequencyC", rule = hSeizurePartialDate3b, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, 
+YearDate = :match.DateBio.YearDate, MonthDate = :match.DateBio.MonthDate, DayDate = :match.DateBio.DayDate,
 UpperNumberOfSeizures  = :match.NumberRange.N2,YearDate = :match.PartialDate.year, 
 MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 
 /* 8 Seizures during DATE */
+
+// Dont think during works with DateBio (i.e exact date - same reasoning as 1aDuringDate)
 
 Rule: hSeizurePartialDate3b1
 Priority: 99 
@@ -456,19 +461,21 @@ YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDat
 
 /* Since? [Date], [Person] had [NumberRange] [Lookup3] - further my letter of Nov 2009, J has had 6 to 7 seizures */
 // No timeElapsed in example so rule actually doesn't pick this up....
+// Added dateBio - Since 09/09/2019 J has had 6 to 7 seizures
 
 Rule: hSeizurePartialDate1
 Priority: 95 
 ( 
     ({timeElapsed.time == "Since"})
     ({timeElapsed.time == "Last"})?
-    ({PartialDate})
+    ({PartialDate}|{DateBio})
     ({NumberRange})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
 ):match 
 --> 
 :match.SeizureFrequency11 = { class = "FrequencyC", rule = hSeizurePartialDate1, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, 
+YearDate = :match.DateBio.YearDate, MonthDate = :match.DateBio.MonthDate, DayDate = :match.DateBio.DayDate,
 UpperNumberOfSeizures  = :match.NumberRange.N2,YearDate = :match.PartialDate.year, 
 MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 
@@ -478,7 +485,7 @@ Rule: hSeizurePartialDate1
 Priority: 95 
 ( 
     ({timeElapsed.time == "Since"})
-    ({PartialDate})
+    ({PartialDate}|{DateBio})
     ({NumberRange})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient})
     ({timePeriods})
@@ -486,6 +493,7 @@ Priority: 95
 --> 
 :match.SeizureFrequency11 = { class = "FrequencyC", rule = hSeizurePartialDate1a, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 NumberOfTimePeriods = :match.timePeriods.frequency, TimePeriod = :match.timePeriods.time-unit,
+YearDate = :match.DateBio.YearDate, MonthDate = :match.DateBio.MonthDate, DayDate = :match.DateBio.DayDate,
 NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, UpperNumberOfSeizures  = :match.NumberRange.N2,
 YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, 
 TimeSince_or_TimeOfEvent = "Since"}
@@ -508,14 +516,14 @@ UpperNumberOfSeizures  = :match.NumberRange.N2, YearDate = :match.PartialDate.ye
 MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "During"}
 
 /*Since his last review in DATE he has had 7 to 8 GTCS*/
-
+// unlikley to use DateBio but have still added it (more likely without timeElapsed=During? - since last review 20/03/19....?)
 Rule: hSeizurePartialDate1b
 Priority: 95 
 ( 
     ({timeElapsed.time == "Since"})
     ({timeElapsed.time == "Last"})
     ({timeElapsed.time == "During"})
-    ({PartialDate})
+    ({PartialDate}|{DateBio})
     ({NumberRange})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
 ):match 
@@ -524,6 +532,7 @@ Priority: 95
 Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, 
 UpperNumberOfSeizures  = :match.NumberRange.N2,
+YearDate = :match.DateBio.YearDate, MonthDate = :match.DateBio.MonthDate, DayDate = :match.DateBio.DayDate,
 YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, 
 DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 
@@ -532,11 +541,12 @@ DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 // WHY IS THIS RULE NOT GOING TO SFREQ11 but STRAIGHT TO SFREQ?
 // in the example above there is a until before which is a SFBlock so blocking at filter
 // maybe needs a rule for this example - does sound like a common structure - CHECK HOW MANY TIMES COMES UP IN THE LETTERS
+// Feb 2020. 1 seizure since
 
 Rule: hSeizurePartialDate2
 Priority: 95 
 ( 
-    ({PartialDate})
+    ({PartialDate}|{DateBio})
     ({Split})?
     ({NumberRange})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
@@ -546,6 +556,7 @@ Priority: 95
 :match.SeizureFrequency11 = { class = "FrequencyC", rule = hSeizurePartialDate2, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, 
 UpperNumberOfSeizures  = :match.NumberRange.N2,YearDate = :match.PartialDate.year, 
+YearDate = :match.DateBio.YearDate, MonthDate = :match.DateBio.MonthDate, DayDate = :match.DateBio.DayDate,
 MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 
 /* DATE, 5 seizures since then. */
@@ -553,7 +564,7 @@ MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSinc
 Rule: hSeizurePartialDate2b
 Priority: 95 
 ( 
-    ({PartialDate})
+    ({PartialDate}|{DateBio})
     ({NumberRange})
     ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({timeElapsed.time == "Since"}) 
@@ -562,6 +573,7 @@ Priority: 95
 :match.SeizureFrequency11 = { class = "FrequencyC", rule = hSeizurePartialDate2b, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, 
 UpperNumberOfSeizures  = :match.NumberRange.N2, YearDate = :match.PartialDate.year, 
+YearDate = :match.DateBio.YearDate, MonthDate = :match.DateBio.MonthDate, DayDate = :match.DateBio.DayDate,
 MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 
 /* recent seizure in Date */
@@ -585,12 +597,13 @@ Priority: 95
     (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({NumberRange})
     ({timeElapsed.time == "Since"}) 
-    ({PartialDate})):match
+    ({PartialDate}|{DateBio})):match
 ):match1 
 --> 
 :match.SeizureFrequency11 = { class = "FrequencyC", rule = hSeizurePartialDate4, CUI = :match.Lookup3.CUI, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation,
 NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.NumberRange.N1, 
 UpperNumberOfSeizures  = :match.NumberRange.N2,
+YearDate = :match.DateBio.YearDate, MonthDate = :match.DateBio.MonthDate, DayDate = :match.DateBio.DayDate,
 YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, 
 DayDate = :match.PartialDate.day, TimeSince_or_TimeOfEvent = "Since"}
 

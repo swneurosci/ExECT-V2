@@ -583,7 +583,7 @@ NumberOfTimePeriods = :match.timePeriods.frequency,
 TimePeriod = :match.timePeriods.time-unit,   NumberOfSeizures = "0" , Certainty = "5", Negation = :a.Lookup3.Negation
 } 
 
-/* seizure free for the last 7 years */
+/* she seizure free for the last 7 years */
 
 Rule: HseizureFree3a
 Priority: 99
@@ -613,6 +613,24 @@ Priority: 99
 :match.SeizureFrequencyDriving = { class = "Free", rule = HseizureFree3b, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = :match.Lookup3.Negation, string = :match@string,
 DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year,
   TimeSince_or_TimeOfEvent = :match.timeElapsed.time}
+
+
+/* Seizure Free for about 5 years */
+// Forced the timeElapsed here - similar to 3a but that has forced person and ?timeElapsed
+Rule: HseizureFree3b
+Priority: 99
+(
+     ({Lookup3.PREF == "seizure free",Lookup3.Temporality != "hypothetical", !Lookup3.CAT == "Slang"})
+    ({timeElapsed})
+    ({SeizFrequency1})
+    
+):match
+-->
+:match.SeizureFrequencyDriving = { class = "Free", rule = HseizureFree3c, CUI = :match.Lookup3.CUI, NumberOfSeizures = "0", Certainty = "5", Negation = :match.Lookup3.Negation, string = :match@string,
+string = :match@string, TimePeriod = :match.SeizFrequency1.TimePeriod, 
+NumberOfTimePeriods = :match.SeizFrequency1.NumberOfTimePeriods }
+
+
 
 
 
@@ -666,6 +684,8 @@ DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month
 
 /* No seizure since last being seen */
 
+//Not A or Not A and B
+// then C
 Rule: HseizureFree4c
 Priority: 99
 (

@@ -1,7 +1,7 @@
 Imports: {import static gate.Utils.*; }
 
 Phase: Cleaning
-Input:Lookup Frequency Token
+Input:Lookup Frequency Token Drug
 Options: control=appelt
 
 Rule: FrequencyCleaned
@@ -17,3 +17,18 @@ Rule: FrequencyCleaned
   inputAS.removeAll(freqAnnots);
 },
 :umls.FrequencyDeleted = {rule = FrequencyCleaned}
+
+
+Rule: FrequencyCleaned2
+
+(
+  ({Lookup}):lookup
+  ({Token.string == "with"})
+  ({Frequency}):freq
+  ({!Drug})
+):umls
+-->
+:freq { 
+  inputAS.removeAll(freqAnnots);
+},
+:umls.FrequencyDeleted = {rule = FrequencyCleaned2}

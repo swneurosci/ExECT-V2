@@ -679,6 +679,37 @@ Priority: 99
 :match.SeizureChange = { rule = "SeizureChangeNegated4c", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, 
 Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" } 
 
+// no recurrence of seizures on the above dose of X
+// containst Drug for more control
+// wouldn't pick up no reccurence of seizures since last clinic
+Rule: SeizureChangeNegated4cd
+Priority: 99 
+( 
+    ({Frequency.Negation == Negated, Frequency.SeizureFree != "Yes"})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
+    Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree}) 
+    ({PointInTime contains Drug})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated4d", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, 
+Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" ,PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "Since" } 
+
+
+// this rule picks up no change in seizure frequency since last clinic
+Rule: SeizureChangeNegated4e
+Priority: 99 
+( 
+    ({Frequency.Negation == Negated, Frequency.SeizureFree != "Yes"})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
+    Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree})
+    ({timeElapsed})
+    ({PointInTime})
+):match 
+--> 
+:match.SeizureChange = { rule = "SeizureChangeNegated4e", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, 
+Certainty = :match.Lookup3.Certainty, Negation = "Affirmed" ,TimeSince_or_TimeOfEvent = "Since", PointInTime = :match.PointInTime.Since } 
+
+
 // WHAT ABOUT EXAMPLES LIKE
 // "did not lead to any further decrease in frequency of seizures" - this is picked up by SeizureChange4c (not the negated rule)
 // MAYBE RULES FOR NO CHANGE is negatated and different rules for when increase or decrease is negated? - EPI_LET186.txt example

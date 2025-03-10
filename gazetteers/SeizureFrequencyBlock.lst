@@ -2,7 +2,7 @@ driving:SFreeBlock=Yes:driving=driving
 drive:SFreeBlock=Yes:driving=driving
 risk:SFBlock=Yes:SFreeBlock=Yes:SChangeBlock=Yes
 Risk:SFBlock=Yes:SFreeBlock=Yes:SChangeBlock=Yes
-gone:SFBlock=Yes:SFreeBlock=Yes
+gone:SFBlock=Yes:SFreeBlock=Yes:=
 was:SFreeBlock=Yes
 untill:SFreeBlock=Yes:SChangeBlock=Yes
 hopefully he will have been:SFreeBlock=Yes
@@ -99,3 +99,6 @@ Risks:SChangeBlock=Yes
 before this her:SChangeBlock=Yes
 stress:SChangeBlock=Yes
 before this his:SChangeBlock=Yes
+should increase:SChangeBlock=Yes
+could increase:SChangeBlock=Yes
+following a:SFBlock=Yes:=

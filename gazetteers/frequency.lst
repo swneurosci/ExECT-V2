@@ -54,6 +54,7 @@ per day:time-unit=day:interval=1:frequency=1
 a day:time-unit=day:frequency=1
 a month:time-unit=month:interval=1:frequency=1
 once a day:frequency=1:time-unit=day:interval=1:when=day
+once per day:frequency=1:time-unit=day:interval=1:when=day
 in a single week:frequency=1:time-unit=week:interval=1
 a week:time-unit=week:interval=1:frequency=1
 a single day:time-unit=day:interval=1:frequency=1
@@ -65,6 +66,7 @@ Am:frequency=1:time-unit=day:when=morning
 BD:frequency=2:time-unit=day:interval=1
 day:frequency=1:time-unit=day:interval=1
 twice a day:frequency=2:time-unit=day
+twice per day:frequency=2:time-unit=day
 once-a-day:frequency=1:time-unit=day:interval=1:when=day
 twice daily:frequency=2:time-unit=day
 in the morning and lunchtime:frequency=2:time-unit=day
@@ -77,4 +79,6 @@ alternate nights:frequency=0.5:time-unit=day
 monthly:frequency=1:time-unit=month
 SOS basis:time-unit=as required:frequency=As_Required
 three times a day:frequency=3:time-unit=day:interval=1:=
+three times per day:frequency=3:time-unit=day:interval=1:=
 two times a day:frequency=2:time-unit=day:=
+two times per day:frequency=2:time-unit=day:=

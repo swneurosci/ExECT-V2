@@ -179,3 +179,18 @@ Priority: 99
 :match.SeizureChange = { rule = "NegatedSeizureChangeSeizureFree2", CUI = :match.Lookup3.CUI, NumberOfSeizures ="0", 
 Certainty = :match.Lookup3.Certainty, Negation = "Affirmed", PointInTime = :match.PointInTime.Since, 
 TimeSince_or_TimeOfEvent = "Since"} 
+
+
+// Since X no further Seizures
+Rule: NegatedSeizureChangeSeizureFree3
+Priority: 99 
+( 
+    ({PointInTime})
+    ({Frequency.Temporality != "hypothetical", Frequency.SeizureFree == "Yes", Frequency.Negation == "Negated"})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Negated, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient,
+    Lookup3 notWithin SeizureFrequency, Lookup3 notWithin SeizureFree})
+):match 
+--> 
+:match.SeizureChange = { rule = "NegatedSeizureChangeSeizureFree3", CUI = :match.Lookup3.CUI, NumberOfSeizures ="0", 
+Certainty = :match.Lookup3.Certainty, Negation = "Affirmed", PointInTime = :match.PointInTime.Since, 
+TimeSince_or_TimeOfEvent = "Since"} 
