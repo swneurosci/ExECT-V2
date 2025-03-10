@@ -1515,3 +1515,4 @@ myoclonus, cerebellar ataxia, deafness syndrome	CUI=C4518566	PREF=Myoclonus, cer
 premature birth	CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
 prematurity CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
 premature delivery	CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
+motor neurone disease	CUI=C0085084	PREF=Motor Neuron Disease	TUI=T047	EC=No
