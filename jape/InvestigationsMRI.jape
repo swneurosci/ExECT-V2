@@ -18,8 +18,21 @@ Priority: 100
 :match.InvestigationIgnore = { rule = IgnoreInvestigationsOutcome1MRI, MRI_Performed = "Yes", MRI_Results = :outcome.InvestigationFindingMRI.Results, 
 CUI = :outcome.InvestigationFindingMRI.CUI}
 
+
 // MRI normal
-Rule: getInvestigationsOutcomeMRI
+Rule: getInvestigationsOutcomeMRI1a
+Priority: 100
+(
+  ({InvestigationFindingMRI})[0,1]
+  ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+  (({InvestigationFindingMRI}):outcome)
+):match
+-->
+:match.Investigations = { rule = getInvestigationsOutcome1aMRI, MRI_Performed = "Yes", MRI_Results = :outcome.InvestigationFindingMRI.Results, 
+CUI = :outcome.InvestigationFindingMRI.CUI}
+
+// MRI normal
+Rule: getInvestigationsOutcomeMRI1b
 Priority: 99
 (
   ({Investigation.Investigation == MRI, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
@@ -27,7 +40,7 @@ Priority: 99
   (({InvestigationFindingMRI}):outcome)+
 ):match
 -->
-:match.Investigations = { rule = getInvestigationsOutcome1MRI, MRI_Performed = "Yes", MRI_Results = :outcome.InvestigationFindingMRI.Results, 
+:match.Investigations = { rule = getInvestigationsOutcome1bMRI, MRI_Performed = "Yes", MRI_Results = :outcome.InvestigationFindingMRI.Results, 
 CUI = :outcome.InvestigationFindingMRI.CUI}
 
 // Removed the Investigation complete from Investigation gazetteer.

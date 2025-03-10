@@ -19,6 +19,17 @@ Priority: 100
 CUI = :outcome.InvestigationFindingCT.CUI}
 
 
+Rule: getInvestigationsOutcomeCT
+Priority: 99
+(
+  ({InvestigationFindingCT})[0,1]
+  ({Investigation.Investigation == CT, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed}):invest
+  (({InvestigationFindingCT}):outcome)
+):match
+-->
+:match.Investigations = { rule = getInvestigationsOutcome1aCT, CT_Performed = "Yes", CT_Results = :outcome.InvestigationFindingCT.Results, 
+CUI = :outcome.InvestigationFindingCT.CUI}
+
 
 Rule: getInvestigationsOutcomeCT
 Priority: 99
@@ -28,7 +39,7 @@ Priority: 99
   (({InvestigationFindingCT}):outcome)+
 ):match
 -->
-:match.Investigations = { rule = getInvestigationsOutcome1CT, CT_Performed = "Yes", CT_Results = :outcome.InvestigationFindingCT.Results, 
+:match.Investigations = { rule = getInvestigationsOutcome1bCT, CT_Performed = "Yes", CT_Results = :outcome.InvestigationFindingCT.Results, 
 CUI = :outcome.InvestigationFindingCT.CUI}
 
 /* Removed the Investigation complete from Investigation gazetteer.

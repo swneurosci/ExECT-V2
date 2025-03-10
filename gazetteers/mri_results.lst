@@ -68,3 +68,5 @@ small vessel disease:CUI=C1319851:Results=Abnormal
 changes:CUI=C1319851:Results=Abnormal
 defect:CUI=C1319851:Results=Abnormal
 asymmetric lateral ventricles:CUI=C1319851:Results=Abnormal
+No significant change:CUI=C0436481:Results=Normal
+dilatation:CUI=C1319851:Results=Abnormal

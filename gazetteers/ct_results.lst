@@ -53,3 +53,5 @@ unremarkable:CUI=C0744602:Results=Normal
 low density:CUI=C0436539:Results=Abnormal
 defect:CUI=C0436539:Results=Abnormal
 hydrocephalus:CUI=C0436539:Results=Abnormal
+meningioma:CUI=C0436539:Results=Abnormal
+No significant change:CUI=C0744602:Results=Normal

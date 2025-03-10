@@ -21,6 +21,9 @@ CUI = :outcome.InvestigationFindingEEG.CUI}
 Rule: getInvestigationsOutcomeEEG
 Priority: 99
 (
+  ({InvestigationFindingEEG})[0,1]
+  ({Investigation})[0,1]
+  ({Conj})[0,1]
   ({Investigation.Investigation == EEG, Investigation.Experiencer == Patient, Investigation.Temporality != "hypothetical", Investigation.Negation == Affirmed})
   ({InvestigationFindingEEG}):outcome
 ):match
@@ -209,6 +212,7 @@ CUI = :outcome.InvestigationFindingEEG.CUI}
 
 
 // abnormal and? INVEST? and? EEG.... 
+// normal MRI and EEG
 Rule: getInvestigationsOutcomeEEG
 Priority: 92
 (
