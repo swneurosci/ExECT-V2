@@ -1301,6 +1301,8 @@ temporal lobe sclerosis	CUI=C3662090	PREF=Temporal lobe sclerosis	TUI=T047	EC=Ye
 temporal lobe sclerosis	CUI=C3662090	PREF=Temporal lobe sclerosis	TUI=T047	EC=Yes
 birth history was normal	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
 birth was normal	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
+uneventful pregnancy and delivery 	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
+uneventful delivery 	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
 born normally	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
 no problems at birth	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
 normal birth	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No

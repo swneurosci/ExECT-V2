@@ -26,8 +26,6 @@ Priority: 100
 
 (
     {Person}
-  
-   
     ({Lookup3.PREF =~ "Birth" , Lookup3.Experiencer == Patient , Lookup3.Negation == Affirmed}):item
    
 
