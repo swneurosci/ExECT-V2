@@ -683,8 +683,8 @@ intracerebral injury	CUI=C0270611	PREF=Brain Injuries	TUI=T037	EC=Yes
 lobe damage	CUI=C0270611	PREF=Brain Injuries	TUI=T037	EC=Yes
 essential myoclonus	CUI=C0270737	PREF=Familial essential myoclonus	TUI=T047	EC=No
 familial essential myoclonus	CUI=C0270737	PREF=Familial essential myoclonus	TUI=T047	EC=No
-temporal bone fracture	CUI=C0272461	PREF=Fracture of temporal bone	TUI=T037	EC=
-temporal bone fracture	CUI=C0272461	PREF=Fracture of temporal bone	TUI=T037	EC=
+temporal bone fracture	CUI=C0272461	PREF=Fracture of temporal bone	TUI=T037
+temporal bone fracture	CUI=C0272461	PREF=Fracture of temporal bone	TUI=T037
 herpes simplex encephalitis	CUI=C0276226	PREF=Herpes encephalitis	TUI=T047	EC=Yes
 herpes encephalitis	CUI=C0276226	PREF=Herpes encephalitis	TUI=T047	EC=Yes
 herpes encephalitis	CUI=C0276226	PREF=Herpes encephalitis	TUI=T047	EC=Yes
@@ -762,8 +762,8 @@ laevoatrial cardinal vein	CUI=C0344660	PREF=laevoatrial cardinal vein	TUI=T019	E
 left atrium to innominate vein	CUI=C0344660	PREF=laevoatrial cardinal vein	TUI=T019	EC=No
 left atrium to innominate vein	CUI=C0344660	PREF=laevoatrial cardinal vein	TUI=T019	EC=No
 levoatrial cardinal vein	CUI=C0344660	PREF=laevoatrial cardinal vein	TUI=T019	EC=No
-absent bridging vein	CUI=C0344661	PREF=absent bridging vein	TUI=T019	EC=
-anomal portal vein termination	CUI=C0344674	PREF=Anomalous portal vein termination	TUI=T019	EC=
+absent bridging vein	CUI=C0344661	PREF=absent bridging vein	TUI=T019
+anomal portal vein termination	CUI=C0344674	PREF=Anomalous portal vein termination	TUI=T019
 anomalous portal vein termination	CUI=C0344674	PREF=Anomalous portal vein termination	TUI=T019	EC=No
 coronary sinus defect in left atrium	CUI=C0344681	PREF=Coronary sinus defect in left atrium	TUI=T019	EC=No
 partially unroofed coronary sinus	CUI=C0344681	PREF=Coronary sinus defect in left atrium	TUI=T019	EC=No
@@ -1302,7 +1302,7 @@ temporal lobe sclerosis	CUI=C3662090	PREF=Temporal lobe sclerosis	TUI=T047	EC=Ye
 birth history was normal	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
 birth was normal	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
 uneventful pregnancy and delivery 	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
-uneventful delivery 	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
+uneventful delivery	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
 born normally	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
 no problems at birth	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
 normal birth	CUI=C3665337	PREF=Normal birth	TUI=T033	EC=No
@@ -1523,3 +1523,4 @@ symptomatic seizure	CUI=C4023516	PREF=Symptomatic Seizures	TUI=T184	STY=sign or 
 symptomatic seizures	CUI=C4023516	PREF=Symptomatic Seizures	TUI=T184	STY=sign or symptom
 acute symptomatic seizure	CUI=C4023516	PREF=Symptomatic Seizures	TUI=T184	STY=sign or symptom
 symptomatic myoclonus	CUI=C0393619	PREF=Symptomatic myoclonus	TUI=T047	STY=Disease or Syndrome
+
