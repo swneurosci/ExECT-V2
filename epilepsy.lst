@@ -960,3 +960,5 @@ focal seizures with impaired awareness	CUI=C0270834	PREF=Complex partial seizure
 Epilepsy with myolonic absences	CUI=C0393703	PREF=Myoclonic Absence Epilepsy	TUI=T047	STY=Disease or Syndrome
 non-convulsive status epilepticus	CUI=C0751523	PREF=non-convulsive status epilepticus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 non convulsive status epilepticus	CUI=C0751523	PREF=non-convulsive status epilepticus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+symptomatic seizure	CUI=C4023516	PREF=Symptomatic Seizures	TUI=T184	STY=sign or symptom
+symptomatic seizures	CUI=C4023516	PREF=Symptomatic Seizures	TUI=T184	STY=sign or symptom
