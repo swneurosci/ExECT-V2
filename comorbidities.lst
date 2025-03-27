@@ -1520,7 +1520,7 @@ prematurity CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
 premature delivery	CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
 motor neurone disease	CUI=C0085084	PREF=Motor Neuron Disease	TUI=T047	EC=No
 haemorrhages	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=Yes
-
-acute symptomatic seizure	CUI=C0393710	PREF=Seizures in response to acute event	TUI=T184	STY=sign or symptom
-symptomatic myoclonus	CUI=C0393619	PREF=Symptomatic myoclonus	TUI=T047	STY=Disease or Syndrome
-
+acute symptomatic seizure	CUI=C0393710	PREF=Seizures in response to acute event	TUI=T184	STY=sign or symptom	EC=No
+symptomatic myoclonus	CUI=C0393619	PREF=Symptomatic myoclonus	TUI=T047	STY=Disease or Syndrome	EC=No
+pregnancy	CUI=C0032961	PREF=Pregnancy	TUI=T040	STY=Organism Function	EC=No
+pregnant	CUI=C0032961	PREF=Pregnancy	TUI=T040	STY=Organism Function	EC=No
