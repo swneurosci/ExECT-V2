@@ -238,11 +238,12 @@ PointInTime = :match.PointInTime.Since}
 // probably a dengerous rule that annotates Lookup 3 that is not negated, hypothetical, reletaes to a person, not to birth, febrile seizute or diagnpstic procedure
 // also used Lookup3.minorType == Disease excluding seizure free/freedom - not certainn if this Lookup type still needed
 // will use further filtering to remove possible errors - but in general this is an effort to reduce the number or rules
+// two wxcluded CUIs - 1st , 2nd pregnancy
 Rule: OtherDiagPhrase2
 Priority: 99
 
 (  
-	({Lookup3.minorType == OtherDisease, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952, Lookup3.CUI != C0583275,  Lookup3.Experiencer == Patient}):item
+	({Lookup3.minorType == OtherDisease, Lookup3.Temporality != hypothetical, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, Lookup3.PREF !~ "birth", Lookup3.CUI != C0009952, Lookup3.CUI != C0583275, Lookup3.CUI != C0032961, Lookup3.Experiencer == Patient}):item
 	
  ):match  
  -->

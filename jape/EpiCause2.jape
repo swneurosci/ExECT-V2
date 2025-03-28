@@ -1,5 +1,5 @@
 Phase: EpiCause2
-Input: Lookup Lookup3 CausePhrase Split listPoint 
+Input: Diagnosis Lookup3 CausePhrase Split listPoint 
 
 
   /*These rules are set to select causes and suspected causes of epilepsy, when they are shown 
@@ -16,7 +16,7 @@ Priority: 100
 
 (   
 	
-    {Lookup.Negation == Affirmed}
+    {Diagnosis}
     {Split}
     {CausePhrase}
     ({Lookup3.minorType == OtherDisease, Lookup3.Negation == Affirmed, Lookup3.majorType == umls, 

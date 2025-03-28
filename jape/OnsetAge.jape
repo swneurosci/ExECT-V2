@@ -6,14 +6,13 @@ Options: control=appelt
 /*DiagnosisTrigger acts as a block*/
 
 Rule: onsetAge1
-Priority: 99 //({Lookup2.majorType == historic})?
+Priority: 99 //({Lookup2.majorType == historic})? - bfs dida way with lookup2 here 
 
 (   
 	({Person})?
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed ,  Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
 	{OnsetPhrase}
 	({Person.majorType == person})?
-	
 	{Age}
 		
  ):match  
@@ -53,10 +52,11 @@ AgeUpper =:match.Age.AgeUpper}
  /* will also get Diagnosis: probable X since age 10 - as Person is optional */
 Rule: onsetAge3
 Priority: 98 //({Lookup2.minorType == probability})({Lookup2.majorType == historic, Lookup2.minorType == symptoms})?	
-	//({Lookup2})?
+	//({Lookup2})? OnsetPhrase instead of lookup2 
 
 (   
-	({Person})?
+	({Person})
+	{OnsetPhrase}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient ,Lookup.minorType == Disease}):item
 	{Age}
 	
@@ -120,7 +120,7 @@ AgeUpper =:match.Age.AgeUpper}
 
 
 Rule: onsetAge6
-Priority: 98 //({Lookup2})?({Lookup2})?
+Priority: 98 
 
 (  
 	{Age}

@@ -100,10 +100,12 @@ Priority:60
 	{Person}
 	{Token.string == was}
 	{Numeric}
+	{timePeriod}
+	
 	
  ):match  
  -->
-:match.Age = {rule =Age_since3, AgeUnit = "Year",
+:match.Age = {rule =Age_since3, AgeUnit = :match.timePeriod.time-unit,
 Age =:match.Numeric.value}  
 
 
@@ -118,6 +120,22 @@ Priority: 90
  -->
 :match.Age = {rule =Age2, AgeUnit = "Year",
 Age =:match.Numeric.value}  
+
+// at 13 years
+Rule: Age_at
+Priority: 90
+
+(   
+	{Token.string == at}
+	{Numeric}	
+	{timePeriod}
+	
+ ):match  
+ -->
+:match.Age = {rule =Age_at, AgeUnit = :match.timePeriod.time-unit,
+Age =:match.Numeric.value}  
+
+
 
 /*the first two rule in AgeRange are for the " by the age of x months/years" where only the upper age is givem*/
 // NOT SURE numeric.lowerAge works...
@@ -182,11 +200,11 @@ Priority: 100
 :match.Age = {rule =Age_Range2a,Age =:item.Numeric.value, AgeUnit = :match.Lookup2.timeUnit}  
 
 
-/*lookup2.minorType == time captures age groups e.g. teenager , timeElapsed is not always used in such phrases*/
+/*lookup2.minorType == time captures age groups e.g. teenager, timeElapsed is not always used in such phrases*/
 
 /* THIS RULE PICKS UP TOO MUCH - NEEDS TO BE MORE SPECIFIC */
-// a child
- Rule: Age_Range2b
+
+Rule: Age_Range2b
 Priority: 90
 
 (   
@@ -347,13 +365,14 @@ AgeUpper =:match.Numeric.value}
 
 
 // as above but swaped month + years aroun
-// 6 months to 2 years
+//   Age from 10 months to 3 years.
 
 Rule: Age_Range6b
 Priority: 100
 
 (   
 	{age}
+	({timeElapsed})? // from
 	{Numeric}
 	{timePeriod.time-unit == Month}
 	({Token})? // to
@@ -361,4 +380,22 @@ Priority: 100
  ):match  
  -->
 :match.Age = {rule =Age_Range6b, AgeLower =:match.Numeric.value, AgeUnit = :match.timePeriod.time-unit,
+AgeUpper =:match.YearToMonths.value} 
+
+
+// from 6 months to 2 years of age
+Rule: Age_Range6c
+Priority: 100
+
+(   
+	
+	({timeElapsed})? // from
+	{Numeric}
+	{timePeriod.time-unit == Month}
+	({Token})? // to
+	{YearToMonths}
+	{age}
+ ):match  
+ -->
+:match.Age = {rule =Age_Range6c, AgeLower =:match.Numeric.value, AgeUnit = :match.timePeriod.time-unit,
 AgeUpper =:match.YearToMonths.value} 

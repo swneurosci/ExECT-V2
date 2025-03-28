@@ -1,0 +1,71 @@
+Phase: Pregnancy
+Input: Lookup3 Person Numeric Split Lookup2 timePeriod Sentence
+
+
+
+Options: control=appelt
+
+// she was 5 months pregnant
+Rule: PregnancyPast 
+Priority: 100
+
+(   
+	({Person})
+  	({Lookup2.type == past})
+	({Numeric}
+    {timePeriod}
+	{Lookup3.CUI == C0032961, Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PregnancyPast, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+EC = :item.Lookup3.EC,  
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.Lookup3.Certainty,
+TimePeriod = :item.timePeriod.time-unit,
+NumberOfTimePeriods = :item.Numeric.value,
+Temporality = :match.Lookup2.type}
+
+// 5 weeks into her pregnancy, not certain past or present could be current or past and this is also
+Rule: Pregnancy
+
+Priority: 100
+
+(   
+	({Person})?
+    ({Lookup2.type == present }| {Lookup2.type == past} )?
+	({Numeric}
+    {timePeriod}
+    ({Person})
+	{Lookup3.CUI == C0032961, Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = Pregnancy, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+EC = :item.Lookup3.EC,  
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.Lookup3.Certainty,
+TimePeriod = :item.timePeriod.time-unit,
+NumberOfTimePeriods = :item.Numeric.value,
+Temporality = :match.Lookup2.type}
+
+Rule: PregnancyPresent  // as in: she is 3 months pregnant
+Priority: 100
+
+(   
+	({Person})
+  	({Lookup2.type == present})
+	({Numeric}
+    {timePeriod}
+	{Lookup3.CUI == C0032961, Lookup3.Experiencer == Patient}):item
+    
+ ):match  
+ -->
+:item.PatientHistory = {rule = PregnancyPresent, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+EC = :item.Lookup3.EC,  
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.Lookup3.Certainty,
+TimePeriod = :item.timePeriod.time-unit,
+NumberOfTimePeriods = :item.Numeric.value,
+Temporality = :match.Lookup2.type}
+

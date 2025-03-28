@@ -94,9 +94,6 @@ Priority: 100
 (   
 	{Person}
     ({Lookup2.majorType == historic ,Lookup2.type == birth}
-    ({History})?
-    ({Lookup2})?
-    ({History})?
     {Lookup2.minorType == gestation, Lookup2.CUI == C0233324}):item 
     
     
@@ -106,14 +103,15 @@ Priority: 100
 :item.BirthHistory = {rule = Term1, PREF = "Term_Birth", CUI = C0233324, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient}
 
+// she as born on time by normal delivery - the specific lookup2 should stop annotating normal delivert as a term birth
 Rule: Term2
 Priority: 100
 
 (   
 	{Person}
-    ({Lookup2})
+    ({Lookup2.type != birth})
     {Lookup2.minorType == gestation, Lookup2.CUI == C0233324}
-    ({Lookup2.majorType == historic ,Lookup2.type == birth }):item 
+    ({Lookup2.majorType == historic ,Lookup2.type == birth}):item 
      
     
  ):match  
