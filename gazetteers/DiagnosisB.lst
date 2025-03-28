@@ -1,6 +1,6 @@
 symptomatic:epilepsy=symptomatic:CUI=C1406659:PREF=Symptomatic Epilepsy
-focal:epilepsy=focal:CUI=C0014547:PREF=Focal Epilepsy
-generalised:epilepsy=generalised:CUI=C0014548:PREF=Generalised Epilepsy
+focal:epilepsy=focal:CUI=C0014547:PREF=Focal Epilepsy:CUISeizure=C0751495:PREFSeizure=Seizures, Focal
+generalised:epilepsy=generalised:CUI=C0014548:PREF=Generalised Epilepsy:CUISeizure=C0234533:PREFSeizure=generalised seizures
 temporal:lobe=temporal:CUI=C0014556:PREF=Temporal Lobe Epilepsy
 occipital:lobe=occipital:CUI=C0393691:PREF=Occipital Lobe Epilepsy
 parietal:lobe=parietal:CUI=C0393690:PREF=Parietal Lobe Epilepsy

@@ -6,6 +6,9 @@ Input:   Lookup2 DiagnosisA listPoint Sentence
 // Second DiagnosisB rule used for when certainty is the same as first Diagnosis
 // Could be tidied up into one/two rules with PREF and CUI coming from gazetteers (also then easier to add more)
 
+// Commented as covered by DiagnosisB2 (adding epilepsy vs seizures output)
+
+
 Options: control=appelt
 
 

@@ -37,12 +37,12 @@ age2.lst:age:age::age2
 PointInTime.lst:time:since::PointInTime
 personAge.lst:person:time::Lookup2
 change.lst:frequency:change::Lookup2
+DiagnosisB.lst:ExtraDiag:DiagB:MOVE:DiagB
 BirthHistory.lst:UMLS:gestation:MOVE:Lookup2
 symptomatic.lst:diagnosis:UMLS:MOVE:Lookup2
 lateralisation.lst:diagnosis:lateralisation:MOVE:Lookup2
 lobes.lst:diagnosis:lobes:MOVE:Lookup2
 EpilepsyType.lst:diagnosis:type:MOVE:Lookup2
-DiagnosisB.lst:ExtraDiag:DiagB:MOVE:DiagB
 DrugPointInTime.lst::::DrugPointInTime
 Pronouns.lst::grammer::Pronouns
 SeizureSlang2.lst:umls:generic:MOVEundefinedSeizure:Seizures

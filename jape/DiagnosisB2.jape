@@ -7,13 +7,68 @@ Input: DiagnosisA DiagBFiltered Split Lookup Lookup3 Lookup2
 // but this will work for stopping block and most have same negation
 
 Options: control=appelt
+
+Rule: HDiagnosisB1SingleSeizure
+Priority: 100
+
+(  
+    ({DiagBFiltered}):DiagB
+    ({Lookup2.minorType == probability})[0,1]:cert
+    ({DiagnosisA.DiagCategory=="SingleSeizure"}):DiagA 
+):match  
+ -->
+:DiagB.DiagnosisB = {rule = HDiagnosisB1SingleSeizure, PREF = :DiagB.DiagBFiltered.PREFSeizure,  CUI = :DiagB.DiagBFiltered.CUISeizure,
+Negation = :DiagA.DiagnosisA.Negation, Certainty = :DiagA.DiagnosisA.Certainty,
+Certainty = :cert.Lookup2.Level, DiagCategory = :DiagA.DiagnosisA.DiagCategory}
+
+Rule: HDiagnosisB2SingleSeizure
+Priority: 100
+
+(  
+    ({DiagnosisA.DiagCategory=="SingleSeizure"}):DiagA
+    ({Lookup2.minorType == probability})[0,1]:cert
+    ({DiagBFiltered}):DiagB
+):match  
+ -->
+:DiagB.DiagnosisB = {rule = HDiagnosisB2SingleSeizure, PREF = :DiagB.DiagBFiltered.PREFSeizure,  CUI = :DiagB.DiagBFiltered.CUISeizure,
+Negation = :DiagA.DiagnosisA.Negation, Certainty = :DiagA.DiagnosisA.Certainty,
+Certainty = :cert.Lookup2.Level, DiagCategory = :DiagA.DiagnosisA.DiagCategory}
+
+Rule: HDiagnosisB1MultipleSeizures
+Priority: 100
+
+(  
+    ({DiagBFiltered}):DiagB
+    ({Lookup2.minorType == probability})[0,1]:cert
+    ({DiagnosisA.DiagCategory=="MultipleSeizures"}):DiagA 
+):match  
+ -->
+:DiagB.DiagnosisB = {rule = HDiagnosisB1MultipleSeizures, PREF = :DiagB.DiagBFiltered.PREFSeizure,  CUI = :DiagB.DiagBFiltered.CUISeizure,
+Negation = :DiagA.DiagnosisA.Negation, Certainty = :DiagA.DiagnosisA.Certainty,
+Certainty = :cert.Lookup2.Level, DiagCategory = :DiagA.DiagnosisA.DiagCategory}
+
+Rule: HDiagnosisB2MultipleSeizures
+Priority: 100
+
+(  
+    ({DiagnosisA.DiagCategory=="MultipleSeizures"}):DiagA
+    ({Lookup2.minorType == probability})[0,1]:cert
+    ({DiagBFiltered}):DiagB
+):match  
+ -->
+:DiagB.DiagnosisB = {rule = HDiagnosisB2MultipleSeizures, PREF = :DiagB.DiagBFiltered.PREFSeizure,  CUI = :DiagB.DiagBFiltered.CUISeizure,
+Negation = :DiagA.DiagnosisA.Negation, Certainty = :DiagA.DiagnosisA.Certainty,
+Certainty = :cert.Lookup2.Level, DiagCategory = :DiagA.DiagnosisA.DiagCategory}
+
+
+
 Rule: HDiagnosisB1
 Priority: 100
 
 (  
     ({DiagBFiltered}):DiagB
     ({Lookup2.minorType == probability})[0,1]:cert
-    ({DiagnosisA}):DiagA 
+    ({DiagnosisA, DiagnosisA.DiagCategory!="MultipleSeizures", DiagnosisA.DiagCategory!="SingleSeizure"}):DiagA 
 ):match  
  -->
 :DiagB.DiagnosisB = {rule = HDiagnosisB1, PREF = :DiagB.DiagBFiltered.PREF, CUI = :DiagB.DiagBFiltered.CUI, 
@@ -24,7 +79,7 @@ Rule: HDiagnosisB2
 Priority: 100
 
 (  
-    ({DiagnosisA}):DiagA
+    ({DiagnosisA, DiagnosisA.DiagCategory!="MultipleSeizures", DiagnosisA.DiagCategory!="SingleSeizure"}):DiagA
     ({Lookup2.minorType == probability})[0,1]:cert
     ({DiagBFiltered}):DiagB
 ):match  
