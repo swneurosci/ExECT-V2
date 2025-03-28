@@ -9,6 +9,7 @@ NegationCleanUp
 NegationCleanup2
 NegationCleanup3
 NegationCleanup4
+reverseNegationDrug
 TriggerCleaning
 removeUselessLookups
 NegationBack
@@ -22,3 +23,4 @@ CleaningNewLines
 CleaningNewLines2
 PartialDateLowerCase
 DeletePartialDateLowerCase
+DiagnosisTriggersDeleted

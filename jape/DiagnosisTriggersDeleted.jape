@@ -1,0 +1,19 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: Cleaning
+Input: Token DiagnosisTriggers
+Options: control=appelt
+
+Rule: DiagnosisTriggersDeleted
+
+// problems unrelated to X
+
+(
+  ({DiagnosisTriggers}):lookup
+  ({Token.string == "unrelated"})
+):umls
+-->
+:lookup { 
+  inputAS.removeAll(lookupAnnots);
+},
+:umls.DiagnosisTriggersDeleted = {rule = DiagnosisTriggersDeleted}
