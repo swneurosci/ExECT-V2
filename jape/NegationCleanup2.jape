@@ -10,6 +10,12 @@ Options: control=all
 // preventative treatment such as propranolol or possibly tompiramate given his "epilepsy" (lookup)'
 // Why isn't there a Lookup3 version?
 // What about a rule like Person Verb Lookup.negation = negated -> flip the negation, but with controls for only on one sentence (split)
+
+//This rule was also reversing the epilepsy here back to affirmed - "She does not need to take her epilim for epilepsy as she has non epileptic seizures"
+// From synthetic letters 12
+// I have re-reversed back to negated with reverseNegationDrug.jape
+// In the example the non-epilpetic seizures are affirmed by ReverseNegation3 rule
+
 Rule: reverseNegation
 (
 {Trigger}
