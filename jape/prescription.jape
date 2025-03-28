@@ -1,5 +1,5 @@
 Phase: DrugStatus
-Input: Measurement Drug DoseFrequency Numeric ContextPrescription NewLine Sentence KidsDose
+Input: Measurement Drug DoseFrequency Numeric ContextPrescription NewLine Sentence KidsDose OtherDrugs
 Options: control=appelt
 
 // Drug 100mg bd

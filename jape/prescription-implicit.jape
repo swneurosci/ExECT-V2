@@ -1,5 +1,5 @@
 Phase: PrescriptionImplicitPrescription0
-Input: Measurement DoseFrequency Medmod Split NP Prescription0 ContexPrescription Sentence Unit
+Input: Measurement DoseFrequency Medmod Split NP Prescription0 ContexPrescription Sentence Unit OtherDrugs
 Options: control=appelt
 
 /*
