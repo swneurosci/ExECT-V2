@@ -1,5 +1,5 @@
 Phase: Pregnancy
-Input: Lookup3 Person Numeric Split Lookup2 timePeriod
+Input: Lookup3 Person Numeric Split Lookup2 timePeriod Sentence
 
 
 
@@ -49,7 +49,7 @@ TimePeriod = :item.timePeriod.time-unit,
 NumberOfTimePeriods = :item.Numeric.value,
 Temporality = :match.Lookup2.type}
 
-Rule: PregnancyPresent  /* To capture otherdiagnosis which is combined with age or age range in OtherDiag */
+Rule: PregnancyPresent  // as in: she is 3 months pregnant
 Priority: 100
 
 (   
@@ -69,22 +69,3 @@ TimePeriod = :item.timePeriod.time-unit,
 NumberOfTimePeriods = :item.Numeric.value,
 Temporality = :match.Lookup2.type}
 
-Rule: Pragnancy  /* To capture otherdiagnosis which is combined with age or age range in OtherDiag */
-Priority: 100
-
-(   
-	({Person})
-  	({Lookup2.type == present})
-	({Numeric}
-    {timePeriod}
-	{Lookup3.CUI == C0032961, Lookup3.Experiencer == Patient}):item
-    
- ):match  
- -->
-:item.PatientHistory = {rule = PregnancyPresent, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
-EC = :item.Lookup3.EC,  
-//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.Lookup3.Certainty,
-TimePeriod = :item.timePeriod.time-unit,
-NumberOfTimePeriods = :item.Numeric.value,
-Temporality = :match.Lookup2.type}
