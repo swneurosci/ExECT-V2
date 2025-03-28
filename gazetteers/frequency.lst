@@ -82,3 +82,4 @@ three times a day:frequency=3:time-unit=day:interval=1:=
 three times per day:frequency=3:time-unit=day:interval=1:=
 two times a day:frequency=2:time-unit=day:=
 two times per day:frequency=2:time-unit=day:=
+as required:frequency=As_Required
