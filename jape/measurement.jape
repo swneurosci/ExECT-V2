@@ -9,3 +9,15 @@ Rule: measurement1
 ):match
 -->
 :match.Measurement = { rule = measurement1, quantity = :match.Numeric.value, units =:match.Unit.Value}
+
+
+ //5-10mg 
+Rule: measurement2Range
+(
+	({Numeric})
+	({Token.string == "-"})
+	({Numeric}):num
+	({Unit}):unit
+):match
+-->
+:match.Measurement = { rule = measurement2Range, quantity = :num.Numeric.value, units =:match.Unit.Value}
