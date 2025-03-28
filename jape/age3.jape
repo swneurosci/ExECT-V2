@@ -10,15 +10,20 @@ Rule: Age5
 Priority: 80
 
 (   
-	{timeElapsed}//Since or During
+	{timeElapsed} //Since or During//
 	{Person}// His/her
-	({age2}):match// early 30s, late twenties/ 60th birthday // created by age2.jape
-):match1
+	({age2}) // early 30s, late twenties/ 60th birthday // created by age2.jape
+):match
 -->
 :match.Age = {rule =Age5, AgeUnit = "Year",
 AgeLower =:match.age2.LowerAge, AgeUpper =:match.age2.UpperAge}
 
 // age of 5 ?month and 1 year
+
+
+
+
+
 
 //age of 1 and 3 years 
 
@@ -38,3 +43,5 @@ Priority: 100
  -->
 :item.Age = {rule = age3_2 , AgeUnit = :item.timePeriod.time-unit,
 Age =:item.Numeric.value} 
+
+
