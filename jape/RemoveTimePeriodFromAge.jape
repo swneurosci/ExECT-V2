@@ -2,7 +2,7 @@ Phase: RemoveTimePeriodFromAge
 Input:  Age timePeriods timePeriod
 Options: control=all
 
-
+// will have to add some examples here- can't remember why this was done
 
 
 Rule: RemoveTimePeriodsFromAge

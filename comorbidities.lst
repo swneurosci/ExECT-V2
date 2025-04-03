@@ -240,8 +240,6 @@ subdural haemorrhage	CUI=C0018946	PREF=Hematoma, Subdural	TUI=T046	EC=Yes
 subdural haematoma	CUI=C0018946	PREF=Hematoma, Subdural	TUI=T046	EC=Yes
 sub dural haematoma	CUI=C0018946	PREF=Hematoma, Subdural	TUI=T046	EC=Yes
 hemiparesis	CUI=C0018989	PREF=Hemiparesis	TUI=T184	EC=No
-haemorrhage	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=Yes
-bleeding	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=Yes
 blood loss	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=Yes
 HIV infection	CUI=C0019693	PREF=HIV infection	TUI=T047	EC=Yes
 Human immunodeficiency virus infection	CUI=C0019693	PREF=HIV infection	TUI=T047	EC=Yes
@@ -1240,17 +1238,16 @@ venous malformation	CUI=C2937220	PREF=venous malformation	TUI=T019	EC=Yes
 venous malformations	CUI=C2937220	PREF=venous malformation	TUI=T019	EC=Yes
 brain blead	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
 cerebral bleed	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
+cerebral bleeds	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
 cerebral haemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
-cerebral haemorrhage nos	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
-cerebral haemorrhage nos	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
-cerebral hemorrhage nos	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
-cerebral hemorrhage nos	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
+cerebral hemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
+cerebral haemorrhages	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
 cerebral parenchym haemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
 cerebral parenchym hemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
 cerebral parenchymal haemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
-cerebral parenchymal hemorrhages	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
+cerebral parenchymal hemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
 cerebrum haemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
-cerebrum haemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
+cerebrum haemorrhages	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
 cerebrum hemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
 cerebrum hemorrhages	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
 ICH	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
@@ -1524,3 +1521,7 @@ acute symptomatic seizure	CUI=C0393710	PREF=Seizures in response to acute event	
 symptomatic myoclonus	CUI=C0393619	PREF=Symptomatic myoclonus	TUI=T047	STY=Disease or Syndrome	EC=No
 pregnancy	CUI=C0032961	PREF=Pregnancy	TUI=T040	STY=Organism Function	EC=No
 pregnant	CUI=C0032961	PREF=Pregnancy	TUI=T040	STY=Organism Function	EC=No
+beeding in brain	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
+intra-cerebral haemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
+intra-cerebral bleed	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
+intra-cerebral bleeds	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes

@@ -1,9 +1,9 @@
 Phase: DateDiagnosed
-Input: Lookup Person Lookup2 DateSince Sentence DiagnosisTriggers PointInTime Number Lookup3
+Input: Lookup Person Lookup2 DateSince Sentence Split DiagnosisTriggers PointInTime Number Lookup3
 
 Options: control=appelt
 
-
+// She was diagnosed with epilepsy in July 2012
 Rule: DateDiagnosed1
 Priority: 100
 
@@ -89,6 +89,7 @@ YearDate = :match.DateSince.YearDate,
 MonthDate = :match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
 
+// not sure what this one is doing with all tbose ??? - bit like the one below.
 Rule: DateDiagnosed5
 Priority: 100
 
@@ -111,7 +112,7 @@ YearDate = :match.DateSince.YearDate,
 MonthDate = :match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
 
-// Rule error in this rule
+// JME - diagnosed in 2010 
 
 Rule: DateDiagnosed6
 Priority: 90

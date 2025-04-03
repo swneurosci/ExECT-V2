@@ -1,5 +1,5 @@
 Phase: BirthHistory
-Input: Lookup3 Lookup2 Person Numeric timePeriod History Split Sentence
+Input: Lookup3 Lookup2 Person Numeric timePeriod History Split Sentence Age
 
 /* Rules to annotate premature birth, Prem1 - Prem4  get  preterm births described in terms of age at birth in weeks,
 rules Prem5 - Prem8 get preterm births described in terms of the number of weeks short of full term and converst them 
@@ -8,7 +8,8 @@ any mention of age or the number of weeks */
 
 Options: control=appelt
 
-//She was born at 26 weeks//
+//She was born at 26 weeks// This rule used to work, but since the @introduction of 'Remove TimePeriod from Age' it stoped
+// so I have just createded a version of it with Age in Prem1a
 Rule: Prem1
 Priority: 100
 
@@ -27,8 +28,23 @@ Priority: 100
 :item.BirthHistory = {rule = Prem1, PREF = "extremely preterm", CUI = C4055046, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "under 28 weeks"}
 
+//She was born at 26 weeks but with Age which may make the one above not needed
+Rule: Prem1a
+Priority: 100
 
-//She was born at 30 weeks gestation//
+(   
+	{Person}
+    ({Lookup2.majorType == historic , Lookup2.type == birth}
+    {Age.Age < 28}):item
+    
+    
+ ):match  
+ -->
+:item.BirthHistory = {rule = Prem1a, PREF = "extremely preterm", CUI = C4055046, 
+STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "under 28 weeks"}
+
+//She was born at 30 weeks gestation// This rule used to work, but since the @introduction of 'Remove TimePeriod from Age' it stoped
+// so I have just createded a version of it with Age in Prem2a
 Rule: Prem2
 Priority: 100
 
@@ -44,8 +60,26 @@ Priority: 100
     
  ):match  
  -->
+:item.BirthHistory = {rule = Prem2a, PREF = "very preterm", CUI = C4053870, 
+STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "28 to 32 weeks"}
+
+//She was born at 30 weeks gestation same as abobe but using Age - which may the previous rule not needed
+
+Rule: Prem2a
+Priority: 100
+
+(   
+	 
+	{Person}
+    ({Lookup2.majorType == historic , Lookup2.type == birth}
+    {Age.Age >=28, Age.Age <32}):item
+   
+ 
+ ):match  
+ -->
 :item.BirthHistory = {rule = Prem2, PREF = "very preterm", CUI = C4053870, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "28 to 32 weeks"}
+
 
 //to catch the 32 to 37, (def of moderate to late preterm()  
 //separately from 34 to 37 I used 32 to 34 in this rule, I hope this is correct//
@@ -67,6 +101,24 @@ Priority: 100
 :item.BirthHistory = {rule = Prem3, PREF = "moderate to late preterm", CUI = C4054482, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "32 to 34 weeks"}
 
+
+// Ase above but with Age for the same reason as Prem 1 and 2 
+Rule: Prem3a
+Priority: 100
+
+(
+{Person}
+    ({Lookup2.majorType == historic , Lookup2.type == birth}
+    {Age.Age >=32, Age.Age <34}):item
+
+):match  
+ -->
+:item.BirthHistory = {rule = Prem3a, PREF = "moderate to late preterm", CUI = C4054482, 
+STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "32 to 34 weeks"}
+
+// As the previous Prem rules that use timePeriod, this one is not fiering becouse of 'Remove timePeriod from Age' rule so 
+// repeating the pattern with Age in Prem4a - 
+
 Rule: Prem4
 Priority: 100
 
@@ -86,6 +138,23 @@ Priority: 100
  -->
 :item.BirthHistory = {rule = Prem4, PREF = "late preterm", CUI = C3829315, 
 STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "34 to 37 weeks"}
+
+Rule: Prem4a
+Priority: 100
+
+(   
+	{Person}
+    ({Lookup2.majorType == historic , Lookup2.type == birth}
+    {Age.Age >=34, Age.Age <37}):item
+    
+    
+ ):match  
+ -->
+:item.BirthHistory = {rule = Prem4a, PREF = "late preterm", CUI = C3829315, 
+STY = Finding, Negation = Affirmed, Experiencer = Patient, Range = "34 to 37 weeks"}
+
+
+
 
 // He was born on time
 Rule: Term1
