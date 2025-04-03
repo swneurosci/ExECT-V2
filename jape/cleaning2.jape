@@ -161,6 +161,21 @@ Rule: RemoveLookup3
 :umls.Lookup3Deleted = {rule = RemoveLookupWithin}
 
 
+// Idential to rule in cleaning.jape but for lookup3 not lookup
 
+
+// this one removes "symptomatic seizures" from "acute symtomatic seizures"
+// removes from lookup3
+Rule: removeLookup3WithinComorb
+// minorType = OtherDisease = "comorbidity" for Phist stuff
+// minorType = Disease = "epi seizures" for Sfreq stuff
+(
+    ({Lookup3.minorType == "Disease", Lookup3 within Lookup3.minorType == "OtherDisease"}):umls
+):match
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls.Lookup3Deleted = {rule = removeLookup3WithinComorb}
 
 

@@ -97,3 +97,17 @@ Rule: removeUselessLookups
 },
 :umls.LookupDeleted = {rule = removeUselessLookups}
 
+
+// this one removes "symptomatic seizures" from "acute symtomatic seizures"
+// removes from lookup
+Rule: removeLookupWithinComorb
+// minorType = OtherDisease = "comorbidity" for Phist stuff
+(
+    ({Lookup.minorType == "Disease", Lookup within Lookup3.minorType == "OtherDisease"}):umls
+):match
+-->
+:umls { 
+  inputAS.removeAll(umlsAnnots);
+},
+:umls.LookupDeleted = {rule = removeLookupWithinComorb}
+
