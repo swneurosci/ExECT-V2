@@ -203,12 +203,12 @@ Priority: 100
 /*lookup2.minorType == time captures age groups e.g. teenager, timeElapsed is not always used in such phrases*/
 
 /* THIS RULE PICKS UP TOO MUCH - NEEDS TO BE MORE SPECIFIC */
-
+// added so As acan be capitalised 
 Rule: Age_Range2b
 Priority: 90
 
 (   
-	({Token.string == "as"}|{Token.string == "when"}|{Token.string == "was"})
+	({Token.string =~ "[Aa]s"}|{Token.string == "when"}|{Token.string == "was"})
 	({Token.string == a})
 	{Lookup2.minorType == time}	
 	
