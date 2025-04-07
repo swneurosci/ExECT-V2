@@ -6,7 +6,7 @@ Input: Lookup Person Lookup2 Sentence Age DiagnosisTriggers  Pronouns Split Sent
 
 Options: control=appelt
 
-
+//She was diagnosed with epilepsy when she was 9 years old.
 Rule: AgeDiagnosed1
 Priority: 100
 
@@ -30,7 +30,7 @@ AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
 AgeUpper =:match.Age.AgeUpper}
 
-
+// almost the same as above - check in output when it is specficall applied
 Rule: AgeDiagnosed2
 Priority: 99
 
@@ -76,7 +76,7 @@ AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
 AgeUpper =:match.Age.AgeUpper}
 
-Rule: AgeDiagnosed3		//Epilepsy - diagnosed age 1//
+Rule: AgeDiagnosed3		//Epilepsy - diagnosed age 1 / Her JME was diagnosed in her teenage years.
 Priority: 99
 
 (   
@@ -103,13 +103,13 @@ Rule: AgeDiagnosed4
 Priority: 99
 
 (   
-	({Lookup2.type != began})
+	
 	{Age}
 	({Person})?
 	({Pronouns})?
 	({Lookup2.majorType == historic})?
 	{DiagnosisTriggers.type == diagnosis}
-	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient }):item
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed }):item
 	
     	
  ):match  

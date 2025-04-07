@@ -8,7 +8,7 @@ Rule: DateDiagnosed1
 Priority: 100
 
 (   
-	{Person}
+	({Person})?
 	{Lookup2.majorType == historic}
 	({Lookup2})?
     {DiagnosisTriggers.majorType == diagnosis}
@@ -27,6 +27,8 @@ YearDate = :match.DateSince.YearDate,
 MonthDate = :match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
 
+
+// with PointinTime
 Rule: DateDiagnosed2
 Priority: 100
 
@@ -45,14 +47,35 @@ Priority: 100
 PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Experiencer = :item.Lookup.Experiencer,
 Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation,
-PointInTime = :match.PointInTime.Since,
-AgeUnit ="Year"}
+PointInTime = :match.PointInTime.Since}
+
+
+// she was finally diagnosed with JME last year.
+Rule: DateDiagnosed2a
+Priority: 100
+
+(   
+	({Person})?
+    {DiagnosisTriggers.majorType == diagnosis}
+	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient}):item
+	({Lookup2})?
+	{PointInTime}
+	
+ ):match  
+ -->
+:item.WhenDiagnosed = {rule = DateDiagnosed2a, OnsetType = "When_Diagnosed", 
+PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation,
+PointInTime = :match.PointInTime.Since}
+
+//(She)? was last year diagnosed with epilepsy - odd but there you are
 
 Rule: DateDiagnosed3
 Priority: 100
 
 (   
-	{Person}
+	({Person})?
 	{Lookup2.majorType == historic}
 	{PointInTime}
     {DiagnosisTriggers.majorType == diagnosis}
@@ -66,18 +89,18 @@ PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
 Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation,
 PointInTime = :match.PointInTime.Since}
 
+// In 2010 she was diagnosed with focal epilepsy.
 Rule: DateDiagnosed4
 Priority: 100
 
 (   
+	{DateSince}
 	{Person}
 	{Lookup2.majorType == historic}
 	({Lookup2})?
     {DiagnosisTriggers.majorType == diagnosis}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient}):item
-	{DateSince}
-
- 
+	
 	
  ):match  
  -->
@@ -89,7 +112,8 @@ YearDate = :match.DateSince.YearDate,
 MonthDate = :match.DateSince.MonthDate,
 DayDate = :match.DateSince.DayDate}
 
-// not sure what this one is doing with all tbose ??? - bit like the one below.
+// not sure what this one is doing with all these ??? - bit like the one below.
+// Diagnosed with JME in April 2015 - gets picked up
 Rule: DateDiagnosed5
 Priority: 100
 

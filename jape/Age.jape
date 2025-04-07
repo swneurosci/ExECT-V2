@@ -208,7 +208,7 @@ Rule: Age_Range2b
 Priority: 90
 
 (   
-	({Token.string == "as"}|{Token.string == "when"}|{Token.string == "was"})
+	({Token.string =~ "[Aa]s"}|{Token.string =~ "[Ww]hen"}|{Token.string == "was"})
 	({Token.string == a})
 	{Lookup2.minorType == time}	
 	
@@ -364,7 +364,7 @@ Priority: 100
 AgeUpper =:match.Numeric.value} 
 
 
-// as above but swaped month + years aroun
+// as above but swaped month + years around
 //   Age from 10 months to 3 years.
 
 Rule: Age_Range6b

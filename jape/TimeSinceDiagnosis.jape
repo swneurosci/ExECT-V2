@@ -3,6 +3,7 @@ Input: Lookup Person Sentence Numeric TimeSince timePeriod timeElapsed Lookup2 S
 
 Options: control=appelt
 
+//She has had the diagnosis of epilepsy for the last 10 years.
 Rule: TimeSinceDiagnosis1
 Priority: 99
 
@@ -47,7 +48,7 @@ Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Loo
 TimePeriod = :match.timePeriod.time-unit,
 NumberOfTimePeriods =:match.Numeric.value}
 
-
+//She had a diagnosis of epilepsy for the last 5 years.
 Rule: TimeSinceDiagnosis3
 Priority: 99
 
@@ -80,6 +81,27 @@ Priority: 99
  ):match  
  -->
 :item.WhenDiagnosed = {rule = TimeSinceDiagnosis4 , OnsetType = "time_since_diagnosis",
+PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Experiencer = :item.Lookup.Experiencer,
+Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation,
+TimePeriod = :match.TimeSince.TimePeriod,
+NumberOfTimePeriods =:match.TimeSince.NumberOfTimePeriods}
+
+
+//His JME was diagnosed 10 years ago.
+Rule: TimeSinceDiagnosis5
+Priority: 99
+
+(   
+   ({Person})?
+   ({Lookup.majorType == umls , Lookup.Negation == Affirmed}):item
+   ({Lookup2.majorType == historic})
+    {DiagnosisTriggers.majorType == diagnosis, DiagnosisTriggers.type == diagnosis}
+	{TimeSince}
+	
+ ):match  
+ -->
+:item.WhenDiagnosed = {rule = TimeSinceDiagnosis5 , OnsetType = "time_since_diagnosis",
 PREF = :item.Lookup.PREF,  TUI = :item.Lookup.TUI,
 // STY = :item.Lookup.STY,  Experiencer = :item.Lookup.Experiencer,
 Certainty = :item.Lookup.Certainty, CUI = :item.Lookup.CUI, Negation = :item.Lookup.Negation,
