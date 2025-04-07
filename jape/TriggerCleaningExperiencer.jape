@@ -16,3 +16,17 @@ Rule: Someone_Said
   inputAS.removeAll(ExperiencerAnnots);
 },
 :umls.TriggerExperiencerDeleted = {rule = "Someone_Said"}
+
+
+
+// As_a_Child
+Rule: Someone_Said
+
+(
+  ({Trigger.majorType == "experiencer", Trigger within Age}):Experiencer
+):umls
+-->
+:Experiencer { 
+  inputAS.removeAll(ExperiencerAnnots);
+},
+:umls.TriggerExperiencerDeleted = {rule = "As_a_Child"}
