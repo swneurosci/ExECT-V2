@@ -1,5 +1,5 @@
 Phase: OnsetAge
-Input: Lookup3 Person Lookup OnsetPhrase Sentence Age TimeSince Pronouns Frequency Split DiagnosisTriggers
+Input: Lookup3 Person Lookup OnsetPhrase Sentence Age TimeSince Pronouns Frequency Split DiagnosisTriggers OnsetBlock
 Options: control=appelt
 
 /*TimeSince  and Pronouns are here to stop picking up phrases with TimeSince */
@@ -239,7 +239,7 @@ Priority: 99
 
 (   
 	({Person})?
-	({OnsetPhrase})
+	({OnsetPhrase.type != presenting})
 	({Person})?
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed , Lookup.Experiencer == Patient , Lookup.minorType == Disease}):item
 

@@ -97,3 +97,27 @@ Age = :match.Age.Age,
 AgeUnit = :match.Age.AgeUnit,
 AgeLower = :match.Age.AgeLower,
 AgeUpper =:match.Age.AgeUpper}
+
+Rule: onsetAgeB7
+Priority: 98
+
+(  
+	
+	({DiagnosisTriggers.type == diagnosis})
+	({Lookup})
+	({OnsetPhrase.type == presenting})
+	({Lookup.majorType == umls, Lookup.Negation == Affirmed,  Lookup.Experiencer == Patient, Lookup.minorType == Disease}):item
+	{Age}
+	
+		
+ ):match  
+ -->
+:item.Onset= {rule = onsetAgeB7,onsetType = presentingAge, OnsetType = "age_episodes_started", 
+CUI = :item.Lookup.CUI,
+PREF = :item.Lookup.PREF, TUI = :item.Lookup.TUI,
+// STY = :item.Lookup.STY,  Negation = :item.Lookup.Negation, Experiencer = :item.Lookup.Experiencer,
+// Certainty = :item.Lookup.Certainty,
+Age = :match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeLower = :match.Age.AgeLower,
+AgeUpper =:match.Age.AgeUpper}
