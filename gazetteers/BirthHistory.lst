@@ -15,3 +15,4 @@ premature delivery:value=under_37_weeks:TUI=T046:CUI=C0151526
 on time:value=term_birth:TUI=T040:CUI=C0233324
 early:value=under_37_weeks:TUI=T046:CUI=C0151526
 short of full term:value=under_37_weeks:TUI=T046:CUI=C0151526
+at full term:value=term_birth:TUI=T040:CUI=C0233324

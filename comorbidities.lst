@@ -1518,10 +1518,18 @@ premature delivery	CUI=C0151526	PREF=Premature birth	TUI=T046	EC=Yes
 motor neurone disease	CUI=C0085084	PREF=Motor Neuron Disease	TUI=T047	EC=No
 haemorrhages	CUI=C0019080	PREF=Hemorrhage	TUI=T046	EC=Yes
 acute symptomatic seizure	CUI=C0393710	PREF=Seizures in response to acute event	TUI=T184	STY=sign or symptom	EC=No
-symptomatic myoclonus	CUI=C0393619	PREF=Symptomatic myoclonus	TUI=T047	STY=Disease or Syndrome	EC=No
-pregnancy	CUI=C0032961	PREF=Pregnancy	TUI=T040	STY=Organism Function	EC=No
-pregnant	CUI=C0032961	PREF=Pregnancy	TUI=T040	STY=Organism Function	EC=No
+symptomatic myoclonus	CUI=C0393619	PREF=Symptomatic myoclonus	TUI=T047	EC=No
+pregnancy	CUI=C0032961	PREF=Pregnancy	TUI=T040	EC=No
+pregnant	CUI=C0032961	PREF=Pregnancy	TUI=T040	EC=No
 beeding in brain	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
 intra-cerebral haemorrhage	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
 intra-cerebral bleed	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
 intra-cerebral bleeds	CUI=C2937358	PREF=Cerebral Hemorrhage	TUI=T046	EC=Yes
+optic atrophy	CUI=C0029124	PREF=Optic Atrophy	TUI=T047	EC=No	
+optic nerve atrophy	CUI=C0029124	PREF=Optic Atrophy	TUI=T047	EC=No	
+cognitive deficit	CUI=C0338656	PREF=Impaired cognition	TUI=T048	EC=No
+impaired cognition	CUI=C0338656	PREF=Impaired cognition	TUI=T048	EC=No
+cognitive dysfunctions	CUI=C0338656	PREF=Impaired cognition	TUI=T048	EC=No
+cognitive impairment	CUI=C0338656	PREF=Impaired cognition	TUI=T048	EC=No
+cognitive disturbances	CUI=C0338656	PREF=Impaired cognition	TUI=T048	EC=No
+TIAs	CUI=C0007787	PREF=Transient Ischemic Attack	TUI=T047	EC=Yes
