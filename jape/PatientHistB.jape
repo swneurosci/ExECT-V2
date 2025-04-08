@@ -161,14 +161,16 @@ EC = :item.OtherDiag.EC,  ruleOtherDiag = :item.OtherDiag.rule,TUI = :item.Other
 Negation = :item.OtherDiag.Negation,
 Certainty = :item.OtherDiag.Certainty} 
 
-// HS - VERY RISKY - OtherDiag followed by OtherDiag....
-// I have also changed names of rules (in other Diag/OtherDIagPhrase) so i dont think it will fire anymore....
-Rule: PtHistoryB7a  /*2nd other diag within an opinion statement*/
+// Corrected. 
+// HS: I have also changed names of rules (in other Diag/OtherDIagPhrase) so i dont think it will fire anymore....
+Rule: PtHistoryB7a  /*2nd other diag within an opinion statement Example: History of MS and head injury in 1980...*/
 Priority: 70
 
 (  
+	({DiagnosisTriggers} | {Experience})
 	({OtherDiag})
-	({OtherDiag.rule == OtherDiagPhrase}):item
+	({Conj})?
+	({OtherDiag}):item
 	
  ):match  
  -->
@@ -176,7 +178,14 @@ Priority: 70
 EC = :item.OtherDiag.EC,  ruleOtherDiag = :item.OtherDiag.rule,TUI = :item.OtherDiag.TUI
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
 Negation = :item.OtherDiag.Negation,
-Certainty = :item.OtherDiag.Certainty}
+Certainty = :item.OtherDiag.Certainty,
+AgeUnit = :item.OtherDiag.Age,
+Age = :item.OtherDiag.Age,
+AgeLower =:item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper,
+DayDate =:match.OtherDiag.DayDate,
+MonthDate =:match.OtherDiag.MonthDate,
+YearDate = :match.OtherDiag.YearDate}
 
 //He Experienced OtherDiag and (his) OtherDiag2
 // Need age and time since in output?

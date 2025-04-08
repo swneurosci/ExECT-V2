@@ -30,7 +30,7 @@ AgeUpper = :item.OtherDiag.AgeUpper,
 Age = :item.OtherDiag.Age}
 
 Rule: PtHistoryA2  /* To capture otherdiagnosis which is combined with Date or TimeSince in OtherDiag */
-//she had a stroke 10 years ago  /  he had a stroke in 2017
+//she had a (something and)  stroke 10 years ago  /  he had a stroke in 2017
 // No different to rule above - first his/her would be ignored
 // Need to add other outputs to rule above like PtHistA2
 
@@ -38,6 +38,7 @@ Priority: 100
 (   
 	({Person})
 	({Experience})[1,2]
+	({Conj})?
 	({OtherDiag}):item
     
  ):match  

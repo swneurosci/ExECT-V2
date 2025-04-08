@@ -164,3 +164,63 @@ DayDate =:item.OtherDiag.DayDate,
 MonthDate = :item.OtherDiag.MonthDate,
 YearDate =:item.OtherDiag.YearDate}
 
+// A list but with a sentence with other otherdiag :
+/*Previous Diagnosis:
+Subarachnoid haemorrhage 28 years ago
+Hydrocephalus due to subarachnoid haemorrhage with subsequent shunting */
+Rule: PtHistoryC6
+Priority: 100
+
+(  
+    {DiagnosisTriggers}
+    (SPLIT)[1,4]
+    ({OtherDiag})
+    (SPLIT)[1,4]
+    ({OtherDiag})
+    ({OtherDiag}):item
+  
+	
+):match  
+ -->
+:item.PatientHistoryC = {rule = PtHistoryC6, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI,
+EC = :item.OtherDiag.EC,  ruleOtherDiag = :item.OtherDiag.rule, 
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
+TimePeriod = :item.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods,
+AgeUnit = :item.OtherDiag.AgeUnit,
+Age =:item.OtherDiag.Age,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper,
+DayDate =:item.OtherDiag.DayDate,
+MonthDate = :item.OtherDiag.MonthDate,
+YearDate =:item.OtherDiag.YearDate}
+
+// another variation with a list of other diagnosis
+Rule: PtHistoryC7
+Priority: 100
+
+(  
+    {DiagnosisTriggers}
+    (SPLIT)[1,4]
+    ({OtherDiag})
+    (SPLIT)[1,4]
+    ({OtherDiag})[1,3]
+   (SPLIT)[1,4]
+    ({OtherDiag}):item
+	
+):match  
+ -->
+:item.PatientHistoryC = {rule = PtHistoryC7, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI,
+EC = :item.OtherDiag.EC,  ruleOtherDiag = :item.OtherDiag.rule, 
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
+TimePeriod = :item.OtherDiag.TimePeriod,
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods,
+AgeUnit = :item.OtherDiag.AgeUnit,
+Age =:item.OtherDiag.Age,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper,
+DayDate =:item.OtherDiag.DayDate,
+MonthDate = :item.OtherDiag.MonthDate,
+YearDate =:item.OtherDiag.YearDate}
