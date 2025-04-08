@@ -1,6 +1,7 @@
 Phase: AgeDiagnosed
-Input: Lookup Person Lookup2 Sentence Age DiagnosisTriggers  Pronouns Split Sentence
+Input: Lookup Person Lookup2 Sentence Age DiagnosisTriggers  Pronouns Split Sentence OnsetPhrase
 
+//onsetphrase used as a block as in: She was diagnosed with epilepsy which started whan she was 5
 
   /*includes AgeDiagnosedRange*/
 
@@ -105,9 +106,8 @@ Priority: 99
 (   
 	
 	{Age}
-	({Person})?
-	({Pronouns})?
-	({Lookup2.majorType == historic})?
+	({Person})
+	({Lookup2.majorType == historic})
 	{DiagnosisTriggers.type == diagnosis}
 	({Lookup.majorType == umls , Lookup.Negation == Affirmed }):item
 	
