@@ -962,3 +962,5 @@ non-convulsive status epilepticus	CUI=C0751523	PREF=non-convulsive status epilep
 non convulsive status epilepticus	CUI=C0751523	PREF=non-convulsive status epilepticus	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
 symptomatic seizure	CUI=C4023516	PREF=Symptomatic Seizures	TUI=T184	STY=sign or symptom
 symptomatic seizures	CUI=C4023516	PREF=Symptomatic Seizures	TUI=T184	STY=sign or symptom
+menstrual epilepsy	CUI=C0393718	PREF=Menstrual epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
+catamenial epilepsy	CUI=C0393718	PREF=Menstrual epilepsy	TUI=T047	STY=Disease or Syndrome	Epilepsy=Yes
