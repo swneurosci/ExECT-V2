@@ -12,7 +12,6 @@ conj.lst:grammar:conjunction::Conj
 higher-dose.lst:status:Increase::Medmod
 lower-dose.lst:status:Decrease::Medmod
 probability.lst:status:probability::Lookup2
-health_care_terms.lst:organization:health_term::Lookup2
 wordnumbers.lst:frequency:number::Numeric
 pronoun.lst:person:pronoun::Person
 CalenderUnit.lst:frequency:time::Calendar
