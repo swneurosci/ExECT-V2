@@ -301,7 +301,7 @@ Priority: 100  // (Her) seizures started in 2010 - at the moment not picked up w
 
  ):match  
  -->
-:item.OtherDiag = {rule = Seizures1,r = "1", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = Seizures1,r = "1", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -321,7 +321,7 @@ Priority: 100
 
  ):match  
  -->
-:item.OtherDiag = {rule = Seizures2, r = "2",PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = Seizures2, r = "2",PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -344,7 +344,7 @@ Priority: 100
 
  ):match  
  -->
-:item.OtherDiag = {rule = Seizures3,r = "3", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = Seizures3,r = "3", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -363,7 +363,7 @@ Priority: 100
 
  ):match  
  -->
-:item.OtherDiag = {rule = SeizuresTimeSince1, r = "4", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = SeizuresTimeSince1, r = "4", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -385,7 +385,7 @@ Priority: 99
    
  ):match  
  -->
-:item.OtherDiag = {rule = Seizures5, r = "5",PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = Seizures5, r = "5",PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -403,7 +403,7 @@ Priority: 100
 
  ):match  
  -->
-:item.OtherDiag = {rule = Seizures6, r = "6", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = Seizures6, r = "6", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -423,7 +423,7 @@ Priority: 100
     
  ):match  
  -->
-:item.OtherDiag = {rule = Seizures7,r = "7", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = Seizures7,r = "7", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -444,7 +444,7 @@ Priority: 100
 
  ):match  
  -->
-:item.OtherDiag = {rule = Seizures8, r = "8",PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = Seizures8, r = "8",PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -465,7 +465,7 @@ Priority: 100
 
  ):match  
  -->
-:item.OtherDiag = {rule = Seizures10, r = "10",PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = Seizures10, r = "10",PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -485,7 +485,7 @@ Priority: 100
 
  ):match  
  -->
-:item.OtherDiag = {rule = Seizures11,r = "11",PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = Seizures11,r = "11",PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -507,7 +507,7 @@ Priority: 100
 
  ):match  
  -->
-:item.OtherDiag = {rule = Seizures12,r = "12", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = Seizures12,r = "12", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -527,7 +527,7 @@ Priority: 90
 
  ):match  
  -->
-:item.OtherDiag = {rule = Seizures13, r = "13", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI,TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = Seizures13, r = "13", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI,TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -545,7 +545,7 @@ Priority: 99
 	({Age})?
  ):match  
  -->
-:item.OtherDiag = {rule = Seizures14, r = "14", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = Seizures14, r = "14", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer,
 Certainty = :item.Lookup3.Certainty,AgeUnit = :match.Age.AgeUnit,
@@ -562,7 +562,7 @@ Rule: Seizures15  //Includes hypothetical Lookup3 but possesive makes it worth a
 
  ):match  
  -->
-:item.OtherDiag = {rule = Seizures15, r = "15" PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = Seizures15, r = "15" PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
  Negation = :item.Lookup3.Negation,Certainty = :item.Lookup3.Certainty} 
 
 
@@ -578,7 +578,7 @@ Priority: 100
 
  ):match  
  -->
-:item.OtherDiag = {rule = Seizures16, r = "16", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
+:item.OtherDiagSeizure = {rule = Seizures16, r = "16", PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, TUI = :item.Lookup3.TUI,
 EC = :item.Lookup3.EC, Negation = :item.Lookup3.Negation,
 Experiencer = :item.Lookup3.Experiencer, Temporality = :item.Lookup3.Temporality, 
 Certainty = :item.Lookup3.Certainty,
@@ -598,7 +598,7 @@ Rule: LastSeizureDate1  //Date
 	
  ):match  
  -->
-:item.OtherDiag = {rule = LastSeizureDate1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiagSeizure = {rule = LastSeizureDate1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 EC = :item.Lookup3.EC, 
 Certainty = :item.Lookup3.Certainty, Negation = :item.Lookup3.Negation}
 
@@ -612,7 +612,7 @@ Rule: LastSeizureTime1 //Time
 	
  ):match  
  -->
-:item.OtherDiag = {rule = LastSeizureTime1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiagSeizure = {rule = LastSeizureTime1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 EC = :item.Lookup3.EC, 
 Certainty = :item.Lookup3.Certainty, Negation = :item.Lookup3.Negation}
 
@@ -625,7 +625,7 @@ Rule: LastSeizureAge1 //Age
 	
  ):match  
  -->
-:item.OtherDiag = {rule = LastSeizureAge1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiagSeizure = {rule = LastSeizureAge1, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 EC = :item.Lookup3.EC, 
 Certainty = :item.Lookup3.Certainty, Negation = :item.Lookup3.Negation}
 
@@ -648,7 +648,7 @@ Rule: LastSeizureDate2  //Date
 	
  ):match  
  -->
-:item.OtherDiag = {rule = LastSeizureDate2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiagSeizure = {rule = LastSeizureDate2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 EC = :item.Lookup3.EC, 
 Certainty = :item.Lookup3.Certainty, Negation = :item.Lookup3.Negation}
 
@@ -662,6 +662,6 @@ Rule: LastSeizureTime2 //Time
 	
  ):match  
  -->
-:item.OtherDiag = {rule = LastSeizureTime2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
+:item.OtherDiagSeizure = {rule = LastSeizureTime2, PREF = :item.Lookup3.PREF, CUI = :item.Lookup3.CUI, 
 EC = :item.Lookup3.EC, 
 Certainty = :item.Lookup3.Certainty, Negation = :item.Lookup3.Negation}

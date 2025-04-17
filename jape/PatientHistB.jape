@@ -237,7 +237,7 @@ Priority: 98
 
 (   
 	{Person}
-	({OtherDiag.rule == OtherDiagPhrase}):item
+	({OtherDiag.rule =~ OtherDiagPhrase}):item
    	{Experience.type == suffered}
    	{DateSince}
 
