@@ -1,6 +1,10 @@
 Phase: OtherDiagnosisListD
 Input: DiagnosisTriggers OtherDiag listSent listPoint DateSince Age endList
 //in general to capture the 4th item in the top of letter list//
+/// NOT IN PIPELINE
+
+
+
 Options: control=appelt
 
 Rule: OtherDiagListD1

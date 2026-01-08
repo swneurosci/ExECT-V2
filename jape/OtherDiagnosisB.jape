@@ -4,6 +4,8 @@ Input: OtherDiag Lookup3 Lookup Split DiagnosisTriggers listPoint NewLine
 /*Removed Sentence from these rules as some items are within list without listPoints, may have to
 use some other means of stopping the rules from picking up everything from the text*/
 
+//// NOT IN PIPELINE
+
 Options: control=appelt
 
 Rule: OtherDiagB

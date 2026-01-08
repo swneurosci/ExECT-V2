@@ -32,3 +32,17 @@ Rule: FrequencyCleaned2
   inputAS.removeAll(freqAnnots);
 },
 :umls.FrequencyDeleted = {rule = FrequencyCleaned2}
+
+
+Rule: FrequencyCleaned2
+// increased Drug
+
+(
+  ({Frequency}):freq
+  ({Drug})
+):umls
+-->
+:freq { 
+  inputAS.removeAll(freqAnnots);
+},
+:umls.FrequencyDeleted = {rule = FrequencyCleaned2}

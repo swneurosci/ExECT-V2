@@ -5,9 +5,8 @@ Input: Sentence Diagnosis Investigation
 Options: control=all
 
 
-// no non-epileptic seizures - would deleting the contains "non" mean that all the rules would work fine 
-// and this wont be needed
 // for now rule is fine and should work well
+// TO-DO - edit so the 'Sentence' would be 'INVEST_SENTENCE' and only starts at the Investigation (EEG/CT/MRI) or the result. This will then mean only cant be diagnosed in sentence after mention of it.
 // Improved with diagnosis from DiagnosisTriggers to be deleted not personTrigger
 Rule: DiagInInvestDelete
 (

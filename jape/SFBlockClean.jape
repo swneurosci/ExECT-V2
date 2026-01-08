@@ -1,15 +1,45 @@
+Imports: {import static gate.Utils.*; }
+
 Phase: SFBlockRemove
-Input: SFBlock Sentence DiagB Token
+Input: SFreqBlock Sentence DiagB Token timeElapsed PartialDate
 Options: control=all
 
 Rule: SeizureFrequencySecondFilter
 (
     ({DiagB})
-    ({SFBlock}):SFBlock
+    ({SFreqBlock.SFBlock == "Yes"}):SFBlock
    
 ):match
 -->
-:match.SFBlockRemoved = {rule = "SFBlockRemove"},
 :SFBlock { 
  inputAS.removeAll(SFBlockAnnots);
-}
+},
+:match.SFBlockRemoved = {rule = "SFBlockRemove"}
+
+
+Rule: DuringDateSheHad
+(
+    ({timeElapsed.time == "During"})
+    ({PartialDate})
+    ({SFreqBlock.SFBlock == "Yes", SFreqBlock@string == "she had"}):SFBlock1
+   
+):match
+-->
+:SFBlock1 { 
+ inputAS.removeAll(SFBlock1Annots);
+},
+:match.SFBlockRemoved = {rule = "DuringDateSheHeHad"}
+
+
+ Rule: DuringDateHeHad
+(
+    ({timeElapsed.time == "During"})
+    ({PartialDate})
+    ({SFreqBlock@string == "he had", SFreqBlock.SFBlock == "Yes"}):SFBlock1
+   
+):match
+-->
+:SFBlock1 { 
+ inputAS.removeAll(SFBlock1Annots);
+},
+:match.SFBlockRemoved = {rule = "DuringDateSheHeHad"}

@@ -1,5 +1,5 @@
 Phase: SeizureChange
-Input: Lookup3 Split SeizureFree SeizureFrequency Frequency timeElapsed NumberRange timePeriods PartialDate Coincide PointInTime Drug
+Input: Lookup3 Split SeizureFree SeizureFrequency Frequency timeElapsed NumberRange timePeriods PartialDate Coincide PointInTime Drug and
 Options: control=appelt 
 
 
@@ -138,7 +138,7 @@ LowerNumberOfTimePeriods = :match.NumberRange.N1, UpperNumberOfTimePeriods = :ma
 
 /* Since Date */
 
-
+//increased seizures since DATE
 Rule: SeizureChange2a
 Priority: 100 
 ( 
@@ -153,7 +153,7 @@ Priority: 100
 DayDate = :match.PartialDate.day, MonthDate = :match.PartialDate.month, YearDate = :match.PartialDate.year, 
 TimeSince_or_TimeOfEvent = :match.timeElapsed.time} 
 
-
+//seizure increased since DATE
 Rule: SeizureChange2b
 Priority: 100 
 ( 
@@ -284,6 +284,7 @@ Priority: 99
 --> 
 :match.SeizureChange = { rule = "SeizureChange4b", CUI = :match.Lookup3.CUI, FrequencyChange = :match.Frequency.Quantity, Certainty = :match.Lookup3.Certainty, Negation = :match.Lookup3.Negation } 
 
+// seizures increase 4 years ago?
 Rule: SeizureChange4b2
 Priority: 99 
 ( 

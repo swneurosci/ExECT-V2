@@ -8,7 +8,7 @@ Options: control=appelt
 Rule: TwoSeizInOneTimePeriod
 (
     (({NumberRange})
-    ({Lookup3.majorType == "umls", Lookup3.minorType != "OtherDisease"})
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease"})
     ({Token.string == "and"})):match1
     ({SeizureFrequency11})
 ):match
@@ -26,7 +26,7 @@ Rule: TwoSeizInOneTimePeriod
     ({SeizureFrequency11})
     (({Token.string == "and"})
     ({NumberRange})
-    ({Lookup3.majorType == "umls", Lookup3.minorType != "OtherDisease"})):match1
+    ({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease"})):match1
     ({!SeizFrequency1}|{!timePeriods})
 ):match
 -->

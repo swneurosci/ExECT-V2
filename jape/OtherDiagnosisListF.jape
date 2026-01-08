@@ -6,6 +6,8 @@ Options: control=brill
 /*These are for list with "alternative" list points */
 //Lookup is there to stop picking up items across many sentences
 //listPoins serves as a block
+/// NOT IN PIPELINE
+
 Rule: OtherDiagListF1
 Priority: 100
 

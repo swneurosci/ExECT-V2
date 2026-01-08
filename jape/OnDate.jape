@@ -1,0 +1,12 @@
+Phase: OnDate
+Input: Token PartialDate
+Options: control=appelt
+
+Rule: OnDate
+
+(
+  ({Token@string =~"[Oo]n"}):on
+  ({PartialDate})
+):umls
+-->
+:on.timeElapsed = {time = "During", rule = "OnDate"}

@@ -300,7 +300,7 @@ UpperNumberOfSeizures =:match.NumberRange.N2, LowerNumberOfSeizures =:match.Numb
 PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "Since"} 
  
 //Last Year she had 15 seizures
-Rule: hSeizureFreqPointInTime1 
+Rule: hSeizureFreqPointInTime1a 
 Priority: 95 
 ( 
     (({PointInTime.Since == "Last_Year"}|{PointInTime.Since == "This_Year"}|{PointInTime.Since == "Last_Month"}|{PointInTime.Since == "Last_Week"}) 
@@ -318,6 +318,8 @@ PointInTime = :match.PointInTime.Since, TimeSince_or_TimeOfEvent = "During"}
 * 8 seizures since last clinic appointment 
 */ 
  
+ // ALso picks up After 'a cluster of seizures, she increased DRUG' 
+
 Rule: hSeizureFreqPointInTime2 
 Priority: 95 
 ( 
@@ -334,7 +336,7 @@ LowerNumberOfSeizures =:match.NumberRange.N1, PointInTime = :match.PointInTime.S
 TimeSince_or_TimeOfEvent = "Since"}
 
 // 5 seizures during last year
-Rule: hSeizureFreqPointInTime2 
+Rule: hSeizureFreqPointInTime2a 
 Priority: 95 
 ( 
     ({NumberRange}) 
@@ -498,7 +500,7 @@ NumberOfSeizures = :match.NumberRange.value, LowerNumberOfSeizures  = :match.Num
 YearDate = :match.PartialDate.year, MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, 
 TimeSince_or_TimeOfEvent = "Since"}
 
-// During march she had 2-3 focal seizures
+// During march she had 2-3 focal seizures - (17/04/2025 Example blocked by "she had")
 
 Rule: hSeizurePartialDate1c
 Priority: 95 
@@ -581,7 +583,7 @@ MonthDate = :match.PartialDate.month, DayDate = :match.PartialDate.day, TimeSinc
 Rule: hSeizurePartialDate2c
 Priority: 95 
 (
-    ({!timeElapsed.time  == "Last"})
+    ({!timeElapsed.time  == "Last", timeElapsed@string != "in"}) // blocking "increase in seizures in 2001"
     (({Lookup3.majorType == "umls", !Lookup3.CAT == "Slang", Lookup3.minorType != "OtherDisease", Lookup3.Temporality != "hypothetical", Lookup3.Negation == Affirmed, Lookup3.PREF != "seizure free", Lookup3.Experiencer == Patient}) 
     ({timeElapsed.time == "During"}) 
     ({PartialDate})):match

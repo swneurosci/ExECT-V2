@@ -1,12 +1,12 @@
 Phase: RemoveSeizFreeBlock
-Input:  Age SFreeBlock
+Input:  Age SFBlock
 Options: control=all
 
 
 
 Rule: RemoveSeizFreeBlock
 (   
-    ({SFreeBlock within Age}):umls
+    ({SFBlock within Age}):umls
 ):match
 -->
 :umls { 
