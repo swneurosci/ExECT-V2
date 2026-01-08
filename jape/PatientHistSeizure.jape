@@ -1,0 +1,101 @@
+Phase: PatientHistA
+Input: OtherDiagSeizure Experience Conj CausePhrase TimeSince Person DateSince Investigation Split PartialDate NewLine DiagnosisTriggers PointInTime Age Pronouns listPoint OnsetPhrase
+
+//Using OtherDiagSeizure to select only seizure items from other diagnosis rules.
+
+Options: control=appelt
+
+//Her seizures // His first seizure was on 20th March 2012.
+Rule: PHSeizureA  
+Priority: 100
+
+(   
+    
+    {Person}
+	({OtherDiagSeizure}):item
+  
+ ):match  
+ -->
+:item.PatientHistoryA = {rule = PHSeizureA, PREF = :item.OtherDiagSeizure.PREF, CUI = :item.OtherDiagSeizure.CUI, 
+EC = :item.OtherDiagSeizure.EC,  ruleOtherDiag = :item.OtherDiagSeizure.rule, TUI = :item.OtherDiagSeizure.TUI,
+//Experiencer = :item.OtherDiagSeizure.Experiencer, Temporality = :item.OtherDiagSeizure.Temporality, 
+Certainty = :item.OtherDiagSeizure.Certainty, Negation = :item.OtherDiagSeizure.Negation,
+DayDate =:item.OtherDiagSeizure.DayDate,
+MonthDate =:match.OtherDiagSeizure.MonthDate,
+YearDate = :match.OtherDiagSeizure.YearDate,
+AgeUnit =:match.OtherDiagSeizure.AgeUnit,
+Age =:match.OtherDiagSeizure.Age,
+AgeUnit = :match.OtherDiagSeizure.AgeUnit,
+AgeUpper =:match.OtherDiagSeizure.AgeUpper}
+
+Rule: PHSeizureB  //Mary was born at 36 weeks and had seizures ever since
+Priority: 50
+
+(   
+    {Age}
+    {Conj}
+    {Experience}
+	({OtherDiagSeizure}):item
+  
+ ):match  
+ -->
+:item.PatientHistoryA = {rule = PHSeizureB, PREF = :item.OtherDiagSeizure.PREF, CUI = :item.OtherDiagSeizure.CUI, 
+EC = :item.OtherDiagSeizure.EC,  ruleOtherDiag = :item.OtherDiagSeizure.rule, TUI = :item.OtherDiagSeizure.TUI,
+//Experiencer = :item.OtherDiagSeizure.Experiencer, Temporality = :item.OtherDiagSeizure.Temporality, 
+Certainty = :item.OtherDiagSeizure.Certainty, Negation = :item.OtherDiagSeizure.Negation,
+DayDate =:item.OtherDiagSeizure.DayDate,
+MonthDate =:match.OtherDiagSeizure.MonthDate,
+YearDate = :match.OtherDiagSeizure.YearDate,
+AgeUnit =:match.OtherDiagSeizure.AgeUnit,
+Age =:match.OtherDiagSeizure.Age,
+AgeUnit = :match.OtherDiagSeizure.AgeUnit,
+AgeUpper =:match.OtherDiagSeizure.AgeUpper}
+
+Rule: PHSeizureC  //Her seizures  started when she was 10 years old
+Priority: 100
+
+(   
+    
+    {Person}
+	({OtherDiagSeizure}):item
+    {OnsetPhrase}
+    {Person}
+    {Age}
+
+
+ ):match  
+ -->
+:item.PatientHistoryA = {rule = PHSeizureC, PREF = :item.OtherDiagSeizure.PREF, CUI = :item.OtherDiagSeizure.CUI, 
+EC = :item.OtherDiagSeizure.EC,  ruleOtherDiag = :item.OtherDiagSeizure.rule, TUI = :item.OtherDiagSeizure.TUI,
+//Experiencer = :item.OtherDiagSeizure.Experiencer, Temporality = :item.OtherDiagSeizure.Temporality, 
+Certainty = :item.OtherDiagSeizure.Certainty, Negation = :item.OtherDiagSeizure.Negation,
+AgeUnit =:match.Age.AgeUnit,
+Age =:match.Age.Age,
+AgeUnit = :match.Age.AgeUnit,
+AgeUpper =:match.Age.AgeUpper}
+
+Rule: PHSeizureD  //
+Priority: 100
+
+(   
+    
+    {Person}
+    {OnsetPhrase}
+	({OtherDiagSeizure}):item
+   
+
+
+ ):match  
+ -->
+:item.PatientHistoryA = {rule = PHSeizureD, PREF = :item.OtherDiagSeizure.PREF, CUI = :item.OtherDiagSeizure.CUI, 
+EC = :item.OtherDiagSeizure.EC,  ruleOtherDiag = :item.OtherDiagSeizure.rule, TUI = :item.OtherDiagSeizure.TUI,
+//Experiencer = :item.OtherDiagSeizure.Experiencer, Temporality = :item.OtherDiagSeizure.Temporality, 
+Certainty = :item.OtherDiagSeizure.Certainty, Negation = :item.OtherDiagSeizure.Negation,
+AgeUnit =:match.OtherDiagSeizure.AgeUnit,
+Age =:match.OtherDiagSeizure.Age,
+AgeUnit = :match.OtherDiagSeizure.AgeUnit,
+AgeUpper =:match.OtherDiagSeizure.AgeUpper,
+DayDate =:item.OtherDiagSeizure.DayDate,
+MonthDate =:match.OtherDiagSeizure.MonthDate,
+YearDate = :match.OtherDiagSeizure.YearDate,}
+

@@ -37,6 +37,7 @@ Rule: PtHistoryA2  /* To capture otherdiagnosis which is combined with Date or T
 Priority: 100
 (   
 	({Person})
+	({Conj})?
 	({Experience})[1,2]
 	({Conj})?
 	({OtherDiag}):item
@@ -44,6 +45,38 @@ Priority: 100
  ):match  
  -->
 :item.PatientHistoryA = {rule = PtHistoryA2, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+EC = :item.OtherDiag.EC,  
+ruleOtherDiag = :item.OtherDiag.rule,
+//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
+AgeUnit =:item.OtherDiag.AgeUnit,
+Age =:item.OtherDiag.Age,
+AgeLower = :item.OtherDiag.AgeLower,
+AgeUpper =:item.OtherDiag.AgeUpper,
+DayDate =:item.OtherDiag.MonthDate,
+MonthDate = :item.OtherDiag.MonthDate,
+YearDate = :item.OtherDiag.YearDate,
+PointInTime = :item.OtherDiag.PointInTime,
+TimePeriod = :item.OtherDiag.TimePeriod,
+LowerNumberOfTimePeriods = :match.OtherDiag.LowerNumberOfTimePeriods,
+UpperNumberOfTimePeriods =:match.OtherDiag.UpperNumberOfTimePeriods,
+NumberOfTimePeriods = :item.OtherDiag.NumberOfTimePeriods}
+
+
+Rule: PtHistoryA2a  /* To capture otherdiagnosis which is combined with Date or TimeSince in OtherDiag */
+//she had a (something and)  stroke 10 years ago  /  he had a stroke in 2017
+// No different to rule above - first his/her would be ignored
+// Need to add other outputs to rule above like PtHistA2
+
+Priority: 100
+(   
+	
+	({CausePhrase})
+	({OtherDiag}):item
+    
+ ):match  
+ -->
+:item.PatientHistoryA = {rule = PtHistoryA2a, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
 EC = :item.OtherDiag.EC,  
 ruleOtherDiag = :item.OtherDiag.rule,
 //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
@@ -164,28 +197,27 @@ PointInTime = :item.OtherDiag.PointInTime}
 concept through OtherDiagAge : Her seizures started at the age of 2 or 3 */
 // Idential to rule above - will ignore the DATE SINCE
 // OtherDiag can have DATE associated with it - rules=Seizures_16/8/2/OtherDiagDate_3 ect (remove _ to search)
-Rule: PtHistoryA7  
-Priority: 99
+// Rule: PtHistoryA7  
+// Priority: 99
 
-(   
-	({Person})
-	({OtherDiag}):item	
-	({DateSince})?
+// (   
+// 	({Person})
+// 	({OtherDiag}):item	
     
- ):match  
- -->
-:item.PatientHistoryA = {rule = PtHistoryA7, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
-EC = :item.OtherDiag.EC,  
-ruleOtherDiag = :item.OtherDiag.rule,
-//Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
-Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
-Age = :item.OtherDiag.Age,
-AgeUnit = :item.OtherDiag.AgeUnit,
-AgeLower = :item.OtherDiag.AgeLower,
-AgeUpper = :item.OtherDiag.AgeUpper,
-DayDate =:match.DateSince.DayDate,
-MonthDate = :match.DateSince.MonthDate,
-YearDate =:match.DateSince.YearDate}
+//  ):match  
+//  -->
+// :item.PatientHistoryA = {rule = PtHistoryA7, PREF = :item.OtherDiag.PREF, CUI = :item.OtherDiag.CUI, 
+// EC = :item.OtherDiag.EC,  
+// ruleOtherDiag = :item.OtherDiag.rule,
+// //Experiencer = :item.OtherDiag.Experiencer, Temporality = :item.OtherDiag.Temporality, 
+// Certainty = :item.OtherDiag.Certainty, Negation = :item.OtherDiag.Negation,
+// Age = :item.OtherDiag.Age,
+// AgeUnit = :item.OtherDiag.AgeUnit,
+// AgeLower = :item.OtherDiag.AgeLower,
+// AgeUpper = :item.OtherDiag.AgeUpper,
+// DayDate =:match.DateSince.DayDate,
+// MonthDate = :match.DateSince.MonthDate,
+// YearDate =:match.DateSince.YearDate}
 
 // again will ignore pronouns for rule two above - AGE needs to be added to the output
 Rule: PtHistoryA8  /*he has had these episodes  Date / time since */
